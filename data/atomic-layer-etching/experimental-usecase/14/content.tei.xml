@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mechanisms of Thermal Atomic Layer Etching</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2020-06-01">June 1, 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Steven</forename><forename type="middle">M</forename><surname>George</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<addrLine>2 3 2 3 2 3 3 2 6AlF(CH ) 2 3 3 3 3 2 3 3 2</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mechanisms of Thermal Atomic Layer Etching</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-06-01">June 1, 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D79C0EBD30E33F0D44921FE4A16923C2</idno>
+					<idno type="DOI">10.1021/acs.accounts.0c00084</idno>
+					<note type="submission">Received: February 22, 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Metrics &amp; More</head><p>Article Recommendations CONSPECTUS: Atomic layer control of semiconductor processing is needed as critical dimensions are progressively reduced below the 10 nm scale. Atomic layer deposition (ALD) methods are meeting this challenge and produce conformal thin film growth on high aspect ratio features. Atomic layer etching (ALE) techniques are also required that can remove material with atomic layer precision. ALE processes are defined using sequential, self-limiting reactions based on surface modification and volatile release. Plasma ALE methods employ energetic ion or neutral species to release the modified material anisotropically using sputtering. In contrast, thermal ALE processes utilize gas species to release the modified material isotropically using thermal reactions. Thermal ALE can be viewed as the "reverse of ALD".</p><p>There are a number of mechanisms for thermal ALE that have developed over the last five years. This Account will first examine the fluorination and ligand-exchange mechanism for thermal ALE. This mechanism is applicable for many metal oxide and metal nitride materials. Subsequently, the "conversion etch" mechanisms will be explored that are derived from the conversion of the surface of the substrate to a new material. The "conversion etch" mechanisms are needed when the initial material does not have a viable etching pathway via fluorination and ligand-exchange or when the material has a volatile fluoride. The thermal ALE mechanisms founded on either oxidation or halogenation of the initial substrate will then be examined with an emphasis on metal thermal ALE. Lastly, thermal ALE mechanisms will be considered that are based on self-limiting surface ligands or temperature modulation mechanisms. These various mechanisms offer a wide range of pathways to remove material isotropically with atomic layer control. Thermal ALE will be required to fabricate advanced semiconductor devices. This fabrication will increasingly occur beyond the limits of lithography and will extend into the third dimension. The situation is like Manhattan during the advent of skyscrapers.</p><p>When there was no more room on the ground, building started to move to the third dimension. Three-dimensional devices require a sequential series of deposition and etching steps to build the skyscraper structures. Some etching needs to be vertical and anisotropic to make the elevator shafts. Other etching needs to be horizontal and isotropic to form the hallways. The mechanisms of thermal ALE will be critical for the definition of isotropic ALE processes.</p><p>Reaching beyond the limits of lithography will also increase the need for maskless processing. The mechanisms of thermal ALE lead to strategies for selective etching of one material in the presence of many materials. In addition, area-selective deposition can benefit from the ability of thermal ALE to enhance deposition on the desired growth surfaces by removing deposition from other surrounding surfaces. Looking ahead, thermal ALE will continue to provide unique capabilities and will grow in importance as a nanofabrication processing technique.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>With continued miniaturization, atomic layer processing is increasingly important for nanofabrication. There is a need for atomic layer control for both deposition and removal of material. Sequential, self-limiting surface reactions provide the foundation for atomic layer deposition (ALD) and atomic layer etching (ALE). ALD is a well-established technique that underlies semiconductor device fabrication and many other applications. <ref type="bibr" target="#b0">1</ref> ALE is a relative newcomer that is still in the developmental stage. <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b2">3</ref> ALE can be subdivided into two categories: plasma ALE 2,4 and thermal ALE. <ref type="bibr" target="#b4">5</ref> Both plasma and thermal ALE utilize sequential surface modification and removal reactions. Plasma ALE removes surface species with energetic ions or neutral atoms. <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b3">4</ref> Because of the directionality of the energetic ions and neutral atoms, plasma ALE yields anisotropic etching that is needed to fabricate high aspect ratio features. <ref type="bibr" target="#b1">2</ref> In contrast, the randomness of gas species and the self-limiting nature of thermal ALE reactions produce isotropic and conformal etching. <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b6">7</ref> Thermal ALE can be viewed as the reverse of ALD. <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b7">8</ref> Both thermal ALE and ALD rely on binary surface reaction sequences.</p><p>A schematic for thermal ALE based on surface modification and volatilization reactions is shown in Figure <ref type="figure" target="#fig_0">1</ref>. The first surface modification reaction produces an altered surface layer. The second reaction then liberates volatile etch products from this altered surface layer. Ideally, both of these surface reactions are self-limiting. The repetition of these surface modification and volatilization reactions defines the thermal ALE process.</p><p>This Account considers the mechanisms of ALE processes that are only dependent on temperature or involve thermal annealing. ALE processes that involve ions or energetic neutral atoms for the volatile release process are not considered in this survey. Some plasma processes that are utilized only for surface modification are included in this Account. The goal is to introduce the many possible pathways for thermal ALE and to inspire the development of new mechanisms.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">FLUORINATION AND LIGAND-EXCHANGE MECHANISM</head><p>The main thermal ALE mechanism for metal oxides is based on fluorination and ligand-exchange reactions. <ref type="bibr" target="#b8">9</ref> Fluorination is the surface modification reaction. Fluorination is thermochemically favorable because most metal fluorides are more stable than their corresponding metal oxides. <ref type="bibr" target="#b8">9</ref> One difficulty with fluorination is that some metal fluorides are volatile. These metal oxides require a different thermal ALE mechanism.</p><p>Ligand-exchange is the reaction that volatilizes the modified surface. Ligand-exchange is a metal-exchange transmetalation reaction between adjacent metal centers. <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> Ligand-exchange reactions are useful to replace fluorine in the metal fluoride with ligands that break the strong metal-fluorine-metal bridge bonding that stabilizes the metal fluoride. <ref type="bibr" target="#b11">12</ref> This ligand replacement leads to volatile complexes that can desorb from the surface.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Thermal Al 2 O 3 ALE</head><p>The first fluorination and ligand-exchange reaction utilized HF and Sn(acac) 2 as the reactants for Al 2 O 3 ALE. <ref type="bibr" target="#b4">5</ref> The original intent of using these reactants was to grow SnF 2 by an ALD process on an Al 2 O 3 ALD surface. However, these reactions were observed to etch the Al 2 O 3 instead of depositing SnF 2 . <ref type="bibr" target="#b4">5</ref> Figure <ref type="figure" target="#fig_1">2</ref> shows quartz crystal microbalance (QCM) results that observed the linear loss of mass versus number of Al 2 O 3 ALE cycles at 200 °C. The mass loss of -8.4 ng/(cm 2 cycle) is equivalent to an etch rate of 0.28 Å/cycle. <ref type="bibr" target="#b4">5</ref> These results suggested that a new class of reactions similar to the "reverse of ALD" was possible to remove material.</p><p>Subsequent studies explored the mechanism of Al 2 O 3 ALE with HF and Sn(acac) 2 . <ref type="bibr" target="#b12">13</ref> These investigations identified the growth of surface fluoride and loss of Al 2 O 3 during the HF exposure. Likewise, the loss of surface fluoride was monitored during the Sn(acac) 2 exposure. <ref type="bibr" target="#b12">13</ref> The ligand-exchange reaction transfers acac ligands to the AlF 3 surface layer. Presumably, SnF(acac) remains volatile after the ligand-exchange reaction. The Al species probably become volatile as AlF(acac) 2 or Al(acac) 3 after multiple ligand-exchange reactions or redistribution of acac ligands on the surface.</p><p>Additional studies explored other precursors for the ligandexchange reaction. Trimethylaluminum (TMA) was observed to etch Al 2 O 3 together with HF for the fluorination reaction. <ref type="bibr" target="#b13">14</ref> These results were remarkable because TMA is the main precursor for Al 2 O 3 ALD using H 2 O as the oxygen precursor. <ref type="bibr" target="#b14">15</ref> With only the change of H 2 O to HF, the TMA reactant can etch Al 2 O 3 . The ligand-exchange reaction between TMA and AlF 3 is shown in Figure <ref type="figure" target="#fig_2">3</ref>. This reaction produces AlF(CH 3 ) 2 (dimethylaluminum fluoride, DMAF) from the TMA reactant. <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b13">14</ref> In addition, AlF(CH 3 ) 2 may also be the volatile etch product from the AlF 3 surface after two ligand-exchange reactions or redistribution of CH 3 ligands on the surface. <ref type="bibr" target="#b5">6</ref> The overall reaction for Al 2 O 3 ALE using HF and TMA can be written as   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accounts of Chemical Research</head><formula xml:id="formula_0">Al O 6HF 4Al(CH ) 6AlF(CH ) 3H O 2 3 3 3 3 2 2 + + → +<label>(1)</label></formula><p>This reaction can be divided into individual HF and TMA reactions: <ref type="bibr" target="#b13">14</ref> The Al 2 O 3 that is etched during the ALE reactions is designated by Al 2 O 3 *. The asterisks indicate the surface species and the vertical lines separate the various species. A schematic for Al 2 O 3 ALE is also displayed in Figure <ref type="figure" target="#fig_3">4</ref>.</p><p>Mass spectrometry studies confirmed the presence of AlF(CH 3 ) 2 etch products. <ref type="bibr" target="#b5">6</ref> However, DMAF was observed as the dimer of DMAF with itself (DMAF/DMAF) or with TMA (DMAF/TMA). <ref type="bibr" target="#b5">6</ref> These dimers are favored because of strong bridge bonding between fluorine and the Al metal centers. Fluorine forms stronger bridge bonds between the Al metal centers than CH 3 . <ref type="bibr" target="#b5">6</ref> Knowledge of the bridge bonding strengths suggests that fluorine forms bridge bonds in the dimers and CH 3 ligands are in the terminal positions. The terminal CH 3 ligands facilitate desorption of the dimer from the surface. <ref type="bibr" target="#b5">6</ref> Temperature also was a key variable for Al 2 O 3 ALE. The HF and TMA reactants led to Al 2 O 3 ALE at &gt;250 °C. <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b15">16</ref> The etch rates were progressively larger at higher temperatures where the sequential reactant exposures yield etching by fluorination and ligand-exchange. <ref type="bibr" target="#b13">14</ref> The HF and TMA reactants could also produce AlF 3 ALD at T &lt; 250 °C where the sequential reactant exposures led to metal fluoride growth by an ALD process. <ref type="bibr" target="#b15">16</ref> Competition between Al 2 O 3 ALE and AlF 3 ALD was also observed in studies on SiO 2 nanoparticles. <ref type="bibr" target="#b16">17</ref> There is also competition between Al 2 O 3 ALE and AlF 3 growth when using HF and TMA as the reactants during rapid Al 2 O 3 ALE. <ref type="bibr" target="#b17">18</ref> For rapid Al 2 O 3 ALE, there is no purge time, and the HF and TMA exposures overlap in time and produce AlF 3 CVD. <ref type="bibr" target="#b17">18</ref> The subsequent TMA exposure outside of the overlap with HF is then able to spontaneously etch AlF 3 . <ref type="bibr" target="#b15">16</ref> After removing the AlF 3 CVD layer, TMA can proceed to remove the AlF 3 layer on the surface of the Al 2 O 3 substrate. The spontaneous etch of AlF 3 by TMA allows rapid Al 2 O 3 ALE to be performed with a short cycle time without a purge.</p><p>Additional experimental studies explored the fluorination of Al 2 O 3 by HF. <ref type="bibr" target="#b18">19</ref> Higher HF pressure increased the Al 2 O 3 fluorination and the Al 2 O 3 etch rate. Fluoride thicknesses up to 5-6 Å were measured for higher HF pressures of 4-8 Torr. <ref type="bibr" target="#b18">19</ref> These high HF pressures yielded Al 2 O 3 etch rates of ∼2.5 Å/ cycle at 300 °C. <ref type="bibr" target="#b18">19</ref> Theoretical studies have also examined the fluorination of Θ-Al 2 O 3 by HF. <ref type="bibr" target="#b19">20</ref> These investigations revealed that a self-limiting fluoride coverage is obtained on Θ-Al 2 O 3 . The experimental studies were consistent with a fluoride composition of Al 2 OF 4 . <ref type="bibr" target="#b18">19</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Other Materials, Reactants, and Effect of Film Structure</head><p>The fluorination and ligand-exchange mechanism is applicable for many other metal oxides including HfO 2 and ZrO 2 . <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22</ref> In addition to Sn(acac) 2 and TMA, many different metal precursors such as AlCl(CH 3 ) 2 (dimethylaluminum chloride (DMAC)), SiCl 4 and TiCl 4 , have been effective for the ligandexchange reaction. <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b23">23</ref> These metal precursors provide various ligands, such as acac, CH 3 , and Cl. Different degrees of etching selectivity are derived from these ligands.</p><p>Etching selectivity results for TMA are shown in Figure <ref type="figure" target="#fig_4">5a</ref>. <ref type="bibr" target="#b23">23</ref> Together with HF for fluorination, TMA is able to etch Al 2 O 3  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accounts of Chemical Research</head><p>and HfO 2 . However, TMA is not able to etch TiN, ZrO 2 , SiO 2 , or Si 3 N 4 . Al 2 O 3 is able to etch because AlF(CH 3 ) 2 is a stable and volatile etch product. HfO 2 etches at a lower rate, presumably because possible etch products such as HfF(CH 3 ) 3 or Hf(CH 3 ) 4 are not as stable and volatile as AlF(CH 3 ) 2 . In comparison, ZrO 2 etches at a negligible rate. The differences between HfO 2 and ZrO 2 are surprising because the properties of Hf and Zr are usually similar. However, Hf(CH 3 ) 4 has a higher stability than Zr(CH 3 ) 4 and the Hf-CH 3 bond energy is larger than the Zr-CH 3 bond energy. <ref type="bibr" target="#b24">24,</ref><ref type="bibr" target="#b25">25</ref> Another example of selectivity for DMAC is displayed in Figure <ref type="figure" target="#fig_4">5b</ref>. <ref type="bibr" target="#b23">23</ref> In similarity to the results for TMA in Figure <ref type="figure" target="#fig_4">5a</ref> Stronger fluoride precursors than HF may be needed for thermochemically favorable fluorination. SF 4 and XeF 2 are two stronger fluorination reactants that have been explored for thermal ALE. SF 4 was demonstrated for Al 2 O 3 ALE and VO 2 ALE. <ref type="bibr" target="#b26">26</ref> Metal nitrides can also be etched using thermal ALE based on fluorination and ligand-exchange reactions. XeF 2 was reported to be necessary for GaN ALE. <ref type="bibr" target="#b27">27</ref> In contrast, SF 4 and HF were not successful for GaN ALE. <ref type="bibr" target="#b27">27</ref> The difficulty in etching GaN may be related to the crystallinity of the GaN films. However, AlN ALE was observed for crystalline AlN films using HF and Sn(acac) 2 as the reactants. <ref type="bibr" target="#b28">28</ref> The effect of film crystallinity has been studied for amorphous and crystalline HfO 2 , ZrO 2 , and HfZrO 4 films. <ref type="bibr" target="#b29">29</ref> The amorphous films all etched faster than the crystalline films under the same reaction conditions. HfO 2 ALE results for amorphous and crystalline HfO 2 films using HF and TiCl 4 as the reactants at 250 °C are displayed in Figure <ref type="figure" target="#fig_6">6</ref>. <ref type="bibr" target="#b29">29</ref> Crystallinity reduces the etch rate. This reduction may be related to the higher density of the crystalline films. Fluorination of the metal oxides results in a volume expansion. This volume expansion may be easier for the amorphous films. <ref type="bibr" target="#b29">29</ref> 3. CONVERSION MECHANISMS Many materials do not have a direct pathway for thermal ALE based on fluorination and ligand-exchange reactions. Some metal oxides will form a volatile fluoride and etch spontaneously. Other metal fluorides after fluorination may not easily form stable and volatile etch products with various metal precursors. For example, Figure <ref type="figure" target="#fig_4">5</ref> showed that the TMA and DMAC metal precursors were not able to etch TiN, SiO 2 , or Si 3 N 4 under the reaction conditions employed at 250 or 300 °C. <ref type="bibr" target="#b23">23</ref> These materials do not have accessible pathways to stable and volatile etch products.</p><p>One possible strategy for these materials is to use a metal precursor to convert the surface of the original metal oxide to another metal oxide. This conversion process occurs because the original metal oxide is not as stable as the resulting metal oxide. The stability of the metal oxides can be determined by their heats of formation. In addition, Ellingham diagrams or thermochemical calculations can be used to predict the possible conversion of one oxide to another more stable oxide. A metal nitride can also be converted to another more stable nitride.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Conversion, Fluorination, and Ligand-Exchange</head><p>The conversion mechanism was initially observed for ZnO ALE using HF and TMA. <ref type="bibr" target="#b30">30</ref> QCM studies revealed much larger mass losses during TMA exposures than expected from ligandexchange reactions. These large mass losses suggested that TMA converts the surface of the ZnO substrate to a more stable Al 2 O 3 surface layer. The Al 2 O 3 surface layer can then be fluorinated and subsequently removed by the TMA ligand-exchange reaction. The TMA can continue to convert the underlying ZnO surface to Al 2 O 3 . A schematic illustrating the ZnO ALE surface chemistry via the conversion, fluorination, and ligandexchange mechanism is shown in Figure <ref type="figure" target="#fig_7">7</ref>. <ref type="bibr" target="#b30">30</ref> Another example of the conversion, fluorination, and ligandexchange mechanism is thermal SiO 2 ALE using HF and TMA. <ref type="bibr" target="#b31">31</ref> TMA is able to convert the surface of SiO 2 to Al 2 O 3 . This conversion process requires higher pressures of TMA than the TMA pressures of ∼40 mTorr that were utilized in the TMA results shown in Figure <ref type="figure" target="#fig_4">5a</ref>. <ref type="bibr" target="#b23">23</ref> At reactant pressures of 1.0 and 4.0 Torr, SiO 2 etch rates were 0.18 and 0.27 Å/cycle, respectively. <ref type="bibr" target="#b31">31</ref> Corresponding Fourier transform infrared (FTIR) spectroscopy  studies confirmed the conversion of Si-O stretching vibrations to Al-O stretching vibrations. The FTIR investigations also observed greater conversion at higher reactant pressures. A schematic of thermal SiO 2 ALE via conversion to Al 2 O 3 or aluminum oxide silicate is shown in Figure <ref type="figure" target="#fig_8">8</ref>. <ref type="bibr" target="#b31">31</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Conversion and Fluorination to Volatile Fluoride</head><p>Another class of conversion reactions produce metal oxides that spontaneously etch to produce volatile fluorides after fluorination. These conversion reactions readily lead to pathways for thermal ALE. One useful reactant for conversion and fluorination to a volatile fluoride is BCl 3 . BCl 3 can convert metal oxides to B 2 O 3 because B 2 O 3 is a very stable metal oxide. In addition, B 2 O 3 can be etched spontaneously using HF. <ref type="bibr" target="#b32">32</ref> The spontaneous etch products are believed to be BF 3 and B(OH)F 2 .</p><p>WO 3 ALE using BCl 3 and HF is an example of an ALE process that may occur via conversion and fluorination to a volatile fluoride. The proposed mechanism for WO 3 ALE is shown in Figure <ref type="figure" target="#fig_9">9</ref>. <ref type="bibr" target="#b32">32</ref> The surface of WO 3 is first converted to a B 2 O 3 surface layer by BCl 3 exposure. Subsequently, the B 2 O 3 surface layer is spontaneously etched by HF. The underlying WO 3 is not spontaneously etched by HF and serves as an etch stop. Mass spectrometry studies are needed to confirm this etching mechanism.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">OXIDATION MECHANISMS</head><p>Oxidation is a useful step for many thermal ALE pathways. Oxidation changes the oxidation number of the element that may be critical to obtain the correct oxidation state for the stable, volatile etch product. Oxidation can oxidize elemental metals to metal oxides. Elemental metals have an oxidation state of zero. Many volatile metal etch products have the metal oxidation state in 2+, 3+, or 4+. Oxidation can also convert metal nitrides to metal oxides. Many metal nitrides have the metal in the 3+ oxidation state. However, many stable etch products require the metal in the 4+ oxidation state.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Oxidation and Fluorination to Volatile Fluoride</head><p>TiN ALE using O 3 and HF as the reactants is an example of oxidation and fluorination to a volatile fluoride. <ref type="bibr" target="#b33">33</ref> The oxidation state of Ti in TiN is 3+. The oxidation state for most stable volatile Ti complexes is 4+. TiN can be oxidized to TiO 2 using ozone. This oxidation converts the Ti oxidation state to 4+. After the oxidation of TiN to TiO 2 , the TiO 2 surface layer can be spontaneously etched using HF. A schematic of TiN ALE is displayed in Figure <ref type="figure" target="#fig_10">10</ref>. <ref type="bibr" target="#b33">33</ref> TiN etch rates of 0.2 Å/cycle were measured at 250 °C. The TiN etch rate was also self-limiting versus O 3 and HF exposure times. <ref type="bibr" target="#b33">33</ref> W ALE using O 2 and WF 6 is another example of oxidation and fluorination to a volatile fluoride. <ref type="bibr" target="#b34">34</ref> For W ALE, the W surface is first oxidized to WO 3 using O 2 . This oxidation changes the oxidation state of W from 0 to 6+. Subsequently, WF 6 is able to etch the WO 3 surface layer by forming volatile WO x F y species. This W ALE procedure is consistent with previous studies where WF 6 was observed to spontaneously etch WO 3 at &gt;180 °C during WO 3 ALD. <ref type="bibr" target="#b35">35,</ref><ref type="bibr" target="#b36">36</ref>    </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Accounts of Chemical Research 4.2. Oxidation, Conversion, Fluorination, and Ligand-Exchange</head><p>Oxidation can also be used together with conversion to define other thermal ALE mechanisms. The oxidation and conversion pathway is critical to define thermal Si ALE. <ref type="bibr" target="#b37">37</ref> For thermal Si ALE, Si is first oxidized to produce a surface SiO 2 layer. Subsequently, the surface SiO 2 layer is converted to Al 2 O 3 or an aluminum oxide silicate using TMA at higher pressures as discussed in Section 3.1. The Al 2 O 3 or aluminum oxide silicate is then removed by fluorination and ligand-exchange reactions as discussed in Section 2.1. A schematic for thermal Si ALE is shown in Figure <ref type="figure" target="#fig_11">11</ref>. <ref type="bibr" target="#b37">37</ref> Results for Si ALE based on spectroscopic ellipsometry studies are displayed in Figure <ref type="figure" target="#fig_12">12</ref>. <ref type="bibr" target="#b37">37</ref> Si ALE using a O 2 , HF, and TMA reaction sequence yields a Si etch rate of 0.4 Å/cycle at 290 °C. <ref type="bibr" target="#b37">37</ref> The ellipsometric investigations also monitor a SiO 2 layer with a thickness of ∼11 Å that exists on the Si surface during Si ALE. This SiO 2 layer is continuously formed from Si oxidation and then converted to an Al 2 O 3 or aluminum oxide silicate surface layer by the TMA exposure prior to removal by fluorination and ligand-exchange reactions.</p><p>Si 3 N 4 ALE can also be accomplished using the oxidation, conversion, fluorination and ligand-exchange mechanism. <ref type="bibr" target="#b38">38</ref> Because Si 3 N 4 is more difficult to oxidize than Si, O 3 is preferable to O 2 for the oxidation reaction. Similar etch rates are measured for Si 3 N 4 ALE and Si ALE under comparable reaction conditions with O 3 as the oxidant for Si 3 N 4 ALE and O 2 as the oxidant for Si ALE. A Si 3 N 4 etch rate of 0.47 Å/cycle was measured at 290 °C using an O 3 -HF-TMA reactant sequence. <ref type="bibr" target="#b38">38</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Oxidation, Conversion, and Fluorination to Volatile Fluoride</head><p>Oxidation can also be combined with conversion and fluorination to a volatile fluoride to define another thermal ALE mechanism. This pathway was utilized for thermal W ALE. <ref type="bibr" target="#b32">32</ref> The W substrate was first oxidized using ozone to form a WO 3 surface layer. The WO 3 surface layer was then removed using BCl 3 and HF as the reactants as discussed in Section 3.2. BCl 3 converts the WO 3 surface layer to a B 2 O 3 surface layer. HF can then spontaneously etch the B 2 O 3 surface layer. A schematic showing this three-step process is given in Figure <ref type="figure" target="#fig_13">13</ref>. <ref type="bibr" target="#b32">32</ref> In situ spectroscopic ellipsometry measurements monitored both the WO 3 surface layer and the underlying W film thickness during W ALE. Figure <ref type="figure" target="#fig_14">14</ref> shows the WO 3 and W thicknesses during W ALE at 207 °C. <ref type="bibr" target="#b32">32</ref> The WO 3 thickness displayed in Figure <ref type="figure" target="#fig_14">14a</ref> oscillates as the WO 3 layer is increased in thickness by O 3 exposures and then etched by BCl 3 /HF exposures. While the WO 3 thickness is oscillating, the underlying W film thickness decreases linearly as W is progressively converted into WO 3 . The results in Figure <ref type="figure" target="#fig_14">14b</ref> yield a W etch rate of 2.44 Å/cycle. <ref type="bibr" target="#b32">32</ref> Additional experiments determined that the individual O 3 , BCl 3 , and HF exposures were self-limiting. <ref type="bibr" target="#b32">32</ref>    Oxidation is critical for thermal metal ALE. Oxidation increases the oxidation state of the metal. Subsequently, various ligands can extract the oxidized metal and produce a metal complex that is both stable and volatile. Copper thermal ALE is an example of this mechanism using oxidation with O 2 or O 3 to increase the Cu oxidation number and yield Cu 2 O or CuO, respectively. <ref type="bibr" target="#b39">39</ref> The Cu 2 O is then believed to interact with hexafluoroacetylacetone (hfacH) in a disproportionation reaction to form volatile Cu(hfac) 2 and elemental Cu. <ref type="bibr" target="#b39">39</ref> This process produced an etch rate of 0.9 Å/cycle at 275 °C. <ref type="bibr" target="#b39">39</ref> Alternatively, the CuO is thought to interact with hfacH to produce Cu(hfac) 2 and H 2 O. <ref type="bibr" target="#b39">39</ref> This process yielded an etch rate of 84 Å/cycle at 275 °C. <ref type="bibr" target="#b39">39</ref> Metal ALE using oxidation and ligand volatilization has also been performed using an O 2 plasma to oxidize the metal. Fe, Cu, Co, Pd, and Pt have been oxidized using an O 2 plasma to change the oxidation state of the metal. <ref type="bibr" target="#b40">40</ref> Subsequently, the metal oxide has been removed using various organic ligands such as formic acid. <ref type="bibr" target="#b40">40</ref> The metal etch rates varied from 5 Å/cycle for Pt to 42 Å/ cycle for Fe. <ref type="bibr" target="#b40">40</ref> The etch rates also were proportional to the oxide thicknesses produced by the O 2 plasma. <ref type="bibr" target="#b40">40</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">HALOGENATION MECHANISMS</head><p>Halogenation is another key step for the thermal ALE of metals. Like oxidation, halogenation changes the oxidation state of the metal. This change may be necessary for the metal to obtain the correct oxidation state to yield stable, volatile etch products. The metal complexes will have an oxidation state determined by the number of halide ligands. In addition, the metal complexes will also contain additional two-electron donor ligands to obey the "18 electron rule" or "16 electron rule". <ref type="bibr">41</ref> Guidelines to determine stable metal complexes are given by the Covalent Bond Classification (CBC) method. <ref type="bibr" target="#b41">42</ref> X ligands are one-electron donors such as halogens like Cl. L ligands are two-electron donors like PR 3 or NR 3 . The stable metal complex has an initial number of d-electrons. The metal will add electrons by binding X and L ligands to obtain 18 or 16 electrons in its outer shell. <ref type="bibr" target="#b41">42</ref> For example, Ni has 10 d-electrons, and Ni complexes typically have NiX 2 L 3 or NiX 2 L 2 configurations. One approach for Ni ALE is to create volatile nickel compounds that are either NiX 2 L 3 or NiX 2 L 2 formed by sequential surface reactions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1.">Halogenation and Ligand Volatilization</head><p>Halogenation followed by ligand exposure has been demonstrated for Co ALE. <ref type="bibr" target="#b42">43</ref> The pathway to volatilization involved chlorination using Cl 2 to form CoCl x surface species. The oxidation state of cobalt was increased by chlorination. Subsequently, hfacH exposures are believed to extract the oxidized Co species by forming Co(hfac) x Cl y volatile complexes. A schematic showing this halogenation and ligand volatilization process is given in Figure <ref type="figure" target="#fig_15">15</ref>. <ref type="bibr" target="#b42">43</ref> Co etch rates were determined using scanning electron microscopy of Co film cross sections before and after Co ALE. The Co etch rates varied from 2 Å/ cycle at 140 °C to 16 Å/cycle at 185 °C. <ref type="bibr" target="#b42">43</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2.">Chlorine/Fluorine Ligand Exchange</head><p>Halogenation is also an effective mechanism for thermal ALE if the fluorides and chlorides of materials have different volatilities. In the first step, a self-limiting fluorination process can be used to form a stable fluoride layer on the substrate. In the second step, a chlorine/fluorine ligand-exchange process can be employed to yield volatile chloride species. This chlorine/fluorine ligandexchange mechanism was utilized to define TiO 2 ALE with WF 6 and BCl 3 as the reactants. <ref type="bibr" target="#b43">44</ref> The TiO 2 ALE process was viable at temperatures ≤170 °C because the fluoride is stable but the chloride is volatile. <ref type="bibr" target="#b43">44</ref> A TiO 2 etch rate of ∼0.6 Å/cycle was observed at 170 °C. In contrast, TiO 2 was etched spontaneously by WF 6 at higher temperatures because the fluoride is volatile. <ref type="bibr" target="#b43">44</ref> TiO 2 ALE has also been used together with TiO 2 ALD for areaselective TiO 2 ALD. <ref type="bibr" target="#b44">45</ref> 6. SELF-LIMITING SURFACE LIGAND MECHANISMS Some materials are etched by precursors where the buildup of species on the surface from the precursor eventually stops the etching. The species that limit the etching can then be removed by a second precursor to define the ALE process. An example of this self-limiting surface ligand mechanism is AlF 3 ALE using Sn(acac) 2 and HF as the reactants. <ref type="bibr" target="#b45">46</ref> Sn(acac) 2 can undergo a  Accounts of Chemical Research ligand-exchange reaction with AlF 3 . This ligand-exchange reaction is believed to produce volatile SnF(acac) from Sn(acac) 2 . In addition, the ligand-exchange reaction also yields AlF 2 (acac) on the surface.</p><p>The etching of AlF 3 by Sn(acac) 2 is self-limiting and is known to saturate with acac species on the surface. <ref type="bibr" target="#b45">46</ref> A subsequent HF exposure is required to maintain the AlF 3 ALE process. The HF exposure is thought to lead to the fluorination reaction: AlF 2 (acac) + HF(g) → AlF 3 + acacH(g). This fluorination reaction reforms the AlF 3 surface and allows the AlF 3 ALE process to continue versus Sn(acac) 2 and HF exposures.</p><p>Another related example is ZnO ALE using acetylacetone (acacH) and O 2 plasma as the reactants. <ref type="bibr" target="#b46">47</ref> acacH is proposed to etch ZnO by forming Zn(acac) 2 and H 2 O. However, the ZnO surface also becomes covered by acacH adsorption products that limit the reaction. The subsequent O 2 plasma reaction then removes these acacH adsorption products and allows the ZnO ALE to continue versus sequential acacH and O 2 plasma exposures. A schematic of the proposed mechanism for ZnO ALE is shown in Figure <ref type="figure" target="#fig_16">16</ref>. <ref type="bibr" target="#b46">47</ref> ZnO etch rates varied from 0.5 to 1.3 Å/cycle at temperatures between 100 and 250 °C. <ref type="bibr" target="#b46">47</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7.">TEMPERATURE MODULATION MECHANISMS</head><p>Another class of thermal ALE reactions is based on temperature annealing. A surface modification reaction is first performed at lower temperature. Subsequently, the surface modified layer is desorbed by heating to higher temperature. The temperature is then returned to the initial temperature to repeat the thermal ALE process.</p><p>For example, a thermal modulation mechanism for Si 3 N 4 ALE is based on the formation of an (NH 4 ) 2 SiF 6 layer on the Si 3 N 4 surface. <ref type="bibr" target="#b47">48</ref> This ammonium salt layer can be formed by exposure of a hydrofluorocarbon plasma to the Si 3 N 4 surface at 20 °C. Subsequently, the substrate is thermally annealed to 150 °C to desorb the (NH 4 ) 2 SiF 6 layer. <ref type="bibr" target="#b47">48</ref> A schematic of Si 3 N 4 ALE using this temperature modulation mechanism is shown in Figure <ref type="figure" target="#fig_17">17</ref>. <ref type="bibr" target="#b47">48</ref> This Si 3 N 4 ALE process produced a Si 3 N 4 etch rate of 16 Å/cycle. <ref type="bibr" target="#b47">48</ref> A temperature modulation mechanism has also been employed for Si ALE. <ref type="bibr" target="#b48">49</ref> The Si surface is first oxidized to a SiO 2 layer using an O 2 plasma. The SiO 2 layer is then converted to an (NH 4 ) 2 SiF 6 layer using a NH 3 /NF 3 plasma. Subsequently, the substrate is thermal annealed to desorb the ammonium salt layer. <ref type="bibr" target="#b48">49</ref> In addition, MoS 2 ALE has been performed using an O 2 plasma to form an amorphous MoO 3 monolayer on the MoS 2 surface at 200 °C. <ref type="bibr" target="#b49">50</ref> Subsequently, the MoO 3 monolayer can be desorbed by thermal annealing to 500 °C. <ref type="bibr" target="#b49">50</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8.">CHALLENGES AND FUTURE PROSPECTS</head><p>Thermal ALE has developed rapidly over the last five years. The Intel etch group proposed the possibility of thermal ALE using sequential, self-limiting surface reactions in their seminal perspective in 2015. <ref type="bibr" target="#b2">3</ref> Many materials, including metal oxides and metal nitrides, can now be etched using thermal ALE mechanisms. A current important challenge is the development of thermal ALE mechanisms for metals. Another critical goal for thermal ALE is selectivity between various materials. Many studies have illustrated that the different ligands involved in ligand-exchange reactions can provide pathways for selectivity. <ref type="bibr" target="#b23">23</ref> Investigations of new ligands for thermal ALE are needed to expand the options for selectivity between different materials. In addition, a deeper understanding of thermal ALE requires spectroscopic analysis of the species formed on the surface and the volatile products released to the gas phase.</p><p>Thermal ALE will become increasingly critical for nanofabrication as dimensions continue to shrink and devices become more three-dimensional. A key application for thermal ALE will be fabrication of advanced devices such as FinFETs and gate-all-around FETs. <ref type="bibr" target="#b50">51</ref> Plasma ALE and thermal ALE will need to be used together to provide anisotropic and isotropic etching. There also may be possibilities for hybrid approaches where low energy ions may remove self-limiting surface species during thermal ALE. <ref type="bibr" target="#b28">28</ref> These hybrid approaches may be able to allow thermal ALE to display anisotropic properties similar to those of plasma ALE.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ AUTHOR INFORMATION</head><p>Corresponding Author Steven M. George -Department of Chemistry, University of Colorado, Boulder, Colorado 80309-0215, United States; orcid.org/0000-0003-0253-9184; Email: steven.george@ colorado.edu Complete contact information is available at: <ref type="url" target="https://pubs.acs.org/doi/10.1021/acs.accounts.0c00084?ref=pdf">https://pubs.acs.org/10.1021/acs.accounts.0c00084</ref> Notes The author declares no competing financial interest.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ACKNOWLEDGMENTS</head><p>The author thanks all coworkers in the George group who contributed to the understanding of thermal ALE mechanisms. The research performed by the George group that was presented  </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Schematic of ALE process based on sequential surface modification and volatile release reactions.</figDesc><graphic coords="2,60.49,102.67,239.98,167.98" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Mass change versus time during Al 2 O 3 ALE at 200 °C using HF and Sn(acac) 2 as the reactants. Reproduced with permission from ref 5. Copyright 2015 American Chemical Society.</figDesc><graphic coords="2,324.45,69.17,239.98,186.69" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Ligand-exchange reaction between AlF 3 and Al(CH 3 ) 3 . Reproduced with permission from ref 9. Copyright 2016 American Chemical Society.</figDesc><graphic coords="2,324.45,549.41,239.98,90.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Schematic of Al 2 O 3 ALE based on fluorination with HF and ligand-exchange with Al(CH 3 ) 3 .</figDesc><graphic coords="3,60.49,227.68,239.98,155.74" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Film thickness versus number of ALE cycles for various materials using HF as fluorine reactant and (a) TMA or (b) DMAC as metal precursor for ligand-exchange. Reproduced with permission from ref 23. Copyright 2016 American Chemical Society.</figDesc><graphic coords="3,324.45,321.05,239.98,386.14" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><figDesc>, Al 2 O 3 and HfO 2 are etched by DMAC together with HF for fluorination. These results are anticipated because TMA and DMAC both have CH 3 ligands for the ligand-exchange reaction. In addition, DMAC is able to etch ZrO 2 . The ability of DMAC to etch ZrO 2 is believed to be linked to the Cl ligand on DMAC. A ligand-exchange reaction between DMAC and the fluoride layer on ZrO 2 can transfer Cl ligands that can form stable and volatile Zr complexes.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Thickness change versus number of ALE cycles for crystalline and amorphous HfO 2 using HF and TiCl 4 as reactants. Reproduced with permission from ref 29. Copyright 2020 American Vacuum Society.</figDesc><graphic coords="4,60.49,525.77,239.98,181.42" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Schematic for ZnO ALE using HF and TMA as reactants. TMA removes AlF 3 layer by ligand-exchange and then converts the surface of underlying ZnO to an Al 2 O 3 surface layer. Reproduced with permission from ref 30. Copyright 2017 American Chemical Society.</figDesc><graphic coords="4,324.45,474.41,239.98,139.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Schematic for SiO 2 ALE using TMA and HF as reactants. TMA removes AlF 3 layer by ligand-exchange and then converts surface of underlying SiO 2 to an Al 2 O 3 surface layer. Reproduced with permission from ref 31. Copyright 2017 American Chemical Society.</figDesc><graphic coords="5,60.49,135.89,239.98,270.94" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Schematic for WO 3 ALE using BCl 3 and HF as reactants. BCl 3 converts the surface of WO 3 to a B 2 O 3 surface layer. HF then spontaneously etches the B 2 O 3 surface layer. Reproduced with permission from ref 32. Copyright 2017 American Chemical Society.</figDesc><graphic coords="5,324.45,69.17,239.98,107.26" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 10 .</head><label>10</label><figDesc>Figure 10. Schematic for TiN ALE using O 3 and HF as reactants. O 3 oxidizes TiN to TiO 2 . HF then spontaneously etches the TiO 2 surface layer. Reproduced with permission from ref 33. Copyright 2017 American Chemical Society.</figDesc><graphic coords="5,324.45,421.17,239.98,154.77" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 11 .</head><label>11</label><figDesc>Figure 11. Schematic for Si ALE using O 2 , HF, and Al(CH 3 ) 3 . O 2 oxidizes Si to SiO 2 . HF converts the top Al 2 O 3 layer to AlF 3 . Al(CH 3 ) 3 removes the AlF 3 surface layer by a ligand-exchange reaction and then converts SiO 2 to Al 2 O 3 . Reproduced with permission from ref 37. Copyright 2018 American Chemical Society.</figDesc><graphic coords="6,60.49,216.68,239.98,204.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. Si ALE using O 2 , HF, and Al(CH 3 ) 3 as reactants at 290 °C. Si etching occurs with an etch rate of 0.4 Å/cycle, while the top SiO 2 layer remains constant at ∼11 Å. Reproduced with permission from ref 37. Copyright 2018 American Chemical Society.</figDesc><graphic coords="6,324.45,69.17,239.98,185.27" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 13 .</head><label>13</label><figDesc>Figure 13. Schematic for W ALE using O 2 /O 3 , BCl 3 , and HF. O 2 /O 3 oxidizes W to WO 3 . BCl 3 converts WO 3 to B 2 O 3 . HF then spontaneously etches B 2 O 3 . Reproduced with permission from ref 32. Copyright 2017 American Chemical Society.</figDesc><graphic coords="6,324.45,383.98,239.98,176.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 14 .</head><label>14</label><figDesc>Figure 14. W ALE using O 2 /O 3 , BCl 3 , and HF as reactants at 207 °C. (a) WO 3 thickness increases after O 2 /O 3 exposure and decreases after BCl 3 /HF exposure. (b) W etching occurs with an etch rate of 2.44 Å/ cycle. Reproduced with permission from ref 32. Copyright 2017 American Chemical Society.</figDesc><graphic coords="7,60.49,69.17,239.98,321.79" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Figure 15 .</head><label>15</label><figDesc>Figure 15. Schematic of Co ALE with Cl 2 and hfacH as reactants. Cl 2 chlorinates the Co surface in Step I. hfacH removes Co(hfac) 2 Cl 2 in Step II. Reproduced with permission from ref 43. Copyright 2019 American Vacuum Society.</figDesc><graphic coords="7,324.45,349.91,239.98,55.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16"><head>Figure 16 .</head><label>16</label><figDesc>Figure 16. Schematic of ZnO ALE using acacH and O 2 plasma as reactants. acacH produces Zn(acac) 2 and also forms self-limiting acac surface ligands in reaction A. O 2 plasma removes acac surface ligands in reaction B. Reproduced with permission from ref 47. Copyright 2018 American Chemical Society.</figDesc><graphic coords="8,60.49,312.21,239.98,151.99" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_17"><head>Figure 17 .</head><label>17</label><figDesc>Figure 17. Schematic of SiN ALE using surface modifying hydrofluorocarbon plasma and thermal annealing. Reproduced with permission from ref 48. Copyright 2017 IOP Publishing.</figDesc><graphic coords="8,324.45,69.17,239.98,70.07" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://dx.doi.org/10.1021/acs.accounts.0c00084 Acc. Chem. Res. 2020, 53, 1151-1160</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition: An Overview</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="111" to="131" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Overview of Atomic Layer Etching in the Semiconductor Industry</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching: An Industry Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Plombon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Tronic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Turkot</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0021506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5005" to="N5009" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching at the Tipping Point: An Overview</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0061506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5041" to="N5053" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nn507277f</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2061" to="2070" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Volatile Etch Species Produced During Thermal Al 2 O 3 Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Clancey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E T</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b06104</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="287" to="299" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Al 2 O 3 , HfO 2 , and ZrO 2 Using Sequential Hydrogen Fluoride and Dimethylaluminum Chloride Exposures</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b04767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="18455" to="18466" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching: What Can We Learn from Atomic Layer Deposition?</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Faraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0051506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5023" to="N5032" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Prospects for Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsnano.6b02991</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="4889" to="4894" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<author>
+			<persName><forename type="first">K</forename><surname>Osakada</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Transmetalation</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Fundamentals of Molecular Catalysis</title>
+		<editor>
+			<persName><forename type="first">H</forename><surname>Kurosawa</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Yamamoto</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Amsterdam</publisher>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="page" from="233" to="291" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Redistribution and Exchange Reactions in Groups 2B-7B</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Lockhart</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr60233a004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="131" to="151" />
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Fluorine as a Structure-directing Element in Organometallic Fluorides: Discrete Molecules, Supramolecular Self-Assembly and Host-guest Complexation</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Roesky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Haiduc</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/a901728c</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page" from="2249" to="2264" />
+			<date type="published" when="1999">1999</date>
+			<pubPlace>Dalton Trans</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Mechanism of Thermal Al 2 O 3 Atomic Layer Etching Using Sequential Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b00300</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="3648" to="3657" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Trimethylaluminum as the Metal Precursor for the Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b00111</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2994" to="3003" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Surface Chemistry of Atomic Layer Deposition: A Case Study for the Trimethylaluminum/water Process</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1940727</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of AlF 3 Using Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.5b02625</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="14185" to="14194" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Competition Between Al 2 O 3 Atomic Layer Etching and AlF 3 Atomic Layer Deposition Using Sequential Exposures of Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4973310</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">52819</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Rapid Atomic Layer Etching of Al 2 O 3 Using Sequential Exposures of Hydrogen Fluoride and Trimethylaluminum with No Purging</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Faguet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5043488</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">61508</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Effect of HF Pressure on Thermal Al 2 O 3 Atomic Layer Etch Rates and Al 2 O 3 Fluorination</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b00124</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="10346" to="10355" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Modeling the Chemical Mechanism of the Thermal Atomic Layer Etch of Aluminum Oxide: A Density Functional Theory Study of Reactions during HF Exposure</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b01930</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="5912" to="5922" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of HfO 2 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0041506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5013" to="N5022" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Thermal Atomic Layer Etching of HfO 2</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5045130</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Using HF for Fluorination and TiCl 4 for Ligand-Exchange</title>
+		<idno type="DOI">10.1116/1.5045130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">61504</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Selectivity in Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b02543</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="7657" to="7665" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The Thermochemistry of Organometallic Compounds</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Skinner</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0021-9614(78)90063-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Thermodyn</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="309" to="320" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Computational and Experimental Studies on the Thermolysis Mechanism of Zirconium and Hafnium Tetraalkyl Complexes. Difference Between Titanium and Zirconium Complexes</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">H</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W K</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Tuinman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">L</forename><surname>Xue</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/om980595v</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Organometallics</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="2081" to="2090" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">SF 4 as the Fluorination Reactant for Al 2 O 3 and VO 2 Thermal Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Bright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b05294</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="3624" to="3635" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Crystalline GaN Using Sequential Exposures of XeF 2 and BCl 3</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Hite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Mastro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Eddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5095938</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="page">243103</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Crystalline Aluminum Nitride Using Sequential, Self-limiting Hydrogen Fluoride and Sn(acac) 2 Reactions and Enhancement by H 2 and Ar Plasmas</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">X</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4959779</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">50603</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Effect of Crystallinity on the Thermal Atomic Layer Etching of Hafnium Oxide, Zirconium Oxide and Hafnium Zirconium Oxide</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5135317</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">22608</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of ZnO by a ″Conversion-Etch″ Mechanism Using Sequential Exposures of Hydrogen Fluoride and Trimethylaluminum</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1183" to="1191" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of SiO 2 by a ″Conversion-Etch″ Mechanism Using Sequential Reactions of Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b01259</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="10296" to="10307" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">WO 3 and W Thermal Atomic Layer Etching Using ″Conversion-Fluorination″ and ″Oxidation-Conversion-Fluorination″ Mechanisms</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b09161</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="34435" to="34447" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Titanium Nitride Using Sequential, Self-Limiting Reactions: Oxidation to TiO 2 and Fluorination to Volatile TiF 4</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b02286</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="8202" to="8210" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Thermally Driven Self-Limiting Atomic Layer Etching of Metallic Tungsten Using WF 6 and O 2</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b19024</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="9147" to="9154" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Room Temperature Plasma Enhanced Atomic Layer Deposition for TiO 2 and WO 3 Films</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Strobel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Schnabel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Reinhold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Neidhardt</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4935356</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="1" to="118" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Epitaxy of Tungsten Oxide Films Using Oxyfluorides as Metal Precursors</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tagtstrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Martensson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Jansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Carlsson</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1392445</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<biblScope unit="page" from="3139" to="3143" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Silicon Using O 2 , HF, and Al</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Abdulagatov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b02745</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="8465" to="8475" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>CH 3 ) 3 as the Reactants</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Silicon Nitride Using an Oxidation and ″Conversion Etch″ Mechanism</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Abdulagatov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5140481</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">22607</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Copper by Sequential Steps Involving Oxidation and Exposure to Hexafluoroacetylacetone</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mohimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Q I</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Trinh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Babar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Girolami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Abelson</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.accounts.0c00084?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acs.accounts.0c00084" />
+	</analytic>
+	<monogr>
+		<title level="m">Accounts of Chemical Research pubs.acs.org/accounts Article</title>
+		<imprint>
+			<date type="published" when="2018">2018. 2020</date>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1151" to="1160" />
+		</imprint>
+	</monogr>
+	<note>Acc. Chem. Res.</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Directional Etch of Magnetic and Noble Metals. II. Organic Chemical Vapor Etch</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Altieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">O</forename><surname>Spessard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Miessler</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4983830</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<date type="published" when="2016">2017, 35, 05c305. 2016</date>
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>New York, NY</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Organometallic Chemistry</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">A New Approach to the Formal Classification of Covalent Compounds of the Elements</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L H</forename><surname>Green</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0022-328X(95)00508-N</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Organomet. Chem</title>
+		<imprint>
+			<biblScope unit="volume">500</biblScope>
+			<biblScope unit="page" from="127" to="148" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Molecular Mechanisms of Atomic Layer Etching of Cobalt with Sequential Exposure to Molecular Chlorine and Diketones</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Konh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Y</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pallem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Opila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Teplyakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5082187</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">21004</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Thermal Selective Vapor Etching of TiO 2 : Chemical Vapor Etching via WF 6 and Self-Limiting Atomic Layer Etching Using WF 6 and BCl 3</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b00985</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="6653" to="6665" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Integrated Isothermal Atomic Layer Deposition/Atomic Layer Etching Supercycles for Area-Selective Deposition of TiO 2</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Saare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b01143</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="4793" to="4804" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of AlF 3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.5b07236</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="25385" to="25393" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Isotropic Atomic Layer Etching of ZnO Using Acetylacetone and O 2 Plasma</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mameli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b12767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="38588" to="38595" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of Silicon Nitride Using Infrared Annealing for Short Desorption Time of Ammonium Fluorosilicate</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kurihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kouzuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yokogawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.56.06HB01</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="06H" to="B7" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Silicon Atomic Layer Etching by Two-Step Plasma Process Consisting of Oxidation and Modification to Form (NH 4 ) 2 SiF 6 , and Its Sublimation</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Ahn</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.57.106505</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">106505</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Remote Plasma Oxidation and Atomic Layer Etching of MoS 2</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Y</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">X</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Azcatl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Wallace</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.6b04719</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="19119" to="19126" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Del Alamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.nanolett.9b01525</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Situ Thermal Atomic Layer Etching for Sub-5 nm InGaAs Multigate MOSFETs</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="5159" to="5166" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

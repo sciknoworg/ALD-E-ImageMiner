@@ -1,0 +1,1105 @@
+[
+    {
+        "type": "text",
+        "text": "Mechanism and kinetics of thin zirconium and hafnium oxide film growth in an ALD reactor",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Maxim Deminsky a,\\*, Andrei Knizhnik a, Ivan Belov a, Stanislav Umanskii a, Elena Rykova a, Alexander Bagatur'yants a, Boris Potapkin a,b, Matthew Stoker c, Anatoli Korkin c",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "a Kinetic Technologies, Kurchatov Sq. 1, 123182 Moscow, Russia  b RRC \"Kurchatov Institute\", Kurchatov Sq. 1, 123182 Moscow, Russia  c DigitalDNA Labs Semiconductor Products Sector, Motorola Inc., 2100 E. Eliot, Tempe, AZ 85284, USA",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Received 11 December 2002; accepted for publication 3 October 2003",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Abstract",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "A mechanism of  $\\mathrm{HfO_2}$  and  $\\mathrm{ZrO_2}$  film growth in an ALD reactor from metal chlorides and water vapor is proposed to explain the experimentally observed features of the process: the formation of less than one monolayer per cycle and the dependence of the film growth rate (mass or thickness increment per cycle) and the residual chlorine concentration on the process temperature. Energy parameters of the relevant gas- surface reactions are estimated from quantum- chemical density functional theory calculations. The rate constants of the elementary reactions are calculated using RRKM theory. ALD process simulations, based on the proposed mechanism and a transient plug- flow reactor model, are consistent with the available experimental data, indicating a decrease in deposition rate with increasing temperature. The reduction in deposition rate is attributed to the increased dehydroxylation of the film surface as the temperature is increased. The  $\\mathrm{H}_2\\mathrm{O}$  adsorption energy was found to increase with increasing dehydroxylation from 33 to  $53\\mathrm{kcal / mol}$  for  $\\mathrm{ZrO_2}$  and from 35 to  $51\\mathrm{kcal / mol}$  for  $\\mathrm{HfO_2}$ . A kinetic Monte Carlo model of film growth, based on the proposed mechanism, describes the observed temperature dependence of the residual chlorine concentration in the film in terms of the steric repulsion between chemisorbed surface groups and adsorbed  $\\mathrm{MCl_4}$  molecules  $(\\mathbf{M} = \\mathbf{Zr},\\mathbf{Hf})$ .",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "$(\\widehat{\\mathbf{C}})$  2003 Elsevier B.V. All rights reserved.",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Keywords: Zirconium; Hafnium; Growth; Surface chemical reaction; Dielectric phenomena; Models of surface kinetics",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. Introduction",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Zirconium and hafnium oxide films are characterized by specific electrical, optical, and chemical properties, which make them of great interest as catalysts [1,2] and as candidates for  $\\mathrm{SiO_2}$  gate dielectric replacement in the next generation of field effect transistors [3,4]. Atomic layer chemical vapor deposition (ALCVD or ALD) is one of the most promising methods of oxide film growth and is being studied intensively [5]. In particular, this interest is due to the capability of controlling epitaxial or amorphous film growth to an atomic layer precision.",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The growth of hafnium and zirconium oxide films  $(\\mathrm{MO}_x,\\mathrm{M} = \\mathrm{Hf},\\mathrm{Zr})$  in an ALD reactor with  $\\mathrm{MCl_4}$  and water as precursors, the structural properties and chemical composition of these films were comprehensively studied in [6- 13]. It was shown that at low temperatures the ALD method produced uniform amorphous films. However, these films were of low density and were highly contaminated with chlorine atoms. The subsequent annealing, commonly used to densify the films and to remove contaminations, leads to the formation of polycrystalline structures, which often suffer from high leakage current densities. Films grown at higher temperatures had a low chlorine contamination, but even as- deposited films were polycrystalline in this case. Hence, a fundamental understanding of the chemistry and kinetics of oxide film growth in an ALD reactor is of primary interest and importance in order to find the best conditions for obtaining high- quality films.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In the experimental works cited above a qualitative chemical mechanism of  $\\mathrm{MO}_x$  film growth was suggested and discussed. The thermodynamic characteristics of the main surface half- reactions proposed in [6- 13] were theoretically estimated in [14,15] using quantum- chemical density functional theory (DFT) calculations of relatively small molecular clusters. Nevertheless, a quantitative description of film growth kinetics has not been developed so far, in spite of the availability of numerous experimental data on  $\\mathrm{MO}_2$  film growth in an ALD reactor. Moreover, as it will be shown below, the existing interpretation of  $\\mathrm{MO}_2$  film growth experiments meets significant difficulties.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "This work is dedicated to a theoretical investigation of the mechanism and kinetics of  $\\mathrm{MO}_2$  film growth in an ALD reactor using  $\\mathrm{MCl_4}$  and water as precursors. We performed a detailed analysis of the deposition mechanism and estimated the rate parameters of elementary reactions using quantum- chemical methods and RKKM theory. These parameters were then incorporated into the reactor- scale and kinetic Monte Carlo (kMC) simulations. This paper is organized as follows. The chemical mechanism of the ALD process is analyzed in detail in Section 2. A preliminary ab initio estimation of rate constants for the main chemical reactions is given in Section 3, and technical details of quantum- kinetic calculations are given in Appendix A. An extended mechanism and the results of formal kinetic and Monte Carlo simulations of  $\\mathrm{MO}_2$  film growth are presented in Section 4. Finally, some conclusions and implications are outlined in Section 5.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2. Mechanism of  $\\mathrm{MO}_2$  film growth in an ALD reactor: state of the art and problems",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The main experimental features of  $\\mathrm{MO}_2$  film growth kinetics in the ALD process can be summarized as follows [6- 11]:",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(a) the  $\\mathrm{MO}_2$  film growth rate (mass or thickness increment per cycle) on hydroxylated surfaces is much higher than on bare metal oxide surfaces; \n(b) the maximum amount of the deposited oxide (film mass increment) per cycle is  $30 - 50\\%$  of  $\\mathrm{MO}_2$  monolayer (ML), depending on process conditions; \n(c) the average film mass and thickness increments per ALD cycle decrease with increasing temperature (more than a factor of 2 in the temperature range  $200 - 800^{\\circ}\\mathrm{C}$ ); \n(d) the Cl:M ratio  $(x)$  in the chemisorbed  $\\mathrm{MCl}_x$  surface groups at the surface of a growing film varies from  $x = 2(\\mathrm{MCl}_2)$  at low temperature  $(200^{\\circ}\\mathrm{C})$  to  $x = 3 - 4$  at high temperature  $(600^{\\circ}\\mathrm{C})$ ; \n(e) the residual chlorine concentration in the film decreases from  $\\sim 5\\%$  to less than  $1\\%$  as temperature increases from 200 to  $600^{\\circ}\\mathrm{C}$ .",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The following simplified empirical mechanism was suggested by Kytokivi and co- workers [12,13] for  $\\mathrm{MO}_2$  film growth at low temperatures, when the surface is normally hydroxylated:",
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\mathbf{M}(\\mathrm{OH})_2 / \\mathrm{s} / + \\mathbf{M}\\mathrm{Cl}_4}\\\\ & {\\quad \\Longleftrightarrow \\mathbf{M}\\mathrm{O}_2 / \\mathbf{b} / + \\mathbf{M}\\mathrm{Cl}_2 / \\mathrm{s} / + 2\\mathrm{HCl}} \\end{array} \\tag{1}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathrm{MCl}_2 / \\mathrm{s} / + 2\\mathrm{H}_2\\mathrm{O}\\Longleftrightarrow \\mathrm{M(OH)}_2 / \\mathrm{s} / + 2\\mathrm{HCl} \\tag{2}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Here, we use the notation for surface sites in accordance with that generally accepted in the",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "literature [12]. Designations /s/ and /b/ correspond to the surface groups and the bulk oxide, respectively. Overall reactions (1) and (2) compose one ALD cycle. Each of them can be naturally represented as a sequence of simple reaction steps shown schematically in Fig. 1. These reactions lead to the formation of a stoichiometric single (though, incomplete, see point (b) above)  $\\mathrm{MO}_2$  submonolayer (see point (b) above) on a hydroxylated metal oxide surface. This scheme of complex chemical reactions of  $\\mathrm{MCl}_4$  and  $\\mathrm{H}_2\\mathrm{O}$  with the surface of a growing film is based on the results of quantum- chemical calculations [16,17] of the  $\\mathrm{t - ZrO_2(001)}$  surface. It was shown that water adsorption at this surface should proceed with dissociation (a dissociatively adsorbed water molecule was found to be somewhat more stable than a molecularly adsorbed one) to form two bibridged hydroxyl groups in accordance with experimental data [18- 20].",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "To explain the decrease in the film growth rate (see points (a) and (c) above) and the variation of the composition of chemisorbed  $\\mathrm{MCl}_x$  surface groups (point (d)) with temperature, it was assumed that the concentration of surface OH groups is controlled by the dehydroxylation (water desorption) reaction [6]",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/cd38c5109f9f4a524d07b7e71062092b1dbceed84f7da1d338940b15fb8d5dd2.jpg",
+        "img_caption": [
+            "Fig.1.Reaction steps of  $\\mathrm{MO}_2$  film growth in the ALD process: (1a) the formation of a chemisorbed  $\\mathrm{MCl}_3$  group,1b the formation of a chemisorbed  $\\mathrm{MCl}_2$  group,2a the hydrolysis of the first M-Cl bond in a chemisorbed  $\\mathrm{MCl}_2$  group, and (2b) the hydrolysis of the second M-Cl bond in a chemisorbed  $\\mathrm{MCl}_2$  group."
+        ],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathrm{M(OH)_2 / s / \\rightleftharpoons MO / s / + H_2O} \\tag{3}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "drawn schematically in Fig.2.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "An increase in temperature leads to a decrease in the number of reactive  $- \\mathrm{OH}$  surface sites through reaction (3). Hence, the probability of the formation of the bridged  $\\mathrm{MCl}_2 / \\mathrm{s}/$  groups in the reaction of  $\\mathrm{MCl}_3 / \\mathrm{s}/$  groups with the neighboring hydroxyl (Fig. 1) becomes lower at higher temperatures, and  $\\mathrm{MCl}_3 / \\mathrm{s}/$  groups become the dominating surface species after the  $\\mathrm{MCl}_4$  pulse is introduced in the ALD chamber. The chemisorbed  $\\mathrm{MCl}_3 / \\mathrm{s}/$  groups can react with water in the same way as  $\\mathrm{MCl}_2 / \\mathrm{s}/$  in reaction (2), thus allowing the completion of the ALD cycle [6]. Surface dehydroxylation (reaction (3)) explains the decrease in the mass increment per cycle and the increase in the number of  $\\mathrm{Cl}$  atoms per metal in the surface  $\\mathrm{MCl}_x / \\mathrm{s}/$  groups. In [21], it was suggested that the growth rate can also be affected by the chemical readsorbtion of  $\\mathrm{HCl}$  . Therefore this process will also be taken into account in the kinetic scheme developed below.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The high  $\\mathrm{ClM}$  ratio  $(x > 3)$  in  $\\mathrm{MCl}_x$  surface groups observed after the  $\\mathrm{MCl}_4$  pulse at temperatures higher than  $400^{\\circ}\\mathrm{C}$  point (d) was explained by the dissociative chemisorption of  $\\mathrm{MCl}_4$  on the fully dehydroxylated surface areas [6]",
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathrm{MO / s / + MCl_4\\leftrightarrow MClO(MCl_3) / s / } \\tag{4}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\mathrm{MCIO(MCl_3) / s / + 2H_2O}}\\\\ & {\\quad \\Longleftrightarrow \\mathrm{MO_2 / b / + MO / s / + 4HCl}} \\end{array} \\tag{5}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "According to the experimental data (see point (a)), reaction (4) should result in a lower mass increment per cycle than reaction (1).",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "It should be noted that both  $\\mathrm{MCl}_2 / \\mathrm{s}/$  and  $\\mathrm{MCl}_3/$ $\\mathrm{s}/$  are bulky groups, which screen the nearest active sites, preventing their reactions with gas- phase  $\\mathrm{MCl}_4$  molecules and leading to less than one ML",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/8b1dd473bec2894a51e2346ca6a6dcb788aa186a530692d69ec279729e16632c.jpg",
+        "img_caption": [
+            "Fig.2.Water desorption reaction."
+        ],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "of  $\\mathrm{MO}_2$  deposition in an ALD cycle (see point (b)) [22].",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Hence, important features of the  $\\mathrm{MO}_2$  ALD process (points (a)- (d)) can be explained by the mechanism that combines low- temperature deposition at a more reactive hydroxylated surface (reactions (1) and (2)), surface dehydroxylation (reaction (3)) and high- temperature deposition at a less reactive dehydroxylated surface (reactions (4) and (5)).",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Although the suggested simplified mechanism (reactions (1)- (5)) can qualitatively explain some important features of the  $\\mathrm{MO}_2$  ALD process [6- 13], its application to the quantitative description of film growth kinetics meets significant difficulties. First, this mechanism cannot explain the slow decrease in the film growth rate with increasing temperature observed experimentally (Fig. 3). The recombination reaction of surface - OH groups (3), which diminishes the surface density of active - OH sites, should give a sharp decrease in the mass increment per cycle  $\\Delta m_0$  with temperature at a constant adsorption energy  $E_{\\mathrm{ad}}$ . Indeed, the mass increment per cycle should be proportional to the number density of surface OH groups  $[\\mathrm{OH}]_{\\mathrm{s}}$  which is described by the well- known Langmuir equation",
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/e048f7464ebf407e359a207e1b7585ba0e211de60a9dc75cfa3b58eeeba15f9b.jpg",
+        "img_caption": [
+            "Fig. 3. Temperature dependence of the film growth rate. Squares and circles are experimental thickness and mass increments per ALD cycle in  $\\mathrm{ZrO_2}$  film growth [10]. Curves are the hydroxylation degree calculated by Eq. (6) for  $E_{\\mathrm{ad}} = 25$  kcal/mol (dashed-dotted line),  $E_{\\mathrm{ad}} = 35$  kcal/mol (dashed line) and  $45\\mathrm{kcal / mol}$  (dashed-dotted line)."
+        ],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\Delta m_0\\sim [\\mathrm{OH}]_{\\mathrm{s}}}\\\\ & {\\quad \\sim 1 / (1 + K\\exp (-E_{\\mathrm{ad}} / RT)),\\quad K\\approx 4n_{\\mathrm{s}}\\omega /nv.} \\end{array}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Here  $n$  is the water vapor number density,  $v$  is the average velocity of gas- phase molecules,  $n_{\\mathrm{s}}$  is the total number density of surface sites available for water adsorption, and  $\\omega$  is the characteristic desorption frequency of water molecules. The hydroxylation degree  $(\\beta = [\\mathrm{OH}]_{\\mathrm{s}} / 2n_{\\mathrm{s}})$  calculated by Eq. (6) as a function of temperature for typical values of  $E_{\\mathrm{ad}}$  (in the range  $25 - 45\\mathrm{kcal / mol}$  [23,24]) is given in Fig. 3. It is evident that an increase in temperature by only  $\\Delta T\\sim 100^{\\circ}\\mathrm{C}$  leads to about  $90\\%$  surface dehydroxylation for all  $E_{\\mathrm{ad}}$  values, indicating that virtually all of the variation in the deposition rate with temperature should occur within a  $100^{\\circ}\\mathrm{C}$  temperature range. However, this behavior is obviously in contradiction with the available experimental data, also shown in Fig. 3, in which the deposition rate gradually decreases over a range of more than  $400^{\\circ}\\mathrm{C}$  [6,10,11].",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Another deficiency of the existing mechanism is concerned with the chlorine contamination in the film. Because the water concentration during the water pulse is in significant excess with respect to the total amount of surface sites and the chemical readsorption of  $\\mathrm{HCl}$  is presumably low, the water reaction with surface chlorine atoms can be accurately described by the first- order kinetic equation",
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\mathrm{d}[\\mathrm{Cl}] / \\mathrm{d}t\\sim -k(T)[\\mathrm{Cl}]n_{\\mathrm{H}_2\\mathrm{O}},}\\\\ & {[\\mathrm{Cl}]\\sim \\exp (-k(T)\\times n_{\\mathrm{H}_2\\mathrm{O}}\\times \\tau),} \\end{array} \\tag{7}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "where  $k(T)$  is the effective rate constant of the water reaction with surface chlorine and  $\\tau$  is the duration of the water treatment. Eq. (7) is valid if the dependence of the effective rate constant  $k(T)$  on the local environment of chemisorbed  $\\mathrm{Cl}$  atoms is disregarded as was implicitly assumed in [6- 13].",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "According to Eq. (7), the residual chlorine concentration should depend exponentially on  $T$  and  $\\tau$ . It should be noted first that the experimental dependence of the residual chlorine concentration on the substrate temperature (see point (e)) is very far from the exponential form of Eq. (7). The exponential dependence on  $\\tau$  is also in strong contradiction with the experimental data.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Since the steady state film growth rate is lower than  $0.5\\mathrm{ML}$  per ALD cycle (see point (b)), several ALD cycles are required to bury a chemisorbed chlorine atom inside the growing film (more than three cycles to form a monolayer over a chlorine atom). Hence, according to Eq. (7), in order that about  $5\\%$  Cl remain in the growing film (see point e), about  $37\\%$ $(0.37^{3}\\approx 0.05)$  of the surface chlorine atoms adsorbed during the previous metal precursor pulse should not react with water during each pulse. However, such a significant amount of unreacted Cl atoms was not observed in mass increment measurements [6].",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The problems outlined above show that the existing mechanism of  $\\mathrm{HfO_2}$  and  $\\mathrm{ZrO_2}$  film growth in an ALD reactor needs a qualitative modification. To eliminate the contradiction between the theoretical curves obtained based on the current understanding of the film growth mechanism and the experimental temperature dependence of the film growth rate as demonstrated in Fig. 3, we suggest that the water adsorption energy decreases with increasing hydroxylation degree. In this case the hydroxylation degree and, hence, the film growth rate (see Eq. (6)) will decrease much slower with temperature than for a constant water adsorption energy.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Estimations of the ratio of film growth rates at low and high temperatures based on Eq. (6) show that an agreement with experiment can be achieved if the increase in the water adsorption energy through the temperature range from 200 to  $600^{\\circ}\\mathrm{C}$  is  $\\sim 15\\mathrm{kcal / mol}$ . This value is in agreement with thermogravimetric experiments [23,24] of water adsorption on  $\\mathrm{ZrO_2}$  samples. Similar results were obtained in quantum- chemical calculations of water adsorption energy [25].",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "In order to describe the smooth dependence of the residual chlorine concentration in the as- grown film on the water pulse duration and the substrate temperature, we made an additional assumption that the rate constants of reactions (2) and (5) depend on the local chemical environment of the chemisorbed chlorine atom. It is reasonable to assume that a Cl atom becomes stronger bound to the surface as the number of the nearest neighboring metal atoms increases and, hence, the number of short M- Cl contacts also increases. In this case, the activation energy of possible reactions between water and chemisorbed chlorine will also increase. Steric hindrances from neighboring chemisorbed surface groups will act in the same direction. Therefore, as the film grows, the reaction of water with a chemisorbed chlorine atom will slow down. This effect results in the fact that the residual chlorine concentration is not described by Eq. (7) and the chlorine atoms can be can be readily captured in the growing film. It should be noted here that the processes of chlorine diffusion should also be taken into account under real deposition conditions.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Thus, the analysis presented above indicates that the mechanism and kinetics of the ALD process cannot be interpreted even qualitatively without taking into account stereochemical effects, in particular, the effects of surface coverage on the reactivity of chemisorbed surface species. An appropriate approach to the description of the ALD process should involve atomistic concepts and a more detailed formulation of the mechanism in terms of surface groups and elementary reactions of key chemical steps.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "At present, even approximate estimates of the necessary rate constants for the gas- surface reactions involved in  $\\mathrm{Zr(Hf)O_2}$  ALD are unavailable in the literature. Therefore, we performed ab initio quantum- chemical and quantum- kinetic calculations to evaluate some of the most important reaction constants.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "3. Preliminary ab initio evaluation of reaction rate parameters for the key reaction steps of  $\\mathbf{MO}_2$  deposition",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "A great diversity of surface reactions can proceed on the growing  $\\mathrm{Zr(Hf)O_2}$  surface, which is covered by various chemisorbed surface groups. These reactions include reactions of incident gas- phase molecules  $(\\mathrm{MC l_4}$ $\\mathrm{H}_2\\mathrm{O}$  and HCl) with the surface, yielding \"primary\" surface groups  $\\mathrm{MCl}_3/$ $\\mathrm{s / }$ $\\mathrm{MCl}_2 / \\mathrm{s / }$  and  $\\mathrm{OH / s / }$  . These groups can further react with incident gas- phase molecules yielding longer and more complicated surface groups like  $\\mathrm{- MCl_2 - OH}$ $\\mathrm{- O - MCl_3}$ $\\mathrm{- MCl_2 - O - MCl_3}$ $\\mathrm{- O - }$ $\\mathrm{MCl}_2\\mathrm{- OH}$ $\\mathrm{- O - MCl_2 - O - MCl_3}$  etc. Reactions",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "between chemisorbed surface groups, assisted with their surface diffusion, lead to the formation of a new surface layer (densification). It is hardly possible to describe all these reactions at the ab initio level. However, a chemical consideration shows that most of them involve interaction between an M- Cl bond of an  $\\mathrm{MCl}_x$  moiety and an  $\\mathrm{O - H}$  bond of an  $\\mathrm{H}_2\\mathrm{O}$  molecule or of an  $\\mathrm{M - OH}$  fragment. Chemically, there is no significant difference between these interactions and interactions involved in basic reactions (1) and (2), because these interactions are essentially local.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Therefore, the main goal of this section was to use ab initio quantum- chemical calculations and the quantum- statistical theory of chemical reactions in order to determine the basic features of the elementary steps of the proposed overall mechanism (reactions (1a), (1b), (2a), (2b), see Fig. 1) and to obtain basic estimates for their rate constants. Because of the local character of interactions involved in these processes, on the one hand, and in order to avoid indeterminacy associated with the local chemical environment on the surface, on the other hand, we approximated real surface reactions with appropriate prototype gas- phase molecular systems. Thus, steps (1a) and (1b) of reaction (1) were approximated by the molecular reaction",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\mathbf{M}(\\mathrm{OH})_4 + \\mathbf{M}\\mathrm{Cl}_4\\rightarrow \\mathbf{M}(\\mathrm{OH})_4\\cdot \\cdot \\cdot \\mathbf{M}\\mathrm{Cl}_4}\\\\ & {\\qquad \\rightarrow \\mathbf{M}(\\mathrm{OH})_3\\cdot \\mathbf{OMCl}_3 + \\mathrm{HCl},} \\end{array}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "whereas steps (2a) and (2b) of reaction (2) were approximated by the molecular reaction",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{r}\\mathbf{M}(\\mathrm{OH})_2\\mathrm{Cl}_2 + \\mathrm{H}_2\\mathrm{O}\\longrightarrow \\mathbf{M}(\\mathrm{OH})_2\\mathrm{Cl}_2\\dots \\mathrm{H}_2\\mathrm{O}\\\\ \\rightarrow \\mathbf{M}\\mathrm{Cl}(\\mathrm{OH})_3 + \\mathrm{H}\\mathrm{Cl} \\end{array}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "In general, calculations of the rate constants of surface reactions require rather sophisticated models. However, a comparison of the results obtained in our work using periodic- type slab models [25] and cluster models of surface reactions [26] with the results obtained in [14,15] showed that even rather small molecular models of surface sites qualitatively reproduce interaction energies in chemical systems typical for  $\\mathrm{ZrO_2}$  and  $\\mathrm{HfO_2}$  deposition processes. Moreover, the use of simple molecular models excludes the uncertainties associated with the real structure of surface active sites and their variety. In addition, this approach avoids complicated problems connected with the treatment of vibrational degrees of freedom.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "We calculated the energies and the structural and vibrational parameters for the reagents, the transition states, and the products of these model gas- phase reactions. Then, we applied statistical theory to calculate reaction rate parameters for the corresponding gas- surface reactions within an ad hoc quantum- kinetic model that takes into account the effects of energy exchange with the bulk and the freezing of some degrees of freedom at the surface.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Ab initio calculations were performed within the framework of DFT with the hybrid three- parameter Becke- Lee- Yang- Parr (B3LYP) exchange- correlation functional [27,28] using the Gaussian 98 program package [29]. The Zr, Hf, and Cl atoms were described using the Hay- Wadt pseudopotentials [30] and LANL2DZ basis set; for Cl atoms, the LANL2DZ basis set was augmented with polarization d functions (with an exponent of 0.75). The O and H atoms were described with the 6- 31G(d,p) basis set [31,32].",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The frequencies of normal vibrations were calculated for all fully optimized structures and used to verify whether the stationary points found were true minima or first- order saddle points. These frequencies were also used in the subsequent quantum- kinetic calculations of gas- surface reaction rate parameters. The results of quantum- chemical calculations for the model gas- phase reactions are given in Table 1. Qualitative shapes of the corresponding reaction path profiles  $U_{\\mathrm{rp}}(q_{\\mathrm{r}})$  ( $q_{\\mathrm{r}}$  is the reaction coordinate) are presented in Fig. 4. The energies of transition complexes  $(\\mathrm{TC}_{\\mathrm{f}})$  and products are measured from the energy of the corresponding isolated reagents.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The results of quantum- chemical calculations show that the reactions under consideration proceed via stable intermediate complexes  $\\mathrm{M(OH)}$ $\\mathrm{OMCl}_3 / \\mathrm{s}/$  and  $\\mathrm{MCl(OH)}_3 / \\mathrm{s}/$  formed by the gas- phase reagent  $\\mathrm{MCl_4}$  or  $\\mathrm{H}_2\\mathrm{O}$  with the active surface site (see also [15]) through a typical donor- acceptor coordination bond. These intermediate complexes may play an important part in the kinetics of film growth. It will be shown below that the stabilization of these complexes at low tem",
+        "page_idx": 5
+    },
+    {
+        "type": "table",
+        "img_path": "images/d13f7cf0783a277de230f9114a4fd7c5d34fe509e69ba127eb0e1fef2e1072ce.jpg",
+        "table_caption": [
+            "Table 1 Parameters of model gas-surface reactions (without ZPE corrections)"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Surface reaction</td><td>State, kcal/mol \nModel reaction</td><td>Reaction type</td><td>Fad \nAB/s/</td><td>Ef \nTCf</td><td>Er \nC/s/+D</td></tr><tr><td>Zr(OH)2/s/ + ZrCl4→\nZr(OH)OZrCl3/s/ + HCl</td><td>Zr(OH)4 + ZrCl4→\nZr(OH)4-ZrCl4→\nZr(OH)3-OzrCl3 + HCl</td><td>Fig. 4a</td><td>-26.9</td><td>-6.8</td><td>-11.7</td></tr><tr><td>ZrCl2/s/ + H2O→\nZrCl(OH)3/s/ + HCl</td><td>Zr(OH)2Cl2 + H2O→\nZr(OH)2Cl2-H2O→\nZrCl(OH)3 + HCl</td><td>Fig. 4b</td><td>-20.1</td><td></td><td>5.3</td></tr><tr><td>Hf(OH)2/s/ + HfCl4→\nHf(OH)OHfCl3/s/ + HCl</td><td>Hf(OH)4 + HfCl4→\nHf(OH)4-HfCl4→\nHf(OH)3-OHfCl3 + HCl</td><td>Fig. 4a</td><td>-24.2</td><td>-8.6</td><td>-14.0</td></tr><tr><td>HfCl2/s/ + H2O→\nHfCl(OH)3/s/ + HCl</td><td>Hf(OH)2Cl2 + H2O→\nHf(OH)2Cl2H2O→\nHfCl(OH)3 + HCl</td><td>Fig. 4b</td><td>-20.3</td><td></td><td>2.7</td></tr></table>",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/b10762c8d8353165ac905aa44990cc44b17cc280263e2ba8d64f6f0d1e86b1aa.jpg",
+        "img_caption": [
+            "Fig. 4. Schematic reaction path profile of the gas-surface reactions via a strongly adsorbed precursor  $\\mathrm{AB / s / }$  (a) decomposition of  $\\mathrm{AB / s / }$  to products  $\\mathrm{C / s / }$  and  $\\mathrm{D}$  proceeds via a rigid transition complex; (b) decomposition via a loose transition complex.  $\\mathrm{TC_{ad}}$  and  $\\mathrm{TC_f}$  are transition complexes for adsorption of  $\\mathrm{B}$  at  $\\mathrm{A / s / }$  and for  $\\mathrm{AB / s / }$  decomposition to products  $\\mathrm{C / s / }$  and  $\\mathrm{D}$"
+        ],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "peratures leads to the blocking of active surface sites and, hence, to a decrease in the film growth rate (see Figs. 7 and 8).",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The quantum- chemical calculations performed using molecular models do not take into account energy relaxation into the bulk. We developed a special approach in which the total set of degrees of freedom for a large molecule is divided into two sets (see, e.g. [33]). One set including the majority of the degrees of freedom acts as a thermal bath. The other set is directly related to the active reacting center and includes the reaction coordinate. This set includes only a relatively small number of degrees of freedom.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "We assumed that a gas- surface reaction that proceeds through a precursor can be treated in terms of the well- developed statistical theory of gas- phase bimolecular reactions proceeding through a long- lived intermediate complex (see, e.g. [34,35]). The surface centers  $\\mathrm{A / s / }$  (reagent),  $\\mathrm{C / s / }$  (product), and  $\\mathrm{AB / s / }$  (precursor) are considered in the model as the gas- phase molecules  $\\mathrm{A}$  and  $\\mathrm{C}$  and the donor- acceptor complex  $\\mathrm{AB}$  embedded into the bulk (see Fig. 4). The  $\\mathrm{A}$ ,  $\\mathrm{C}$ , and  $\\mathrm{AB}$  particles themselves are treated here based on the results of gas- phase quantum- chemical calculations.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The most important effect of the bulk is the relaxation of the internal energy of the  $\\mathrm{A / s / }$ ,  $\\mathrm{C / s / }$",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "and  $\\mathrm{AB / s / }$  surface species. For the systems considered, vibrational energy relaxation is governed by the bulk thermal conductivity. The relaxation time can be estimated from the data for metal oxides reported in [36]",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\tau_{\\mathrm{rel}}\\sim 10^{-11} - 10^{-12}\\mathrm{s}. \\tag{8}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The vibrationally excited precursor  $\\mathrm{AB / s / ^{*}}$  can decay not only via energy transfer to the bulk but also via a chemical transformation (desorption of B and reaction with the formation of  $\\mathbb{D}$  and  $\\mathrm{C / s / }$  These chemical processes can be characterized by the \"chemical' lifetime  $\\tau_{\\mathrm{ch}}^{*}$  , which was estimated in the framework of RRKM theory (see, e.g. [34,35]) using the reaction parameters of the reagents B and  $\\mathrm{A / s / }$  the precursor  $\\mathrm{AB / s / }$  and the transition complexes determined from the results of quantum- chemical calculations. For all the reactions considered, it was found that at  $T< 700^{\\circ}\\mathrm{C}$",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\tau_{\\mathrm{ch}} > \\sim 10^{-10}\\mathrm{s}. \\tag{9}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Thus,",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\tau_{\\mathrm{rel}}\\ll \\tau_{\\mathrm{ch}}^{*}, \\tag{10}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "and, therefore, the vibrationally excited  $\\mathrm{AB / s / ^{*}}$  complex relaxes to attain the Boltzmann energy distribution before the chemical transformation occurs. This fact leads to two consequences:",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "1. The direct reactions (proceeding without the formation of an intermediate adsorption complex)",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathbf{B} + \\mathbf{A} / \\mathbf{s} / \\underset {k_{\\mathrm{r}}^{(\\mathrm{d})}}{\\overset{k_{\\mathrm{r}}^{(\\mathrm{d})}}{\\longleftrightarrow}}\\mathbf{D} + \\mathbf{C} / \\mathbf{s} / \\tag{11}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "are suppressed by energy relaxation and can be excluded from the kinetic scheme.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "2. The formation of the adsorption complex, its decay to the reagents, and its transformation to the products",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathbf{B} + \\mathbf{A} / \\mathbf{s} / \\underset {k_{\\mathrm{d}}}{\\overset{k_{\\mathrm{a}}}{\\longleftrightarrow}}\\mathbf{AB} / \\mathbf{s} / , \\tag{12}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathrm{AB / s / \\stackrel{k_{\\mathrm{f}}}{\\longleftrightarrow}D + C / s / } \\tag{13}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "proceeds to thermal equilibrium. Therefore, the rate constants  $k_{\\mathrm{a}},k_{\\mathrm{d}},k_{\\mathrm{f}}$  and  $k_{\\mathrm{r}}$  can be calculated using transition state theory (see, e.g. [34]). The details of these calculations are described in Appendix A. The calculations of rate constants were performed in the temperature range 25-  $700~^\\circ \\mathrm{C}$  and were further used in the kinetic calculations described in Section 4 (reactions (15)- (27) in Table 2).",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Thus, the analysis of reactions with water and chlorine precursors given above shows that even the separate steps of reactions (1) and (2) cannot be considered elementary and must be described by a multistage mechanism that includes the formation of an intermediate adsorption complex  $(\\mathrm{B} + \\mathrm{A} / \\mathrm{s} / \\rightarrow \\mathrm{AB} / \\mathrm{s} /)$  .The intermediate complexes have a significant adsorption energy  $(E_{\\mathrm{ad}}\\sim 15–20$ $\\mathrm{kcal / mol})$  , which becomes important at low temperatures  $T< 200^{\\circ}\\mathrm{C}$  see below),where the film growth rate can decrease significantly because of the stabilization of the adsorption complex.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "4. Kinetic modeling of  $\\mathbf{MO}_2$  film growth",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Now we will show that the inclusion of the qualitative concept of the dependence of reaction parameters on the local chemical environment allows us to describe the main quantitative kinetic and mechanistic features of the ALD process. We used two different approaches for the simulation of  $\\mathrm{MO}_2$  film growth: ALD reactor modeling in the framework of formal kinetics and kMC modeling.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The first approach was used to model the principal features of the film growth rate and to verify the kinetic parameters calculated using quantum- chemical methods. An accurate description of the processes of film contamination with Cl impurities requires a detailed consideration of the actual local surface structures, which cannot be readily implemented using simple rate expressions. Therefore, we used the kMC approach, which allows the local atomistic effects to be implemented in a natural way, to model Cl incorporation in the films.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "We restricted our simulations to the temperature range  $T< 700^{\\circ}\\mathrm{C}$  which is typical for conventional process conditions of zirconium and hafnium oxide ALD.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "4.1. Formal kinetic modeling",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The kinetic scheme and rate parameters used in the simulations are presented in Table 2. To describe the surface of the growing film within formal kinetics, we introduced various groups of surface sites:",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "(1) sites that describe the varying degree of surface hydroxylation:  $\\mathrm{M(OH)_2 / s / }$  (hydroxylated surface site),  $\\mathrm{MO / s / }$  (dehydroxylated surface site, see Fig.2); \n(2) sites that describe the physical adsorption of a metal precursor:  $\\mathrm{MCl_4M(OH)_2 / s / }$  \n(3) sites that describe the chemical adsorption of a metal precursor on hydroxylated sites:  $\\mathrm{MOM(OH)Cl_3 / s / }$ $\\mathrm{MO}_2\\mathrm{MCl}_2 / \\mathrm{s}/$  see Fig.1; \n(4) sites that describe the physical adsorption of a water:  $\\mathrm{MO}_2\\mathrm{MCl}_2\\mathrm{H}_2\\mathrm{O} / \\mathrm{s}/$ $\\mathrm{MO}_2\\mathrm{MClOHH}_2\\mathrm{O} / \\mathrm{s}/$  \n(5) sites that describe the products of water treatment:  $\\mathrm{MO}_2\\mathrm{MClOH} / \\mathrm{s}/$  see Fig.1.",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Reactions (15)- (27) in Table 2 correspond to the overall mechanism described by Eqs. (1) and (2). The rate coefficients of these reactions were taken from the results of the ab initio calculations described in the previous section (see Table 1).",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Reactions (28) and (29) describe the process of surface dehydroxylation/hydroxylation (Fig. 2). We used a value of  $10^{13}1 / \\mathrm{s}$  as an estimation of the pre- exponential factor (this value corresponds to the characteristic frequency of internal vibrations of the reaction center) for the desorption reaction. The activation energy of hydroxylation reaction (28), as it was mentioned above, depends on the degree of surface dehydroxylation. Therefore, it was treated as a variable parameter. In this study, we considered that the water adsorption energy is a linear function of the hydroxylation degree  $\\beta$  for  $1 / 2< \\beta < 1$",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nE_{\\mathrm{ad}} = \\left\\{ \\begin{array}{ll}E_{\\mathrm{ad}}^{0} - \\Delta \\epsilon \\cdot (2\\beta -1), & 1 / 2< \\beta < 1,\\\\ E_{\\mathrm{ad}}^{0}, & \\beta < 1 / 2. \\end{array} \\right. \\tag{14}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The mechanism in Table 2 was implemented in a non- steady- state plug- flow reactor model to simulate real ALD processes. The model assumes a uniform distribution of gas- mixture velocities at a given reactor cross section. Real experimental conditions (the reactor geometry is described in [6,8,10]) are different from the proposed model. Indeed, the uniform distribution of gaseous species in the reactor cross section suggests the absence of diffusion and convection transport effects on the rates of surface chemical reactions. However, because the main objective of this work is to determine the principal features of the chemical mechanism, the aspects of detailed flow dynamics can be neglected at this stage of consideration. The goal of the simulations was to determine the remaining adjustable parameters based on the available experimental data. The following experimental data were used to verify the kinetic scheme and to adjust the reactor parameters: the dependence of the film growth rate on the process temperature, the time dependence of the film mass increment during the  $\\mathrm{MCl_4}$  pulse, the ratio of the total film mass increment attained in an ALD cycle  $m_0$  to the mass increment during the  $\\mathrm{MCl_4}$  pulse  $m_{1}$  the Cl:M ratio  $(x)$  in the chemisorbed  $\\mathrm{MCl}_x$  surface groups as a function of temperature, and the chlorine concentration in the film [6- 11].",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Calculations were carried out for the following experimental conditions of  $\\mathrm{HfO_2}$  and  $\\mathrm{ZrO_2}$  ALD [6,8,10]: carrier gas  $(\\mathbf{N}_2)$  pressure,  $250\\mathrm{Pa}$  temperature range,  $180–600^{\\circ}\\mathrm{C}$  reactor volume,160  $\\mathrm{cm}^3$  ; substrate surface area,  $220~\\mathrm{cm}^2$  ; reactor cross section,  $10.2~\\mathrm{cm}^2$  substrate length,  $6\\mathrm{cm}$  and carrier gas flow rate,  $150~\\mathrm{cm}^3 /\\mathrm{s}$",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "In the experiments on  $\\mathrm{ZrO_2}$  film growth [10], the durations of the  $\\mathrm{ZrCl_4}$  pulse, the water vapor pulse, and the purge gas pulse following the  $\\mathrm{ZrCl_4}$  pulse were each  $2\\mathrm{s}$  . The duration of the purge gas  $(\\mathbf{N}_2)$  pulse following the water pulse was  $5\\mathrm{s}$  In the  $\\mathrm{HfO_2}$  film growth experiments [8], the duration of the precursor  $(\\mathrm{HfCl}_4,\\mathrm{H}_2\\mathrm{O})$  pulses and the purge gas pulses were all  $2\\mathrm{s}$  . The flow rates of precursors were estimated from the available data of their vapor pressure in the effusion cell:  $1.8 - 3\\mathrm{cm}^3 /\\mathrm{s}$  for  $\\mathrm{MCl_4}$  and  $2.4 - 3\\mathrm{cm}^3 /\\mathrm{s}$  for water vapor. The partial pressures of precursors in the reaction chamber that correspond to the experimental conditions used in [8,10] can be approximately estimated at  $2-$ $4\\mathrm{Pa}$  for  $\\mathrm{MCl_4}$  precursors and at  $4 - 6\\mathrm{Pa}$  for  $\\mathrm{H}_2\\mathrm{O}$",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "According to our discussion in Section 2, the growth of the oxide film at low temperatures is fully determined by reactions on the hydroxylated surface (reactions (15)- (27) in Table 2). The",
+        "page_idx": 8
+    },
+    {
+        "type": "table",
+        "img_path": "images/483ad333552c8c6353bc102a361c49c225ac268f3eb6ad193747905b397d8422.jpg",
+        "table_caption": [
+            "Table 2 Kinetic scheme and parameters of rates of  $\\mathrm{MO}_2$  film growth in the framework of the \"minimum\" mechanism"
+        ],
+        "table_footnote": [
+            "a Values for the extended mechanism."
+        ],
+        "table_body": "<table><tr><td>Reaction</td><td colspan=\"3\">ZrO2 mechanism</td><td colspan=\"3\">HfO2 mechanism</td><td></td></tr><tr><td>k = A * Tnexp(-Ea/RT)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>[k] = cm3/s; cm2/s; 1/s; [Ea] = kcal/mol; [T] = K</td><td>lg(A)</td><td>n</td><td>Ea</td><td>lg(A)</td><td>n</td><td>Ea</td><td></td></tr><tr><td>Reactions of MCl4 adsorption on the hydroxylated surface</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>MC4 + M(OH)2/s/ ⇒ MCl4M(OH)2/s/</td><td>(15)</td><td>-13.00</td><td>0.86</td><td>-0.22</td><td>-13.00</td><td>0.79</td><td>0.26</td></tr><tr><td>MC4M(OH)2/s/ ⇒ M(OH)2/s/ + MCl4</td><td>(16)</td><td>13.70</td><td>0.00</td><td>23.00</td><td>14.20</td><td>0.00</td><td>20.00</td></tr><tr><td>MC4M(OH)2/s/ ⇒ MOM(OH)Cl3/s/ + HCl</td><td>(17)</td><td>10.30</td><td>0.50</td><td>16.30</td><td>10.23</td><td>0.8</td><td>11.42</td></tr><tr><td>MOM(OH)Cl3/s/ + HCl ⇒ MCl4M(OH)2/s/</td><td>(18)</td><td>-13.70</td><td>1.00</td><td>4.73</td><td>-14.36</td><td>1.06</td><td>5.43</td></tr><tr><td>MOM(OH)Cl3/s/ ⇒ MO2MCl2/s/ + HCl</td><td>(19)</td><td>10.32</td><td>0.50</td><td>10.31</td><td>11.38</td><td>0.06</td><td>11.42</td></tr><tr><td>MO2MCl2/s/ + HCl ⇒ MOM(OH)Cl3/s/</td><td>(20)</td><td>-13.70</td><td>1.00</td><td>4.73</td><td>-14.36</td><td>0.8</td><td>5.43</td></tr><tr><td>Reactions of H2O with the chlorinated surface, new M(OH)2layer formation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>H2O + MO2MCl2/s/ ⇒ MO2MCl2H2O/s/</td><td>(21)</td><td>-12.79</td><td>0.96</td><td>-0.17</td><td>-12.78</td><td>0.94</td><td>-0.17</td></tr><tr><td>MO2MCl2H2O/s/ ⇒ H2O + MO2MCl2/s/</td><td>(22)</td><td>13.20</td><td>0.00</td><td>15.10</td><td>13.30</td><td>0.00</td><td>15.57</td></tr><tr><td>MO2MCl2H2O/s/ ⇒ MO2MClOH/s/ + HCl</td><td>(23)</td><td>13.70</td><td>0.00</td><td>18.80</td><td>13.20</td><td>0.00</td><td>16.94</td></tr><tr><td>MO2MClOH/s/ + HCl ⇒ MO2MCl2H2O/s/</td><td>(24)</td><td>-13.04</td><td>0.97</td><td>-0.02</td><td>-13.05</td><td>0.99</td><td>0.01</td></tr><tr><td>H2O + MO2MClOH/s/ ⇒ MO2MClOHH2O/s/</td><td>(25)</td><td>-12.79</td><td>0.96</td><td>-0.17</td><td>-12.78</td><td>0.94</td><td>-0.17</td></tr><tr><td>MO2MClOHH2O/s/ ⇒ H2O + MO2MClOH/s/</td><td>(26)</td><td>13.20</td><td>0.00</td><td>15.10</td><td>13.30</td><td>0.00</td><td>15.50</td></tr><tr><td>MO2MClOHH2O/s/ ⇒ MO2/b/ + M(OH)2/s/ + HCl</td><td>(27)</td><td>13.70</td><td>0.00</td><td>18.80</td><td>13.20</td><td>0.00</td><td>16.9</td></tr><tr><td>Reactions of surface (de)hydroxylation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M(OH)2/s/ ⇒ MO/s/ + H2O</td><td>(28)</td><td>13.00</td><td>0.00</td><td>34.5–57</td><td>13.00</td><td>0.00</td><td>30–55</td></tr><tr><td></td><td></td><td></td><td></td><td>33–53a</td><td></td><td></td><td>35–51a</td></tr><tr><td>MO/s/ + H2O ⇒ M(OH)2/s/</td><td>(29)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr></table>",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "parameters of these reactions are known from our quantum- chemical and quantum- kinetic calculations. Therefore, the remaining process parameters that do not relate to the kinetic scheme in Table 2 can be adequately determined using the experimental results for the low- temperature region within a reduced kinetic scheme that includes only reactions 15- 27).We found that the number density of available surface metal atoms  $n_{s} = 6\\times$ $10^{14}\\mathrm{cm}^{- 2}$  for the growing  $\\mathrm{ZrO_2}$  surface and  $n_{\\mathrm{s}} = 5\\times 10^{14}\\mathrm{cm}^{- 2}$  for the growing  $\\mathrm{HfO_2}$  surface, the  $\\mathrm{MCl_4}$  flow rate is  $1.8~\\mathrm{cm}^3 /\\mathrm{s}$  and the  $\\mathrm{H}_2\\mathrm{O}$  flow rate is  $2.4~\\mathrm{cm}^3 /\\mathrm{s}$",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "The variation of the film mass increment during one ALD cycle calculated with these parameters and the corresponding experimental data are shown in Fig. 5. The theoretical curve describes well the typical behavior of the chloride- water",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "ALD process: an increase in the film mass due to the adsorption of precursors, the flat portion of the curve during the purge pulse, a sharp decrease in the film mass during the water vapor pulse, and an additional mass decrease due to release of the adsorbed water. However, the theoretical curve somewhat deviates from experimental data in the transition region at the end of the  $\\mathrm{MCl_4}$  pulse, where the curve flattens out. This deviation indicates that the rate of the  $\\mathrm{MCl_4}$  reaction with surface  $\\mathrm{OH / s / }$  groups may also depend on the degree of surface coverage by  $\\mathrm{MCl}_x / \\mathrm{s} / \\mathrm{s}$  groups, as we suggested for water adsorption and for water interaction with  $\\mathrm{MCl}_x / \\mathrm{s} / \\mathrm{s}$  groups (see Section 2).",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Fig. 6 demonstrates the dependence of the film mass increment  $\\Delta m_0$  on the temperature in the  $\\mathrm{ZrCl_4}$  effusion cell, which, in its turn, determines the  $\\mathrm{ZrCl_4}$  flow rate. The theoretical data were",
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/ff48f7e64cf72037050727e18606d62d4510c2edefa2b034a89acee17cace3b2.jpg",
+        "img_caption": [
+            "Fig. 5. Variation of the film mass increment during one ALD cycle; the solid line corresponds to  $\\mathrm{ZrO_2}$  ALD experiments [10] (the process temperature is  $300^{\\circ}\\mathrm{C}$ , the temperature in the  $\\mathrm{ZrCl_4}$  effusion cell is  $160^{\\circ}\\mathrm{C}$ ), and the dashed line corresponds to the theoretical curve."
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/a01c159e31e54eb64d38a1d987fed642632c63c38b88aa2396c9482f74b8167c.jpg",
+        "img_caption": [
+            "Fig. 6.  $\\mathrm{ZrO_2}$  film mass increment as a function of the precursor source temperature. Circles and solid line are experimental [10] and modeling results at the reaction chamber temperature 290  $^\\circ \\mathrm{C}$ ; squares and dashed line are experimental [10] and modeling results at the reaction chamber temperature  $180^{\\circ}\\mathrm{C}$ ."
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "obtained using the values of the  $\\mathrm{ZrCl_4}$  saturated vapor pressure [37] to estimate the variation of the  $\\mathrm{ZrCl_4}$  flow rate with temperature. For the case of low effusion cell temperatures, where the  $\\mathrm{ZrCl_4}$  flow rate is insufficient to saturate the substrate surface during the  $\\mathrm{ZrCl_4}$  pulse,  $\\Delta m_0$  increases rapidly with increasing effusion cell temperature. On the other hand, when the amount of  $\\mathrm{ZrCl_4}$  is sufficient to saturate the surface,  $\\Delta m_0$  depends on the total number density of the available surface sites  $n_{\\mathrm{s}}$  and becomes independent of the effusion cell temperature. Hence, we can see in Fig. 6 that the relationship between  $n_{\\mathrm{s}}$  and the  $\\mathrm{ZrCl_4}$  flow rate is correctly reproduced with our choice of parameters. The behavior of curves reflects the fact that an increase in the temperature of the  $\\mathrm{ZrCl_4}$  effusion cell from 145 to  $160^{\\circ}\\mathrm{C}$  leads to an increase in the precursor flow rate by a factor of  $\\sim 5$ . Therefore, within this temperature range, the system passes from the regime of precursor deficit to the saturation regime.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "The results of the experiments [6,8,10] and simulations of the  $\\mathrm{ZrO_2}$  and  $\\mathrm{HfO_2}$  film growth rates as functions of the process temperature are shown, respectively, in Figs. 7 and 8. In accordance with the proposed model, water desorption/adsorption reactions (28) and (29), which are sensitive to the surface coverage (see Eq. (14)) determine the temperature dependence of the growth rate. The best agreement with the experimental data was achieved with  $E_{\\mathrm{ad}}^{0} = E_{\\mathrm{a}}(28) - E_{\\mathrm{a}}(29) = 45$  and  $47 \\mathrm{kcal / mol}$",
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/16ee8d8571326b504d8e96889fcd24029c475d8b6562e8488689602f4ae97489.jpg",
+        "img_caption": [
+            "Fig. 7.  $\\mathrm{ZrO_2}$  film growth rate (average film mass and thickness increments per cycle) as a function of the process temperature: squares and circles correspond to experimental average film thicknesses and mass increments per cycle [10]. Dashed and solid lines correspond to the calculated results by the minimum and extended mechanism. The dashed area corresponds to sensitivity analysis for the extended mechanism."
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/d73d3cf801883e33499e77b9dbc63b30a42c800e6ce7e52c6544c998f0022807.jpg",
+        "img_caption": [
+            "Fig. 8.  $\\mathrm{HfO_2}$  film growth rate (average film mass and thickness increments per cycle) as a function of the process temperature: squares and circles correspond to experimental results [6,8]. Dashed and solid lines correspond to the calculated results by the minimum and extended mechanism. Dashed area corresponds to sensitivity analysis for the extended mechanism."
+        ],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "and  $\\Delta \\epsilon = 25$  and  $22.5\\mathrm{kcal / mol}$  for  $\\mathrm{HfO_2}$  and  $\\mathrm{ZrO_2}$ , respectively (where  $E_{\\mathrm{a}}(28)$  and  $E_{\\mathrm{a}}(29)$  are the activation energies of reactions (28) and (29) in Table 2).",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Thus, mechanism (15)- (29) describes satisfactorily the experimental temperature dependence of the growth rate and can be interpreted as a \"minimum\" mechanism in this sense. The values of the rate coefficients of all reactions of the \"minimum\" mechanism are determined from QC calculations. Therefore, the validity of the results is determined by the accuracy of the QC analysis and by our suggestion about the reasons for the decrease in the growth rate with increasing temperature.",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "However, one can see that the minimum mechanism suffers from essential drawbacks from the viewpoints of both its physical validity and experimental verification. First, the minimum mechanism neglects surface diffusion processes, which may be important in the water desorption mechanism. This assumption is valid only at high surface hydroxylation degrees. However, at low coverages, dehydroxylation is controlled by two processes: the diffusion- assisted reaction of hydroxyl groups to form a pre- desorption complex and the decomposition of this complex to desorb water. The first process is of the second order with respect to the concentration of surface hydroxyl groups, whereas the second one is of the first order. Depending on the reaction parameters and the hydroxylation degree, the overall rate of surface dehydroxylation can be limited by either process. It can, in its turn, affect the overall growth rate in the high temperature region, where the coverage decreases with increasing temperature. Second, the minimum mechanism cannot explain the experimental fact of the change in the Cl:M ratio  $(x)$  in the chemisorbed  $\\mathrm{MCl}_x$  surface groups from  $x = 2$  to  $x = 3$ , because it operates with a single type of hydroxylated sites, namely,  $\\mathrm{M(OH)_2}$ .",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Because of the reasons discussed above, the minimum scheme was extended to take into account both the change in the state of chemisorbed  $\\mathrm{MCl}_x$  surface groups and the diffusion processes in the framework of the formal kinetic approach (see Table 3). We introduced the following additional groups of surface sites (see Fig. 9):",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "(1) sites that describe the variable degree of surface hydroxylation:  $50\\%$  dehydroxylated site  $\\mathrm{M(OH)O(OH)M / s / }$  and  $75\\%$  dehydroxylated site  $\\mathrm{M(OH)OMOMO(OH)M / s / }$  \n(2) sites that describe the physical adsorption of a metal precursor on partially dehydroxylated sites:  $\\mathrm{M(OH)O(OH)MMCl_4 / s / }$ $\\mathrm{MCl_4M(OH)}$ $\\mathrm{O(OH)MMCl_4 / s / }$ $\\mathrm{MCl_4M(OH)OMOMCl_3 / s / }$  \n(3) sites that describe the chemical adsorption of a metal precursor on hydroxylated sites:  $\\mathrm{M(OH)OMOMCl_3 / s / }$ $\\mathrm{Cl}_3\\mathrm{MOMOMOMCl}_4 / \\mathrm{s / }$ $\\mathrm{Cl}_3\\mathrm{MOMOMOMCl}_3 / \\mathrm{s / }$  \n(4) sites that describe the products of water treatment:  $\\mathrm{M(OH)OMOM(OH)Cl_2 / s / }$ $\\mathrm{Cl}_3$ $\\mathrm{MOMOMOM(OH)Cl_2 / s / }$ $\\mathrm{Cl}_2(\\mathrm{OH})\\mathrm{MOMOMOM(OH)Cl_2 / s / }$ $\\mathrm{Cl}_2(\\mathrm{OH})\\mathrm{MOMOMOM(OH)Cl_2 / s / }$ $\\mathrm{Cl}_2(\\mathrm{OH})\\mathrm{MOMOM(OH) / s / }$",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "It is reasonable to assume that the area  $\\sigma$  occupied by a surface site is proportional to the number of metal (M) atoms in this site, e.g.,  $\\sigma (\\mathrm{M(OH)_2}) / \\sigma (\\mathrm{M(OH)O(OH)M}) = 1 / 2$",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Reactions (30)- (34) describe dehydroxylation/ hydroxylation in the case of control by the diffusion- assisted reaction of hydroxyl groups. The pre- exponential factor of the rate constant of this reaction is of the same order of magnitude as the",
+        "page_idx": 11
+    },
+    {
+        "type": "table",
+        "img_path": "images/36a96030fca3f6972377c37e5255ce13e42c75d45a089592974e1020eed632a5.jpg",
+        "table_caption": [
+            "Table 3 Extension of the kinetic scheme of the \"minimum' mechanism"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td rowspan=\"2\">Reaction\nk = A * Tnexp(-Ea/RT)\n[k] = cm3/s; cm2/s; 1/s; [Ea] = kcal/mol, [T] = K</td><td colspan=\"3\">ZrO2 mechanism</td><td colspan=\"3\">HfO2 mechanism</td><td></td></tr><tr><td>lg(A)</td><td>n</td><td>Ea</td><td>lg(A)</td><td>n</td><td>Ea</td><td></td></tr><tr><td>Reactions of surface (de)hydroxylation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>MO/s/ + M(OH)2/s/ ⇒ M(OH)O(OH)M/s/</td><td>(30)</td><td>-2.00</td><td>0.00</td><td>20.00</td><td>-2.00</td><td>0.00</td><td>20.00</td></tr><tr><td>M(OH)O(OH)M/s ⇒ MO/s/ + M(OH)2/s/</td><td>(31)</td><td>13.00</td><td>0.00</td><td>10.00</td><td>13.00</td><td>0.00</td><td>10.00</td></tr><tr><td>2M(OH)O(OH)M/s/ ⇒ M(OH)OMOMO(OH)M/s/ + H2O</td><td>(32)</td><td>-2.00</td><td>0.00</td><td>33–53</td><td>-2.00</td><td>0.00</td><td>35–51</td></tr><tr><td>M(OH)OMOMO(OH)M/s/ ⇒ M(OH)O(OH)M/s/ + MO2M/s/</td><td>(33)</td><td>3.00</td><td>0.00</td><td>20.00</td><td>13.00</td><td>0.00</td><td>20.00</td></tr><tr><td>MO2M/s/ + H2O ⇒ M(OH)O(OH)M/s/</td><td>(34)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr><tr><td>MC14 precursor adsorption/desorption on the partially dehydroxylated surface</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M(OH)O(OH)M/s/ + MCl4 ⇒ M(OH)O(OH)MMCl4/s/</td><td>(35)</td><td>-13.04</td><td>0.86</td><td>-0.22</td><td>-13.02</td><td>0.79</td><td>0.26</td></tr><tr><td>M(OH)O(OH)MMCl4/s/ ⇒ M(OH)O(OH)M/s/ + MCl4</td><td>(36)</td><td>13.70</td><td>0.00</td><td>23.00</td><td>14.20</td><td>0.00</td><td>20.00</td></tr><tr><td>M(OH)O(OH)MMCl4/s/ + MCl4 ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>MC14M(OH)O(OH)MMCl4/s/</td><td>(37)</td><td>-13.04</td><td>0.86</td><td>-0.22</td><td>-13.02</td><td>0.79</td><td>0.26</td></tr><tr><td>MC14M(OH)O(OH)MMCl4/s/ ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M(OH)O(OH)MMCl4/s/ + MCl4</td><td>(38)</td><td>13.70</td><td>0.00</td><td>23.00</td><td>14.20</td><td>0.00</td><td>20.00</td></tr><tr><td>M(OH)O(OH)MMCl4/s/ ⇒ M(OH)OMOMCl3/s/ + HCl</td><td>(39)</td><td>10.32</td><td>0.50</td><td>16.31</td><td>10.23</td><td>0.8</td><td>11.42</td></tr><tr><td>M(OH)OMOMCl3/s/ + HCl ⇒ M(OH)O(OH)MMCl4/s/</td><td>(40)</td><td>-13.7</td><td>1.00</td><td>4.73</td><td>-14.36</td><td>1.06</td><td>5.43</td></tr><tr><td>MC14M(OH)O(OH)MMCl4/s/ ⇒ Cl3MMOMOMOMCl4/s/ + HCl</td><td>(41)</td><td>10.32</td><td>0.50</td><td>16.31</td><td>10.23</td><td>0.8</td><td>11.42</td></tr><tr><td>Cl3MMOMOMOMCl4/s/ + HCl ⇒ MCl4M(OH)O(OH)MMCl4/s/</td><td>(42)</td><td>-13.7</td><td>1.00</td><td>4.73</td><td>-14.36</td><td>1.06</td><td>5.43</td></tr><tr><td>Cl3MMOMOMOMCl4/s/ ⇒ Cl3MMOMOMOMCl3/s/ + HCl</td><td>(43)</td><td>10.32</td><td>0.50</td><td>16.31</td><td>10.23</td><td>0.8</td><td>11.42</td></tr><tr><td>Cl3MMOMOMOMCl3/s/ + HCl ⇒ MCl3M(OH)O(OH)MMCl4/s/</td><td>(44)</td><td>-13.7</td><td>1.00</td><td>4.73</td><td>-14.36</td><td>1.06</td><td>5.43</td></tr><tr><td>M(OH)OMOMCl3/s/ + MCl4 ⇒ MCl4M(OH)OMOMCl3/s/</td><td>(45)</td><td>-13.04</td><td>0.86</td><td>-0.22</td><td>-13.02</td><td>0.79</td><td>0.26</td></tr><tr><td>MC14M(OH)OMOMCl3/s/ ⇒ M(OH)OMOMCl3/s/ + MCl4</td><td>(46)</td><td>13.7</td><td>0.00</td><td>23.00</td><td>14.20</td><td>0.00</td><td>20.00</td></tr><tr><td>MC14M(OH)OMOMCl3/s/ ⇒ Cl3MMOMOMOMCl3/s/ + HCl</td><td>(47)</td><td>10.32</td><td>0.5</td><td>16.31</td><td>11.38</td><td>0.06</td><td>14.72</td></tr><tr><td>Cl3MMOMOMOMCl3/s/ + HCl ⇒ MCl4M(OH)OMOMCl3/s/</td><td>(48)</td><td>-13.7</td><td>1.00</td><td>4.73</td><td>-14.36</td><td>1.06</td><td>5.43</td></tr><tr><td>Reactions of H2O</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M(OH)OMOMCl3/s/ + H2O ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M(OH)OMOM(OH)Cl2/s/ + HCl</td><td>(49)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr><tr><td>M(OH)OMOM(OH)Cl2/s/ + H2O ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M(OH)O(OH)M/s/ + MO2/b/ + 2HCl</td><td>(50)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr><tr><td>Cl3MMOMOMOMCl3/s/ + H2O ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Cl3MMOMOMOM(OH)Cl2/s/ + HCl</td><td>(51)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr><tr><td>Cl3MMOMOMOM(OH)Cl2/s/ + H2O ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Cl2(OH)MMOMOMOM(OH)Cl2/s/ + HCl</td><td>(52)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr><tr><td>Cl2(OH)MMOMOMOM(OH)Cl2/s/ + H2O ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Cl2(OH)MMOMOM(OH) + 2HCl + MO2/b/</td><td>(53)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr><tr><td>Cl2(OH)MMOMOM(OH) + H2O ⇒</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M(OH)O(OH)M/s/ + MO2/b/ + 2HCl</td><td>(54)</td><td>-13.00</td><td>0.00</td><td>10.00</td><td>-13.00</td><td>0.00</td><td>10.00</td></tr></table>",
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/c3354928ee6cf24dbac320a204e89990a0446d40e56e8ea5299d16bdbaba57ee.jpg",
+        "img_caption": [
+            "Fig. 9. Examples of bridged structures of surface sites."
+        ],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "pre- exponential factor of the surface diffusion coefficient,  $\\sim 10^{- 2} \\mathrm{cm}^2 /\\mathrm{s}$  [38]. As in the case of reaction (28), the activation energy of the reaction (32) was considered coverage- depending in accordance with Eq. (14).",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Reactions (35)- (54) describe film growth on partially dehydroxylated surfaces. Because there is no information on the kinetic parameters of these reactions, these parameters were estimated or were taken by analogy with reactions (15)- (27) of the minimum mechanism.",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The results of simulations of  $\\mathrm{ZrO_2}$  and  $\\mathrm{HfO_2}$  film growth rates based on the extended mechanism are shown, respectively, in Figs. 7 and 8 in comparison with the results of the minimum mechanism. Since there was some arbitrariness in choosing the rate parameters of the extended mechanism, these results are presented like areas in the figures. These areas correspond to the variation of the pre- exponential factors of reaction (30)- (54) by one order of magnitude and the variation of the activation energies of dehydroxylation reactions (28), (30) and (32) over the range  $\\pm 3 \\mathrm{kcal / mol}$ . The best agreement with the experimental data was obtained with  $E_{\\mathrm{ad}}^0 = E_{\\mathrm{a}}(28,32) - E_{\\mathrm{a}}(29,34) = 41$  and  $43 \\mathrm{kcal / mol}$  and  $\\Delta \\epsilon = 16$  and  $20 \\mathrm{kcal / mol}$  for  $\\mathrm{HfO_2}$  and  $\\mathrm{ZrO_2}$ , respectively, (solid line in Figs. 7 and 8). These values are consistent with the results of thermogravimetric experiments [24] and first- principles plane- wave DFT calculations [25].",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Note that the extended mechanism gives lower values of the adsorption energy than the minimum one. As it was mentioned above, the overestima tion of the adsorption energy in the minimum mechanism is due to neglecting diffusion controlled reactions and of the film growth processes on the partially dehydroxylated sites.",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "At  $T > 200^{\\circ}\\mathrm{C}$ , the film growth rate essentially decreases with increasing temperature. In the framework of the proposed mechanism, this behavior is determined by the decrease in the number density of the available active sites due to the recombination of  $\\mathrm{OH / s / }$  surface groups. In this case, the formation of a new layer proceeds through precursor reactions (35)- (48) with  $\\mathrm{OH / s / }$  groups on a partially dehydroxylated surface. This leads to a change in the  $\\mathrm{Cl{:}M}$  ratio  $(x)$  in the chemisorbed  $\\mathrm{MO}_x$  surface groups from  $x = 2$  to  $x = 3$ . This behavior is demonstrated in Fig. 10, where the experimental and theoretical data on the dependence of  $x$  on the process temperature are shown.",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "In the low- temperature region  $T< 150^{\\circ}\\mathrm{C}$  where experimental points are absent, the results of our simulations (Figs. 7 and 8) predict that the film growth rate decreases with process temperature. It was emphasized above (see Section 3) that this behavior is explained by the stabilization of the adsorption complex at low temperatures.",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The mechanism introduced above describes the growth of an \"ideal\"  $\\mathrm{MO}_2$  film (no defects or spatial non- uniformities were considered). The real film contains residual chlorine. The concentration of chlorine in the film obviously relates to its concentration on the surface during deposition. In our calculations, the surface chlorine concentra",
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/996bb11913b2e10c9b8523bcd7b62b80b70dfb824cb385522473b69ccc20ddce.jpg",
+        "img_caption": [
+            "Fig. 10. Surface state of the adsorbed complex  $-\\mathrm{MCl}_x$  of the precursor vs. process temperature. Circles and squares correspond to experiments with  $\\mathrm{ZrO_2}$  from [10] and [11], respectively; triangles correspond to  $\\mathrm{HfO_2}$  experiment [6]; dashed and dashed-dotted lines correspond to the present study modeling for  $\\mathrm{ZrO_2}$  and  $\\mathrm{HfO_2}$ , respectively."
+        ],
+        "img_footnote": [],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "tion after a water pulse was found to be a very sensitive function of the process temperature and the water pulse duration, which, as was discussed above (see Section 2, Eq. (7)) is in contradiction with the experimental data [10]. According to this discussion, this discrepancy can be removed by taking into account the dependence of the chemical activity of surface chlorine on its chemical environment and chlorine diffusion processes, which in principle is outside the scope of formal kinetic modeling. To take into account these effects, we applied the kMC approach.",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "4.2. Kinetic Monte Carlo modeling of  $ZrO_2$  film growth",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "We used a lattice kMC model to explicitly take into account the following effects of the inhomogeneous local chemical environment on the film growth kinetics:",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "(1) dependence of the water adsorption energy on the surface hydroxylation degree; \n(2) effect of steric repulsion between neighboring  $\\mathrm{MCl}_x / \\mathrm{s}$ / surface groups; \n(3) dependence of the activation energy of the hydrolysis of  $\\mathrm{M - Cl}$  bonds on the chemical environment of the chlorine atom.",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Like in the formal kinetic scheme above, the first effect allows us to describe the temperature dependence of the surface hydroxylation degree and, hence, the temperature dependence of the film growth rate. The second effect restricts the maximum coverage of the metal oxide surface by metal precursors and, hence, determines the highest possible film growth rate. The third effect is responsible for the enhanced incorporation of chlorine atoms in the growing film and is used here to explain the experimental temperature dependence of the residual chlorine concentration in the as- deposited film.",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "The description of film growth within the lattice kMC approach requires detailed information about the structure of the growing film. The structure of  $\\mathrm{ZrO_2}$  films deposited by the ALD process under consideration was investigated in [10]. It was found that metastable tetragonal  $\\mathrm{ZrO_2}$  with the preferred (001) orientation is the main crystalline phase in thin films  $10 - 50 \\mathrm{nm}$  thick deposited at  $200 - 400^{\\circ}\\mathrm{C}$ . Therefore, we used the  $\\mathrm{t - ZrO_2}$  crystal lattice as a rigid grid of adsorption sites for zirconia film growth in the lattice kMC model and studied film growth along the [001] direction.",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "In this lattice the deposited zirconia atoms from metal precursors occupy their inherent cation",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "positions in the crystal lattice. In accordance with experiment [20,39,40] and quantum- chemical calculations [16,17], the adsorption of water molecules on the  $\\mathrm{t - ZrO_2(001)}$  surface results in the formation of two bistriged hydroxyl groups whose oxygen atoms are located close to the oxygen anion sublattice sites previously unoccupied in the crystal lattice. Therefore, in our lattice kMC model, we assumed that the adsorbed oxygen atoms occupy the available anion sites on the surface of tetragonal zirconia. The hydrogen atoms were not considered explicitly, and the chemisorbed hydroxyl groups were considered as single entities. It was also assumed that chlorine atoms occupy oxygen positions in the crystal lattice (substitutional chlorine impurity). This suggestion is based on the fact that the  $\\mathrm{Zr - Cl}$  bond length in the  $\\mathrm{ZrCl_4}$  precursors  $r_{\\mathrm{Zr - Cl}}\\approx 2.35\\mathrm{\\AA}$  falls well within the range  $2.05 - 2.45\\mathrm{\\AA}$  of the  $\\mathrm{Zr - O}$  bond distances in bulk t- zirconia.",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The set of chemical reactions used in the kMC model includes the chemical adsorption of the  $\\mathrm{ZrCl_4}$  molecule on one, two, and three surface hydroxyl groups (similar to Fig. 1). The effect of the inhomogeneous chemical environment was modeled using the following two rules:",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "(a) a cation lattice site is unavailable for the adsorption of a  $\\mathrm{ZrCl}_x$  group if at least one of the neighboring anion lattice sites is already occupied by a chlorine atom; \n(b) a chlorine atom in the film must have at least one  $\\mathbf{Zr}$  vacancy in its nearest neighborhood, because the chlorine ionic radius  $r_{\\mathrm{ion}}(\\mathrm{Cl})\\approx$ $1.84\\mathrm{\\AA}$  is much larger than the oxygen ionic radius  $r_{\\mathrm{ion}}(\\mathrm{O})\\approx 1.2\\mathrm{\\AA}$",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Rule (a) states that an adsorbed  $\\mathrm{ZrCl}_x$ $(x = 1 - 3)$  group prevents the chemisorption of  $\\mathrm{ZrCl_4}$  with the formation of  $\\mathrm{ZrCl}_x$  groups on the nearest neighboring sites. This rule results in the maximum surface coverage by  $\\mathrm{ZrCl}_x$  groups of  $50\\%$  for the regular structure on the planar fully hydroxylated surface (staggered adsorption) and about  $35\\%$  coverage for random adsorption on the surface. The fulfillment of rule (b) leads to the formation of zirconium vacancies in the growing zirconia film together with residual chlorine impurities.",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The hydrolysis of  $\\mathrm{Zr - Cl}$  bonds and the reactions of adsorbed  $\\mathrm{ZrCl}_x$  groups with neighboring surface hydroxyl groups  $(\\mathrm{ZrCl}_x / \\mathrm{s} / + \\mathrm{OH} / \\mathrm{s} / \\rightarrow$ $\\mathrm{OZrCl}_{x - 1} / \\mathrm{s} / + \\mathrm{HCl})$  are considered irreversible, because the resulting HCl molecules are rapidly carried out from the reactor volume with the inert- gas flow. It was also assumed that chlorine atoms can also be removed from the film bulk if there exists a continuous free diffusion path connecting the given chlorine atom to the surface through oxygen vacancies. Here, when determining the free diffusion path, we consider that, in accordance with rule (b), a chlorine atom can occupy an anion sublattice site only if there is at least one cation vacancy in its coordination shell.",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The dissociative adsorption of water proceeds on a surface M- O pair with the formation of two neighboring OH groups on the surface. It was assumed that the energy of the reversible dissociative adsorption of water depends on the chemical environment of the corresponding surface lattice sites",
+        "page_idx": 15
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nE_{\\mathrm{ad}} = E_{\\mathrm{ad}}^{0} - \\Delta E_{\\mathrm{ad}}\\cdot N_{\\mathrm{OH}}, \\tag{55}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "where  $N_{\\mathrm{OH}}$  is the total number of the neighboring hydroxyl groups for the two specified surface sites. This relationship plays the same role in the kMC scheme as Eq. (14) in the formal kinetic scheme.",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The chemical reactions discussed above are sufficient in the case of an ideal film. However, in the case of real films with impurities and structural defects (e.g., lattice vacancies), it is necessary to supplement the set of chemical reactions with the physical processes of diffusion and relaxation (healing of defects). Therefore, we added surface and bulk diffusion processes for zirconium, chlorine, oxygen, and hydrogen atoms; hydroxyl groups; and  $\\mathrm{ZrOH}_y\\mathrm{Cl}_x / \\mathrm{s}/$  surface species (here, only surface diffusion). Within the rigid lattice model, the diffusion of atoms and groups proceeds only through vacant lattice sites (note the above definition of the free diffusion path for chlorine atoms based on rule (b)). The diffusion of hydrogen atoms proceeds via jumps from one oxygen atom to another. The mobility of a zirconium group bearing a chlorine atom was also limited by rule (b). Unfortunately, information available in the literature on the diffusion coefficients in zir",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "conia films is very scarce. However, under real experimental conditions (gas pressure and process temperature) the processes of diffusion over vacant lattice sites must be much faster than all gas- surface chemical reactions. In our kMC simulations, this fact was taken into account by setting the rates of all diffusion processes ten times greater than the rates of typical gas- phase reactions.",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "In the computational procedure, the kMC solver chooses one chemical reaction at each instant of time based on the rate of the given reaction and the total rate of all possible chemical reactions using the following equation:",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\np_k^l = \\frac{r_k^l}{\\sum_i\\sum_j r_j^l}, \\tag{56}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "where  $r_j^i$  is the  $j$ th reaction rate at the  $i$ th atom, the first summation in the denominator runs over all atoms in the system, and the second, over all possible reactions at the particular atom. Since the intermediate surface complexes were not considered in the lattice kMC scheme, the reaction rates were calculated based on the data in Table 2 within the quasi- equilibrium approach, in which it is assumed that an equilibrium exists between gas reagents and intermediate surface complexes. The time step of kMC integration is determined by the sums in the denominator, and, thus, one and only one chemical reaction is treated at each time step. In this way, we generated about 30000 chemical events for each pulse of an ALD cycle. The initial substrate contained  $(5 \\times 5)$  cells of  $\\mathrm{t - ZrO_2}$  oriented along the [0 0 1] direction.",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "First, we investigated the maximum coverage of the fully hydroxylated zirconia surface with  $\\mathrm{ZrCl_4}$ . The calculated coverage of the fully hydroxylated (0 0 1) surface of  $\\mathrm{t - ZrO_2}$  averaged over a set of simulations is about  $35\\%$ . In film growth simulations, it has been found that the growing film thickness is proportional to the number of ALD cycles, and the maximum film growth rate is about  $0.4 \\mathrm{ML}$  per ALD cycle. This value is in reasonable agreement with experimental results reported in [22] (about  $0.4 \\mathrm{ML}$  per ALD cycle) and [7] (about  $0.6 \\mathrm{ML}$  per ALD cycle). Moreover, the temperature dependence of the film growth rate is similar to that in Fig. 7 obtained within the formal kinetic approach: there is a maximum of the film growth rate at low temperatures  $(\\sim 200^{\\circ}\\mathrm{C})$  and a slow decrease in the film growth rate at higher temperatures. Here, the best fit was obtained for  $E_{\\mathrm{ad}}^{0} = 42$  kcal/mol and  $\\Delta E_{\\mathrm{ad}} = 2.4$  kcal/mol. These values are in adequate agreement with the corresponding values obtained in the formal kinetic simulations. Indeed, with regard to the normalization of  $\\Delta E_{\\mathrm{ad}}$  to one OH group in kMC and to one surface site in formal kinetics,  $\\Delta \\epsilon = \\Delta E_{\\mathrm{ad}}N = 14.4$  kcal/mol, where  $N = 6$  is the number of the neighboring OH/  $\\mathrm{s / }$  groups per one dissociatively adsorbed water molecule.",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Next, we investigated the dependence of the chlorine atom concentration in the growing film on the process conditions. To take into account the effect of the local chemical environment of a surface chlorine atom on its probability of reacting with a water molecule, we used the following dependence of the activation energy of this reaction on the number of the nearest neighboring  $\\mathrm{Zr}$  atoms in the chlorine coordination shell:",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nE_{\\mathrm{a}} = E_{\\mathrm{a}}^{0} - \\Delta E_{\\mathrm{a}}\\cdot N_{\\mathrm{Zr}}, \\tag{57}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "where  $N_{\\mathrm{Zr}}$  is the number of zirconium neighbors. Taking into account this dependence for the reaction probability, we calculated the residual chlorine concentration in the as- deposited zirconia film (see Fig. 11). The results in Fig. 10 were obtained with  $E_{\\mathrm{a}}^{0} = 2.5$  kcal/mol and  $\\Delta E_{\\mathrm{a}} = 1.2$  kcal/",
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/a21ef1d493006cdd5c687e9efeee9fd940691f1134fce0eb434d90e578e4bddd.jpg",
+        "img_caption": [
+            "Fig. 11. Temperature dependence of the residual chlorine concentration in the growing film; triangles are experimental points [10], and diamonds are simulation results."
+        ],
+        "img_footnote": [],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "mol, which corresponds to the best fit to experimental data. Thus the relatively weak dependence of the activation energy on the chemical environment of the chlorine atom can explain the chlorine concentration observed experimentally in the as- deposited film.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "5. General conclusions and outlook",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "An extended kinetic mechanism of the ALD growth of  $\\mathrm{Zr(Hf)O_2}$  films from  $\\mathrm{Zr(Hf)Cl_4}$  and water has been developed. This mechanism takes into account the formation of relatively stable intermediate surface complexes, the effects of the local chemical environment on the reaction rate parameters, possible surface reactions (in addition to gas- surface reactions), and diffusion. This mechanism has been implemented using a formal kinetic approach and the kMC method. The rate parameters for the basic chemical reactions have been evaluated using ab initio quantum- chemical calculations and microscopic kinetic theory.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "The results of simulations based on the mechanism developed in this work quantitatively describe the main experimental features of the film growth process. In particular, both the formal kinetic and kMC approaches correctly describe the experimental temperature dependence of the growth rate, which decreases slowly over the temperature range  $200^{\\circ}\\mathrm{C}< T< 600^{\\circ}\\mathrm{C}$ . This slow decrease in the growth rate is explained within our mechanism on the assumption that the water desorption energy increases with increasing degree of surface dehydroxylation.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "It is also shown that the kMC approach based on the detailed chemical mechanism developed in this work not only reproduces the kinetic behavior but also adequately describes the accumulation of chlorine atoms in the growing film. The main problem in this case is that the incorporation of impurity chlorine atoms in the growing film is mainly determined by their interactions with neighboring metal atoms. In order to describe these interactions correctly, an atomistic model of the growing film capable of describing the local environment of each chlorine atom becomes necessary.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "The results of this work indicate that an integrated multilevel approach to kinetic modeling, which combines first- principle modeling at the atomistic and mesoscale levels with macro- kinetic modeling at the reactor- scale, can provide valuable insights into the understanding of complicated processes like ALD.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Acknowledgements",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "The authors are thankful to J. Aarik, K. Kukli and M. Ritala for helpful discussions and for providing experimental data before publication. Motorola manager Dr. W. Johnson is gracefully acknowledged for his support and encouragement. The work at Kinetic Technologies has been carried out under a contract with Motorola DigitalDNA Labs.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Appendix A. Calculation of rate constants of elementary gas-surface reactions",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Two different situations arise in the calculation of rate constants of reactions (12) and (13). The first situation corresponds to the reactions of type (13) with the reaction path profile shown in Fig. 4a (right- hand side of the potential curve). These reactions are characterized by a pronounced potential barrier. Therefore, quantum- chemical calculations provide all the necessary information on the energy,  $E_{\\mathrm{f}}$  of the corresponding transition complex and its structure, and standard transition state theory can be used to calculate  $k_{\\mathrm{f}}$  and  $k_{\\mathrm{r}}$  for these reactions. For all the reactions under consideration, our quantum- chemical calculations predict that the fragment  $\\mathrm{H - Cl}$  of the transition complex  $\\mathrm{TC}_{\\mathrm{f}}$  is structurally similar to the product gas molecule. Therefore, by analogy with the loose transition complex  $\\mathrm{TC}_{\\mathrm{ad}}$  (which will be considered below), it was assumed that the escaping fragment  $\\mathrm{H - Cl}$  performs two surface- restricted rotations in addition to vibrations, whose frequencies were determined in the model from quantum- chemical calculations.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "For all other reactions, the potential barrier is absent and there is no a priori prescription for",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "determining the structure of the corresponding loose transition complex and its location in the reaction path. To find the structure of the transition complex and to calculate the rate constants in this case, we used the interpolation version of the variational transition state theory developed in [41].",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "For definiteness consider reaction (12). In the variational transition state theory, the position  $q_{\\mathrm{r}}^{\\#}$  of transition complex  $\\mathrm{TC_{ad}}$  in the reaction path (see Fig. 4) corresponds to a maximum of the Helmholtz free energy  $a^{\\#}(q_{\\mathrm{r}})$  of the trial transition complex  $\\mathrm{TC_{ad}}(q_{\\mathrm{r}})$  considered as a function of the reaction coordinate.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Following [41], it is assumed that the dissociating system is a surface complex  $\\mathrm{AB / s / }$  which can be represented as two fragments (escaping molecule  $\\mathbf{B}$  and surface center  $\\mathrm{A / s / }$  interacting along the reaction coordinate  $q_{\\mathrm{r}}$  through the Morse potential",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nU(q_{\\mathrm{r}}) = D\\{1 - \\exp [-\\alpha (q_{\\mathrm{r}} - q_{\\mathrm{re}})]\\}^{2}. \\tag{A.1}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Here,  $D$  is the classical desorption energy,  $q_{\\mathrm{re}}$  is the equilibrium distance, and  $\\alpha$  is an adjustable parameter. The classical desorption energy is given by",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nD = E_{\\mathrm{ad}} + \\epsilon_{\\mathrm{z}} - \\epsilon_{\\mathrm{z,B}} - \\epsilon_{\\mathrm{z,A / s / }} \\tag{A.2}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "where  $\\epsilon_{\\mathrm{Z}},\\epsilon_{\\mathrm{Z,B}}$  and  $\\epsilon_{\\mathrm{z,A / s / }}$  are the zero- point vibrational energies of  $\\mathrm{AB / s / }$ $\\mathbf{B}$  ,and  $\\mathrm{A / s / }$  , respectively.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "The Helmholtz free energy  $a^{\\#}(q_{\\mathrm{r}})$  is defined by the following equations:",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & a^{\\#}(q_{\\mathrm{r}}) = a_{\\mathrm{th}}^{\\#}(q_{\\mathrm{r}}) + U(q_{\\mathrm{r}}) + \\epsilon_{\\mathrm{z}}^{\\#}(q_{\\mathrm{r}}),\\\\ & a_{\\mathrm{th}}(q_{\\mathrm{r}}) = -k_{\\mathrm{B}}T\\ln Q^{\\#}(q_{\\mathrm{r}}), \\end{array} \\tag{A.3}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "where  $Q^{\\#}(q_{\\mathrm{r}})$  is the partition function and  $\\epsilon_{\\mathrm{z}}^{\\#}(q_{\\mathrm{r}})$  is the zero- point vibrational energy of the transition complex  $\\mathrm{TC_{ad}}(q_{\\mathrm{r}})$",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "It is assumed that the degrees of freedom of  $\\mathrm{TC_{ad}}$  include  $s^{\\#}$  vibrations that are close to the vibrations of the non- interacting  $\\mathbf{B}$  and  $\\mathrm{A / s / }$  two surface- restricted rotations corresponding to the \"soft\" rocking vibrations of  $\\mathbf{B}$  in  $\\mathrm{AB / s / }$  ,and  $r_{\\mathrm{B}}$  free rotations similar to the rotations of free  $\\mathbf{B}$  as a whole, where",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nr_{\\mathrm{B}} = \\left\\{ \\begin{array}{ll}3 & \\mathrm{if~B~is~nonlinear,}\\\\ 2 & \\mathrm{if~B~is~linear.} \\end{array} \\right. \\tag{A.4}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "For the calculation of  $\\epsilon_{\\mathrm{z}}^{\\#}(q_{\\mathrm{r}})$  and the free energy of the internal degrees of freedom  $a_{\\mathrm{th}}^{\\#}(q_{\\mathrm{r}})$  , the following interpolation equations are used [41]:",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{l}{\\epsilon_{\\mathrm{z}}^{\\#}(q_{\\mathrm{r}}) = \\left(\\epsilon_{\\mathrm{z}} - \\frac{\\hbar\\omega_{\\mathrm{r}}}{2} -\\epsilon_{\\mathrm{z,rec}} - \\epsilon_{\\mathrm{z,B}} - \\epsilon_{\\mathrm{z,A / s / }}\\right)}\\\\ {\\qquad \\times \\exp [-\\gamma (q_{\\mathrm{r}} - q_{\\mathrm{re}})] + \\epsilon_{\\mathrm{z,B}} + \\epsilon_{\\mathrm{z,A / s / }}}, \\end{array} \\tag{A.5}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "where  $\\epsilon_{\\mathrm{z,rec}}$  is the zero- point energy of the two \"soft' rocking vibrations mentioned above and  $\\omega_{\\mathrm{r}}$  is the frequency of the normal mode of  $\\mathrm{C / s / }$  corresponding to the reaction coordinate. Hence,",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & a_{\\mathrm{th}}^{\\#}(q_{\\mathrm{r}}) = [a + k_{\\mathrm{B}}T\\ln Q_{\\mathrm{lv}}^{\\mathrm{(r)}} - a_{\\mathrm{rec}} - a_{\\mathrm{B}} - a_{\\mathrm{A / s / }}}]\\\\ & \\qquad \\times \\exp [-\\gamma (q_{\\mathrm{r}} - q_{\\mathrm{re}})]\\\\ & \\qquad -k_{\\mathrm{B}}T\\ln Q_{\\mathrm{r,rest}}(q_{\\mathrm{r}}) + a_{\\mathrm{B}} + a_{\\mathrm{A / s / }}. \\end{array} \\tag{A.6}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Here,",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nQ_{\\mathrm{lv}}^{\\mathrm{(r)}} = \\frac{1}{1 - \\exp\\left(-\\frac{\\hbar\\omega_{\\mathrm{r}}}{k_{\\mathrm{B}}T}\\right)} \\tag{A.7}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "is the partition function of the normal mode of  $\\mathrm{C / s / }$  corresponding to the reaction coordinate;  $a$ $a_{\\mathrm{A / s / }}$  , and  $a_{\\mathrm{B}}$  are the Helmholtz free energies of the internal degrees of freedom of  $\\mathrm{AB / s / }$ $\\mathrm{A / s / }$  ,and  $\\mathbf{B}$ $a_{\\mathrm{rec}}$  is that of the two \"soft' rocking vibrations mentioned above; and",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nQ_{\\mathrm{r,rest}}(q_{\\mathrm{r}}) = \\frac{k_{\\mathrm{B}}T}{B_{\\mathrm{eff}}(q_{\\mathrm{r}})}, \\tag{A.2}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nQ_{\\mathrm{r,rest}}(q_{\\mathrm{r}}) = \\frac{k_{\\mathrm{B}}T}{B_{\\mathrm{eff}}(q_{\\mathrm{r}})}, \\tag{A.8}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "where",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nB_{\\mathrm{eff}}(q_{\\mathrm{r}}) = \\frac{2q_{\\mathrm{r}}}{q_{\\mathrm{r}} - R_{\\mathrm{B}}}\\frac{\\hbar^2}{2m_{\\mathrm{B}}q_{\\mathrm{r}}^2} \\tag{A.3}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "is the partition function of the two equivalent surface- restricted rotations  $m_{\\mathrm{B}}$  is the mass of  $\\mathbf{B}$  and  $R_{\\mathrm{B}}$  is its van der Waals radius).",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "The parameter  $\\gamma$  determines the distance at which the free energy of  $\\mathrm{AB / s / }$  transforms to that of non- interacting  $\\mathbf{B}$  and  $\\mathrm{A / s / }$  .Following the recommendations in [41- 43], we used  $\\gamma = 0.75(\\alpha /2)$  in actual calculations.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Given the parameters  $\\alpha$  and  $\\gamma$  and the necessary characteristics of  $\\mathrm{AB / s / }$ $\\mathrm{A / s / }$  ,and  $\\mathbf{B}$  ,the maximum Helmholtz free energy of the transition complex  $a_{\\mathrm{max}}^{\\#} = a^{\\#}(q_{\\mathrm{r}}^{\\#})$  can be found numerically, and  $k_{\\mathrm{d}}$  can be calculated using the equation",
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nk_{\\mathrm{d}} = \\frac{k_{\\mathrm{B}}T}{2\\pi\\hbar}\\exp \\left(-\\frac{a_{\\mathrm{max}}^{\\neq} - a}{k_{\\mathrm{B}}T}\\right). \\tag{A.10}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "The adsorption rate constant  $k_{\\mathrm{ad}}$  is calculated using  $k_{\\mathrm{d}}$  given by Eq. (A.10) and the detailed balancing principle.",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "References",
+        "text_level": 1,
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "[1] D. Pietrogiacomi, V. Indovina, F. Pepe, S. Tuti, React. Kinet. Catal. Lett. 72 (2001) 35. [2] H. Hamada, M. Inaba, H. Inai, H. Hirashima, K. Kohama, J. Sol- Gel Sci. Technol. 13 (1998) 1033. [3] L. Manchanda, M.D. Morris, M.L. Green, R.B. van Dover, F. Klemens, T.W. Sorsch, P.J. Silverman, G. Wilk, B. Busch, S. Aravamudhan, Microelectron. Eng. 59 (2001) 351. [4] G.D. Wilk, R.M. Wallace, J.M. Anthony, J. Appl. Phys. 89 (2001) 5243. [5] O. Sneh, R.B. Clark- Phelps, A.R. Londergan, J. Winkler, T.E. Seidel, Thin Solid Films 402 (2002) 248. [6] J. Aarik, A. Aidla, A.- A. Kuisler, T. Uustrate, V. Sammelselg, Thin Solid Films 340 (1999) 110. [7] J. Aarik, A. Aidla, H. Mandar, T. Uustrate, K. Kukli, M. Schuisky, Appl. Surf. Sci. 173 (2001) 15. [8] J. Aarik, A. Aidla, H. Mandar, T. Uustrate, V. Sammelselg, J. Cryst. Growth 220 (2000) 105. [9] H. Siimon, J. Aarik, J. Phys. D, Appl. Phys. 30 (1997) 1725. [10] J. Aarik, A. Aidla, H. Mandar, T. Uustrate, V. Sammelselg, Thin Solid Films 408 (2002) 97. [11] A. Rahtu, M. Ritala, J. Mater. Chem. 12 (2002) 1484. [12] A. Kytokivi, Ph.D. Thesis, Helsinki University of Technology, Finland, 1997. [13] A. Kytokivi, E.- L. Lakomaa, A. Root, H. Osterholm, J.- P. Jacobs, H.H. Brongersma, Langmuir 13 (1997) 2717. [14] Y. Widjaja, C.B. Musgrave, Appl. Phys. Lett. 81 (2002) 304. [15] Y. Widjaja, C.B. Musgrave, J. Chem. Phys. 117 (2002) 1931. [16] R. Orlando, C. Pisani, E. Ruiz, P. Sauet, Surf. Sci. 275 (1992) 482. [17] F. Haase, J. Sauer, J. Am. Chem. Soc. 120 (1998) 13503. [18] T. Merle- Mejean, P. Barberis, S. Ben Othmane, F. Nardou, P.E. Quintard, J. Eur. Ceram. Soc. 18 (1998) 1579.",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "[19] C. Cerrato, S. Bordiga, S. Barbera, C. Morreta, Surf. Sci. 377- 379 (1997) 50. [20] K.T. Jung, A.T. Bell, J. Mol. Catal. A 163 (2000) 27. [21] M. Ritala, M. Leskela, in: H.S. Nalwa (Ed.), Handbook of Thin Film Materials. Deposition and Processing of Thin Films, vol. 1, Academic Press, 2002, p. 103. [22] M. Ylilammi, Thin Solid Films 279 (1996) 124. [23] J. Nawrocki, P.W. Carr, M.J. Annen, S. Froelicher, Anal. Chim. Acta 327 (1996) 261. [24] S. Raz, K. Sasaki, J. Maier, I. Riess, Solid State Ionics 143 (2001) 181. [25] I. Iskandarova, A. Knizhnik, E. Rykova, A. Bagatur'yants, B. Potapkin, A. Korkin, First- principle investigation of the hydroxylation of zirconia and hafnia surfaces, Microelectron. Eng. 69 (2003) 587. [26] V.V. Brodskii, E.A. Rykova, A.A. Bagatur'yants, A.A. Korkin, Comput. Mater. Sci. 24 (2002) 278. [27] A.D. Becke, J. Chem. Phys. 98 (1993) 5648. [28] C. Lee, W. Yang, R.G. Parr, Phys. Rev. B 37 (1988) 785. [29] M.J. Frisch et al., Gaussian 98, Rev A.7, Gaussian, Inc., Pittsburgh, PA, 1998. [30] P.J. Hay, W.R. Wadt, J. Chem. Phys. 82 (1985) 270, 284. [31] R. Ditchfield, W.J. Hehre, J.A. Pople, J. Chem. Phys. 54 (1971) 724. [32] M.S. Gordon, Chem. Phys. Lett. 76 (1980) 163. [33] D.V. Shalashilin, D.L. Thompson, J. Chem. Phys. 107 (1997) 6204. [34] E.E. Nikitin, Theory of Elementary Atomic and Molecular Processes in Gases, Clarendon, Oxford, 1974. [35] R.G. Gilbert, S.C. Smith, Theory of Unimolecular and Recombination Reactions, Blackwell, Oxford, 1990. [36] A. Goldsmith, L.E. Waterman, L.E. Hirschhorn, Handbook of Thermophysical Properties of Solid Materials, Pergamon Press, Oxford, 1961. [37] I.S. Grigoriev, E.Z. Meilikhov (Eds.), Fizicheskie Velichiny. Spravochnik (Physical Quantities: A Handbook), Energoatomizdat, Moscow, 1991. [38] V.P. Zhdanov, Elementary Physicochemical Processes on Solid Surfaces, Penum Press, New York, 1991. [39] T. Merle- Mejean, P. Barberis, S. Ben Othmane, F. Nardou, P.E. Quintard, J. Eur. Ceram. Soc. 18 (1998) 1579. [40] C. Cerrato, S. Bordiga, S. Barbera, C. Morreta, Surf. Sci. 377/379 (1997) 50. [41] M. Quack, J. Troe, Ber. Buns. Phys. Chem. 81 (1977) 329. [42] J. Troe, J. Chem. Phys. 75 (1981) 226. [43] J. Troe, J. Chem. Phys. 79 (1983) 6017.",
+        "page_idx": 19
+    }
+]

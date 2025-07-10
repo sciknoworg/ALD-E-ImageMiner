@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Self-Limiting Temperature Window for Thermal Atomic Layer Etching of HfO 2 and ZrO 2 Based on the Atomic-Scale Mechanism</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2020-04-02">April 2, 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rita</forename><surname>Mullins</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">∥</forename><surname>Suresh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kondati</forename><surname>Natarajan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Nolan</surname></persName>
+						</author>
+						<title level="a" type="main">Self-Limiting Temperature Window for Thermal Atomic Layer Etching of HfO 2 and ZrO 2 Based on the Atomic-Scale Mechanism</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-04-02">April 2, 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">956770ED36A3A9E5D336CC5313236F31</idno>
+					<idno type="DOI">10.1021/acs.chemmater.9b05021</idno>
+					<note type="submission">Received: December 5, 2019 Revised: April 1, 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>HfO 2 and ZrO 2 are two high-k materials that are important in the downscaling of semiconductor devices. Atomiclevel control of material processing is required for the fabrication of thin films of these materials at nanoscale device sizes. Thermal atomic layer etching (ALE) of metal oxides, in which up to one monolayer of the material can be removed, can be achieved by sequential self-limiting (SL) fluorination and ligand-exchange reactions at elevated temperatures. However, to date, a detailed atomistic understanding of the mechanism of thermal ALE of these technologically important oxides is lacking. In this paper, we investigate the hydrogen fluoride (HF) pulse in the first step in the thermal ALE process of HfO 2 and ZrO 2 using first-principles simulations. We introduce Natarajan-Elliott analysis, a thermodynamic methodology, to compare reaction models representing the self-limiting (SL) and continuous spontaneous etching (SE) processes taking place during an ALE pulse. Applying this method to the first HF pulse on HfO 2 and ZrO 2 , we found that thermodynamic barriers impeding continuous etching are present at ALErelevant temperatures. We performed explicit HF adsorption calculations on the oxide surfaces to understand the mechanistic details of the HF pulse. A HF molecule adsorbs dissociatively on both oxides by forming metal-F and O-H bonds. HF coverages ranging from 1.0 ± 0.3 to 17.0 ± 0.3 HF/nm 2 are investigated, and a mixture of molecularly and dissociatively adsorbed HF molecules is present at higher coverages. Theoretical etch rates of -0.61 ± 0.02 Å/cycle for HfO 2 and -0.57 ± 0.02 Å/cycle for ZrO 2 were calculated using maximum coverages of 7.0 ± 0.3 and 6.5 ± 0.3 M-F bonds/nm 2 , respectively (M = Hf, Zr).</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>The scaling of semiconductor devices means that features are required at the nanometer scale. As a result of the shrinking of device feature sizes, SiO 2 gate dielectrics would be so thin that electron tunneling through the dielectric layer, which leads to high leakage currents, <ref type="bibr" target="#b0">1</ref> is impossible to avoid. Materials with high dielectric constant, k, allow a high drive current to be maintained, while minimized leakage current and a low equivalent oxide thickness can be achieved. <ref type="bibr" target="#b0">1</ref> HfO 2 and ZrO 2 are high-k dielectric materials with dielectric constants of 22-23, <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> which are used in semiconductor devices. HfO 2 and ZrO 2 are also thermodynamically stable when interfaced with silicon in semiconductor applications. <ref type="bibr" target="#b2">3</ref> However, conformal nanometer-scale feature sizes in high-aspect-ratio structures are difficult to achieve with traditional wet and dry chemical etching methods, which do not permit the level of control required. Recently, atomic layer etching (ALE) has gained significant interest for the controlled etching of thin films, in particular, for nanoelectronic devices. ALE shares many features with atomic layer deposition (ALD) and can be considered as the reverse of ALD. ALE permits the removal of thin films with atomic-scale precision using sequential and selflimiting (SL) surface reactions, <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref> similar to ALD.</p><p>Traditional ALE processes are anisotropic as they use directional high-energy ion bombardment to remove the modified surface layer. <ref type="bibr" target="#b5">6</ref> Thermal ALE relies on temperature and thermochemically favorable reactions to remove surface species. <ref type="bibr" target="#b9">10</ref> While there have been many examples of thermal ALE of a range of materials, including HfO 2 , <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr">124,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b11">12</ref> ZrO 2 , <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b11">12</ref> SiO 2 , <ref type="bibr" target="#b12">13</ref> Al 2 O 3 , <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> AlN, <ref type="bibr" target="#b18">19</ref> AlF 3 , <ref type="bibr" target="#b19">20</ref> TiO 2 , <ref type="bibr" target="#b20">21</ref> TiN, <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b22">23</ref> W, <ref type="bibr" target="#b24">24,</ref><ref type="bibr" target="#b25">25</ref> WO 3 , <ref type="bibr" target="#b25">25</ref> ZnO, <ref type="bibr" target="#b26">26</ref> and GaN <ref type="bibr" target="#b27">27</ref> and for other ALE techniques including Ar neutral beam ZrO 2 , <ref type="bibr" target="#b28">28</ref> plasma ALE SiO 2 , <ref type="bibr" target="#b29">29,</ref><ref type="bibr" target="#b30">30</ref> ZnO, <ref type="bibr" target="#b31">31</ref> GaN, <ref type="bibr" target="#b32">32,</ref><ref type="bibr" target="#b33">33</ref> and ALE of Si 3 N 4 <ref type="bibr" target="#b34">34</ref> using infrared annealing, the details of the mechanism of the ALE process still require significant work to understand.</p><p>The first step in ALE is the formation of a reactive but nonvolatile layer on the initial film, which is followed by a material removal step to take off only the modified layer as indicated schematically in Figure <ref type="figure" target="#fig_0">1</ref>. The key aspect of the ALE process is the self-limiting modification of the pristine film with the first precursor to produce a thin nonvolatile surface layer. The purpose of this modification step is to form a reactive, but nonvolatile, layer that can be easily removed in the subsequent ligand-exchange step. <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b35">35</ref> To date, reactions during thermal ALE are based on gas-phase fluorination that converts the metal-containing film into a layer of the corresponding nonvolatile metal fluoride. <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b10">11</ref> For metal oxides, thermal ALE processes generally use HF for the fluorination step. <ref type="bibr" target="#b21">22</ref> HF is a useful nucleophilic fluorination reactant in which the fluoride anion serves as the active reaction species. <ref type="bibr" target="#b36">36</ref> This modification step in thermal ALE is the focus of this paper.</p><p>The other half of the thermal ALE cycle consists of a ligand exchange between a metal precursor and the newly formed fluoride layer at elevated temperatures, <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b10">11</ref> for which examples include Sn(acac) 2 , <ref type="bibr" target="#b3">4</ref> Al(CH 3 ) 3 , <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b37">37</ref> Al(CH 3 ) 2 Cl, <ref type="bibr" target="#b3">4</ref> SiCl 4 , 4 TiCl 4 , 11 BCl 3 , <ref type="bibr" target="#b20">21</ref> and WF 6 . <ref type="bibr" target="#b24">24</ref> This second reaction produces stable etch products, which are now volatile <ref type="bibr" target="#b36">36</ref> and can be easily removed, leaving behind a film from which one layer or a fraction of a layer has been removed as shown schematically in Figure <ref type="figure" target="#fig_0">1</ref>. Repeating this cycle results in controlled removal of layers from the original film. Other applications of thermal ALE include surface cleaning for the removal of metal impurities in semiconductor fabrication, conformal etching in high-aspect-ratio structures, and smoothing of surfaces to obtain flat and damage-free layers, which are also important in the semiconductor industry. <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b38">38</ref> Therefore, thermal ALE is a strong candidate as a processing technology in current and future semiconductor device fabrication. <ref type="bibr" target="#b37">37</ref> Given that it is difficult to investigate the ALE reactions directly using experimental techniques, first-principles-based atomic-level simulations using density functional theory (DFT) can give deep insights into the precursor chemistry and the reactions that drive the etch of metal oxides. In this paper, the hydrogen fluoride (HF) pulse in the first step in thermal ALE of HfO 2 and ZrO 2 using DFT calculations will be examined. HF molecules adsorb at the surfaces of metal oxides by forming metal-F bonds, and there can also be hydrogen bonds between HF molecules. In addition, adsorbed HF may remain intact or dissociate. In the latter case, Hf-F/Zr-F and O-H are formed on HfO 2 and ZrO 2 , similar to that in recent work on Al 2 O 3 etch modeling. <ref type="bibr" target="#b39">39</ref> The amount etched (etch rate) is determined by how much of the oxide surface is fluorinated and how much of the metal fluoride can be removed in the ligand exchange for one ALE cycle. <ref type="bibr" target="#b3">4</ref> In addition to investigating HF adsorption, we introduce Natarajan-Elliott analysis (N-E analysis, in short) to predict the conditions at which a self-limiting (SL) or continuous spontaneous etch (SE) reaction becomes thermodynamically favorable, subject to kinetic barriers. This information is useful for directing experimental studies of thermal ALE. Self-limiting reactions are a necessary part of thermal ALE and allow the degree of etching to be well controlled and defined. We find that SL reactions are more favorable than the competing SE reactions for the HF pulse on HfO 2 and ZrO 2 at 0 K. The temperatures above which spontaneous etching is favored are 657 and 534 K for HfO 2 and ZrO 2 , respectively, at typical thermal ALE reactant pressures. Introducing one HF molecule to the bare surfaces of HfO 2 and ZrO 2 results in dissociative adsorption irrespective of the binding site. We determine the maximum coverage of metal-F bonds on the surface and use this coverage to calculate a theoretical etch rate. We also determine the maximum etch rate computed from the lattice constants of HfO 2 and ZrO 2 for one monolayer (ML) removal of Hf/Zr. We compare this maximum etch rate to experimental etch rates to calculate the number of Hf/Zr removed per surface area. We study the spontaneous formation of water that resulted from some of our relaxed geometries. This combined thermodynamic and mechanistic investigation using the firstprinciples simulation allows us to understand and design novel ALE processes for other technologically relevant materials. We first present a thermodynamic analysis that shows that the fluorinated surface is preferred over the oxygen fluoride and then present a detailed analysis of the adsorption coverage of HF molecules at HfO 2 and ZrO 2 , which allows us to also predict etch rates and number of metal atoms removed in a cycle.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ COMPUTATIONAL METHODS</head><p>All reported surface slab calculations in this paper are performed using spin-polarized density functional theory as implemented in the VASP <ref type="bibr" target="#b40">40</ref> 5.4 package. The calculations are based on the generalized gradient approximation (GGA) using the Perdew-Burke-Ernzerhof (PBE) exchange-correlation (XC) functional. <ref type="bibr" target="#b41">41</ref> The self-consistent energy for the electronic minimization is converged within 1 × 10 -4 eV, and the forces for ionic relaxation are converged within -2 × 10 -2 eV/Å. The default smearing method of Methfessel-Paxton first order is used with 0.1 eV broadening for electronic relaxation. The core </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Chemistry of Materials</head><p>electrons are described by projector-augmented wave (PAW) potentials, <ref type="bibr">42</ref> and the valence electrons (Hf: 6s 2 5d 2 , Zr: 5s 2 4d 2 , O: 2s 2 2p 4 , F: 2s 2 2p 5 , and H: 1s 1 ) are treated using plane-wave basis sets with a kinetic energy cutoff of 400 eV. For configurations 2HF B for HfO 2 and ZrO 2 , we include the tag IVDW = 20 for the Tkatchenko-Scheffler scheme in our INCAR. We found that their adsorption energies were increased only by ≈0.05 eV by including this dispersion method and therefore we do not include it in the below analysis.</p><p>Relating SL and SE Processes: N-E Analysis. The relationship between SE and SL processes of a substrate exposed to a single gaseous reactant is described schematically in Figure <ref type="figure" target="#fig_1">2</ref>. In an SL reaction, represented by the solid green arrow in Figure <ref type="figure" target="#fig_1">2</ref>, the reactant molecules passivate the material surface and form a nonvolatile layer that resists further reaction. Such a reaction is referred to as a "surf → surf" reaction</p><formula xml:id="formula_0">+ → A B C SL : surf gas surf<label>(1)</label></formula><p>with the reaction free energy defined as ΔG = X. Here, the starting surface A is necessarily different from the final surface C. It is possible that byproducts are released into the gas phase during this reaction</p><formula xml:id="formula_1">+ → + A B C D SL : surf gas surf gas<label>(2)</label></formula><p>Conversely, in a SE reaction (represented by the solid red arrow in Figure <ref type="figure" target="#fig_1">2</ref>), the reactant molecules etch away units of bulk material continuously by forming stable and volatile etch byproducts. This continues until the supply of the reactant gas molecules is stopped or the substrate material is exhausted (e.g., an etch stop is reached). Such a reaction is referred to as a "bulk → gas" reaction</p><formula xml:id="formula_2">+ + → + A A B A E SE: surf bulk gas surf gas<label>(3)</label></formula><formula xml:id="formula_3">+ → A B E SE: bulk gas gas<label>(4)</label></formula><p>with the reaction free energy ΔG = Y. Clearly, Y is independent of A surf . The reaction free energy ΔG at temperature T is computed as</p><formula xml:id="formula_4">Δ = Δ -Δ + G H T S RT Q ln( )<label>(5)</label></formula><formula xml:id="formula_5">Δ = Δ + Δ + Δ H E W T ZPE ( )<label>(6)</label></formula><p>∑ ∑</p><formula xml:id="formula_6">μ μ Δ = - E E E p p r r<label>(7)</label></formula><formula xml:id="formula_7">∏ ∏ = μ μ Q p p / products reactants<label>(8)</label></formula><p>In eq 5, ΔH and ΔS represent the changes in reaction enthalpy and reaction entropy, respectively. Since the partial pressures of the reactants and products are variable in the reaction chamber, the RT ln(Q) term is included. ΔH in eq 6 includes three contributions, namely, electronic reaction energy ΔE, zero-point energy change ΔZPE, and a temperature-dependent enthalpic contribution ΔW(T).</p><p>While the reaction energy (ΔE) in eq 7 includes only the bonding information at temperature T = 0 K, the reaction free energy (ΔG) provides finite temperature and pressure behavior of a particular reaction. In eq 7, μ refers to the stoichiometric coefficient of the corresponding species and indices r and p indicate reactant and product species, respectively. The reaction quotient Q includes partial pressures of the gas-phase reactant and product molecules only. If the reactant and product pressures are the same, then ln Q becomes 0. A negative ΔS increases the free energy and tends to make the reaction more endergonic. Via the translational entropy, the value of ΔS is strongly dependent on the difference in molecularity between the products and the reactants. For example, if the number of gaseous molecules in the products is considerably smaller than in the reactants, then the ΔS value is likely to be negative and to result in an increase in the reaction free energy. In this work, we also evaluate the contribution from changes in surface entropy.</p><p>A negative value of ΔG means that the corresponding reaction is exergonic (favorable); otherwise, it is endergonic (unfavorable). The ΔG values are based on the SE and SL reactions as thermochemically isolated processes. However, we find it useful to consider also the overall energetics of the reaction pathway that theoretically links SL to SE (the green dotted line in Figure <ref type="figure" target="#fig_1">2</ref>). It may be possible to form SE reaction products from the SL reaction products by overcoming one or several energetic barriers. While it is possible to compute kinetic barriers at the first-principles level, we omit this in favor of developing a computational approach that allows rapid screening. Balancing the energies in Figure <ref type="figure" target="#fig_1">2</ref> shows that these unknown barriers must be of magnitude at least Y -X (free energy difference of SL and SE  Chemistry of Materials pubs.acs.org/cm Article reactions) in energy units. This term Y -X will be referred to as the "minimum barrier" in this paper.</p><p>Based on the values of X and Y, we can distinguish the four possible scenarios for the precursor pulse shown in Figure <ref type="figure" target="#fig_2">3</ref>. Each profile in Figure <ref type="figure" target="#fig_2">3</ref> depicts a set of SL and SE reaction free energies separated by unknown energetic barriers, which in reality may consist of many barriers in the configurational space of the system. Computing all of the reaction pathways and barriers separating the SL and SE product states would be computationally demanding. The aim of this methodology is to form useful conclusions without computing these pathways, thus accelerating process design. The minimum possible barrier to drive the etch reaction from the SL to SE product state is Y -X in energy units as mentioned earlier. In the energy profiles, the SL reaction appears on the left-hand side of the horizontal axis since the precursor molecules must first react with the surface before accessing the bulk. To cause etching from there onward, the precursor molecules may have to lift the surface atoms out of their lattice positions or diffuse into the subsurface region and finally form volatile products. Therefore, the SE reaction is shown to the right of the SL reaction in these energy profiles.</p><p>Depending on whether the SL reaction or the SE reaction is the most favorable (based on their ΔG values), the energy profiles in Figure <ref type="figure" target="#fig_2">3</ref> are classified broadly as self-limiting or etching. The energy profile in Figure <ref type="figure" target="#fig_2">3a</ref> is termed as "preferred self-limiting" since the SL reaction is more thermodynamically favored than the SE reaction, even though both SL and SE reactions are exergonic. Here, there is a possibility of etching if the collective barrier (at least Y -X) could be overcome under the reactor conditions. If the energy profile in Figure <ref type="figure" target="#fig_2">3a</ref> is shifted along the vertical axis such that the SL reaction is exoergic and the SE reaction is endergonic, we obtain the energy profile in Figure <ref type="figure" target="#fig_2">3b</ref> termed as "purely self-limiting". This is the ideal energy profile for the surface modification pulse in an ALE process since unlimited etching is energetically unfavorable. The energy profile in Figure <ref type="figure" target="#fig_2">3c</ref> is the reverse of that in Figure <ref type="figure" target="#fig_2">3a</ref> since the SE reaction is energetically more favorable than the SL reaction (Y -X &lt; 0). The collective barrier, if any, for etching would be comparatively lower than in the preferred self-limiting state, and it may be easily breached under the reactor conditions. Therefore, the energy profile in Figure <ref type="figure" target="#fig_2">3c</ref> is termed as "preferred etching". Figure <ref type="figure" target="#fig_2">3d</ref> is obtained by shifting the energy profile in Figure <ref type="figure" target="#fig_2">3c</ref> such that the SL reaction is endergonic and the SE reaction is exergonic. This profile is termed as "purely etching" since the precursor molecules should readily volatilize the surface atoms and proceed to the subsurface region to cause bulk etching without significant barriers. This is the ideal energy profile for a SE pulse. Thus, the shape of the energy profile at any given temperature and pressure will allow us to predict the net effect of the precursor-substrate interaction. We refer to this computational approach as the N-E analysis.</p><p>To summarize, by comparing the energetics and thermodynamics of the SE (bulk → gas) and SL (surf → surf) reactions, along with the minimum energetic barrier separating them, we can predict whether the gas of a particular precursor pulse will spontaneously etch the substrate material at the temperatures and pressures of interest.</p><p>Bulk and Slab Models. We have optimized the bulk unit cell of monoclinic HfO 2 (space group: P2 1 /c) and ZrO 2 (space group: P2 1 / c) by simultaneously relaxing the ionic positions, cell shape, and cell volume with an energy cutoff of 550 eV and a Monkhorst-Pack kpoint sampling mesh of (6 × 6 × 6). The bulk monoclinic unit cells of HfO A surface slab of monoclinic HfO 2 and ZrO 2 with a (111) orientation is used for the surface calculations as this is the most stable facet at low temperatures and has the lowest surface energy. <ref type="bibr" target="#b42">43,</ref><ref type="bibr" target="#b43">44</ref> A surface supercell of HfO 2 and ZrO 2 with a (2 × 2) expansion of the hexagonal unit cell and 16 Å of vacuum separating the slabs is used for the surface models; this has a stoichiometry of Hf 80 /Zr 80 O 160 per supercell. It consists of five layers of 16 HfO 2 /ZrO 2 units, and a kpoint sampling mesh of (2 × 2 × 1) is used for geometry optimization. The product states of the SL reactions needed for the N-E analysis are obtained by adding two F atoms per surface O removed (for brevity, we denote this ratio 1O/2F) from the top layer of the slab models. We consider three product states for our analysis: 8O/16F, 12O/24F, and 16O/32F. For the surface slabs, enthalpy H and entropy S are computed using the Phonopy code by considering only the first layer of atoms. <ref type="bibr" target="#b44">45</ref> The calculations for the reactant molecules and gas-phase byproducts are performed in VASP with a large periodic box of dimensions 15.0 Å × 16.0 Å × 15.5 Å and 400 eV plane-wave energy cutoff. The enthalpy and entropy for the gasphase molecules were calculated from the freeh program in the Turbomole suite 46 at 1 atm pressure. The above calculations are performed with the PBE exchange-correlation functional <ref type="bibr" target="#b41">41</ref> and a polarized triple ζ basis set (def-TZVPP) <ref type="bibr" target="#b45">47,</ref><ref type="bibr" target="#b46">48</ref> and default medium grid.</p><p>For the HF adsorption studies, the molecules are introduced at various surface sites and at different coverages on the (111) surface slabs of HfO 2 and ZrO 2 . The absorbate coverages and binding energies are computed, and a surface model with maximum coverage of metal-F is then used to derive the theoretical etch rate for the HF pulse on HfO 2 and ZrO 2 .</p><p>The VASP data can be found at the GitHub repository <ref type="url" target="https://github.com/RitaMull/Thermal-ALE-HfO2-and-ZrO2-with-HF.">https://  github.com/RitaMull/Thermal-ALE-HfO2-and-ZrO2-with-HF</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ RESULTS</head><p>In the first part of this section, we will perform the N-E analysis and compare self-limiting with spontaneous etch The value within parenthesis corresponds to the minimum barrier between the respective SE and SL reactions. The product state of SL1 and SL2 reactions is the 8O/16F surface of MO 2 (M = Hf/Zr) as described in the previous section, and the reaction energy is listed per the modified M atom.</p><p>Chemistry of Materials pubs.acs.org/cm Article reaction models. In the next part, the adsorption mechanism of HF at a range of coverages on HfO 2 and ZrO 2 will be studied, together with analysis of H 2 O formation. Finally, a theoretical etch rate is predicted based on the maximum possible coverage of dissociated HF on the material surfaces.</p><p>Self-Limiting vs Spontaneous Etch. Comparing the energetics and thermodynamics of the SL and SE model reactions for the fluorination of HfO 2 and ZrO 2 using HF, we can predict whether the HF pulse will spontaneously etch or result in a self-limiting reaction at the given conditions. Model reactions representing the HF pulse on HfO 2 and ZrO 2 are listed in Table <ref type="table" target="#tab_0">1</ref> together with the corresponding reaction (free) energies at 0 and 500 K, with a reactant pressure of 0.2 Torr and a product pressure of 0.01 Torr, as computed from DFT calculations.</p><p>This table also includes the minimum barrier to cause spontaneous etch as already discussed. Negative minimum barriers indicate that spontaneous etch is thermodynamically favorable and is hindered only by kinetic barriers, if any. Two SE reactions and two SL reactions are postulated for HF exposure on both HfO 2 and ZrO 2 . The SE reactions involve the complete conversion of the bulk metal oxide into volatile metal fluoride (SE1) or metal oxyfluoride (SE2) and water, while the corresponding SL reactions involve conversion of the outermost surface layer of the metal oxide into the nonvolatile metal (oxy)fluoride (terminating the metal oxide), releasing water molecules. For the SE1 reaction of Hf/ZrO 2 , four HF molecules are needed to etch away one unit of bulk Hf/ZrO 2 to form Hf/ZrF 4 and H 2 O. For the SE2 reaction for Hf/ZrO 2 , two HF molecules are required to etch a unit of Hf/ZrO 2 to form Hf/ZrOF 2 and H 2 O. In the SE reactions, the surface of the material before and after each precursor pulse will be identical and therefore their contributions are ignored from the reaction model. For the SL reactions, the surfaces are not identical before and after the pulse and their contributions have to be included. In Table <ref type="table" target="#tab_0">1</ref>, the SL product state of the surfaces is 8O/16F (refer to Supporting Information (SI) for the geometry).</p><p>A negative reaction (free) energy (ΔG) means that the reaction is exergonic (favorable), and a positive ΔG means that the reaction is endergonic (unfavorable). The SE2 reactions forming volatile metal oxyfluorides are unfavorable at 0 and 500 K as the reaction (free) energy is positive (unfavorable), whereas the SE1 reactions forming volatile metal fluorides are favorable. For all of the SL-SE combinations at 0 K, for both materials, the minimum barrier to etch was positive, suggesting that self-limiting reaction is the most favorable energetically. At 500 K, the thermodynamic barrier is reduced considerably, which means high temperatures favor SE reactions. In any case, below 500 K, the minimum barrier is positive, suggesting that SL reactions are preferred for both metal oxides. Therefore, up to 500 K, the reactions are in preferred self-limiting state for both materials. Therefore, we can propose that the reaction of HF in the first step will self-limit on both metal oxides at least up to 500 K.</p><p>As the SE1 reactions forming the volatile metal fluoride are more favorable than the SE2 reactions that form the oxyfluoride, we will consider only the SE1 reactions for further analysis. Moreover, the barrier to etch was very high for the SL2-SE2 reactions as compared to the SL1-SE1, even at 500 K, suggesting that spontaneous formation of oxyfluoride is not probable at ALE-relevant temperatures.</p><p>Reaction Free Energy Profiles (FEPs). The free energy profiles (FEPs) of the reactions in Table <ref type="table" target="#tab_0">1</ref> are discussed in this section. Comparing the reaction FEPs of the SE and SL reactions, we can determine at a given temperature and reactant pressure whether the HF pulse will favor spontaneous etching or self-limited conversion of HfO 2 and ZrO 2 into a nonvolatile metal fluoride layer. Here, we use a reactant pressure of 0.2 Torr and a product pressure of 0.01 Torr within a temperature range of 0-1000 K. The various contributions to the free energy for the example of the SE1 reaction for HfO 2 are plotted in Figure <ref type="figure" target="#fig_4">4</ref>.</p><p>In Figure <ref type="figure" target="#fig_4">4</ref>, the ΔE and ΔZPE contributions are temperature independent. TΔS is the entropy contribution and is 0 eV at 0 K and -0.5 eV at 1000 K. The entropy term decreases with increasing temperature because four gaseous reactant molecules result in the formation of three product molecules only. The RT ln(Q) and ΔW contributions are clearly smaller in comparison to the entropy term. They decrease the free energy at high temperatures and compete against the entropy term that increases the free energy with temperature. The FEP of this reaction at the reactant and product pressures stated above is exergonic up to 1000 K. The other reactions show similar contributions.</p><p>The FEPs of the SE1 and SL1 reactions of HfO 2 and ZrO 2 are compared in Figure <ref type="figure" target="#fig_5">5</ref>. For HfO 2 , the self-limiting reaction is preferred up to 656 K. At 657 K, the SE1 and SL1 reactions are isoenergetic, with the minimum barrier becoming zero, and beyond this, the SE1 reaction is more favorable. Finally, at 813 K, the self-limiting reaction becomes endergonic and continuous etching dominates. We see similar trends for ZrO 2 , with self-limiting reactions preferred up to 533 K, while at 770 K, the self-limiting reaction becomes endergonic and continuous etching remains exergonic.</p><p>In Figure <ref type="figure" target="#fig_5">5</ref>, the FEP is computed using the 8O/16F model as the SL product state. For completeness, we also determine the FEPs for two other SL product models, namely, 12O/24F and 16O/32F. Both surfaces of HfO 2 and ZrO 2 have 16 topmost O atoms (oxygen) in the supercell that could react with the HF molecules. For the 12O/24F product state, threefourths of surface O are removed and 24 F (fluorine) are Chemistry of Materials  <ref type="table" target="#tab_1">2</ref> shows the energetics for the SL reactions including 12O/24F and 16O/ 32F models. At 0 K, all SL reactions are more favorable than the SE reaction for both oxides and the minimum barriers are positive. For both oxides, we find the minimum barrier to decrease with the number of surface O atoms removed, with the lowest barriers for ZrO 2 . At 500 K, the SL1 and SL2 reactions continue to be more favorable than the SE reaction, whereas the SL3 reaction is not. This means that an aggressive removal of surface O by HF during the first pulse would also enhance etching of the surface Hf/Zr atoms at ALE-relevant temperatures, say 500 K.</p><p>Experimental work showed that the HF reaction is selflimiting on HfO 2 at 200 °C (473 K), <ref type="bibr" target="#b8">9</ref> 250 °C (523 K), <ref type="bibr" target="#b10">11</ref> and 300 °C (573 K). <ref type="bibr" target="#b10">11</ref> Compared to Figure <ref type="figure" target="#fig_6">6</ref>, this is true for partial surface O removal (8O/16F), where self-limiting is preferred up to 618 K for three-fourths of surface O removal and up to 657 K for one half of surface O removal. The same analysis holds for ZrO 2 (Figure <ref type="figure" target="#fig_7">7</ref>). Therefore, N-E analysis is a simple and relatively inexpensive method to predict the structure of the surface after the first ALE pulse. We will further validate this methodology on experimental results for different ALE processes in a future publication.</p><p>Adsorption of One HF Molecule at HfO 2 and ZrO 2 . Kondati Natarajan and Elliott 39 studied the adsorption of HF on the bare surface of Al 2 O 3 and found that Al-F bonding is    Chemistry of Materials  Stability of Different HF Coverages. The stability of different HF coverages was examined by introducing up to 34 randomly oriented HF molecules per supercell ca. 3 Å from the bare monoclinic (111) surface of HfO 2 and ZrO 2 ; this results in coverages ranging from 1.0 ± 0.3 to 17.0 ± 0.3 HF/nm 2 (2 HF to 34 HF molecules per supercell). There are 16 topmost metal atoms on the surface of the (2 × 2) supercell that may form metal-F bonds on both oxides. There are also 16 surface oxygen atoms on the bare surface of each metal oxide that can form O-H bonds or, as seen in some simulations, H 2 O, which we discuss later. For each metal oxide, three different configurations (A, B, and C) were examined for the range of HF coverages using 2, 3, 4, 5, and 8 molecules per supercell and two configurations (A and B) using 12 and 16 molecules per supercell and one configuration for 30, 32, and 34 molecules per supercell. The computed energies of adsorption for the above-mentioned geometries are shown in Tables <ref type="table" target="#tab_2">3</ref> and <ref type="table" target="#tab_4">4</ref>.</p><p>For HfO 2 , spontaneous complete dissociation of the adsorbed HF molecules was observed for some configurations with coverages of two, three, four, and five HF molecules, as shown in Figure <ref type="figure" target="#fig_10">9</ref>. Similarly, for ZrO 2 , complete dissociation of adsorbed HF was seen for some configurations with coverages of two and four HF molecules only as shown in Figure <ref type="figure" target="#fig_11">10</ref>. However, for the adsorption of three, five, and eight HF molecules on the ZrO 2 surface, upon relaxation, there were two, four, and seven dissociated HF molecules present for each configuration (A, B, or C); see Section S4 of the Supporting Information.  </p><formula xml:id="formula_8">(Hf-F, dissociated F) (nm -2 ) eV/HF eV/nm 2 2HF A (2, 2) 1.0 (1.0, 1.0) -1.5 -1.5 2HF B (1,<label>1) 1.0 (0.5, 0.5) -0.8 -0.8 2HF C (1, 1) 1.0 (0.5, 0.5) -1.0 -1.0 3HF A (2, 2) 1.5 (1.0, 1.0) -1.1 -1.7 3HF B (2, 2) 1.5 (1.0, 1.0) -1.1 -1.6 3HF C (3, 3) 1.5 (1.5, 1.5) -1.7 -2.6 4HF A (3, 3) 2.0 (1.5, 1.5) -1.3 -2.</label></formula><p>6 4HF B (3, 3) 2.0 (1.5, 1.5) -1.3 -2.7 4HF C (4, 4) 2.0 (2.0, 2.0) -1.6 -3.2 5HF A (5, 5) 2.5 (2.5, 2.5) -1.8 -4.6 5HF B (4, 4) 2.5 (2.0, 2.0) -1.4 -3.4 5HF C (5, 5) 2.5 (2.5, 2.5) -1.5 -3.7 8HF A (5, 4) 4.0 (2.5, 2.0) -1.1 -4.6 8HF B (6, 6) 4.0 (3.0, 3.0) -1.3 -5.2 8HF C (6, 5) 4.0 (3.0, 2.5) -1.1 -4.4 12HF A (10, 7) 6.0 (5.0, 3.5) -1.3 -7.7 12HF B (10, 7) 6.0 (5.0, 3.5) -1.2 -7.3 16HF A (12, 8) 8.0 (6.0, 4.0) -1.1 -9.0 16HF B (13, 9) 8.0 (6.5, 4.5) -1.2 -9.6 30HF (12, 7) 15.0 (6.0, 3.5) -0.8 -11.8 32HF (12, 6) 16.0 (6.0, 3.0) -0.8 -12.1 34HF (14, 7)</p><p>17.0 (7.0, 3.5) -0.9 -12.9</p><p>a The first number in parenthesis within the first column corresponds to the total number of Hf-F bonds, and the second number corresponds to the number of dissociated HF molecules. The most stable configurations, when more than one configuration is studied for a coverage, are highlighted in bold.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Chemistry of Materials</head><p>In all other HF adsorption configurations for HfO 2 and ZrO 2 , we find a mixture of molecular and dissociative adsorption of the HF molecules. We have computed binding energies per HF and per unit surface area of the material as listed in Tables <ref type="table" target="#tab_2">3</ref> and <ref type="table" target="#tab_4">4</ref>.</p><p>For both metal oxides, the binding energy is more favorable as the extent of metal-F bonding increases on the bare surface. This can be seen for HfO 2 in Table <ref type="table" target="#tab_2">3</ref> and Figure <ref type="figure" target="#fig_12">11c</ref> with Hf-F coverage from 1.0 ± 0.3 to 7.0 ± 0.3 nm -2 with surface binding energies -1.5 to -12.9 eV/nm 2 . Similar trends are also seen for ZrO 2 in Table <ref type="table" target="#tab_4">4</ref> and Figure <ref type="figure" target="#fig_13">12c</ref> with Zr-F coverage from 1.0 ± 0.3 to 6.5 ± 0.3 nm -2 with surface binding energies -0.9 to -12.3 eV/nm 2 . The HF molecules that did not dissociate in the relaxed geometries shown in Section S4 of the Supporting Information form hydrogen bonds with the remaining HF molecules and dissociated F atoms. For higher HF coverages, a more extensive hydrogen-bonded HF network is expected. There are intact HF molecules forming M-F bonds as well (M = Hf, Zr), whose coverage is found by subtracting the two numbers within parenthesis in Tables <ref type="table" target="#tab_2">3</ref> and <ref type="table" target="#tab_4">4</ref>. These metal-bound HF molecules (M-FH) are not likely to be purged away in the next ALE step as they form strong bonds (Hf-F 6.7 eV and Zr-F 6.5 eV), <ref type="bibr" target="#b47">49</ref> and these HF molecules should likely dissociate when the kinetic barriers are overcome inside the reactor. Therefore, we will use the total number of M-F bonds for the etch rate prediction in a later section.</p><p>Plot (a) in Figures <ref type="figure" target="#fig_12">11</ref> and <ref type="figure" target="#fig_13">12</ref> show scatter plots for metal-F coverage versus adsorbed HF coverage from the data in Tables <ref type="table" target="#tab_2">3</ref> and <ref type="table" target="#tab_4">4</ref> for HfO 2 and ZrO 2 , respectively. The dashed line shows a linear correlation between HF adsorption and metal-F coverage, which indicates the cases where all adsorbed HF molecules form metal-F bonds. The square data points along the dashed lines are those geometries where adsorbed HF coverage equals metal-F coverage. For HF adsorption at HfO 2 , this corresponds to the most stable configurations at coverages of 1.0, 1.5, 2.0, and 2.5 HF/nm 2 . For ZrO 2 , this corresponds to the most stable configurations at coverages of 1.0 and 2.0 HF/nm 2 . Note that the data points of (2HF B and 2HF C), (3HF A and 3HF B), (4HF A and 4HF B), (5HF A and 5HF C), (8HF B and 8HF C), and (12HF A and 12HF B) overlap in Figure <ref type="figure" target="#fig_12">11a</ref> as their adsorbed HF and Hf-F coverages are the same. Similarly, the data points of (2HF A and 2HF B), (3HF A and 3HF C), (4HF A and 4HF B), (5HF B and 5HF C), (8HF A and 8HF B and 8HF C), and (12HF A and 12HF B) overlap in Figure <ref type="figure" target="#fig_13">12a</ref>. The points at higher HF coverages correspond to those geometries in which partially dissociated HF molecules are present, and hence, the points lie below the correlation line. As the HF coverage increases, the metal-F coverage starts to plateau, suggesting maximal coverages of (6.0 ± 0.3)-(7.0 ± 0.3) metal-F/nm 2 . Lee et al. <ref type="bibr" target="#b8">9</ref> found that for low HF coverages during etching of HfO 2 using HF and Sn(acac) 2 , there was a lack of self-limiting behavior as the HF reaction had not reached saturation. We The first number in parenthesis within the first column corresponds to the total number of Zr-F bonds, and the second number corresponds to the number of dissociated HF molecules. The most stable configurations, when more than one configuration is studied for a coverage, are highlighted in bold. Chemistry of Materials     <ref type="table" target="#tab_4">4</ref>. Note that some HF coverages resulted in partial or complete Zr-F coverage for different configurations, for example, the coverage of 1.0 HF/nm 2 . The square data points are where the adsorbed HF coverage equals Zr-F coverage. The circular data points are where partially dissociated HF molecules are present. Plots (b) and (c) show the change in binding energy per square nanometer with an increase in HF and Zr-F coverage, respectively. = + -E E E E ( ) ( ) des HfO /HF H O HfO /HF /H O 2(surf) (ads) 2 (g) 2(surf) (ads) 2 (ads)</p><p>The term "E</p><p>HfO /HF (ads) /H 2 O (ads) " is the total energy of HF adsorbed on HfO 2 with spontaneous H 2 O formation. H 2 O was removed from the fluorinated metal oxide surface with unbound HF molecules, and the resulting geometry was relaxed. The term "E HfO 2(surf) /HF (ads) " is the total energy of HF adsorbed on HfO 2 after removing H 2 O from the surface, and "E H 2 O (g) " is the energy of a gas-phase H 2 O molecule. The desorption energies of H 2 O are presented in Table 5. These energies are relatively low and can be achievable at process conditions to remove surface-bound H 2 O.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ DISCUSSION</head><p>From the N-E analysis, at all T &lt; 500 K using reactant and product pressures of 0.2 and 0.01 Torr, respectively, and an 8O/16F surface model as the SL product state, the HF pulse on HfO 2 and ZrO 2 is self-limiting in nature, as the reaction energies for the self-limiting reactions were more favorable than the spontaneous etching reactions. Therefore, we suggest that the first precursor pulse using HF, at these conditions, will produce a stable and nonvolatile layer of metal fluorides and H 2 O as byproducts. We also found that at elevated temperatures, the formation of the volatile metal fluoride is more favorable than the formation of the volatile metal oxyfluoride. The self-limiting nature of the fluorination reaction is due to the formation of a passivated layer during HF exposure. <ref type="bibr" target="#b26">26</ref> The HfFx layer formed on HfO 2 after fluorination is self-limiting because this surface layer forms a diffusion barrier to subsequent fluorination by HF. <ref type="bibr" target="#b10">11</ref> Multiple coverages of HF molecules starting from 1.0 ± 0.3 to 17.0 ± 0.3 HF/nm 2 resulted in mixed dissociated and molecular adsorption of HF to the surfaces of HfO 2 and ZrO 2 . We found maximal coverages of (6.0 ± 0.3)-(7.0 ± 0.3) metal-F/nm 2 at higher HF coverages. Water forms spontaneously on relaxation from some of the geometries for multiple HF adsorption for both HfO 2 and ZrO 2 . The computed desorption energies to remove H 2 O from our fluorinated surfaces of HfO 2 and ZrO 2 are low enough to be overcome at process conditions. For both HfO 2 and ZrO 2 , the surfaces with an initial coverage of 17.0 ± 0.3 HF/nm 2 that resulted in 7.0 ± 0.3 Hf-F/nm 2 and 6.5 ± 0.3 Zr-F/nm 2 , respectively, are used to calculate a theoretical etch rate. Both (2 × 2) supercells of monoclinic (111) HfO 2 and ZrO 2 have surface areas of 1.98 nm 2 with 16 metal atoms on the surface that can form metal-F bonds that correspond to coverages of 8.0 ± 0.3 Hf/nm 2 and 8.0 ± 0.3 Zr/nm 2 , respectively. As the maximum coverage of Hf-F is 7.0 ± 0.3 F/nm 2 , there will be approximately 0.88 F atoms per surface Hf. The maximum coverage of Zr-F is 6.5 ± 0.3 F/nm 2 , so there will be approximately 0.81 F atoms per surface Zr. The SE1 reactions showed that four F atoms lead to the etching of one Hf/Zr atom as volatile metal tetrafluoride. Similar to the analysis done by Kondati Natarajan et al., <ref type="bibr" target="#b39">39</ref> the coverage of Hf/Zr that can be etched is one-quarter of the M-F coverage (M = Hf, Zr), 1.8 ± 0.1 Hf/(nm 2 cycle) for HfO 2 and 1.6 ± 0.1 Zr/(nm 2 cycle) for ZrO 2 . As the surface concentration of metal atoms is 8.0 ± 0.3 Hf or Zr/nm 2 , this etch rate corresponds to 0.2 monolayer/cycle. For HfO 2 , this corresponds to -61.2 ± 0.8 ng/(cm 2 cycle) and using the mass density of bulk HfO 2 (10.0 g/cm 3 ), -0.61 ± 0.02 Å/cycle. For ZrO 2 , this corresponds to -33.3 ± 0.8 ng/(cm 2 cycle) and using the mass density of bulk ZrO 2 (5.9 g/cm 3 ), -0.57 ± 0.02 Å/cycle. It is important to note that these computed etch rates do not take into account kinetic effects that would be included in experimental etch rates. Therefore, we also compute the maximum etch rate for the removal of a complete monolayer of material from HfO 2 and ZrO 2 . We used 16 metal atoms for one ML removal, which requires a Hf-F/Zr-F coverage of 32.32 ± 0.3 F/nm 2 . An etch rate of -2.82 ± 0.02 Å/cycle was computed for one ML removal using the same method for calculating the theoretical etch rate. Therefore, if the etch rate is greater than -2.82 ± 0.02 Å/cycle, then it suggests that subsurface metal atoms are being etched.</p><p>A summary of experimental etch rates for HfO 2 and ZrO 2 using HF and a metal precursor is shown in Section S5 of the  </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Schematic model of the thermal ALE process.</figDesc><graphic coords="2,132.49,69.17,360.00,106.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Schematic representation of the relationship between continuous spontaneous etch (SE, red) and self-limiting (SL, green) processes. ΔG represents the reaction free energy.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Schematic energy profiles representing (a) preferred self-limiting, (b) purely self-limiting, (c) preferred etching, and (d) purely etching.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><figDesc>2 and ZrO 2 have four metal atoms and eight O atoms. The optimized lattice constants of HfO 2 from this setup are a = 5.142 Å, b = 5.195 Å, and c = 5.326 Å, while the lattice constants of ZrO 2 are a = 5.140 Å, b = 5.189 Å, and c = 5.239 Å. Comparing our values to the experimental values for the baddeleyite phase, 43 the deviations for HfO 2 are a = 0.43%, b = 0.48%, and c = 0.96% and for ZrO 2 are a = 0.58%, b = 0.78%, and c = 1.89%.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Contributions to the reaction FEP of the SE1 reaction of HfO 2 shown in Table1. RT ln(Q) in gold accounts for the partial pressures of the reactants and products, enthalpic contribution (ΔW) is given in dark blue, entropy term (TΔS) in gray, reaction energy (ΔE) in light blue, the sum of reaction energy and zero-point energy change (ΔE + ΔZPE) in brown, and reaction free energy (ΔG) in green.</figDesc><graphic coords="5,366.46,203.70,155.96,147.57" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Free energy profiles for the SE1 (blue) and SL1 (orange) reactions of (a) HfO 2 and (b) ZrO 2 from 0 to 1000 K at the pressures given in the text. T 1 is where the self-limiting and spontaneous etch reactions cross over for the 8O/16F model, and T 2 is where spontaneous etching is preferred.</figDesc><graphic coords="6,102.44,69.17,155.96,286.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Free energy profiles of the continuous etching and selflimiting reactions for HfO 2 . T 1 , T 2 , and T 3 are where the self-limiting and spontaneous etch reactions cross over for 16O/32F, 12O/24F, and 8O/16F models, respectively.</figDesc><graphic coords="6,366.46,264.19,155.96,137.99" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Free energy profiles of the continuous etching and selflimiting reactions for ZrO 2 . T 1 , T 2 , and T 3 are where the self-limiting and spontaneous etch reactions cross over for 16O/32F, 12O/24F, and 8O/16F models, respectively.</figDesc><graphic coords="6,372.47,496.69,144.00,125.01" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8</head><label>8</label><figDesc>shows that the HF molecule is spontaneously dissociated at each binding site to form metal-F and O-H bonds on both oxides. No molecular HF adsorption was found. Similar to the Al 2 O 3 case, we find that the HF dissociation proceeds after a stable M-F (M = Hf, Zr) bond is formed. The computed adsorption energies for the dissociative adsorption of one HF molecule on the bare surface of HfO 2 are -1.52, -1.95, and -1.63 eV at sites A, B, and C, respectively. The corresponding values for ZrO 2 are -1.25, -1.74, and -1.48 eV. The interaction between HfO 2 and HF is 0.15-0.21 eV stronger than between ZrO 2 and HF. The Hf-F, Zr-F, and O-H bond lengths are shown for each adsorption mode in Figure 8. The surface O atoms are either 2-fold or 3-fold coordinated by surface Hf/Zr atoms on both surfaces. All of the surface Hf/Zr atoms are 6-fold coordinated by O atoms. Since the structures of HfO 2 and ZrO 2 are similar, the strongest adsorption mode (one HF B for HfO 2 -1.95 eV and for ZrO 2 -1.74 eV) involves the same 6-fold coordinated metal lattice site and 2-fold coordinated surface oxygen site.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Relaxed adsorption structures for one HF molecule interacting with the bare surfaces of HfO 2 and ZrO 2 . The color coding is yellow = Hf, green = Zr, red = O, white = H, and blue = F.</figDesc><graphic coords="7,132.49,69.17,360.00,151.43" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Relaxed geometries for HF coverages 2A, 3C, 4C, 5A, and 5C of HfO 2 where complete dissociation of HF occurred spontaneously. Color coding is the same as in Figure 8.</figDesc><graphic coords="8,132.49,569.99,360.00,157.15" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 10 .</head><label>10</label><figDesc>Figure 10. Relaxed geometries for HF coverages 2C, 4A, and 4B of ZrO 2 where complete dissociation of HF occurred spontaneously. Color coding is the same as in Figure 8.</figDesc><graphic coords="9,132.49,69.17,360.00,67.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 11 .</head><label>11</label><figDesc>Figure 11. (a) Scatter plot for Hf-F coverage versus total HF coverage for the surface coverage values in Table3. Note that some HF coverages resulted in partial or complete Hf-F coverage for different configurations, for example, the coverage of 1.0 HF/nm 2 . The square data points are where the adsorbed HF coverage equals Hf-F coverage. The circular data points are where partially dissociated HF molecules are present. Plots (b) and show the change in binding energy per square nanometer with an increase in HF and Hf-F coverage, respectively.</figDesc><graphic coords="9,161.86,178.19,301.15,122.63" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. (a) Scatter plot for Zr-F coverage versus total HF coverage for the surface coverage values in Table4. Note that some HF coverages resulted in partial or complete Zr-F coverage for different configurations, for example, the coverage of 1.0 HF/nm 2 . The square data points are where the adsorbed HF coverage equals Zr-F coverage. The circular data points are where partially dissociated HF molecules are present. Plots (b) and (c) show the change in binding energy per square nanometer with an increase in HF and Zr-F coverage, respectively.</figDesc><graphic coords="9,161.86,362.21,301.15,120.93" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 13 .</head><label>13</label><figDesc>Figure 13. Relaxed fluorination geometries for HfO 2 that resulted in H 2 O forming spontaneously. Color coding is the same as in Figure 8.</figDesc><graphic coords="9,306.48,543.85,106.48,83.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Figure 14 .</head><label>14</label><figDesc>Figure 14. Relaxed fluorination geometries for ZrO 2 that resulted in H 2 O forming spontaneously. Color coding is the same as in Figure 8.</figDesc><graphic coords="10,132.48,68.78,119.92,86.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="11,156.47,69.17,311.98,221.27" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Reaction Energies ΔE at 0 K and Reaction Free Energies ΔG at 500 K of the Model SE and SL Reactions Representing the HF Pulse on HfO 2 and ZrO 2</figDesc><table><row><cell></cell><cell>a</cell><cell></cell><cell></cell></row><row><cell></cell><cell>reactions</cell><cell>ΔE (eV/M)</cell><cell>ΔG (eV/M)</cell></row><row><cell></cell><cell>HfO 2</cell><cell></cell><cell></cell></row><row><cell>SE1</cell><cell>1HfO 2(b) + 4HF (g) → 1HfF 4(g) + 2H 2 O (g)</cell><cell>-0.91</cell><cell>-0.65</cell></row><row><cell>SL1</cell><cell>1HfO 2(surf) + 4HF (g) → 1HfF 4(surf) + 2H 2 O (g)</cell><cell>-3.27 (2.36)</cell><cell>-1.20 (0.55)</cell></row><row><cell>SE2</cell><cell>1HfO 2(b) + 2HF (g) → 1HfOF 2(g) + 1H 2 O (g)</cell><cell>3.87</cell><cell>3.10</cell></row><row><cell>SL2</cell><cell>1HfO 2(surf) + 2HF (g) → 1HfOF 2(surf) +1 H 2 O (g)</cell><cell>-1.64 (5.51)</cell><cell>-0.60 (3.70)</cell></row><row><cell></cell><cell>ZrO 2</cell><cell></cell><cell></cell></row><row><cell>SE1</cell><cell>1ZrO 2(b) + 4HF (g) → 1ZrF 4(g) + 2H 2 O (g)</cell><cell>-1.14</cell><cell>-0.89</cell></row><row><cell>SL1</cell><cell>1ZrO 2(surf) + 4HF (g) → 1ZrF 4(surf) + 2H 2 O (g)</cell><cell>-3.04 (1.90)</cell><cell>-1.00 (0.11)</cell></row><row><cell>SE2</cell><cell>1ZrO 2(b) + 2HF (g) → 1ZrOF 2(g) + 1H 2 O (g)</cell><cell>2.96</cell><cell>2.19</cell></row><row><cell>SL2</cell><cell>1ZrO 2(surf) + 2HF (g) → 1ZrOF 2(surf) + 1H 2 O (g)</cell><cell>-1.52 (4.48)</cell><cell>-0.50 (2.69)</cell></row></table><note><p>a</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Reaction (Free) Energies and Minimum Barriers within Parenthesis at 0 and 500 K for the Model SL Reactions Representing the HF Pulse on HfO 2 and ZrO 2 for 8O/16F, 12O/24F, and 16O/32F SL Product States (M = Hf, Zr)</figDesc><table><row><cell></cell><cell>SL product state</cell><cell>ΔE (0 K) (eV/M)</cell><cell>ΔG (500 K) (eV/M)</cell></row><row><cell></cell><cell></cell><cell>HfO 2</cell><cell></cell></row><row><cell>SE1</cell><cell>HfF 4</cell><cell>-0.91</cell><cell>-0.65</cell></row><row><cell>SL1</cell><cell>8O/16F</cell><cell>-3.27 (2.36)</cell><cell>-1.20 (0.55)</cell></row><row><cell>SL2</cell><cell>12O/24F</cell><cell>-3.05 (2.14)</cell><cell>-1.04 (0.39)</cell></row><row><cell>SL3</cell><cell>16O/32F</cell><cell>-2.45 (1.54)</cell><cell>-0.41 (-0.24)</cell></row><row><cell></cell><cell></cell><cell>ZrO 2</cell><cell></cell></row><row><cell>SE1</cell><cell>ZrF 4</cell><cell>-1.14</cell><cell>-0.89</cell></row><row><cell>SL1</cell><cell>8O/16F</cell><cell>-3.04 (1.90)</cell><cell>-1.00 (0.11)</cell></row><row><cell>SL2</cell><cell>12O/24F</cell><cell>-2.91 (1.77)</cell><cell>-0.90 (0.01)</cell></row><row><cell>SL3</cell><cell>16O/32F</cell><cell>-2.17 (1.03)</cell><cell>-0.11 (-0.78)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Adsorbate Coverages and Binding Energies for the HF Coverages on the HfO 2 Surface Shown in Figure9and in Section S4 of the Supporting Information a</figDesc><table><row><cell>HfO 2</cell><cell>coverage</cell><cell>E bind</cell></row><row><cell>geometry</cell><cell>adsorbed HF (nm -2 )</cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4 .</head><label>4</label><figDesc>Adsorbate Coverages and Binding Energies for the HF Coverages on the ZrO 2 Surface Shown in Figure10and in Section S4 of the Supporting Information a</figDesc><table><row><cell>ZrO 2</cell><cell></cell><cell>coverage</cell><cell></cell><cell>E bind</cell></row><row><cell>geometry</cell><cell>adsorbed HF (nm -2 )</cell><cell>(Zr-F, dissociated F) (nm -2 )</cell><cell cols="2">eV/HF eV/nm 2</cell></row><row><cell>2HF A (1, 1)</cell><cell>1.0</cell><cell>(0.5, 0.5)</cell><cell>-0.9</cell><cell>-0.9</cell></row><row><cell>2HF B (1, 1)</cell><cell>1.0</cell><cell>(0.5, 0.5)</cell><cell>-1.0</cell><cell>-1.0</cell></row><row><cell>2HF C (2, 2)</cell><cell>1.0</cell><cell>(1.0, 1.0)</cell><cell>-1.2</cell><cell>-1.2</cell></row><row><cell>3HF A (2, 2)</cell><cell>1.5</cell><cell>(1.0, 1.0)</cell><cell>-1.0</cell><cell>-1.6</cell></row><row><cell>3HF B (3, 2)</cell><cell>1.5</cell><cell>(1.5, 1.0)</cell><cell>-1.2</cell><cell>-1.9</cell></row><row><cell>3HF C (2, 2)</cell><cell>1.5</cell><cell>(1.0, 1.0)</cell><cell>-0.8</cell><cell>-1.2</cell></row><row><cell>4HF A (4, 4)</cell><cell>2.0</cell><cell>(2.0, 2.0)</cell><cell>-1.4</cell><cell>-2.6</cell></row><row><cell>4HF B (4, 4)</cell><cell>2.0</cell><cell>(2.0, 2.0)</cell><cell>-1.5</cell><cell>-3.1</cell></row><row><cell>4HF C (3, 3)</cell><cell>2.0</cell><cell>(1.5, 1.5)</cell><cell>-1.1</cell><cell>-2.2</cell></row><row><cell>5HF A (5, 4)</cell><cell>2.5</cell><cell>(2.5, 2.0)</cell><cell>-1.3</cell><cell>-3.2</cell></row><row><cell>5HF B (4, 4)</cell><cell>2.5</cell><cell>(2.0, 2.0)</cell><cell>-1.1</cell><cell>-2.8</cell></row><row><cell>5HF C (4, 4)</cell><cell>2.5</cell><cell>(2.0, 2.0)</cell><cell>-1.3</cell><cell>-3.3</cell></row><row><cell>8HF A (7, 7)</cell><cell>4.0</cell><cell>(3.5, 3.5)</cell><cell>-1.2</cell><cell>-5.0</cell></row><row><cell>8HF B (7, 7)</cell><cell>4.0</cell><cell>(3.5, 3.5)</cell><cell>-1.3</cell><cell>-5.1</cell></row><row><cell>8HF C (7, 7)</cell><cell>4.0</cell><cell>(3.5, 3.5)</cell><cell>-1.2</cell><cell>-4.9</cell></row><row><cell>12HF A (9, 6)</cell><cell>6.0</cell><cell>(4.5, 3.0)</cell><cell>-1.0</cell><cell>-6.0</cell></row><row><cell>12HF B (9, 7)</cell><cell>6.0</cell><cell>(4.5, 3.5)</cell><cell>-1.0</cell><cell>-6.3</cell></row><row><cell>16HF A (10, 8)</cell><cell>8.0</cell><cell>(5.0, 4.0)</cell><cell>-1.0</cell><cell>-7.9</cell></row><row><cell>16HF B (11, 7)</cell><cell>8.0</cell><cell>(5.5, 3.5)</cell><cell>-1.1</cell><cell>-8.6</cell></row><row><cell>30HF (13, 8)</cell><cell>15.0</cell><cell>(6.5, 4.0)</cell><cell>-0.8</cell><cell>-11.5</cell></row><row><cell>32HF (12, 6)</cell><cell>16.0</cell><cell>(6.0, 3.0)</cell><cell>-0.7</cell><cell>-11.5</cell></row><row><cell>34HF (13, 8)</cell><cell>17.0</cell><cell>(6.5, 4.0)</cell><cell>-0.7</cell><cell>-12.3</cell></row><row><cell>a</cell><cell></cell><cell></cell><cell></cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 5 .</head><label>5</label><figDesc>List of Configurations That Resulted in Barrierless H 2 O Formation and the Energy Required to Remove H 2 O from Their Surface</figDesc><table><row><cell>configuration</cell><cell>no. H 2 O formed</cell><cell>E (des) (eV/H 2 O)</cell></row><row><cell></cell><cell>HfO 2</cell><cell></cell></row><row><cell>8C HF</cell><cell>1</cell><cell>0.70</cell></row><row><cell>32 HF</cell><cell>2</cell><cell>1.32</cell></row><row><cell></cell><cell>ZrO 2</cell><cell></cell></row><row><cell>12B HF</cell><cell>1</cell><cell>1.30</cell></row><row><cell>16A HF</cell><cell>2</cell><cell>0.50</cell></row></table><note><p>pubs.acs.org/cm</p><p>Article</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://dx.doi.org/10.1021/acs.chemmater.9b05021Chem. Mater. 2020, 32, 3414-3426</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Supporting Information and also in Figure <ref type="figure">15</ref>. The first thing we observe is that for a specific reactant combination, the etch rate increases with temperature for both materials and the etch rate for ZrO 2 is larger than that of HfO 2 . We have predicted this from N-E analysis that the minimum barrier to continuous etching decreases considerably with an increase in temperature, more so in the case of ZrO 2 when compared to HfO 2 . Between 150 and 350 °C, for different reactant combinations, the etch rates can be anywhere between 0.05 and 1.24 Å/cycle for HfO 2 and between 0.01 and 1.59 Å/cycle for ZrO 2 . The computed etch rate prediction given earlier based on the maximal M-F coverage (M = Hf, Zr) should be taken carefully as the experimental etch rate varies greatly with temperature and the reactant, in the second pulse. Moreover, the maximal experimental etch rate reported is much larger than the predicted etch rate, suggesting that further reaction of adsorbed HF with the substrate is possible and this reaction surmounts the kinetic barriers, which we have not included in this simple adsorption study. However, comparing the maximal etch rate of -2.82 ± 0.02 Å/cycle for one ML removal of Hf/ ZrO 2 along with experimental etch rates, we can calculate the number of Hf/Zr removed/nm 2 in those experiments. Our surface model contains 8.0 ± 0.3 M/nm 2 (M = Hf, Zr) as mentioned earlier. Therefore, an etch rate of -2.82 ± 0.02 Å/ cycle corresponds to a removal of 8.0 ± 0. </p><p>For example, 4.5 ± 0.1 Zr atoms/nm 2 are removed as volatile ZrF 4 per cycle for an experimental etch rate of 1.59 Å/cycle using HF and DMAC at 300 °C. These results are also listed in Section S5 of the Supporting Information. It is clear that in all of these experiments, less than a monolayer of material is removed per ALE cycle. This computational approach detailed in this paper provides a general guideline to safely examine the influence of any reactant species on the substrate materials of interest.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSIONS</head><p>We present DFT calculations to understand the nature of the HF pulse on the bare surfaces of monoclinic HfO 2 and ZrO 2 for thermal ALE. N-E analysis of the self-limiting and spontaneous (continuous) etching using simple reaction models representing the HF exposure on HfO 2 and ZrO 2 allowed us to predict whether SL or SE reaction is favorable at a given temperature and at a given pressure. At T &lt; 500 K, the HF reaction with both oxides is found to be in the preferred self-limiting state. This is a relatively inexpensive way to screen the reactant molecules for ALE, also equally applicable to ALD, of any given substrate. We studied the adsorption of HF molecules on HfO 2 and ZrO 2 for HF coverages ranging from 1.0 ± 0.3 to 17.0 ± 0.3 HF/nm 2 along with analysis of H 2 O formation. From this analysis, we predict a theoretical etch rate based on the maximum possible coverage of surface-bound HF for HfO 2 and ZrO 2 . The maximal computed metal-F coverage on both surfaces is from 6.0 ± 0.3 to 7.0 ± 0.3 metal-F/nm 2 . The spontaneous formation of water was also seen at some HF coverages on both oxides. We calculated theoretical etch rates of -0.61 ± 0.02 Å/cycle for HfO 2 and -0.57 ± 0.02 Å/cycle for ZrO 2 , which are lower than the maximal etch rates reported from experiments. The etch rate for a complete ML removal, -2.82 ± 0.02 Å/cycle, was used with experimental etch rates to compute the number of metal atoms removed from the surface per square nanometer per cycle. We can use the presented methodology for the first pulse on HfO 2 and ZrO 2 to examine other reagents such as HCl and HBr with a similar analysis as well as examine the interaction of HF on hydroxylterminated surfaces of HfO 2 and ZrO 2 .  </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Susceptibility of SiO 2 , ZrO 2 , and HfO 2 dielectrics to moisture contamination</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Raghu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Shadman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shero</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/aic.10148</idno>
+	</analytic>
+	<monogr>
+		<title level="j">AIChE J</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="1881" to="1888" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Adsorption of Moisture and Organic Contaminants on Hafnium Oxide, Zirconium Oxide, and Silicon Oxide Gate Dielectrics</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Raghu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Shadman</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1605747</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">150</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of Hafnium and Zirconium Oxides Using Metal Amide Precursors</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm020357x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="4350" to="4358" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Selectivity in Thermal Atomic Layer Etching Using Sequential, Self Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b02543</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="7657" to="7665" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching at the Tipping Point: An Overview</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0061506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5041</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Overview of atomic layer etching in the semiconductor industry</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+		<idno>No. 020802</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Prospects for Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsnano.6b02991</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="4889" to="4894" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<title level="m">A Brief Overview of Atomic Layer Deposition and Etching in the Semiconductor Processing, 2016 17th International Conference on Electronic Packaging Technology</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1365" to="1368" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of HfO 2 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0041506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5013</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nn507277f</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2061" to="2070" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching of HfO 2 using HF for fluorination and TiCl 4 for ligand-exchange</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5045130</idno>
+		<idno>No. 061504</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Al 2 O 3 , HfO 2 , and ZrO 2 Using Sequential Hydrogen Fluoride and Dimethylaluminum Chloride Exposures</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b04767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="18455" to="18466" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of SiO 2 by a Conversion-etch Mechanism Using Sequential Reactions of Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b01259</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="10296" to="10307" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Mechanism of Thermal Al 2 O 3 Atomic Layer Etching Using Sequential Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b00300</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">3648</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nn507277f</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2061" to="2070" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Trimethylaluminum as the Metal Precursor for the Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b00111</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">2994</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Enhanced atomic layer etching of native aluminum oxide for ultraviolet optical applications</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hennessy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Jewell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>France</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nikzad</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4986945</idno>
+		<idno>No. 041512</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Competition between Al 2 O 3 atomic layer etching and AlF 3 atomic layer deposition using sequential exposures of trimethylaluminum and hydrogen fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4973310</idno>
+		<idno>No. 052819</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching of crystalline aluminum nitride using sequential, self-limiting hydrogen fluoride and Sn(acac) 2 reactions and enhancement by H 2 and Ar plasmas</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4959779</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">050603</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of AlF 3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.5b07236</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="25385" to="25393" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Thermal Selective Vapor Etching of TiO 2 : Chemical Vapor Etching via WF 6 and Self-Limiting Atomic Layer Etching Using WF 6 and BCl 3</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b00985</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="6653" to="6665" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Titanium Nitride Using Sequential, Self-Limiting Reactions: Oxidation to TiO 2 and Fluorination to Volatile TiF 4</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b02286</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="8202" to="8210" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Rapid thermal-cyclic atomic-layer etching of titanium Chemistry of Materials pubs</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b05021?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acs.chemmater.9b05021" />
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3414" to="3426" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">CHF 3 /O 2 downstream plasma</title>
+		<idno type="DOI">10.1088/1361-6463/ab3cf3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">475106</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Thermally Driven Self-Limiting Atomic Layer Etching of Metallic Tungsten Using WF 6 and O 2</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b19024</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="9147" to="9154" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">WO 3 and W Thermal Atomic Layer Etching Using Conversion-Fluorination and Oxidation-Conversion-Fluorination Mechanisms</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b09161</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="34435" to="34447" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of ZnO by a Conversion-Etch Mechanism Using Sequential Exposures of Hydrogen Fluoride and Trimethylaluminum</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1183" to="1191" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching of crystalline GaN using sequential exposures of XeF 2 and BCl 3</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Hite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Mastro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Eddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5095938</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<date type="published" when="2019">2019. 243103</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Low damage atomic layer etching of ZrO 2 by using BCl 3 gas and ar neutral beam</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1166/jnn.2009.1748</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="7379" to="7382" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Atomic layer etching of SiO 2 with Ar and CHF 3 plasmas: A self-limiting process for aspect ratio independent etching</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dallorto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Goodyear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cooke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Szornel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kastl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schwartzberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">W</forename><surname>Rangelow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cabrini</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/ppap.201900051</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plasma Process Polym</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<date type="published" when="2019">2019. 1900051</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Quasi atomic layer etching of SiO 2 using plasma fluorination for surface cleaning</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Koh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chae</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5003417</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">01B106</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Isotropic Atomic Layer Etching of ZnO Using Acetylacetone and O 2 Plasma</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mameli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b12767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="38588" to="38595" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Atomic layer etching of GaN and AlGaN using directional plasma-enhanced approach</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nojiri</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.56.06HB06</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">06</biblScope>
+			<biblScope unit="page">6</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Atomic layer etching of gallium nitride (0001)</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kauppinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sundqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Suyatin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suihkonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Kauppinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sopanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4993996</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">060603</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Atomic layer etching of silicon nitride using infrared annealing for short desorption time of ammonium fluorosilicate</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kurihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kouzuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yokogawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.56.06HB01</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">06</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Del Alamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.nanolett.9b01525</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Situ Thermal Atomic Layer Etching for Sub-5 nm InGaAs Multigate MOSFETs</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="5159" to="5166" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">SF 4 as the Fluorination Reactant for Al 2 O 3 and VO 2 Thermal Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Bright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b05294</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="3624" to="3635" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Silica and Alumina Thin Films Using Trimethylaluminum with Hydrogen Fluoride or Fluoroform</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Mattson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Klesko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dangerfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rivillon-Amy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b10899</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="31784" to="31794" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching: Mechanism, materials and prospects</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.pnsc.2018.11.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Prog. Nat. Sci.: Mater. Int</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="667" to="675" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Modeling the Chemical Mechanism of the Thermal Atomic Layer Etch of Aluminum Oxide: A Density Functional Theory Study of Reactions during HF Exposure</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kondati Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b01930</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="5912" to="5922" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Efficient iterative schemes for ab initio total-energy calculations using a plane-wave basis set</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmuller</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.54.11169</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="page">11169</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">From ultrasoft pseudopotentials to the projector augmented-wave method</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Joubert</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.59.1758</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">1758</biblScope>
+			<date type="published" when="1996">1996. 1999</date>
+		</imprint>
+	</monogr>
+	<note>Generalized gradient approximation made simple Phys. Rev. B</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Relative stability of ZrO 2 and HfO 2 structural phases</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Lowther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Dewhurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Leger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Haines</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.60.14485</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="14485" to="14488" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">First-principles study of structural, vibrational, and lattice dielectric properties of hafnium oxide</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vanderbilt</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.65.233106</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<date type="published" when="2002">2002. 233106</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">First principles phonon calculations in materials science</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Togo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tanaka</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.scriptamat.2015.07.021</idno>
+		<ptr target="http://www.turbomole.com" />
+	</analytic>
+	<monogr>
+		<title level="j">Scr. Mater</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1" to="5" />
+			<date type="published" when="1989">2015. 2010. 1989-2007. 2007. 27 Nov, 2019</date>
+			<publisher>TURBOMOLE GmbH</publisher>
+		</imprint>
+		<respStmt>
+			<orgName>A Development of University of Karlsruhe and Forschungszentrum Karlsruhe GmbH</orgName>
+		</respStmt>
+	</monogr>
+	<note>TURBOMOLE v6</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Fully optimized contracted Gaussian basis sets of triple zeta valence quality for atoms Li to Kr</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schafer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.467146</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="5829" to="5835" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Fully optimized contracted Gaussian basis sets for atoms Li to Kr</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schafer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Horn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.463096</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="2571" to="2577" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Comprehensive Handbook of Chemical Bond Energies</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">R</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b05021?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acs.chemmater.9b05021" />
+	</analytic>
+	<monogr>
+		<title level="m">Chemistry of Materials pubs.acs.org/cm Article</title>
+		<meeting><address><addrLine>Boca Raton, FL</addrLine></address></meeting>
+		<imprint>
+			<publisher>CRC Press</publisher>
+			<date type="published" when="2007">2007. 2020</date>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3414" to="3426" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1266 @@
+[
+    {
+        "type": "text",
+        "text": "Review Article",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "David Sibanda, Sunday Temitope Oyinbo, and Tien- Chien Jen\\*",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "A review of atomic layer deposition modelling and simulation methodologies: Density functional theory and molecular dynamics",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "https://doi.org/10.1515/intrev- 2022- 0084 received November 26, 2021; accepted February 16, 2022",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Abstract: The use of computational modelling and simulation methodologies has grown in recent years as researchers try to understand the atomic layer deposition (ALD) process and create new microstructures and nanostructures. This review article explains and simplifies two simulation methodologies, molecular dynamics and the density functional theory (DFT), in solving atomic layer deposition problems computationally. We believe that these simulation methodologies are powerful tools that can be utilised in atomic layer deposition. DFT is used to solve problems in surface science and catalysis (predicting surface energy, adsorption energy, charge transfer, etc.), semiconductors (band structure, defect bands, band gap, etc.), superconductors (electron- phonon coupling, critical transition temperature), and molecular electronics (conductance, current- voltage characteristics). Molecular dynamics (MD) is used to predict the kinetic and thermodynamic properties of a material. Of interest in this article is a review where different material problems emanating from atomic layer deposition from these fields have been addressed by DFT and MD. Selected publications are discussed where DFT and MD have been successfully applied in atomic layer deposition (and related processes in some instances). The applications of DFT stretch from binding energy calculations of molecules and the solid band structure in chemistry and physics, respectively, computing the electron density up to determining the properties of a many- electron system. Also highlighted in this review study are the challenges that DFT and MD simulations must overcome.",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Keywords: atomic layer deposition, thin film, density functional theory, molecular dynamics",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1 Introduction",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1 IntroductionAtomic layer deposition (ALD) is a growing material deposition method, used particularly where precise thickness control of the material growth is required [1,2]. It can be used to produce ultrathin films [3,4]. ALD can be studied and analysed experimentally and by computational modelling and simulations. Experiments are expensive to run since the ALD equipment and other raw materials are expensive. They can also pose hazards because sometimes gases used or released in the chemical reactions are toxic and occasionally explosive. Modelling and simulations reduce drastically the costs involved in experiments. ALD [2,5- 9] has grown to become a vital manufacturing technique in many fields of nanotechnology, [10- 12] semiconductor processing [13- 16], microelectronics [17- 21], electrocatalysis [22- 24], and protective coatings [25- 31]. ALD is a very powerful method of fabricating nanostructures and nanomaterials, regardless of their complex geometric shapes, with uniform films and coatings at the nano, micro, and atomic levels [7,13,25,32- 34]. The computer simulation of molecular systems has recently increased in academic and industrial research [35]. Computational modelling and simulation methodologies have several advantages over experiments. Some of these are low costs because they do not require costly equipment and raw materials. Because of their versatility, they may be used to investigate and analyse practically any material virtually, including those that produce toxic gases during their manufacture. They can be performed almost anywhere if adequate computational power is available. Atomic layer deposition can be modelled and simulated using various modelling and simulation methodologies such as computational fluid dynamics (CFD), density functional theory (DFT), Knudsen number, Monte Carlo method, and",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "molecular dynamics (MD). ALD can be analysed at atomic, nano, and micro scales. It is essential to know which methodology one must adopt in modelling and simulating ALD. This review article looks at the two primary modelling and simulation methodologies that are employed in ALD: the DFT and molecular dynamics. Molecular dynamics uses Newton's laws of motion to simulate forces of attraction and the position of molecules, while the DFT uses quantum mechanics principles to simulate the interaction of molecules and atoms. The problems that one can expect to solve using DFT in atomic layer deposition are predicting the surface energy of a material, adsorption energy calculations, charge transfer predictions, band structure prediction in semiconductors, defect bands identification, band gap calculation in semiconductors, electron- phonon coupling prediction in superconductors, critical transition temperature prediction in superconductors, and conductance and current- voltage characteristics in molecular electronics. MD is used to predict the kinetic and thermodynamic properties of a material. Other review articles have discussed DFT/MD for ALD. These include the studies by Oviroh et al. [2], where they discuss various developments in ALD and why researchers opt for computational methodologies, Elliott et al. [36], where various classes of ALD processes based on mechanistic information from DFT are discussed, and Gupta et al. [37], who review various advances in materials design using ALD in the energy application fields. The review will also consider where the methods have been applied, their pros, and challenges to date.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2 Atomic layer deposition process",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "ALD [3,5,25,38- 44] is a film deposition technique used to synthesise ultra- thin films. The process is based on sequential self- limiting chemical reactions. In an ALD process, a substrate on which thin films must be deposited is placed inside a reaction chamber at a specific pressure and temperature. The first precursor is then injected into the reaction chamber and reacts with the surface of the substrate forming a thin layer. By- products and excess first precursor molecules are eliminated by blowing in inert gas. The second precursor is then blown in. A chemical reaction occurs between the first precursor surface on the substrate and the second precursor. The excess precursor molecules and by- products are also carried away by the inert gas blown in after this reaction. The cycle of precursor  $1 \\rightarrow$  purge  $\\rightarrow$  precursor  $2 \\rightarrow$  purge  $\\rightarrow$  precursor  $3 \\rightarrow$  purge, is repeated until the required film thickness has been achieved. Figure 1 shows the illustration of the  $\\mathrm{ZnO}$  atomic layer deposition using two precursors  $(\\mathrm{C}_2\\mathrm{H}_5)_2\\mathrm{Zn}$  (zinc source) and  $\\mathrm{H}_2\\mathrm{O}$  (oxygen source).",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "There are several variations of atomic layer deposition, namely, metal ALD [21], thermal ALD [45,46], particle ALD [41], plasma- enhanced ALD [45,47- 49], photoassisted ALD, and area selective ALD [34,50- 52]. Metal ALD is used to deposit metals on a substrate by an elimination reaction. Most metals, except aluminium, can be deposited by metal ALD. In most cases, the precursors are a metal halogen (usually a fluoride) and a silicon- based",
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/25b39db57efa56a15ef4bd3b4c2e5997b03ae7773db3533aa776c7ee9a247519.jpg",
+        "img_caption": [
+            "Figure 1: Demonstration of zinc oxide ALD using  $(\\mathrm{C}_2\\mathrm{H}_5)_2\\mathrm{Zn}$  and  $\\mathrm{H}_2\\mathrm{O}$  precursors [2]."
+        ],
+        "img_footnote": [],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "precursor. Temperatures between 175 and  $325^{\\circ}C$  are usually employed in metal atomic layer deposition. Thermal ALD is used where relatively high temperatures are required, for example, molecules that contain aluminium. Thermal ALD is used in  $\\mathrm{Al}_2\\mathrm{O}_3$  ALD using trimethylaluminium and water as precursors. The temperatures range between 150 and  $350^{\\circ}C$  in thermal ALD. Particle ALD is closely related to the conventional atomic layer deposition process but is more concerned about coating the entire particle surface, including the surfaces of nanoparticles. It utilises the principles of ALD and applies them to the complex geometry coating of particles that are spherical in nature. The temperature range for this process varies with the nature of precursors and substrates but is usually lower than that of thermal and metal ALD. Plasma- enhanced ALD uses plasma to reduce the temperature required to vapourise molecules. Kim [53] reports that the following metals, metal oxides, and nitrides have been successfully deposited using PEALD: Ti, Ta, Al, Ru, Cu, Co, Ni, W, TiN, TaN, RuTiN,  $\\mathrm{TiSi}_x\\mathrm{N}_y$ $\\mathrm{TaSi}_x\\mathrm{N}_y$ $\\mathrm{W}_2\\mathrm{N}$ $\\mathrm{SiN}_x$ $\\mathrm{Al}_2\\mathrm{O}_3$ $\\mathrm{Ta}_2\\mathrm{O}_5$ $\\mathrm{Y}_2\\mathrm{O}_3$ $\\mathrm{ZrO}_2$ $\\mathrm{ZnO}$ $\\mathrm{HfO}_2$ $\\mathrm{SrTiO}_3$ $\\mathrm{SrTa}_2\\mathrm{O}_6$  and  $\\mathrm{SrBi}_2\\mathrm{Ta}_2\\mathrm{O}_9$  . Photo- assisted ALD uses ultra- violet (UV) light to start and speed up surface reactions on the substrate. Photo- assisted ALD can be controlled by altering the wavelength, illumination time, and intensity of the ultra- violet light. Miikkulainen et al. [54] reported that few materials that include GaAs, BN, and metal oxides have been successfully deposited using photo- assisted ALD.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The ALD process has gained interest and appreciation among researchers in the past decade due to its precise and uniform atomic thickness control of the deposited film [2]. Among the different thin film fabrication processes, ALD is steadily growing to be the preferred thin- film deposition technique. Atomic layer deposition has several advantages over the other fabrication techniques, like precise atomic control of deposited film thickness, homogeneousness of thicknesses deposited even on complex three- dimensional surfaces, relatively lower system temperatures, and improved electronic properties of devices manufactured from films deposited by ALD [2]. Tables 1 and 2 compare the atomic layer deposition process with other thin- film fabrication techniques.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Table 3 outlines the strengths and weaknesses of atomic layer deposition.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "2.1 Atomic layer deposition in nanostructured materials",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Nanostructured materials [2,20,32,33,59] are materials whose structural elements have dimensions that range from 1 to  $100\\mathrm{nm}$  [60]. These structural elements include molecules, crystallites, and clusters. Nanostructured materials can be categorised into four classes: carbon- based, inorganic- based, organic- based, and composite- based nanomaterials. Jeevanandam et al. [61] found that there are also other ways of classifying nanostructures such as their dimensions (0D, 1D, 2D, and 3D) and based on their origins (natural, which are produced in nature by anthropogenic activities or biological species, and synthetic/engineered nanomaterials). In this review, we discuss briefly the ALD process on carbon- based and inorganic- based nanostructures.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "2.1.1 ALD on carbon-based nanostructures",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Classified as either metallic or semiconductors, they encompass many low- dimensional carbon allotropes like carbon black (CB), graphene, fullerene, carbon nanotubes (CNTs), and carbon fibre [62]. Carbon nanotubes are the strongest one- dimensional materials. Graphene has good electrical conductivity, high tensile strength, high transparency, and is the thinnest known two- dimensional material. Nanomaterials are applied in conducting materials, transducers, biochemical sensors, electronics, and conducting materials. ALD has been used to coat and decorate nanostructures and has proved to be the coating technique of choice for carbon- based nanostructures because of its conformal and self- limiting surface deposition. The first use of ALD to coat carbon- based nanostructures, in this case, carbon nanotubes, was reported by Javey et al. [63] in 2002. The group deposited high- k dielectric zirconium oxide thin films onto single- walled carbon nanotubes. Lee et al. [64] reported the homogeneous coating of multi- walled CNTs (MWCNTs) with  $\\mathrm{Al}_2\\mathrm{O}_3$  from water and trimethylaluminium (TMA) precursors. Figure 2 shows the transmission electron microscope image of the  $\\mathrm{Al}_2\\mathrm{O}_3$ - coated MWCNTs.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "2.1.2 ALD on inorganic-based nanostructures",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Examples of inorganic- based nanostructured materials include transition metal oxides, carbon nanostructures, and metal nanoparticles. They comprise a non- metal or metal element and can also take the form of a hydroxide, oxide, chalcogenide, or phosphate compound [65,66]. They show some characteristics of electrical conductivity and are used in composite and hybrid materials for flexible electronic applications. Atomic layer deposition has been applied in manufacturing inorganic thin films using a 3D nanonetwork structure made of a polymer as a",
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "images/71227d8551de49642e6f237c4a52564716e00e081d47a7f77334e9f8bc24b012.jpg",
+        "table_caption": [
+            "aannn aannn aannnnn aannnnn aannnnn aannnnn aannnnn aannn aannn aannn aannn aannn aannn aae"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Method</td><td>Description</td><td>Advantages</td><td>Disadvantages</td><td>Applications</td></tr><tr><td>Sputtering</td><td>A high energy source is used to accelerate particles in the substrate</td><td>Suited to a variety of metal and metal oxide nanoparticles, alloys, insulators, organic compounds, and composites</td><td>Target area too small, not suitable for large areas, low deposition rate</td><td>Catalysis, solar panels, optical devices, silicon wafers</td></tr><tr><td>Electroplating</td><td>A substrate is floated in an electrolytic cell through oxidation and no-reduction reactions</td><td>Simple, relatively inexpensive, dull or shiny finish can be produced by choosing appropriate electrolytes, can improve mechanical and electrical characteristics of the substrate</td><td>Unsuitable for depositing metals highly reactive with water and weak acids, thickness control difficult</td><td>Corrosion prevention, metal plating, friction reduction, metal protection, improvement of heat, and electrical conductivity</td></tr><tr><td>Spin coating</td><td>A substrate is floated by a film formed from the chemical reactions between liquid phase sources which are applied on the substrate surface during spinning</td><td>Simple, easy to set up, inexpensive, relatively fast</td><td>Suitable for small substrate sizes only, low efficiency</td><td>Organic semiconductors, photoresist, optical mirrors, insulators, transparent conductive oxides, solar cells, magnetic disc for data storage</td></tr><tr><td rowspan=\"2\">Breath figure</td><td>Honeycomb-streature films resulting self-assembly process with micro-pores organised in a honeycomb shape</td><td>Simple, applicable to a variety of materials, the honeycomb-like porous surface is highly organised</td><td>“Skin layer” appearance prevents the formation of external porosity</td><td>Regenerative medicine, surface science, biotechnology, photonics, optics</td></tr><tr><td>Microdroplets condensed on a cool surface from warm, humid air like breath</td><td>High values of breakdown field, good oxide thickness control, slow oxidation</td><td>Conformal step coverage, good film quality, good reproducibility, high growth rates</td><td>Capacitors, photoresistors, transistors, semiconductor industry</td></tr><tr><td>Thermal oxidation</td><td>A thin film is produced when the surface of the substrate is thermally oxidised</td><td>Two or more reactants are mixed inside a reaction chamber containing a substrate. They react and form a film on the surface of the substrate</td><td>High values of breakdown field, good oxide thickness control, slow oxidation</td><td>Batteries, fuel cells, solar cells, microelectronics</td></tr><tr><td>Chemical vapour deposition (CVD)</td><td>Physical vapour deposition (PVD)</td><td>A source material transported in the gas phase from the source to the substrate is condensed on the substrate surface. Examples are molecular beam epitaxy, pulsed laser deposition, and sputtering</td><td>Transition sharpness, chemical composition control, film thickness control</td><td>Relatively expensive, high level of skill required, the growth rate is slow</td></tr><tr><td>Atomic layer deposition (ALD)</td><td>Atomic layer deposition (ALD)</td><td>A sub-class of chemical vapor deposition with film formation through sequential cycling of self-limiting chemical half-reactions on the substrate surface</td><td>Uniform thickness on the substrate, conformality, high-quality thin films, good thickness control capabilities</td><td>Catalysts, superconductors, semiconductors, capacitors, microelectronics, desalination, fuel cells</td></tr></table>",
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/f2d5f74673c449dc1d1fd57fd8780cba43b2bb6ca5c4bd3d0cf6471a5ebc23ee.jpg",
+        "table_caption": [
+            "Table 2: Comparison of ALD with other related processes in terms of the different qualities of the films produced [2]"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td rowspan=\"2\">Property</td><td colspan=\"6\">Deposition technique</td></tr><tr><td>MBE</td><td>Sputtering</td><td>Evaporate</td><td>PLD</td><td>CVD</td><td>ALD</td></tr><tr><td>Deposition rate</td><td>Fair</td><td>Good</td><td>Good</td><td>Good</td><td>Good</td><td>Poor</td></tr><tr><td>Film density</td><td>Good</td><td>Good</td><td>Fair</td><td>Good</td><td>Good</td><td>Good</td></tr><tr><td>Lack of pinholes</td><td>Good</td><td>Fair</td><td>Fair</td><td>Fair</td><td>Good</td><td>Good</td></tr><tr><td>Smooth interfaces</td><td>Good</td><td>Varies</td><td>Good</td><td>Varies</td><td>Varies</td><td>Good</td></tr><tr><td>Thickness uniformity</td><td>Fair</td><td>Good</td><td>Fair</td><td>Fair</td><td>Good</td><td>Good</td></tr><tr><td>Sharp dopant profiles</td><td>Good</td><td>Poor</td><td>Good</td><td>Varies</td><td>Fair</td><td>Good</td></tr><tr><td>Sharp interfaces</td><td>Good</td><td>Poor</td><td>Good</td><td>Varies</td><td>Fair</td><td>Good</td></tr><tr><td>Step coverage</td><td>Poor</td><td>Poor</td><td>Poor</td><td>Poor</td><td>Varies</td><td>Good</td></tr><tr><td>No plasma damage</td><td>Good</td><td>Poor</td><td>Good</td><td>Fair</td><td>Varies</td><td>Good</td></tr><tr><td>Low substrate temp</td><td>Good</td><td>Good</td><td>Good</td><td>Good</td><td>Varies</td><td>Good</td></tr></table>",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "substrate. This substrate is usually pre- formed using advanced 3D nanofabrication techniques such as direct laser writing (DLW), lithography, block- copolymer (BCP), electrospinning, phase- mask interference lithography (PMIL), and multibeam interference lithography (MBIL). These 3D nanofabrication processes chiefly yield polymer- based nanonetwork structures. Before these polymers can be applied in various fields, they need to be improved. These polymers have poor mechanical resistance and poor thermal resistance. Typical methods used to fill the interconnected pores are electrochemical deposition, chemical vapour deposition, and sol- gel reaction. Functional inorganic materials such as ceramics and metals are used to fill the interconnected pores. The main challenge of these filling techniques discussed earlier is that they lead to the elimination of the porous structure of 3D nanonetworks in a composite state. That is where ALD comes in. The feature of conformal coating of ALD of the surface of porous structures is desirable. Surface properties can be changed, and the pore size can be reduced while we maintain a porous structure. With ALD, it is possible to create a lightweight and highly porous material. It is important to maintain the least possible process temperature below the polymer melting point temperature to preserve the 3D nanostructure during atomic layer deposition of inorganic thin films on 3D nanonetworks [66- 68]. Figure 3 shows an",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "images/3e3117339c0e90cb66a863f66a6d2c37a032009340fd2e69df51cbdf17793c6f.jpg",
+        "table_caption": [
+            "Table 3: Strengths and weaknesses of atomic layer deposition [2]"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Strengths</td><td>Weaknesses</td></tr><tr><td>Conformality\ni. Excellent 3D conformality\nii. Uniformity across large areas\niii. Atomically flat and smooth surface coating\nHigh-quality films\ni. Control of the film thickness\nii. Good repeatability\niii. High film density\nIV. Crystalline or amorphous film\nv. Ultra-thin films\nChallenging substrates\ni. Gentle deposition process for sensitive substrates\nii. Low temperature and stress\niii. Coats Teflon\niv. Good adhesion\n• Inherent film quality associated with self-limiting\n• Self-assembled nature of the ALD mechanism\n• Depositing multilayers is possible\n• Stoichiometric control\n• Relatively low system temperatures</td><td>• The process is slow\n• Relatively economically unviable\n• Very high material waste rate\n• Nanoparticle emissions\n• Very high energy waste rate</td></tr></table>",
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/23c4bfdcac55a87794062a580bed88b367aa7d6da242c6d399897be3e14a0b21.jpg",
+        "img_caption": [
+            "Figure 2: Transmission electron microscopic image of  $\\mathrm{Al}_2\\mathrm{O}_3$ -coated MWCNTs. The insert shows a cylindrical  $\\mathrm{Al}_2\\mathrm{O}_3$  layer (A) coating a particular multi-walled CNTs and the multi walls (B) of this multi-walled nanotube."
+        ],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "illustration of (a) a cycle of thermal/plasma- enhanced atomic layer deposition, (b) the manufacturing process of hollow inorganic materials or polymer- inorganic composite from a polymer substrate with asymmetrical 3D nanonetworks, and (c) the manufacturing process of hollow inorganic materials or polymer- inorganic composite from a polymer substrate with regular 3D nanonetworks.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "3 Atomic layer deposition simulation methodologies",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Atomic layer deposition can be studied experimentally or numerically. There are many numerical methodologies employed in atomic layer deposition, among which are Monte Carlo, Knudsen number, molecular dynamics (MD), computational fluid dynamics (CFD), and DFT. In this review, we discuss two of these methodologies: DFT and molecular dynamics.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "3.1 Density functional theory",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "DFT is applied in material science to compute the electronic configurations of solids and atoms [69- 73]. It is defined as a quantum mechanical (QM) modelling methodology applied in chemistry, material science, and physics to describe the electronic structures of a many- body system (predominantly the ground state), precisely atoms, the condensed states, and molecules [74]. Nowadays, it is used in binding energy calculations of molecules and the band structure of solids in chemistry and physics, respectively [74,75]. In atomic layer deposition, the DFT can be used to explore the reaction mechanism between the first precursor and the substrate. It can be used to calculate the electron density and electronic configurations at this stage. Where the first precursor fails to bond with the surface of the substrate, DFT can be used to explain why this happens. DFT calculations can also be used to improve the conditions of the substrate so that it is favourable for bonding with the precursor. After purging the by- products and excess first precursor, the second precursor is pumped into the reaction chamber. DFT can be used to map the reaction pathway between the first and second precursors. It can be used to predict the nature of the reaction and the by- products from this reaction. DFT can be applied at the end of the ALD process to predict the thin film's mechanical and electrical properties. DFT can be used to validate the experimental conclusions, differentiate between possible opportunities to be explored, or create a foundation for experiments [23]. DFT aims at calculating the electron",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/5adbcb005f3eb77a2ba66ec352de76bff49be8f6c876c1ad79d8fbd13a374454.jpg",
+        "img_caption": [
+            "Figure 3: llustration of (a) a cycle of thermal/plasma-enhanced atomic layer deposition, (b) the manufacturing process of hollow inorganic materials or polymer-inorganic composite from a polymer substrate with asymmetrical 3D nanonetworks, and (c) the manufacturing process of hollow inorganic materials or polymer-inorganic composite from a polymer substrate with regular 3D nanonetworks [66]"
+        ],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "density and not the wave function of electrons. Functionals are used in this theory to ascertain the many- electron system properties. The functionals in question are of the spatially dependent electron density in DFT [76]. Of paramount importance in DFT calculations and modelling is the Schrödinger equation [77]. The equation can be simply stated as follows:",
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nH\\psi = E\\psi . \\tag{1}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The symbols are defined as follows:  $H$  - represents the Hamiltonian operator,  $\\psi$  - denotes a collection of Hamiltonian solutions (eigenstates),  $E$  - Eigenvalue, according to Sholl and Steckel [78], when several electrons interact with multiple nuclei, the following Schrödinger equation form is used.",
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\left[\\frac{h^2}{2m}\\sum_{i = 1}^{N}\\nabla_i^2 +\\sum_{i = 1}^{N}V(r_i) + \\sum_{i = 1}^{N}\\sum_{j< i}U(r_i,r_j)\\right]\\psi = E\\psi . \\tag{2}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The symbol  $m$  represents the electron mass. The first term in bracket defines the kinetic energy of each electron, the second establishes atomic nuclei to electron interaction energy, and the last is electron to electron interaction energy [78]. For the Hamiltonian,  $\\psi$  defines the electronic wave function. It is a function of each of the  $N$  electrons' spatial coordinates. The Hartree product [79,80] can be used to estimate  $\\psi$  as a product of the individual electron functions. The following is the Hartree equation:",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\psi = \\psi_{1}(r)\\phi_{2}(r)\\ldots \\psi_{N}(r). \\tag{3}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The symbol  $N$  represents a number of electrons.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "According to Sholl and Steckel [78], DFT is based on two significant mathematical theorems, which were derived by Kohn and Hohenberg, as well as the Kohn and Sham equations, which were derived in the mid- 1960s. Kohn and Hohenberg proved that Schrodinger's equation ground- state energy is a distinctive functional of the electron density [81]. By using the result of Kohn and Hohenberg, we can express the ground state energy  $E$  as  $E[n(r)]$  where  $n(r)$  is the electron density. The major weakness of this theorem is that it does not define a functional. This led to Hohenberg- Kohn's second theorem [82], which addresses an essential property of a functional. It explains that the electron density minimising the energy of the total functional is the true electron density related to the complete solution of the Schrodinger equation [77,78]. This energy functional can be written as follows:",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nE[\\{\\psi_i\\} ] = E_{\\mathrm{known}}[\\{\\psi_i\\} ] + \\mathrm{Excl}[\\{\\psi_i\\} ]. \\tag{4}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm{Excl}[\\{\\psi_i\\} ]$  is a function that describes the exchange- correlation functional. The phrase encompasses the quantum mechanical phenomena that are not included in the \"known\" concepts of quantum mechanics. The known terms come from four contributions as outlined in the following equation:",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{l}{E_{\\mathrm{known}}[\\{\\psi_i\\} ] = \\frac{h^2}{m}\\sum_i\\int \\psi_i\\nabla^2\\psi_i\\mathrm{d}^3 r + \\int V(r)n(r)\\mathrm{d}^3 r}\\\\ {+\\frac{e^2}{2}\\int \\int \\frac{n(r)n(r')}{|r'r'|}\\mathrm{d}^3 r\\mathrm{d}^{3}r' + E_{\\mathrm{ion}}.} \\end{array} \\tag{5}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The first right term is the kinetic energies of the electrons, the second is the electrons to nuclei Coulomb interactions, the third is the pairs of electrons Coulomb interactions, and the last is the pairs of nuclei Coulomb interactions. Kohn and Sham proved that finding the right electron density requires a solution of a set of equations in which each equation contains a single electron [82]. The following is the Kohn- Sham equation:",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\left[\\frac{h^2}{2m}\\nabla^2 +V(r) + V_{\\mathrm{H}}(r) + V_{\\mathrm{XC}}(r)\\right]\\psi_i(r) = \\epsilon_i\\psi_i(r), \\tag{6}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "where  $V(r)$  is a potential that defines the collection of atomic nuclei to electron interaction,  $V_{\\mathrm{H}}(r)$  is a potential describing the Coulomb repulsion between one electron under consideration in one of the Kohn- Sham equations and the total electron density defined by all electrons in the question, and  $V_{\\mathrm{XC}}(r)$  is a potential defining exchange and correlation contribution to the single- electron equations. It is a \"functional derivative\" of the exchange- correlation energy.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Kohn- Sham equations [81,83] are solved by defining the Hartree potential [79]. Defining the Hartree potential requires us to understand the electron density. It is important to note that finding the electron density requires one to know the wave functions of single electrons, but these can be known when the Kohn- Sham equations are solved. A circle is thus created. Sholl and Steckel [78] outline how somebody may break down this circle by using the following algorithm:",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "1) A provisional electron density  $n(r)$  is defined. \n2) The initial provisional electron density is employed in finding the solution (the single-particle wave functions,  $\\psi_i(r)$ ) of the Kohn-Sham equations. \n3) Next, the electron density, which is defined by the Kohn-Sham single-particle wave functions, is calculated from 2,  $n_{\\mathrm{ks}}(r) = 2\\sum_{i}\\psi_{i}^{*}(r)\\psi_{i}(r)$ . \n4) Finally, the computed electron density  $n_{\\mathrm{KS}}(r)$  is compared with the trial electron density  $n(r)$ , which was used to solve the Kohn-Sham equations. The trial electron density is adopted as the ground-state electron density if the two densities are the same. It can then be used in total energy computation. The provisional electron density must be adjusted if the two densities are different. The process then starts all over again.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "A means for the use of the Kohn- Sham equations [82] is offered by the uniform electron gas. The exchange- correlation potential [76,82,84] must be adjusted to be the known exchange- correlation potential from the identical electron gas at the electron density seen at each position. The following local density approximation (LDA) equation is used.",
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nV_{\\mathrm{XC}}(r) = V_{\\mathrm{XC}}^{\\mathrm{electron~gas}}[n(r)]. \\tag{7}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "For the Hartree- Fock method [79,80,85], approximating the  $N$  electrons wave function, by assuming for a moment that the electrons do not affect each other, in this case, the electron's Hamiltonian is given by:",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nH = \\sum_{i = 1}^{N}h_{i}, \\tag{8}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "where  $h_i$  defines the energies (potential and kinetic) of the ith electron.",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The Hartree product does not fulfil all the essential criteria for wave functions. The major disadvantage of the Hartree product is that when two electrons are exchanged, and its sign does not change. This draws a need for the use of a superior estimate to the wave function. The Slater determinant is used as an approximation. One- electron wave functions are brought together to form the  $N$ - electron wave function, which will satisfy the antisymmetry principle. The antisymmetry principle explains that if two electrons exchange positions, the wave function ought to change the sign because electrons are fermions. The following is the Slater determinant:",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\psi (x_{1},x_{2}) = \\frac{1}{\\sqrt{2}}\\mathrm{det}\\left[ \\begin{array}{l}\\chi_{j}(x_{1})\\chi_{j}(x_{2})\\\\ \\chi_{k}(x_{1})\\chi_{k}(x_{2}) \\end{array} \\right], \\tag{9}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "where  $\\frac{1}{\\sqrt{2}}$  is a normalisation factor,  $x_{i}$  is a coordinate vector defining the ith electron position and its spin state and  $\\chi_{j}(x_{i})$  represents a set of spin orbitals.",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "For a Hartree- Fock (HF) calculation [79], the atomic nuclei positions are fixed, and then, the  $N$ - interacting electrons wave function is determined. Each electron's Schrödinger equation has the following form:",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\Bigg[\\frac{h^2}{2m}\\nabla^2 +V(r) + V_{\\mathrm{H}}(r)\\Bigg]\\chi_j(x) = E_j\\chi_j(x), \\tag{10}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "where  $V_{\\mathrm{H}}(r)$  is the same Hartree potential. It is defined by the following equation:",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nV_{\\mathrm{H}}(r) = e^{2}\\int \\frac{n(r^{\\prime})}{|r r^{\\prime}|}\\mathrm{d}^{3}r^{\\prime}. \\tag{11}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "When solving a single- electron equation practically, the spin orbitals must be defined using a finite amount of information. The finite function sets are described that can be summed up for approximating the exact spin orbitals. The spin orbitals are approximated as follows:",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\chi_{j}(x) = \\sum_{i = 1}^{K}\\alpha_{j,i}\\phi_{i}(x), \\tag{12}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "where  $\\alpha_{i,j}$  is the expansion coefficient and  $\\phi_{i}(x)$  is the basic set for the computation (where  $i = 1,2,3,\\dots,k$ ).",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Defining the Hartree potential in the equations of single electrons requires that the electron density is known. Knowing the electron density needs prior defining of the electron wave function (which is computed using the separate spin orbitals) [78]. A Hartree- Fock computation is an iterative procedure conducted as follows:",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "1) Estimate the spin orbitals,  $\\chi_{j}(x) = \\sum_{i = 1}^{K}\\alpha_{j,i}\\phi_{i}(x)$  through the specification of expansion coefficients,  $\\alpha_{j,i}$ . \n2) Define the electron density  $n(x^{\\prime})$  from the approximate spin orbitals. \n3) Solve the spin orbitals equations using the answer from step 2. \n4) The solutions are adopted as the solutions to the Hartree-Fock problem if the spin orbitals found in the third step are the same as those used in the second step. If not consistent, a new estimate should be used, and then, the procedure is restarted from the second step.",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "For the best results, the DFT methodology is applied at the atomic scale. DFT has proved to be useful in the forecasting of molecular properties as well [86]. It can be used as a counterpart of experimental studies. In the ideal situation, the calculated characteristics are accurate enough to distinguish between structural replacements for chemical intermediates or other species that are not sensitive to the explication of experimental structure cdd [86].",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "3.1.1 Applications of DFT calculations in atomic layer deposition",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "When ground state DFT calculations are performed, one can get various routine quantities such as equilibrium geometry at absolute zero, equilibrium lattice structure, formation energy, partial charge at each atom, magnetic state of the system, fermi level, band gap, optical absorption spectrum, and spin properties [87- 91]. In equilibrium geometry, the calculation yields the geometry with the minimum forces on each of the atoms in the system. Band gap calculations tell us the nature of the material, for example, if it is metallic, semiconductor, or an insulator. Metallic materials have a band gap of  $0\\mathrm{eV}$ , while insulators have a very large band gap of approximately  $15\\mathrm{eV}$ .",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "In surface science and catalysis, DFT calculations can be useful in obtaining the surface properties of a material. These include surface energy, the adsorption energy of a gas molecule on a surface, adsorption",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "configuration of a gas molecule on a surface, bond distance, charge transfer, reaction energy barrier, and work function. DFT is useful in predicting the adsorption energies and configuration of how the gas bonds with the surface, for example, if the gas is CO, DFT calculations can predict which atom between oxygen and carbon bonds with the surface. In charge transfer, DFT can predict which of the two materials is the charge donor and which one is the charge acceptor among the molecule and the surface.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "In semiconductors, DFT can predict the electronic band structure, defect bands, conduction bands, valence bands, and band alignment across interfaces [92- 94]. The band structure is used to explain the electrical properties of the material. DFT can predict the nature, location, and type of the defect.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "DFT application is superconductors is still in its infancy. DFT calculations can predict electron- phonon coupling and superconducting critical temperature, which is sometimes referred to as the critical transition temperature. The application of DFT to predict electron- phonon coupling has yielded great success, but the same cannot be said for predicting critical superconducting temperature.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "In molecular electronics, DFT can be used to predict conductance as a function of the energy and current- voltage characteristics of a material.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "In this article, we discuss the applications of DFT in surface science and catalysis and also in semiconductors.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "3.1.1.1 Applications in surface science and catalysis problems",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "DFT can be used to investigate area- selective atomic layer deposition (ASALD) of  $\\mathrm{SiO_2}$  in an ABC- type cycle with acetylacetone used as a chemoselective inhibitor [52]. In this cycle, step A entails exposing the surface of the substrate to inhibitor molecules, whereas steps B and C are the usual conventional ALD process steps. Inhibitor molecules deactivate certain areas of the substrate and prevent the growth of films on those regions during the ALD cycles (see Figure 4). ASALD has a great potential to be applied in self- aligned manufacturing systems for future- generation nanoelectronics [52,95]. In their article, Mameli et al. used DFT calculations to understand better the chemoselective Hacac mechanism of adsorption at the molecular scale. The team evaluated the structures, and their related relative energies for the stationary points along the minimum energy paths (MEPs) needed to absorb Hacac inhibitor on aluminium oxide and silicon dioxide. Figure 5 shows the DFT (GGA/PBE- D3) [96] of minimum energy paths (MEPs) needed to absorb Hacac on (a) aluminium oxide  $(\\mathrm{Al}_2\\mathrm{O}_3)$  and (b) silicon dioxide  $(\\mathrm{SiO}_2)$  surfaces [52].",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "The function, projector augmented wave (PAW) [97,98] was used by Mameli et al. [52] as executed in Vienna ab initio simulation package (VASP) to perform electronic structure calculations [98- 100]. They carried out first- principle computations using the generalised gradient approximation (GGA)",
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/2293851a40e020a657d11dbcf32ec88ef44c27881d23ef7c719311dd7d34ee69.jpg",
+        "img_caption": [
+            "Figure 4: The ABC-type atomic layer deposition technique for ASALD employing small inhibitor molecules. (a) Absorption of inhibitor molecules unto the non-growth region. (b) The inhibitor molecules impede the precursor molecules' adsorption on the non-growing region. (c) The co-reactant gets rid of the precursor ligands and the inhibitor molecules from the system."
+        ],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "to the DFT. Two distinguishing binding orientations were identified by their DFT calculations for physisorption.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Gas- phase density functional theory (GPDFT calculations can be used to explain valence and core levels gasphase photoelectron spectroscopy of transition metal alkyla- mino complexes,  $\\mathrm{M(N(CH_3)_2)_4}$  .where M in this case, is Titanium (Ti) or Hafnium (Hf) [38]. These calculations can be used to predict atomic layer deposition reactions on the surfaces of these molecules. In their research, Shayesteh et al. performed DFT calculations using the hybrid M06- 2X [101] functional as executed in the Gaussian O9 code [102]. The double-  $\\zeta 6 - 31G(d,p)$  basis set was used for the hydrogen, carbon, and nitrogen atoms. The LanL2DZ basis set [103- 105], together with the Los Alamos effective core potential, was utilised for the hafnium and titanium atoms. Population analysis techniques of Kohn- Sham orbitals were used to allocate valence spectra of  $\\mathrm{Hf(N(CH_3)_2)_4}$  and  $\\mathrm{Ti(N(CH_3)_2)_4}$  compounds. Through the use of DFT calculations, computed vertical ionisation energies and adiabatic ionisation energies were matched with their data from experiments.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "DFT, coupled with Monte Carlo simulations, can be employed to model equilibrium conformation of  $\\mathrm{Pt_2Ru_3}$  nanoparticles [106] utilised in polymer electrolyte fuel cells as anode catalysts (PEFCs) [107- 109]. Alam, Saito, and Takaba conducted DFT calculations to approximate (using slab configurations) the binding energy. Pt- Ru alloys significantly enhance the catalytic performance in the electrochemical oxidation of carbon monoxide from carbon monoxide- contaminated  $\\mathrm{H}_{2}$  fuels or suppression of carbon monoxide adsorption on the catalyst [110- 112]. The DFT calculations showed that in the  $\\mathrm{Pt_2Ru_3}$  alloy slab configuration, platinum atoms covered the top surface, or a more significant percentage of platinum led to higher stability compared to other conformities of atoms. The second layer is favourably comprised ruthenium atoms or a greater proportion of ruthenium atoms for stable structures. The quantity of Pt- Ru bonds in  $\\mathrm{Pt_2Ru_3}$  increases as the particle size also increases. Figure 6 shows the different slab configurations.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "DFT was applied in ALD- triggered iron- indium- sulphur cluster and gradient energy band in zinc- indium- sulphur photoanode to improve the reaction of oxygen evolution [113]. Meng et al. did their DFT calculations using VASP [113]. The team designated Perdew- Burke- Ernzerhof (PBE) functional for the electron interactions of the exchange correlation [114]. Meng et al. [113] chose the projected augmented method [97] to hypothesise the pseudopotential for treating the interactions of ion to electron [97]. For all other calculations, the team employed panewave cut- off energy of  $400\\mathrm{eV}$  and  $4\\times 4\\times 1$ $\\Gamma$  - centred Monhorst- Pack  $k$  - point mesh [115]. DFT- D3 method of Grimme was adopted to define the interactions of van der Waals [116]. DFT has also been used to investigate exceptionally dry methane reforming catalysts with enhanced in situ produced Ni- Fe nanoparticles on perovskite through ALD, which have been demonstrated to be extremely effective [117]. Similarly, some studies aimed to develop active and durable catalysts [51,118- 120]. DFT calculations were used to reveal the method of the",
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/fe1162e73650665c841a9e62b802aefe7c2631a5c8795307d80a697d18de2d77.jpg",
+        "img_caption": [
+            "Figure 5: Density functional theory (GGA/PBE-D3) [96] of minimum energy paths (MEPs) needed to adsorb Hacac on (a) aluminium oxide  $(\\mathrm{Al}_2\\mathrm{O}_3)$  and (b) silicon dioxide  $(\\mathrm{SiO}_2)$  surfaces [52]."
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/51552ee3866846d5d840fef7e1425adb739e3466f43ad04419a621106e696ea8.jpg",
+        "img_caption": [
+            "Figure 6: (a) Slab configurations of  $\\mathsf{Pt}_2\\mathsf{Ru}_3$  alloy built on platinum-based face-centred cubic structures for diverse conformities of platinum and ruthenium atoms. (b) Slab configurations of  $\\mathsf{Pt}_2\\mathsf{Ru}_3$  alloy built on ruthenium-based hexagonal close-packed structures for various conformations of platinum and ruthenium atoms [106]."
+        ],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "improved exsolution via atomic layer deposition. The DFT calculation results showed that the order of  $\\mathrm{Ti}< \\mathrm{Cr}< \\mathrm{Fe}< \\mathrm{Mn}< \\mathrm{Co}< \\mathrm{Ni}< \\mathrm{Cu}$  was followed by the co- segregation energy. This implied that bulk Ni could be replaced with deposited iron (Fe) [117]. Figure 7 shows DFT- computed cation exchange energies of deposited bulk Ni and transition metals. The deposited metal can freely exchange with Ni as indicated by the negative sign in exchange energy.",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Density functional theory has been utilised to investigate the growth mechanism of zinc oxide ALD [121]. In their investigation, Afshar and Cadien [121] used",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "GAUSSIAN 09 [102] to execute molecular orbital calculations. To determine the geometry of the stationary points, the corrected density functional approach (B3LYP gradient) was used [70,121]. In their conclusion, Afshar and Cadien [121] suggested a comprehensive atomistic mechanism for zinc oxide ALD growth employing the DFT study of  $(\\mathrm{C}_2\\mathrm{H}_5)_2\\mathrm{Z}_n$  and  $\\mathrm{H}_2\\mathrm{O}$  half- reactions on a zinc oxide surface. By using this DFT approach, they showed that the two reactions proceeded through the creation of complexes on the surface. The first growth mechanism of zinc oxide ALD on hydroxylated Si was investigated by Ren [122]. He presented the impact of single and double",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "hydroxyl sites on the initial phases of the atomic layer deposition growth [123].",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "hydroxyl sites on the initial phases of the atomic layer deposition growth [123].DFT was used in the preliminary reaction mechanism investigation of atomic layer deposited Pt on a hydroxylated graphene surface [19]. In their investigation, Mohlala et al. used molecular oxygen and methylcyclopentadienyl trimethylplatinum  $(\\mathrm{MeCpPtMe}_3)$  as their precursors. In their research, the reaction pathways were analysed using DFT calculations under Dmol3 code in Materials Studio software, a product of Accelrys Software Inc [124]. Their DFT calculations established that the elimination reaction of the methyl group bonded to platinum happens more easily than the freeing of the MeCp ligand [19]. They adopted two possible configurations to investigate which interaction was more stable between the precursor and the site of adsorption. Models (a) and (b) were created in which model (a) interacted through the MeCp ring and model (b) interacted through one of the methyl groups, which is bonded to platinum. Their DFT simulation and calculations showed that model (b) is the most stable configuration [19]. Figure 8 shows the preliminary orientation of  $\\mathrm{MeCpPtMe}_3$  on the surface of grapheme, which was hydroxylated.",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Ali and Hashim utilised DFT to study the zinc oxide ALD on graphene [77]. Graphene has outstanding optical, electrical, chemical, and mechanical characteristics [125- 127]. Graphene is now being used in the development of next- generation functional nanoparticles for numerous applications. DFT was employed in finding an estimated Schrodinger equation solution. They performed a DFT simulation of infrared (IR) characteristics in support of the proposed mechanism through a broad clarification of forming and breaking of",
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/b82f1ba48107245498105011279d29d014de0337ac5626fd4a57d1951e96cc48.jpg",
+        "img_caption": [
+            "Figure 7: Density functional theory model schematics used to calculate metal co-segregation on the B-site with a cation exchange and O vacancy: (a) the co-segregation energy in eV of the deposited metal; (b) the exchange energy comparison of the different deposited transition metals; and (c) DFT calculation representations for the cation exchange and alloy formation [117]."
+        ],
+        "img_footnote": [],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "bonds during each phase of the reaction. Figure 9 shows the structures, transition states, intermediate states, and dissociation reaction products. Figure 10 shows the infrared data when graphene oxide matrix adsorbed  $\\mathrm{Zn - H}$ , which was computed using DFT, and the associated optimised structures for several  $\\mathrm{Zn^{2 + }}$  adsorption steps [77].",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Mohlala et al. [128] employed DFT in their article on the thermal stability of Ti halide precursors for the  $\\mathrm{TiO_2}$  ALD on  $\\mathrm{Pt(111)}$  substrate. DFT was employed to ascertain the reactivity and thermal stability of Ti- based halide precursors. They also used DFT in conjunction with the computerised numerical technique and the dissociation of bond ligand automation tool from the Schrödinger material science package [129- 131] to study and evaluate the thermal stability and reactivity of the precursors. The reason for the use of DFT is that they knew it as a promising technique to understand the chemistry of innovative ALD precursors and enabling precursor development, which has high selectivity and reactivity and thermal stability [132- 134]. By using DFT simulation and calculation, Mohlala et al. predicted Ti tetrahalide (fluorine, chlorine, and iodine) precursors through the use of Schrödinger's automated enumeration tool. They predicted that a library of three halides forms 81 different complexes, 15 of which have exceptional ligand compositions [128]. The precursors were improved utilising DFT as realised in Jaguar [131]. Figure 11 shows an illustration of 15 of the precursors.",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Becker and Sierkar [70] employed DFT in their atomistic simulations research of plasma- enhanced ALD. Their primary investigation of the precursor products with hydroxylated silicon dioxide surfaces used DFT calculations and showed that reaction energies were highly dependent on the surface structure [20], specifically for the precursor which is bonded to two oxygen atoms on the surface.",
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/2629d0d7fbef479c3284e3e638d656b46ffc4e078dc0261f389a54cbc038b4ce.jpg",
+        "img_caption": [
+            "Figure 9: Steps and products in the dissociation reaction. (a) and (b) stretching and rotation of  $\\mathrm{Zn - O}$  bonds in the  $\\mathrm{Zn(acac)2}$  complex when H atoms are introduced, (c) stretching and torsion increase along the  $\\mathrm{Zn - O}$  bond, (d) the  $\\mathrm{Zn - O}$  bond reaches its maximum length as the H atoms move closer to the complex centre and (e) final step upon the completion of  $\\mathrm{Zn^{2 + }}$  extraction and formation of the O and H bond [77]."
+        ],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/dbfdedeefa132666253d750b72475693071a701394e86eb3ed05a472143c1be8.jpg",
+        "img_caption": [
+            "Figure 8: Primary orientations of  $\\mathrm{MeCpPtMe_3}$  on a hydroxylated graphene surface models (a and b). (Grey = carbon, blue = platinum, red = oxygen, and white = hydrogen atoms) [19]."
+        ],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/e232f9c0330e84927fa4d46151cfcfb981e5d287e6db58c88117fd83d037c55e.jpg",
+        "img_caption": [
+            "Figure 10: Infrared data when  $\\mathrm{Zn - H}$  is adsorbed onto a graphene oxide matrix [77]. (a) During the adsorption of  $\\mathrm{Zn - H}$ , a  $\\mathrm{C} = \\mathrm{C}$  peak corresponds to vibration out of bending, (b) the peaks are ascribed to the change of the carbonyl group from  $\\mathrm{C} = \\mathrm{C} - \\mathrm{C} = \\mathrm{O}$  into  $\\mathrm{C}^{+} - \\mathrm{C} = \\mathrm{C} - \\mathrm{O}^{+}$ , (c) the peak corresponds to the stretching of the  $\\mathrm{C} = \\mathrm{C}$  bond among the graphene network, (d) the peak indicates the complete transformation of the carbonyl group into  $\\mathrm{C}^{+} - \\mathrm{C} = \\mathrm{C} - \\mathrm{O}^{+}$  and (e) the peak corresponds to the formation of the  $\\mathrm{Zn - O}$  bond."
+        ],
+        "img_footnote": [],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Time- dependent DFT in conjunction with the Ehrenfest dynamics scheme was employed by Lee et al. [135] for the investigation of the dissociation of cobalt tricarbonyl nitrosyl  $(\\mathrm{Co}(\\mathrm{CO})_{3}\\mathrm{NO})$  ligands caused by electronic excitation. The team scrutinised excited- state non- adiabatic dynamics of ligand dissociation of  $\\mathrm{Co}(\\mathrm{CO})_{3}\\mathrm{NO}$ . Cobalt tricarbonyl nitrosyl is a precursor mainly utilised to grow cobalt thin films in innovative technologies, where the reaction of the precursor is improved by electronic excitation. They studied the  $\\mathrm{Co}(\\mathrm{CO})_{3}\\mathrm{NO}$  microscopic details of dissociation motivated via electronic excitation and established two direct and distinct dissociation paths of the  $\\mathrm{NO}$  ligand on the cobalt tricarbonyl nitrosyl  $(\\mathrm{Co}(\\mathrm{CO})_{3}\\mathrm{NO})$ .",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Murray and Elliott [134] employed DFT in the prediction of the composition of ALD- grown ternary oxides. They calculated using DFT methods the geometry optimised structures and energies for 17 metal precursors with five different anionic ligands and their corresponding hydrolysed complexes. The hydrolysis DFT models were utilised to effectively clarify the reaction and stoichiometric result with regards to metal cation ratios, which were seen through experiments for different ALD- grown systems for ternary oxides [134]. When it comes to electronic interchange and correlation, transition metal complex computations are prone to inaccuracies; therefore, the selection of the proper DFT functional is vital to yield correct geometries and enthalpies of reactions. Their DFT calculations confirmed that metal complexes that contain the alkoxide  $\\mathrm{O}^{\\mathrm{t}}\\mathrm{Bu}$  and  $\\beta$ - diketonate thd ligand are substantially unreactive with regard to the removal of H- thd during atomic layer deposition. Most of the ALD ternary oxides were successfully predicted by the DFT models that were used in their research for the interactions of metal precursors with oxide surfaces, demonstrating that DFT models may be used to predict experimental metal cation concentrations.",
+        "page_idx": 14
+    },
+    {
+        "type": "image",
+        "img_path": "images/4f78c7c718d58449986cd69197b9f30a0f5383ae197bf418048d4c457aac333d.jpg",
+        "img_caption": [
+            "Figure 11: Schrodinger suite computed precursors (heteroleptic and homoleptic) when three halide (fluorine, chlorine, and iodine) ligands are united around tetravalent titanium metal centre (colour grey represents titanium, orange is fluorine, green is chlorine, and magenta is iodine) [128]."
+        ],
+        "img_footnote": [],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Dkhissi et al. used DFT in multiscale modelling of  $\\mathrm{HfO}_{2}$  ALD of thin films, which were grown on silicon [136]. When the DFT model was applied in the hybrid functional, it was possible to determine the complete physicochemical processes and their related energies of the two half- cycles that occurred at the initial stage of the film development. It was demonstrated in their work that a novel kinetic Monte Carlo (KMC) methodology could be developed within a multiscale approach, starting with molecule- surface interactions that were primarily treated at the DFT level of",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "modelling and progressing to atomic- scale film growth that was conducted using a KMC technique [136].",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "3.1.1.2 Applications in semiconductors",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Weckman et al. [91] utilised DFT in the study of zinc oxide atomic layer deposition. In their research, they investigated the ZnO thin film growth, which was grown via  $\\mathrm{DEZ / H_2O}$  process. To achieve this, they modelled the surface chemistry using first- principles kinetic Monte Carlo (KMC). The KMC enabled them to easily extract data equivalent to experimental results by incorporating DFT calculations done on the  $\\mathrm{ZnO(100)}$  surface into a kinetic model.  $\\mathrm{ZnO}$  is a semiconductor, and its properties include high transparency, piezoelectrical properties, and tunable electrical conductivity. It can be applied in transistors, sensors, and solar cells [137- 139]. The results of the DFT- simulated mass increment data during an atomic layer deposition cycle were found to tally with the experimental findings and showed that the majority of the deposited layer is formed during the DEZ pulse [91]. The activation energy for chemical processes was also calculated using DFT.",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Sun et al. [140] used first principles DFT calculations to study the chlorine residue effects on the ALD of Hafnium oxide  $(\\mathrm{HfO_2})$ $\\mathrm{HfO_2}$  - based gate dielectrics are thermodynamically stable with silicon. The density of the state was calculated using the CASTEP code utilising the local density approximation method to get the electronic band structure of  $\\mathrm{HfO_2}$  . Their calculations yielded a band gap of  $6.69\\mathrm{eV}$  which was comparable to the reported experimental value of  $5.6 - 5.9\\mathrm{eV}$  since they had neglected excitonic and phonon broadening effects, which typically would have reduced their calculated value by  $0.8\\mathrm{eV}$  . The team noted that chlorine decreases the band gap of hafnium oxide (by  $0.58\\mathrm{eV}$  ) by increasing the valence band maximum (VBM). There are two types of defects in hafnium oxide (substitutional and interstitial defects), and these two harm the hafnium oxide gate dielectric electrical performance [140].",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Kelaidis et al. [94] used DFT to study the  $\\mathrm{Sn_{1 - x}Pb_xO}$  electronic properties and the  $\\mathrm{SnO / PbO}$  system band alignment. The SnO grown by atomic layer deposition was doped with Pb to form  $\\mathrm{Sn_{1 - x}Pb_xO}$  . The team conducted DFT calculations to investigate the electronic and structural properties of  $\\mathrm{Sn_{1 - x}Pb_xO}$  . They investigated the orbital effects in the valence and conduction band states. They also investigated the effect of the intrinsic defects on band alignment on Sn vacancies in SnO and Oxygen vacancies in PbO. The team found out that Pb doping provided a way of SnO band gap tuning without the introduction of defect states in the gap region. They also discovered that a  $0.4\\mathrm{eV}$  increase of SnO was observed when  $2\\%$  Sn vacancies are introduced. The team noted that the energy band gap of  $\\mathrm{Sn_{1 - x}Pb_xO}$  increased virtually linearly from 0.4 up to  $1.4\\mathrm{eV}$  as the  $x$  value is increased from O to 1. Figure 12 shows the computed band gap with regards to the Pb content in the compound.",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "3.1.2 DFT calculation challenges",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The Schrodinger equation cannot be solved precisely for a multi- body system; hence, DFT simulations use approximations. The accuracy of the adopted approximation governs the usefulness of their DFT simulations for several properties [141]. The precise handling of electron correlation founds a significant challenge in DFT. Electron correlation is frequently described with regard to a Hartree- Fock wave function. According to the variational principle, the lowest energy orbitals may be found by leveraging the HF wave function, a single- configuration wave function derived by employing the variational principle. The difference between a system's exact energy and its HF energy at the entire basis set limit is typically used to calculate electron correlation energy [141].",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The most frequently utilised DFT form is the Kohn- Sham formulation [142]. The KS- DFT signifies the density using a single Slater determinant and has a mean- field formulation, but it is an exact theory [141]. The energy in Kohn- Sham density functional theory is not computed by additional configuration state functions (CSFs), but by employing an exchange- correlation functional, that is a density",
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/a48b63f8cb03521acd9495b879ec9088385ca0a669f5fd44bd367ae3ea89c425.jpg",
+        "img_caption": [
+            "Figure 12: Computed band gap with regards to the Pb content in the compound [94]."
+        ],
+        "img_footnote": [],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "functional. We must, therefore, estimate the functional of the exchange correlation. The existing functionals are more precise for correlated systems that are weak than the strong ones. Self- consistent- field variational computations are used to determine the orbitals of a Kohn- Sham density functional theory determinant. The variational principle at times may account for static correlation by using a slater determinant with different symmetry properties from the precise state wave function.",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "KS- DFT can lead to an error source of delocalisation, sometimes called self- interaction error [143]. By substituting nonlocal high- frequency exchange for a portion of the local exchange- correlation functional, the self- interaction error can be reduced [85,144]. DFT does not treat discrete electrons in precisely identical ways but uses their total density. This means any one- electron system does not play a distinct unique role in DFT. The Coulomb energy for one electron is cancelled by the exchange energy [145]. The orbital rotation operator that is used for generating a foundation for time- dependent DFT equations generates only the configurations that are singly excited with regard to the ground state. This means higher order excitation states (e.g., the excitations with a high degree of double excitation character) are excluded in time- dependent DFT. However, they can be incorporated through the exchange- correlation functional [142].",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Many variants of the modern density- built subsystem and embedding approaches [146- 148] use potential reconstruction techniques [149- 151]. This leads to a target density being rationalised numerous times in a self- consistent loop. The potential matching that target density needs to be calculated at every step of the loop, leading to a considerable added computational expense to simulations that make no use of effective inversion methods.",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The other challenge of DFT is its complexity. DFT loses its simplicity when DFT functionals become complicated like the full configuration interaction (FCI). This is factual of its nature of computation. However, the attractiveness and challenges of DFT lie in between simple and very complex [145].",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "3.2 Molecular dynamics",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics (MD) simulation [70,152- 154] is a computational procedure for computing the transport properties and equilibrium of a classical many- body system [155]. MD focuses on the dynamics of atoms, molecules, and clusters in the condensed and liquid states [156]. It is used in many engineering and science disciplines like chemistry, physics, and materials engineering to determine the motion and equilibrium conditions of each atom or molecule.",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "During the first stage of the atomic layer deposition process where the first precursor is forced into the reaction chamber, molecular dynamics calculations can be used to predict the kinetic properties of molecules such as material structure and complex and the stability of the substrate- precursor 1 bond. It can predict the binding energy between the substrate and the first precursor molecules. In the second stage where the by- products and excess first precursor are purged, MD can be applied to predict the mechanism of removal. In the third stage where the second precursor is pumped into the reaction chamber, MD simulations can be used to predict the nature of the reaction, the binding energy between the first and second precursor atoms, and the stability of the bond. It can also be applied in the fourth stage the same way as the third stage since these purging stages have the same principles. Molecular dynamics can be used to predict the thermodynamic properties of the deposited thin- film material, based on intermolecular interactions. The deposited thin film can be analysed by MD simulations to predict free binding energy, the heat of vapourisation, and boiling point. According to Sator [157], the molecular dynamics method is valid in both equilibrium and non- equilibrium physical phenomena. Molecular dynamics is a useful computational approach that may be used in simulating various physical phenomena [158,159] if there is satisfactory computation power. Besides ReaxFF [70,160- 162], other computational software that can be used in molecular dynamics simulations are LAMMPS [163- 166], NAMD [167], GROMACS, CHARMM [167], and AMBER [168,169]. The molecular dynamics method uses Newton's equations of motion to describe the motion of molecules. It is simple and logical [170]. Simulation of particle flow on a computer MD program follows the equations of motion [157,171]. The force exerted by an external field and ambient molecules is defined by the following equation of motion:",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nf_{i} = m_{i}\\frac{\\mathrm{d}^{2}h_{i}}{\\mathrm{d}t^{2}}, \\tag{13}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "where the mass of the molecule  $i$  is denoted by  $m_{i}$",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The Taylor series expansion can be used to transform equation (13) into an algebraic equation through expanding the second term differential term into a Taylor algebraic expression as follows:",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{l}{x(t + h) = x(t) + h\\frac{\\mathrm{d}x(t)}{\\mathrm{d}t} +\\frac{1}{2!} h^{2}\\frac{\\mathrm{d}^{2}x(t)}{\\mathrm{d}t^{2}}}\\\\ {+\\frac{1}{3!} h^{3}\\frac{\\mathrm{d}^{3}x(t)}{\\mathrm{d}t^{3}} +\\dots} \\end{array} \\tag{14}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Another Taylor series expansion form is required to estimate the second- order differential term in equation (13). This is:",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{l}{x(t - h) = x(t) - h\\frac{\\mathrm{d}x(t)}{\\mathrm{d}t} +\\frac{1}{2!} h^{2}\\frac{\\mathrm{d}^{2}x(t)}{\\mathrm{d}t^{2}}}\\\\ {-\\frac{1}{3!} h^{3}\\frac{\\mathrm{d}^{3}x(t)}{\\mathrm{d}t^{3}} +\\ldots} \\end{array} \\tag{15}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "The second- order differential term may be solved by removing the first- order differential term from equations (14) and (15) as follows:",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\frac{\\mathrm{d}^2x(t)}{\\mathrm{d}t^2} = \\frac{x(t + h) - 2x(t) + x(t - h)}{h^2} +O(h^2). \\tag{16}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "The right- hand side last term indicates the approximation accuracy. Terms higher than  $h^2$  are neglected in this case. The expression is called the central difference approximation if equation (16) is approximated as follows:",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\frac{\\mathrm{d}^2x(t)}{\\mathrm{d}t^2} = \\frac{x(t + h) - 2x(t) + x(t - h)}{h^2}. \\tag{17}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "The  $x$  - component of Newton's equation of motion may be stated by using this approximation with the notation  $\\pmb {r}_i =$ $(x_{i},y_{i},z_{i})$  for the molecular location and  $\\pmb {f}_i = (f_{xi},f_{yi},f_{zi})$  for the force acting on particle I as follows [157]:",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nx_{i}(t + h) = 2x_{i}(t) - x_{i}(t - h) + \\frac{h^{2}}{m_{i}} f_{xi}(t). \\tag{18}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Equation (18) is an algebraic equation; therefore, the next time step position of molecules can be calculated using the current position, past positions, and the current force. Equation (18) does not need velocity to determine the next time step position of molecules. If velocity is required, it is calculated from the central difference approximation. The velocity equation is expressed as follows:",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\nu_{i}(t) = \\frac{r_{i}(t + h) - r_{i}(t - h)}{2h}. \\tag{19}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Noting that the positional first and second- order differentials are identical to the velocity and acceleration, in that order, ignoring differential terms equivalent to or higher than the third order in equation (14) yields:",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\pmb {r}_i(t + h) = \\pmb {r}_i(t) + h\\pmb {v}_i(t) + \\frac{h^2}{2m_i}\\pmb {f}_i(t). \\tag{20}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Since the term of velocity appears on the right, another equation to specify velocity can be employed.",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\pmb {v}_i(t + h) = \\pmb {v}_i(t) + \\frac{h}{m_i}\\pmb {f}_i(t). \\tag{21}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "The force term can be modified to improve accuracy. The equation becomes:",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\pmb {v}_i(t + h) = \\pmb {v}_i(t) + \\frac{h}{2m_i} (\\pmb {f}_i(t + h)). \\tag{22}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "When the central difference approximation is applied to the first- order differentials, we get these two equations:",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\pmb {r}_i(t + h) = \\pmb {r}_i(t) + h\\pmb {v}_i\\bigg(t + \\frac{h}{2}\\bigg), \\tag{23}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\pmb {v}_i\\bigg(t + \\frac{h}{2}\\bigg) = \\pmb {v}_i\\bigg(t - \\frac{h}{2}\\bigg) + \\frac{h}{2} f_i(t). \\tag{24}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "According to Sator [157], when using the velocity Verlet to carry out a molecular dynamics simulation, the primary procedure is as follows:",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "1. The initial position and velocity of the molecules must be hypothesised. \n2. Next, the forces that act on molecules must be calculated. \n3. The next time step positions of molecules must be evaluated from equation (20). \n4. The next time step velocities of molecules must be evaluated from equation (22). \n5. Procedures from the second step are repeated.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "3.2.1 Applications of molecular dynamics simulations",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics simulations can be used to predict the kinetic properties of molecules [95,158,169,172]. Kinetic properties are time- based evolutions of conformations. These include refinement of material structure and complex, stability of structures, conformational sampling of small molecules, protein folding, stability of protein- ligand interactions, and transport of ions and ligands.",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "MD can be used to predict the thermodynamic properties of a material. These predictions are based on intermolecular interactions. MD simulations can predict free binding energy, heat of vapourisation, pressure, boiling point, Poisson- Boltzmann or generalised Born and surface area continuum solvation, and free energy perturbation (FEP).",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics is most suitable for the application at the nanoscale. There are various applications of molecular dynamics as identified by Gunsteren and Berendsen [173]. The following are some of the applications: i. Interpretation of biochemical [174,175] data on repressor- operator binding. ii. Interpretation of biophysical [176] data on membrane properties. iii. Refinement of structures based on nuclear magnetic resonance (NMR) data [112,177]. Tampieri defines NMR spectroscopy as an analytical method that provides data on the local magnetic field around atomic nuclei [178]. Its principles are that the structural or chemical",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "composition of substances can be known from their nuclei, which have their distinctive magnetic field. iv. Refinement of structure based on crystallographic X- ray or neutron diffraction data [179]. X- ray crystallography is used to determine three- dimensional crystalline structures at the atomic scale [180]. v. Prediction of structural changes. vi. Prediction of free energy changes.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "3.2.1.1 Applications of MD in predicting the kinetic properties of molecules",
+        "text_level": 1,
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics simulations can be utilised in the atomistic simulations study of plasma- enhanced ALD [20,47,70]. In their research article, Becker and Sierka [70] presented a simulation structure for plasma- enhanced atomic layer deposition processes by compounding the Monte Carlo [157,179] deposition algorithm and structure relaxation using MD to account for the steric interruption and the surface overlap restrictions consistent with the actual step of precursor deposition. The structure was relaxed after each step of attachment, using either local structure optimisation or short- simulated annealing using MD. They calculated the chemisorption energy and used it to compute the acceptance criterion using the Metropolis- Hastings rule [181]. They also applied their simulation procedure to study the PEALD synthesis of silicon dioxide thin films employing a bis- diethylaminosilane precursor. Preliminary examination of the precursor products with hydroxylated silicon dioxide surfaces using DFT calculations showed a strong reliance of reaction energies on the structure of the surface, specifically for the precursor that was bonded to two oxygen atoms at the surface. Their PEALD simulations showed that the precursor binding to one oxygen atom at the surface favours amorphous layer growth, many  $- \\mathrm{OH}$  impurities, and the voids formation.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics simulation can be applied to investigate the sinking of graphene during chemical vapour deposition (CVD) growth on a substrate of semi- molten copper [119]. The principles of the molecular layer deposition procedure are synonymous with ALD since, in both processes, the films are created by successive, self- restraining surface reactions [182- 184]. Xu et al. executed systematic MD simulations to discover graphene nanostructures stability (graphene nanoribbons and carbon nanoclusters) on a substrate of semi- molten copper. Figure 13 shows  $\\mathbb{C}_{24}$  sinking on the surface of  $\\mathrm{Cu(111)}$  at various temperatures.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Molecular simulations and Markov state modelling can be used to disclose the structural variety and dynamics of a theophylline- binding ribonucleic acid aptamer in its unbound state [185]. Warfield and Anderson applied MD simulations to characterise the ensemble of conformations adopted by the aptamer in the absence of theophylline and also applied the Markov state modelling to forecast the transition kinetics between liberated conformational states. Ribonucleic acid aptamers are oligonucleotides that connect with high specificity and attraction to targeted ligands [185]. It was observed in their simulations, as well as in the experiments, that the theophylline binding site may be located in a variety of binding- incompetent states, all of which lack a binding pocket capable of holding theophylline. Binding- incompetent states can become binding competent by rearranging the binding site structurally on a period ranging from nanoseconds to microseconds.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "MD can be used to simulate the film structure of  $\\mathrm{Al}_2\\mathrm{O}_3$  and its composition during atomic layer deposition [186,187]. Hu et al. managed to get the density of aluminium oxide per ALD cycle. Figure 14(a) shows the density profiles of  $\\mathrm{Al}_2\\mathrm{O}_3$  at  $300^{\\circ}\\mathrm{C}$ , and Figure 14(b) shows the number density of O, AL, and H.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "MD simulations allowed them to trace the progression of the  $\\mathrm{Al}_2\\mathrm{O}_3$  film microscopic structure as it grew in thickness [186]. They found that the surface of  $\\mathrm{Al}_2\\mathrm{O}_3$  is ended mainly by hydrogen and oxygen since they are the favourite for the ambient. This enabled them to conclude why hydrogen impurities in atomic layer- deposited  $\\mathrm{Al}_2\\mathrm{O}_3$  films are generally low.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Zheng et al. [10] used MD simulations in their research on modelling and in situ probing of surface reactions in ALD. As part of their investigation into the effect of early surface chemical states on the reaction kinetics and the creation of traps during ALD nucleation, they looked at  $\\mathrm{Al}_2\\mathrm{O}_3$  ALD deposition kinetics [148] on hydrogenated and oxidised Ge surfaces. Their simulations included ReaxFF [70,154,160,161], molecular dynamics (MD), and nudged elastic band (NEB) [188] to mimic the deposition process, including adsorption and breakdown of ALD precursors, as well as the diffusion and desorption of their products produced. Their simulations accurately predicted the nucleation features, which were in close accord with the available literature and experiments. Figure 15 shows the TMA and  $\\mathrm{H}_2\\mathrm{O}$  dose in their ReaxFF simulation.",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Xiao et al. [154] used MD simulations to investigate the surface chemistry of Cu metal and CuO ALD from copper(II) acetylacetonate. The results of this simulation showed copper(II) acetylacetonate chemisorbs on the hollow site of the copper(110) surface and decays readily into a copper atom and the acetylacetonate ligands. Figure 16 shows snapshots for the reactive molecular dynamics dissociation of copper(II) acetylacetonate on the Cu(110) surface.",
+        "page_idx": 18
+    },
+    {
+        "type": "image",
+        "img_path": "images/1c9ca267590375bf37ab2c85531c47ce96d92e9654eafdac5e0465b1fc247180.jpg",
+        "img_caption": [
+            "Figure 13:  $C_{24}$  sinking on the surface of  $\\mathrm{Cu(111)}$  e at various temperatures. (a)–(f)  $C_{24}$  cross-sections on the surface of  $\\mathrm{Cu(111)}$  MD simulations after 120 ps at temperatures of 1,200, 1,250, 1,300, 1,350, 1,400 and  $1,450\\mathrm{K}$ , respectively. Copper atoms that are close to the boundary of  $C_{24}$  are shown in yellow. (g) The  $C_{24}$  profiles that were extracted at the different temperatures (a)–(f). The ochre and cyan balls show copper and carbon atoms, respectively. (h) The computed Lindemann index of copper substrates in solid, semi-molten, and liquid forms. (i) Temperature-dependent average heights of C24 and its neighbouring atoms during the final 20 ps [119]."
+        ],
+        "img_footnote": [],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Figure 17 shows the reactive MD snapshots for the reaction between copper(II) acetylacetonate and hydrogen atoms on the copper (110) surface. Atomic hydrogen was highly reactive towards the copper precursor. The Cu  $(\\mathrm{acac})_2$  broke the  $\\mathrm{Cu - O}$  bonds upon hydrogen collision forming a  $\\mathrm{H}_2(\\mathrm{acac})$  molecule. It was then released to the",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 19
+    },
+    {
+        "type": "image",
+        "img_path": "images/c449509146d4ddd0ee4f30cd40e80d6cbc11e49c174dd874d097e6255580e748.jpg",
+        "img_caption": [
+            "Figure 14: (a) Blue line shows the total density profiles at 0 ALD cycles, red for four ALD cycles, and green for eight ALD cycles with respect to the Z-direction distance of the  $\\mathsf{Al}_2\\mathsf{O}_3$  film at  $300^{\\circ}C$  [186]. (b) The number density profiles for oxygen (blue), aluminium (green), and hydrogen (red) as a function of the Z-direction distance of  $\\mathsf{Al}_2\\mathsf{O}_3$  film at  $300^{\\circ}C$  [186]."
+        ],
+        "img_footnote": [],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "gas phase  $(14.6\\mathrm{ps})$  .An atom of oxygen in  $\\mathrm{H_2(acac)}$  was abstracted by H and an  $\\mathrm{H}_2\\mathrm{O}$  molecule was released (15.2 ps). The fragment remaining was broken down further into ethane and acetone  $(20.3\\mathrm{ps})$  .Finally, a methane molecule was formed  $(22.4\\mathrm{ps})$  [154].",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Ab initio MD simulation of a copper monolayer aggregation on a WN (001) surface was investigated by Bo et al. [189]. They carried out an ab initio molecular dynamics simulation with a copper monolayer at  $500\\mathrm{K}$  on the surface, which was completely equilibrated. Figure 18 shows the molecular dynamics chosen snapshots of the trajectory. The copper monolayer was initially well aligned and in proportion with the substrate. Through surface diffusion, copper atoms were then rapidly disassembled and moved away from their equilibrium locations when molecular dynamics was run. At  $t = 1$  ps, some copper atoms began to move upward and grow three dimensionally. At  $t = 3$  ps, the copper atoms were clustered together and formed islands at the surface. An ordered monolayer structure became remarkably disordered. Further molecular dynamics runs prompted copper atoms to constantly move, forming surface islands with different shapes. No wetting of copper clusters on the surface was detected.",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Guoyong et al. [190] applied MD in surface pseudorotation in Lewis- base- catalysed  $\\mathrm{SiO}_2$  ALD. The pathways of the reaction for the uncatalysed and catalysed  $\\mathrm{SiO}_2$  atomic layer deposition were explored using static transition- state searches and Born- Oppenheimer MD simulations. The team discovered that the reaction for uncatalysed  $\\mathrm{SiO}_2$  atomic layer deposition undergoes a step- by- step pathway. The step that determines the rate is the  $\\mathrm{Si} - \\mathrm{O}$  bond development complemented by the rotation of  $\\mathrm{SiCl}_4$  and has a comparatively high activation free energy barrier.",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "3.2.1.2 Applications of MD in predicting a material's thermodynamic properties",
+        "text_level": 1,
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Guo and Wang, in their research of thin films of noble metal alloys by ALD and rapid Joule heating [191], performed MD simulations using large- scale atomistic/molecular massively parallel simulator (LAMMPS) open- source code [192,193]. They adopted the embedded atom method (EAM) potentials [194] in portraying the interatomic interactions, which define the lattice parameter, surface energy, cohesive energy, elastic constant, transitional and thermodynamic properties of metals, as well as their alloys. Figure 19 illustrates a schematic of the fabrication process of the thin film alloy of  $\\mathrm{Rh / Ir}$ .",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "From their research and simulations, Guo and Wang concluded that the ALD technique can manufacture fairly uniform and continuous sub- fifty- nanometre thick alloy thin film on 2D substrates when compared to other methods of manufacturing alloys. They also employed MD simulations to explore the melting of the  $\\mathrm{Rh / Ir}$  thin film alloy.",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics can be applied to investigate temperature and nitrogen- to- aluminium ratio effects in the heteroepitaxial growth of aluminium nitride. Zhang et al. [195] noted in their simulations that when the temperature increased from 1,000 to  $2,000\\mathrm{K}$  with a nitrogento- aluminium flux ratio of 2.0, the growth rate of the",
+        "page_idx": 20
+    },
+    {
+        "type": "image",
+        "img_path": "images/a2d362508047a5525e36a03c5c8bfe3d8880dce815023158f87813c76f68a397.jpg",
+        "img_caption": [
+            "Figure 15: (a) Schematics of ReaxFF-MD calculations at 1,000 K of consecutive deposition of TMA and H20 dosages on a GeOx/Ge substrate resulting in  $A l_{2}O_{3}$  ALD. (b) The absorption of TMA precursor on the surface of GeOx/Ge during ReaxFF-MD simulation. The marked molecules (1 and 2) in the first TMA dosage snapshot are by-products of  $H_{3}C - CH_{3}$  and  $CH_{4}$ . (c) Numerical representation of the oxygen atoms that were coordinated to Ge in the  $A l_{2}O_{3}$  ALD simulation performed using ReaxFF-MD on GeOx/Ge [10]."
+        ],
+        "img_footnote": [],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "aluminium nitride film decreased. They also observed that deposited aluminium nitride crystallinity was noticeably enhanced as the temperature increased between the 1,000 and  $1,800\\mathrm{K}$  temperature range, and it became saturated between 1,800 and 2,000 K. Stoichiometry was found to be closely associated with the deposited films crystallinity. Good crystallinity films are related to a near  $50\\%$  nitrogen fraction. In their simulations, the aluminium nitride growth on the c- plane aluminium nitride was studied by the LAMMPS [193] with the Tersoff potential [196]. Figure 20",
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 21
+    },
+    {
+        "type": "image",
+        "img_path": "images/60afd2bfa0f726a5a736d81b7c15a44e4c029fdd0db2de9303d10c6df5e726b9.jpg",
+        "img_caption": [
+            "Figure 16: Reactive MD dissociation of copper(II) acetylacetonate on the  $\\mathrm{Cu(110)}$  surface [154]. Initially, the  $\\mathrm{Cu - O}$  bond broke and the acac-ligand tilted (7.3 ps). The acac-ligand then totally dissociated from the  $\\mathrm{Cu(acac)}_2$  molecule, thereby creating acac and  $\\mathrm{Cu(acac)}$  species on the surface (10.8 ps). Finally,  $\\mathrm{Cu(acac)}$  dissociated into copper and acac species on the surface after 18.5 ps [154]."
+        ],
+        "img_footnote": [],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "shows the fraction of nitrogen of deposited films at a temperature of  $1,800\\mathrm{K}$  with various nitrogen- to- aluminium flux ratios starting at 0.8- 2.8.",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics simulations can be utilised to investigate the melting of iron nanoparticles with or without defects. Karpina et al. [137] used MD simulations to investigate the thermal properties of bulk iron material and iron nanoparticles (FNP) by means of a ReaxFF reactive force field. The melting behaviours of FNPs from 300 to  $2,500\\mathrm{K}$  were chosen to study thermodynamic and energy properties, which include potential energy plots, radial distribution function, and Lindemann index [120]. They observed that the ReaxFF force field could detect the size effect in FNP melting regardless of energy or structure evolution aspect. The following table shows the FNP model information for melting simulations. In their article, Sun et al. state that there are four methods to evaluate materials melting points [197- 199] in molecular dynamics. (1) Plots of potential energy; (2) system heat capacity  $C_\\mathrm{v}$ , and (3) Lindemann index [200] that vary with temperature and equilibrium temperature [161] of the solid- liquid interface (see Table 4).",
+        "page_idx": 22
+    },
+    {
+        "type": "table",
+        "img_path": "images/82880eca10b522250b8f20168da426b7df7f0b4d2e797aca4e718ce7141d1832.jpg",
+        "table_caption": [
+            "Table 4: FNP models for melting simulations"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Diameter (nm)</td><td>2.0</td><td>2.5</td><td>3.0</td><td>3.5</td><td>4.0</td></tr><tr><td>Lattice</td><td>bcc</td><td>bcc</td><td>bcc</td><td>bcc</td><td>bcc</td></tr><tr><td>Atoms</td><td>338</td><td>785</td><td>1,218</td><td>2,073</td><td>2,809</td></tr></table>",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Figure 21 shows one of the ways of evaluating melting points, the  $C_\\mathrm{v}$  (heat capacities) of various size FNPs as a function of temperature obtained from simulations.",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "3.3 Molecular dynamics simulation challenges",
+        "text_level": 1,
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Just like any other modelling and simulation methodologies, molecular dynamics has its shortcomings. This is discussed in the following paragraphs.",
+        "page_idx": 22
+    },
+    {
+        "type": "image",
+        "img_path": "images/1bb65abc2b58d3a989e8e7fc85843d5c793248c1f717e1abf216fd5a324cfac6.jpg",
+        "img_caption": [
+            "Figure 17: Reactive MD snapshots for the reaction between copper(II) acetylacetonate and hydrogen atoms on the copper (110) surface [154]."
+        ],
+        "img_footnote": [],
+        "page_idx": 22
+    },
+    {
+        "type": "image",
+        "img_path": "images/7b2d4200d05c3b6e6e3c7a3a9391f7cd8bd514e631521e33989776ce61eca53b.jpg",
+        "img_caption": [
+            "Figure 18: MD trajectory [189]. The copper monolayer was initially well aligned and in proportion with the substrate. Through surface diffusion, copper atoms were then rapidly disassembled and moved away from their equilibrium locations when molecular dynamics was run."
+        ],
+        "img_footnote": [],
+        "page_idx": 23
+    },
+    {
+        "type": "image",
+        "img_path": "images/2a7e81e32f514ba4d23f91ff93baaa95e41767a0890f395b659f1dcff9ce04ef.jpg",
+        "img_caption": [
+            "Figure 19: Schematic of the fabrication process of the thin film alloy of Rh/Ir [191]."
+        ],
+        "img_footnote": [],
+        "page_idx": 23
+    },
+    {
+        "type": "image",
+        "img_path": "images/9f87cd09b938d6d4aa4e04eec40c00364d3835b67231b30b4931d61bc589ec1d.jpg",
+        "img_caption": [
+            "Figure 20: Fraction of nitrogen of deposited films at a temperature of  $1,800\\mathrm{K}$  with various nitrogen-to-aluminium flux ratios starting at 0.8–2.8 [195]."
+        ],
+        "img_footnote": [],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "MD simulations can be applied to analyse chemical processes, which include biomolecules allosteric transitions, phase transformation nucleation events, chemical reactions, solids fracture and crack propagation, crystals defect dynamics, and many other applications. These simulations, however, may take several days depending on the size of molecules under analysis [201]. The atom (or molecules) quantity in the system determines the time scale available to the simulation problem, hence the time- scale problem severity [174,202]. This governs the speed at which investigations can be conducted. The time- scale problem is the major reason why brute- force molecular dynamics simulations are not practical when investigating crystal nucleation.",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Virtually every computer simulation of the nucleation of crystals in liquids uses some classical nucleation theory (CNT) [202,203] elements. Classical nucleation theory was invented to define supersaturated vapours condensation into the liquid phase although the majority of the concepts can likewise be employed in the crystallisation of supercooled liquids and supersaturated solutions. It is assumed that classical molecular dynamics simulations can handle up to approximately  $10^{5}$  molecules on a nanoseconds or microseconds time scale. There is a very thin set of situations for which brute- force classical molecular dynamics simulations may be applied to explore nucleation, and it is only typically at strong supercooling.",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Most MD simulation packages are robust and need adequate computing power [204]. They also require a substantial amount of time for one to familiarise themselves with them. Experiments are still far much superior to simulations [202]. There have been instances where molecular dynamics simulations have not adequately predicted the outcome of experiments. This makes it necessary to couple simulations with experiments.",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Molecular dynamics simulations generate large amounts of data, which intrinsically presents big data challenges [205]. Storage, dissemination, and management of these data in the range of terabytes are significant even though the capacity of storage resources is increasing [206].",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "It is difficult to fully capitalise on the richness of data that is offered by simulations where each molecule is indicated in atomistic detail. Simulations are usually done with a definite scientific problem in mind, and we often concentrate on that problem in mind during the investigation in a stringently hypothesis- driven fashion. Data that seem not to answer the question in mind is usually neglected. This hinders discoveries that could come from the neglected data.",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "For molecular dynamics simulation results and experiments to agree, they must be carried out under the same conditions. This may not always be feasible since simulations are usually carried out under ideal conditions. Several variables may be present when conducting experiments.",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "The reliability of the simulation software used can pose a challenge to amateurs and people who have recently started the molecular dynamics field of study [35]. One needs to be thoroughly vexed with all the available software, their application, strengths, and weaknesses. The simulation software quality relies on the attention with which it was built and tested by its developers and their understanding of the molecular models and algorithms incorporated in their software. Testing of simulation packages is usually done on numerous levels within diverse communities of researchers [35].",
+        "page_idx": 24
+    },
+    {
+        "type": "image",
+        "img_path": "images/17d40e3d5c181fe10e5aee6a468a0e6bdef6f7d93651b248fbdebcd9bbad730f.jpg",
+        "img_caption": [
+            "Figure 21: Heat capacity values  $(C_{\\mathrm{v}})$  of various size FNPs [161]."
+        ],
+        "img_footnote": [],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "3.4 DFT and MD use by non-specialists",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "3.4 DFT and MD use by non- specialistsDFT and molecular dynamics simulations use complex software that require adequate time for one to learn. A general appreciation of DFT and MD methodologies is not adequate for one to start using these simulation tools, as this may lead to wrong results. Users of these methodologies must have a coding background, or must at least learn a few coding languages such as python. There are various tutorials accessible from the Internet where one can get started. Non- specialists should seek assistance from DFT and MD specialists if they have to apply these tools in their work.",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "4 Conclusion",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "4 ConclusionComputational modelling and simulation methodologies are very powerful tools for analysing microstructures and nanostructures. They complement ALD experiments but have the advantage of significantly reducing the financial burden of doing experiments. Their other benefit is that they can be used to analyse very complex structures and reactions that may be otherwise very dangerous to conduct experimentally in the lab. Through simulations, any problem can be interrogated regardless of practical limitations inhibiting experiments, including hypothetical situations that could not be realised through experiments under any conditions. However, it should be noted that computer simulations remain a theoretical approach whose value lies when new hypotheses and predictions generated can then be subjected to experimental analysis and validation. DFT can be applied in molecule binding energy calculations in chemistry and the solids band structure in physics, for computing the electron density, and for determining the many- electron system properties. DFT can answer problems of understanding material properties in surface science and catalysis, semiconductors, superconductors, and molecular electronics. Molecular dynamics can be used to interpret biochemical data on repressor- operator binding, interpret biophysical data on membrane properties, refine structures based on nuclear magnetic resonance, refine structures based on crystallographic X- ray or neutron diffraction data, and predict structural and free energy changes. Molecular dynamics can predict the kinetic and thermodynamic properties of materials. Several papers have been published where these simulation techniques managed to predict the outcome of experiments successfully. One must be able to distinguish between the discussed methodologies and pick the relevant one for their application. These methodologies can be used to prove and validate results from experiments and predict the outcome from experiments. Most MD and DFT simulation packages are robust and need adequate computing power. Substantial time is required for one to learn the software and produce accurate simulation results. Since the simulation results do not always agree with experimental results, it is important to couple simulations with experiments where possible. Computational modelling and simulations successes greatly outweigh their challenges.",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Funding information: The authors would like to appreciate the funding from the Global Excellence and Stature (GES) and University Research Committee (URC) of University of Johannesburg.",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Author contributions: All authors have accepted responsibility for the entire content of this manuscript and approved its submission.",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Conflict of interest: The authors state no conflict of interest.",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "References",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "References[1] Faraz T, Roozeboom F, Knoops HCM, Kessels WMM. Atomic layer etching: what can we learn from atomic layer deposition? ECS J Solid State Sci Technol. 2015;4(6):N5023- 32. doi: 10.1149/2.0051506jss. [2] Oviroh PO, Akbarzadeh R, Pan D, Coetzee RAM, Jen TC. New development of atomic layer deposition: processes, methods and applications. Sci Technol Adv Mater. 2019;20(1):465- 96. doi: 10.1080/14686996.2019.1599694. [3] Acharya J, Goul R, Romine D, Sakidia R, Wu J. Effect of Al2O3 seed- layer on the dielectric and electrical properties of ultrathin MgO films fabricated using in situ atomic layer deposition. ACS Appl Mater Interfaces. 2019;11(33):30368- 75. doi: 10.1021/acsami.9b05601. [4] Qu L, Chen R, Li X, Zhang J, Wang Y, Wei S, et al. Development and prospect of process models and simulation methods for atomic layer deposition. J Microelectron Manuf. 2019;2(2):1- 6. doi: 10.33079/jomm.19020204. [5] Van Toan N, Tuoi TTK, Inomata N, Toda M, Ono T. Aluminum doped zinc oxide deposited by atomic layer deposition and its applications to micro/nano devices. Sci Rep. 2021;11(1):1- 12. doi: 10.1038/s41598- 020- 80880- 3. [6] Tripathi TS, Wilken M, Hoppe C, de Los Arcos T, Grundmeier G, Devi A, et al. Atomic layer deposition of copper metal films from Cu(acac)2 and hydroquinone reductant. Adv Eng Mater. 2021;121:800. doi: 10.1002/adem.202100446. [7] Miller A, Carchman R, Long R, Denslow SA. Characterization of radical- enhanced atomic layer deposition process based",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "on microwave surface wave generated plasma. J Appl Phys. 2021;130(1):1- 18. doi: 10.1063/5.0046829. [8] Jaggernauth A, Mendes JC, Silva RF. Atomic layer deposition of high- : k layers on polycrystalline diamond for MOS devices: a review. J Mater Chem C. 2020;8(38):13127- 53. doi: 10.1039/d0t02063j. [9] Yang B. Applications of titania atomic layer deposition in the biomedical field and recent updates. Am J Biomed Sci Res. 2020;8(6):465- 8. doi: 10.34297/ajbsr.2020.08.001321. [10] Zheng Y, Hong S, Psofogiannakis G, Rayner GB Jr, Datta S, Van Duin ACT, et al. Modeling and in situ probing of surface reactions in atomic layer deposition. ACS Appl Mater. Interfaces. 2017;9(18):15848- 56. doi: 10.1021/ acsami.7b01618. [11] Prasadam VP, Banlawane N, Mattelaer F, Rampelberg G, Detavernier C, Fang L, et al. Atomic layer deposition of vanadium oxides: process and application review. Mater Today Chem. 2019;12:396- 423. doi: 10.1016/ j.mtchem.2019.03.004. [12] Hu L, Qi W, Li Y. Coating strategies for atomic layer deposition. Nanotechnol Rev. 2017;6(6):527- 47. doi: 10.1515/ntrev. 2017- 0149. [13] Sneh O, Clark- Phelps RB, Londergan AR, Winkler J, Seidel T. Thin film atomic layer deposition equipment for semiconductor processing. Thin Solid Films. 2002;402(1):248- 61. [14] Paranjpe A, Gopinath S, Omstead T, Bubber R. Atomic layer deposition of AlOx for thin film head gap applications. J Electrochem Soc. 2001;148(9):G465- 71. [15] Elers K- E, Saanila V, Soininen PJ, Li W- M, Kostamo JT, Haukka S, et al. Diffusion barrier deposition on a copper surface by atomic layer deposition. Chem Vap Depos. 2002;8(4):49- 2000. [16] Niinisto L. Atomic layer deposition: a key technology for the controlled growth of oxide thin films for advanced applications. Proc. Estonian Acad Sci Phys Math. 2003;52(3):266- 76. [17] Ahmad K, Schuegraf K. Transistor wars: rival architecture face off in a bid to keep Moore's law alive. IEEE Spectr. 2011;48:50- 66. [18] Pang C, Lee C, Suh K. Recent advances in flexible sensors for wearable and implantable devices. J Appl Polym Sci. 2013;130(3):1429- 41. [19] Mohlala LM, Jen TC, Olubambi PA. Initial reaction mechanism on the atomic layer deposition of platinum on a graphene surface: a density functional theory study. Procedia Manuf. 2019;35:1250- 5. doi: 10.1016/j.promfg.2019.06.083. [20] Cremers V, Puurunen RL, Dendooven J. Conformality in atomic layer deposition: current status overview of analysis and modelling. Appl Phys Rev. 2019;6(2):235- 42. doi: 10.1063/1.5060967. [21] Hagen DJ, Pemble ME, Karppinen M. Atomic layer deposition of metals: precursors and film growth. Appl Phys Rev. 2019;6(4):235- 42. doi: 10.1063/1.5087759. [22] Liao X, Lu R, Xia L, Liu Q, Wang H, Zhao K, et al. Density functional theory for electrocatalysis. Energy Environ Mater. 2021;121(122):800. doi: 10.1002/eem2.12204. [23] Hafner J, Wolverton C. Toward computational materials design: the impact of density functional theory on materials research. MRS Bull. 2006;31(9):659- 65. doi: 10.1557/ mrs2006.174.",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "[24] Cao K, Cai J, Liu X, Chen R. Review article: catalysts design and synthesis via selective atomic layer deposition. J Vac Sci Technol A Vacuum Surfaces Film. 2018;36(1):010801. doi: 10.1116/1.5000587. [25] George SMS. Atomic layer deposition: an overview. Chem Rev. 2010;110(1):111- 31. doi: 10.1021/cr900056b. [26] Knez M, Nielsch K, Niinistö L. Synthesis and surface engineering of complex nanostructures by atomic layer deposition. Adv Mater. 2007;19(21):3425- 838. [27] Leskelä M, Mattinen M, Ritala M. Review article: atomic layer deposition of optoelectronic materials. J Vac Sci Technol B. 2019;37(3):030801. doi: 10.1116/1.5083692. [28] Leskelä M, Ritala M, Nilsen O. Novel materials by atomic layer deposition and molecular layer deposition. MRS Bull. 2011;36(11):877- 84. doi: 10.1557/mrs.2011.240. [29] Puurunen RL. Surface chemistry of atomic layer deposition: a case study for the trimethylaluminum/water process. J Appl Phys. 2005;97(12):235- 42. doi: 10.1063/1.1940727. [30] Kim H. Atomic layer deposition of metal and nitride thin films: current research efforts and applications for semiconductor device processing. J Vac Sci Technol. 2003;26(1):2231- 61. [31] Knisley TJ, Kalutarage LC, Winter CH. Precursors and chemistry for the atomic layer deposition of metallic first row transition metal films. Coord Chem Rev. 2013;257(23):3222- 31. [32] Pinna N, Knez M. Atomic layer deposition of nanostructured materials. New York: Wiley- VCH; 2011. [33] Koshtyal Y, Mitrofanov I, Nazarov D, Medvedev O, Kim A, Ezhov I, et al. Atomic layer deposition of ni- co- o thin film electrodes for solid- state libs and the influence of chemical composition on overcapacity. Nanomaterials. 2021;11(4):907. doi: 10.3390/nano11040907. [34] Wang X, Zhao Z, Zhang C, Li Q, Liang X. Surface modification of catalysts via atomic layer deposition for pollutants elimination. Catalysts. 2020;10(11):1- 20. doi: 10.3390/ catal10111298. [35] van Gunsteren WF, Daura X, Hansen N, Mark AE, Oostenbrink C, Riniker S, et al. Validation of molecular simulation: an overview of issues. Angew Chemie - Int Ed. 2018;57(4):884- 902. doi: 10.1002/anie.201702945. [36] Elliott SD, Dey G, Maimaiti Y. Classification of processes for the atomic layer deposition of metals based on mechanistic information from density functional theory calculations. J Chem Phys. 2017;146(5):052822. doi: 10.1063/ 1.4975085. [37] Gupta B, Hossain MA, Riaz A, Sharma A, Zhang D, Tan HH, et al. Recent advances in materials design using atomic layer deposition for energy applications. Adv Funct Mater. 2022;32(3):2109105. doi: 10.1002/adfm.202109105. [38] Shayesteh P, Tsyshevsky R, Urpelainen S, Rochet F, Bournel F, Gallet JJ, et al. Experimental and theoretical gas phase electronic structure study of tetrakis(dimethylamino) complexes of Ti(IV) and Hf(IV). J Electron Spectros Relat Phenomena. 2019;234(December 2018):80- 5. doi: 10.1016/ j.elspec.2019.05.016. [39] Burdastyh MV, Postolova SV, Proslier T, Ustavshikov SS, Antonov AV, Vinokur VM, et al. Superconducting phase transitions in disordered NbTiN films. Sci Rep. 2020;10(1):1- 7. doi: 10.1038/s41598- 020- 58192- 3.",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "[40] Janocha E, Pettenkofer C. ALD of ZnO using diethylzinc as metal- precursor and oxygen as oxidizing agent. Appl Surf Sci. 2011;257(23):10031- 5. doi: 10.1016/j.apsusc.2011.06.133. [41] Weimer AW. Particle atomic layer deposition. J Nanoparticle Res. 2019;21:9. doi: 10.1007/s11051- 018- 4442- 9. [42] Shibalov MV, Mumlyakov AM, Trofimov IV, Timofeeva ER, Sirotina AP, Pershina EA, et al. Multistep atomic layer deposition process for ultrathin superconducting NbN films with high critical current density on amorphous substrate. Supercond Sci Technol. 2021;34(8):085016. doi: 10.1088/1361- 6668/ac0d09. [43] Guerrero Sanchez L, Chen B, Takeuchi N, Zsara E. Role of oligomer structures in the surface chemistry of amidinate metal complexes used for atomic layer deposition of thin films. J Mater Res. 2020;35(7):720- 31. doi: 10.1557/jmr.2019.293. [44] Tsai FT, Chao CK, Jhong KJ, Chang RC. Characterization of oxide barrier layers prepared by atomic layer deposition. Adv Mech Eng. 2017;9(7):1- 7. doi: 10.1177/1687814017711809. [45] Yusup LL, Park JM, Mayangsari TR, Kwon YK, Lee WJ. Surface reaction of silicon chlorides during atomic layer deposition of silicon nitride. Appl Surf Sci. 2018;432:127- 31. doi: 10.1016/j.apsusc.2017.06.060. [46] Putkonen M, Sippola P, Svård L, Sajavaara T, Vartiainen J, Buchanan I, et al. Low- temperature atomic layer deposition of SiO2/Al2O3 multilayer structures constructed on self- standing films of cellulose nanofibrils. Philos Trans R Soc A Math Phys Eng Sci. 2018;376(2112):20170037. doi: 10.1098/rsta.2017.0037. [47] Filipovic L. Modeling and simulation of atomic layer deposition. Int Conf Simul Semicond Process Devices SISPAD. 2019;2019- Septe(68;3101):2019- 22. doi: 10.1109/SISPAD.2019.8870462. [48] Leskelä M, Ritala M. Atomic layer deposition (ALD): from precursors to thin film structures. Thin Solid Films. 2002;409(1):138- 46. doi: 10.1016/S0040- 6090(02)00117- 7. [49] Sultan SM, Clark OD, Masaud TB, Fang Q, Gunn R, Hakim MMA, et al. Remote plasma enhanced atomic layer deposition of ZnO for thin film electronic applications. Microelectron Eng. 2012;97:162- 5. doi: 10.1016/j.mee.2012.04.019. [50] Lee J, Lee JM, Oh H, Kim C, Kim J, Kim DH, et al. Inherently area- selective atomic layer deposition of SiO2 thin films to confer oxide versus nitride selectivity. Adv Funct Mater. 2021;31(33):1. doi: 10.1002/adfm.202102556. [51] Mackus AJM, Merkx MJM, Kessels WMM. From the bottom- up: toward area- selective atomic layer deposition with high selectivity t. Chem Mater. 2019;31(1):2- 12. doi: 10.1021/acs.chemmater.8b03454. [52] Mameli A, Merkx MJM, Karasulu B, Roozeboom F, Kessels WEMM, MacKus AJM. Area- selective atomic layer deposition of SiO2 using acetylacetone as a chemoselective inhibitor in an ABC- type cycle. ACS Nano. 2017;11(9):9303- 11. doi: 10.1021/acsnano.7b04701. [53] Kim H. Characteristics and applications of plasma enhanced- atomic layer deposition. Thin Solid Films. 2011;519(20):6639- 44. doi: 10.1016/j.tsf.2011.01.404. [54] Miikkulainen V, Vehkamäki M, Mizohata K, Hatanpää T, Ritala M. Highly material selective and self- aligned photoassisted atomic layer deposition of copper on oxide materials. Adv Mater Interfaces. 2021;8(11):800. doi: 10.1002/admi.202100014.",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "[55] French P, Krijnen G, Roozeboom F. Precision in harsh environments. Microsystems Nanoeng. 2016;10(2):16048. [56] Nguyen MT, Yonezawa T. Sputtering onto a liquid: interesting physical preparation method for multi- metallic nanoparticles. Sci Technol Adv Mater. 2018;19:883- 98. [57] Yabu H. Fabrication of honeycomb films by the breath figure technique and their applications. Sci Technol Adv Mater. 2018;31(19):802- 22. [58] Benetti D, Nouar R, Nechache R, Pepin H, Sarkissian A, Bosci F, et al. Combined magnetron sputtering and pulsed laser deposition of TiO2 and BFCO thin films. Sci Rep. 2017;7(1):2- 10. doi: 10.1038/s41598- 017- 02284- 0. [59] Grillo F, Kreutzer MT, van Ommen JR. Modeling the precursor utilization in atomic layer deposition on nanostructured materials in fluidized bed reactors. Chem Eng J. 2015;268(May):384- 98. doi: 10.1016/j.cej.2015.01.067. [60] Philip M. Nanostructured materials. Reports Prog Phys. 2001;64:297- 381. doi: 10.1016/j.mcat.2019.110646. [61] Jeevanandam J, Barhoum A, Chan YS, Dufresne A, Danquah MK. Review on nanoparticles and nanostructured materials: history, sources, toxicity and regulations. Beilstein J Nanotechnol. 2018;9(1):1050- 74. doi: 10.3762/bjnano.9.98. [62] Poothanari MA, Sabu T. Carbon nanostructures for electromagnetic shielding applications. Langmuir ACS J Surfaces colloids. 2019;32:1- 38. [63] Javey A, Kim H, Brink M, Wang Q, Ural A, Guo L, et al. High- x dielectrics for advanced carbon- nanotube transistors and logic gates. Nat Mater. 2002;1(4):241- 6. doi: 10.1038/nmat769. [64] Lee JS, Min B, Cho K, Kim S, Park J, Lee YT, et al. Al2O3 nanotubes and nanorods fabricated by coating and filling of carbon nanotubes with atomic- layer deposition. J Cryst Growth. 2003;254(3- 4):443- 8. doi: 10.1016/S0022- 0248(03)01203- X. [65] He Y, Piper DM, Gu M, Travis JJ, George SM, Lee SH, et al. In situ transmission electron microscopy probing of native oxide and artificial layers on silicon nanoparticles for lithium ion batteries. ACS Nano. 2014;8(11):11816- 23. doi: 10.1021/nn505523c. [66] Jinseong A, Changui A, Seokwoo J, Jungong P. Atomic layer deposition of inorganic thin films on 3D polymer nanonetworks. Appl Sci. 2017;9(39):429- 36. doi: 10.1021/acsami.7b01410. [67] Cheng TS, Summerfield A, Mellor CJ, Khlobystov AN, Eaves L, Foxon CT, et al. High- temperature molecular beam epitaxy of hexagonal boron nitride with high active nitrogen fluxes. Materials (Basel). 2018;11(7):1119. doi: 10.3390/ma11071119. [68] Shahmohammadi M, Mukherjee R, Takoudis CG, Diwekar UM. Optimal design of novel precursor materials for the atomic layer deposition using computer- aided molecular design. Chem Eng Sci. 2021;234:116416. doi: 10.1016/j.ces.2020.116416. [69] van Mourik T, Buhl M. Density functional theory across chemistry, physics and biology subject areas. London, United Kingdom: Royal Society Publishing; 2014.",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "[70] Becker M, Sierka M. Atomistic simulations of plasma- enhanced atomic layer deposition. Materials (Basel). 2019;12(16):1- 11. doi: 10.3390/ma12162605. [71] Hu W, Chen M. Editorial. Adv Density Funct Theory Beyond Comput Chem. 2021;9(July):1- 4. doi: 10.3389/fchem.2021.705762. [72] Nagy A, Kokko K, Huhtala J, Björkman T, Vitos L. Spherical density functional theory. Debrecen, Hungary: University of Debrecen; 2020 (September).[73] Nagy A. Fisher information and density functional theory. Int Quantum Chem. 2021;March:1- 18. doi: 10.1002/qua.26679. [74] Morin J, Pelletier J, editors. Density functional theory principles. Applications and Analysis. New York: Nova Science Publishers, Inc; 2013. [75] van Mourik T, Buhl M, Gaigeot M- P. Density functional theory across chemistry, physics and biology. Philos Trans R Soc. 2014;372:1- 5. [76] Sun J, Furness JW, Zhang Y. Density functional theory. Amsterdam, Netherlands: Elsevier Inc.; 2018. doi: 10.1016/B978- 0- 12- 813651- 5.00004- 8. [77] Ali AA, Hashim AM. Density functional theory study of atomic layer deposition of zinc oxide on graphene. Nanoscale Res Lett. 2015;10(1):1008. doi: 10.1186/s11671- 015- 1008- y.[78] Sholl DS, Steckel JA. Density functional theory: a practical introduction. New Jersey: John Wiley & Sons, Inc; 2009. [79] Burton HGA. Hartree- Fock critical nuclear charge in two- electron atoms. J Chem Phys. 2021;154(11):1- 7. doi: 10.1063/5.0043105. [80] Condon JB. Density functional theory (DFT). Surf Area Porosity Determ. Physisorption. Amsterdam, Netherlands: Elsevier B.V.; 2020 p. 335- 60. doi: 10.1016/b978- 0- 12- 818785- 2.00007- 6. [81] Penz M, van Leeuwen R. Density- functional theory on graphs. J Chem Phys. 2021;155(24):244111. doi: doi: 10.1063/5.0074249. [82] Becke AD. Density- functional thermochemistry. III. The role of exact exchange. J Chem Phys. 1993;98(7):5648- 52. doi: 10.1063/1.464913. [83] Marrazzini G, Giovannini T, Scavino M, Egidi F, Cappelli C, Koch H. Multilevel density functional theory. J Chem Theory Comput. 2021;17(2):791- 803. doi: 10.1021/acs.jctc.0c00940. [84] Cohen ML, Louie SG. Density functional theory (DFT). Fundam Condens Matter Phys. 2019;14:141- 58. doi: 10.1017/cbo9781139031783.009. [85] Becke AD. A new mixing of Hartree- Fock and local density- functional theories. J Chem Phys. 1993;98(2):1372- 7. doi: 10.1063/1.464304. [86] Maylis O, Neese F, Dimitrios P. Density functional theory. Photosynth Res. 2009;102:443- 53. doi: 10.1007/s11120- 009- 9404- 8. [87] Hasnip PJ, Refson K, Probert MIJ, Yates JR, Clark SJ, Pickard CJ. Density functional theory in the solid state. London, United Kingdom: Royal Society Publishing; 2014. [88] Hoffmann M, Ernst A, Hergert W, Antonov VN, Adeagbo WA, Geilhufe RM, et al. Magnetic and electronic properties of complex oxides from first- principles. Phys Status Solidi Basic Res. 2020;257(7):800. doi: 10.1002/pssb.201900671. [89] Grant PM. Challenges confronting high temperature superconducting materials: from nanoscale theories to exascale energy applications. Mater Res Soc Symp Proc. 2014;1684:1684. doi: 10.1557/ool.2014.868. [90] Filippatos PP, Kelaidis N, Vasilopoulou M, Davazoglou D, Lathiotakis NN, Chroneos A. Defect processes in F and Cl doped anatase TiO2. Sci Rep. 2019;9(1):1- 10. doi: 10.1038/s41598- 019- 55518- 8. [91] Weckman T, Shirazi M, Elliott SD, Laasonen K. Kinetic Monte Carlo study of the atomic layer deposition of zinc oxide. J Phys Chem C. 2018;122(47):27044- 58. doi: 10.1021/acs.jpcc.8b06909. [92] Wakhare SY, Deshpande MD. The structural, electronic and optical properties of in- doped ZnO Monolayer: a first principles study. AIP Conf Proc. 2021;2335(March):2- 8. doi: 10.1063/5.0046130. [93] Noh J, Osman Ol, Aziz SG, Winget P, Bredas JL. A density functional theory investigation of the electronic structure and spin moments of magnetite. Sci Technol Adv Mater. 2014;15(4):044202. doi: 10.1088/1468- 6996/15/4/044202. [94] Kelaidis N, Bousiadi S, Zervos M, Chroneos A, Lathiotakis NN. Electronic properties of the Sn1- xPbxO alloy and band alignment of the SnO/PbO system: a DFT study. Sci Rep. 2020;10(1):1- 8. doi: 10.1038/s41598- 020- 73703- y.[95] Yue Y, Zhang J, Tang X, Xu S, Wang X. Thermal transport across atomic- layer material interfaces. Nanotechnol Rev. 2015;4(6):533- 55. doi: 10.1515/intrev- 2014- 0024. [96] Ande CK, Knoops HCM, De Peuter K, Van Drounen M, Elliott SD, Kessels WMM. Role of surface termination in atomic layer deposition of silicon nitride. J Phys Chem Lett. 2015;6(18):3610- 4. doi: 10.1021/acs.jpclett.5b01596. [97] Blöchl P. Projector augmented- wave method. Phys Rev B. 1994;50:17953- 79. [98] Kresse G. From ultrasoft pseudopotentials to the projector augmented- wave method. Phys Rev B. 1999;59:1758- 75. [99] Kresse G, Hafner J. Ab initio molecular dynamics for liquid metals. Phys Rev B. 1993;47:558- 5616. [100] Kresse G, Furthmüller J. Efficiency of ab- initio total energy calculations for metals and semiconductors using a plane- wave basis set. Comput Mater Sci. 1996;6:15- 50. [101] Zhao Y, Truhlar DG. The M06 suite of density functionals for main group thermochemistry, thermochemical kinetics, noncovalent interactions, excited states, and transition elements: Two new functionals and systematic testing of four M06- class functionals and 12 other function. Theor Chem Acc. 2008;120(1- 3):215- 41. doi: 10.1007/s00214- 007- 0310- x.[102] Frisch MJ, Trucks GW, Schlegel HB, Scuseria GE, Robb MA, Cheeseman JR et al. Gaussian 0.9, Revision B01. Wallingford CT: Gaussian, Inc; 2016. [103] Hay PJ, Wadt WR. Ab initio effective core potentials for molecular calculations. Potentials for the transition metal atoms Sc to Hg. J Chem Phys. 1985;82(1):270- 83. doi: 10.1063/1.448799. [104] Hay PJ, Wadt WR. Ab initio effective core potentials for molecular calculations. Potentials for K to Au including the outermost core orbitale. J Chem Phys. 1985;82(1):299- 3. doi: 10.10.1063/1.448975. [105] Wadt WR, Hay PJ. Ab initio effective core potentials for molecular calculations. Potentials for main group elements Na to Bi. J Chem Phys. 1985;82(1):284- 98. doi: 10.1063/1.448800.",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "[90] Filippatos PP, Kelaidis N, Vasilopoulou M, Davazoglou D, Lathiotakis NN, Chroneos A. Defect processes in F and Cl doped anatase TiO2. Sci Rep. 2019;9(1):1- 10. doi: 10.1038/s41598- 019- 5551- 8. [91] Weckman T, Shirazi M, Elliott SD, Laasonen K. Kinetic Monte Carlo study of the atomic layer deposition of zinc oxide. J Phys Chem C. 2018;122(47):27044- 58. doi: 10.1021/acs.jpcc.8b06909. [92] Wakhare SY, Deshpande MD. The structural, electronic and optical properties of in- doped ZnO Monolayer: a first principles study. AIP Conf Proc. 2021;2335(March):2- 8. doi: 10.1063/5.0046130. [93] Noh J, Osman Ol, Aziz SG, Winget P, Bredas JL. A density functional theory investment of the electronic structure and spin moments of magnetite. Sci Technol Adv Mater. 2014;15(4):044202. doi: 10.1088/1468- 6996/15/4/044202. [94] Kelaidis N, Bousiadi S, Zervos M, Chroneos A, Lathiotakis NN.Electronic properties of the Sn1- xPbxO alloy and band alignment of the SnO/PbO system: a DFT study. Sci Rep. 2020;10(1):1- 8. doi: 10.1038/s41598- 020- 73703- y.[95] Yue Y, Zhang J, Tang X, Xu S, Wang X. Thermal transport across atom- layer material interfaces. Nanotechnol Rev. 2015;4(6):533- 55. doi: 10.1515/intrev- 2014- 0024. [96] Ande CK, Knoops HCM, De Peuter K, Van Drounen M, Elliott SD, Kessels WMM. Role of surface termination in atomic layer deposition of silicon nitride.J Phys Chem Lett. 2015;6(18):3610- 4. doi: 10.1021/acs.jpclett.5b01596. [97] Blöchl P. Projector augmented- wave method. Phys Rev B. 1994;50:17953- 79. [98] Kresse G. From ultrasoft pseudopotentials to the projector augmented- wave method. Phys Rev B. 1999;59:1758- 75. [99] Kresse  $\\mathbb{G},$  Hafner J. Ab initio molecular dynamics for liquid metals. Phys Rev B. 1993;47:558- 56161. [100] Kresse G, Furthmüller J. Efficiency of ab- initio total energy calculations for metals and semiconductors using a plane- wave basis set. Comput Mater Sci. 1996;6:15- 50. [101] Zhao Y, Truhlar DG. The M06 suite of density functionals for main group thermochemistry, thermochemical kinetics, noncovalent interactions, excited states,and transition elements: Two new functionals and systematic testing of four M06- class functionals and 12 other function. Theor Chem Acc. 2008;120(1- 3):215- 41. doi: 10.1007/s00214- 007- 0310- x.[102] Frisch MJ, Trucks GW, Schlegel HB Scuseria GE, Robb MA, Cheeseman JR et al. Gaussian 0.9, Revision B01. Wallingford CT: Gaussian, Inc; 2016. [103] Hay PJ, Wadt WR. Ab initio effective core potentials for molecular calculations. Potentials for the transition metal atoms Sc to Hg. J Chem Phys. 1985;82(1):270- 83. . doi: 10.1063/1.448799. [104] Hay PJ, Wadt WR. Ab initio effective core potentials for molecular calculations. Potentials for K to Au including the outermost core orbitale. J Chem Phys. 1985;82(1):299- 3. doi: 10.10.1063/1.44897s.[105] Wadt WR, Hay PJ. Ab initio effective core potentials for molecular calculations. Potentials for main group elements Na to Bi. J Chem Phys. 1985;82(1):284- 98. doi: 10.1063/1.448800.",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "[106] Alam MK, Saito S, Takaba H. Modeling of equilibrium conformation of Pt2Ru3 nanoparticles using the density functional theory and Monte Carlo simulations. J Mater Res. 2017;32(8):1573- 81. doi: 10.1557/jmr.2017.57. [107] Gasteiger HA, Markovic NM, Ross P. H2 and CO electrooxidation on well- characterized Pt, Ru, and Pt- Ru: rotating disk electrode studies of the pure gases including temperature effects. J Phys Chem. 1995;99:8290- 301. [108] Leiva EPM, Santos E, Iwasita T. The effect of adsorbed carbon monoxide on hydrogen adsorption and hydrogen evolution on platinum. J Electroanal Chem Interfacial Electrochem. 1986;315:357- 67. [109] Petrii OA, Tsirlina G. Electrocatalytic activity prediction for hydrogen electrode reaction: intuition, art, science. Electrochim Acta. 1994;39:1739- 47. [110] Krausa M, Vielstich W. Study of the electrocatalytic influence of Pt/Ru and Ru on the oxidation of residues of small organic molecules. J Electroanal Chem. 1994;51:379- 85. [111] Frelink T, Visscher W, Vanveen JA. On the role of Ru and Sn as promoters of methanol electro- oxidation over Pt. Surf Sci. 1995;8:353- 60. [112] Tong YY, Kim HS, Babu PK, Waszczuk P, Wieckowski A, Oldfield E. An NMR investigation of CO tolerance in a Pt/Ru fuel cell catalyst. J Am Chem Soc. 2002;124:468- 73. [113] Meng L, He J, Zhou X, Deng K, Xu W, Kidkhunthod P, et al. Atomic layer deposition triggered Fe- In- S cluster and gradient energy band in ZnInS photoanode for improved oxygen evolution reaction. Nat Commun. 2021;12(1):1- 9. doi: 10.1038/s41467- 021- 25609- 0. [114] Perdew JP, Burke K, Ernzerhof M. Generalized gradient approximation made simple. Phys Rev Lett. 1996;78:1396. [115] Chadi D. Special points for Brillouin- zone integrations. Phys Rev B Condens Matter. 1977;16:1746- 77. [116] Grimme S, Antony J, Ehrlich S, Krieg H. A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT- D) for the 94 elements H- Pu. J Chem Phys. 2010;132:154104. [117] Joo S, Seong A, Kwon O, Kim K, Lee JH, Gorte RJ, et al. Highly active dry methane reforming catalysts with boosted in situ grown Ni- Fe nanoparticles on perovskite via atomic layer deposition. Sci Adv. 2020;6(35):1- 9. doi: 10.1126/sciadv.abb1573. [118] Fu Y. Surface electronic structure reconfiguration of hematite nanorods for efficient photoanodic water oxidation. Sol Rrl. 2020;4:1900349. [119] Xu Z, Zhao G, Qiu L, Zhang X, Qiao G, Ding F. Molecular dynamics simulation of graphene sinking during chemical vapor deposition growth on semi- molten Cu substrate. Npj Comput Mater. 2020;6(1):1- 10. doi: 10.1038/s41524- 020- 0281- 1. [120] Goulas A, van Ommen JR. Scalable production of nanostructured particles using atomic layer deposition. KONA Powder Part J. 2014;31(1):234- 46. doi: 10.14356/kona.2014013. [121] Afshar A, Cadien KC. Growth mechanism of atomic layer deposition of zinc oxide: a density functional theory approach. Appl Phys Lett. 2013;103(25):235- 42. doi: 10.1063/1.4852655. [122] Ren J. Initial growth mechanism of atomic layer deposition of ZnO on the hydroxylated Si(1 0 0)- 2 1: a density functional theory study. Appl Surf Sci. 2009;255(11):5742- 5. doi: 10.1016/j.apsusc.2008.12.077. [123] Ren J. Initial growth mechanism of atomic layer deposition of ZnO on the hydroxylated Si(100)- 2x1: A density functional theory study. Appl Surface Sci. 2009;255(11):5742- 55. [124] Delley A. An all- electron numerical method for solving the local density functional for polyatomic molecules. J Chem Phys. 1990;92:508- 14. [125] Muszynski R, Seger B, Kamat P. Decorating graphene sheets with gold nanoparticles. J Phys Chem C. 2008;112(5):263- 6. [126] Kim YJ, Hadiyawarman A, Yoon A, Kim M. Hydrothermally grown ZnO nanostructures on few layer graphene sheets. Nanotechnology. 2011;22(24):5603- 11. [127] Kim YJ, Yoo H, Lee CH, Park JB, Baek H, Kim M. Position- and morphology- controlled ZnO nanostructures grown on graphene layers. Adv Mater. 2012;24:5565- 970. [128] Mohlala LM, Jen TC, Olubambi PA. Thermal stability and reactivity of titanium halide precursors for the atomic layer deposition of TiO2 on a Pt(111) surface. Procedia CIRP. 2020;93:9- 13. doi: 10.1016/j.proci.2020.05.156. [129] Sanders JM, Misra M, Mustard TJL, Giesen DJ, Zhang T, Shelley J, et al. Characterizing moisture uptake and plasticization effects of water on amorphous amylose starch models using molecular dynamics methods. Carbohydr Polym. 2021;252:117161. doi: 10.1016/j.carbpol.2020.117161. [130] Afzal MAF, Browning AR, Goldberg A, Holls MD, Gavartin JL, Morisato T, et al. High- throughput molecular dynamics simulations and validation of thermophysical properties of polymers for various applications. ACS Appl Polym Mater. 2021;3(2):620- 30. doi: 10.1021/acs.apm.0c00524. [131] Bochevarov AD, Harder E, Hughes TF, Greenwood JR, Braden DA, Philipp DM, et al. Jaguar: a high- performance quantum chemistry software program with strengths in life and materials sciences. Int J Quantum Chem. 2013;113(18):2110- 42. doi: 10.1002/qua.24481. [132] Mustard T, Kwak H, Goldberg A, Gavartin J, Morisato T, Yoshidome D, et al. Quantum mechanical simulation for the analysis, optimization and accelerated development of precursors and processes for atomic layer deposition (ALD). J Korean Ceram Soc. 2016;53(3):317- 24. [133] Elliott SDS. Atomic- scale simulation of ALD chemistry. Semicond Sci Technol. 2012;27(7):074008. doi: 10.1088/0268- 1242/27/7/074008. [134] Murray C, Elliott SD. Density functional theory predictions of the composition of atomic layer deposition- grown ternary oxides. ACS Appl Mater Interfaces. 2013;5(9):3704- 15. doi: 10.1021/am400310p. [135] Lee Y, Kolesov G, Yao X, Kaviras E, Cho K. Nonadiabatic dynamics of cobalt tricarbonyl nitrosyl for ligand dissociation induced by electronic excitation. Sci Rep. 2021;11(1):8997. doi: 10.1038/s41598- 021- 882432. [136] Dkhissi A, Estève A, Mastail C, Olivier S, Mazaleyrat G, Jeloaica L, et al. Multiscale modeling of the atomic layer deposition of HfO2 thin film grown on silicon: how to deal with a kinetic monte carlo procedure. J Chem Theory Comput. 2008;4(11):1915- 27. doi: 10.1021/cr8001249. [137] Karpina V, Lazorenko V, Lashkarev C, Dobrowolski V, Kopylova L, Baturin V, et al. Zinc oxide - analogue of GaN with new perspective possibilities. Cryst Res Technol. 2004;39:980- 92.",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "[138] Morkoc H, Ozgur U. Zinc oxide: fundamentals, materials and device technology. London, United Kingdom: Scientific Reports; 2008. [139] Moezzi A, McDonagh AM, Cortie M. Zinc oxide particles: synthesis, properties and applications. Chem Eng J. 2012;185:1- 22. [140] Sun QQ, Chen W, Ding SJ, Xu M, Zhang DW, Wang LK. Effects of chlorine residue in atomic layer deposition hafnium oxides: a density- functional- theory study. Appl Phys Lett. 2007;91(2):235- 42. doi: 10.1063/1.2756108. [141] Verma P, Truhlar DG. Status and challenges of density functional theory. Trends Chem 2020;3(4):302- 18. doi: 10.1016/ j.trechm.2020.02.005. [142] Erik Donovan H. Multi- configurational density functional theory: progress and challenges. Quantum Chem Dyn Excit States. 2020;121:47- 75. doi: 10.1002/9781119417774. ch3. [143] Li C, Zheng X, Su NQ, Yang W. Localized orbital scaling correction for systematic elimination of delocalization error in density functional approximations. Natl Sci Rev. 2018;5(2):203- 15. doi: 10.1093/nsr/nwx111. [144] Parr RG. Density functional theory of atoms and molecules. In: K Fukui and B Pullman, editors. Horizons of quantum chemistry: proceedings of the third international congress of quantum chemistry held at Kyoto, Japan. October 29- November 3, 1979. Dordrecht: Springer Netherlands; 1980. p. 5- 15. [145] Cohen AJ, Mori- Sanchez P, Yang W. Challenges for density functional theory. Chem Rev. 2012;112(1):289- 320. doi: 10.1021/cr200107z. [146] Shi Y, Wasserman A. Inverse Kohn- Sham density functional theory: progress and challenges. J Phys Chem Lett. 2021;12(22):5308- 18. doi: 10.1021/acs.jpclett.1c00752. [147] Jacob CR, Neugebauer J. Subsystem density- functional theory. Wiley Interdiscip Rev Comput Mol Sci. 2014;4(4):325- 62. doi: 10.1002/wcms.1175. [148] Wesolowski TA, Shedge S, Zhou X. Frozen- density embedding strategy for multilevel simulations of electronic structure. Chem Rev. 2015;115(12):5891- 928. doi: 10.1021/ cr500502v. [149] Goodpaster JD, Ananth N, Manby FR, Miller TF. Exact nonadditive kinetic potentials for embedded density functional theory. J Chem Phys. 2010;133(8):084103. doi: 10.1063/1.3474575. [150] Nafziger J, Wu Q, Wasserman A. Molecular binding energies from partition density functional theory. J Chem Phys. 2011;135(23):234101. doi: 10.1063/1.3667198. [151] Huang C, Pavone M, Carter EA. Quantum mechanical embedding theory based on a unique embedding potential. J Chem Phys. 2011;134(15):154110. doi: 10.1063/1.3577516. [152] Frenkel D, Smit B. Understanding molecular simulations: from algorithms to applications. 2nd edn. Florida: Academic Press; 2002. [153] Chavan A. Recent advances and development in atomic layer deposition. Int J Great Res Thoughts. 2021;9(6):895- 8. [154] Xiao H, Jörg S, Stefan ES, Thomas G. Surface chemistry of copper metal and copper oxide atomic layer deposition from copper(II) acetylacetonate: a combined first- principles and reactive molecular dynamics study. Phys Chem Chem Phys. 2015;9(6):966- 73. [155] Renner J, Schmidt M, de las Heras D. Custom flow in molecular dynamics. Phys Rev Res. 2021;3(1):013281. doi: 10.1103/physrevresearch.3.013281.",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "[156] Pascal B. Multiscale molecular dynamics simulation of plasma processing: application to plasma sputtering. Front Phys. 2018;6(59):1- 7. doi: 10.3389/fphy.2018.00059. [157] Sator A. Introduction to practice of molecular simulation: molecular dynamics, monte carlo, Brownian dynamics, lattice boltzmann and dissipative particle dynamics. London: Elsevier Insights Inc.; 2011. [158] Hollingsworth SA, Dror RO. Molecular dynamics simulation for all. Neuron. 2018;99(6):1129- 43. doi: 10.1016/ j.neuron.2018.08.011. [159] Heo L, Feig M. Experimental accuracy in protein structure refinement via molecular dynamics simulations. Proc Natl Acad Sci U S A. 2018;115(52):13276- 81. doi: 10.1073/ pnas.1811364115. [160] Ilyin DV, Goddard WA, Oppenheim JJ, Cheng T. First- principles- based reaction kinetics from reactive molecular dynamics simulations: application to hydrogen peroxide decomposition. Proc Natl Acad Sci U S A. 2019;116(37):18202- 8. doi: 10.1073/pnas.1701383115. [161] Sun J, Liu P, Wang M, Liu J. Molecular dynamics simulations of melting iron nanoparticles with/without defects using a reaxff reactive force field. Sci Rep. 2020;10(1):1- 11. doi: 10.1038/s41598- 020- 60416- 5. [162] Senftle TP, Hong S, Islam M. The ReaxFF reactive force- field: development, applications and future directions. NPJ Comput Mater. 2016;2:15011. [163] Kim Y, Lee J, Yeom M. Strengthening effect of single- atomic- layer graphene in metal- graphene nanolayered composites. Nat Commun. 2013;4(July 2):2114. [164] Kim EL, Chagarov E, Cagnon I. Atomically abrupt and unpinned Al203 In0.53Ga0.47As interfaces: experiment and simulation. J Appl Phys. 2009;106:124508. [165] Hu X, Schuster J, Schulz S. Surface chemistry of copper metal and copper oxide atomic layer deposition from copper(II) acetylacetonate: a combined first- principles and reactive molecular dynamics study. Phys Chem Chem Phys. 2015;17:26892- 902. [166] Heiranian M, Farimani AB, Aluru N. Water desalination with a single- layer MoS(2) nanopore. Nat Commun. 2015;6:8616. [167] Abou- Chaaya A, Le- Poitevin M, Cabello- Aguilar S. Enhanced ionic transport mechanism by gramicid in a confined inside nanopores tuned by atomic layer deposition. J Phys Chem C. 2013;117(July 25):15306- 15. [168] Leimkuhler B, Matthews C. Molecular dynamics: with deterministic and stochastic numerical methods. Cham: Springer International Publishing; 2015. [169] Hospital A, Gofi JR, Orozco M. Molecular dynamics simulations: advances and applications. Adv Appl Bioinf Chem. 2015;8:37- 47. [170] Mauchamp NA, Isobe M, Hamaguchi S. Evaluation of nickel self- sputtering yields by molecular- dynamics simulation. J Vac Sci Technol A. 2021;39(4):043005. doi: 10.1116/ 6.0000979. [171] Cai W, Li J, Uberuaga BP, Yip S. Molecular dynamics. Compr Nucl Mater. 2020;November 2019:573- 94. doi: 10.1016/ b978- 0- 12- 803581- 8.11724- 2. [172] Polanski J. Molecular dynamics. Vol. 4. Amsterdam, Netherlands: Elsevier Inc.; 2009. [173] Gunsteren WE, Berendsen HJ. Computer simulation of molecular dynamics: methodology, applications, and perspectives in chemistry. Angew Chem Int Ed Engl. 1990;29:992- 1023.",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "[174] Bernetti M, Bertazzo M, Masetti M. Data- driven molecular dynamics: a multifaceted challenge. Pharmaceuticals. 2020;13(9):1- 26. doi: 10.3390/ph13090253. [175] Perricone U, Gulotta MR, Lombino J, Parrino B, Cascioferro S, Diana P, et al. An overview of recent molecular dynamics applications as medicinal chemistry tools for the undrug- gable site challenge. Medchemcomm. 2018;9(6):920- 36. doi: 10.1039/c8md00164a. [176] Choe S, Chang R, Jeen J, Violi A. Molecular dynamics simulation study of a pulmonary surfactant film interacting with a carbonaceous nanoparticle. Biophys J. 2008;95(9):4102- 14. doi: 10.1529/biophysj.107.123076. [177] Simpson JH. Molecular dynamics. Org Struct Determ Using 2- D NMR Spectrosc. Amsterdam, Netherlands: Elsevier Inc.; 2012. p. 185- 97. doi: 10.1016/b978- 0- 12- 384970- 0.00008- 9. [178] Tampieri A, Szabo M, Medina F, Gulyas H. A brief introduction to the basics of NMR spectroscopy and selected examples of its applications to materials characterization. Phys Sci Rev. 2021;6(1):1- 41. doi: 10.1515/psr- 2019- 0086. [179] Komanduri R, Raff LM. A review on the molecular dynamics simulation of machining at the atomic scale. Proc Inst Mech Eng Part B J Eng Manuf. 2001;215(12):1639- 72. doi: 10.1177/095440540121501201. [180] Brooks- Bartlett JC, Garman EF. The nobel science: one hundred years of crystallography. Interdiscip Sci Rev. 2015;40(3):244- 64. doi: 10.1179/03080188152.000000000116. [181] Amar J. The Monte Carlo method in science and engineering. Comput Sci Eng. 2006;8:8- 19. doi: 10.1109/MCSE.2006.34. [182] Matero R, Rahtu A, Ritala M, Leskelä M, Sajavaara T. Effect of water dose on the atomic layer deposition rate of oxide thin films. Thin Solid Films. 2000;368:1- 7. [183] Du Y, George SM. Molecular layer deposition of nylon 66 films examined using in situ FTIR spectroscopy. J Phys Chem C. 2007;111:8509- 717. [184] Yoshimura T, Tatsuura S, Sotoyama W. Polymer films formed with monolayer growth steps by molecular layer deposition. Appl Phys Lett. 1991;59:482- 4. [185] Warfield BM, Anderson PC. Molecular simulations and Markov state modeling reveal the structural diversity and dynamics of a theophylline- binding RNA aptamer in its unbound state. PLoS One. 2017;12(4):0176229. doi: 10.1371/journal.pone.0176229. [186] Hu Z, Shi J, Heath Turner C. Molecular dynamics simulation of the Al203 film structure during atomic layer deposition. Mol Simul. 2009;35(4):270- 9. doi: 10.1080/08927020802468372. [187] Delabie A, Sioncke S, Rip J, Van Elshocht S, Pourtois G, Mueller M, et al. Reaction mechanisms for atomic layer deposition of aluminum oxide on semiconductor substrates. J Vac Sci Technol A Vacuum, Surfaces, Film. 2012;30(1):01A127. doi: 10.1116/1.3664090. [188] Grillo ME, Andzelm JW, Govind N, Fitzgerald G, Stark KB. 10. Computational Materials Science with Materials Studio. In: Hergert W, Dane M, Ernst A, editors. Computational Materials Science: From Basic Principles to Material Properties. Berlin, Heidelberg: Springer Berlin Heidelberg; 2004. p. 207- 21. doi: 10.1007/978- 3- 540- 39915- 5_10. [189] Bo H, Jinping W, Chenggang Z, Jiaye L, Xinjian L, John ATN, et al. Ab initio molecular dynamics simulation on the aggregation of a Cu monolayer on a WN(001) surface. J Phys Chem C. 2008;112(26):9798- 802. [190] Fang G, Chen S, Li A, Jing M. Surface pseudorotation in Lewis- base- catalyzed atomic layer deposition of  $\\mathrm{SiO}_2$ : static transition state search and Born- Oppenheimer molecular dynamics simulation. J Phys Chem. 2012;116:26436- 48. [191] Guo Y, Wang L. Noble metal alloy thin films by atomic layer deposition & rapid Joule heating. London, United Kingdom: Scientific Reports; 2021. [192] Plimpton SJ, Thompson AP. Computational aspects of many- body potentials. Cambridge, England: Cambridge University Press; 2012. [193] Plimpton SJ. Fast parallel algorithms for short- range molecular dynamics. J Comput Phys. 1995;117:1- 19. doi: 10.1006/jcph.1995.1039. [194] Sheng HW, Kramer MJ, Cadien A, Fujita T, Chen MW. Highly optimized embedded- atom method potentials for fourteen fcc metals. Phys Rev. 2011;83:134118. [195] Zhang L, Yan H, Zhu G, Liu S, Gan Z. Molecular dynamics simulation of aluminum nitride deposition: temperature and N: al ratio effects. R Soc Open Sci. 2018;5(8):180629. doi: 10.1098/rsos.180629. [196] Tungare M, Shi Y, Tripathi N, Suvama P, Shahedipour- Sandvik F. A Tersoff- based interatomic potential for Wurtzite AlN. Phys Status Solidi. 2011;208:1569- 72. doi: 10.1002/pssa.201001086. [197] Liu JT, Duan H. Molecular dynamics simulation of structures and melting behaviours of iridium clusters with different potentials. Acta Phys Sin. 2009;58(7):4826- 934. [198] Puri P, Yang V. Effect of voids and pressure on melting of nano- particulate and bulk aluminum. J Nanoparticle Res. 2009;11(5):1117- 27. [199] Shen T, Meng W, Wu Y, Lu X. Size dependence and phase transition during melting of fcc- Fe nanoparticles: a molecular dynamics simulation. 2013;277:7- 14. [200] Zhou Y. The distance fluctuation criterion for melting: comparison of square- well and Morse potential models for clusters and homopolymers. J Chem Phys. 2002;116(5):2323- 9. [201] Venturoli M. Time scale challenges in molecular dynamics. AIP Conf Proc. 2009;1167(2009):73- 86. doi: 10.1063/1.3246416. [202] Sosso GC, Chen J, Cox SJ, Fitzner M, Pedevilla P, Zen A, et al. Crystal nucleation in liquids: open questions and future challenges in molecular dynamics simulations. Chem Rev. 2016;116(12):7078- 116. doi: 10.1021/acs.chemrev.5b00744. [203] Kelton K, Greer A. In nucleation in condensed matter: applications in materials and biology. In: Kelton K, Greer A, editors. Crystal glass. Oxford: Pergamon Materials Series; 2010. p. 279- 329. [204] Sneha P, Priya Doss CG. Molecular dynamics: new frontier in personalized medicine. Vol. 102, 1. Cambridge, England: Cambridge University Press; 2016, doi: 10.1016/bs.apc5b.2015.09.004. [205] Feig M, Nawrocki G, Yu I, Wang PH, Sugita Y. Challenges and opportunities in connecting simulations with experiments via molecular dynamics of cellular environments. J Phys Conf Ser. 2018;1036(1):10- 21. doi: 10.1088/1742- 6596/1036/1/012010. [206] Kumar A, Grupcev V, Berrada M, Fogarty JC, Tu YC, Zhu X, et al. DCMS: a data analytics and management system for molecular simulation. J Big Data. 2015;2(1):1- 22. doi: 10.1186/s40537- 014- 0009- 5.",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 31
+    }
+]

@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Selectively Nitrogen Doped ALD-IGZO TFTs with Extremely High Mobility and Reliability</title>
+				<funder ref="#_smwpmqc">
+					<orgName type="full">unknown</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-06-23">June 23, 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dong-Gyu</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hyuk</forename><surname>Choi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yoon-Seo</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dong-Hyeon</forename><surname>Lee</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hye-Jin</forename><surname>Oh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ju</forename><forename type="middle">Hyeok</forename><surname>Lee</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Junghwan</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Seunghee</forename><surname>Lee</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bongjin</forename><surname>Kuh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Taewon</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hyun</forename><forename type="middle">You</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jin-Seong</forename><surname>Park</surname></persName>
+						</author>
+						<title level="a" type="main">Selectively Nitrogen Doped ALD-IGZO TFTs with Extremely High Mobility and Reliability</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2023-06-23">June 23, 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">65E479644C7323182B6539423E0E70FF</idno>
+					<idno type="DOI">10.1021/acsami.3c05678</idno>
+					<note type="submission">Received: April 20, 2023 Accepted: June 8, 2023</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>atomic layer deposition (ALD)</term>
+					<term>N 2 O plasma reactant</term>
+					<term>nitrogen (N) doping</term>
+					<term>IGZO</term>
+					<term>oxide TFT</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Achieving high mobility and reliability in atomic layer deposition (ALD)-based IGZO thin-film transistors (TFTs) with an amorphous phase is vital for practical applications in relevant fields. Here, we suggest a method to effectively increase stability while maintaining high mobility by employing the selective application of nitrous oxide plasma reactant during plasma-enhanced ALD (PEALD) at 200 °C process temperature. The nitrogen-doping mechanism is highly dependent on the intrinsic carbon impurities or nature of each cation, as demonstrated by a combination of theoretical and experimental research. The Ga 2 O 3 subgap states are especially dependent on plasma reactants. Based on these insights, we can obtain highperformance indium-rich PEALD-IGZO TFTs (threshold voltage: -0.47 V; field-effect mobility: 106.5 cm 2 /(V s); subthreshold swing: 113.5 mV/decade; hysteresis: 0.05 V). In addition, the device shows minimal threshold voltage shifts of +0.45 and -0.10 V under harsh positive/negative bias temperature stress environments (field stress: ±2 MV/cm; temperature stress: 95 °C) after 10000 s.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>The semiconductor industry is expanding toward artificial intelligence (AI), cloud data centers, and high-bandwidth memory processing in memory (HBM-PIM). <ref type="bibr" target="#b5">1,</ref><ref type="bibr" target="#b6">2</ref> The design of high-performance field-effect transistors (FETs) with lowvoltage operation, high field-effect mobility (μ FE ), and low leakage current has propelled the development of relevant fields. Oxide-based thin-film transistors (TFTs) are garnering increased attention owing to their steep subthreshold swing (SS) and extremely low leakage current. <ref type="bibr" target="#b7">3,</ref><ref type="bibr" target="#b8">4</ref> Although oxidebased TFTs are known to restrict μ FE (∼30 cm 2 /(V s)), numerous research groups have demonstrated exceptional μ FE values exceeding 100 cm 2 /(V s). <ref type="bibr" target="#b9">5,</ref><ref type="bibr" target="#b10">6</ref> The high stability of oxide-based TFTs is another prerequisite for their widespread application. Many groups have reported that the gate insulator (GI) plays a crucial role in determining the device stability. One crucial factor to consider is the band offset between the GI and oxide semiconductor, as it determines the energy barrier for charge carriers to move across the interface. <ref type="bibr" target="#b11">7,</ref><ref type="bibr" target="#b12">8</ref> Moreover, because the GI is deposited on the active layer in the top gate structure, the stability of oxide semiconductors is highly dependent on the GI process parameters. <ref type="bibr" target="#b13">[9]</ref><ref type="bibr" target="#b14">[10]</ref><ref type="bibr" target="#b15">[11]</ref> Therefore, selecting appropriate GI materials and optimizing the process parameters of the GI deposition are necessary to ensure high stability. However, achieving high mobility and stability is challenging, as the overall properties of oxide-based TFTs are compromised. Typically, the electron mobility of oxide semiconductors (e.g., IGZO) is an apparent function of the indium cation content. The spherical 5s orbitals of indium ions generate an overlapped orbital string, increasing the IGZO band dispersion. <ref type="bibr" target="#b7">3,</ref><ref type="bibr" target="#b8">4,</ref><ref type="bibr" target="#b16">12,</ref><ref type="bibr" target="#b17">13</ref> However, the oxygen vacancy (V O ) concentration increases proportionally with indium content because the dissociation energy of the indium-oxygen (3.6 ± 0.3 eV) is lower than gallium-oxygen (3.9 ± 0.2 eV). <ref type="bibr" target="#b18">14</ref> Despite the high mobility of indium-rich IGZO TFTs, the increased V O eventually destabilizes IGZO TFTs.</p><p>Crystalline IGZO TFTs, such as c-axis alignment crystalline (CAAC) and spinel phases, have been proposed for trade-off relaxation between the mobility and stability of oxide-based TFTs. <ref type="bibr" target="#b19">[15]</ref><ref type="bibr" target="#b20">[16]</ref><ref type="bibr" target="#b21">[17]</ref><ref type="bibr" target="#b22">[18]</ref> However, synthesizing a crystalline oxide semiconductor with large-area uniformity is technically challenging. Doping amorphous oxide semiconductors with anions may resolve the issue of uniformity. Previous studies have confirmed that nitrogen (N) doping is promising for regulating V O defect concentration. <ref type="bibr" target="#b15">11,</ref><ref type="bibr" target="#b23">[19]</ref><ref type="bibr" target="#b24">[20]</ref><ref type="bibr" target="#b25">[21]</ref> Because the atomic radius of N is comparable to that of oxygen (O), doped N is a suitable replacement for V O defect sites. Moreover, conventional physical vapor deposition (PVD) is already employed for high-volume manufacturing (HVM). However, limited cation controllability and an unstable chemical bonding status with anions make it challenging to achieve the device performance requirements in emerging applications. In contrast, atomic layer deposition (ALD) is an indispensable alternative capable of independently adjusting cation and anion concentrations based on repeated deposition cycles with various reactants. <ref type="bibr" target="#b26">[22]</ref><ref type="bibr" target="#b27">[23]</ref><ref type="bibr" target="#b28">[24]</ref> In other words, the ALD can easily determine an anion doping concentration for each element in the multicomponent oxide semiconductors by changing a reactant species.</p><p>We fabricated high-mobility IGZO TFTs capable of lowvoltage operation using plasma-enhanced ALD (PEALD), and the properties of previously reported ALD-IGZO TFTs with high-mobility (&lt;50 cm 2 /(V s)) are summarized in Table <ref type="table" target="#tab_2">S1</ref>. <ref type="bibr" target="#b29">[25]</ref><ref type="bibr" target="#b30">[26]</ref><ref type="bibr" target="#b31">[27]</ref><ref type="bibr" target="#b32">[28]</ref><ref type="bibr" target="#b33">[29]</ref><ref type="bibr" target="#b34">[30]</ref> Though the PEALD-synthesized IGZO channel layer is amorphous, an appropriate N-doping strategy coupled with PEALD can alleviate stability and uniformity issues. In this study, a nitrous oxide (N 2 O) plasma reactant was applied selectively during each ALD cation cycle. Our strategy here, the N 2 O plasma reactant, is completely different from plasma treatment in that it participates in chemical reactions during the ALD process. There have been several reports on the application of N 2 O plasma reactant for insulation materials (SiO 2 , Al 2 O 3 , HfO 2 , and ZrO 2 ) or ZnO during PEALD, whereas IGZO multicomponent oxide semiconductor has yet to be reported clearly. <ref type="bibr" target="#b15">11,</ref><ref type="bibr" target="#b35">[31]</ref><ref type="bibr" target="#b36">[32]</ref><ref type="bibr" target="#b37">[33]</ref><ref type="bibr" target="#b38">[34]</ref> Using a combinatorial study of experimental analysis and theoretical interpretation, we investigated the N-doping mechanism, and the associated enhancements in performance and stability of PEALDsynthesized IGZO TFTs were investigated. Our results provide insights into the atomic precision optimization of the performance and stability of IGZO TFTs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ EXPERIMENTAL SECTION</head><p>In 2 O 3 , Ga 2 O 3 , and ZnO Deposition by PEALD Using O 2 and N 2 O Plasma Reactants. In 2 O 3 , Ga 2 O 3 , and ZnO thin films were deposited on a low-boron-doped polished silicon (Si) wafer in a 6 in. × 6 in. scale utilizing a lateral-flow-type PEALD system with a radio frequency (13.56 MHz) direct capacitance coupled plasma source (ISAC Research Inc.). The substrate temperature, working pressure, and plasma power were fixed at 200 °C, 1.2 Torr, and 100 W, respectively. During deposition, argon (Ar) (99.999%) gas was employed as the carrier gas. For In 2 O 3 , Ga 2 O 3 , and ZnO deposition, (3-(dimethylamino)propyl)dimethylindium (DADI), trimethylgallium (TMGa), and diethylzinc (DEZ) precursors were utilized. For appropriate vapor pressure, the DADI canister temperature was increased to 45 °C, whereas the TMGa was cooled to 15 °C. Additionally, the DADI precursor was delivered to a reaction chamber assisted by Ar carrier gas. To oxidize the above precursors, we utilized an aqueous O 2 or N 2 O plasma diluted in Ar at a 1:1 ratio as the reactant. The O 2 and N 2 O gas lines are designed to be spatially separate to minimize intermixing of the plasma species. The PEALD process steps and cycle time for these thin films are as follows: precursor dose (DADI: 1.5 s; TMGa: 0.1 s; DEZ: 0.</p><p>3 s)-purge (Ar: 25 s)-reactant stabilize (O 2 and N 2 O: 10 s)-plasma exposure (O 2 : 1 s; N 2 O: 1, 5 s)-purge (Ar: 10 s). PEALD-IGZO Deposition via Selective N 2 O Plasma Reactant. The supercycle consisting of In 2 O 3 , Ga 2 O 3 , and ZnO for IGZO deposition was processed as [In 2 O 3 × 18 cycles-Ga 2 O 3 × 1 cycle-ZnO × 1 cycle]. The reference IGZO was deposited utilizing an O 2 plasma reactant, whereas selectively controlled IGZO films were deposited utilizing an N 2 O plasma reactant for the individual elements In 2 O 3 , Ga 2 O 3 , and ZnO with a fixed number of subcycles. The supercycle process of the three splits of the controlled IGZO films is as follows:</p><formula xml:id="formula_0">(i) [In 2 O 3 (N 2 O plasma)-Ga 2 O 3 (O 2 plasma)-ZnO (O 2 plasma)], (ii) [In 2 O 3 (O 2 plasma)-Ga 2 O 3 (N 2 O plasma)-ZnO (O 2 plasma)], and (iii) [In 2 O 3 (O 2 plasma)-Ga 2 O 3 (O 2 plasma)-ZnO (N 2 O plasma)].</formula><p>PEALD-IGZO TFTs Fabrication. Top-gate bottom-contact (TG-BC) PEALD-IGZO TFTs were fabricated on a thermally grown 100 nm thick SiO 2 buffer layer. For the source and drain electrodes, a 100 nm thick ITO layer was deposited using RF sputtering and patterned employing a conventional photolithography process. Next, a 10 nm thick reference and controlled IGZO layer deposited using PEALD was utilized as the active layer and defined by photolithography, followed by a wet etching process. As a GI, a 20 nm thick Al 2 O 3 layer was deposited using PEALD, and the contact holes for the source/ drain were opened. Based on the dielectric constant of PEALD-Al 2 O 3 (8.05), the equivalent oxide thickness (E OT ) of the 20 nm thick Al 2 O 3 layer was calculated as ∼10 nm. To fabricate the gate electrode, a 100 nm thick ITO layer was deposited and patterned employing a conventional photolithography process. The width and length of the IGZO TFTs were 40 and 20 μm, respectively. Finally, the fabricated devices were processed postannealing at 350 °C for 3 h under dry air (O 2 21%/N 2 79%; purity: 99.999%) in ambient conditions.</p><p>Characterization. The electrical characteristics of the devices were measured in a dark vacuum environment at 350 mTorr by using a Keithley 4200-SCS semiconductor parameter analyzer. In addition, the electrical properties of thin films, such as the carrier concentration and resistivity, were characterized by using Hall measurements (HMS-3000, Ecopia). The cation atomic composition of the IGZO films was obtained using energy-dispersive X-ray fluorescence spectrometry (ED-XRF, ARL QUANT'X, Thermo Scientific). The chemical bond states were analyzed using X-ray photoelectron spectroscopy (XPS, K-alpha+, Thermo Scientific) employing a monochromatic Al Kα (1486.6 eV) source with a pass energy of 50 eV. Crystallinity was evaluated by employing grazing incidence X-ray diffraction (GI-XRD, SmartLab, Rigaku) with a Cu Kα (1.5405 Å) target. The surface morphology images and surface roughness of the IGZO films were analyzed by atomic force microscopy (AFM, XE-80, Park Systems). The amounts of quantitative N, CO, and CO 2 species were observed using thermal desorption spectroscopy (TDS, TDS1200, ESCO) from 36 to 600 °C at a rate of 60 °C/min under a high vacuum of 1 × 10 -8 Pa. The thickness, subgap states near the conduction band minimum (CBM), and optical bandgap of the thin films were measured by employing spectroscopic ellipsometry (SE, M-2000, WizOptics).</p><p>First-Principles Calculations. Spin-polarized density functional theory (DFT) calculations were performed by employing the Vienna ab initio simulation package (VASP) code. <ref type="bibr" target="#b39">35,</ref><ref type="bibr" target="#b40">36</ref> The Perdew-Burke-Ernzerh (PBE) functional was applied to estimate the exchangecorrelation energy of the Kohn-Sham equation. <ref type="bibr">37</ref> The DFT-D3 method using the Becke-Johnson damping model was employed to appropriately include the van der Waals interaction. <ref type="bibr" target="#b41">38</ref> The interaction between the ionic core and valence electrons was described utilizing the projector-augmented wave method. <ref type="bibr" target="#b42">39</ref> The valence electron wave functions were expanded on a plane-wave basis up to an energy cutoff of 400 eV. The Hubbard-U correction method with a U eff of 7 eV was applied to effectively treat the localized d-orbitals of In and Ga. <ref type="bibr" target="#b43">[40]</ref><ref type="bibr" target="#b44">[41]</ref><ref type="bibr" target="#b45">[42]</ref><ref type="bibr" target="#b46">[43]</ref> The Brillouin zone was sampled at the Γ-point for all calculations. The convergence criteria for the electronic structure and atomic geometries are 10 -4 and 0.05 eV/Å, respectively. To improve the state convergence near the Fermi level, a Gaussian smearing function with a finite temperature width of 0.05 eV was utilized. To describe the atomic structure of the ALD-synthesized films, 2 × 2 × 4 In 2 O 3 (111), 3 × 2 × 5 β-Ga 2 O 3 (010), and 5 × 5 × 4 ZnO (101) slab models were employed (Figure <ref type="figure" target="#fig_10">6a</ref>). A 15 Å vacuum layer was applied to avoid interactions between the periodic supercells. Here, the plasma reactants are completely different from plasma treatment in that they participate in chemical reactions during the ALD process. As shown in Figure <ref type="figure" target="#fig_3">1c</ref>, we fabricated TG-BC PEALD-IGZO TFTs using a conventional photolithography process, and it was also confirmed that the TFT arrays were well separated. Figure <ref type="figure" target="#fig_1">2</ref> shows the transfer characteristics of the PEALD-IGZO TFTs using the O 2 and N 2 O plasma reactants, and the device key parameters are summarized in Table <ref type="table">S2</ref>. The IGZO TFT with an O 2 plasma reactant exhibits an outstanding μ FE of 135.8 ± 4.1 cm 2 /(V s), whereas it significantly deteriorates from 85.0 ± 4.4 to 23.6 ± 0.2 cm 2 /(V s) when the N 2 O plasma reactant time increases from 1 to 5 s. Furthermore, the N 2 O plasma time results in increased SS and hysteresis with a positive threshold voltage (V TH ) shift. Figure <ref type="figure" target="#fig_5">2b</ref> illustrates the positive bias temperature stress (PBTS) stability results at 95 °C for 10000 s with a gate field stress of 2 MV/cm. The IGZO TFTs with the N 2 O plasma reactant demonstrated poorer stability than those with the O 2 plasma reactant. These inferior electrical characteristics of the N 2 O plasma reactant were investigated by using XPS.  <ref type="table">S3</ref>) was deposited using the PEALD process herein, the puzzling poor stability of the N 2 O plasma reactant implies the dependency of N doping effects on the IGZO cation composition. Considering these results, indium, gallium, and zinc cations were hypothesized to exhibit different tendencies in the N 2 O plasma reactant effects.</p><p>Selective N 2 O Plasma Reactant Application for Each Cation Element of PEALD-IGZO. To gain insight into the N 2 O plasma reactant effects for each cation in IGZO, we fabricated three splits of IGZO films for the active channel layer. As depicted in Figure <ref type="figure" target="#fig_6">3a</ref>, the IGZO films were deposited considering the O 2 plasma reactant, whereas indium, gallium, and zinc subcycles were selectively applied to the N 2 O plasma reactant ( * means N 2 O plasma reactant, denoted by I*GZO, IG*ZO, and IGZ*O, hereafter). The difference in cation atomic composition of the three splits of IGZO films is negligible, as shown in Figure <ref type="figure" target="#fig_3">S1</ref> and Table <ref type="table">S4</ref>.  compared in Figures 3e, 3f, and 3g, respectively. The μ FE and SS values degraded with a positive V TH shift with an increasing N 2 O plasma time for each cation material. However, the variations in the electrical parameters were slightly different depending on the cation type. In particular, the I*GZO TFTs exhibited a significant decrease in μ FE (135.8 → 23.2 cm 2 /(V s)) with an increasing N 2 O plasma time. However, the N 2 O plasma effects on Ga 2 O 3 in IG*ZO TFTs were insignificant compared with those of In 2 O 3 . Among the electrical parameters, the N 2 O plasma for Ga 2 O 3 produces IG*ZO TFTs with a positive V TH shift (-1.41 → -0.47 V). Furthermore, a large increment of SS (72.3 → 145.1 mV/ decade) in the IGZ*O TFTs was observed. Based on these experimental results, the N 2 O plasma reactants for In 2 O 3 , Ga 2 O 3 , and ZnO in the IGZO system could possibly serve as mobility suppressors, V TH stabilizers, and slope destroyers, respectively. To identify the unique characteristics of the N 2 O plasma reactant for each cation in the IGZO TFTs, GI-XRD was performed, as depicted in Figure S2. Because the selective N 2 O plasma IGZO active layers exhibited an amorphous phase, the relationship between the electrical characteristics and crystallinity was not considered. During device fabrication, the only difference between the reference and selective N 2 O plasma IGZO TFTs was the plasma reactant species for each cation material. Therefore, focusing on each cationic material could reasonably explain these results with precision. Gap States and Light Element Analysis of Each Cation Material Deposited Using N 2 O Plasma Reactant. The electrical characteristics of In 2 O 3 , Ga 2 O 3 , and ZnO prepared by using the O 2 or N 2 O plasma reactants were investigated via Hall measurements. However, because of the low Ga 2 O 3 carrier concentration, only the electrical characteristics of the In 2 O 3 and ZnO thin films could be obtained, as depicted in Figures S3a and S3b, respectively. The In 2 O 3 and ZnO films exhibited a decrease in carrier concentration and increased resistivity with the N 2 O plasma time. The V O is an important factor in determining carrier concentration and resistivity in oxide semiconductors. 3,4,44,45 Therefore, XPS analysis of each cation material was performed to evaluate the effects of the N 2 O plasma reactant on the electrical characteristics. Figure 4 illustrates a comparison of the XPS 1s peaks for the In 2 O 3 , Ga 2 O 3 , and ZnO films prepared using O 2 or N 2 O plasma reactants. The O 1s peaks were deconvoluted by utilizing a Gaussian fit with three different binding energy-centered peaks, as depicted in Figure S4. It is found that negligible changes in the O def peak are observed regardless of plasma species in the In 2 O 3 films. In contrast, the intensity of the O def peak decreased in the Ga 2 O 3 and ZnO films with increasing N 2 O plasma time (Ga 2 O 3 : 14.8 → 8.0%; ZnO: 22.5 → 17.5%). The correlation between the O def and subgap states was measured via SE analysis.  were deconvoluted with two Gaussian fits located at E C -0.02 (D1 state, donor-like state) and E C -0.27 (D2 state, acceptorlike state), as depicted in Figure S5. Based on the estimated number of subgap states, the energy structures of In 2 O 3 , Ga 2 O 3 , and ZnO are presented in Figures 4g, 4h, and 4i, respectively. Compared to the values for the O 2 plasma reactant, the donor level for carrier-generating In 2 O 3 and ZnO films decreased with the N 2 O plasma time. Contrary to the trends for donor-level changes, the variations in the subgap states are fairly different for each cation element. The subgap states increased in the In 2 O 3 film with N 2 O plasma time, whereas they decreased in the Ga 2 O 3 film utilizing the N 2 O plasma reactant. However, the subgap states are undetected in the ZnO film regardless of the reactant species, which is   presumed to result from acceptor-like V O 2+ states located at a relatively deep energy level (∼1 eV far from the CBM) or exhibited high formation energy (∼3.5 eV). <ref type="bibr" target="#b49">[46]</ref><ref type="bibr" target="#b50">[47]</ref><ref type="bibr" target="#b51">[48]</ref> These results imply that the N 2 O plasma reactant to In 2 O 3 reduces the donor level, resulting in mobility suppression in the I*GZO TFT. However, because Ga 2 O 3 has a low electron concentration, the subgap states are more sensitive to the N 2 O plasma reactant than the donor level, eventually contributing to V TH stabilization in the IG*ZO TFT. Meanwhile, the surface roughness of the IGZ*O slightly increased to other films, which probably resulted from the N 2 O plasma treatment on top of ZnO in the IGZO structure (Figure <ref type="figure" target="#fig_10">S6</ref>). <ref type="bibr" target="#b15">11,</ref><ref type="bibr" target="#b52">49,</ref><ref type="bibr" target="#b53">50</ref> Because ZnO is directly in contact with the GI, significant degradation of SS in the IGZ*O TFTs is presumed to increase in surface roughness. In addition to the consequences of the N 2 O plasma reactant effect, determining the causes for the varied N 2 O plasma reactant effect in In 2 O 3 , Ga 2 O 3 , and ZnO films is crucial.</p><p>In our experiments, IGZO films were grown by using the PEALD process, which is entirely distinct from the conven- tional sputtering process. The PEALD process is based on the following four steps: precursor dose, precursor purge, plasma reactant dose, and plasma reactant purge. Specifically, the plasma reactant dose step plays a key role in film growth because chemical reactions occur between the O 2 /N 2 O plasma reactant and the adsorbed precursors. During O 2 and/or N 2 O plasma ignition, the precursor ligands are oxidized by abundant O and/or ON radicals and are eventually purged out as CO and/or CO 2 . <ref type="bibr" target="#b26">[22]</ref><ref type="bibr" target="#b27">[23]</ref><ref type="bibr" target="#b28">[24]</ref> For N 2 O plasma ignition, the adsorbed-ON radicals possibly retain the N content in the deposited film, leading to oxygen-related defect passivation or N-related defect creation. In addition, the limited plasma exposure time during PEALD cycles results in an incomplete chemical reaction between the precursor and oxidant, leading to residual carbon (C) impurities in the deposited films. These C impurities have been reported to act as shallow donors in oxide semiconductors. <ref type="bibr" target="#b54">51,</ref><ref type="bibr" target="#b55">52</ref> Therefore, examining whether N 2 O plasma can affect changes in the N content and C-related impurities is valuable, which could lead to subgap states and donor-level differences. Figure <ref type="figure" target="#fig_8">5</ref>   reactant, the TDS spectra for In 2 O 3 , Ga 2 O 3 , and ZnO films were analyzed for deliberate enhancements of ON radical adsorption (N 2 O plasma time of 10 s), as illustrated in Figure S7. Compared to the N 2 O plasma times of 1 and 5 s, the N content evidently increased with a significant decrease in Crelated impurities in the In 2 O 3 film prepared using a N 2 O plasma time of 10 s. This result implies that the N content in the In 2 O 3 film is closely related to the C-related impurities. For the Ga 2 O 3 film, the N content increased for the N 2 O plasma time of 10 s, whereas the C species were comparable to those for the N 2 O plasma for 5 s. Because the lowest limit of the Crelated impurities was observed for the N 2 O plasma time of 5 s, the increased N content for the N 2 O plasma for 10 s could be attributed to the increased frequency of the ON radical adsorption. However, any N content in the ZnO film was undetected even when fabricated using a N 2 O plasma time of 10 s, whereas the C-related species evidently decreased with a N 2 O plasma time. The ZnO film was devoid of N, regardless of C impurities. Despite the changes in the C and N contents in the TDS analysis, considering that XPS depth-profile analysis indicates similar signals in the N 1s and C 1s peaks (Figures S8-S10), a small amount of N and C impurities keep evidently changing in the N 2 O plasma reactant. Understanding the Relationship between N and C Species Deposited Using N 2 O Plasma Reactants via Theoretical Interpretation. To understand the relationship between the C and N species in the In 2 O 3 , Ga 2 O 3 , and ZnO films fabricated using the N 2 O plasma reactant, DFT calculations were performed, as shown in Figure 6. Thermodynamical predictions suggest that CO or CO 2 present on the surface of reducible oxides desorbs quickly. As indicated by the TDS spectra, the DFT-calculated CO 2 desorption energies (E des ) from the In 2 O 3 , Ga 2 O 3 , and ZnO matrixes are all compensated by the entropic contribution to the Gibbs free energy of CO 2 desorption from the oxide surfaces at room temperature. Because the E des values indicate that oxygen ions at the surfaces oxidize the residual C in the films during PEALD, CO 2 naturally desorbs, leaving V O behind, which becomes a gateway for ON adsorption and dissociation (Figure S11). The V O generated upon the release of C from the oxide films strengthens the ON radical binding on the In 2 O 3 , Ga 2 O 3 , and ZnO surfaces. The surface-adsorbed ON molecules on In 2 O 3 and Ga 2 O 3 behave in a similar manner. The ON radical spontaneously dissociated into N and O ions on the In 2 O 3 and Ga 2 O 3 surfaces, staying over V O and healing them. The strong negative ΔE values presented in Figure 6b,c confirm that ON dissociation is highly thermodynamically driven. Consequently, the dissociated N ions are well embedded in the lattices of the In 2 O 3 and Ga 2 O 3 films, suggesting that N ions are possibly included within these film matrices during the PEALD process. In contrast to the DFT calculation results, N was undetected in the In 2 O 3 film fabricated utilizing a N 2 O plasma time of 5 s because of the insufficient driving force of the ON adsorption during the short plasma time owing to the residual C-related impurities. However, the significant decrease in C-related impurities in the In 2 O 3 film prepared utilizing a N 2 O plasma time of 10 s can trigger the gateway for ON adsorption; therefore N can form strong bonds with indium ions. In contrast, the ΔE values of ON dissociation and V O healing were primarily neutral on ZnO as shown in Figure 6d. Therefore, the decrease in the level of O def of ZnO with increasing N 2 O plasma time is attributed to V O healing through the presence of O atoms formed by ON dissociation. Instead, the ΔE of N 2 production from a dissociated ON pair was highly negative, corroborating that the N ions were released from the ZnO film rather than penetrating the ZnO matrix. This result indicates that the experimental detection of N within ZnO films synthesized utilizing a N 2 O plasma reactant is a rare event. Our DFT-based theoretical interpretation confirms that the energetics of the serial C impurity release, ON adsorption and dissociation, N embedment, and N 2 release combined and concurrently predicted whether the IGZO component diminished the intrinsic C impurities and accepted the N within the matrix. PBTS Stability for PEALD-IGZO TFTs with Selective N 2 O Plasma Reactants. To examine the relationship between the selective N 2 O plasma reactant and reliability, we evaluate the negative bias temperature stress (NBTS) and PBTS stability of the IGZO TFTs fabricated by using N 2 O plasma for each cation material. During the stability tests, the devices were stressed under a gate bias stress of ±2 MV/cm for 10000 s at 95 °C. As shown in Figure S12, the devices show fairly good NBTS stability because of the low hole concentration in the oxide semiconductors.  important factor in determining the instability of oxide-based TFTs. In general, V O exhibits two types of charge states: a neutral charge state (V O 0 ) and a 2+ charge state (V O 2+ ) state. The formation energy for these states relies on the Fermi energy level (E F ). During PBTS, the thermal energy accelerates the V O state transitions involving electron traps as follows: V O 2+ + 2e -→ V O . <ref type="bibr" target="#b7">3,</ref><ref type="bibr" target="#b48">[45]</ref><ref type="bibr" target="#b49">[46]</ref><ref type="bibr" target="#b50">[47]</ref><ref type="bibr" target="#b51">[48]</ref> For the I*GZO TFTs, degraded PBTS stability is assumed to originate from the generation of oxygen-related defects (interstitial oxygen or peroxide) with increasing the N 2 O plasma time. However, the N content in Ga 2 O 3 prepared by using the N 2 O plasma reactant can trigger diminishing V O defects, leading to a significantly improved PBTS stability in IG*ZO TFTs. Further, because of the negligible changes in the acceptor-like state in the ZnO film, the IGZ*O TFTs exhibited similar PBTS reliability. Consequently, a PEALD-IGZO TFT with an improved mobility and stability trade-off could be obtained by the N doping process in the Ga 2 O 3 layers utilizing N 2 O plasma reactant in its subcycles.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSIONS</head><p>We successfully designed high-performance PEALD-IGZO TFTs via selective N doping. The electrical characteristics of selectively controlled IGZO TFTs primarily rely on the N 2 O plasma reactant for each cationic material. We discovered that the variations in oxygen-related defects and C impurities in N 2 O plasma reactants greatly influence the electrical properties. In addition, the subgap states are significantly diminished only in Ga 2 O 3 , which is attributed to N doping via the N 2 O plasma reactant. Through a combined theoretical and experimental study, the surface defects derived from intrinsic C-related impurities were determined to behave as a gateway for N penetration into Ga 2 O 3 . Owing to these beneficial effects, IGZO TFTs containing Ga 2 O 3 components grown with N 2 O plasma reactant exhibit high stability and reliability under harsh PBTS environments, even after possessing extremely high mobility (106.5 ± 2.7 cm 2 /(V s)). Our study provides insight into the proper application of N 2 O plasma reactants, and this process may help advance the highperformance semiconductor field.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>* sı Supporting Information</head><p>The Supporting Information is available free of charge at <ref type="url" target="https://pubs.acs.org/doi/10.1021/acsami.3c05678?goto=supporting-info">https://pubs.acs.org/doi/10.1021/acsami.3c05678</ref>. ■ AUTHOR <ref type="bibr">INFORMATION</ref> </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>■</head><figDesc>RESULTS AND DISCUSSIONImpact of N 2 O Plasma Reactant on the Electrical Characteristics of PEALD-IGZO TFTs. PEALD-IGZO active layers were deposited on the buffer layer utilizing a supercycle method consisting of In 2 O 3 , Ga 2 O 3 , and ZnO, as depicted in Figure1a. To clarify the effect of the plasma reactant species on the TFT characteristics, IGZO active layers were deposited using O 2 and N 2 O plasma reactants, as shown in Figure1b.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2</head><label>2</label><figDesc>depicts the XPS O 1s and N 1s peaks of the IGZO thin films. Compared with the O 2 plasma reactant, the oxygen deficiency (O def ) peak decreased from 22.5 to 19.9% with increasing N 2 O plasma time. Considering the increase in N content up to 0.2 at. % within the N 2 O plasma time of 5 s, the decrease in O def could be ascribed to the N-doping effect, as described in the literature. 11,19-21 Typically, N doping in IGZO can contribute to decreasing oxygen-related defects because its atomic radius is comparable to that of O and N. Therefore, many research groups have demonstrated promising device stability using N doping in sputtering-derived IGZO, which generally possesses an atomic composition of In:Ga:Zn = 1:1:1 at. %. Because indium-rich IGZO (Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><figDesc>Figure 3 illustrates the transfer characteristics of the I*GZO, IG*ZO, and IGZ*O TFTs. The black dots indicate the reference IGZO TFT deposited using an O 2 plasma time of 1 s, whereas the red and blue dots represent IGZO TFTs with selective N 2 O plasma times of 1 and 5 s for each cation, respectively. The electrical parameters, such as V TH , μ FE , SS, and hysteresis, extracted from the transfer characteristics are presented in Table 1. To more clearly identify the effect of N 2 O plasma reactant on electrical characteristics, the μ FE values of I*GZO, IG*ZO, and IGZ*O TFTs as a function of gate voltages are</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Deposition method of PEALD-IGZO films and device fabrication process. Schematic of (a) IGZO deposited with supercycle, (b) O 2 and N 2 O plasma ignition, and (c) device fabrication process. It was confirmed that the TFT arrays were well separated using an optical microscopy image.</figDesc><graphic coords="3,102.67,60.44,401.50,266.63" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><figDesc>Figure 4 illustrates the SE spectra of In 2 O 3 , Ga 2 O 3 , and ZnO, and the inset shows the bandgap variations for each material. The band edge states</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Comparison of electrical characteristics of the PEALD-IGZO TFTs deposited using O 2 and N 2 O plasma reactants. (a) Transfer curves and (b) PBTS results of the IGZO TFTs. XPS (c) O 1s and (d) N 1s peaks of the IGZO films.</figDesc><graphic coords="4,53.97,60.44,498.95,353.48" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Electrical characteristics of the selective N 2 O applied IGZO TFTs. (a) Schematic of selective N 2 O plasma reactant applications in IGZO active layers. Transfer curves and extracted μ FE as a function of gate voltages of the IGZO TFTs with selective N 2 O plasma applied for (b, e) indium oxide, (c, f) gallium oxide, and (d, g) zinc oxide.</figDesc><graphic coords="5,73.76,60.43,459.33,562.79" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Differences in oxygen-related gap states by N 2 O plasma reactant. XPS O 1s peaks of the (a) In 2 O 3 , (b) Ga 2 O 3 , and (c) ZnO films. SE spectra of the dielectric function (ε2) and bandgap (inset) of the (d) In 2 O 3 , (e) Ga 2 O 3 , and (f) ZnO films. Schematic of the band structure of (g) In 2 O 3 , (h) Ga 2 O 3 , and (i) ZnO extracted from SE analysis.</figDesc><graphic coords="6,103.92,200.47,399.12,483.82" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Desorption behaviors of the nitrogen and carbon species in the In 2 O 3 , Ga 2 O 3 , and ZnO films fabricated with O 2 or N 2 O plasma reactant. TDS spectra of the (a) In 2 O 3 , (b) Ga 2 O 3 , and (c) ZnO films fabricated by using an O 2 plasma exposure time of 1 s and N 2 O plasma times of 1 and 5 s.</figDesc><graphic coords="7,104.88,60.43,397.19,526.05" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><figDesc>depicts the TDS spectra of In 2 O 3 , Ga 2 O 3 , and ZnO. The black, red, and blue dots represent the O 2 plasma for 1 s, N 2 O plasma for 1 s, and N 2 O plasma for 5 s, respectively. To observe the variations in the N content and Crelated impurities, the mass/charge (m/z) ratios of 14 (N), 28 (CO), and 44 (CO 2 ) were examined. Notably, the N content was detected only in Ga 2 O 3 films with increasing the N 2 O plasma time. Furthermore, considering that the N content is desorbed above 500 °C, N might form a strong bond with gallium ions, thereby contributing to decreasing subgap states in the Ga 2 O 3 film utilizing the N 2 O plasma reactant. Additionally, In 2 O 3 not only has any N content but also exhibits negligible changes in the content of O def , regardless of the plasma ignition conditions. Therefore, an increase in the In 2 O 3 film subgap states with N 2 O plasma treatment time could possibly result from the creation of oxygen-related defects (oxygen interstitial or peroxide) caused by excess N 2 O plasma treatment. In contrast, C-related impurities (CO and CO 2 ) decreased slightly with the N 2 O plasma time compared to those of the O 2 plasma reactant. Recently, Shiah et al. reported that CO-related impurities are regarded as donors in oxide semiconductors and have a greater effect on highmobility oxide semiconductors with deep energy levels of the CBM. 51 Based on this result, a decrease in the In 2 O 3 donor level would reduce donor-like C impurities with increasing N 2 O plasma time. However, the decrease in the ZnO donor level with N 2 O plasma time is thought to predominantly originate from the decrease in O def than that of the CO-related impurities because ZnO mobility is generally much lower than that of In 2 O 3 . Additionally, for an in-depth study of the behavior of N-and C-related species in the N 2 O plasma</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. DFT-constructed surface models of oxide films and energetics of ON-oxide interaction. (a) Surface models of oxide films. Energetics of ON adsorption and dissociation on (b) In 2 O 3 , (c) Ga 2 O 3 , and (d) ZnO. The reaction energy of a single step, ΔE n , was calculated by ΔE n = E Sn -E Sn-1 .</figDesc><graphic coords="8,65.14,60.44,476.62,361.87" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><figDesc>Figure 7a presents the transfer characteristics of the reference and selectively N 2 O plasma-applied IGZO TFTs as a function of the PBTS time, and the extent of the V TH shift after 10000 s is compared in Figure 7b. The transfer curves of the devices under the PBTS conditions are shown in Figure S13. The extent of the V TH shift was degraded by 68% in the I*GZO TFT compared with the reference IGZO TFT. Interestingly, the IG*ZO TFTs demonstrated enhanced PBTS results of up to 50% with increasing N 2 O plasma time, while negligible changes were observed in the IGZ*O TFTs. V O is popularly regarded as an</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. PBTS stability of the selective N 2 O applied IGZO TFTs. (a) Transfer curves as a function of PBTS time of the reference and selectively N 2 O plasma applied IGZO TFTs. (b) Degree of V TH shift after 10000 s of PBTS time for IGZO TFTs.</figDesc><graphic coords="9,52.44,60.44,502.07,131.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><figDesc>Comparison of device key parameters of IGZO TFT deposited using O 2 and N 2 O plasma reactants, XRFderived cation atomic composition of the IGZO films deposited using O 2 and N 2 O plasma reactants, XRFderived cation atomic composition of the three splits of IGZO films deposited using selective N 2 O plasma reactant, cation atomic composition of the IGZO films, crystallinity of the IGZO deposited using selective N 2 O plasma reactant, effect of N 2 O plasma reactant on electrical characteristics in the In 2 O 3 and ZnO films, chemical bonding status with the oxygen of the In 2 O 3 , Ga 2 O 3 , and ZnO films fabricated with O 2 or N 2 O plasma reactant, subgap states of the In 2 O 3 , Ga 2 O 3 , and ZnO films deposited using O 2 or N 2 O plasma reactant, surface roughness of the IGZO deposited using selective N 2 O plasma reactant, desorption behaviors of the nitrogen and carbon species in the In 2 O 3 , Ga 2 O 3 , and ZnO films, nitrogen and carbon distributions in the depth profiles of the In 2 O 3 , Ga 2 O 3 , and ZnO films, DFT-calculated energetics of carbon release, evaluation of the NBTS and PBTS stability for reference and controlled IGZO TFTs (PDF)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 1 .</head><label>1</label><figDesc>List of Key Electrical Parameters of IGZO TFTs with Selective N 2 O Plasma Reactant</figDesc><table><row><cell>IGZO type</cell><cell>plasma condition</cell><cell>V TH (V)</cell><cell>μ FE (cm 2 /(V s))</cell><cell>SS (mV/dec)</cell><cell>hysteresis (V)</cell></row><row><cell>I*GZO</cell><cell>O 2 * 1 s</cell><cell>-1.41 ± 0.01</cell><cell>135.8 ± 4.1</cell><cell>72.3 ± 18.5</cell><cell>0.04 ± 0.02</cell></row><row><cell></cell><cell>N 2 O* 1 s</cell><cell>-0.34 ± 0.07</cell><cell>97.0 ± 6.4</cell><cell>93.7 ± 23.5</cell><cell>0.05 ± 0.01</cell></row><row><cell></cell><cell>N 2 O* 5 s</cell><cell>1.22 ± 0.04</cell><cell>23.2 ± 0.5</cell><cell>117.2 ± 20.5</cell><cell>0.15 ± 0.03</cell></row><row><cell>IG*ZO</cell><cell>O 2 * 1 s</cell><cell>-1.41 ± 0.01</cell><cell>135.8 ± 4.1</cell><cell>72.3 ± 18.5</cell><cell>0.04 ± 0.02</cell></row><row><cell></cell><cell>N 2 O* 1 s</cell><cell>-0.96 ± 0.08</cell><cell>132.6 ± 8.6</cell><cell>75.8 ± 11.7</cell><cell>0.05 ± 0.00</cell></row><row><cell></cell><cell>N 2 O* 5 s</cell><cell>-0.47 ± 0.02</cell><cell>106.5 ± 2.7</cell><cell>113.5 ± 29.8</cell><cell>0.05 ± 0.01</cell></row><row><cell>IGZ*O</cell><cell>O 2 * 1 s</cell><cell>-1.41 ± 0.01</cell><cell>135.8 ± 4.1</cell><cell>72.3 ± 18.5</cell><cell>0.04 ± 0.02</cell></row><row><cell></cell><cell>N 2 O* 1 s</cell><cell>-0.68 ± 0.12</cell><cell>110.1 ± 8.3</cell><cell>145.1 ± 6.0</cell><cell>0.08 ± 0.02</cell></row><row><cell></cell><cell>N 2 O* 5 s</cell><cell>-0.27 ± 0.04</cell><cell>62.9 ± 1.6</cell><cell>135.7 ± 4.9</cell><cell>0.11 ± 0.01</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1021/acsami.3c05678 ACS Appl. Mater. Interfaces 2023, 15, 31652-31663</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://doi.org/10.1021/acsami.3c05678</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>■ ACKNOWLEDGMENTS</head><p>This work was supported by <rs type="institution">Samsung Electronics Co., Ltd.</rs> (<rs type="grantNumber">IO220405-09482-01</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_smwpmqc">
+					<idno type="grant-number">IO220405-09482-01</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notes</head><p>The authors declare no competing financial interest.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Republic of Korea</title>
+		<idno>orcid.org/0000-0001-8105-1640</idno>
+		<imprint>
+			<biblScope unit="volume">34134</biblScope>
+			<pubPlace>Daejeon</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Corresponding Authors Hyun You Kim -Department of Materials Science and Engineering, Chungnam National University</orgName>
+		</respStmt>
+	</monogr>
+	<note>Email: kimhy@cnu.ac.kr</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Email: jsparklime@hanyang.ac.kr Authors Dong-Gyu Kim -Division of</title>
+		<idno>orcid.org/0000-0002-7899-2631</idno>
+		<imprint>
+			<biblScope unit="volume">34134</biblScope>
+			<pubPlace>Daejeon</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Jin-Seong Park -Division of Materials Science and Engineering, Hanyang University ; Materials Science and Engineering, Hanyang University, Seoul 04763, Republic of Korea Hyuk Choi -Department of Materials Science and Engineering, Chungnam National University</orgName>
+		</respStmt>
+	</monogr>
+	<note>Seoul 04763 Republic of Korea Republic of Korea</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Republic of Korea Junghwan Kim -Graduate School of Semiconductor Materials and Devices Engineering</title>
+		<author>
+			<persName><forename type="first">Yoon-Seo</forename><surname>Kim</surname></persName>
+		</author>
+		<idno>orcid.org/0000-0001-9168-6260</idno>
+		<imprint>
+			<publisher>Ulsan National Institute of Science and Technology</publisher>
+			<biblScope unit="volume">34134</biblScope>
+			<pubPlace>Daejeon; Ulsan</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Division of Materials Science and Engineering, Hanyang University, Seoul 04763, Republic of Korea Dong-Hyeon Lee -Division of Materials Science and Engineering, Hanyang University, Seoul 04763, Republic of Korea Hye-Jin Oh -Division of Materials Science and Engineering, Hanyang University, Seoul 04763, Republic of Korea Ju Hyeok Lee -Department of Materials Science and Engineering, Chungnam National University</orgName>
+		</respStmt>
+	</monogr>
+	<note>Republic of Korea</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Hwaseong-si, Gyeonggi-do 18448, Republic of Korea Bongjin Kuh -Semiconductor R&amp;D Center, Samsung Electronics, Hwaseong-si, Gyeonggi-do 18448, Republic of Korea Taewon Kim -Semiconductor R&amp;D Center, Samsung Electronics, Hwaseong-si, Gyeonggi-do 18448, Republic of Korea Complete contact information is</title>
+		<author>
+			<persName><forename type="first">Seunghee</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">-Semiconductor R&amp;d</forename><surname>Center</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samsung</forename><surname>Electronics</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.3c05678?ref=pdf</idno>
+		<ptr target="https://pubs.acs.org/10.1021/acsami.3c05678" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">■</forename><surname>References</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>So</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/MM.2022.3164651</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Aquabolt-XL HBM2-PIM, LPDDR5-PIM With In-Memory Processing, and AXDIMM With Acceleration Buffer</title>
+		<imprint>
+			<biblScope unit="volume">2022</biblScope>
+			<biblScope unit="page" from="20" to="30" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Analogue Signal and Image Processing with Large Memristor Crossbars</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Montgomery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Dávila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Strachan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Xia</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41928-017-0002-z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Electron</title>
+		<imprint>
+			<biblScope unit="volume">2018</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="52" to="59" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Present Status of Amorphous In-Ga-Zn-O Thin-Film Transistors</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kamiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1468-6996/11/4/044305</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Technol. Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">44305</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Material Characteristics and Applications of Transparent Amorphous Oxide Semiconductors</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kamiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/asiamat.2010.5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">NPG Asia Mater</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="15" to="22" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">:H) Thin-Film Transistors</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Magari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kataoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Furuta</surname></persName>
+		</author>
+		<author>
+			<persName><surname>High-Mobility</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41467-022-28480-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Scaled Indium Oxide Transistors Fabricated Using Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41928-022-00718-w</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Electron</title>
+		<imprint>
+			<biblScope unit="volume">2022</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="164" to="170" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Low-Temperature Sputtered Mixtures of High-κ and High Bandgap Dielectrics for GIZO TFTs</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Barquinha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pereira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Goncalves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kuscer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kosec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Olziersky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Morante</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Martins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Fortunato</surname></persName>
+		</author>
+		<idno type="DOI">10.1889/JSID18.10.762</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Soc. Inf. Dispersion</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="762" to="772" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The Effects of Valence Band Offset on Threshold Voltage Shift in A-InGaZnO TFTs under Negative Bias Illumination Stress</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Im</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Khim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LED.2020.2981176</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="737" to="740" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">High-Performance Indium Gallium Tin Oxide Transistors with an Al2O3Gate Insulator Deposited by Atomic Layer Deposition at a Low Temperature of 150°c: Roles of Hydrogen and Excess Oxygen in the Al2O3Dielectric Film</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ueda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-S</forename><surname>Shiah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Jeong</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.1c04210?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">24</biblScope>
+			<biblScope unit="page" from="28451" to="28461" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Remarkably Stable High Mobility Self-Aligned Oxide TFT by Investigating the Effect of Oxygen Plasma Time during PEALD of SiO 2 Gate Insulator</title>
+		<author>
+			<persName><forename type="first">S.-I</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Ko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><forename type="middle">K</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jallcom.2021.162308</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Alloys Compd</title>
+		<imprint>
+			<biblScope unit="volume">893</biblScope>
+			<biblScope unit="page">162308</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Impact of N2O Plasma Reactant on PEALD-SiO 2 Insulator for Remarkably Reliable ALD-Oxide Semiconductor TFTs</title>
+		<author>
+			<persName><forename type="first">D.-G</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-M</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TED.2022.3169110</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">2022</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="3199" to="3205" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Local Coordination Structure and Electronic Structure of the Large Electron Mobility Amorphous Oxide Semiconductor In-Ga-Zn-O: Experiment and Ab Initio Calculations</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kamiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ohta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Uruga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hirano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.75.035212</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B -Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="2" to="6" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Review of Recent Developments in Amorphous Oxide Semiconductor Thin-Film Transistor Devices</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-J</forename><surname>Maeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tsf.2011.07.018</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">520</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1679" to="1693" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y.-R</forename><surname>Luo</surname></persName>
+			<affiliation>
+				<orgName type="collaboration">Dissociation Energies. CRC Handb</orgName>
+			</affiliation>
+		</author>
+		<author>
+			<persName><surname>Bond</surname></persName>
+			<affiliation>
+				<orgName type="collaboration">Dissociation Energies. CRC Handb</orgName>
+			</affiliation>
+		</author>
+		<idno type="DOI">10.1201/9781420039863</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">89</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Crystalline Oxide Semiconductor Using CAAC-IGZO and Its Application</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yamazaki</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/MA2014-02/47/1913</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Meet. Abstr</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">155</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The Mobility Enhancement of Indium Gallium Zinc Oxide Transistors via Low-Temperature Crystallization Using a Tantalum Catalytic Layer</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Oh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Jeong</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-017-11461-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">2017</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Axis Aligned Crystalline Indium-Gallium-Zinc Oxide (CAAC-IGZO) and High-k Charge Trapping Film for Flash Memory Application</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jallcom.2021.161440</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Alloys Compd</title>
+		<imprint>
+			<biblScope unit="volume">888</biblScope>
+			<biblScope unit="page">161440</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Systematic Study on the Amorphous, C-Axis-Aligned Crystalline, and Protocrystalline Phases in In</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Glushkova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F W</forename><surname>Dekkers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nag</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Del Agua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Borniquel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ramalingam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Genoe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Heremans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rolin</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsaelm.0c01091?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ga-Zn Oxide Thin-Film Transistors. ACS Appl. Electron. Mater</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1268" to="1278" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Negative Gate-Bias Temperature Stability of N-Doped InGaZnO Active-Layer Thin-Film Transistors</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Raja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Balaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Thuy Trinh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yi</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4793535</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">83505</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Highly Reliable Amorphous In-Ga-Zn-O Thin-Film Transistors Through the Addition of Nitrogen Doping</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Baeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-B</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Kwon</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TED.2018.2881799</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="457" to="463" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Suppression of Temperature Instability in InGaZnO Thin-Film Transistors by in Situ Nitrogen Doping</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Raja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Balaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yi</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0268-1242/28/11/115010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">115010</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Understanding Chemical and Physical Mechanisms in Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Richey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>De Paula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5133390</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2020</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">40902</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">A Brief Review of Atomic Layer Deposition: From Fundamentals to Applications</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hultqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.mattod.2014.04.026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Today</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="236" to="246" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition: An Overview</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="111" to="131" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Comparative Study of Atomic Layer Deposited Indium-Based Oxide Transistors with a Fermi Energy Level-Engineered Heterojunction Structure Channel through a Cation Combinatorial Approach</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Jeong</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.1c23889?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">2022</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="18646" to="18661" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Amorphous IGZO TFT with High Mobility of 70 Cm2/(V s) via Vertical Dimension Control Using PEALD</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sasase</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.9b14310?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">43</biblScope>
+			<biblScope unit="page" from="40300" to="40309" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Achieving a Low-Voltage, High-Mobility IGZO Transistor through an ALD-Derived Bilayer Channel and a Hafnia-Based Gate Dielectric Stack</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Seul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Jeong</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.0c22677?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="16628" to="16640" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Atmospheric Pressure Spatial ALD of Al2O3 Thin Films for Flexible PEALD IGZO TFT Application</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-G</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-B</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ceramint.2022.03.157</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ceram. Int</title>
+		<imprint>
+			<biblScope unit="volume">2022</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="18803" to="18810" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Combination of InZnO/InGaZnO Bi-Layered Channels Prepared by Atomic Layer Deposition and Ozone-Based Gate-Stack Formation for Guaranteeing High Field-Effect Mobility and Long-Term Stability of Thin Film Transistors</title>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Bae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-H</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N.-J</forename><surname>Seong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-M</forename><surname>Yoon</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ceramint.2022.04.082</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ceram. Int</title>
+		<imprint>
+			<biblScope unit="volume">2022</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="20905" to="20913" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Improvement in Carrier Mobility through Band-Gap Engineering in Atomic-Layer-Deposited In-Ga-Zn-O Stacks</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Seul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Hur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Ryu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Jeong</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jallcom.2022.163876</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Alloys Compd</title>
+		<imprint>
+			<biblScope unit="page">163876</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Characteristics of an Al2O3 Thin Film Deposited by a Plasma Enhanced Atomic Layer Deposition Method Using N2O Plasma</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electron. Mater. Lett</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="17" to="21" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Characteristics of HfO2 Thin Films Deposited by Plasma-Enhanced Atomic Layer Deposition Using O2 Plasma and N2O Plasma</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bae</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.2188405</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B Microelectron. Nanom. Struct</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1088" to="1093" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">The Formation of an Almost Full Atomic Monolayer via Surface Modification by N 2 O-Plasma in Atomic Layer Deposition of ZrO 2 Thin Films</title>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Won</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G.-J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Heo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm9005234?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">19</biblScope>
+			<biblScope unit="page" from="4374" to="4379" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Fast PEALD ZnO Thin-Film Transistor Circuits</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Mourey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Jackson</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TED.2009.2037178</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="530" to="534" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Efficient Iterative Schemes for Ab Initio Total-Energy Calculations Using a Plane-Wave Basis Set</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmuller</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.54.11169</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page">11169</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Generalized Gradient Approximation for the Exchange-Correlation Hole of a Many-Electron System</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Joubert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.54.16533</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B -Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">16533</biblScope>
+			<date type="published" when="1996">1999. 1996</date>
+		</imprint>
+	</monogr>
+	<note>From Ultrasoft Pseudopotentials to the Projector Augmented-Wave Method. Phys. Rev. B</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Perspective: Advances and Challenges in Treating van Der Waals Dispersion Forces in Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Klimes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Michaelides</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4754130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2012</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page">120901</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Projector Augmented-Wave Method</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Blöchl</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.50.17953</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="issue">24</biblScope>
+			<biblScope unit="page">17953</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Electron-Energy-Loss Spectra and the Structural Stability of Nickel Oxide: An LSDA+U Study</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Dudarev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Botton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Savrasov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Humphreys</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Sutton</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.57.1505</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">1505</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Electronic Structure and Elastic Properties of Strongly Correlated Metal Oxides from First Principles: LSDA + U, SIC-LSDA and EELS Study of UO2 and NiO. Phys. status solidi</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Dudarev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Botton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Savrasov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Szotek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Temmerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Sutton</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/(SICI)1521-396X(199803)166:1&lt;429::AID-PSSA429&gt;3.0.CO;2-F</idno>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="volume">166</biblScope>
+			<biblScope unit="page" from="429" to="443" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Effects of Oxygen Vacancies on the Structural and Optical Properties of β-Ga2O3</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Xin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep40160</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">2017</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="12" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Metastable Rhombohedral Phase Transition of Semiconducting Indium Oxide Controlled by Thermal Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Seok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c02306?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page" from="7397" to="7403" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Origins of High Mobility and Low Operation Voltage of Amorphous Oxide TFTs: Electronic Structure, Electron Transport, Defects and Doping</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kamiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/JDT.2009.2021582</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Dispersion Technol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="273" to="288" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<title level="m" type="main">Electronic Defects in Amorphous Oxide Semiconductors: A Review. Phys. status solidi</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ide</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nomura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kamiya</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssa.201800372</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">216</biblScope>
+			<biblScope unit="page">1800372</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Oxygen Vacancies in ZnO</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Janotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Van De Walle</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2053360</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page">122102</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Native Point Defects in ZnO</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Janotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Van De Walle</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.76.165202</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page">165202</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Transition Levels of Defect Centers in ZnO by Hybrid Functionals and Localized Basis Set Approach</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gallino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pacchioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Di Valentin</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3491271</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2010</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page">144512</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Plasma Treatment Effect on Charge Carrier Concentrations and Surface Traps in A-InGaZnO Thin-Film Transistors</title>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-K</forename><surname>Joo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xing Piao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-E</forename><surname>Ahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-K</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G.-T</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4868630</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2014</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">114503</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">A Study on the Electrical Properties of Atomic Layer Deposition Grown InOx on Flexible Substrates with Respect to N2O Plasma Treatment and the Associated Thin-Film Transistor Behavior under Repetitive Mechanical Stress</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.6b11815?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">45</biblScope>
+			<biblScope unit="page" from="31136" to="31143" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Mobility-Stability Trade-off in Oxide Thin-Film Transistors</title>
+		<author>
+			<persName><forename type="first">Y.-S</forename><surname>Shiah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Abe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ueda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sasase</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41928-021-00671-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Electron</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="800" to="807" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Unintended Carbon-Related Impurity and Negative Bias Instability in High-Mobility Oxide TFTs</title>
+		<author>
+			<persName><forename type="first">Y.-S</forename><surname>Shiah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ueda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hosono</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LED.2021.3101654</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett. 2021</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1319" to="1322" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

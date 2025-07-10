@@ -1,0 +1,787 @@
+[
+    {
+        "type": "text",
+        "text": "On the physical and chemical details of alumina atomic layer deposition: A combined experimental and numerical approach ©",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Dongqing Pan; Lulu Ma; Yuanyuan Xie; Tien Chien Jen; Chris Yuan",
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/4d7c65fbd57623e0ffc8a243e3f65d7923de37b001f28e1c9f2262bcaf76dcb2.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Check for updates",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "J. Vac. Sci. Technol. A 36, 021511 (2015) https://doi.org/10.1116/1.4905726",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Articles You May Be Interested In",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Dielectric performance of hybrid alumina- silicone nanolaminates synthesized by plasma enhanced chemical vapor deposition",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "J. Vac. Sci. Technol. A (October 2011)",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "A numerical approach on the selection of the purge flow rate in an atomic layer deposition (ALD) process Physics of Fluids (May 2016)",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Growth mode of alumina atomic layer deposition on nanopowders",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "J. Vac. Sci. Technol. A (May 2017)",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "On the physical and chemical details of alumina atomic layer deposition: A combined experimental and numerical approach",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Dongqing Pan, Lulu Ma, and Yuanyuan Xie  Department of Mechanical Engineering, University of Wisconsin- Milwaukee, Milwaukee, Wisconsin 53201",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Tien Chien Jen  Department of Mechanical Engineering, University of Wisconsin- Milwaukee, Milwaukee, Wisconsin 53201 and School of Engineering, University of Alaska Anchorage, Anchorage, Alaska 99508",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Chris Yuan<sup>a)</sup>  Department of Mechanical Engineering, University of Wisconsin- Milwaukee, Milwaukee, Wisconsin 53201",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(Received 27 October 2014; accepted 29 December 2014; published 9 January 2015)",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Alumina thin film is typically studied as a model atomic layer deposition (ALD) process due to its high dielectric constant, high thermal stability, and good adhesion on various wafer surfaces. Despite extensive applications of alumina ALD in microelectronics industries, details on the physical and chemical processes are not yet well understood. ALD experiments are not able to shed adequate light on the detailed information regarding the transient ALD process. Most of current numerical approaches lack detailed surface reaction mechanisms, and their results are not well correlated with experimental observations. In this paper, the authors present a combined experimental and numerical study on the details of flow and surface reactions in alumina ALD using trimethylaluminum and water as precursors. Results obtained from experiments and simulations are compared and correlated. By experiments, growth rate on five samples under different deposition conditions is characterized. The deposition rate from numerical simulation agrees well with the experimental results. Details of precursor distributions in a full cycle of ALD are studied numerically to bridge between experimental observations and simulations. The 3D transient numerical model adopts surface reaction kinetics and mechanisms based on atomic- level studies to investigate the surface deposition process. Surface deposition is shown as a strictly self- limited process in our numerical studies. ALD is a complex strong- coupled fluid, thermal and chemical process, which is not only heavily dependent on the chemical kinetics and surface conditions but also on the flow and material distributions. © 2015 American Vacuum Society. [http://dx.doi.org/10.1116/1.4905726]",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "I. INTRODUCTION",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Atomic layer deposition (ALD) has been adopted extensively in silicon microelectronics and thin- film device industries and is on rapid expansion to more industrial applications.<sup>1</sup> ALD is operated by injecting two or more chemical precursors into a chamber alternately to enable material deposition on substrates layer by layer. The sequential saturated surface reaction makes ALD process highly self- limited, and thus, the resultant films are perfectly uniform in surface geometry. Film thickness can be accurately controlled in Ångstrom or monolayer level with high precisions.<sup>1</sup> Thanks to its high dielectric constant, high thermal stability, and good adhesion on various wafer surfaces,  $\\mathrm{Al}_2\\mathrm{O}_3$  thin film is typically studied as a model ALD process.<sup>1,2</sup> The  $\\mathrm{Al}_2\\mathrm{O}_3$  dielectric film was first reported to be deposited by ALD using trimethylaluminum (TMA) and  $\\mathrm{H}_2\\mathrm{O},^{3,4}$  and recently, more researchers adopt TMA and ozone as precursors.<sup>2,5- 7</sup> Our study focuses on the typical  $\\mathrm{Al}_2\\mathrm{O}_3$  ALD using TMA and  $\\mathrm{H}_2\\mathrm{O}$ , whose surface deposition process can be represented as following two half reactions:",
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {^{*}\\mathrm{Al} - \\mathrm{OH} + \\mathrm{Al}(\\mathrm{CH}_{3})_{3}\\longrightarrow{^{*}\\mathrm{Al}} - \\mathrm{O} - \\mathrm{Al}(\\mathrm{CH}_{3})_{2} + \\mathrm{CH}_{4},}\\\\ & {^{*}\\mathrm{Al} - \\mathrm{CH}_{3} + \\mathrm{H}_{2}\\mathrm{O}\\longrightarrow{^{*}\\mathrm{Al}} - \\mathrm{OH} + \\mathrm{CH}_{4},} \\end{array} \\tag{1}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "where * items denote surface species.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Although a lot of materials are being deposited by ALD, details on its physical and chemical processes are not yet well understood.<sup>8</sup> In general, studies of ALD process have been developing into two domains: experimental and numerical. Experimental researchers improve the deposited films by adjusting experimental conditions, e.g., process pressure, temperature, and dosage.<sup>9- 14</sup> Li et al. studied the effects of process temperature and pressure on  $\\mathrm{Al}_2\\mathrm{O}_3$  film properties by characterizing the film thickness uniformity, impurity incorporation, and the step coverage in high aspect ratio features.<sup>2</sup> Mousa et al. presented a study of the effects of temperature and gas velocity on film growth in  $\\mathrm{Al}_2\\mathrm{O}_3$  and  $\\mathrm{ZnO}$  ALD, respectively.<sup>15</sup> Sammelselg et al. studied the growth unevenness and film compositions in ALD of  $\\mathrm{TiO}_2$  thin films.<sup>16</sup> Influence of growth temperature on properties of zirconium dioxide films by ALD was examined by Kukli et al.<sup>17</sup> Similar research was conducted by Scarel et al. to study the electric properties of  $\\mathrm{ZnO}_2$  films.<sup>18</sup> Confined by technical, economic and time infeasibilities in experimental implementations, ALD experiments are always facing a \"black box\" without knowing enough details about the",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "transient process, and thus, they only focus on the \"output,\" such as growth rate, film properties. Consequently, they are not able to shed adequate light on the detailed information of ALD process.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "With progresses in computing technologies, many researchers are devoted to studying physical interactions and chemical kinetics of ALD by numerical approaches. ALD process is in essence a multiscale process, which not only involves atomic bonds formations, species chemisorptions, and nanofilm deposition (in molecular scale), but also includes material interactions and energy transport in macroscopic scale (in chamber scale).",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "In molecular scale, most numerical investigations adopt the first principle methods, such as the density function theory (DFT) method to explore surface reaction mechanisms and chemical reaction pathways.19 In the paper of Delabie et al., ALD of  $\\mathrm{Al}_2\\mathrm{O}_3$  using TMA and water was studied using DFT to investigate reaction pathways and possible mechanisms for growth inhibition in ALD cycles.20 The atomic- scale structure of alumina film by ALD was also studied by Elliott and Greer using the DFT method.21 Besides DFT, Puurunen derived a mathematical model to describe the growth rate in ALD.22 In the cited paper, \"ligand exchange\" and \"dissociation or association\" were proposed as two types of chemisorption mechanisms.22 The above atomic- level models revealed certain microscopic details of the surface reaction mechanisms and chemical kinetics, but few of them considered the material and energy transfer processes in ALD.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Some researchers took the macroscopic transport processes into consideration using other methods such as Monte Carlo method, molecular dynamics, and Lattice Boltzmann method. Gilmer et al. applied the Monte Carlo models to simulate film deposition in atomic scale.23 Kinetic Monte Carlo methods were proposed in Refs. 24 and 25 to investigate ALD process of  $\\mathrm{HfO_2}$  and  $\\mathrm{Al}_2\\mathrm{O}_3$  , respectively. Hu et al. used molecular dynamics model to study the structure of  $\\mathrm{Al}_2\\mathrm{O}_3$  film in the aspects of surface composition, roughness and growth rate.26 Similar method was adopted by Gou et al. to simulate surface interactions on silicon wafer in ALD.27 Lattice Boltzmann method is a relatively new but rapidly developing mesoscopic approach, which uses the lattice schemes to solve the Boltzmann equation.28 He et al. first applied the Lattice Boltzmann method to simulate diffusion- convection processes with surface chemical reactions on solid surfaces.29 Finally, we extended the method and used it in simulating the gas flow in ALD.28",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Due to multiple scales both in space and time, ALD simulation in chamber scale remains challenging. In this filed, Adomaitis developed numerical models to describe the ballistic transport of chemical precursor species in ALD process.30 Holmqvist et al. claimed a mechanistic model of continuous flow reactors.31,32 By continuum- based models in the cited papers, gas- phase fluid dynamics, mass transport, and heterogeneous gas- surface reaction mechanisms were analyzed numerically. We recently constructed a similar mechanistic model with detailed chemical kinetics to study alumina ALD process.33 In a paper published by Adomaitis, a multiscale model of ALD was developed by coupling the lattice Monte Carlo method with a continuum approach of precursor transport.34",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "These chamber- scale models can fundamentally describe the ALD process together with the chemical kinetics in a larger picture. However, most of them lack detailed surface reaction mechanisms and numerical results are not well correlated with the experimental observations. In this paper, we perform a combined experimental and numerical study on the details of flow and surface reactions in ALD and the results from both experiments and simulations are correlated. By experiments, the growth rate under different deposition conditions is studied and characterized. Details regarding precursor pulsing and purging processes in a full cycle of ALD simulation are studied numerically to bridge between growth rate and precursor distributions. The 3D transient numerical model adopts surface reaction kinetics and mechanisms based on the atomic- level calculations20,22 to study the surface deposition process. The combined experimental and numerical methodology could be applied in further research for in- depth understanding of ALD process.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "II. METHODS",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "A. Experiments",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The surface reaction process and  $\\mathrm{Al}_2\\mathrm{O}_3$  film growth rate are characterized by the Cambridge NanoTech Savannah 100 ALD system using  $\\mathrm{TMA} + \\mathrm{H}_2\\mathrm{O}$  reactions. The ALD system shown in Fig. 1 consists of precursor cylinders, precursor manifold, carrier gas manifold, chamber, outlet pipe, and a vacuum pump. TMA and water stored in separate precursor cylinders are injected into chamber by their own vapor pressure at room temperature  $(25^{\\circ}\\mathrm{C})$  and pulsing (in milliseconds) is controlled by ALD stop valves. Nitrogen is",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/17cac96df605009671c07b15725b6e04153106d36abbc0f96208cc05d7c9880b.jpg",
+        "img_caption": [
+            "FIG. 1. (Color online) Cambridge Nanotech Savannah S100 ALD system consists of precursor cylinders, precursor manifold, carrier gas manifold, chamber, outlet manifold, and a vacuum pump (not shown in the figure)."
+        ],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "the carrier gas flowing through the system continuously during all the operations. A vacuum pump is connected with outlet pipe to maintain the low vacuum pressure  $(\\sim 10^{- 1}\\mathrm{Torr})$  in chamber. The reactor chamber (with  $150\\mathrm{mm}$  inner diameter) is designed for deposition of films on substrates with diameter up to  $100\\mathrm{mm}$  and can be heated from 100 to  $250^{\\circ}\\mathrm{C}$  depending on specific deposition conditions.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "In our experiments, alumina films are deposited on substrates of crystal silicon 100 with dimensions of  $10\\mathrm{mm}\\times$ $10\\mathrm{mm}$  using  $99.9\\%$  TMA as the metal provider and  $99.0\\%$  distilled water as the oxidizer. The wafers are prepared by first being immersed in  $5\\%$  HF acid solution for  $5\\mathrm{min}$  and rinsed in distilled water. With HF treatment, the layers of native oxide are removed.35 Then, the wafers are immersed in  $30\\%$ $\\mathrm{H}_2\\mathrm{O}_2$  and  $70\\%$ $\\mathrm{H}_2\\mathrm{SO}_4$  mixed acid solution for  $5\\mathrm{min}$  and washed by distilled water. For each experiment, five samples are placed inside the chamber, with one in the center, the other four around equilaterally. Specifically, substrate A is placed at the inlet, C at the outlet, B and D at the upper and lower positions, and E in the center of chamber.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Before depositions, each component of ALD system is heated to the prescribed temperature and the system is stabilized for  $300\\mathrm{s}$ . Pulsing time for both TMA and water vapor is  $0.015\\mathrm{s}$ , while purging time for both TMA and water vapor is tested with 8 and  $20\\mathrm{s}$ , respectively. In our ALD cycle, TMA is pulsed, and then purged in the first half cycle, and in the second half cycle, water is injected and purged. To be specific, the ALD cycle in 8 s purging experiment is TMA/purge/ water/purge  $= 0.015\\mathrm{s / 8s}$ $0.015\\mathrm{s / 8s}$  and in  $20\\mathrm{s}$  purging experiment, TMA/purge/water/purge  $= 0.015\\mathrm{s / 20s / 0.015s / }$ $20\\mathrm{s}$ . Nitrogen is flowing through the system at  $20\\mathrm{sccm}$ . A total of 60 cycles are deposited in our experiments. The accumulated film thickness by ALD is characterized by the UVISEL Spectroscopic Ellipsometer (HORIBA, Ltd.).",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "B. Mathematical modeling",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "ALD cycle can be decoupled into several physical and chemical procedures, such as momentum transport (material flow), convective heat transfer (system heating), mass transfer (species transport), as well as chemical reactions (surface species chemisorption). Each process is governed by corresponding partial differential equations (PDEs), which can be solved numerically on the defined domain. These PDEs are derived using the finite volume method (FVM). The surface reaction kinetics and mechanisms are defined on surface sites to simulate the material deposition process.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "1. Fluid dynamics",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The continuum- based Finite Volume Method assumes the concerned domain as a continuum. The continuity equation conserves mass36,37",
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\frac{\\partial\\rho}{\\partial t} +\\nabla \\cdot \\left(\\rho \\vec{V}\\right) = S_{m}, \\tag{3}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "where  $\\rho$  is the density,  $\\vec{V}$  is the velocity vector, and  $S_{m}$  is a mass source term.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The flow in S100 ALD system was confirmed as a laminar flow.28 The process of momentum transport within the laminar flow in the ALD chamber is governed by the momentum conservation equation36,37",
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\frac{\\partial}{\\partial t}\\left(\\rho \\vec{V}\\right) + \\nabla \\cdot \\left(\\rho \\vec{V}\\vec{V}\\right) = -\\nabla P + \\nabla \\cdot \\tilde{\\tau} +\\rho \\vec{g} +\\vec{F}, \\tag{4}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "where  $P$  is the static pressure;  $\\rho \\vec{g}$  and  $\\vec{F}$  are the gravitational body force and external body forces, respectively; and  $\\tilde{\\tau}$  is the stress tensor, which is defined as36,37",
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\tau = \\mu \\left[\\left(\\nabla \\vec{V} +\\nabla \\vec{V}^{T}\\right) - \\frac{2}{3}\\nabla \\cdot \\vec{V}\\vec{I}\\right], \\tag{5}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "where  $\\mu$  is the fluid dynamic viscosity,  $\\tilde{I}$  is the unit tensor, and the term  $(2 / 3)\\nabla \\cdot \\vec{V}\\tilde{I}$  is the effect of volume dilation.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "To model the species transport in ALD system, the convection- diffusion equation is adopted. In ALD system, the two- component gaseous mixture is concerned: (1) water vapor and nitrogen; (2) TMA vapor and nitrogen. The convection- diffusion equation for species  $i$  takes the following form:38",
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\frac{\\partial}{\\partial t} (\\rho c_i) + \\nabla \\cdot (\\rho c_i\\vec{V}) = -\\nabla \\cdot \\vec{J}_{m,i} + R_i + S_i, \\tag{6}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "where  $c_{i}$  is the local molar fraction of species  $i$ ,  $R_{i}$  is the net rate of production of species  $i$  by chemical reaction, and  $S_{i}$  is the source of species  $i$ .",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The diffusion flux,  $\\vec{J}_{m,i}$ , is the mass diffusion due to the gradients of concentration and temperature. In a mixture, when concentration of one species is much lower than the major component, the dilute approximation is satisfied, and Fick's law is used to model mass diffusive flux of the dilute species.38 In ALD system, although each precursor is pulsed in a very short time (e.g.,  $0.015\\mathrm{s}$ ), the amount of precursor injection is shown large in our numerical flow characterization and experimental observations. The dilute approximation does not hold in our case, so the Maxwell- Stefan equation for full multicomponent diffusion is more appropriate38",
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\vec{J}_{m,i} = -\\sum_{j = 1\\atop j\\neq i}^{N - 1}\\rho D_{ij}\\nabla c_i - D_{T,i}\\frac{\\nabla T}{T}, \\tag{7}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "where  $D_{ij}$  is the binary Maxwell- Stefan diffusive coefficient of species  $i$  and  $j$ ;  $N$  is the total number of species in the mixture.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "2. Heat transfer",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "In ALD process, heat transfer is in forms of conduction between chamber and pipe, and convection between wall and gaseous mixture. Also, there is heat transfer by species diffusion, e.g., heat transfer because of mass diffusion caused by material concentration gradients.38- 40",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "With the very small portion of radiation between chamber and gases neglected, the overall heat transfer within ALD chamber is governed by the energy equation",
+        "page_idx": 3
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\frac{\\partial}{\\partial t} (\\rho E) + \\nabla \\cdot \\left[\\vec{V} (\\rho E + P)\\right]}\\\\ & {\\quad = \\nabla \\cdot \\left[k\\nabla T - \\sum_{i}h_{i}\\bar{h}_{,i} + (\\bar{\\tau}\\cdot \\vec{V})\\right] + S,} \\end{array} \\tag{8}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "where  $k$  is the material thermal conductivity and  $h_i$  is the enthalpy of mixture species  $i$  and  $\\bar{J}_{h,i}$  is the diffusion heat flux of mixture species  $i$ .  $S$  is the source term of heat, which is due to chemical reaction or other heat sources. The term  $E$  is defined as $^{39,40}$",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nE = k - \\frac{P}{\\rho} +\\frac{V^2}{2}. \\tag{9}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "In summary, precursor distribution in the ALD system is achieved by solving the species transport Eq. (6) with incorporation of the momentum conservation Eq. (4) and energy Eq. (8).",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "3. Chemical kinetics",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Because gas flow in the concerned ALD system is shown as laminar, the laminar finite- rate method is adopted to couple the surface reactions with species transport. In laminar finite- rate model, the effect of turbulent fluctuations is ignored and the finite reaction rates are determined by Arrhenius expressions. To model the reactions accompanying species transport in ALD chamber, the production rate of species  $i$  by chemical reactions,  $R_{i}$  in Eq. (6) is calculated through the laminar finite- rate model using Arrhenius expressions",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nR_{i} = M_{w,i}\\sum_{i = 1}^{N_{r}}\\hat{R}_{i,r}, \\tag{10}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "where  $M_{w,i}$  is the molecular weight of species  $i$  and  $\\hat{R}_{i,r}$  is the Arrhenius molar rate of creation or destruction of species  $i$  in reaction  $r$ .",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "In real ALD system, there are two kinds of reactions involved: gaseous volumetric reaction and solid surface reaction. However, in alumina ALD, gaseous volumetric reactions happen only when the two gaseous precursors (TMA and water) coexist in ALD chamber. Since surface reactions enable film depositions, gaseous reactions are not the main concerns for studying the film deposition process. The general form of the  $r$ th irreversible surface reaction in ALD chamber takes the form as",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\sum_{i = 1}^{N_g}g_{i,r}^{\\prime}G_i + \\sum_{i = 1}^{N_b}b_{i,r}^{\\prime}B_i + \\sum_{i = 1}^{N_s}s_{i,r}^{\\prime}s_i\\xrightarrow{k_r}\\sum_{i = 1}^{N_g}g_{i,r}^{\\prime \\prime}G_i}\\\\ & {\\quad +\\sum_{i = 1}^{N_b}b_{i,r}^{\\prime \\prime}B_i + \\sum_{i = 1}^{N_s}s_{i,r}^{\\prime \\prime}S_i,} \\end{array} \\tag{11}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "where  $G,B$  and  $S$  denote gaseous species, bulk (solid) species, and surface species, respectively;  $Ng,Nb$  and  $Ns$  are the total number of the corresponding gaseous, bulk and surface species;  $g_{i,r}^{\\prime}b_{i,r}^{\\prime}$  and  $s_{i,r}^{\\prime}$  are the stoichiometric coefficients for each reactant species  $i$ ;  $g_{i,r}^{\\prime \\prime}b_{i,r}^{\\prime \\prime}$  and  $s_{i,r}^{\\prime \\prime}$  are the stoichiometric coefficients for each product species  $i$ ; the rate constant  $k_{r}$  is evaluated by the Arrhenius expression",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\nk_{r} = A_{r}T^{\\beta_{r}}\\exp \\left(\\frac{-E_{r}}{RT}\\right), \\tag{12}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "where  $A_{r}$  is the pre- exponential factor;  $\\beta_{r}$  is the temperature exponent;  $E_{r}$  is the activation energy; and  $R$  is the universal gas constant.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The reaction rate of surface reaction  $\\Re_{r}$  represented by Eq. (11) is calculated as",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\Re_{r} = k_{f,r}\\prod_{i = 1}^{N_{g}}[G_{i}]_{w}^{s_{i,r}^{\\prime}}\\prod_{j = 1}^{N_{s}}[S_{j}]_{w}^{s_{i,r}^{\\prime}}, \\tag{13}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "where, for gaseous species,  $[]_{w}$  represents molar concentrations on wall surfaces and for surface species, and  $[]_{w}$  is the surface coverage. The bulk species are not included, because reaction rate is independent of bulk species. The net molar rate of production or consumption of each species  $i$  is given by",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\hat{R}_{i,g} = \\sum_{r = 1}^{N_R}(g_{i,r}^{\\prime \\prime} - g_{i,r}^{\\prime})\\Re_r,i = 1,2\\dots N_g,}\\\\ & {\\hat{R}_{i,b} = \\sum_{r = 1}^{N_R}(b_{i,r}^{\\prime \\prime} - b_{i,r}^{\\prime})\\Re_r,i = 1,2\\dots N_b,}\\\\ & {\\hat{R}_{i,s} = \\sum_{r = 1}^{N_S}(s_{i,r}^{\\prime \\prime} - s_{i,r}^{\\prime})\\Re_r,i = 1,2\\dots N_s,} \\end{array} \\tag{14}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "where  $N_{R}$  represents the total number of surface reactions in ALD chamber.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "By substituting Eq. (14) into Eq. (10), the production (or destruction) rate of species  $i$ ,  $R_{i}$  in Eq. (6) can be evaluated.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "4. Surface reaction mechanisms",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The surface deposition mechanisms of alumina ALD are quite complicated. In a theoretical model by Puurunen, two possible chemisorption mechanisms of ALD surface reactions were proposed: \"ligand exchange\" and \"dissociation and association.\"  ${}^{8,22}$  Delabie et al. studied the pathways of TMA and  $\\mathrm{H}_2\\mathrm{O}$  surface reactions using DFT method.  ${}^{20}$  ALD surface reactions are accomplished through two possible mechanisms, namely, \"ligand exchange reaction\" and \"chemisorption reaction.\"  ${}^{20}$  At the initial state, wafer surface is covered by hydroxyl group. In the ligand exchange mechanism, surface species  ${}^{*}\\mathrm{OH}$  sites are exchanged with a methyl group of TMA",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathrm{Al(CH_3)_3 + ^*OH\\longrightarrow^*CH_3 + Al(CH_3)_2OH.} \\tag{15}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "For the chemisorption reaction type, the H atom from the surface sites is transferred to one of the methyl groups of TMA, resulting in gaseous  $\\mathrm{CH_4}$  and Al- O bond",
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\mathrm{Al(CH_3)_3 + ^*OH\\longrightarrow^*O - AlCH_3(s) + CH_4.} \\tag{16}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "It has been shown by the DFT calculations the chemisorption reactions are strongly favored kinetically over the ligand exchange reactions.20 Therefore, in this study, we adopted the chemisorption reaction mechanisms to study the reactions in TMA and water pulsing steps. The corresponding complete surface reactions are formulated by two half reactions as",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\begin{array}{rl} & {\\mathrm{~TMA~pulse~:~}2\\mathrm{Al(CH_3)_2(g)} + 3^* OH(s)\\longrightarrow^* AlCH_3(s)}\\\\ & {\\qquad +^* Al(CH_3)_2(s) + 3O\\langle s\\rangle +3CH_4(g),} \\end{array}\n$$\n",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Water pulse:  $3\\mathrm{H}_2\\mathrm{O}(\\mathrm{g}) + ^*\\mathrm{Al - CH}_3(\\mathrm{s}) + ^*\\mathrm{Al - (CH}_3)_2(\\mathrm{s})$",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "\n$$\n\\longrightarrow 3^{\\ast}\\mathrm{OH(s)} + 2\\mathrm{Al\\langle s\\rangle} + 3\\mathrm{CH}_4(\\mathrm{g}),\n$$\n",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "where  $\\langle \\mathrm{s}\\rangle$  denotes solid (or bulk) species and  $\\mathrm{g}$  stands for the gaseous species. The two half reactions involve two gaseous species, three surface species, and two bulk species.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Besides, for the numerical model in this paper, the following assumptions are presumed for the reaction mechanisms: (1) Only surface reactions are considered; (2) both half surface reactions are irreversible considering generations of gaseous methane; and (3) at the initial state, full coverage of hydroxyl group on wafer surfaces is assumed.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "C. Numerical solution details",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "A transient 3D numerical model based on the Cambridge Nanotech S100 ALD system is created and solved under the framework of ANsys Fluent. The computational domain is shown in Fig.2.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The boundary condition for carrier gas nitrogen is volumetric flow rate, e.g., 20 sccm. By continuous operations of vacuum pump, the background pressure of the ALD chamber is maintained at  $\\sim 0.30$  Torr. Precursors are stored in cylinders at room temperature, and precursors are injected into the system by their vapor pressure. In the numerical model, pressure boundary conditions are imposed on the two precursor inlets: 9.43 Torr for TMA vapor, and 23.68 Torr for water vapor, which are both assumed as saturated vapor pressure at  $25^{\\circ}C$  The outlet is connected with a vacuum pump and boundary condition for the outlet is pressure boundary and set as background pressure, which is also the full- load working pressure of the vacuum pump. By doing so, the steady flow field is actually presumed.",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/148d4666ddc16a48f128316565bac6586adc657da0092ce5e5d46ff4e03dab99.jpg",
+        "img_caption": [
+            "FIG. 2. (Color online) 3D computational domain in the numerical model is based on S100 ALD reactor system. There are three inlets, one outlet, and surface reactions are enabled only on the chamber bottom wall."
+        ],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Materials are deposited on the inner surfaces of the whole ALD system in actual ALD process, but in numerical modeling, for computational simplicity, we only enable deposition reactions on the bottom wall of chamber, where the wafers are placed. Boundary conditions for any other inner walls are assumed no- slip, no- flux of mass, but their temperature is maintained at certain levels.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Using the numerical model, a full cycle of precursor pulsing and purging process is investigated to retrieve the information regarding flow field and material distribution. Mechanisms of surface reactions formulated in Eq. (17) are enabled on the chamber bottom wall surface to study the surface deposition process. Numerical simulation is implemented on the 3D domain (Fig. 2) with a nonstructural meshing scheme by the commercial solver package of ANSYS Fluent. Second- order upwind method is adopted for spatial discretization and approximation of the continuity equation, energy equation, and species transport equations. By FVM with a pressure- velocity coupled scheme, the values at each domain node are calculated. Second- order implicit method is used for the time discretization and approximation. The second order numerical methods are adopted in our simulation to ensure a sufficient computational accuracy.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "III. RESULTS AND DISCUSSION",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "A. Experiments: Effects of purging time and process temperature",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Alumina film is deposited at four levels of chamber temperature: 100, 150, 200, and  $250^{\\circ}\\mathrm{C}$  each with five wafer samples. The deposited  $\\mathrm{Al}_2\\mathrm{O}_3$  film thickness in 60 cycles is measured using a spectroscopic ellipsometer (Horiba UVISEL model).",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Figure 3 presents film growth per cycle (GPC) in  $\\mathring{\\mathrm{A}}/$  cycle at each temperature for 8 and  $20\\mathrm{s}$  purging time, respectively. To be more specific, purging time is defined as the time between two precursor injections, and in one purging period, both precursor stop valves are closed, and carrier gas is flowing through the system continuously with the vacuum pump working. All the five samples have similar dependence on process temperature. Specifically, for 8 s purging experiments as indicated in Fig. 3(a),  $\\sim 0.06\\mathring{\\mathrm{A}}$  of GPC is increased with every  $50^{\\circ}\\mathrm{C}$  increase of process temperature below  $200^{\\circ}\\mathrm{C}$  A slight decrease  $(< 0.02\\mathring{\\mathrm{A}}/$  cycle) for sample A is seen from 200 to  $250^{\\circ}\\mathrm{C}$  but a larger decrease is shown from the outlet sample C. In the case of  $20\\mathrm{s}$  purging time as presented in Fig. 3(b), the turning temperature for sample D and E is lowered to  $150^{\\circ}\\mathrm{C}$  and other three samples have same turning temperature as seen in 8 s purging process.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "From these experimental results, film growth rate varies greatly at different chamber positions. This is due to the surface saturation conditions. Generally, as surface reactions get saturated, growth rate reaches its peak. As long as the surface saturation is not achieved, more seconds it takes in the purging step, more likely precursor molecules collide with the reactive surface species on wafer surfaces and thus more materials are deposited. To be specific, the highest growth rate for inlet sample A is  $\\sim 1.18\\mathring{\\mathrm{A}}/$  cycle at  $200^{\\circ}\\mathrm{C}$  with 8 s purging time. The reactive surface species is not",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/abfa6ced00dd6a89717b31943ae7a39355755b526b138781a567506329be837b.jpg",
+        "img_caption": [
+            "FIG. 3. (Color online)  $\\mathrm{Al}_2\\mathrm{O}_3$  film growth rate in  $\\mathring{\\mathrm{A}}/$  cycle for: (a) 8 s purging experiments; (b)  $20\\mathrm{s}$  purging experiments. Sample A is located in the inlet area and sample C in the outlet area."
+        ],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "saturated under this condition. With extra  $12\\mathrm{s}$  purging time, its growth rate reaches to its peak of  $\\sim 1.24\\mathrm{\\AA}$  cycle at same temperature in the case of  $20\\mathrm{s}$  purging time. For the sample at outlet (sample C), surface reaction has been already saturated in  $8\\mathrm{s}$  purging process, and hence, its highest growth rate is kept at  $\\sim 1.09\\mathrm{\\AA}$  cycle in  $20\\mathrm{s}$  purging.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The possible reason for different turning temperature observed in samples  $\\mathbb{D}$  and  $\\mathbb{E}$  is that collision probabilities are increased by the extra time in  $20\\mathrm{s}$  purging, and the surface deposition process is expedited so that surface species have been saturated at lower temperature  $(150^{\\circ}\\mathrm{C})$ . The slightly increased peak growth rate (sample  $\\mathring{\\mathrm{D}}$  from 1.16 to  $1.18\\mathrm{\\AA}$  cycle; sample E from 1.15 to  $1.19\\mathrm{\\AA}$  cycle) is also due to the longer contacting time of precursor molecules with wafer surfaces.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The overall temperature effect on GPC presented in Fig. 3 can be well interpreted by the concept of \"ALD window.\" At lower temperature, e.g.,  $100^{\\circ}\\mathrm{C}$ , the growth rate is low because the precursor would condense on the surface in liquid state or there is no sufficient thermal energy to enable and finish the surface reactions. The decreased growth rate at higher temperature  $(250^{\\circ}\\mathrm{C})$  is attributed to the enhanced desorption of the formed surface species at higher temperature.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Another interesting feature exposed by the growth rate experiments is that at each deposition temperature, materials are deposited faster on inlet wafers than outlet substrates. In  $8\\mathrm{s}$  purging time, growth rate of outlet sample is  $\\sim 0.10\\mathrm{\\AA}$  cycle lower than the inlet sample. The lower deposition rate on sample C is possibly attributed to the following facts: (1) The outlet sample C is close to the vacuum pump, and the flow at outlet is much faster than at inlets. The convective effect on precursor transport is much stronger at outlet, and consequently, weaker diffusive effect decreases the deposition rate; (2) For the sample C, although all the precursor molecules gather at outlet, most precursor molecules are consumed in the surface reactions on the wafers and also the system inner surfaces. In fact, the amount of precursor molecules reaching at outlet would be much smaller than the inlet area. Furthermore, precursors are diluted by the resultant gas product  $\\mathrm{CH}_4$ , and hence, its concentration is largely decreased at the outlet. Therefore, lower GPCs are observed at outlet sample. Additional light is also shed on this observation in the aspect of unevenness of precursor distributions inside the chamber by simulations and numerical analysis in Sec. III B.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Surface- averaged growth rates from both experimental and numerical investigations are demonstrated in Fig. 4. Deposition rates obtained from numerical simulation are very close to the experimental results. The numerical alumina growth rate is achieved by considering the resulted bulk species from both half reactions described in Eq. (17) and is averaged for the five sample surfaces. The numerical GPC increases from  $\\sim 1.10\\mathrm{\\AA}$  cycle at  $100^{\\circ}\\mathrm{C}$  to  $\\sim 1.22\\mathrm{\\AA}$  cycle at  $200^{\\circ}\\mathrm{C}$ . A slight decrease is also seen at  $250^{\\circ}\\mathrm{C}$  as the experimental curves.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The numerical GPC is  $\\sim 0.05\\mathrm{\\AA}$  cycle larger than the experimental results averagely. The larger values are mainly due to the presumed assumptions in numerical modeling. The theoretical modeling process has simplified the actual process with several assumptions listed in Sec. II B, while in experiments several factors are involved to hinder the deposition process. For instance, at the initial state,",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/cc3c5e594e2fc21905dffccd50ab49cfb1e9c4abfb61890a9704258686f079a1.jpg",
+        "img_caption": [
+            "FIG. 4. (Color online) Comparisons of surface-averaged  $\\mathrm{Al}_2\\mathrm{O}_3$  film growth rates in  $\\mathring{\\mathrm{A}}/$  cycle by experimental and numerical investigations."
+        ],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "hydroxylization of the wafer surfaces cannot be perfectly  $100\\%$  (which is assumed in numerical modeling). Also, calculations based on DFT showed that complex intermediate products are generated in ALD reactions. $^{20}$  However, for computational feasibility and simplicity, numerical model neglects these intermediate species. The involvement of intermediate reactions is difficult to be predicted without actual experimental conditions, because they are heavily dependent on precursor dosage, purging time, local precursor concentration, surface species coverage, and local temperature, etc. $^{8 - 14}$  The agreement of GPC between experimental and numerical results confirms the validity of our numerical model, which are used for further exploration of ALD process in detail.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "B. Numerical investigations",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "1. Full cycle flow simulation: effect of carrier gas flow rate",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "To correlate the growth rate observed in experiments (Fig. 3) with material distributions, precursor concentrations are obtained by solving the species transport Eq. (6) with incorporation of the momentum conservation Eq. (4) and the energy Eq. (8). The numerical study is implemented by running a full cycle of ALD simulation.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Molar concentrations of TMA and water are probed during the transient calculations at five spots corresponding to the samples in experiments. Figures 5(a) and 5(b) show TMA distribution for purging flow rate 20 and 200 sccm, respectively. At the initial state, only  $\\mathsf{N}_2$  exists in chamber. TMA vapor is injected into the system by opening the ALD stop valve for  $0.015\\mathrm{s}$ . The inlet sample (point A) responds much faster than any other samples. TMA at both point C and E reach to the highest concentration within the pulsing step, but the peak molar fraction at B and D is only  $\\sim 60\\%$ .",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "In the following  $10\\mathrm{s}$  precursor purging step, TMA is diluted in chamber by the continuously incoming carrier gas and purged by the vacuum pump. TMA concentration at point A decreases dramatically from its peak value, but molar fractions at B and D increase to nearly  $80\\%$  at the end of purging process  $(10.015\\mathrm{s})$  after a slight decrease. In the first half ALD cycle  $(0.015\\mathrm{s} / 10\\mathrm{s})$ , TMA at point A remains at higher concentration level for longer time than any other samples. Higher concentration increases the collision probabilities of precursor molecules with the surface sites and results in higher deposition rates in the inlet area observed in experimental GPC results (Fig. 3). On the other hand, the lower deposition rates at sample B and D are due to the lower precursor concentration levels.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "By comparing Figs. 5(a) and 5(b), it is concluded carrier gas flow rate exerts little influence on pulsing step, but it largely determines precursor distributions during purging step. In the case of  $20~\\mathrm{sccm}$  flow rate, TMA concentrations remain high in the most area of chamber (at B, D, and  $\\mathrm{E} > 50\\%$ ), while much lower concentrations (all the samples  $< 20\\%$ ) are observed for 200 sccm flow rate.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "In the second- half cycle, water vapor is introduced into chamber. Figures 5(c) and 5(d) demonstrate water vapor distribution for carrier gas flow rate of 20 and 200 sccm, respectively. Comparing with TMA, water vapor molecules take the whole chamber space much faster. Different purging gas flow rate makes no difference on water distributions in the pulsing step, neither. However, for 20 sccm flow rate as shown in Fig. 5(c), precursor concentrations at the four samples except A are kept at higher levels through the  $10\\mathrm{s}$  purging step. This implies that 20 sccm flow rate is not sufficient to purge all the precursor material out of ALD system. By 200 sccm flow rate, the situation is much improved as shown in Fig. 5(d).",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "From simulations, it has been shown the driving force to inject precursors into ALD system is mainly due to the relatively strong flow field caused by high precursor vapor pressure, but after the very rapid pulsing (0.015 s) process, precursor molecules are mainly driven by the relatively weak flow field formed from carrier gas. During the slow purging procedure, precursor molecules still have chances to collide and react with the reactive surface sites. This is why longer purging time slightly increases the growth rate as seen in experiments.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Increasing carrier gas flow rate will speed up the purging procedure, but this will also shorten collision time of precursor molecules with surface species which hence will result in lower deposition rate. An alternative way is to increase the purging time. However, this implies longer ALD cycle time, which is usually unfeasible in real applications considering hundreds of cycles needed to deposit a film.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "2. Surface chemistry simulation: effect of process temperature",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "To further study the surface reaction details numerically, ALD surface chemical kinetics modeled by Eqs. (14) and (10) is integrated into species transport and flow simulation by evaluating the production or destruction rate of species  $i$ ,  $R_{i}$  in Eq. (6).",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Figure 6 shows the correlations of surface deposition rate of  $\\mathrm{O}\\langle \\mathrm{s}\\rangle$  and TMA molar fraction with surface coverage of  $\\mathrm{^*Al(CH_3)_2(s)}$  for TMA pulsing step at 100, 150, 200, and  $250^{\\circ}\\mathrm{C}$ , respectively. Coverage of species  $\\mathrm{^*Al(CH_3)_2(s)}$  increases in the first  $0.005\\mathrm{s}$ , and  $\\mathrm{O}\\langle \\mathrm{s}\\rangle$  deposition rate reaches its peak. When  $\\mathrm{^*Al(CH_3)_2(s)}$  is saturated to  $50\\%$  [another half is taken by  $\\mathrm{^*AlCH_3}$  (s)], the deposition rate declines drastically. Thereafter, despite the increasing TMA concentration, the surface coverage and deposition rate remain unchanged.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The gray dotted lines indicated in Fig. 6 show temperature effect on surface reactions. The mass deposition rate increases with temperature from 100 to  $250^{\\circ}\\mathrm{C}$  in the first  $0.004\\mathrm{s}$ . However, at  $0.004\\mathrm{s}$ , deposition rate of  $250^{\\circ}\\mathrm{C}$  is seen slightly lower than that of  $200^{\\circ}\\mathrm{C}$ . The reason can be found by observing  $\\mathrm{^*Al(CH_3)_2(s)}$  surface coverage at  $250^{\\circ}\\mathrm{C}$ . At  $0.004\\mathrm{s}$ , surface species has already been saturated at  $250^{\\circ}\\mathrm{C}$ , compared to an unsaturated condition at  $200^{\\circ}\\mathrm{C}$ . This implies that surface deposition is highly dependent on surface coverage conditions.",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/3ee7d0d311a65ed1c4b113db71056d202b2a949659eb52924cc6cfabff0180df.jpg",
+        "img_caption": [
+            "FIG. 5. (Color online) Precursor distributions during the full cycle of flow simulations for: (a) TMA molar fraction for carrier gas flow rate of  $20~\\mathrm{sccm}$ ; (b) TMA molar fraction for carrier gas flow rate of  $200~\\mathrm{sccm}$ ; (c) water molar fraction for carrier gas flow rate of  $20~\\mathrm{sccm}$ ; and (d) water molar fraction for carrier gas flow rate of  $200~\\mathrm{sccm}$ . A is located in inlet area and C in the outlet area."
+        ],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/0c42aa3a2a7c38dbf4e04505e91154bcb57995ecdbdf5096b900996768685e64.jpg",
+        "img_caption": [
+            "FIG. 6. (Color online) Correlations of surface deposition rate of  $\\mathrm{O(s)}$  and TMA molar fraction with coverage of  $\\mathrm{^*Al(CH_3)_2(s)}$  for TMA pulsing step at 100, 150, 200, and  $250^{\\circ}\\mathrm{C}$ , respectively. The gray dotted lines show the temperature effect on surface deposition. Surface deposition rate of  $\\mathrm{O(s)}$  in mass per area per second is achieved by substituting Eq. (14) into Eq. (10)."
+        ],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/f90d9de9c1e5e87195b77954379c0b7e4bab09c74383342b4ed3be85a3f0bd24.jpg",
+        "img_caption": [
+            "FIG. 7. (Color online) Relation of surface deposition rate of  $\\mathrm{Al}(\\mathrm{s})$ ,  $\\mathrm{H}_2\\mathrm{O}$  molar fraction and coverage of species  $\\mathrm{^*OH}$  for water pulsing step at 100, 150, 200, and  $250^{\\circ}\\mathrm{C}$ , respectively. The gray dotted lines show the process temperature effect on surface deposition. Surface deposition rate of  $\\mathrm{Al}(\\mathrm{s})$  in mass per area per second is achieved by substituting Eq. (14) into Eq. (10)."
+        ],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "It is also worthwhile to point out that the peak deposition rate is independent of process temperature. With temperature changing from 100 to  $200^{\\circ}\\mathrm{C}$ , the peak values of deposition rate are mostly the same. However, higher temperature indeed accelerates the deposition process before surface species get saturated.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Figure 7 presents the relation of mass deposition rate of  $\\mathrm{Al}(\\mathrm{s})$  with  $\\mathrm{H}_2\\mathrm{O}$  concentration and surface coverage of species  $\\mathrm{^*OH}$  during water pulsing step. As water vapor is injected into the system, water concentration is increased and  $\\mathrm{^*OH}$  coverage is approaching its saturation status. The mass deposition rate increases and then is restrained as surface sites are saturated with  $\\mathrm{^*OH}$ .",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Temperature effect on the second half surface reaction shows more complicated features. Surface deposition rate is increasing with temperature only in a very short time, and after  $0.003\\mathrm{s}$  the surface deposition becomes hindered by higher temperature. This could be explained by surface species coverage in Fig. 7. With increasing temperature, higher deposition rate corresponds to higher coverage  $(\\sim 50\\%)$  of  $\\mathrm{^*OH}$  at  $250^{\\circ}\\mathrm{C}$ . Surface species  $\\mathrm{^*OH}$  at  $250^{\\circ}\\mathrm{C}$  gets saturated much faster than other temperature conditions. Decreased deposition rates are resulted from smaller coverage of reactive species  $\\mathrm{^*Al(CH_3)_2(s)}$  and  $\\mathrm{^*AlCH_3(s)}$ . However, the peak value of surface deposition rate in pulsing process is increased by higher temperature.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Figure 8 presents bulk  $\\mathrm{Al}_2\\mathrm{O}_3$  mass deposition rate in pulsing step at five probed points for the four temperature treatments. Bulk  $\\mathrm{Al}_2\\mathrm{O}_3$  growth rate is obtained from summation of the resulted bulk species  $\\mathrm{O}(\\mathrm{s})$  and  $\\mathrm{Al}(\\mathrm{s})$  in the two half reactions. Inlet sample (point A) is shown having a quicker and larger response of surface deposition rate.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "These observations are consistent with the flow simulation results shown in Fig. 5: the sample that has a quicker and larger response to the precursor flow has a quicker and larger response to the surface reactions. Flow impacts the deposition process through material distributions. This also agrees with the experimental observations presented in",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Fig. 3 in which the highest deposition rate is observed at the inlet sample.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "To summarize, both our experimental and numerical investigations on alumina ALD process show that the film deposition rate is dependent on process temperature. Higher temperature accelerates surface deposition processes, but surface reactions also heavily depend on the surface conditions, such as precursor concentration, precursor contacting time with the wafer surface and surface species saturation status. Before surface species get saturated, deposition rate is increasing with precursor concentration and the rate is largely restrained once the surface sites are fully taken by nonreactive surface species. Surface reactions are strictly self- terminated after reactive surface species are totally substituted, even though precursor concentration is still being increased. This is the self- limiting nature of ALD operations, which ensures the uniformity and accurate thickness controllability of deposited films.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "IV. CONCLUSIONS",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "This paper presented a combined experimental and numerical study on the physical and chemical details of  $\\mathrm{Al}_2\\mathrm{O}_3$  ALD using TMA and water. It's been found in our experiments that the film deposition rates of all the five samples are positively dependent on temperature below  $200^{\\circ}\\mathrm{C}$ . The growth rate is seen increasing with process temperature, but declines at higher temperature, e.g.,  $250^{\\circ}\\mathrm{C}$  for  $8\\mathrm{s}$  purging time. The inlet sample has higher growth rate than other samples. Longer purging time slightly increases the surface- averaged growth rate, but specific sample responds differently.",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "By numerical simulations, several insightful observations were made to better understand the ALD process. The discrepancies revealed among the five samples in experiments were correlated with precursor distributions during pulsing and purging processes. Higher GPC observed at inlet sample in experimental treatments is mainly due to the longer and larger precursor concentrations. Pulsing is a quite rapid",
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/4fb5b6953dfe7693e277caec424bb3b63b2f329a477f76fec4abfb4e814c186a.jpg",
+        "img_caption": [
+            "FIG. 8. (Color online) Surface deposition rate of bulk  $\\mathrm{Al}_2\\mathrm{O}_3\\langle \\mathrm{s}\\rangle$  at five different positions in TMA pulsing step for 100, 150, 200, and  $250^{\\circ}\\mathrm{C}$ , respectively. The bulk  $\\mathrm{Al}_2\\mathrm{O}_3$  growth rate is obtained from summation of the resulted bulk species  $\\mathrm{O}\\langle \\mathrm{s}\\rangle$  and  $\\mathrm{Al}\\langle \\mathrm{s}\\rangle$  in the two half reactions described in Eq. (17). Point A is located in the inlet area and point C in the outlet area."
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "procedure in milliseconds, but purging is a relative slow procedure during which precursor materials also react with the reactive surface sites. This was confirmed by the increased growth rate with extra purging time observed in the experiments.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "By tuning the carrier gas flow rate from 20 to  $200~\\mathrm{sccm}$ , it was observed the flow rate has little influence on pulsing process. However, the amount of residual precursors left in the system after purging procedure is largely determined by carrier gas, because purging process is mainly driven by the flow field formed from carrier gas. The purpose of introducing inert gases such as nitrogen and argon into ALD system is more to \"purge\" the precursor out of ALD system than to \"carry\" the precursor molecules into the chamber.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "The results from numerical chemistry simulations confirmed the self- limiting feature of ALD cycles. Surface deposition was seen a strictly self- limited process: surface deposition reactions are restrained once the surface species get saturated, even though the precursor material is still being introduced into the system. By the transient numerical simulations, effect of chamber temperature was shown to increase the deposition rate, but this effect is confined by the saturation conditions of surfaces sites. The differences of surface reactions among the five samples are consistent with the observations from experiments. ALD is a complex strong- coupled fluid, thermal and chemical process, which is not only heavily dependent on the chemical kinetics and surface conditions but also on the flow and material distributions.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "ACKNOWLEDGMENT",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Support from National Science Foundation (CMMI- 1200940) is gratefully acknowledged.",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "$^{8}$ R. L. Puurunen, J. Appl. Phys. 97, 121301 (2005).  $^{9}$ H. E. Cheng, W. J. Lee, and C. M. Hsu, Thin Solid Films 485, 59 (2005).  $^{10}$ P. J. King et al., Thin Solid Films 519, 4192 (2011).  $^{11}$ T. Krajewski et al., Microelectron. J. 40, 293 (2009).  $^{12}$ K. Kukli, M. Ritala, T. Uustare, J. Aarik, K. Forsgren, T. Sajavaara, M. Leskela, and A. Harsta, Thin Solid Films 410, 53 (2002).  $^{13}$ V. R. Rai, V. Vandalon, and S. Agarwal, Langmuir 28, 350 (2012).  $^{14}$ R. A. Wind and S. M. George, J. Phys. Chem. A 114, 1281 (2010).  $^{15}$ M. B. M. Mousa, C. J. Oldham, J. S. Jur, and G. N. Parsons, J. Vac. Sci. Technol., A 30, 01A155 (2012).  $^{16}$ V. Sammelselg, A. Rosental, A. Tarre, L. Niinisto, K. Heiskanen, K. Ilmonen, L. S. Johansson, and T. Uustare, Appl. Surf. Sci. 134, 78 (1998).  $^{17}$ K. Kukli, M. Ritala, J. Aarik, T. Uustare, and M. Leskela, J. Appl. Phys. 92, 1833 (2002).  $^{18}$ G. Scarel, S. Ferrari, S. Spiga, C. Wiemer, G. Tallarida, and M. Fanciulli, J. Vac. Sci. Technol., A 21, 1359 (2003).  $^{19}$ A. Afshar and K. C. Cadien, Appl. Phys. Lett. 103, 251906 (2013).  $^{20}$ A. Delabie, S. Sioncke, J. Rip, S. Van Elshocht, G. Pourtois, M. Mueller, B. Beckhoff, and K. Pierloot, J. Vac. Sci. Technol., A 30, 01A127 (2012).  $^{21}$ S. D. Elliott and J. C. Greer, J. Mater. Chem. 14, 3246 (2004).  $^{22}$ R. L. Puurunen, Chem. Vap. Deposition 9, 249 (2003).  $^{23}$ G. H. Gilmer, H. C. Huang, T. D. de la Rubia, J. Dalla Torre, and F. Baumann, Thin Solid Films 365, 189 (2000).  $^{24}$ A. Dkhissi, A. Esteve, C. Mastail, S. Olivier, G. Mazaleyrat, L. Jeloaica, and M. D. Rouhani, J. Chem. Theory Comput. 4, 1915 (2008).",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "$^{25}$ G. Mazaleyrat, A. Esteve, L. Jeloaica, and M. Djafari- Rouhani, Comput. Mater. Sci. 33, 74 (2005).  $^{26}$ M. Hu, J. X. Shi, and C. Heath Turner, Mol. Simul. 35, 270 (2009).  $^{27}$ F. Gou, A. W. Kleyn, and M. A. Gleeson, Int. Rev. Phys. Chem. 27, 229 (2008).  $^{28}$ D. Q. Pan, T. Li, T. C. Jen, and C. Yuan, J. Vac. Sci. Technol., A 32, 01A110 (2014).  $^{29}$ X. Y. He, N. Li, and B. Goldstein, Mol. Simul. 25, 145 (2000).  $^{30}$ R. A. Adomaitis, Chem. Vap. Deposition 17, 353 (2011).  $^{31}$ A. Holmqvist, T. Torndahl, and S. Stenstrom, Chem. Eng. Sci. 94, 316 (2013).  $^{32}$ A. Holmqvist, T. Torndahl, and S. Stenstrom, Chem. Eng. Sci. 81, 260 (2012).  $^{33}$ Y. Xie, L. Ma, D. Pan, and C. Yuan, Chem. Eng. J. 259, 213 (2015).  $^{34}$ R. A. Adomaitis, J. Cryst. Growth 312, 1449 (2010).  $^{35}$ A. S. Kurhekar and P. Apte, Int. Nano Lett. 3, 10 (2013).  $^{36}$ B. R. Munson, Fundamentals of Fluid Mechanics 6th Edition with Wiley Plus 5th Edition Set (Wiley, Toronto, Canada, 2008).  $^{37}$ R. W. Fox, A. T. McDonald, and P. J. Pritchard, Introduction to Fluid Mechanics (Wiley, Toronto, Canada, 2009).  $^{38}$ A. F. Mills, Basic Heat and Mass Transfer: Pearson New International Edition (Pearson, Boston, MA, 2013).  $^{39}$ W. Kays, M. Crawford, and B. Weigard, Convective Heat and Mass Transfer W/Engineering Subscription Card (McGraw- Hill, New York, 2005).  $^{40}$ T. L. Bergman and F. P. Incropera, Fundamentals of Heat and Mass Transfer (Wiley, Hoboken, NJ, 2011).",
+        "page_idx": 11
+    }
+]

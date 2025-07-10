@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">JSS FOCUS ISSUE ON ATOMIC LAYER ETCHING AND CLEANING Atomic Layer Etching: What Can We Learn from Atomic Layer Deposition?</title>
+				<funder ref="#_5zB6Brp">
+					<orgName type="full">Netherlands Organization for Scientific Research (NWO)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Dutch Technology Foundation STW</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2015-03-24">March 24, 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">T</forename><surname>Faraz</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Applied Physics</orgName>
+								<orgName type="institution">Eindhoven University of Technology</orgName>
+								<address>
+									<postCode>5600 MB</postCode>
+									<settlement>Eindhoven</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Applied Physics</orgName>
+								<orgName type="institution">Eindhoven University of Technology</orgName>
+								<address>
+									<postCode>5600 MB</postCode>
+									<settlement>Eindhoven</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Applied Physics</orgName>
+								<orgName type="institution">Eindhoven University of Technology</orgName>
+								<address>
+									<postCode>5600 MB</postCode>
+									<settlement>Eindhoven</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+							<email>w.m.m.kessels@tue.nl</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Applied Physics</orgName>
+								<orgName type="institution">Eindhoven University of Technology</orgName>
+								<address>
+									<postCode>5600 MB</postCode>
+									<settlement>Eindhoven</settlement>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">JSS FOCUS ISSUE ON ATOMIC LAYER ETCHING AND CLEANING Atomic Layer Etching: What Can We Learn from Atomic Layer Deposition?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-03-24">March 24, 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BF42E9DE977FFD39D3BA4D836FA122D3</idno>
+					<idno type="DOI">10.1149/2.0051506jss</idno>
+					<note type="submission">Manuscript submitted January 28, 2015; revised manuscript received March 12, 2015.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Current trends in semiconductor device manufacturing impose extremely stringent requirements on nanoscale processing techniques, both in terms of accurately controlling material properties and in terms of precisely controlling nanometer dimensions. To take nanostructuring by dry etching to the next level, there is a fast growing interest in so-called atomic layer etching processes, which are considered the etching counterpart of atomic layer deposition processes. In this article, past research efforts are reviewed and the key defining characteristics of atomic layer etching are identified, such as cyclic step-wise processing, self-limiting surface chemistry, and repeated removal of atomic layers (not necessarily a full monolayer) of the material. Subsequently, further parallels are drawn with the more mature and mainstream technology of atomic layer deposition from which lessons and concepts are extracted that can be beneficial for advancing the field of atomic layer etching.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Since its inception in the late 1950s, the semiconductor industry has shown an unsurpassed and continuous potential to double the number of transistors on logic and memory dies typically every two years. This 2-year pace in scaling was recognized by Gordon Moore as early as in 1965 <ref type="bibr" target="#b0">1</ref> and has been referred to as Moore's Law. The driving business forces for scaling have been twofold: cost efficiency and device performance. Until the early 2000s, traditional optical lithography has enabled the continuous scaling of gate pitch and areal scaling of the planar CMOS units. New strategies were conceived in the International Technology Roadmap for Semiconductors (ITRS) <ref type="bibr" target="#b1">2</ref> for the next, second era of scaling by using new materials such as strained silicon, gate stacks of high-k dielectrics and metals with optimum work function, <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4</ref> and high-mobility channels of Ge and III-V compound semiconductors. <ref type="bibr" target="#b4">5</ref> However, these materialsenabled solutions also have a 2D scaling nature and are reaching fundamental limits. Consequently, for both logic and memory devices, the use of the third (vertical) dimension is now being explored, thus introducing the so-called third era of scaling. Here, 3D architectures and low power consumption designs are developed to further increase the areal transistor density, ranging from FinFETs with conducting channels on three sides of a vertical fin structure, to "gate-allaround" structures, <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b6">7</ref> multiple transistor stacks in one die (e.g., 3D NAND <ref type="bibr" target="#b7">8</ref> ) and multiple die-stacks connected by through silicon vias (TSVs). <ref type="bibr" target="#b8">9</ref> The choice of materials and structures in semiconductor devices will greatly depend on the advancements in processing techniques and equipment. As devices approach single-digit nanometer critical dimensions (CDs), tolerances are required that are on the order of a few atoms. In addition, aspect ratios will become larger and topographies more complicated. The ability to precisely and selectively add and/or remove functional materials at an atomic scale has become imperative. The overall challenge in the processing of semiconductor devices lies therefore, in the accurate control of the material properties as well as in the control of the nanometer dimensions, hence in "materials control" and "dimensions control". This puts a heavy burden on processing techniques such as deposition and etch.</p><p>One technique that has been introduced in semiconductor device manufacturing in the past decade as a true enabling technology is atomic layer deposition (ALD). <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13</ref> ALD by itself is not a new technique -it was already developed by Suntola in 1977 <ref type="bibr" target="#b13">14</ref> -but it was not until the late 1990s that the semiconductor community started realizing that ALD could enable dedicated processes to meet the stringent demands on material quality, precise thickness and layer conformality control in future nanoscale device manufacturing. <ref type="bibr" target="#b14">15</ref> Today, the technique has grown to be an essential technology in semiconductor device mass-manufacturing, especially of FinFET and other devices with elevated 3D topology. Moreover, the processing at low temperatures (&lt;150 • C) by ALD gained importance (e.g., in nanopatterning) which has led to the development of energy-enhanced ALD processes such as plasma-enhanced ALD. <ref type="bibr" target="#b15">16</ref> Initially, ALD served mainly as a method to replace the thermallygrown SiO 2 gate oxide in CMOS transistors by thin films of high-k oxide materials. Among the vapor phase deposition methods, ALD is the preferred method of choice rather than physical or chemical vapor deposition (PVD and CVD). This is due to its layer-by-layer growth characteristic, its soft nature (no plasma or sputter damage), its conformality on 3D surface topologies, and its low thermal budget (ALD processes are typically limited to temperatures &lt;500 • C). Furthermore, the fact that high quality films can be prepared with precise growth control is a key merit of the technique.</p><p>ALD is not a continuous process or a continuous process divided into steps (i.e., a pulsed process, see Fig. <ref type="figure">1</ref>). Instead, ALD is a cyclic process in which film growth takes place by a repetition of cycles with every cycle consisting of several steps. Typically, an ALD cycle consists of four basic steps: two reactant dosing steps that are separated by two purge steps. Thus each ALD cycle can be divided into two halfreactions, i.e., half-reaction A during the first reactant dosing step (for the first reactant the term "precursor" is often employed) and halfreaction B during the second reactant dosing step (for the second half reaction the term "co-reactant" is appropriate). In each half-reaction, chemical reactions take place at the surface of the film in such a way that the surface chemistry is self-limiting. Thus half-reactions A and B can contribute to film growth but add at most one atomic layer (defined here as a layer of atoms, not necessarily a full monolayer). Hence, after a full "AB cycle" with sufficiently long dosing times for the precursor and co-reactant species (i.e., under so-called "saturation conditions"), the film thickness is increased by a well-defined value representing at most one atomic layer of material independent of the exact dosing times. This well-defined thickness is very repeatable cycle-over-cycle such that the targeted film thickness can be reached very precisely upon careful selection of the required number of ALD cycles. Evidently, the self-limiting surface chemistry is also the reason N5024 ECS Journal of Solid State Science and Technology, 4 (6) N5023-N5032 (2015)</p><p>Figure <ref type="figure">1</ref>. Several approaches can be adopted for thin film deposition and etching for vapor phase based techniques. (a) In a continuous process, the process A is started at t = 0 and stopped after the deposited or etched thickness has been reached. In this basic approach, the control of the deposited or etched thickness is limited as the deposited or etched thickness is "flux-controlled". Variations in the process conditions easily lead to variations in the flux of species and hence, in the final deposited or etched thickness, both over multiple deposition runs (i.e., wafer-to-wafer) or over the substrate area (i.e., within-wafer). (b) In a pulsed process, the continuous process is basically divided up into pulses and the pulses are repeated until the deposited or etched thickness has been reached. When the pulse length is well-defined, pulsing provides typically additional control over the continuous process but due to the flux-controlled nature similar drawbacks as in the continuous process hold. (c) Atomic layer processes are "surface-controlled" as they are based on self-limiting surface chemistries during, e.g., two half-reactions (A and B) that make up a full cycle. Every cycle yields a well-defined, fixed thickness that is deposited or etched when the time per cycle for the half-cycles is sufficiently long (i.e., when working in "saturated conditions"). This means that the thickness of the deposited or etched film can be controlled very accurately by choosing the right number of cycles. This holds when comparing one deposition run to another but it also leads to an excellent uniformity over the full substrate. Ideal atomic layer processes are very independent of variations in timings or process conditions.</p><p>for the excellent conformality and unparalleled uniformity that can be achieved by ALD.</p><p>Since the commercial onset of ALD, many dedicated ALD chemistries and processes have been developed for a growing set of materials. Other embodiments of ALD have also been developed but they all share the same defining characteristics where the processes take place cycle-wise with several steps per cycle and are based on self-limiting surface chemistry. Meanwhile, a large variety of ALD equipment has entered the market, including tools for single-wafer and batch processing, energy-enhanced and plasma-enhanced ALD tools, and more recently, even spatial ALD equipment. <ref type="bibr" target="#b16">17</ref> These developments have made ALD currently a mainstream technology for creating uniform and conformal nanomaterials and nanostructures with atomic scale accuracy.</p><p>Next-generation nanoscale devices will also require precise material removal or "etching". In the past 40 years Moore's Law could be continued by the numerous developments in plasma etching with continuously higher levels of dimensional control. Several of such developments have, for example, been enabled by approaches relying on pulsed operation, i.e., by time-modulation of the power, gas flows or bias voltages. <ref type="bibr" target="#b17">18</ref> Yet, every new technology node imposes new challenges in selectivity, plasma damage, aspect-ratio-dependent etching (ARDE) and line-edge roughness (LER). <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b18">19</ref> These challenges related to current dry etching techniques provide a window of opportunity for being potentially tackled by an atomic scale etching method analogous to ALD known as atomic layer etching (here abbreviated as "ALEt", see also below). Although several efforts have been undertaken to develop layer-by-layer methods with precise etch control similar to its ALD counterpart, the development of ALEt has comparatively lagged behind.</p><p>In this article, the efforts with respect to ALEt will be first briefly reviewed (The early days of atomic layer etching section). Next, an attempt is made to identify the key aspects of ALEt as well as its potential to become a novel technology option for producing singledigit nanometer critical dimensions (What can we learn from ALD? section). This will be done by highlighting the cues it can take from the strengths and successes of its counterpart ALD process. Finally, the conclusions and a brief future outlook are presented (Conclusions section).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The Early Days of Atomic Layer Etching</head><p>The concept of removing a single atomic layer from the surface of a solid was first claimed in a patent by Yoder in 1988 where he outlined a method for "atomic layer etching" of crystalline diamond. <ref type="bibr" target="#b19">20</ref> In this patent, a cyclic process was described in which every cycle consisted of four steps [see Fig. <ref type="figure" target="#fig_0">2a</ref>]: the diamond surface is flooded with NO 2 in the first step and with excited ions in step 3. Steps 2 and 4 are purge steps. Since then, a large set of publications has appeared in scientific literature and the method has come to be known by a variety of other names, namely digital etching, <ref type="bibr" target="#b20">21</ref> layer-by-layer etching, <ref type="bibr" target="#b21">22</ref> molecular-layer etching, <ref type="bibr" target="#b22">23</ref> plasma atomic layer etching (PALE), <ref type="bibr" target="#b23">24</ref> etc. Yet, the original name of "atomic layer etching" coined in the first patent has remained most popular. The acronym "ALEt" <ref type="bibr" target="#b24">25</ref> has often been used to distinguish the method from the abbreviation of atomic layer epitaxy (ALE), <ref type="bibr" target="#b9">10</ref> the latter being used to identify atomic layer deposition processes before the term atomic layer deposition (with acronym "ALD") gained widespread adoption. <ref type="bibr" target="#b14">15</ref> Experimental efforts aimed at realizing ALEt, commenced with the work of Maki et al. for GaAs <ref type="bibr" target="#b25">26</ref> in 1989. They outlined a process, referred to as "atomic bilayer etching", where the exposure of a GaAs substrate to molecular chlorine led to a self-terminating spontaneous adsorption of the gas on the substrate surface producing a weakly bound surface chloride layer. A subsequent exposure of this chlorinated surface layer to a low-fluence 193 nm ArF excimer laser pulse induced desorption leading to the removal or etching of the halogenated surface layer. Meguro et al. <ref type="bibr" target="#b26">27</ref> presented a "digital etching" process in which they used a Cl 2 gas pulse to passivate the surface of GaAs followed by a purge cycle to remove residual Cl 2 , a subsequent bombardment of the halogenated surface layer with 100 eV electrons followed by another purge of the etch products. Using this electron beam excited plasma process, an etch rate of 0.1 nm/cycle, i.e., <ref type="bibr" target="#b0">1</ref> 3 of a monolayer of GaAs was obtained, independent of the Cl 2 flow rate and the electron current density for the ranges investigated. The etch rate for GaAs was increased to 0.2 nm/cycle using a similar method <ref type="bibr" target="#b27">28</ref> but using low energy 25 eV Ar + ions instead of electrons. In this work typical saturation curves were also provided showing zero etching at zero Ar + irradiation and a saturated etch rate for sufficiently long Ar + irradiation [see Fig. <ref type="figure" target="#fig_0">2b</ref>]. For "layer-by-layer" etching, Ko et al. <ref type="bibr" target="#b28">29</ref>  of a surface-chlorinated GaAs layer with low energy but high-density Ar + ions at room temperature led to an etch rate of 0.5 nm/cycle, independent of the chlorine radical or Ar + ion exposure time. They also demonstrated ALEt of other III-V semiconductors like GaInAs, AlInAs and InP. Ishii et al. <ref type="bibr" target="#b29">30</ref> took an approach similar to that of Maki et al. by employing a 248 nm KrF excimer laser in place of a charged particle beam (ions, electrons) to irradiate a Cl 2 adsorbed GaAs surface. With their "digital etching" process, they obtained an etch rate of 0.2 nm/cycle, independent of excimer laser repetition rate and the amount of initially injected Cl 2 .</p><p>In parallel to these investigations of atomic layer etching of III-V semiconductors, atomic layer etching of silicon was explored. Sakaue et al. <ref type="bibr" target="#b30">31</ref> extrapolated the pioneering work of Horiike et al. <ref type="bibr" target="#b20">21</ref> for "digital etching" of Si using molecular chlorine instead of fluorine as the adsorbate precursor. Removal of the surface-chlorine adsorbed species subsequently took place via desorption induced by Ar + ion irradiation. A saturated etch rate of about 0.4 Å/cycle was obtained as the Ar + ion irradiation time was increased. The value of 0.4 Å/cycle corresponds to about <ref type="bibr" target="#b0">1</ref> 3 of a monolayer of Si(100). Upon increasing substrate bias voltage, the etch rates increased rapidly with increased amounts of higher-order etch products (SiCl 3 , SiCl 4 ). Matsuura et al. <ref type="bibr" target="#b21">22</ref> and Suzue et al. <ref type="bibr" target="#b31">32</ref> reported on "self-limited layer-by-layer etching" and "selflimited atomic layer etching" of Si, respectively, using ECR plasmas. The etch rate per cycle increased with the chlorine exposure time and saturated to a constant value of about <ref type="bibr" target="#b0">1</ref> 2 and 1 3 of a monolayer per cycle for Si(100) for Si(111), respectively, independent of the chlorine partial pressure. In their work, they also addressed the influence of the crystal orientation on the etch rate and the fact that only a fractional number of a monolayer is etched every cycle. On the basis of a molecular dynamics simulation study, <ref type="bibr" target="#b24">25</ref> Athavale and Economou reported that ALEt of a monolayer per cycle may be achieved with Cl 2 and Ar + ions [see Fig. <ref type="figure" target="#fig_0">2c</ref>]. They presented experimental results in a follow up work in which they used a helicon plasma for generating the Ar + ions. <ref type="bibr" target="#b32">33</ref> By applying and tuning a DC bias on the substrate, the Ar + ion bombardment energy could be adjusted to etch one monolayer off from silicon in an ∼100 s cycle. The process was self-limiting with respect to both chlorine dose and the ion dose while the etch rate was found to be a strong function of the DC bias on the substrate, i.e., the ion bombardment energy.</p><p>ALEt of silicon that makes use of energetic ions, albeit at low energy, may exclude any physical damage but may not be immune to any damage due to charging. To account for this charging damage, Park et al. <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35</ref> investigated ALEt of silicon by using Cl 2 surface passivation followed by bombardment with energetic Ar neutrals. One monolayer per cycle of silicon (100) and (111) was etched in the process but with comparatively longer cycle durations of ∼500 s and ∼800 s, respectively, for the two orientations as the etch rates depended on the Cl 2 pressure and Ar neutral beam fluence. To overcome the drawback of such long cycle times, an ALEt method incorporating pulsed plasmas has been proposed. <ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b36">37</ref> The concept relies on the formation of a self-limited halogenated surface layer in the presence of a plasma without initial substrate bias thus preventing ion bombardment induced etching. By using pulsed biasing, the halogenated surface layer is sputtered off faster than it can reform. Complete removal of this layer inhibits any further etching of the substrate provided the ion energy is below the sputtering threshold of the substrate. The bias is then switched off which again leads to the formation of a halogenated layer and the cycle can be repeated to obtain a fast ALEt process.</p><p>Furthermore, attention was given to the ALEt of oxides. Yeom and co-workers reported on ALEt of HfO 2 using BCl 3 and an Ar neutral beam. They showed a considerable improvement in the electrical characteristics of the devices prepared by ALEt when compared to results obtained for devices etched by conventional wet or dry etch techniques. <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39</ref> These improved results were attributed to a low edge damage of the gate oxide during ALEt by maintaining the surface composition at the edge of the gate oxide together with exact control of the Si etch depth. Recently, Metzler et al. <ref type="bibr" target="#b39">40</ref> also demonstrated ALEt of SiO 2 using a steady-state Ar plasma, periodic injection of a defined amount of C 4 F 8 gas and synchronized plasma-based Ar + ion bombardment. Injecting a predefined amount of C 4 F 8 gas leads to the controlled deposition of a fluorocarbon (FC) layer in the one to several Ångstroms thickness range onto the SiO 2 surface. Applying low-energy Ar + ion bombardment induces etching of the FC layer together with reaction of carbon and fluorine with the underlying SiO 2 surface layer. The resulting modified SiO 2 surface layer is etched by the low-energy Ar + ion bombardment until the modified layer is removed at which point the SiO 2 etching terminates.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>What Can We Learn From ALD?</head><p>As can be seen from the previous section, efforts for establishing an atomic scale etching process analogous to ALD have been quite limited so far. They have been restricted to a few particular embodiments, material systems, and chemistries and the approaches developed till now have had limited success and/or a limited range of potential applicability. Yet, the efforts also demonstrate the potential opportunities provided by the ALEt process concept, particularly in view of the current developments in the semiconductor industry. To significantly advance the applicability of ALEt, it is worthwhile to look in more detail at the ins and outs of ALD. It can be meaningful to learn from the state-of-the-art features of this technology as well as from its historical developments and emerging trends. Identifying similarities and differences between ALEt and its ALD counterpart can certainly contribute to expanding the toolbox of ALEt processes with sufficient performance to tackle future challenges in semiconductor and other device manufacturing.</p><p>First, it is instructive to define atomic layer etching and to introduce a generalized ALEt cycle. From the research efforts so far, it is clear that ALEt is a layer-by-layer etching method with -similar to ALD -the following defining characteristics (see Fig. <ref type="figure">1</ref>): the process takes place cycle-wise with several steps per cycle, and is based on selflimiting surface chemistry. However, contrary to what is claimed or suggested in many previous reports (especially in the work related to silicon etching), it is not necessary or useful to restrict ALEt to processes in which a full monolayer of material is etched. To achieve atomic layer etch precision in a very repeatable manner, the processes do not necessarily have to yield one monolayer per cycle. Removal of a submonolayer per cycle is adequate and, as a matter of fact, even better as the etch control can be even more precise. Note, that in virtually all ALD processes, the thickness increase per cycle is also limited to less than a monolayer (see Table <ref type="table">I</ref>) although there have been some cases reported in which the thickness increase is more than a monolayer. <ref type="bibr" target="#b40">41,</ref><ref type="bibr" target="#b41">42</ref> Yet whether the decrease in thickness after one cycle of ALEt is less or more than a monolayer, atomic scale precision in thickness and atomically smooth surfaces can still be obtained. In fact, it would be more sensible to add the criterion of (atomically) smooth surfaces to the definition of ALEt. Furthermore, note that the limitation to processes that yield one monolayer per cycle is only well-defined when etching single-crystalline materials such as silicon. A monolayer is very ill-defined when etching amorphous or polycrystalline materials, for example high-k oxides such as HfO 2 in gate stacks.</p><p>A generalized ALEt cycle can also be introduced by identifying parallels with ALD (see Fig. <ref type="figure">3</ref>). So far, the ALEt technique has manifested itself mostly based on a chemically enhanced process in which passivation of the surface of the material to be etched with a layer of adsorbed precursor species decreases the activation energy required by energetic particle bombardment to remove that layer (see The early days of atomic layer etching section). Limiting the discussion to a process with two half-reactions and four steps per cycle for simplicity, it is more relevant and more comprehensive to identify an adsorption step and an activation step. In the adsorption step, the surface is exposed to a precursor gas which adsorbs onto the surface in a self-limiting way, i.e., preventing further multilayer adsorption. This adsorption of a precise amount of precursor is similar for ALEt and ALD. This similarity also holds for the purge steps that separate the two half-reactions and which remove excess precursor species and reaction products from the reactor.</p><p>ECS Journal of Solid State Science and Technology, 4 (6) N5023-N5032 (2015)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>N5027</head><p>Table <ref type="table">I</ref>. The growth-per-cycle (GPC) for selected ALD processes. The GPC is given in metal atoms (M at.) per nm 2 and per cycle as well as equivalent monolayer (eq. ML) per cycle. For ALD, the GPC values can, for example, be ruled by the ionic radius of the metal center to be deposited, <ref type="bibr" target="#b63">64,</ref><ref type="bibr" target="#b64">65</ref> the ligand sizes of the precursors, <ref type="bibr" target="#b63">64,</ref><ref type="bibr" target="#b65">66,</ref><ref type="bibr" target="#b66">67</ref> or the density of adsorption sites on the surface. <ref type="bibr" target="#b67">68,</ref><ref type="bibr" target="#b68">69</ref> For the calculation of the GPC as eq. ML, the approximate distance between the metal atoms was used as derived from the atomic density of the bulk material neglecting the influence of crystal orientations, surface reconstructions, etc.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Material</head><p>Process details (substrate temperature) GPC (Å) GPC (M at. nm -2 ) GPC (Eq. ML) Reference ZnO ZnEt 2 + H 2 O (150 • C) 2.0 7.1 0.6 70 Al 2 O 3 AlMe 3 + H 2 O (200 • C) 1.0 3.5 0.33 71 HfO 2 HfCl 4 + H 2 O (300 • C) 0.4 1.1 0.12 72 TiN TiCl 4 + NH 3 (350 • C) 0.28 1.1 0.09 73 TaN x Ta(NMe 2 ) 5 + H 2 plasma (225 • C) 0.56 2.1 0.19 59,74 Pt MeCpPtMe 3 + O 2 (300 • C) 0.45 3.0 0.2 75 Pd Pd(hfac) 2 + H 2 plasma (100 • C) 0.17 0.9 0.05 76</p><p>However, the main differences lie in the third step. In ALEt, the surface is activated by co-reactant species which remove volatile etch products from the surface in a self-limiting way. After purging, this leads to the removal of one atomic layer from the surface (not necessarily a monolayer as discussed earlier). For ALD on the other hand, the activation step consists of exposing the surface to a co-reactant that completes the addition of an atomic layer of the material to be deposited on the surface, and, at the same time activates the surface for the next ALD cycle. The activation of the surface for the next cycle in the third step is a strict criterion for both ALD and ALEt and this holds also for the self-limiting nature of the second half-cycle.</p><p>For ALD, whether the elements of the co-reactant are added to the surface layer or not is insignificant from a conceptual point of view. Some co-reactants only activate the surface without contributing to growth, e.g., ALD of W from WF 6 and Si 2 H 6 <ref type="bibr" target="#b42">43</ref> and ALD of Pt from (CH 3 ) 3 Pt(CpCH 3 ) and O 2 . <ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b44">45</ref> The precursor in the adsorption step is typically well-defined. For ALD, it consists of an element to be deposited, e.g., the metal that defines the metal oxide, nitride, sulfide, etc. to be deposited. For ALEt, it is typically a species which contains elements that can form volatile reaction products with the material to be etched. Fluorineor chlorine-based precursors are typical examples used during ALEt of silicon. The co-reactant during the activation step is less welldefined and is not limited to atoms or molecules. It can also consist of many other species such as ions, electrons, energetic neutrals from a neutral beam or photons. The activation step could even involve a substrate temperature ramp. <ref type="bibr" target="#b45">46</ref> For ALEt, such a multitude of possible co-reactants is apparent from the past research efforts reviewed in the previous section. However, for ALD, processes based on such co-reactants have been reported but have gained more attention fairly recently (see Ref. 47 </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>and references therein).</head><p>Regarding the surface chemistry occurring during the two halfreactions in atomic layer processes, a large variety of surface reactions exists. For ALD, the surface chemistry can be based on reaction mechanisms such as ligand exchange, dissociation, association, combustion, abstraction, reduction, etc. <ref type="bibr" target="#b47">48</ref> For ALEt, in principle similar Figure <ref type="figure">3</ref>. Schematic representation of one complete, generalized cycle of (a) atomic layer etching (ALEt) and (b) atomic layer deposition (ALD). In (c), the so-called saturation curves for the various steps in the ALEt and ALD processes are schematically illustrated. The depicted processes consist of two half-reactions A and B and the total cycle is divided into four process steps. Step 1 is the "adsorption step" and step 3 is the "activation step". In these steps, the surface is exposed to reactants, here defined as "precursor" in step 1 and "co-reactant" in step 3. Steps 2 and 4 are "purge steps". The cycles, and hence the process steps, are repeated multiple times when etching or depositing a film. Every cycle removes or adds an atomic layer from or to the film for ALEt and ALD, respectively. The saturation curves show that exposure to the reactants in steps 1 and 3 should be sufficiently long to reach saturation. The purging in between these steps should be sufficiently long to avoid parasitic CVD or parasitic etch reactions that compromise the ALEt or ALD character of the processes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>N5028</head><p>ECS Journal of Solid State Science and Technology, 4 (6) N5023-N5032 (2015) reaction mechanisms can take place although most studies so far relied on dissociation (e.g., dissociation of Cl 2 at active surface sites) in combination with desorption reactions, e.g., assisted by ions, electrons, or photons (See The early days of atomic layer etching section). However, many processes relying on other chemistries can also be potentially developed, e.g., as demonstrated in a recent article by Lee and George who developed a thermally driven "reverse ALD" process. <ref type="bibr" target="#b48">49</ref> For both ALEt and ALD, the self-limiting behavior of the surface chemistry is key and should be verified by saturation curves. In case of ALD, one needs to verify whether or not an atomic layer of material has been added to the film independent of the dosing times as long as these are sufficiently long. The same holds for the removal of one atomic layer in ALEt. In both cases, this can be done by varying the dosing times for one step while keeping the dosing times for the other step(s) sufficiently long [see Fig. <ref type="figure">3c</ref>]. One should also ensure that no atomic layer has been added or removed with zero dosing time for the precursor or co-reactant. If the latter does not hold true, the processes do not -strictly speaking -consist of two half-reactions and subsequently, the condition of an atomic layer deposition or etching process is not met. Another aspect is the purging after the two half-reactions. The purges should be long enough to ensure that excess precursor molecules and reaction products are completely removed from the reactor before the co-reactant is introduced, and vice versa. When the purging times are too short, precursor and co-reactant molecules can interact leading to parasitic CVD reactions occurring during ALD. Consequently, key features of ALD such as precise growth control, excellent conformality and unparalleled uniformity are compromised. For ALEt, a similar phenomenon can occur, i.e., parasitic etch, which means that the etching is not restricted to one well-defined atomic layer. For example, in the processes reported for Si etching by Cl 2 adsorption and Ar + irradiation (see The early days of atomic layer etching section), the Ar plasma used in the 2 nd half-cycle to gener-ate the Ar + might dissociate residual Cl 2 when the reactor has not been purged sufficiently. This will lead to uncontrolled etching of the silicon during the second half-reaction of the process.</p><p>Besides comparing ALEt and ALD cycles and their process steps, it is also worthwhile to pay attention to the key (desired) features of the processes. From this perspective it is possible to identify some clear similarities and differences between ALEt and ALD (see Fig. <ref type="figure" target="#fig_2">4</ref>). What both processes (should) have in common is that they should lead to a very good uniformity over a large substrate area, i.e., basically over the full wafer size when processing wafer-based semiconductor devices. For ideal ALEt and ALD processes, this aspect is guaranteed by the fact that the processes are surface-controlled and self-limiting. This provides the opportunity to expose the wafer surface for a sufficiently long period to the precursor and co-reactant doses such that saturation of the surface chemistry can be reached over the full substrate area without multilayer removal or addition on highly-exposed surface regions. Obviously, another similarity lies in the control of the atomic layer processes: every cycle should lead to precise removal or addition of a well-defined atomic layer for ALEt and ALD, respectively. However, major differences between ALEt and ALD can be identified when considering the processing of 3D features at the substrate surface. The fact that ALD can yield very conformal films on demanding 3D topologies is a key asset of ALD intrinsic to the process. When depositing a film in, e.g., high aspect ratio trenches or holes, ALD processes will deposit a film with uniform thickness across the entire surface area of the substrate which includes the sidewalls and the bottom of the trenches or holes [see Fig. <ref type="figure" target="#fig_2">4b</ref>]. Ideally, this is independent of the surface density of the features and their corresponding pitch. For the etching counterpart, the desired situation is however different. Dry etching is generally carried out to create vertical structures such as (high aspect ratio) trenches and holes within the surface region of the substrate and, therefore, anisotropic etch processes are generally employed. The anisotropy is typically achieved by directional The processes yield a precise control of the thickness etched (etch control) or deposited (growth control) per cycle for ALEt and ALD, respectively. The latter holds for the full substrate surface such that the uniformity is excellent. When processing a substrate with three-dimensional features, the situation for ALEt and ALD is however different. For ALD, the coverage of three-dimensional features is similar throughout the features and comparable to the planar surface, hence the conformality of ALD-prepared films is excellent. For etching processes such as ALEt, there is generally interest in etching vertical features which requires anisotropic processes in which only material is removed from the bottom of the vertical feature. In other cases, isotropic etching can be desired. In this case, the material should be etched equally on all exposed surfaces, independent of the orientation of the local surface on the substrate. For ALEt, also the selectivity of the etch process is key. Ideally, only the to-be-etched material should be removed and not masking materials or materials lying underneath the to-be-etched material.</p><p>ECS Journal of Solid State Science and Technology, 4 (6) N5023-N5032 (2015) N5029 processes such as physical sputtering by (plasma-generated) ion beams or by so-called reactive ion etching processes (in all kinds of plasma reactors) in which a physical component is added to a chemical etching process. In this case, the so-called ion-radical synergism <ref type="bibr" target="#b49">50</ref> leads to significantly enhanced etch rates perpendicular to the substrate surface compared to those occurring parallel to the substrate surface. In this manner, the patterns to be etched can be effectively transferred to the substrate through the pre-defined openings in a hard mask covering the substrate material (see also discussion about selectivity below). Thus, if the etching of vertical structures is intended, the ALEt processes should be designed to have an anisotropic character. This is, e.g., the case for ALEt processes in which the co-reactant consists of directional, energetic species such as ions, electrons or energetic atoms from a neutralized ion beam. In the research efforts reported so far (see The early days of atomic layer etching section), this has often been the case. However, such anisotropic ("non-conformal") etching is only one possible manifestation of ALEt. It can be envisioned that isotropic ("conformal") etching by ALEt processes is also imperative for particular situations. This will however impose quite different requirements on the ALEt process steps, in particular on the co-reactants used. For example, ALEt processes that rely on a co-reactant consisting only of directional species are not an option for isotropic etching. A true "reverse ALD" process is probably more suited for isotropic etching, e.g., an ALEt process which is purely thermally driven. <ref type="bibr" target="#b48">49</ref> Another aspect that is different for etch and deposition processes is that etch processes are characterized by an additional parameter which, by definition, does not have an equivalent for deposition processes. This parameter is the selectivity of the etch process, which is defined as the ratio between the rate of the layer being etched relative to that of a masking or underlying layer. Selectivity is critical for all etch processes including ALEt and it also imposes constraints on the ALEt cycles and its process steps. For example, it restricts the energy of ions when these are used as the co-reactant to activate the surface. Their energy should be sufficiently high to activate the to-be-etched surfaces but should be sufficiently low to leave the mask or underlying material intact. <ref type="bibr" target="#b23">24</ref> This calls for precise ion-energy control under such conditions.</p><p>Having addressed the selectivity that needs to be achieved for etch processes based on ALEt, it is also interesting to consider the currently increasing interest in area-selective ALD processes <ref type="bibr" target="#b50">51</ref> and draw parallels here as well. Nanopatterning of films and structures by area-selective ALD in bottom-up processes is receiving growing attention as this could eliminate compatibility issues with topdown etch processes which are associated with the use of etchants, lift-off chemicals or resist films. Therefore, area-selective ALD processes relying on area-deactivation and area-activation (see Fig. <ref type="figure" target="#fig_3">5</ref>) are currently being explored. <ref type="bibr" target="#b50">51</ref> However, for cases where incentives exist to restrict to top-down etching, it is interesting to explore areaselective ALEt processes as well. Besides traditional masking of the substrate surface (i.e., "selective by surface deactivation"), the surfacecontrolled ALEt processes can potentially also be designed such that one substrate material is etched while other substrate materials are not ("inherently selective"). Another possibility is area-activation ("selective by surface activation"), e.g., by carrying out the activation step during an ALEt process [see Fig. <ref type="figure">3a</ref>] only locally by a spatially defined co-reactant exposure, e.g., an focused electron or ion beam. Examples of such processes are illustrated and discussed in Fig. <ref type="figure" target="#fig_3">5</ref>.</p><p>Several challenges for ALEt have been discussed in this section. So far, these challenges were mainly process-related and a brief and probably incomplete overview is presented in Table <ref type="table">II</ref>. It is evident that it will not be a trivial task to overcome these challenges. At the same show an approach that can be labeled "inherently selective". The substrate is composed of several materials and on the surface of some of the materials, deposition or etching does (virtually) not occur for the ALD or ALEt surface chemistry chosen. The selectivity is therefore, inherent to the specific ALD or ALE process. (c) and (d) show an approach that can be labeled as "selective by deactivation" since part of the substrate is deactivated by a layer of molecules or a film (mask). No etching or deposition takes place at the parts of the surface that are deactivated. This approach is standard for etching. It is not problematic if the mask material is somewhat etched as long as it etches much slower than the to-be-etched material. (e) and (f) show an approach that can be labeled "selective by activation". Film growth or etching only initiates on those parts of the surface that are activated, e.g., by a focused electron or ion beam that locally interacts with the surface. For ALD, processes exist in which this activation only needs to be done before the first cycle; <ref type="bibr" target="#b50">51</ref> for ALEt, the local activation step needs to take place every cycle. In all the displayed cases for ALD [(a), (c) and (e)], the area-selective ALD processes depend on an effect known as nucleation delay. The film material easily deposits on some surfaces whereas on other areas, the film hardly nucleates or it takes much longer for the film to nucleate. For area-selective ALEt approaches (b) and (d), selectivity has the same meaning as that typical for etch processes. The to-be-etched material should etch much faster than any other material used. In (d), the selectivity should preferably approach infinity. Furthermore, it is noted that the possibility exists for designing area-selective ALEt approaches by combining ALEt and ALD. For example, area-selective ALD films can serve as a local mask.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>N5030</head><p>ECS Journal of Solid State Science and Technology, 4 (6) N5023-N5032 (2015)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table II. Prominent challenges for atomic layer etching divided into process-related and equipment-related challenges</head><p>Process-related -ALEt processes for more material systems -More diverse ALEt surface chemistries -Processes for isotropic and anisotropic ALEt -Area-selective ALEt processes -. . . Equipment-related -Dedicated ALEt reactors -Versatile, well-controlled co-reactant sources -Process monitoring and control -High-throughput methods and reactors -. . . time, it has become clear that inspiration can be obtained from ALD processing and the associated trends and developments within that field. This should also hold particularly for the surface chemistries that need to be developed. At this point it is important to stress that ALD or ALEt processes are not necessarily limited to conventional AB-cycles (more precisely: (AB) n with n being the number of cycles). Also, multistep cycles such as (ABC) n or supercycles ((A1B1) m (A2B2) n ) x (with m and n being the number of A1B1 and A2B2 cycles, respectively and x being the total number of supercycles) <ref type="bibr" target="#b47">48</ref> can be employed (see Fig. <ref type="figure" target="#fig_4">6</ref>). For ALD, such multistep cycles and supercycles have proven extremely powerful, e.g., in extending the temperature window of ALD processes (e.g., for Pt 52 ), improving the properties of ALDprepared materials (e.g., for Pd <ref type="bibr" target="#b76">76</ref> ), or depositing doped materials (e.g., Al-doped ZnO <ref type="bibr" target="#b52">53</ref> ) or complex oxides (e.g., SrTiO 3 <ref type="bibr" target="#b53">54</ref> ). Table II also lists some of the challenges for ALEt which are equipment-related. Obviously, much like ALD, it is essential that dedicated ALEt reactors will need to be developed. These reactors can be optimized for precursor and co-reactant dosing while at the same time accounting for the design and implementation of versatile co-reactant sources. These co-reactants can be atoms, molecules, ions, electrons and photons, etc., and they can be delivered from the gas phase isotropically or directionally, e.g., using beams. ALEt processes based on energetic ions will require accurate ion-energy control, e.g., by incorporating advanced substrate biasing schemes <ref type="bibr" target="#b54">55</ref> yielding monodisperse ion energies which can be precisely controlled. Note that (advanced) substrate biasing <ref type="bibr" target="#b17">18</ref> is already at the heart of the technology in plasma etching while it has just entered the field of plasma-enhanced ALD. <ref type="bibr" target="#b55">56,</ref><ref type="bibr" target="#b56">57</ref> Furthermore, when working with plasmabased co-reactants, process and reactor design should take into account whether or not surface reaction products liberated from the surface during the co-reactant step can be dissociated in the plasma, e.g., by electron-impact. These dissociated reaction products can interact again with the surface and lead to additional etching or (re)deposition. Such effects have clearly been observed for plasma-enhanced ALD processes. <ref type="bibr" target="#b57">58,</ref><ref type="bibr" target="#b58">59</ref> Next, also equipment-related challenges will exist that are economically driven. A particularly important challenge lies in reaching sufficiently high throughput numbers for the processes. So far, ALEt processes suffer from long cycle times, even much more so than many ALD processes. However, at this point inspiration can also be derived from the developments and progresses made in ALD. Approaches such as operating under not-fully saturated conditions to reduce cycle times or resorting to spatial ALEt concepts, <ref type="bibr" target="#b45">46,</ref><ref type="bibr" target="#b59">60,</ref><ref type="bibr" target="#b60">61</ref> similar to spatial ALD processes, <ref type="bibr" target="#b61">62</ref> can also provide pathways for increasing the throughput of ALEt reactors, as illustrated in Fig. <ref type="figure" target="#fig_5">7</ref>. It goes without saying that eventually, it is the application that will determine the tolerance thresholds for the processes involved and their parameters, not the fact of whether the processes themselves are strictly ALEt or not.  <ref type="bibr" target="#b47">48</ref> that can also be employed for ALEt: (a) a regular process, (b) a multistep process and (c) a supercycle process. In a multistep process, one or more additional steps are added to the cycle to form, for instance, an ABC process. In a supercycle, the steps of two regular processes are combined where m cycles of the first process are followed by n cycles of the second process. The variables m and n can be chosen so as to obtain the desired properties for the ALD or ALEt process. Approaches that are being used to increase the throughput of ALD reactors that, in principle, can also be adopted for ALEt reactors. In (a), the approach is shown where the process is not operated under fully saturated conditions. When working with slightly shorter exposure times the cycle time can significantly be reduced (e.g., by a factor of two) while the thickness deposited or removed is only slightly reduced. For many processes and device architectures, the level of growth or etch control remains acceptable. In (b), the socalled spatial atomic layer process is shown. The cycles are not carried out in the time domain but in the spatial domain. It is noted however, that developing appropriate processes for spatial ALD is not straightforward and this is probably even more so for spatial ALEt.</p><p>ECS Journal of Solid State Science and Technology, 4 (6) N5023-N5032 (2015)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>N5031</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions</head><p>Atomic layer etching (ALEt) is an etch approach that can potentially tackle issues in semiconductor device manufacturing now that critical dimensions are nearing single-digit nanometer values. Being the etch counterpart of the commercially established method of atomic layer deposition (ALD), the aim of this article is to draw parallels between ALEt and ALD in order to more precisely define atomic layer etching, introduce a generalized ALEt cycle and identify similarities and differences between the two processes. It is expected that this will assist in significantly advancing the field of ALEt, both through conceptual considerations as well as by highlighting practical guidelines and recommendations. ALEt has been researched already for over 25 years now with relatively limited endeavors and successes. However, this does not mean that the progress will remain slow. For ALD, it also took 25 years before interest in this technology increased explosively owing to the fact that atomic layer precision in deposition became highly necessary. From that point onwards, many breakthroughs in both research and industrial applications were realized. A similar situation seems to exist at the moment for ALEt although the application range for this process will be smaller than that for ALD (the latter having many applications both within and outside the semiconductor industry). Moreover, ALEt seems to have process requirements that are less trivial and more demanding. However, continued development of ALEt processes and equipment will evidently advance the field of etching even if ideal ALEt processes remain unfeasible over the coming years. Research on ALEt will certainly contribute to etching with more atomic layer precision.</p><p>Finally, it is noted that a recently appeared review article by Kanarik et al. <ref type="bibr" target="#b62">63</ref> addresses some similar considerations as presented in this article.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. (a) Schematic from Yoder's early patent in 1988 showing the layout of the cycles for atomic layer etching of crystalline diamond. The flooding of the diamond surface with NO 2 is alternated with flooding the surface with excited ions. Purging takes place in between these steps. Image from Ref. 20. (b) Saturation curves for atomic layer etching of GaAs by Cl 2 dosing and Ar + ion irradiation. Data is shown for various Cl 2 dosing or feed times. From Ref. 28. Reprinted with permission. Copyright 1993, Elsevier. (c) Schematic of the atomic layer etching process of silicon by Cl 2 dosing and Ar + ion irradiation. The filled circles represent Cl atoms, the open circles represent Si atoms, and + represent Ar + ions. From Ref. 33. Reprinted with permission. Copyright 1995, American Institute of Physics. The processes shown in (a)-(c) are similar and form only one particular embodiment of atomic layer etching processes.</figDesc><graphic coords="4,112.98,67.40,360.00,515.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><figDesc>used an electron cyclotron resonance (ECR) plasma source placed on top of a radio frequency (RF) powered electrode to generate reactive radicals with independent control over ion energy and ion flux. Bombardment N5026 ECS Journal of Solid State Science and Technology, 4 (6) N5023-N5032 (2015)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Schematic illustration of the key features for (a) atomic layer etching (ALEt) and (b) atomic layer deposition (ALD). The processes yield a precise control of the thickness etched (etch control) or deposited (growth control) per cycle for ALEt and ALD, respectively. The latter holds for the full substrate surface such that the uniformity is excellent. When processing a substrate with three-dimensional features, the situation for ALEt and ALD is however different. For ALD, the coverage of three-dimensional features is similar throughout the features and comparable to the planar surface, hence the conformality of ALD-prepared films is excellent. For etching processes such as ALEt, there is generally interest in etching vertical features which requires anisotropic processes in which only material is removed from the bottom of the vertical feature. In other cases, isotropic etching can be desired. In this case, the material should be etched equally on all exposed surfaces, independent of the orientation of the local surface on the substrate. For ALEt, also the selectivity of the etch process is key. Ideally, only the to-be-etched material should be removed and not masking materials or materials lying underneath the to-be-etched material.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Approaches to realize area-selective ALD [(a), (c) and (e)] and area-selective ALEt [(b), (d) and (f)]. (a) and (b)show an approach that can be labeled "inherently selective". The substrate is composed of several materials and on the surface of some of the materials, deposition or etching does (virtually) not occur for the ALD or ALEt surface chemistry chosen. The selectivity is therefore, inherent to the specific ALD or ALE process. (c) and (d) show an approach that can be labeled as "selective by deactivation" since part of the substrate is deactivated by a layer of molecules or a film (mask). No etching or deposition takes place at the parts of the surface that are deactivated. This approach is standard for etching. It is not problematic if the mask material is somewhat etched as long as it etches much slower than the to-be-etched material. (e) and (f) show an approach that can be labeled "selective by activation". Film growth or etching only initiates on those parts of the surface that are activated, e.g., by a focused electron or ion beam that locally interacts with the surface. For ALD, processes exist in which this activation only needs to be done before the first cycle;<ref type="bibr" target="#b50">51</ref> for ALEt, the local activation step needs to take place every cycle. In all the displayed cases for ALD [(a), (c) and (e)], the area-selective ALD processes depend on an effect known as nucleation delay. The film material easily deposits on some surfaces whereas on other areas, the film hardly nucleates or it takes much longer for the film to nucleate. For area-selective ALEt approaches (b) and (d), selectivity has the same meaning as that typical for etch processes. The to-be-etched material should etch much faster than any other material used. In (d), the selectivity should preferably approach infinity. Furthermore, it is noted that the possibility exists for designing area-selective ALEt approaches by combining ALEt and ALD. For example, area-selective ALD films can serve as a local mask.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 .</head><label>6</label><figDesc>Figure6. A schematic representation of various types of cycles for ALD<ref type="bibr" target="#b47">48</ref> that can also be employed for ALEt: (a) a regular process, (b) a multistep process and (c) a supercycle process. In a multistep process, one or more additional steps are added to the cycle to form, for instance, an ABC process. In a supercycle, the steps of two regular processes are combined where m cycles of the first process are followed by n cycles of the second process. The variables m and n can be chosen so as to obtain the desired properties for the ALD or ALEt process.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7.Approaches that are being used to increase the throughput of ALD reactors that, in principle, can also be adopted for ALEt reactors. In (a), the approach is shown where the process is not operated under fully saturated conditions. When working with slightly shorter exposure times the cycle time can significantly be reduced (e.g., by a factor of two) while the thickness deposited or removed is only slightly reduced. For many processes and device architectures, the level of growth or etch control remains acceptable. In (b), the socalled spatial atomic layer process is shown. The cycles are not carried out in the time domain but in the spatial domain. It is noted however, that developing appropriate processes for spatial ALD is not straightforward and this is probably even more so for spatial ALEt.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,37.50,454.29,520.00,336.41" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>The research of W.M.M.K. has been made possible by the <rs type="funder">Dutch Technology Foundation STW</rs> and the <rs type="funder">Netherlands Organization for Scientific Research (NWO)</rs> through the <rs type="grantName">VICI program on Nanomanufacturing</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_5zB6Brp">
+					<orgName type="grant-name">VICI program on Nanomanufacturing</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Moore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electronics</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">International Technology Roadmap for Semiconductors</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>Edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Datta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Doczy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Doyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kavalieros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Metz</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LED.2004.828570</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">408</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Bohr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Chau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ghani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mistry</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/MSPEC.2007.4337663</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Spectrum</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">29</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Radosavljevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chu-Kung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Corcoran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dewey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Hudait</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Fastenau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kavalieros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lubyshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Metz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Millard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mukherjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Rachmady</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chau</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IEDM.2009.5424361</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Tech. Dig. IEDM</title>
+		<imprint>
+			<biblScope unit="page">319</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Avci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cappellani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Giles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Haverty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kotlyar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Manpatruni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nikonov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pawashe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Radosavljevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rios</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shankar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vedula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Young</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IEDM.2012.6479001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Tech. Dig. IEDM</title>
+		<imprint>
+			<biblScope unit="page">171</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C.-H</forename><surname>Jan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Bhattacharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Brain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Curello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hafez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Komeyli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Leo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nidhi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Phoa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Staus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tashiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vandervoorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bai</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/IEDM.2012.6478969</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Tech. Dig. IEDM</title>
+		<imprint>
+			<biblScope unit="page">44</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C.-Y</forename><surname>Lu</surname></persName>
+		</author>
+		<idno type="DOI">10.1166/jnn.2012.6650</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanoscience Nanotechnology</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">7604</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m">Integration: Technology and Applications of 3D Integrated Circuits</title>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Garrou</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Bower</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Ramm</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Weinheim</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley-VCH Verlag</publisher>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suntola</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0920-2307(89)80006-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Sci. Reports</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">261</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0040-6090(02)00117-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page">138</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1940727</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page">111</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suntola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Antson</surname></persName>
+		</author>
+		<idno>US Pat. 4058430 A</idno>
+		<imprint>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Elam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haukka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Rossnagel</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4816548</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">50818</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Profijt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3609974</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">50801</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Cameron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dickey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kuznetsov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sundaram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vermeer</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3670745</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">10802</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kornblit</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4819316</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">50825</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Mack</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/12.2059929</idno>
+		<title level="m">Proc. of SPIE 9189, 91890D</title>
+		<meeting>of SPIE 9189, 91890D</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Yoder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pat</forename><surname>Us</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">794</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Horiike</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Iseda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sakaue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nagata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shindo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Miyazaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hirose</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.576814</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1844</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsuura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Murota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sawada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.110340</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">2803</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinmura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kawasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Namba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nakamoto</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.106477</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">968</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Kushner</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3021361</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">37</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Athavale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Economou</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.579659</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">966</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Maki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.102097</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page">91</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hamagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Modaressi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.103171</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page">1552</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kodama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0040-6090(93)90142-C</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">225</biblScope>
+			<biblScope unit="page">136</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">K</forename><surname>Ko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Pang</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.586889</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">2275</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sugano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jap</forename></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.32.6178</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">6178</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sakaue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Asami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ichihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ishizuka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kawamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Horiike</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/PROC-222-195</idno>
+		<title level="m">MRS Symp. Proc</title>
+		<imprint>
+			<date type="published" when="1991">1991</date>
+			<biblScope unit="volume">222</biblScope>
+			<biblScope unit="page">195</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Suzue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsuura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Murota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sawada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0169-4332(94)90252-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">422</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Athavale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Economou</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.588651</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">3702</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1938848</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid. State Lett</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>C</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Oh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2073667</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid. State Lett</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>C</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<title level="m">APS 64th Annual Gaseous Electronics Conference</title>
+		<meeting><address><addrLine>Salt Lake City, UT</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Economou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pat</forename><surname>Us</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2011">20110139748 A1 (2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Bae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2832427</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid-State Lett</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">71</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bersuker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kirsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jammy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.sse.2012.11.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid-State Electron</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">82</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Bruce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Engelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Joseph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4843575</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">20603</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1073552</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">298</biblScope>
+			<biblScope unit="page">402</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Burton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Boleslawski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Desombre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm801738z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">7031</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Klaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Ferro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0169-4332(00)00237-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page">479</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aaltonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1595312</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid-State Lett</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">130</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Donders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H L</forename><surname>Notten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.3125876</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid. State Lett</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">34</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yodovsky</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">8</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ccr.2013.06.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Coord. Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">257</biblScope>
+			<biblScope unit="page">3254</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<title level="m">Handbook of Crystal Growth</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nn507277f</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">2061</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Winters</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.326355</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page">3189</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C4NR01954G</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nanoscale</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">10941</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Garica-Alonso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm400274n</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">1769</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tynell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Karppinen</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0268-1242/29/4/043001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">43001</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vehkamäki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hatanpää</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hänninen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1390884</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid. State Lett</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">504</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S.-B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Wendt</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.373715</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">643</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Profijt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.024202esl</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid. State Lett</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Profijt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4756906</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="01A" to="106" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B S</forename><surname>Heil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kudlacek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Langereis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Engeln</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2357886</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">131505</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Langereis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3625565</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="01A" to="101" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kniknie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Lankhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Winands</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Knaapen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Smets</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dingemans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Keuning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1757-899X/41/1/012001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IOP Conf. Ser.: Mater. Sci. Eng</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">12001</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Van Den Bruele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Creyghton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>submitted for publication in this JSS Focus Issue</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Putkonen</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/mrs.2011.239</idno>
+	</analytic>
+	<monogr>
+		<title level="j">MRS Bulletin</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">907</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ylilammi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0040-6090(95)08159-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">279</biblScope>
+			<biblScope unit="page">124</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Päiväsaari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Putkonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Niinistö</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tsf.2004.06.160</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">472</biblScope>
+			<biblScope unit="page">275</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.200306266</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">327</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Hermkens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm402974j</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">4619</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Dillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Way</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0039-6028(95)90033-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">322</biblScope>
+			<biblScope unit="page">230</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apsusc.2004.10.003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">245</biblScope>
+			<biblScope unit="page">6</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Garcia-Alonso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A A</forename><surname>Van Helvoirt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c4tc02707h</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem. C</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Keuning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Langereis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dingemans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.3428705</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>P</note>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Delabie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Brijs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Caymax</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Conard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Onsia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Richard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Vandervorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Heyns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Meuris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Viitanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Brongersma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>De Ridder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">V</forename><surname>Goncharova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Garfunkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gustafsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Tsai</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1856221</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">64104</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">N5032 ECS Journal of Solid State Science and Technology</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="5023" to="N5032" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Satta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vantomme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schuhmacher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Whelan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sutcliffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Maex</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1760217</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">4571</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Langereis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2798598</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page">83517</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A F</forename><surname>Dielissen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3176946</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page">13114</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Weber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Longo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp5009412</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page">8702</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

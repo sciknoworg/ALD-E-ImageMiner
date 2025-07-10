@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Numerical study on the fluid dynamical aspects of atomic layer deposition process</title>
+				<funder>
+					<orgName type="full">Strategic Research Council</orgName>
+				</funder>
+				<funder ref="#_w8mZTrw">
+					<orgName type="full">Academy of Finland</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2018-02-21">21 February 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Petteri</forename><surname>Peltonen</surname></persName>
+							<email>petteri.peltonen@aalto.fi</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ville</forename><surname>Vuorinen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Giovanni</forename><surname>Marin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Antti</forename><forename type="middle">J</forename><surname>Karttunen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Maarit</forename><surname>Karppinen</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">Aalto University</orgName>
+								<address>
+									<postCode>FI-00076</postCode>
+									<settlement>Aalto</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry and Materials Science</orgName>
+								<orgName type="institution">Aalto University</orgName>
+								<address>
+									<postCode>FI-00076</postCode>
+									<settlement>Aalto</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Numerical study on the fluid dynamical aspects of atomic layer deposition process</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-02-21">21 February 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FF306DD27B0A0D4A8AF83AA24551DC81</idno>
+					<idno type="DOI">10.1116/1.5018475</idno>
+					<note type="submission">Received 7 December 2017; accepted 6 February 2018;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Computational fluid dynamics investigations on the mixing process of gases inside an atomic layer deposition (ALD) reactor are carried out. A test case involving a real ALD reactor geometry is investigated under nonreacting, incompressible flow assumption. The relatively low Reynolds number (Re) of the test reactor, often being in the laminar regime, advocates the usage of scaleresolving simulations. The authors investigate mixing of two precursors in two different injection configurations for 40 &lt; Re &lt; 2400. The feasibility of the approach is shown and discussed. The results illustrate how both Reynolds number and injection configurations influence the precursor distribution in the ALD reactor. The authors also carry out a set of experiments in the same ALD reactor and discuss them in light of the simulations.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Atomic layer deposition (ALD) enables the fabrication of various thin-film materials in a highly controllable manner. <ref type="bibr" target="#b0">1</ref> The early developments of the ALD technique by Puurunen et al. were driven by applications in the field of electroluminescent displays, <ref type="bibr" target="#b1">2</ref> and nowadays, the rapidly increasing interest in ALD is mainly driven by applications in the microelectronics and semiconductor industry in general. <ref type="bibr" target="#b2">3</ref> The ALD thin-film growth process is based on sequential, self-limiting gas-surface reactions as illustrated in Fig. <ref type="figure" target="#fig_0">1</ref>. The growth rate is typically described in terms of growth per cycle (GPC, units A ˚or nm). As an example, we discuss the deposition of an aluminum oxide (Al 2 O 3 ) thin film on a silicon substrate. First, a pulse of trimethylaluminum (TMA) is introduced to the nitrogen carrier gas that is constantly flowing into the ALD reactor (the pressure in the reactor is typically as low as 10-20 hPa). The pulse lengths are highly dependent on the ALD reactor type and the nature of the substrate. For flat, nonporous substrates, pulse lengths between 0.1 and 1 s are rather typical, while for high-aspect ratio substrates and porous substrates, the pulse lengths can be several seconds. <ref type="bibr" target="#b3">4</ref> The TMA molecules absorb on the silicon substrate and react with the OH groups on the substrate surface in a self-limiting fashion. When all possible surface sites have reacted, the TMA molecules in the gas phase can no longer react with the surface and are purged out of the reactor by the nitrogen carrier gas. After the purging, a pulse of water vapor (H 2 O) is introduced into the reactor. The water molecules react with the surface in a self-limiting fashion, and the water molecules remaining in the gas phase are purged out by the carrier gas. These four steps (TMA pulsepurge-water pulse-purge) constitute one ALD cycle and repeating the cycles produces an Al 2 O 3 thin film.</p><p>In comparison to other thin-film techniques, ALD offers exceptional conformality on high aspect ratio structures. This is a key advantage in the fabrication of semiconductor devices, where continuous and pinhole-free films need to be deposited on more and more complex substrates. The thickness of the ALD-fabricated thin films can typically be controlled at the level of 10 -10 m (A ˚). The technique is relatively slow in comparison to techniques such as chemical vapor deposition and therefore the ALD-grown thin films are usually from a few nanometers to about 100 nm thick. The inherent features and scalability of ALD make it also a very attractive technique for coating of nanostructured, nanoporous, or even fibrous substrates such as textiles. <ref type="bibr" target="#b3">4</ref> The flow rates, pulse and purge times, as well as the temperature in an ALD process are empirical parameters optimized for each application specifically. Usually, the main criterion is the quality of the deposited film, which can easily lead to precursor waste, long cycle times, and high setup costs without the gain of information on why the process behaves as it does. While previous experimental studies have demonstrated that the efficiency of the ALD process is heavily influenced by the precursor concentrations and thus the carrier gas flow, <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b4">5</ref> the number of both numerical and experimental studies focusing on the fluid dynamical aspects is rather limited. A possible explanation for such a research gap could originate from the wide range of time and spatial scales involved in the process making both measurements and numerical studies difficult to conduct.</p><p>Since the ALD growth process is a multiscale phenomenon encompassing time and spatial scales from atomistic surface reactions to reactor-level fluid dynamics, many different modeling approaches have been applied to the various parts of the process. In their study on modeling of continuous flow ALD reactors, Holmqvist et al. reviewed previous mathematical models for ALD processes. <ref type="bibr" target="#b5">6</ref> Since we focus on fluid dynamical aspects of the ALD growth here, we shortly discuss recent studies in this direction.</p><p>Lankhorst et al. <ref type="bibr" target="#b6">7</ref> used a transient and three-dimensional finite volume model to study the precursor transport and deposition reactions in a multiwafer vertical batch ALD reactor filled with high aspect ratio trenched wafers. They noticed that for trenched wafers, the timescales are much longer than for flat wafers. Moreover, Shaeri et al. <ref type="bibr" target="#b7">8</ref> used a three-dimensional and transient finite volume model to optimize the flow patterns and deposition rates in two different precursor injection configurations. They noticed that GPC increases as the temperature of the substrate is increased and stated that the larger GPC is caused by higher reaction rates and concentrations of the oxygen atoms on the substrate. In a very similar study by Deng et al., <ref type="bibr" target="#b8">9</ref> the authors noticed that while higher temperature increases GPC, it has a little impact on the precursor distribution.</p><p>In a series of publications, Pan et al. first carried out a comparative study of lattice Boltzmann (LBM) models for steady and two-dimensional ALD reactor flow. <ref type="bibr" target="#b9">10</ref> They noticed that the results of the LBM models were in an agreement with a traditional continuum-based finite volume model. Later on, Pan et al. used a transient and threedimensional finite volume model along with a surface reaction model based on laminar flow assumption and tworeaction mechanism to study the film growth in a real reactor geometry. <ref type="bibr" target="#b10">11</ref> Based on the numerical and experimental results, the authors observed that the GPC varies based on the location where the sample is placed inside the reactor. The experimental GPC was also noticed to be correlated with the numerically obtained precursor concentration, the highest GPC being in the regions where the precursor concentrations were highest. In the latest work by Pan et al., <ref type="bibr" target="#b11">12</ref> the authors extend the chemical kinetics mechanism to account for more reactions and investigated the ALD process emission and waste. They noticed that the ALD process has a very high material waste rate with about 60% of the precursors being wasted.</p><p>A summary of the previous numerical work on ALD is presented in Table <ref type="table">I</ref>. The focus of many of the previous studies has been on model development and comparison or optimizing the film growth. In the present paper, the aim is to study the fluid dynamical aspects inside the reactor chamber by a Reynolds number and injection configuration sweep. It is of particular interest to better understand the precursor mixing characteristics and surface coverage. Thus, we assume that the precursors are transported (convected and diffused) without surface reactions. We then construct spatial maps of the GPC, which depend purely on the precursor concentrations under different conditions. To do this, we solve the carrier gas motion with an unprecedented accuracy. Further, we link the numerical results to experiments and discuss the film growth rate and the fluid dynamical aspects related to it. The objectives of the present work are listed below. First, we investigate the feasibility of scale-resolving computational fluid dynamics (CFD) simulations in ALD studies. Second, we investigate the sensitivity of the sample surface coverage on the Reynolds number under turbulent and laminar conditions. Third, by using the numerical model, we investigate two injection configurations and discuss the results in light of the experiments.</p><p>The paper is structured as follows. In Sec. II, we present the numerical and experimental methods used in the study. In Sec. III, we present the results of the simulations starting from visualizations of instantaneous flow features in the reactor and then moving onto time-averaged quantities. At the end of Sec. III, we compare the numerically predicted film growth to experimental film thickness. We conclude the results and observations in Sec. IV.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Reaction chamber geometry and operation</head><p>The reaction chamber studied in this paper is from the Picosun model R-100 ALD reactor (Fig. <ref type="figure" target="#fig_1">2</ref>). In the chamber, carrier gas is flowing constantly in from four lines (lines 1-4) and out of the chamber from a single outlet at the bottom. During the precursor pulses, the precursor is injected into one of the carrier gas lines well before the chamber. The carrier gas line, to which the precursors are injected, can be TABLE I. Positioning the present study in the context of previous CFD-ALD studies. Author 2D/3D Mesh Transient Surf. chem. Main focus Holmqvist et al. (Ref. 6) 2D 1.5 Â 10 3 Yes Yes Mechanistic model development Lankhorst et al. (Ref. 7) 3D Unspecified Yes No Trench model development Shaeri et al. (Ref. 8) 3 D 3 2 Â 10 3 Yes Yes Injection configuration and thermal effects Pan et al. (Ref. 10) 2D Unspecified No No Comparison of LBM models Pan et al. (Ref. 11) 3D Unspecified Yes Yes Physical and chemical details Pan et al. (Ref. 12) 3D Unspecified Yes Yes Emission and waste Xie et al. (Ref. 13) 2D Unspecified Yes Yes Mechanistic model development Xie et al. (Ref. 14) 2D Unspecified Yes Yes Emission and waste Present 3D 3:4=6 Â 10 6 Yes No Fluid dynamical aspects and Re sweep 021516-2 Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-2 J. Vac. Sci. Technol. A, Vol. 36, No. 2, Mar/Apr 2018</p><p>altered in the reactor, and in the present paper, we study two configurations of the injection: opposing injection and perpendicular injection. In the opposing injection configuration, first precursor is injected to one of the carrier gas lines (line 1, for example) and the second one to the opposite carrier gas line (line 3). In the perpendicular injection configuration, the precursors enter the chamber from lines axially perpendicular to each other (line 1 and line 2, for example). Approximately 20 mm below the roof of the chamber there is a grid structure to enhance the spreading of the precursors, and the grid is supported by a circular beam attached to the roof of the chamber. The grid consists of symmetrically drilled circular holes with a diameter of 4 mm. The wafer is placed in the chamber on top of a circular plate, which in reality, is held in place by support beams attached to the grid part. These supports are not modeled in the simulations and they are not visible in Fig. <ref type="figure" target="#fig_1">2</ref>. During the deposition, the reactor is heated to the specified temperature by an oven surrounding the gray geometry presented in Fig. <ref type="figure" target="#fig_1">2</ref> and a substantial length of the gas lines. In addition, the boundary conditions in the simulations are assigned to the inlet and outlet patches.</p><p>Figure <ref type="figure" target="#fig_2">3</ref> shows a sequence of volumetric renderings of the precursors to illustrate how the reactor is operated. In the example, first precursor is injected from line 1 and starts to slowly fill up the chamber volume at time instances t 1 to t 3 . The purging of the first precursor with the carrier gas, which is not visible in Fig. <ref type="figure" target="#fig_2">3</ref>, begins at approximately t 4 . Since purging is a very slow process, typical purge times are in the order of 5-10 times the respective pulse time. The snapshot at t 6 is taken approximately at the halfway of the purge phase of precursor 1. The injection of precursor 2 begins just before the snapshot t 7 and the injection comes from line 2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Simulations</head><p>The ALD-process involves not only chemical but also strong fluid dynamical phenomena which can be approached via CFD simulations as is done herein. In such simulations, the macroscopic flow domain is divided into a mesh of small elements. The governing conservation equations are the Navier-Stokes equations which can be discretized locally in the finite-volume framework by formulating the flux-balance between the adjacent elements. The discretization leads eventually to a global system of equations the solution of which offers the time-space dependent velocity and pressure fields. For low-Reynolds number laminar flows, the flow equations can be directly solved while for turbulent, high-Reynolds number flows a turbulence model can be applied to account for the dissipation occurring in the unresolved smallest flow scales below the spatial resolution. In the present work, the relatively low Reynolds number of the flows advocates usage of a scale-resolving approach with minimal amount of modeled numerical dissipation.</p><p>It is known that the gas exchange involves low speed flow which is injected through a complex inlet valve configuration. However, various unknowns about the exact inlet boundary conditions further motivate to simplify the problem. Hence, as justified by the low Mach number of the flow, the gas is modeled as being incompressible. Additionally, we assume that the gas is isothermal with constant fluid properties in the modeled region. Such assumption is considered to be reasonable since the gases entering the reactor are heated well before the reactor by a large oven surrounding both the reactor and the gas lines. Thereby, the governing equation is the incompressible Navier-Stokes (N-S) equation</p><formula xml:id="formula_0">@u @t þ r Á ðuuÞ ¼ À 1 q rp þ Du; (<label>1</label></formula><formula xml:id="formula_1">)</formula><p>where u is the velocity, p the pressure, and the kinematic viscosity of the fluid. Conservation of mass is guaranteed by the continuity equation</p><formula xml:id="formula_2">r Á u ¼ 0:<label>(2)</label></formula><p>In addition to the N-S and continuity equations, additional scalar transport equations are solved to describe the precursor transport. We assume that the precursors appear in small   quantities behaving as passive scalars which do not alter the properties of the carrier gas. The scalar transport equations read</p><formula xml:id="formula_3">@c @t þ r Á ðucÞ À c Dc ¼ 0; (<label>3</label></formula><formula xml:id="formula_4">)</formula><p>where c is the scalar and c is the diffusivity of the scalar. By modeling the precursors as passive scalars, the following assumptions are made:</p><p>(1) The fluid properties of the carrier gas do not change when mixed with the precursor. (2) The precursors do not affect the fluid momentum.</p><p>(3) The precursors do not interact with each other. (4) The surface reactions are not taken into account.</p><p>Thereby, in the present work, the precursors can be considered to act similar to small, passive tracers following the fluid flow. Since the overall motivation is to understand the fluid dynamical mixing within the reaction chamber, we resort to unity Schmidt number Sc ¼ / c assumption for all the scalars. In the paper, altogether four passive scalars are injected from the four nozzles so that the opposing and adjacent injection configurations can be simultaneously studied.</p><p>The discrete form of the governing equations is solved using the unstructured, second order accurate finite volume method based on the open source Cþþ library OpenFOAM. <ref type="bibr" target="#b14">15</ref> The velocity and pressure fields are solved sequentially using a predictor-corrector type PISO algorithm <ref type="bibr" target="#b15">16</ref> as implemented in pisoFoam solver in OpenFOAM. For time discretization, an implicit, second order accurate, three time-level scheme is adopted. In the convection term, the convective flux is interpolated linearly while the convecting quantities are interpolated by a limited, second order accurate scheme. The diffusion terms are discretized by centered schemes. As discussed in the previous paper by Vuorinen et al., <ref type="bibr" target="#b16">17</ref> the PISO method includes a diffusive correction term which is removed here as motivated by the previous study. The solver used in the present study has been successfully used by the authors in a sequence of papers. <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref> A section of the 6M cell mesh used in the simulations is presented in Fig. <ref type="figure" target="#fig_5">4</ref>. The mesh is unstructured and consists of mostly hexahedral cells. The highest resolution is at the upper-most part of the domain and the mesh is allowed to significantly coarsen toward the outlet of the chamber. Further, the simulations are run with a fixed Courant number of 0.8.</p><p>The flow Reynolds number based on the inlet pipe diameter (D) is defined as Re ¼ qUD/l ¼ UD/. As the definition shows, under incompressible and isothermal assumption, the flow is essentially characterized by a single nondimensional number, i.e., the Reynolds number alone. By studying a wide range of Reynolds numbers, we are able to investigate the flow behavior as a function of one compact parameter under various operating conditions. For example, the carrier gas flow rates can range from 150 to 250 sccm, pressure between 10 and 20 hPa, and temperature between 150 and 250 C, depending on the application. In the present work, The simulated test cases as well as the elapsed processing time (CPU time) are tabulated in Table <ref type="table">II</ref>. For the low Reynolds number cases (A-C) a mesh containing 3.4M cells is used and two full cycles are simulated. For the high-Reynolds number cases (D and E) a denser mesh is used and a single cycle is simulated. In cases A-E the inlet flow rates are set to correspond to the carrier gas flow rate (200 sccm) and kept constant throughout the simulation. In addition to cases A-E, we simulate a half-cycle case (F) in which the flow rate at one of the inlets is increased by 50% to 300 sccm for the duration of the pulse and then set back to 200 sccm for the purge. The purpose of case F is thereby to study the TABLE II. Simulated test cases. The D min value describes the smallest cell width excluding the boundary layer cells. Case Re No. cycles No. cells D min y þ max CPU time (h) A 40 2 3.4M D/30 0.14 21384 B 80 2 3.4M D/30 0.21 24960 C 200 2 3.4M D/30 0.4 41976 D 800 1 6M D/40 0.7 61920 E 2400 1 6M D/40 1.9 100224 F 40 1/2 3.4M D/30 0.18 5459 021516-4 Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-4</p><p>sensitivity of the precursor behavior to the increased flow rate, and the results are discussed in Sec. III D. In cases D and E, the pipe flow at each inlet line is recycled from 6D downstream of each inlet patch to ensure a realistic boundary condition in the high-Reynolds number cases. In the laminar cases, the well-known parabolic pipe flow velocity profile is fully developed at the nozzle exit, although a top-hat profile is assigned to the inlet patch. <ref type="bibr" target="#b20">21</ref> Since the precursors are modeled as passive scalars, the boundary conditions for the precursors at the inlet patches are set to unity for both precursors during the pulses and zero during the purges. At the outlet, Neumann (zero gradient) condition is applied for both velocity and the precursors. For pressure, Dirichlet condition (fixed zero) is applied at the outlet. It should be noted that, due to the incompressibility assumption, the pressure at the outlet can be fixed to an arbitrary constant.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Experiment details</head><p>In the experiments, TMA and water are used for deposition with pulse and purge times of 0.2 and 1 s, respectively, for both precursors. During the deposition, the temperature in the chamber is controlled by an oven surrounding the chamber which is heated to 220 C. The temperature sensors inside the reactor chamber indicated 65 C fluctuation in the temperature. The pressure in the chamber varies between 10 and 20 hPa during the deposition, the highest pressure values are obtained during the precursor pulses. Nitrogen is used as a carrier gas and the flow rate of nitrogen is set to 200 sccm for all the four inlets. The films are deposited on standard test grade 100 mm silicon wafers. The inlet of TMA is kept constant while the water source is altered to obtain the opposing and perpendicular injection configurations. The thickness measurements are carried out with a SEMILAB SE-2000 spectroscopic ellipsometer. Thickness is measured in 25 evenly spaced locations around the circular wafer. The reactor operating conditions are listed in Table <ref type="table">III</ref>. It should be noted that the experimental conditions are not optimized for the deposition but the injection time scales are set short enough to enable feasible computational runtime.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Flow visualization</head><p>Instantaneous time snapshots of the velocity fields for all the Reynolds numbers are presented in Fig. <ref type="figure" target="#fig_6">5</ref>. As can be seen, the flow above the grid is governed by four jets entering the reactor from lines 1 to 4. At Re ¼ 40 and 80, the flow appears laminar and the jet spreading is highly diffusive (I) before the impingement to the support. Consistently, at Re ¼ 200 and 800, the jet mixing appears less diffusive resulting in a stronger impingement effect and increased vortex shedding with increased Reynolds number (II). Finally, at Re ¼ 2400, the incoming pipe flow is turbulent (III) and further turbulence is produced by the jet shear layers. At Re ¼ 2400, the jet-support interaction is also harder to distinguish by visual analysis.</p><p>In the ALD-process, the precursor concentration distribution on the sample plate is of primary interest. As Fig. <ref type="figure" target="#fig_6">5</ref> implies, the flow velocity field is strongly dependent on the Reynolds number. Instantaneous concentration snapshots for precursor 1 are shown in Fig. <ref type="figure" target="#fig_7">6</ref>, indicating clear Reynolds number dependence as well. As the unity Schmidt number assumption implies, diffusion of the scalars follows consistently the Reynolds number: low-Re indicates higher diffusion while high-Re indicates increased turbulent mixing resulting in a qualitatively different mixing pattern. Figure <ref type="figure" target="#fig_7">6</ref> implies that while the laminar cases do not exhibit shear layer instabilities, at Re ¼ 2400, the well-known Kelvin-Helmholtz type wave instability growth close to the nozzle exit is observed.</p><p>TABLE III. Summary of the reactor operating conditions. Pressure 10-20 hPa Temperature 220 C Pulse length (both precursors) 1 s Purge length (both precursors) 0.2 s Residence time ðV= _ Q total Þ 1.125 s N 2 flow rate _ Q 4 Â 200 sccm N 2 Reynolds number 38 Precursors TMA/Water 021516-5 Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-5 JVST A -Vacuum, Surfaces, and Films </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Time-averaged velocity distribution</head><p>During the jet injection, the incoming streamwise momentum becomes distributed to the transverse directions by three main mechanisms: momentum diffusion (all cases), jet shear layer Kelvin-Helmholtz instability growth and turbulence (primarily at Re ¼ 2400), and jet-support impingement. Considering the flow streamlines based on the timeaveraged velocity fields, Fig. <ref type="figure">7</ref> indicates the jet momentum transfer into multiple recirculation zones spanning the entire volume above the grid. For example, at Re ¼ 40, altogether eight such low speed zones are formed in the (x, z)-plane and the zones are enveloped by the jet shear layer, support, and the reactor walls. At a higher Reynolds number, the recirculation patterns become more complex due to the stronger impingement on the support.</p><p>We observe that for all the cases not only do large recirculation zones appear in the vessel but the flow also turns down toward the sample plate passing through the grid holes. The grid induces small individual jets that eventually impinge on the sample plate. An essential observation is that different grid passage modes can be identified for the different cases. Figure <ref type="figure">8</ref> shows the time averaged velocity magnitude right below the reactor grid. At Re 200, the momentum distribution is rather smooth and spreads to a broad region spanning multiple grid holes due to the enhanced diffusion effects. In contrast, at Re ¼ 800, there is primary flow through an area spanning only 4-8 grid holes. For the moderate value Re ¼ 800, the jet-support impingement causes not only coherent vortex shedding but also a relatively dominant and confined jet through the grid due to the relatively low diffusion and absence of turbulence. Finally, for the highest value Re ¼ 2400, the turbulence leads to high mixing above the grid which broadens the momentum distribution below the grid to span a region of about 6 Â 6 grid holes.</p><p>Above, it was noted that the Reynolds number related fluid dynamical mixing mode (diffusive, dynamic, and turbulent) above the grid has a strong link to the flow momentum distribution below the grid. Further insight to the flow structures below the grid is seen in Fig. <ref type="figure" target="#fig_10">9</ref>(a) where the isosurface of time-averaged velocity magnitude is shown for Re ¼ 80 and 800. The jet formed below the grid via the diffusive mixing mode at Re ¼ 80 is observed as a single jet structure, while at Re ¼ 800, the dynamic mixing mode is seen to create four separate jets. The turbulence intensity close to the sample plane is shown in Fig. <ref type="figure" target="#fig_10">9</ref>  FIG. 7. (Color online) Streamlines of the average velocity field at the midsection of the inlet pipes. The planes are colored by the mean velocity magnitude U/U in . FIG. 8. (Color online) Time-averaged velocity fields U/U in just below the grid part of the reactor for Re ¼ 40, 800 and 2400 from left to right, respectively. (a) The time averaged value of parallel to the grid velocity component isocontour at u ¼ U in =36 for Re ¼ 80 (left) and Re ¼ 800 (right). (b) Turbulence intensity I ¼ u 0 rms =U in in percentages for Re ¼ 80 (left) and Re ¼ 800 (right) slightly above the plane where the sample lies. Note the two different color scales. 021516-6 Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-6 The time development of the spatial average of a precursor on the sample plane is illustrated in Fig. <ref type="figure" target="#fig_0">10</ref> for all Reynolds numbers. Note that the spatial averaging is carried out separately on four equal-sized sectors. At Re ! 200, the peak value of the concentration on Q1 (on the injection side) occurs immediately after the end of the pulse, but with Re ¼ 40 and 80, there is a delay between the end of the pulse and the maximum value. This delay is caused by the flow characteristics at low Reynolds number. As explained earlier, at low Reynolds numbers, the spreading of the precursor is strongly diffusion driven, which is a slow process compared to convection at higher Reynolds numbers. For the same reason, at Re ¼ 40, the maximum value of the concentration on the opposite side of the injection (Q3) occurs clearly after the maximum value at the injection side (Q1). Already at Re ¼ 80, the maximum values at all sectors occur almost simultaneously.</p><p>For Re 200, the time development of the concentrations at sectors Q2 and Q4 follow each other quite closely. This is caused by the symmetry of the geometry and absence of turbulence. For Re ¼ 800 and 2400, turbulence causes unsteady flow structures appearing as oscillations in the curves of Fig. <ref type="figure" target="#fig_0">10</ref>. It should be noted that if more cycles were simulated for Re ¼ 800 and 2400, the concentrations at sectors Q2 and Q4 should overlap in a manner similar to the cases A-C (Re 200). Moreover, at Re ¼ 800, the concentration at the opposite sector (Q3) has clearly smaller values compared to other Reynolds numbers. This is caused by the flow characteristics through the grid at Re ¼ 800 as discussed earlier.</p><p>From surface coverage point of view, the pulse time could possibly be reduced by increasing the Reynolds number. However, the effect this would have on the film growth is difficult to assess without detailed model of the surface chemistry. Moreover, it is interesting to notice that the purging of the precursor is not heavily dependent on the Reynolds number and remains a slow process. The last traces of the precursor are purged away from the sample during very last stages of the purge phase at all Reynolds numbers.</p><p>To illustrate the surface coverage dependence on the Reynolds number, Fig. <ref type="figure" target="#fig_11">11</ref> shows the pulse-averaged precursor concentrations on the sample plane. Here, the pulse-average denotes a time-average carried over a half ALD-cycle (pulse þ purge) for which the precursor is expected to remain in the chamber. The distributions are seen to pose a strong directional coupling: for a given precursor, higher concentrations are observed on the same side from where the given precursor was injected for all the studied Reynolds numbers. Moreover, the low Reynolds number cases (Re &lt; 800) indicate a rotational symmetry due to the symmetry of the geometry. This symmetry is broken for the two highest Reynolds numbers due to turbulence and insufficient total number of simulated cycles for the averages to completely converge. Further, the Re ¼ 800 case appears qualitatively different from the other cases as the dynamic mixing mode seems to cause a less homogeneous surface distribution focused very strongly on the injection side of the FIG. 10. Spatial average of a precursor on the sample as a function of time during a half-cycle. The averages are presented in four equal sized sector sectors (Q1-Q4) for all Reynolds numbers. The gray region indicates the time of the pulse and the arrow the injection direction. 021516-7 Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-7 In order to quantitatively compare the film growth rate between measurements and simulations we introduce a growth rate factor k ¼ (c 1 c 2 )/(c 1 þ c 2 ) for the probability of film growth based purely on the concentrations of the precursors (see the Appendix). It should be noted that, in reality, although full surface coverage is reached, the film growth is not guaranteed since the precursors may not react with the surface. The reaction rate at the surface also depends on parameters such as temperature, adsorption kinetics, steric hindrance, and the surface roughness. A thorough discussion of these factors related to the surface chemistry can be found from the review of Puurunen <ref type="bibr" target="#b21">22</ref> (see Sec. III). We emphasize that these are not taken into account in k.</p><p>Figures <ref type="figure" target="#fig_12">12</ref> and <ref type="figure" target="#fig_3">13</ref> show the distributions of k for perpendicular and opposing injection configurations, respectively. In the measurements, the Reynolds number of the carrier gas is approximately 38. The simulated growth rate factor for the perpendicular injection configuration (Fig. <ref type="figure" target="#fig_12">12</ref>) at all Reynolds numbers shows certain similarities with the measured surface thickness. Both indicate a higher growth on the quarter closest to the injection of the precursors. However, for the opposite injection configuration, the observed patterns differ substantially, in particular, for the Re ¼ 800 case. There may be multiple reasons for the discrepancy between the simulations and the experiments; however, the most likely one is the absence of surface reactions from the numerical model. Moreover, due to the passive nature of the precursors, the increase of flow rate during the precursor pulses was not taken into account in the results of Figs. <ref type="figure" target="#fig_12">12</ref> and <ref type="figure" target="#fig_3">13</ref>.</p><p>When comparing the measured surface thickness between the two injection configurations, a clear difference can be seen. While both injection configurations show a bias in the thickness on the TMA injection side, in the opposing injection configuration also shows a formation of islands of higher thickness. After 50 ALD cycles, there are two islands on the TMA side, and after 600 cycles, three separate islands can be distinguished. As all other operation parameters were kept the same and only the injection configuration changed, the injection configuration and thus the flow characteristics seem to have a clear impact on the ALD process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Sensitivity to flow rate increase</head><p>Within the scope of this paper, a simulation F was carried out only to assess the mixing sensitivity to potentially increased flow rate by precursor injection. In simulation F, the flow rate from the precursor line was increased by 50% during the pulse and set back to 200 sccm during the purge. The flow rate from the other lines was kept the same as in cases A-E, and the Reynolds number in simulation F is Re ¼ 40.</p><p>Figure <ref type="figure" target="#fig_5">14</ref>(a) illustrates how the sample surface concentration averages change between simulation cases A and F. When the flow rate is increased, the highest precursor concentration is shifted more toward the center of the sample and the average concentration is overall more uniform. In addition, two separate islands of high concentration form on the opposite side of the injection. Such islands can be explained by the changed flow pattern in the upper part of the reactor as depicted in Fig. <ref type="figure" target="#fig_5">14(b</ref>). As Fig. <ref type="figure" target="#fig_5">14(b)</ref> shows, the higher momentum in the injection line causes the jet stream to impinge on the support beam dividing the stream to two recirculation zones on the opposite side of the chamber. Such recirculation zones enhance the transport of precursor concentration to those regions. Eventually, the flow falls down the grid to the sample plane and, in fact, the recirculation pattern explains the island formation process. It is interesting to note the similarity of the average concentration contours for the increased flow rate to the measured surface thickness after 600 cycles for the opposing injection configuration (Fig. <ref type="figure" target="#fig_3">13</ref>). Based on the fact that, in the measurements, the highest growth rate tends to be biased to the TMA side of the sample, one possible explanation for the similarity could be that the water pulse is injected to the reactor with higher flow rate than TMA. However, taking into account the lack of surface chemistry and the exact knowledge of the flow characteristics at the inlet boundary, the similarity is challenging to explain thoroughly by the present simulations alone. Nonetheless, the increased flow rate seems to have a clear impact on the precursor distribution and could be one explanation for the minute agreement in the previous results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSIONS</head><p>A numerical study on the carrier gas and precursor flow inside an ALD reactor chamber was conducted. Since the FIG. 13. (Color online) Simulated k correlation and the measured surface thickness after 50 and 600 cycles in the opposing injection configuration. (a) The pulse-averaged scalar concentration for constant flow rate during the pulse (left) and 50% increased flow rate (right). (b) Streamlines on the midsection of the inlet lines during the pulse. The arrow indicates the line with increased flow rate. 021516-9 Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-9</p><p>JVST A -Vacuum, Surfaces, and Films chemical reactions in the ALD process were neglected, only a qualitative agreement with the measurements was obtained. However, a scale-resolving simulation was found feasible, although, at high Reynolds numbers, the computational cost becomes high. The largest challenge for accurately resolving the flow in ALD applications originates from the long time scales involved in the process and geometrical complexity of a typical reactor restricting the maximum time step. The simulations indicated relatively strong changes in the flow characteristics between the lowest and the highest Reynolds numbers. While the required pulse time could be reduced by increasing Reynolds number, no significant gain was found in the total length of the ALD-cycle as purging remains a slow process due to increased turbulence. Moreover, time-dependent flow structures could be observed already at Re ¼ 200. At Re ¼ 800, the strong jet-support impingement caused low precursor mixing in the upper part of the reactor resulting in less homogeneous k distribution on the sample plane. Ideally, the precursors should be homogeneously distributed in the reactor chamber already during the precursor pulse to allow for shorter pulse times and more homogeneous film growth. Further, the different flow patterns observed at different Reynolds numbers indicate that various reactor specific geometric details and operating conditions may have an important role on the gas flow. Thus, successful modeling of the complete ALD process requires quite likely a scale-resolving CFD approach which has the detailed information on the inflow mass flow rates. Additionally, it may be required to combine the CFD model with a microscopic description of the surface chemistry, e.g., by kinetic Monte Carlo studies derived from density functional theory. <ref type="bibr" target="#b22">23</ref> Based on this study, we have found primarily computational evidence on the relevance of the mixing configuration on the surface coverage. Moreover, since in the measurements the only change was the injection configuration, we can conclude that the precursor concentration on the surface of the sample has an impact on the film uniformity. In the perpendicular injection configuration, the agreement between the simulated film growth rate (measured here in the simplified parameter k) and the measurements was reasonable, but in the opposing injection configuration, the agreement was minute. At least one explanation for the minute agreement was found to be the treatment of the precursors as passive scalars. The precursors not only affect the properties of the carrier gas-precursor mixture, but also increase the mass flow rate during the pulses, which was noticed to substantially change the precursor concentration on the sample. Moreover, for better predictions of the film growth, the surface reactions or at least the consumption of the precursors on the sample should be taken into account.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. (Color online) Illustration of the ALD growth process.</figDesc><graphic coords="3,53.63,58.96,241.37,103.47" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 2 .</head><label>2</label><figDesc>FIG. 2. (Color online) Reaction chamber geometry and the naming used throughout the work. The gray area indicates the modeled region and the sketches representing the precursor line and outlet extension are only for illustration and not modeled.</figDesc><graphic coords="4,317.14,58.96,241.37,196.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 3 .</head><label>3</label><figDesc>FIG. 3. (Color online) Precursor behavior during a single cycle at Re ¼ 80. The region where the sample lies is highlighted in the figure.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>021516- 3</head><label>3</label><figDesc>Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-3 JVST A -Vacuum, Surfaces, and Films</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><figDesc>we study Reynolds numbers Re ¼ 40, 80, 200, 800, and 2400. The lower bound of the Reynolds numbers is chosen assuming a constant flow rate of 200 sccm, temperature of 220 C, and pressure of 15 hPa for nitrogen, 20 resulting in Re ¼ 38. The upper bound (2400), on the other hand, is chosen such that the flow in the inlet pipes is already turbulent. The other studied Reynolds numbers are more biased to the expected laminar regime and chosen based on small test runs indicating representative examples of the system characteristics.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 4 .</head><label>4</label><figDesc>FIG. 4. Sections of the 6 M cell mesh.</figDesc><graphic coords="5,319.75,58.96,236.10,252.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>FIG. 5 .</head><label>5</label><figDesc>FIG. 5. (Color online) Instantaneous velocity fields on the midsection of the inlet pipes.</figDesc><graphic coords="6,317.08,58.96,241.36,379.67" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 6</head><label>6</label><figDesc>Figure 6 also implies that after fluid dynamical interactions above the grid, the flow falls eventually through the grid impinging on the sample plate.</figDesc><graphic coords="7,53.58,58.96,241.36,223.03" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><figDesc>(b) which indicates expectedly vanishing flow fluctuation for laminar flow. In contrast, a strong link between fluctuating flow close to the wall and the four separate jets are observed at Re ¼ 800.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>FIG. 6 . 6 J</head><label>66</label><figDesc>FIG. 6. (Color online) Section of the instantaneous precursor fields at approximately midway through the injection for Re ¼ 40 (top) and Re ¼ 2400 (bottom). Only the precursor field is colored in the figures.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>FIG. 9 .</head><label>9</label><figDesc>FIG. 9. (Color online) Illustrations of the grid passage modes and increase of turbulence intensity at higher Reynolds number.</figDesc><graphic coords="8,54.09,58.96,240.46,267.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>FIG. 11 .</head><label>11</label><figDesc>FIG. 11. (Color online) Pulse-averaged scalar concentrations (c/c 0 ) on the sample. The injection directions are presented by the triangle in the figure.</figDesc><graphic coords="9,54.09,58.96,240.46,465.73" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>FIG. 12 .</head><label>12</label><figDesc>FIG. 12. (Color online) Simulated k correlation for all Reynolds numbers and the measured surface thickness in the perpendicular injection configuration. The small dots in the thickness maps indicate the locations of the measurement probes while the triangles indicate the directions of the precursor sources with respect to the sample. The lower triangle indicates the TMA injection and the right triangle the injection of water.</figDesc><graphic coords="10,90.14,58.96,168.46,497.65" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="11,58.28,58.96,232.02,308.13" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The computational resources for this study were provided by <rs type="institution">CSC-Finnish IT Center for Science</rs>. The authors thank <rs type="institution">Picosun</rs> for providing them the 3D model of the Picosun R-100 ALD reactor chamber and for the ellipsometry. G.M., A.J.K., and M.K. gratefully acknowledge funding from the <rs type="funder">Strategic Research Council</rs> at the <rs type="funder">Academy of Finland</rs> (<rs type="programName">CloseLoop Consortium</rs>, Grant No. <rs type="grantNumber">303452</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_w8mZTrw">
+					<idno type="grant-number">303452</idno>
+					<orgName type="program" subtype="full">CloseLoop Consortium</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>APPENDIX: DERIVATION OF k</head><p>In order to assess the surface growth rate, we next aim at forming a numerical metric indicating the joint correlation between the two precursor concentrations (c 1 and c 2 ). The aim is to form a metric for improved qualitative evaluation of local growth rate and qualitative comparison between the simulations and the experiments. We consider a simplified, stochastic model process for the mean growth rate of a macroscopic surface element on the resolved CFD-scale Dx to which precursors 1 and 2 attach and react with a probability proportional to concentrations c 1 and c 2 . It is clear that this assumption neglects various aspects of surface chemistry and thermodynamical conditions (e.g., reaction does not necessarily follow from attachment). However, we consider that a formalism similar to the one shown below could be equally well formulated for more detailed surface chemistry by proper modification of the reaction probabilities.</p><p>We assume that a sample surface element can be in two states: state (1) precursor 1 has attached on the surface, awaiting for precursor 2, or state (2) precursor 2 has attached on the surface, awaiting for precursor 1. A layer of thickness Dh is completed once the precursor 2 has attached, i.e., the system is in state 2. Observing the system in state i at discrete time n occurs at probabilities p n i which satisfy the following recursion equations:</p><p>Assuming a steady state p nþ1 i ¼ p n i and noting that p 1 þ p 2 ¼ 1 gives</p><p>The expectation value of the film thickness h n is defined to increase by the layer thickness Dh in case precursor 2 attaches and reacts on the surface. There are only a few elementary cases which can take place. The expectation value of the thickness h n obeys the following recursion equation:</p><p>For example, the thickness of the system is unchanged (h nþ1 ¼ h n ) in case the system is in state 1 (probability p 1 ) and precursor 2 does not attach on the surface (probability 1 c 2 ) yielding the first term in the equation. Rearranging the terms leads to</p><p>from which we identify the growth factor k</p><p>If precise knowledge on the attachment and reaction probabilities (instead of c 1 and c 2 ) in different thermochemical conditions were known, the definition of k could be changed accordingly. For example, c 1 could be replaced with a more complex dependency.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page">111</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.201402012</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page">332</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hultqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mater</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.mattod.2014.04.026</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">236</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Atomic Layer Deposition of Nanostructured Materials</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Wiley</publisher>
+			<biblScope unit="page" from="271" to="300" />
+			<pubPlace>Weinheim, Germany</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kuse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kundu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yasuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Toriumi</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1618918</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page">6411</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Holmqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stenstr€</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ces.2012.07.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Eng. Sci</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">260</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lankhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Paarhuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Terhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Simons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kleijn</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.surfcoat.2007.04.079</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Coat. Technol</title>
+		<imprint>
+			<biblScope unit="volume">201</biblScope>
+			<biblScope unit="page">8842</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Shaeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Jen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijheatmasstransfer.2014.07.079</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Heat Mass Transfer</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page">1243</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Shan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.vacuum.2015.10.023</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vacuum</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page">103</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Jen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4833561</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="01A" to="110" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Jen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4905726</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">21511</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Guan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Jen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1115/1.4034475</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Manuf. Sci. Eng</title>
+		<imprint>
+			<biblScope unit="volume">138</biblScope>
+			<biblScope unit="page">101010</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cej.2014.07.105</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Eng. J</title>
+		<imprint>
+			<biblScope unit="volume">259</biblScope>
+			<biblScope unit="page">213</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jclepro.2016.05.138</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cleaner Prod</title>
+		<imprint>
+			<biblScope unit="volume">133</biblScope>
+			<biblScope unit="page">338</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Weller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tabor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jasak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fureby</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.168744</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Phys</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">620</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Issa</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0021-9991(86)90099-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Phys</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">40</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vuorinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Keskinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Duwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Boersma</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compfluid.2014.01.026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page">153</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Keskinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vuorinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kaario</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Larmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compfluid.2015.08.028</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page">123</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Keskinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vuorinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kaario</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Larmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/fld.4215</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Numer. Methods Fluids</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">171</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">NIST Chemistry WebBook</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Linstrom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Mallard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NIST Standard Reference Database Number</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<date type="published" when="2001">2001</date>
+			<pubPlace>Gaithersburg</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>National Institute of Standards and Technology</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>White</surname></persName>
+		</author>
+		<title level="m">Viscous Fluid Flow</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>McGraw-Hill</publisher>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">3</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>McGraw-Hill Mechanical Engineering</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1940727</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.23491</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="21516" to="21527" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>Peltonen et al.: Numerical study on the fluid dynamical aspects 021516-11</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><surname>Jvst A -Vacuum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surfaces, and Films</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

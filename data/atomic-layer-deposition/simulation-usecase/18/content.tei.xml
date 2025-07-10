@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Combined ab initio quantum chemistry and computational fluid dynamics calculations for prediction of gallium nitride growth</title>
+				<funder ref="#_mDMaBXn">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2005-03-31">31 March 2005</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Debasis</forename><surname>Sengupta</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">CFD Research Corporation</orgName>
+								<address>
+									<postCode>35805</postCode>
+									<settlement>Huntsville</settlement>
+									<region>AL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Sandip</forename><surname>Mazumder</surname></persName>
+							<email>mazumder.2@osu.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">The Ohio State University</orgName>
+								<address>
+									<addrLine>Ackerman Road</addrLine>
+									<postCode>43202</postCode>
+									<settlement>Columbus</settlement>
+									<region>OH</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">William</forename><surname>Kuykendall</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">ESI CFD Inc</orgName>
+								<address>
+									<addrLine>215 Wynn Drive</addrLine>
+									<postCode>35805</postCode>
+									<settlement>Huntsville</settlement>
+									<region>AL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Samuel</forename><forename type="middle">A</forename><surname>Lowry</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">CFD Research Corporation</orgName>
+								<address>
+									<postCode>35805</postCode>
+									<settlement>Huntsville</settlement>
+									<region>AL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Combined ab initio quantum chemistry and computational fluid dynamics calculations for prediction of gallium nitride growth</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2005-03-31">31 March 2005</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8B44ED6671B8603420586D1C000BD8CC</idno>
+					<idno type="DOI">10.1016/j.jcrysgro.2005.02.036</idno>
+					<note type="submission">Received 1 October 2004; accepted 15 February 2005</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>A1. Computer simulation</term>
+					<term>A1. Growth models</term>
+					<term>A3. Metalorganic vapor phase epitaxy</term>
+					<term>B1. Gallium compounds</term>
+					<term>B1. Nitrides</term>
+					<term>B2. Semiconducting gallium compounds</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Computational fluid dynamics (CFD) is used in the semiconductor industry for the analysis and design of chemical vapor deposition reactors. One critical input needed for prediction of epitaxial thin film growth rates and uniformity is the chemistry occurring in the gas phase and at the surface. Traditionally, simplified chemistry derived from experimental observations has been used for this purpose. With the advent of modern high-speed computational techniques, it is now possible to formulate detailed reaction mechanisms using ab initio methods. Such detailed reaction mechanisms, comprising mostly of elementary reactions, have the advantage that they require little or no calibration. This paper presents a methodology in which the density functional theory, in combination with rate theories, was used to determine the reaction pathways and rates in the gas phase as well as at the surface for gallium nitride growth from tri-methyl gallium and ammonia. The reaction mechanisms were then used as input to a multi-dimensional CFD code enabling accurate prediction of growth rates. Validation studies were performed for four different laboratory-scale reactors, and one commercial reactor. In each case, the predictions agreed reasonably well with the experimental data indicating the universality of the reaction mechanisms.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Wide band-gap III-V semiconductors, such as gallium nitride (GaN) and aluminum gallium nitride (AlGaN), have drawn much attention due to their unique ability to produce blue-green light <ref type="bibr" target="#b0">[1]</ref>. This property is currently being used to develop light emitting diodes (LED) and lasers. In order to make such devices, a thin film of the materials must be deposited on a wafer. At present, the technique of choice for depositing thin films of III-V semiconductor materials is metal organic vapor phase epitaxy (MOVPE).</p><p>Modeling and simulation, based on computational fluid dynamics (CFD), is now used routinely within the semiconductor industry for design, optimization and troubleshooting of epitaxial growth processes that occur on the substrate. The efficacy of such modeling is currently limited by the availability of chemical reaction mechanisms that describe the growth process. In the past, reaction rates have been obtained primarily by calibrating a reduced set of reactions against available experimental data, which in most cases, is somewhat limited. With the advent of highspeed computers it is now possible to explore larger reaction sets comprising of mostly elementary reactions using first-principle methods, such as density function theory (DFT). Such detailed reaction mechanisms can provide more generality and requires less calibration.</p><p>In the specific case of GaN, a handful of past studies have reported reaction mechanisms <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b2">3]</ref>. All of these mechanisms are based on the one proposed originally by Mihopoulos <ref type="bibr" target="#b3">[4]</ref>. In their study, the activation barriers of some of the gasphase reaction steps were calculated using ab initio methods. Pre-exponential factors of the formation and dissociation of adducts were adjusted to reproduce the time versus concentration profiles obtained through experiments. While the ab initio methods were used to determine the activation energies of some of the gas-phase reactions, most of the surface reactions were considered to be collision-limited, and the activation barriers were calibrated. The salient feature of this mechanism is the formation of a ''ring'' compound (or a trimeric species) with molecular formula [Ga(CH 3 ) 2 Á NH 2 ] 3 through the gas phase reaction between trimethyl gallium (TMG) and ammonia (NH 3 ) according to the following reaction:</p><formula xml:id="formula_0">TMG þ NH 3 ! TMG Á NH 3 ! GaðCH 3 Þ 2 Á NH 2 þ CH 4 ; 3GaðCH 3 Þ 2 Á NH 2 ! ½GaðCH 3 Þ 2 Á NH 2 3 :</formula><p>This compound reacts at the surface and constitutes the major pathway for GaN growth <ref type="bibr" target="#b3">[4]</ref>. Although there is no direct evidence of such a proposition, this mechanism has been frequently used by others for GaN growth modeling and reactor design <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b4">5]</ref>.</p><p>In a recent paper <ref type="bibr" target="#b5">[6]</ref>, it has been shown that the possibility of ''ring'' compound formation is extremely low under typical growth conditions due to very low concentration of Ga(CH 3 ) 2 Á NH 2 . These results are further supported by a recent experimental report of Bergman et al. <ref type="bibr" target="#b6">[7]</ref>, who pointed out that the contribution of growth due to the trimeric species has been overestimated in the past. Based on these experimental and theoretical findings, a new mechanism for GaN growth is proposed that does not support the formation of the ''ring'' compound in the gas phase. The proposed mechanism is based on first-principle calculations in combination with reaction rate theories, such as absolute rate theory (ART) and quantum Rice-Rapmsperger-Kassel (QRRK) <ref type="bibr" target="#b7">[8]</ref>. The present mechanism is tested for several different reactors, and is able to reproduce experimental data consistently.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Calculation procedure</head><p>In order to obtain activation barrier and vibrational frequencies of the stable and intermediate molecules, we used density functional theory (DFT). All quantum chemistry calculations were performed using GAUSSIAN98 TM <ref type="bibr" target="#b8">[9]</ref> program package. For the calculation of the activation barrier, the DFT with Lee-Yang-Parr gradient corrected correlation functional in conjunction with Becke's three-parameter exchange functional (B3LYP) was used <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b10">11]</ref>. The geometries of the equilibrium molecular structures and transition states were optimized using 6-31G** basis sets for carbon, hydrogen, nitrogen.</p><p>For gallium, effective core potential (ECP) of Hay-Wadt, which is known as LANL2DZ ECP <ref type="bibr" target="#b11">[12]</ref>, was used. In order to obtain more accurate energies, calculations using cc-pVTZ <ref type="bibr" target="#b12">[13]</ref> basis set on previously optimized geometries were performed. Normal mode analyses for all equilibrium and transition structures were performed. All equilibrium structures were found to have real vibrational frequencies while the transition structures have only one imaginary vibrational frequency corresponding to the reaction coordinate.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Gas phase reactions</head><p>The gas phase reactions primarily involve the decomposition of TMG to dimethyl gallium (DMG) and monomethyl gallium (MMG) and their reactions with NH 3 :</p><formula xml:id="formula_1">GaðCH 3 Þ x ! GaðCH 3 Þ xÀ1 þ CH 3 ðx ¼ 123Þ; GaðCH 3 Þ yþ1 þ NH 3 ! GaðCH 3 Þ yþ1 Á NH 3 ðadductÞ ! ðCH 3 Þ y :GaNH 2 þ CH 4 ðy ¼ 0 À 2Þ:</formula><p>Details, pertaining to the gas-phase reactions and their calculation methods may be obtained from the recent paper by Sengupta <ref type="bibr" target="#b5">[6]</ref>. The activation barrier and vibrational frequencies for the decomposition of TMG and its intermediate products have been calculated using DFT method. These are subsequently used to calculate the rate constants as a function of temperature and pressure using QRRK theory. These reactions are pressure dependent, and the rate constants have been evaluated at a typical reactor pressure in which GaN is grown (approximately 76 torr). In Fig. <ref type="figure" target="#fig_0">1</ref>, the calculated rate constants for TMG decomposition have been compared with the experimental data of Jacko and Price <ref type="bibr" target="#b13">[14]</ref>, and shows excellent agreement. Our calculations show that TMG, DMG and MMG form strong adducts with NH 3 . The adducts subsequently eliminate CH 4 . The adduct formation reaction and elimination of CH 4 are not two independent reactions since the energy released by the formation of adducts is stored in quantized vibrational level of the adducts, and can be utilized to cross the activation barrier for CH 4 elimination reaction. Therefore, these reactions have been treated via chemical activation1 <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b15">16]</ref> and the rate constants have been calculated using QRRK theory. In the earlier mechanism by Mihopoulos <ref type="bibr" target="#b3">[4]</ref> these reactions have been assumed to be independent to each other. These reactions are also pressure dependent because the adduct is initially at the energized state, and molecular collisions are needed to deactivate them. Following calculation of the gas-phase reaction rate constants, they were fitted to the modified Arrhenius expression [i.e. k(T) ¼ AT n exp(ÀE a /RT)]. The fitted rate constants for these reactions are shown in Table <ref type="table" target="#tab_0">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Surface reactions</head><p>Since the bulk is a continuous repetition of the unit cell, the most appropriate method would be to apply DFT with periodic boundary conditions <ref type="bibr" target="#b16">[17]</ref>. However, considering the large number of surface reactions that one needs to examine, calculation with periodic boundary condition is still not practical. A popular simplifying alternative is to use the so-called cluster model, where only a small cluster of atoms on the surface is modeled <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref>. These cluster models have been successfully used by others <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref> to model surface reactions for silicon nitride, and atomic layer deposition of aluminum, zirconium and hafnium oxides.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE IN PRESS</head><p>In bulk GaN, every Ga and N are tetrahedrally coordinated. However, each surface atom has at least one dangling bond, and the surface atoms can accommodate adsorbates. In the present calculations, the reduced cluster model shown in Fig. <ref type="figure" target="#fig_1">2</ref> has been used for surface gallium and nitrogen atoms. The surface gallium atom is bonded to <ref type="bibr" target="#b2">[3]</ref> nitrogen atoms, and the nitrogen atoms are terminated by three hydrogen atoms. Similarly, surface nitrogen is bonded to <ref type="bibr" target="#b2">[3]</ref> gallium atoms, and they are terminated by three hydrogen atoms. The structures of the chemisorbed species were optimized using the method described in the previous section. The geometries of the clusters were fixed at their bulk values, and no geometry optimization was performed for the bare cluster. For adsorbed structures, the geometry of the adsorbate and the bond connecting the cluster and the adsorbate were optimized. For example, in structure of adsorbed MMG on nitrogen surface, all geometrical parameters in MMG and the Ga-N bond length were optimized while the N-Ga distance in the cluster remained fixed. In the crystal structure of GaN, the hydrogen atoms in the small cluster models (Fig. <ref type="figure" target="#fig_1">2</ref>, top) are actually N (surface N) or Ga (surface Ga). Since termination of Ga or N by hydrogen atoms can lead to Rate constants for unimolecular and bimolecular reactions are expressed as s À1 and cm 3 /(mol s), respectively. Backward rates are calculated from equilibrium by minimizing the Gibb's free energy. enhanced charge transfer, the calculated adsorption energies may be inaccurate. In order to examine the reliability of our cluster model, we performed test calculations using a larger cluster model for surface Ga (Fig. <ref type="figure" target="#fig_1">2</ref>, bottom). In this model, the hydrogen atoms in NH 3 were replaced by Ga, and the terminal Ga atoms are tetrahedrally coordinated to two nitrogen atoms and two hydrogen atoms. Since such calculations require extreme computational times, the test was performed only for adsorption energy calculation for the NH 2 radical. First, all geometrical parameters in NH 2 were optimized keeping the cluster parameters fixed. The adsorption energy of NH 2 , thus obtained, was found to be 50 kcal/mol, which is approximately 12 kcal/mol smaller than that obtained using the reduced cluster model. We then performed another calculation where bond lengths around the surface Ga in the adsorbed state were optimized. This essentially means that the surface of GaN reconstruct upon adsorption of NH 2 , which is a more realistic phenomenon. The adsorption energy, thus obtained, was found to be only 2.5 kcal/mol lower than that with the reduced cluster model. The findings of these investigations point to the fact the error introduced by using a reduced cluster model is small, and that reduced cluster models may still be used to make reasonable engineering predictions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE IN PRESS</head><p>The adsorption enthalpy on N surface, was calculated by</p><formula xml:id="formula_2">DH ad ¼ EðN_surÞ þ EðadsorbateÞ À EðadsorbedÞ þ thermal correction;<label>ð1Þ</label></formula><p>where DH ad is the enthalpy of adsorption, E(N_sur), E(adsorbate) and E(adsorbed) are the energies of the surface nitrogen (cluster model), gas phase adsorbate and the adsorbed molecule. The thermal correction is a term that accounts for the temperature dependence of the enthalpy of adsorption, and calculated using the complete partition functions of the adsorbate before and after adsorption. The pre-exponential factor for a surface reaction is calculated using the expression <ref type="bibr" target="#b20">[21]</ref>:</p><formula xml:id="formula_3">A F ¼ ðek b T=hÞc ts expðDS # =RÞ,<label>(2)</label></formula><p>where c ts is maximum concentration of the transition state when the surface is bare. Using the DFT calculated vibrational, rotational, translational and electronic partition functions of the adsorbed species and transition state for desorption, the entropy of activation for desorption is calculated. The entropy of the adsorbed species and transition state is calculated using the following expression:</p><formula xml:id="formula_4">S ¼ R ln Q þ RT qQ q ln T V , (<label>3</label></formula><formula xml:id="formula_5">)</formula><p>where Q is the complete partition function.</p><p>Finally, the pre-exponential factors are fitted to the expression AT n .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Reactor scale model</head><p>The prediction of growth rate and uniformity at the surface requires coupled solution of the equations of conservation of mass, momentum, energy and species. In addition, multi-step finiterate homogeneous and heterogeneous chemical reactions must be considered. The underlying equations necessary to perform such calculations and their numerical solution is presented elsewhere <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b21">22]</ref>, and is omitted here for the sake of brevity. For the purposes of the current study, the commercial CFD code, CFD-ACE+ TM was used <ref type="bibr" target="#b22">[23]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results and discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Mechanism for GaN growth</head><p>While TMG and MMG decompose slowly (G1 and G2 in Table <ref type="table" target="#tab_0">1</ref>) due to their large activation barriers, decomposition of DMG to MMG (G3) is very fast. Therefore, TMG to MMG conversion is fast at high temperatures, and concentration of MMG is expected to be large at higher temperatures. Thus, MMG and MMG.NH 3 are expected to be the dominant gallium-containing precursor at high temperatures, while TMG and TMG.NH 3 are expected to contribute to the deposition at low temperature. Also at higher temperature, the formation of atomic Ga is expected to be appreciable, and will probably influence the deposition process. The dissociation energy of an N-H bond is NH 3 is 108 kcal/mol <ref type="bibr" target="#b23">[24]</ref>. Thus, it may be postulated that direct dissociation of NH 3 is not important even at temperatures much higher than conventional growth temperatures. However, CH 3 can abstract one hydrogen atom from NH 3 to produce NH 2 with a low barrier (G11). Therefore, this reaction is included, in view of the fact that Ga and NH 2 could combine to contribute to the deposition. Reactions G12 is active when H 2 is the carrier gas, and produces active H atoms. The H atoms can enhance decomposition of TMG and DMG. Rate constants of G12, G13 and G14 were taken from literature <ref type="bibr" target="#b24">[25]</ref>.</p><p>As mentioned earlier, the proposed gas phase mechanism does not include ''ring'' formation, since it has been found recently that the concentration of Ga(CH 3 ) 2 NH 2 , the precursor to ''ring'' formation, is negligible under typical growth conditions <ref type="bibr" target="#b5">[6]</ref>. The mass spectrometric studies of Bergman et al. <ref type="bibr" target="#b6">[7]</ref> suggest that the concentration of the ''ring'' is negligible at all temperatures. Mazzarese et al. <ref type="bibr" target="#b25">[26]</ref> performed FTIR and surface analysis for the TMG and NH3 reaction below 573 K. They concluded that the final step for growth of GaN is the reaction between Ga(CH 3 ) x (x ¼ 1-3) and NH 3 at the surface which produces CH 4 . This work indicates that the methane eliminated product from Ga(CH 3 ) x .NH 3 can be formed at the surface rather than in the gas phase. These results suggest that the ''ring'' formation is more likely to occur at the surface via successive addition of Ga(CH 3 ) x and NH 3 followed by methane elimination. Therefore, the proposed surface mechanism includes ''ring'' formation at the surface.</p><p>The surface reactions that are considered for the study are listed in Table <ref type="table" target="#tab_1">2</ref>. The first pathway is one where the chemisorption of MMG on surface nitrogen site (S N ) and its desorption are considered. Ammonia then forms a complex with MMG, namely MMG Á NH 3 (s) (analogous to that in the gas phase adduct, MMG Á NH 3 ). The direct adsorption of gas phase MMG Á NH 3 is also considered. The binding energy of the complex is assumed to be same as that of the gas phase counterpart. The MMG Á NH 3 (s) then successively reacts with gas phase MMG and NH 3 eliminating CH 4 to form a ''ring'' at the surface as shown in Fig. <ref type="figure">3</ref>. The activation barrier for CH 4 elimination was estimated as follows. First, it was assumed that the ratio of the activation barrier for TMG Á NH 3 +TMG-TMG Á NH 2 Á DMG+ CH 4 and TMG Á NH 3 -(CH 3 ) 2 GaNH 2 +CH 4 is the same that of MMG Á NH 3 +MMG-MMG Á NH 2 Ga+CH 4 and MMG Á NH 3 -GaNH 2 +CH 4 . The ratio of the former two reactions was estimated from DFT calculations of Nakamura et al. <ref type="bibr" target="#b26">[27]</ref> while the activation barrier for the MMG Á NH 3 +MMG-MMG Á NH 2 Ga+CH 4 was evaluated using the methods described an earlier section. The ring is then attached to a nearby surface Ga (S G ). Finally, the hydrogen atoms are eliminated as H 2 resulting in the formation of GaN(b).</p><p>The second path for GaN formation initiates from adsorbed GaNH 2 [GaNH 2 (s)]. This species can directly be formed from the gas phase reaction G15 and also via the reaction of adsorbed Ga [Ga(s)] and adsorbed NH 2 [NH 2 (s)]. Successive adsorption of MMG and NH 3 and elimination of CH 4 produce a ''ring'' (Fig. <ref type="figure">3</ref>). The adsorption of two CH 3 radicals at each Ga atom of the ring followed by elimination of CH 4 produces GaN. The activation barriers for successive adsorption of MMG and NH 3 were assumed to be the same as their adduct formation energy in the gas phase while the adsorption of CH 3 was calculated using the cluster model. Activation barrier for CH 4 elimination step was calculated using DFT. To calculate this barrier, a ring structure of formula [Ga(CH3) 2 NH 2 ] 3 , was considered . The activation barrier for the CH 4 elimination from the ring was found to be substantially higher than the similar reaction between TMG and NH 3 . This is probably due to the constrained structure of the above ring compared to the TMG.NH 3 complex.</p><p>In the third pathway, TMG adsorbs on S N to form TMG(s). Ammonia is then adsorbed on TMG to form TMG Á NH 3 (s). The adsorption energy is assumed to be the same as the adduct formation energy in the gas phase. This complex first eliminates one molecule of CH 4 and consequently the N atom forms a strong bond with the Ga atom. The activation barrier of this step is assumed to be the same as that of its gas phase counterpart. Finally, the complex eliminates two molecules of CH 4 to produce GaN(b) (Fig. <ref type="figure">3</ref>). The activation barrier of this final step was assumed to be the same as the CH 4 elimination barrier from the ring (50 kcal/mol). We have also considered the direct adsorption of TMG.NH 3 adduct. Fig. <ref type="figure" target="#fig_2">4</ref> schematically shows the various pathways leading to GaN deposition.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE IN PRESS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Validation studies</head><p>The proposed mechanisms for GaN growth were used in a series of simulations of several different reactors. The same set of reaction rates (without any calibration, whatsoever) were used in all of the simulations.</p><p>The first set of simulations was performed for a simple horizontal reactor, for which experimental data are available from Chen et al. <ref type="bibr" target="#b27">[28]</ref>. The reactor geometry, and boundary conditions are shown in Fig. <ref type="figure">5</ref>. The average deposition rate is shown for the temperature range 700-1300 K in Fig. <ref type="figure">6</ref>. It is clear that the predicted growth rates agree well with experimental data. Between 700 and 850 K, the growth rate varies drastically. This is the rate-limited regime where diffusion of precursors to the surface dominates over the rate at which they react. The activation barriers for most reactions are not crossed, and the reaction rates are low, leading to low deposition rates. At about 850 K, the TMG Á NH 3 (s) complex starts eliminating CH 4 , since sufficient energy is available to cross the activation barrier for CH 4 elimination. The formation of MMG in the gas phase steadily increases as the temperature is increased further. This results in deposition through both MMG pathways as well as through the TMG pathway. Beyond about 1100 K, there is hardly any TMG available at the surface, and almost all of the deposition occurs via the two MMG pathways. At temperatures above 1350 K, MMG(s) starts desorbing from the surface, leading to decrease in growth.</p><p>The second set of simulations was performed for the reactor geometry reported by Safvi et al. <ref type="bibr" target="#b4">[5]</ref>. The reactor geometry and operating conditions are illustrated in Fig. <ref type="figure">7</ref>. The growth rate profiles at two different operating conditions are shown in Figs. <ref type="figure">8</ref> and <ref type="figure">9</ref>. For the higher TMG flow case, the match is not very good near the center of the wafer, where the TMG jet directly impinges. This may be attributed to our lack of knowledge of the geometric details pertaining to both the position and shape of the TMG nozzle, and due to the fact that we did not model the actual showerhead. For</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE IN PRESS</head><p>a Concentration exponent of 1 has been used for CH 3 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Compounds names</head><p>Chemical formula</p><formula xml:id="formula_6">COMPM1 NH 3 Á MMG(s) COMPM2 Ga Á NH 2 Á MMG(s) COMPM3 NH 3 Á Ga Á NH 2 .MMG(s) COMPM4 Ga Á NH 2 Á Ga Á NH 2 Á MMG(s) COMPM5 NH 3 Á Ga Á NH 2 Á Ga Á NH 2 Á MMG(s) RINGM1 NH 2 Á Ga Á NH 2 Á Ga Á NH 2 Á Ga(s) RINGM2 (s)NH 2 Á Ga Á NH 2 Á Ga Á NH 2 Á Ga(s) COMPMM1 MMG Á GaNH 2 (s) COMPMM2 NH 3 Á MMG Á NH 2 Á Ga(s) COMPMM3 NH 2 Á Ga Á NH 2 Á Ga(s) COMPMM4 MMG Á NH 2 Á Ga Á NH 2 Á Ga(s) COMPMM5 NH 3 Á MMG Á NH 2 Á Ga Á NH 2 Á Ga(s) TCOM1 NH 3 Á TMG(s) TCOM2 NH 2 Á DMG(s) TCOM3 (s)NH 2 Á DMG(s) COM1 RINGM2 Á CH 3 complex</formula><p>the lower flow-rate case, where diffusion dominates the transport, the exact placement of the nozzle is insignificant, and a much better agreement with experimental data is observed. The third set of simulations was performed for the reactor geometry reported by Theodoropoulos et al. <ref type="bibr" target="#b2">[3]</ref>. The reactor geometry and operating conditions are illustrated in Fig. <ref type="figure" target="#fig_0">10</ref>. The average growth rates at various temperatures are shown in Fig. <ref type="figure" target="#fig_0">11</ref>. Although this data is only for the diffusion-limited regime, the excellent match between predicted and experimental results does highlight the universality of the proposed mechanism. It is worth noting that Theodoropoulos et al.</p><p>[3] also performed modeling studies for the same data, and underpredicted the experimental data consistently using a reduced mechanism.</p><p>One critical issue for MOVPE of an III-V material is the effect of V-III ratio on growth rate. While it has been generally observed that GaN growth rate increases with increasing V-III ratio (more ammonia), there are instances, where a reverse trend has been reported. Notably, Niebuhr et al. <ref type="bibr" target="#b28">[29]</ref> reported that during their experimental studies, they found that the growth rate actually decreased with increasing V-III ratio. A schematic  0.0 0.5 1.0 1.5 2.0 2.5 0.7 0.9 1.1 1.3 1000/T (1/K) Growth rate (µm/hr) Experiment This work Fig. 6. Comparison of numerically calculated growth rate with experimental data of Chen et al. [28].</p><p>of the reactor used for their studies is shown in Fig. <ref type="figure" target="#fig_1">12</ref>. When simulations were performed for this reactor geometry with various V-III ratio, it was indeed observed that the growth rate decreased with increasing V-III ratio (Fig. <ref type="figure" target="#fig_6">13</ref>). A plausible explanation for this type of behavior is that as the V-III ratio is increased, the ammonia concentration near the substrate increases and the hydrogen concentration decreases. Since ammonia is much heavier than hydrogen, the diffusion of TMG in ammonia is much weaker than the diffusion of TMG in hydrogen. Consequently, although more ammonia is available to react at the surface, very little TMG actually diffuses in through the ammonia stream to the substrate. As the V-III ratio is decreased, hydrogen replaces ammonia, 0.0 4.0 8.0 12.0 16.0 20.0 0.0 0.5 1.0 1.5 2.0 Radius (cm) Growth Rate (mm/hr) Numerical (present study) Experiment Fig. 8. Comparison of numerically calculated growth rates with experiment [5] along the radius of the wafer for the reactor shown in Fig. 7. Case I: pressure 100 torr, T ¼ 1273 K; NH 3 ¼ 2 slpm, H 2 ¼ 10 slpm, TMG ¼ 0.248 sccm. 0.0 0.5 1.0 1.5 2.0 2.5 0.0 0.5 1.0 1.5 2.0 2.5 Radius (cm) Growth Rate (µm/hr) Numerical (present study) Experiment Fig. 9. Comparison of numerically calculated growth rates with experiment [5] along the radius of the wafer for the reactor shown in Fig. 7. Case II: pressure 100 torr, T ¼ 1273 K; NH 3 ¼ 2 slpm, H 2 ¼ 0.2 slpm, TMG ¼ 0.248 sccm. outlet 4.45cm 30cm 2.54cm wafer 5.72cm inlet Axis of symmetry 10cm Fig. 10. Reactor geometry [3] used for numerical calculation of growth rate at the diffusion-limited regime.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE IN PRESS</head><p>and the diffusion of TMG becomes more pronounced leading to higher growth rates. This continues until the V-III ratio is so low that not enough ammonia is available at the surface. Beyond this point, the growth rate decreases again. In contrast, such behavior does not occur in stagnation-flow type reactors, such as the one employed by Safvi et al. <ref type="bibr" target="#b4">[5]</ref>, and the growth rate increases with increasing V-III ratio. This is shown in Fig. <ref type="figure" target="#fig_2">14</ref>.</p><p>Finally, we test our mechanism versus measured values from the paper by Thrush et al. <ref type="bibr" target="#b29">[30]</ref> for a Thomas Swan Scientific Ltd reactor. The axisymmetric model geometry used for the simulation is shown in Fig. <ref type="figure" target="#fig_0">15</ref>. It should be noted that the exact geometry of this reactor is proprietary and our geometry is based on the visual inspection of the published reactor's picture. The ratio of TMG and NH 3 was kept at a constant V/III mole ratio of 2200. The flow rate of the carrier gas, hydrogen, was adjusted accordingly to maintain a total flow rate of 20 slm, as set by the experiment. The pressure of the reactor is 100 Torr. The wafer rotates and is assumed to have a uniform temperature of 1303 K. The outside walls of the reactor are water-cooled and are assumed to be 333 K. The boundary conditions corresponding to the showerhead was modeled as multiple inlets to increase the penetration of the inlet flow. Fig. <ref type="figure" target="#fig_0">16</ref> shows that the simulated deposition rate in excellent agreement with the experiment as a function of NH 3 flow.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Summary and conclusions</head><p>The effectiveness of combining ab initio quantum chemistry calculations with CFD in the modeling of growth of GaN has been demonstrated. Reaction pathways have been calculated using the first-principles quantum chemistry techniques. The activation barriers and the vibrational frequencies have been used to calculate rate constants using QRRK and transition state theory. The rate constant for the surface reactions have been calculated using transition state theory after taking into account the various degrees of freedom of the molecules in the gas phase, adsorbed state and transition state. The new mechanism has been used to calculate deposition rate for five different reactors using CFD. CFD Fig. 11. Comparison of numerically calculated growth rate with experiment [3] at the diffusion-limited regime using the reactor geometry shown in Fig. 10. Note that growth rate decreases as the amount of V-precursor for the reactor shown in Fig. <ref type="figure" target="#fig_1">12</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE IN PRESS</head><p>calculation using the proposed mechanism is able to reproduce the correct temperature dependence of the growth rate for both laboratory-scale and commercial reactors. Also, the present mechanism is able to reproduce two opposing trend of growth rate as a function of V-III ratio. All of these observations lead to the conclusion that the proposed mechanism for GaN growth is fairly universal and accounts for most of the important pathways leading to epitaxial growth of GaN. Rotating Disc T = 1303K Inlet, F total = 20slm, T=333k Outlet Wafer T = 1303K Side Walls T = 333K Symmetry Fig. 15. Schematic drawing of the reactor geometry used to simulate Thomas Swan Ltd. reactor [30]. 0.0 0.4 0.8 1.2 1.6 2.0 0 4 2 6 8 1 0 1 2 Ammonia Flow (slm) Deposition Rate (microns/hr) Experiment Simulation Fig. 16. Comparison of simulated deposition rate with experiment [30] as a function of NH 3 flow rate using the reactor shown in Fig. 15.</p><p>University) and Dr. R. Sumathi (MIT) for helpful discussion.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig.1. Comparison of calculated rate constant with experiment<ref type="bibr" target="#b13">[14]</ref> for the reaction TMG-DMG+CH 3 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Reduced cluster models of surface Ga and surface N (top figures), and larger cluster model used for surface Ga to examine the validity of the reduced cluster model.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Schematic representation of the pathways (gas phase and surface) for GaN deposition.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 5 .Fig. 6 .</head><label>56</label><figDesc>Fig.5. Reactor geometry and boundary conditions<ref type="bibr" target="#b27">[28]</ref> used for calculation of growth rate at different temperatures using CFD-ACE+ TM .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 7 .Fig. 8 .Fig. 9 .Fig. 10 .</head><label>78910</label><figDesc>Fig. 7. Reactor geometry and boundary conditions [5] used for growth calculations.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 12 .Fig. 11 .</head><label>1211</label><figDesc>Fig. 12. Reactor geometry and boundary conditions [29] used for calculation growth rate as a function of V/III ratio.</figDesc><graphic coords="12,43.34,441.56,213.72,136.30" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 13 .</head><label>13</label><figDesc>Fig.<ref type="bibr" target="#b12">13</ref>. Growth rate as a function of V/III ratio at 1273 K. Note that growth rate decreases as the amount of V-precursor for the reactor shown in Fig.12.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 14 .Fig. 15 .Fig. 16 .</head><label>141516</label><figDesc>Fig.14. Growth rate as a function of V/III ratio at 1273 K. Note that growth rate increases as the amount of V-precursor for the reactor shown in Fig.7.</figDesc><graphic coords="13,150.89,91.57,237.60,151.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Gas phase reactions considered for GaN MOVPE</figDesc><table><row><cell></cell><cell>Reactions</cell><cell>A</cell><cell>n</cell><cell>E =R</cell></row><row><cell>G1</cell><cell>TMG2DMG+CH 3</cell><cell>1.0 Â 10 47</cell><cell>À9.18</cell><cell>38,750</cell></row><row><cell>G2</cell><cell>DMG2MMG+CH 3</cell><cell>7.67 Â 10 43</cell><cell>À9.8</cell><cell>17,120</cell></row><row><cell>G3</cell><cell>MMG2Ga+CH 3</cell><cell>1.68 Â 10 30</cell><cell>À5.07</cell><cell>42,290</cell></row><row><cell>G4</cell><cell>TMG+NH 3 -TMG Á NH 3</cell><cell>2.28 Â 10 34</cell><cell>À8.31</cell><cell>1568</cell></row><row><cell>G5</cell><cell>TMG+NH 3 -(CH 3 ) 2 GaNH 2 +CH 4</cell><cell>1.7 Â 10 4</cell><cell>2.0</cell><cell>10,050</cell></row><row><cell>G7</cell><cell>DMG+NH 3 -DMG.NH 3</cell><cell>4.08 Â 10 31</cell><cell>À7.03</cell><cell>1628</cell></row><row><cell>G8</cell><cell>DMG+NH 3 -CH 3 GaNH 2 +CH 4</cell><cell>5.30 Â 10 5</cell><cell>1.56</cell><cell>10,440</cell></row><row><cell>G9</cell><cell>MMG+NH 3 -MMG Á NH 3</cell><cell>7.95 Â 10 24</cell><cell>À5.21</cell><cell>1054</cell></row><row><cell>G10</cell><cell>MMG+NH 3 -GaNH 2 +CH 4</cell><cell>8.10 Â 10 5</cell><cell>1.3</cell><cell>8919</cell></row><row><cell>G11</cell><cell>NH 3 +CH 3 2NH 2 +CH 4</cell><cell>3.31 Â 10 3</cell><cell>2.51</cell><cell>4962</cell></row><row><cell>G12</cell><cell>CH 3 +H 2 2CH 4 +H</cell><cell>1.2 Â 10 12</cell><cell>0</cell><cell>6300</cell></row><row><cell>G13</cell><cell>TMG+H2DMG+CH 4</cell><cell>5.0 Â 10 13</cell><cell>0</cell><cell>5051</cell></row><row><cell>G14</cell><cell>DMG+H2MMG+CH 4</cell><cell>5.0 Â 10 13</cell><cell>0</cell><cell>5051</cell></row><row><cell>G15</cell><cell>TMG.NH 3 2MMG+2CH 3 +NH 3</cell><cell>1.33 Â 10 44</cell><cell>À8.24</cell><cell>39,150</cell></row><row><cell>G16</cell><cell>CH 3 +H+M2CH 4 +M</cell><cell>2.40 Â 10 22</cell><cell>À1</cell><cell>0</cell></row><row><cell>G17</cell><cell>2CH 3 2C 2 H 6</cell><cell>2.0 Â 10 13</cell><cell>0</cell><cell>0</cell></row><row><cell>G18</cell><cell>2H+M2H 2 +M</cell><cell>2.0 Â 10 16</cell><cell>0</cell><cell>0</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>Surface reactions considered for GaN deposition. The units are expressed in terms of cm, mol and s</figDesc><table><row><cell></cell><cell>Reaction</cell><cell>A</cell><cell>n</cell><cell>E =R</cell></row><row><cell>S1</cell><cell>MMG+S N -MMG(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row><row><cell>S2</cell><cell>MMG(s)-MMG+S N</cell><cell>1.115 Â 10 14</cell><cell>0.55</cell><cell>5.4189 Â 10 4</cell></row><row><cell>S3</cell><cell>NH 3 +MMG(s)-COMPM1(s)</cell><cell>3.354 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S4</cell><cell>COMPM1(s)-NH 3 +MMG(s)</cell><cell>5.700 Â 10 13</cell><cell>À0.16</cell><cell>4.1000 Â 10 3</cell></row><row><cell>S5</cell><cell>MMG+COMPM1(s)-CH 4 +COMPM2(s)</cell><cell>1.230 Â 10 10</cell><cell>3.22</cell><cell>1.1800 Â 10 4</cell></row><row><cell>S6</cell><cell>NH 3 +COMPM2(s)-COMPM3(s)</cell><cell>3.354 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S7</cell><cell>COMPM3(s)-NH 3 +COMPM2(s)</cell><cell>5.700 Â 10 13</cell><cell>À0.161</cell><cell>4.1000 Â 10 3</cell></row><row><cell>S8</cell><cell>MMG+COMPM3(s)-CH 4 +COMPM4(s)</cell><cell>1.230 Â 10 10</cell><cell>3.22</cell><cell>1.1800 Â 10 4</cell></row><row><cell>S9</cell><cell>NH 3 +COMPM4(s)-COMPM5(s)</cell><cell>3.354 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S10</cell><cell>COMPM5(s)-NH 3 +COMPM4(s)</cell><cell>5.700 Â 10 13</cell><cell>À0.161</cell><cell>4.1000 Â 10 3</cell></row><row><cell>S11</cell><cell>COMPM5(s)-CH 4 +RINGM1(s)</cell><cell>1.230 Â 10 7</cell><cell>3.22</cell><cell>1.1800 Â 10 4</cell></row><row><cell>S12</cell><cell>S G +RINGM1(s)-RINGM2(s)</cell><cell>3.354 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S13</cell><cell>RINGM2(s)-3H 2 +3GaN+S G +S N</cell><cell>3.680 Â 10 9</cell><cell>2.05</cell><cell>3.0000 Â 10 4</cell></row><row><cell>S14</cell><cell>CH 3 +Ga(s)-MMG(s)</cell><cell>1.760 Â 10 9</cell><cell>1.39</cell><cell>0</cell></row><row><cell>S15</cell><cell>MMG(s)-CH 3 +Ga(s)</cell><cell>4.540 Â 10 13</cell><cell>0.0346</cell><cell>4.0000 Â 10 4</cell></row><row><cell>S16</cell><cell>NH 2 +S G -NH 2 (s)</cell><cell>3.168 Â 10 8</cell><cell>1.83</cell><cell>0</cell></row><row><cell>S17</cell><cell>GaNH 2 +S N -GaNH 2 (s)</cell><cell>2.273 Â 10 6</cell><cell>2.247</cell><cell>0</cell></row><row><cell>S18</cell><cell>GaNH 2 (s)-GaNH 2 +S N</cell><cell>4.826 Â 10 13</cell><cell>0.614</cell><cell>4.2215 Â 10 4</cell></row><row><cell>S19</cell><cell>COMPM1(s)-CH 4 +GaNH 2 (s)</cell><cell>1.490 Â 10 11</cell><cell>0.609</cell><cell>1.3060 Â 10 4</cell></row><row><cell>S20</cell><cell>MMG+GaNH 2 (s)-COMPMM1(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row><row><cell>S21</cell><cell>NH 3 +COMPMM1(s)-COMPMM2(s)</cell><cell>3.354 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S22</cell><cell>COMPMM2(s)-CH 4 +COMPMM3(s)</cell><cell>1.490 Â 10 11</cell><cell>0.609</cell><cell>1.3060 Â 10 4</cell></row><row><cell>S23</cell><cell>MMG+COMPMM3(s)-COMPMM4(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row><row><cell>S24</cell><cell>NH 3 +COMPMM4(s)-COMPMM5(s)</cell><cell>3.345 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S25</cell><cell>COMPMM5(s)-CH 4 +RINGM1(s)</cell><cell>1.490 Â 10 11</cell><cell>0.609</cell><cell>1.3060 Â 10 4</cell></row><row><cell>S26</cell><cell>NH 2 (s)-NH 2 +S G</cell><cell>1.450 Â 10 14</cell><cell>0.09</cell><cell>3.0089 Â 10 4</cell></row><row><cell>S27</cell><cell>COMPMM1(s)-MMG+GaNH 2 (s)</cell><cell>1.000 Â 10 14</cell><cell>0.55</cell><cell>2.1550 Â 10 4</cell></row><row><cell>S28</cell><cell>COMPMM2(s)-NH 3 +COMPMM1(s)</cell><cell>5.700 Â 10 13</cell><cell>À0.1</cell><cell>4.1000 Â 10 3</cell></row><row><cell>S29</cell><cell>COMPMM4(s)-MMG+COMPMM3(s)</cell><cell>1.000 Â 10 14</cell><cell>0.55</cell><cell>2.1550 Â 10 4</cell></row><row><cell>S30</cell><cell>COMPMM5(s)-NH 3 +COMPMM4(s)</cell><cell>5.700 Â 10 13</cell><cell>À0.1</cell><cell>4.1000 Â 10 3</cell></row><row><cell>S31</cell><cell>Ga+S N -Ga(s)</cell><cell>1.000 Â 10 11</cell><cell>1.50</cell><cell>0</cell></row><row><cell>S32</cell><cell>Ga(s)+NH 2 (s)-GaNH 2 (s)+S G</cell><cell>1.000 Â 10 25</cell><cell>0.0</cell><cell>0</cell></row><row><cell>S33</cell><cell>Ga(s)-Ga+S N</cell><cell>1.000 Â 10 13</cell><cell>0.0</cell><cell>2.2732 Â 10 4</cell></row><row><cell>S34 a</cell><cell>6CH 3 +RINGM2(s)-COM1(s)</cell><cell>7.550 Â 10 7</cell><cell>2.31</cell><cell>0</cell></row><row><cell>S35</cell><cell>COM1(s)-6CH 3 +RINGM2(s)</cell><cell>1.000 Â 10 13</cell><cell>0.71</cell><cell>2.2902 Â 10 4</cell></row><row><cell>S36</cell><cell>COM1(s)-6CH 4 +3GaN+S G +S N</cell><cell>4.000 Â 10 12</cell><cell>0.0</cell><cell>2.5000 Â 10 4</cell></row><row><cell>S37</cell><cell>TMG+S N -TMG(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row><row><cell>S38</cell><cell>NH 3 +TMG(s)-TCOM1(s)</cell><cell>3.354 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S39</cell><cell>TCOM1(s)-CH 4 +TCOM2(s)</cell><cell>1.490 Â 10 11</cell><cell>0.609</cell><cell>1.6500 Â 10 4</cell></row><row><cell>S40</cell><cell>S G +TCOM2(s)-TCOM3(s)</cell><cell>3.354 Â 10 7</cell><cell>3.33</cell><cell>0</cell></row><row><cell>S41</cell><cell>TCOM3(s)-2CH 4 +GaN+S G +S N</cell><cell>1.490 Â 10 11</cell><cell>0.609</cell><cell>2.5000 Â 10 4</cell></row><row><cell>S42</cell><cell>TMG(s)-TMG+S N</cell><cell>1.115 Â 10 14</cell><cell>0.55</cell><cell>2.5000 Â 10 4</cell></row><row><cell>S43</cell><cell>TCOM1(s)-NH 3 +TMG(s)</cell><cell>5.700 Â 10 13</cell><cell>À0.161</cell><cell>6.0000 Â 10 3</cell></row><row><cell>S44</cell><cell>TMG Á NH 3 +S N -TCOM1(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row><row><cell>S45</cell><cell>TCOM1(s)-TMG.NH 3 +S N</cell><cell>1.115 Â 10 14</cell><cell>0.55</cell><cell>2.5000 Â 10 4</cell></row><row><cell>S46</cell><cell>TCOM1(s)-2CH 3 +MMG+NH 3 +S N</cell><cell>1.115 Â 10 14</cell><cell>0.55</cell><cell>5.4189 Â 10 4</cell></row><row><cell>S47</cell><cell>MMG.NH 3 +S N -COMPM1(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row><row><cell>S48</cell><cell>COMPM1(s)-MMG Á NH 3 +S N</cell><cell>1.115 Â 10 14</cell><cell>0.55</cell><cell>5.4189 Â 10 4</cell></row><row><cell>S49</cell><cell>MMG Á NH 3 +COMPM1(s)-CH 4 +COMPM3(s)</cell><cell>1.230 Â 10 10</cell><cell>3.22</cell><cell>1.1800 Â 10 4</cell></row><row><cell>S50</cell><cell>MMG Á NH 3 +COMPM3(s)-CH 4 +COMPM5(s)</cell><cell>1.230 Â 10 10</cell><cell>3.22</cell><cell>1.1800 Â 10 4</cell></row><row><cell>S51</cell><cell>MMG Á NH 3 +GaNH 2 (s)-COMPMM2(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row><row><cell>S52</cell><cell>MMG Á NH 3 +COMPMM3(s)-COMPMM5(s)</cell><cell>1.160 Â 10 5</cell><cell>2.98</cell><cell>0</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>D. Sengupta et al. / Journal of Crystal Growth 279 (2005) 369-382</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgments This work was funded by the <rs type="funder">National Science Foundation</rs> through a <rs type="grantName">Phase II SBIR (DMI 9983415) grant</rs>. <rs type="person">Mr</rs>. <rs type="person">William Kuykendall</rs> was supported through the <rs type="programName">NSF REU program</rs>. The authors thank <rs type="person">Dr. R. Pollard</rs> (<rs type="affiliation">DoW Chemicals</rs>), <rs type="person">Professor R. Masel</rs> (<rs type="affiliation">University of Illinois, Urbana-Champaign</rs>), <rs type="person">James B. Adams</rs> (<rs type="affiliation">Arizona State</rs></p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_mDMaBXn">
+					<orgName type="grant-name">Phase II SBIR (DMI 9983415) grant</orgName>
+					<orgName type="program" subtype="full">NSF REU program</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE IN PRESS</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Organometallic Vapor-Phase Epitaxy: Theory and Practice</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Stringfellow</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<publisher>Academic Press</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Redwing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Kuech</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Stat. Sol. (a)</title>
+		<imprint>
+			<biblScope unit="volume">176</biblScope>
+			<biblScope unit="page">693</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Theodorpoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Mountziaris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Moffat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Crystal Growth</title>
+		<imprint>
+			<biblScope unit="volume">217</biblScope>
+			<biblScope unit="page">65</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mihopoulos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dept. Chem. Eng., MIT</title>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="report_type">Ph.D. Thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Safvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Redwing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Tischler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Kuech</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page">1789</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sengupta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page">291</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">U</forename><surname>Bergman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Reimer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Atakan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">5593</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Unimolecular Reactions</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Holbrook</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1972">1972</date>
+			<publisher>Wiley-Interscience</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Trucks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Robb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Cheeseman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">G</forename><surname>Zakrzewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A S R E</forename><surname>Montgomery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Burant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dapprich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Millam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Daniels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Kudin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Strain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Farkas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tomasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cammi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mennucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pomelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Adamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Clifford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ochterski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A P</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ayala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Morokuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Malick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Rabuck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Foresman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cioslowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Ortiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Baboul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Stefanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Liashenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Piskorz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Komaromi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gomperts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J K T</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Al-Laham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nanayakkara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Challacombe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M W</forename><surname>Gill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Andres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Head-Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Replogle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>Gaussian Inc</publisher>
+			<pubPlace>Pittsburg, PA.</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Parr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">785</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Becke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">5658</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Hay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Wadt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">299</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Dunning</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page">1007</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Jacko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J W</forename><surname>Price</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Can. J. Chem</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">1560</biblScope>
+			<date type="published" when="1963">1963</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Holbrook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Pilling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Robertson</surname></persName>
+		</author>
+		<title level="m">Unimolecular Reactions</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Dean</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">4600</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Payne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Teter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Allan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mod. Phys</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">1045</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Widjaja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">304</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Widjaja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page">3304</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page">1931</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y.-F</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pollard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">142</biblScope>
+			<biblScope unit="page">1712</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mazumder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Lowry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Crystal Growth</title>
+		<imprint>
+			<biblScope unit="volume">224</biblScope>
+			<biblScope unit="page">165</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">Cfd-Ace</forename><surname>+tm</surname></persName>
+		</author>
+		<title level="m">A multi-physics CFD code developed by CFD Research Corporation, Hunsville, AL 35805, currently marketed by ESI Group</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<author>
+			<persName><surname>Nist</surname></persName>
+		</author>
+		<ptr target="http://www.webbook.nist.gov/chemistry" />
+		<title level="m">Chemistry webbook</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Mountziaris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Jensen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">138</biblScope>
+			<biblScope unit="page">2426</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mazzarese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tripathi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Conner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Calderon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Eckart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electron. Mater</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page">369</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nakamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Makino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tachibana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Matsumoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Organomet. Chem</title>
+		<imprint>
+			<biblScope unit="volume">611</biblScope>
+			<biblScope unit="page">514</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Steigerwald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Imler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Kuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Craford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ludowise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lester</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Amano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electron. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">1004</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Niebuhr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bachem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dombroski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Pletschen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Kaufmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electron. Mater</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page">1531</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Thrush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kappers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Considine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Mullins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Saywell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Bentham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Humphreys</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chin. J. Lumin</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2001">2001</date>
+			<publisher>Nitride Workshop</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

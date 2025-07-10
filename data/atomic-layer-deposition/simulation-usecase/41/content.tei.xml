@@ -1,0 +1,2159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Surface chemistry of copper metal and copper oxide atomic layer deposition from copper(II) acetylacetonate: a combined first-principles and reactive molecular dynamics study †</title>
+				<funder ref="#_qV7jhhC">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_7DZec7b">
+					<orgName type="full">German Research Foundation (DFG)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2015-09-14">14 September 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Xiao</forename><surname>Hu</surname></persName>
+							<email>xiao.hu@zfm.tu-chemnitz.de</email>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Microtechnologies</orgName>
+								<orgName type="institution">Technische Universita ¨t Chemnitz</orgName>
+								<address>
+									<addrLine>Reichenhainer Str. 70</addrLine>
+									<postCode>D-09126</postCode>
+									<settlement>Chemnitz</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jo</forename><surname>¨rg Schuster</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Fraunhofer Institute for Electronic Nano Systems</orgName>
+								<address>
+									<addrLine>Technologie-Campus 3</addrLine>
+									<postCode>D-09126</postCode>
+									<settlement>Chemnitz</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stefan</forename><forename type="middle">E</forename><surname>Schulz</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Gessner</surname></persName>
+						</author>
+						<title level="a" type="main">Surface chemistry of copper metal and copper oxide atomic layer deposition from copper(II) acetylacetonate: a combined first-principles and reactive molecular dynamics study †</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-09-14">14 September 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D72FE70371B37E81D41D927C1EDEA2F5</idno>
+					<idno type="DOI">10.1039/c5cp03707g</idno>
+					<note type="submission">Received 26th June 2015, Accepted 14th September 2015</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:20+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Atomistic mechanisms for the atomic layer deposition using the Cu(acac) 2 (acac = acetylacetonate) precursor are studied using first-principles calculations and reactive molecular dynamics simulations.</p><p>The results show that Cu(acac) 2 chemisorbs on the hollow site of the Cu( <ref type="formula">110</ref>) surface and decomposes easily into a Cu atom and the acac-ligands. A sequential dissociation and reduction of the Cu precursor [Cu(acac) 2 -Cu(acac) -Cu] are observed. Further decomposition of the acac-ligand is unfavorable on the Cu surface. Thus additional adsorption of the precursors may be blocked by adsorbed ligands. Molecular hydrogen is found to be nonreactive towards Cu(acac) 2 on Cu(110), whereas individual H atoms easily lead to bond breaking in the Cu precursor upon impact, and thus release the surface ligands into the gas-phase. On the other hand, water reacts with Cu(acac) 2 on a Cu 2 O substrate through a ligand-exchange reaction, which produces gaseous H(acac) and surface OH species. Combustion reactions with the main by-products CO 2 and H 2 O are observed during the reaction between Cu(acac) 2 and ozone on the CuO surface. The reactivity of different co-reactants toward Cu(acac) 2 follows the order H 4 O 3 4 H 2 O.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Copper interconnects have been widely used to replace aluminum in ultralarge-scale integrated circuitry due to their low resistivity and superior resistance to electromigration. <ref type="bibr">1</ref> Of the various deposition techniques applied for Cu metallization, electrochemical deposition (ECD) is the preferred choice. However, the ECD process requires conductive seed layers. Moreover, diffusion barrier films are needed to deposit between the Cu seed layer and the patterned dielectrics in order to prevent the migration of Cu into the Si substrate and the dielectrics. 2 So far, ionized physical vapor deposition (iPVD) using ionized sputtering techniques in combination with high re-sputter ratio regimes has been adopted as the desirable method for the barrier and Cu seed layer deposition. <ref type="bibr" target="#b0">3</ref> However, with the ongoing scaling down and aspect ratio increase of devices, iPVD tends to fail due to its inherent nonconformal deposition characteristic.</p><p>One promising alternative for making uniform and conformal Cu thin films is atomic layer deposition (ALD). ALD is a gas-phase thin film deposition technique based on sequential, self-terminating reactions between the surface and precursors. <ref type="bibr" target="#b1">4,</ref><ref type="bibr" target="#b2">5</ref> The typical ALD process consists of four repetitive steps. The precursor (typically a metal compound) chemisorbs on reactive sites, saturates the surface and releases the reaction by-products. After that, unreacted precursor molecules as well as gaseous byproducts are purged from the reactor. The co-reactant (typically a non-metal compound) is then supplied to clean up the surface of contaminations and deposit the desired species (e.g. oxygen or hydroxyl groups). Finally, another purging phase is introduced to evacuate the excessive reactants and products. By repeating these steps, the film growth is self-limiting, which leads to excellent step coverage and conformal deposition on high aspect ratio structures.</p><p>Precursor chemistry plays a key role in ALD. The candidate metal precursors must be volatile, thermally stable, and reactive. Moreover, a low-temperature process (ideally at r160 1C) is desirable for Cu ALD in order to avoid the agglomeration of Cu at elevated temperatures. <ref type="bibr" target="#b3">6</ref> Recently, a number of Cu precursors have been tested for chemical vapor deposition and ALD applications, such as b-diketiminates, <ref type="bibr" target="#b4">7,</ref><ref type="bibr" target="#b5">8</ref> b-diketonates, <ref type="bibr" target="#b6">[9]</ref><ref type="bibr" target="#b7">[10]</ref><ref type="bibr" target="#b8">[11]</ref> amidinates, <ref type="bibr" target="#b9">12,</ref><ref type="bibr" target="#b10">13</ref> aminoalkoxides, <ref type="bibr" target="#b11">14</ref> guanidinate, <ref type="bibr" target="#b12">15,</ref><ref type="bibr" target="#b13">16</ref> iminopyrrolidinate. <ref type="bibr" target="#b14">17,</ref><ref type="bibr" target="#b15">18</ref> Among them, the Cu b-diketonate family is promising because of its high stability and relatively low vapor pressure. The direct Cu ALD process using Cu(acac) 2 and H 2 requires a deposition temperature of above 250 1C, and is thus undesirable. <ref type="bibr" target="#b16">19</ref> The deposition temperature can be reduced below 100 1C by utilizing the plasma enhanced ALD technology. <ref type="bibr" target="#b17">20,</ref><ref type="bibr" target="#b18">21</ref> However, such a process would lead to high roughness and reduced step coverage of ALD, which may not be applicable for high aspect ratio structures. <ref type="bibr" target="#b19">22</ref> On the other hand, several indirect ALD routes to Cu films have been reported. These approaches consist of two steps: (1) ALD of the Cu oxide or nitride, and (2) reduction into the metallic Cu with a reducing agent. Waechtler et al. <ref type="bibr" target="#b7">10</ref> investigated the ALD of Cu 2 O thin films on different diffusion barriers (e.g. Ta, TaN, and Ru) using ( n Bu 3 P) 2 Cu(acac) (Bu = butyl) and wet oxygen. The deposited Cu 2 O can be reduced easily to Cu metal using formic acid as the reducing agent assisted by a Ru catalyst. <ref type="bibr" target="#b7">10</ref> Knisley et al. <ref type="bibr" target="#b20">23</ref> proposed the low temperature deposition of high purity Cu metal through the reduction of ALD copper formate using hydrazine. Further theoretical studies revealed that a hydrazine undergoes cleavage to form NH 2 moieties, which then abstracts H of the formate intermediate and spontaneously forms NH 3 and CO 2 by-products. <ref type="bibr" target="#b21">24</ref> More recently, Park et al. <ref type="bibr" target="#b22">25</ref> reported ALD of Cu 3 N followed by reduced annealing in H 2 . Such processes may avoid the oxidization of barrier metal below the Cu seed layer.</p><p>There have been a few experimental and theoretical studies on the surface chemistry of Cu(I) and Cu(II) b-diketonates. In general, the Cu(I) b-diketonates are more reactive compared to Cu(II) b-diketonates. However, the main limitation of Cu(I) b-diketonates is that these precursors may easily undergo a disproportionation reaction, which defeats the self-limiting nature of ALD processes. <ref type="bibr" target="#b6">9</ref> Previous in situ X-ray photoelectron spectroscopy (XPS) results suggest that the disproportionation of the ( n Bu 3 P) 2 Cu(acac) precursor, which deposits metallic Cu and releases gaseous Cu(acac) 2 , starts above 200 1C on SiO 2 or above 125 1C on the Co substrate. <ref type="bibr" target="#b23">26,</ref><ref type="bibr" target="#b24">27</ref> Hence, the upper temperature limit for copper ALD using this precursor lies below these temperatures. Another important issue regarding Cu b-diketonates is the redox chemistry during the ALD. In many cases, especially when metal ALD is desired, the metal center in a precursor is required to undergo an oxidation or reduction step. It is generally assumed that such a step is accomplished during the second ALD half-cycle, which is associated with the promotion of a co-reactant. <ref type="bibr" target="#b25">28</ref> Recent surface-science studies, however, illuminated that oxidation state changes in the metal can occur upon precursor activated adsorption on the substrate, involving the partial loss and transformation of ligands. For example, the initial loss of acac-ligands of the Cu(acac) 2 precursor was observed at 200 and 235 K for Ni(110) and Cu(110) single-crystal surfaces, respectively. <ref type="bibr" target="#b26">29</ref> The formation of a metal-Cu(acac) complex was proposed. An obvious oxidation state change of Cu has been seen between 250 and 300 K. The adsorbed Cu(acac) species lose their remaining acac-ligands and Cu 2+ is completely reduced to metallic Cu. <ref type="bibr" target="#b26">29</ref> In this work, the surface chemistry of Cu(acac) 2 on the Cu(110) surface is revisited theoretically. Recently, quantum chemistry (QC), in particular density functional theory (DFT) calculations, has become a powerful tool to explicit the ALD chemistry at an atomic scale. <ref type="bibr" target="#b27">[30]</ref><ref type="bibr" target="#b28">[31]</ref><ref type="bibr" target="#b29">[32]</ref><ref type="bibr" target="#b30">[33]</ref><ref type="bibr" target="#b31">[34]</ref><ref type="bibr" target="#b32">[35]</ref><ref type="bibr" target="#b33">[36]</ref><ref type="bibr" target="#b34">[37]</ref><ref type="bibr" target="#b35">[38]</ref><ref type="bibr" target="#b36">[39]</ref><ref type="bibr" target="#b37">[40]</ref><ref type="bibr" target="#b38">[41]</ref><ref type="bibr" target="#b39">[42]</ref><ref type="bibr" target="#b40">[43]</ref><ref type="bibr" target="#b41">[44]</ref><ref type="bibr" target="#b42">[45]</ref><ref type="bibr" target="#b43">[46]</ref><ref type="bibr" target="#b44">[47]</ref><ref type="bibr" target="#b45">[48]</ref><ref type="bibr" target="#b46">[49]</ref> Dey et al. <ref type="bibr" target="#b28">31</ref> investigated the transmetalation reactions in Cu ALD using diethylzinc as the reducing agent, following experiments by Lee et al. <ref type="bibr" target="#b5">8</ref> Lin et al. <ref type="bibr" target="#b29">32</ref> have investigated the competition between ligand-exchange reactions and surface decomposition of Cu(acac) 2 on a Si(100)-2 Â 1 surface. More recently, we have studied the surface reactions of ( n Bu 3 P) 2 Cu(acac) and Cu(acac) 2 precursors on a Ta(110) surface. <ref type="bibr" target="#b30">33</ref> Ta is found to exhibit high activity towards the decomposition of Cu precursors, which is consistent with earlier results. <ref type="bibr" target="#b6">9,</ref><ref type="bibr" target="#b31">34,</ref><ref type="bibr" target="#b32">35</ref> Based on thermodynamic modeling, a combustion-like reaction during the O 3 or wet O 2 pulse, with CO 2 and H 2 O as the main by-products, has been proposed. <ref type="bibr" target="#b30">33</ref> An alternative QC approach for investigating ALD chemistry involves ab initio molecular dynamics (AIMD), which have been carried out on the simulation of SiO 2 <ref type="bibr" target="#b40">43,</ref><ref type="bibr" target="#b41">44</ref> and HfO 2 <ref type="bibr" target="#b42">45</ref> ALD. As compared to the ''static'' ab initio calculations, AIMD offers a dynamic description of the time evolution of a chemical reaction. Unfortunately, due to the costs of treating the electronic degrees of freedom, the AIMD study is restricted to model systems consisting of a few hundred atoms and to very short time scales (tens of ps). We thus perform molecular dynamics simulation of Cu ALD using reactive force field (ReaxFF). <ref type="bibr" target="#b47">50</ref> ReaxFF was developed to bridge the gap between QC and empirical force field, which enables the simulation of comparatively large systems for long time scales (e.g. tens of thousands of atoms for the ns scale). <ref type="bibr" target="#b47">50</ref> Unlike other traditional non-reactive force fields, ReaxFF offers an accurate description of the bond forming or breaking process. <ref type="bibr" target="#b47">50</ref> Previously, the surface reaction of similar metal b-diketonate of Ir(acac) 3 was studied in situ using a quadrupole mass spectrometer and a quartz crystal microbalance. <ref type="bibr" target="#b48">51</ref> In that work, CO 2 and H 2 O were confirmed as the main reaction by-products during IrO 2 ALD. <ref type="bibr" target="#b48">51</ref> However, the elementary-step ALD reaction mechanisms are still unclear, since some fast reactions that involve unstable intermediates are difficult to be observed experimentally. Alternatively, reactive molecular dynamics (RMD) simulation provides a possibility to capture the reactions that occurred in ALD in a femtosecond timescale. In the present article, we focus on the surface chemistry of Cu(acac) 2 by means of DFT calculations and RMD simulations. It is found that Cu(acac) 2 is dissociated easily into a Cu atom and the acacligands on both metallic Cu and Cu oxide surfaces. The dissociated acac-ligands are thermodynamically stable on the surface, and can be removed by co-reactants during the next ALD half-cycle. The mechanisms for the surface reactions between Cu(acac) 2 and different co-reactants (i.e. H 2 , atomic H, H 2 O, and O 3 ) are also discussed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methodology</head><p>The DFT calculations were performed using the Quantum Espresso (QE) package. <ref type="bibr" target="#b49">52</ref> For the modeling of the exchange and correlation interactions the Perdew-Burke-Ernzerhof (PBE) functional within the generalized gradient approximation (GGA) <ref type="bibr" target="#b50">53</ref> was used in conjunction with ultrasoft pseudopotentials <ref type="bibr" target="#b51">54</ref> and a plane-wave basis set. Kinetic energy cutoffs of 408 eV (for wave functions) and 4082 eV (for charge density) were used. The Brillouin zone was sampled using a 2 Â 2 Â 1 Monkhorst-Pack k-point mesh. <ref type="bibr" target="#b52">55</ref> To investigate the physisorption of the Cu precursor on the surface, we used a nonlocal van der Waals density functional (vdW-DF) <ref type="bibr" target="#b53">56</ref> as implemented in QE. The geometry was optimized until the total energy changes and all components of all forces are smaller than 1.26 Â 10 À4 eV and 2.57 Â 10 À2 eV Å À1 , respectively. With the optimized structures, the vibration properties of adsorbed species were calculated using the harmonic approximation based on density-functional perturbation theory. <ref type="bibr" target="#b54">57</ref> The minimum energy paths and saddle points were investigated by the climbing image nudged elastic band method (CI-NEB). <ref type="bibr" target="#b55">58,</ref><ref type="bibr" target="#b56">59</ref> The charge transfer trends were studied by means of Mulliken population analysis <ref type="bibr" target="#b57">60</ref> within the plane-wave CASTEP code, <ref type="bibr" target="#b58">61</ref> using similar calculation methods as in QE.</p><p>The RMD simulations were carried out using ReaxFF potential as implemented in LAMMPS. <ref type="bibr" target="#b59">62</ref> ReaxFF is a general bond order-dependent potential that uses relationships the between interatomic distance and bond order as well as between the bond order and bond energy to describe bond dissociation. <ref type="bibr" target="#b47">50</ref> The system energy (E system ) in ReaxFF is composed of a sum of energy terms: 50</p><formula xml:id="formula_0">E system = E bond + E under + E over + E val + E pen + E tors + E conj + E Coulomb + E vdWaals</formula><p>The partial contributions include bond energies E bond , atom under-/overcoordination energies E under and E over , valence angle energies E val , penalty energies E pen , torsion angle energies E tors , conjugation energies E conj , and non-bonded Coulomb (E Coulomb ) and van der Waals (E vdWaals ) interaction energies. All bonded energy terms include bond order dependence, which are determined by the local environment of each atom. The Coulomb term E Coulomb is taken into account for all atom pairs. A shielded Coulomb potential was used to adjust for orbital overlap between atoms that were close together. Atomic charges are computed using the geometry-dependent charge calculation scheme (EEM scheme) of Mortier et al. <ref type="bibr" target="#b60">63</ref> The calculation of long-range electrostatic interactions (e.g., via Ewald summation) is eliminated by the use of a seventh-order taper function within a cutoff distance. All other non-bonded interactions (short-range Pauli repulsion and long-range dispersion) are included in the E vdWaals term. A detailed description of the individual terms can be found in the original paper of van Duin et al. <ref type="bibr" target="#b47">50</ref> The ReaxFF parameters for the Cu(acac) 2 system considered in the present study have been determined by ab initio calculations performed in previous investigations. <ref type="bibr" target="#b61">64</ref> The Cu/O/H parameters were integrated into the glycine force field <ref type="bibr" target="#b62">65</ref> by following the suggestions of Huang et al. <ref type="bibr" target="#b63">66</ref> These force fields use the same O/H parameters and potential functions, making such integration relatively straightforward. <ref type="bibr" target="#b63">66</ref> The Cu/C bond parameters were not optimized since such bonds were not expected to form, while the non-bonded interactions were obtained from standard combination rules. The RMD simulations are performed in the NVT canonical ensemble (constant number, volume and temperature).</p><p>A Nose-Hoover thermostat with a damping constant of 100 fs was used for temperature control. The time step used in RMD simulations was 0.1 fs for the reaction between Cu(acac) 2 and O 3 and 0.25 fs for the other systems, respectively. Such small time steps are required to capture bond breaking and forming involved in chemical reactions, so that converged results for species evolution can be obtained. The initial system was firstly equilibrated using a low-temperature (at 1 K) MD. After the equilibrium, the system temperature was further increased from 1 K to 600 K within 20 ps at a uniform rate. Finally, reactive NVT-MD simulations were performed at 600 K for a total simulation time of up to 1 ns. We slightly increase the temperature to accelerate the chemical reaction.</p><p>Fig. <ref type="figure" target="#fig_1">1</ref> shows the calculated atomic structure of the Cu(acac) 2 precursor. The predicted and experimental bond lengths and bond angles are listed in Table <ref type="table" target="#tab_0">1</ref>. A good agreement is observed between theoretical and experimental results. <ref type="bibr" target="#b64">67</ref> The only exception is that ReaxFF predicts slightly larger C1-O bond length (0.   molecules were distributed randomly, with a density of 0.08 g cm À3 , 0.004 g cm À3 , and 0.1 g cm À3 , respectively. We used a relatively high density of co-reactants to ensure sufficient reactivity of the system and hence to obtain results within a reasonable calculation time.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results and discussion</head><p>Adsorption and dissociation of Cu(acac) 2 on the surface</p><p>In the first part of our study on copper precursors we analyze the surface adsorption and succeeding dissociation of the precursors on various surfaces. The adsorption of Cu(acac) 2 on Cu is studied in detail before we compare these findings to those on other surfaces. On the Cu(110) surface we consider four different adsorption sites: top (T), hollow (H), bridge1 (B1) and bridge2 (B2) (see Fig. <ref type="figure" target="#fig_2">2a</ref>). For each position, different adsorption orientations of species were examined. The calculated adsorption energies and structures of Cu(acac) 2 and its dissociation products are presented in Table <ref type="table" target="#tab_1">2</ref> and Fig. <ref type="figure" target="#fig_2">2</ref>. As depicted in Fig. <ref type="figure" target="#fig_2">2b-d</ref>, three stable configurations have been obtained for the adsorption of Cu(acac) 2 . On the top and bridge1 sites, Cu(acac) 2 prefers to adsorb on Cu(110) with a parallel orientation (Fig. <ref type="figure" target="#fig_2">2b</ref> and <ref type="figure">c</ref>). Geometric parameters of the adsorbed Cu(acac) 2 are barely changed relative to a gaseous molecule (not shown here). The adsorption energies computed by using the PBE functional are À0.48 eV for top and À0.33 eV for bridge2, respectively (Table <ref type="table" target="#tab_1">2</ref>). It is well known that the pure GGA-PBE does not capture van der Waals forces (dispersion forces), leading to an underestimated binding energy. <ref type="bibr" target="#b53">56</ref> Indeed, the vdW-DF functional predicts much higher adsorption energies (À1.42 eV and À1.34 eV), indicating that the vdW forces are the dominant interactions. One the other hand, Cu(acac) 2 is found to strongly chemisorb on the hollow site with a binding energy of À1.51 eV for PBE (Table <ref type="table" target="#tab_1">2</ref>). The energy calculated using vdW-DF is 0.65 eV larger than that using PBE, because of the contribution of vdW forces between the acac-ligands and the surface. The Cu(acac) 2 molecule is significantly distorted from planarity to enhance adsorption (Fig. <ref type="figure" target="#fig_2">2d</ref>). Four Cu-O bonds are formed between the surface Cu atoms and O of Cu(acac) 2 , with a bond length of 2.07 Å. However, bond length of the original Cu-O bond of Cu(acac) 2 is increased from 1.95 Å (in the gas-phase) to 2.21 Å (on the surface), which weakens the Cu-O bond strength. In contrast to Cu(acac) 2 both Cu(acac) and acac prefer to adsorb with the molecular axis being perpendicular to the Cu surface normal (Fig. <ref type="figure" target="#fig_2">2f</ref> and <ref type="figure">g</ref>). The most stable adsorption sites are the hollow (E ads = À2.16 eV for PBE) and top (E ads = À2.68 eV for PBE) sites, respectively (Table <ref type="table" target="#tab_1">2</ref>). The Cu atom prefers to adsorb on the hollow site, with a binding energy of À3.08 eV for the PBE functional. The vdW forces have no significant influence on the adsorption energy of Cu(acac), acac, and Cu species, suggesting that chemisorption is the dominant interaction.</p><p>In order to demonstrate the validity of our model calculations we have also performed vibrational frequency calculations and compared it with experimental findings. <ref type="bibr" target="#b65">68</ref> The perpendicular adsorption geometries of Cu(acac) and acac have been confirmed   <ref type="table" target="#tab_2">3</ref>, the key vibrational frequencies of adsorbed Cu(acac) and acac match well with that of gaseous Cu(acac) 2 , indicating that the surface acac-ligand maintains the same geometric configuration as the gaseous Cu(acac) 2 . <ref type="bibr" target="#b65">68,</ref><ref type="bibr" target="#b66">69</ref> In contrast, frequency of the CO stretch of adsorbed Cu(acac) 2 is shifted from 1556 cm À1 to 1507 cm À1 relative to gaseous Cu(acac) 2 . This is consistent with a parallel adsorption geometry causing a distorted molecular structure on the surface. Table <ref type="table" target="#tab_1">2</ref> also shows the comparison of adsorption energies and bond lengths between ReaxFF and as obtained from DFT. Since no benchmark data are currently available for the Cu(acac) 2 /Cu(110) system, we thus use the vdW-DF results as a reference to evaluate the accuracy of ReaxFF. Recent DFT calculations for a Cu(dmap) 2 /Cu(111) (dmap = dimethylamino-2-propoxide) system have found that the vdW interactions not only increase the adsorption energies but also change the nature of the adsorption fundamentally. <ref type="bibr" target="#b43">46</ref> It can be seen from Table <ref type="table" target="#tab_1">2</ref> that most of the ReaxFF results match well with the DFT results. The average energetic discrepancies with respect to the vdW-DF are AE0.22 eV (8.9%) and AE0.18 Å (6.9%), respectively. The only exception is that ReaxFF fails to predict the structure for Cu(acac) 2 adsorption on the hollow site. A large distance between Cu and O atoms (2.88 Å) is associated with the dissociative adsorption of Cu(acac) 2 on the surface.</p><p>After the preferred adsorption geometries for different species were determined, the minimum energy pathway for Cu(acac) 2 dissociation on the Cu surface was mapped out using the CI-NEB method, which is depicted in Fig. <ref type="figure" target="#fig_3">3</ref> and <ref type="figure" target="#fig_4">4</ref>. The clean Cu(110) surface with a gaseous precursor is selected as the reference state, while Cu with co-adsorbed acac-ligands on the surface is set as the final state. In general, the decomposition of Cu(acac) 2 on Cu(110) is an exothermic process. The calculated reaction energies for the whole process are À2.10 eV with PBE and À2.61 eV with vdW-DF, respectively. Cu(acac) 2 can easily diffuse from the top or bridge1 site to the nearby lowest energy hollow site, with no appreciable energy barrier (o0.1 eV). The dissociation of one acac-ligand from adsorbed Cu(acac) 2 requires to overcome   energy barriers of 0.59 eV for PBE and 0.48 eV for vdW-DF, respectively. At the transition state, the acac-ligand is located above a hollow site, with two oxygen atoms bound to the adjacent surface Cu atoms (Fig. <ref type="figure" target="#fig_4">4</ref>). Reaction barrier for the decomposition of Cu(acac) into Cu + acac is similar to that of Cu(acac) 2 , with 0.56 eV for PBE and 0.50 eV for vdW-DF, respectively. Again, the acac-ligand at the transition state is positioned above the hollow site. The population analysis shown in Fig. <ref type="figure" target="#fig_4">4</ref> suggests that adsorption of Cu(acac) 2 and its further dissociation into Cu(acac) and Cu would lead to sequential reduction of the Cu center (1.19e -0.86e -0.69e -0.44e -0.08e). A zero-valence metallic Cu atom is formed finally. On the other hand, the acac-ligand of Cu(acac) 2 is firstly reduced upon adsorption (À0.60e -À0.83e) and is then oxidized upon dissociation (À0.83e -À0.66e). Charge of the acac-ligand in the final state (À0.66e) is similar to that in the reference state (À0.60e), suggesting that the metallic substrate is responsible for the reduction of the Cu center of Cu(acac) 2 . In short, our DFT calculations reveal a sequential dissociation and reduction [Cu(acac) 2 -Cu(acac) -Cu] of the Cu precursor on the Cu(110) surface, which is in accordance with previous XPS investigations. <ref type="bibr" target="#b26">29</ref> In principle, the ligands are used to volatilize the metal atoms. Thus the ligands are expected to remain intact upon adsorption and will be removed by the co-reactant (e.g. hydrogen or oxygen) during the subsequent ALD half cycle. <ref type="bibr" target="#b25">28</ref> Table <ref type="table" target="#tab_3">4</ref> lists the DFT-PBE calculated reaction energies for the further decomposition of the acac-ligand. The large positive energies reveal that the further decomposition of the acac-ligand on a Cu(110) surface is unfavorable. Thus, the stable acac-ligand may block surface sites and prevents the adsorption of further Cu precursor molecules, and therefore the deposition is self-limited.</p><p>The RMD simulation snapshots of the Cu(acac) 2 decomposition on the Cu(110) surface at 600 K are shown in Fig. <ref type="figure">5</ref>. In general, the reaction pathways observed in RMD simulations are consistent with those from the DFT calculations. The reaction starts by breaking of the Cu-O bond and the tilt of the acacligand (7.3 ps). Next, the acac-ligand dissociates completely from the Cu(acac) 2 molecule, forming acac and Cu(acac) species on the surface (10.8 ps). Finally, Cu(acac) dissociates into Cu and acac species on the surface after 18.5 ps. Experimentally, the complete decomposition of Cu(acac) 2 to metallic Cu on the surface is reported to occur at around 300 K. <ref type="bibr" target="#b26">29</ref> Such a low reaction temperature suggests a high reactivity of the Cu surface towards Cu(acac) 2 , which is consistent with the small activation energy calculated by DFT. In addition, a facile reaction process is also compatible with the time scale of the RMD simulations. Fig. <ref type="figure">6</ref> shows the comparison for Cu(acac) 2 dissociation into Cu(acac) and acac on Cu(110), Cu 2 O(111), and CuO(111) surfaces. Initially, 24 Cu(acac) 2 precursors were placed above the surface. The pathways of Cu(acac) 2 dissociation on various substrates are similar, and are thus not shown here. As illustrated in Fig. <ref type="figure">6</ref>, the Cu(acac) 2 molecules are completely decomposed after B70 ps at 600 K. The reaction on copper-rich surfaces [Cu(110) and Cu 2 O(111)] is faster as compared with that on CuO(111), indicating that surface Cu atoms are the reactive species towards the acac-ligand.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Surface reaction between Cu(acac) 2 and different co-reactants</head><p>In order to complement the picture of the surface reactions of Cu(acac) 2 on various surfaces we analyze the role of different co-reactants which are typically used throughout ALD-processes. First, the reaction with molecular hydrogen is studied. Our RMD investigations reveal that molecular H 2 hardly reacts with Cu(acac) 2 on the surface at 600 K. Instead, the molecules are found to assemble around the precursor, having weak attractive but nonbonded interactions with the structure. Therefore, we do not consider H 2 molecules in our further studies. Indeed, molecular H 2 is rarely employed as a co-reactant for Cu b-diketonates. <ref type="bibr" target="#b18">21</ref> Alternatively, a plasma-enhanced ALD process <ref type="bibr" target="#b17">20,</ref><ref type="bibr" target="#b18">21</ref> or a strong reducing agent <ref type="bibr" target="#b5">8,</ref><ref type="bibr" target="#b20">23</ref> is required to deposit the Cu thin films directly.  Fig. 6 Comparison of the dissociation of Cu(acac) 2 into Cu(acac) and acac on Cu(110), Cu 2 O(111), and CuO(111) surfaces at 600 K.</p><p>We now discuss the surface reaction between Cu(acac) 2 and atomic H on Cu(110), as a model system for plasma enhanced Cu ALD. The corresponding typical RMD snapshots are shown in Fig. <ref type="figure" target="#fig_6">7</ref>. The influence of other plasma-generated components (e.g., charged particles, electric fields, and heat) <ref type="bibr" target="#b19">22</ref> is not considered in our simulation. In contrast to the molecular species, atomic hydrogen is found to be very reactive towards the Cu precursor. Cu(acac) 2 breaks the Cu-O bonds upon hydrogen impact, and a H 2 (acac) molecule is formed and released to the gas-phase (14.6 ps). Next, an oxygen atom in H 2 (acac) is abstracted by the hydrogen and a water molecule is released (15.2 ps). The remaining fragment is dissociated further into ethane and acetone (20.3 ps). Finally, a methane molecule is produced (22.4 ps). The time evolution of the species in the gasphase during the RMD simulations is shown in Fig. <ref type="figure" target="#fig_7">8a</ref>. The formation of H x O species starts slightly earlier (B10 ps) than that of C x H y species, indicating that the atomic hydrogen reacts first with the oxygen of the Cu precursor. The system achieves the equilibrium after about 150 ps, in which the atomic hydrogen is consumed completely by the formation of H 2 , C x H y and H x O species. Due to the re-adsorption of H x O species the amounts of surface H and O are slightly increased after B80 ps. The H x O species exist mainly as H 2 O on the surface since the observed H/O ratio is equal to B2 (Fig. <ref type="figure" target="#fig_7">8b</ref>). In contrast to the H and O containing species most of the C atoms are released to the gas-phase.</p><p>In the next part of this section we analyze the surface reactions between Cu(acac) 2 and H 2 O, as shown in Fig. <ref type="figure" target="#fig_8">9</ref>. We use Cu 2 O(111) as the substrate since Cu b-diketonates with H 2 O primarily deposit cuprous oxide films at low temperatures. <ref type="bibr" target="#b6">9,</ref><ref type="bibr" target="#b67">70,</ref><ref type="bibr" target="#b68">71</ref> Previous reports <ref type="bibr" target="#b69">72,</ref><ref type="bibr" target="#b70">73</ref> have shown that water facilitates the deposition of Cu 2 O through the following ligand-exchange reaction Cu(acac) + H 2 O -CuOH + H(acac) Our RMD simulations predict the following reaction scheme which is consistent with previous findings. Firstly, Cu(acac) 2 dissociates into Cu(acac) and acac on the surface after B25 ps of simulation. Secondly, a proton is transferred from water to the adsorbed Cu(acac), forming Cu[H(acac)] and OH species on the surface (56.8 ps). Finally, the Cu-O bond of the Cu[H(acac)] intermediate is then broken after 118.6 ps, which leads to the desorption of acetylacetone from the surface to the gas-phase. A similar ligand-exchange mechanism has been widely observed in water-based metal oxide ALD, for example, in the TMA-H 2 O (TMA = trimethylaluminum) or Hf(NMe 2 ) 4 -H 2 O (Me = CH 3 ) process. <ref type="bibr" target="#b2">5,</ref><ref type="bibr" target="#b42">45</ref> During the water pulse, the adsorbed Me-or NMe 2ligands are replaced by -OH groups, followed by the elimination of gaseous CH 4 or HNMe 2 . <ref type="bibr" target="#b2">5,</ref><ref type="bibr" target="#b42">45</ref> It is noticed that cleavage of the Cu-O bond of Cu(acac) 2 in the presence of atomic H is promoted upon H impact, whereas with water the proton transition takes place after Cu(acac) 2 is completely dissociated on the surface. These observations suggest that water is much less reactive compared to the atomic H. As shown in Fig. <ref type="figure" target="#fig_7">8c</ref>, it can be found that H(acac) is the main gaseous product during this reaction, while the amounts of acac and H 2 (acac) are minor. The surface reaction between H 2 O and the acac-ligand reaches stationary equilibrium after about 400 ps, in which about 35-40% of the acac-ligands are released to the gas-phase.</p><p>Typical RMD snapshots for the surface reactions between Cu(acac) 2 and O 3 are shown in Fig. <ref type="figure" target="#fig_9">10</ref> and <ref type="figure" target="#fig_1">11</ref>. The CuO(111) surface is used in these simulations, which is in line with the experimental observation that CuO is deposited by a Cu(acac) 2 -O 3 ALD process. <ref type="bibr" target="#b8">11</ref> As depicted in Fig. <ref type="figure" target="#fig_9">10</ref>, the ozone molecule is found to bind readily with the methyl group through a hydrogen bond, forming an O-H bond with a length of B1.9 Å (Fig. <ref type="figure" target="#fig_9">10a</ref>). One H atom of the acac-ligand is then abstracted by the ozone, as a result of the OH and O 2 formation (16.8 ps). The released OH radical either re-adsorbs on the surface or reacts with methyl hydrogen to produce H 2 O (99.4 ps). Moreover, we observed that the O atom can insert into the C-H bond of the -CH 3 group, which involves the formation of O 2 and -CH 2 OH species (94.3 ps). A similar insertion step has been reported to occur in the TMA-O 3 ALD process, proven by infrared spectroscopy and DFT calculations. <ref type="bibr" target="#b44">47,</ref><ref type="bibr" target="#b71">74,</ref><ref type="bibr" target="#b72">75</ref> In comparison to the hydrogen abstraction, the C-C cleavage usually takes place later. As shown in Fig. <ref type="figure" target="#fig_1">11a-c</ref>, an oxygen atom firstly adsorbs above the bridging C-C site to form an epoxide (92.2 ps). The C-C bond is then cleaved by the O atom through an epoxy-ether transformation (93.2 ps). At the same time, the acac-ligand breaks the bond with the surface Cu and is thus released to the gas-phase. Subsequently, the formed complex dissociates into the gaseous methylglyoxal, ethenone, and an adsorbed hydroxyl group (93.8 ps). At last, the methylglyoxal and ethenone species are further oxidized into CO, CO 2 and OH after about 80 ps of simulation (not shown here). Fig. 11d-h illustrate the alternative reaction pathways for C-C cleavage. Upon continuous adsorption of two O atoms, the acac-ligand dissociates into gaseous methylglyoxal and adsorbed acetate. The formed acetate is readily desorbed from the surface   and dissociates into CO 2 and CH 3 . From the time evolution of species shown in Fig. <ref type="figure" target="#fig_7">8e</ref>, it is found that most of the O 3 is converted into O 2 after B180 ps upon either a surface reaction or self-dissociation in the gas-phase. The H x O y and CO x species are found to be the main by-products, suggesting a combustion-like reaction mechanism. This observation is consistent with previous in situ mass spectroscopy studies for a Ir(acac) 3 -O 3 ALD process. <ref type="bibr" target="#b34">37</ref> We have found that the evolution of H x O y is about B10 ps earlier than that of CO x species, revealing that ozone reacts first with the hydrogen of the Cu precursor. Concentrations of the H species in the gas-phase increase firstly and decrease after 80 ps. At the equilibrium state, about 70% of the surface C impurities are released to the gas-phase, whereas the amount of surface O increases significantly after the O 3 pulse (Fig. <ref type="figure" target="#fig_7">8f</ref>). Most of the gaseous H x O y are re-adsorbed on the surface, thus protons are available for the ligand-exchange reaction during the Cu(acac) 2 pulse, as in the case of the Cu(acac) 2 -H 2 O process.</p><p>By comparison with the reaction rate and the carbon removal ratio under different conditions, it can be concluded that the reactivity of the co-reactants towards Cu(acac) 2 follows the order H 4 O 3 4 H 2 O. In experiment, it is well known that reactivity of the co-reactant has a large effect on an ALD temperature window. The lower bound of the ALD window is mainly determined by the thermal activation of a surface reaction as well as by the volatility of the precursor. <ref type="bibr" target="#b2">5</ref> Therefore, the ALD window could be used as an indicator to evaluate the reactivity between Cu(acac) 2 and different co-reactants. A lower ALD window is associated with the higher reactivity of the co-reactant. As reported in the literature, when the H plasma is used for Cu(acac) 2 , the ALD window is as low as 85-135 1C. <ref type="bibr" target="#b18">21</ref> However, much higher temperatures are required when ozone (150-230 1C) <ref type="bibr" target="#b8">11</ref> or water (210-300 1C) <ref type="bibr" target="#b73">76</ref> is used as the co-reactant. These results may suggest that the plasma H is more reactive towards Cu(acac) 2 as compared to ozone and water, which is consistent with our conclusion.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions</head><p>In conclusion, the initial surface reactions of the Cu(acac) 2 precursor during ALD were studied through DFT calculations and RMD simulations. The Cu(acac) 2 , Cu(acac) and Cu species prefer to adsorb on a hollow site, whereas the acac-ligand favors adsorption on the top site of the Cu(110) surface. The adsorption energies calculated by ReaxFF agree well with those calculated by vdW-DF. Cu(acac) 2 is easily decomposed into a Cu atom and acac-ligands on the Cu(110) surface. The largest reaction barriers calculated using PBE and vdW-DF functionals are 0.59 eV and 0.55 eV, respectively. Mulliken analysis reveals a sequential reduction of the Cu atom during the dissociation of Cu(acac) 2 on Cu(110). The dissociated acac-ligands may act as site blockers for additional adsorption of the precursors, since they are thermodynamically stable on the surface. The RMD simulations imply that the decomposition pathways of Cu(acac) 2 on various substrates are similar, but the copper-rich surfaces [Cu(110) and Cu 2 O(111)] are more reactive as compared with the CuO(111) surface. Mechanisms for the surface reaction between Cu(acac) 2 and different co-reactants are also examined. The molecular hydrogen is found to be nonreactive towards the Cu precursor; whereas atomic H or water can remove the surface acacligands efficiently. The H atoms continuously impact with the Cu precursor, which lead to the breaking of Cu-O, C-O, and C-C bonds sequentially. On the other hand, water reacts with the Cu(acac) 2 on Cu 2 O(111) through a ligand-exchange reaction, producing the gaseous H(acac) and surface OH species. A combustion reaction with CO 2 and H 2 O as the main byproducts is observed when adsorbed Cu(acac) 2 reacts with ozone. Once equilibrium is reached, most of the gaseous H x O y are re-adsorbed on the surface. Thus protons are available for the next ALD half cycle.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><figDesc>16 Å) and Cu-O-C1 angle (4.81) values. A more systematic comparison of the results from DFT and ReaxFF is shown in the next section. In DFT calculations, the Cu(110) surface was modeled using a p(4 Â 4) supercell with periodic four-layer slab models. In the case of RMD simulations, larger surface models consisting of a four-layer slab for p(22 Â 30)-Cu(110) (79.52 Â 76.68 Å 2 ), and a nine-layer slab for p(12 Â 16)-Cu 2 O(111) (72.46 Â 83.67 Å 2 ) and for p(14 Â 12)-CuO(111) (80.76 Â 73.70 Å 2 ) were employed, respectively. To simplify our models, only stoichiometric surfaces were considered for Cu 2 O(111) and CuO(111). During the simulations, the bottom two layers of Cu(110), and four layers of Cu 2 O(111) and CuO(111) were fixed, respectively. To investigate the surface reaction between Cu(acac) 2 and different co-reactants, 24 Cu(acac) 2 precursors were initially placed on</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Structure of the Cu(acac) 2 precursor.</figDesc><graphic coords="3,352.86,453.09,150.46,109.59" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2</head><label>2</label><figDesc>Fig.2Adsorption sites (a) and optimized geometries of different adsorbed species (b-g) on the Cu(110) surface calculated using the DFT-PBE functional. The adsorption geometries calculated using vdW-DF and ReaxFF are similar to that calculated using DFT-PBE and are thus not shown here.</figDesc><graphic coords="4,129.32,551.28,336.68,141.05" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3</head><label>3</label><figDesc>Fig. 3 Energy profile of the dissociation processes of Cu(acac) 2 on the Cu(110) surface.</figDesc><graphic coords="5,49.83,368.11,234.91,120.98" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Geometric structures and Mulliken charge for the dissociation of Cu(acac) 2 on the Cu(110) surface calculated using the DFT-PBE functional. Values shown in blue and black colors represent the charge of the Cu atom and the acac-ligand of the Cu precursor, respectively.</figDesc><graphic coords="5,129.32,536.54,336.68,155.85" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5 Fig. 6</head><label>56</label><figDesc>Fig. 5 RMD snapshots for the dissociation of Cu(acac) 2 on the Cu(110) surface.</figDesc><graphic coords="6,344.30,49.83,167.50,134.82" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 7</head><label>7</label><figDesc>Fig. 7 RMD snapshots for the reaction between Cu(acac) 2 and H atoms on the Cu(110) surface.</figDesc><graphic coords="7,143.26,49.83,308.84,151.31" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 8</head><label>8</label><figDesc>Fig. 8 Product evolution for the surface reactions between Cu(acac) 2 and atomic H (a and b), water (c and d), and ozone (e and f), respectively.</figDesc><graphic coords="8,141.56,49.83,312.17,363.18" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 9</head><label>9</label><figDesc>Fig. 9 RMD snapshots for the reaction between Cu(acac) 2 and H 2 O on the Cu 2 O(111) surface.</figDesc><graphic coords="8,70.47,453.09,193.65,170.53" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig. 10</head><label>10</label><figDesc>Fig. 10 RMD snapshots for H abstraction (a and b), O insertion (c and d), water formation (e and f) observed during the reaction between Cu(acac) 2 and ozone on the CuO(111) surface.</figDesc><graphic coords="8,310.22,453.09,235.65,168.09" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Comparison between the experimental (from ref. 67) and calculated bond lengths (Å) and angles (1) of the Cu(acac) 2 molecule</figDesc><table><row><cell></cell><cell>Exp. (ref. 67)</cell><cell>DFT</cell><cell>ReaxFF</cell></row><row><cell>Cu-O</cell><cell>1.91</cell><cell>1.95</cell><cell>1.98</cell></row><row><cell>C1-O</cell><cell>1.27</cell><cell>1.28</cell><cell>1.43</cell></row><row><cell>C1-C2</cell><cell>1.39</cell><cell>1.40</cell><cell>1.40</cell></row><row><cell>C1-C3</cell><cell>1.48</cell><cell>1.51</cell><cell>1.52</cell></row><row><cell>+Cu-O-C1</cell><cell>125.9</cell><cell>126.0</cell><cell>127.9</cell></row><row><cell>+O-C1-C3</cell><cell>114.4</cell><cell>115.3</cell><cell>119.2</cell></row><row><cell>+O-C1-C2</cell><cell>124.4</cell><cell>125.4</cell><cell>126.8</cell></row><row><cell>+O-Cu-O</cell><cell>93.2</cell><cell>92.5</cell><cell>89.7</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>Adsorption properties for different species on the Cu(110) surface a</figDesc><table><row><cell></cell><cell></cell><cell>Cu(acac) 2</cell><cell></cell><cell cols="3">Cu(acac) acac Cu</cell></row><row><cell></cell><cell>Adsorption</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell>site</cell><cell cols="5">Top Bridge1 Hollow Hollow Top Hollow</cell></row><row><cell cols="2">E ads (eV) PBE</cell><cell cols="3">À0.48 À0.33 À1.51 À2.16</cell><cell cols="2">À2.68 À3.08</cell></row><row><cell></cell><cell>vdW-DF</cell><cell cols="3">À1.42 À1.34 À2.16 À2.08</cell><cell cols="2">À2.89 À2.81</cell></row><row><cell></cell><cell>ReaxFF</cell><cell cols="3">À1.24 À1.33 À2.11 À2.11</cell><cell cols="2">À2.44 À3.33</cell></row><row><cell>d(Cu p -</cell><cell>PBE</cell><cell>2.65 2.76</cell><cell>2.63</cell><cell>2.62</cell><cell>-</cell><cell>2.53</cell></row><row><cell>Cu s ) (Å)</cell><cell>vdW-DF</cell><cell>2.70 2.90</cell><cell>2.68</cell><cell>2.63</cell><cell>-</cell><cell>2.59</cell></row><row><cell></cell><cell>ReaxFF</cell><cell>2.47 2.62</cell><cell>2.63</cell><cell>2.61</cell><cell>-</cell><cell>2.61</cell></row><row><cell>d(Cu p -O)</cell><cell>PBE</cell><cell>2.04 2.02</cell><cell>2.21</cell><cell>2.00</cell><cell>-</cell><cell>-</cell></row><row><cell>(Å)</cell><cell>vdW-DF</cell><cell>2.07 2.04</cell><cell>2.24</cell><cell>2.03</cell><cell>-</cell><cell>-</cell></row><row><cell></cell><cell>ReaxFF</cell><cell>2.01 2.02</cell><cell>2.88</cell><cell>1.97</cell><cell>-</cell><cell>-</cell></row><row><cell>d(Cu s -O)</cell><cell>PBE</cell><cell>3.45 2.99</cell><cell>2.07</cell><cell>3.28</cell><cell cols="2">2.01 -</cell></row><row><cell>(Å)</cell><cell>vdW-DF</cell><cell>3.52 3.13</cell><cell>2.14</cell><cell>3.33</cell><cell cols="2">2.08 -</cell></row><row><cell></cell><cell>ReaxFF</cell><cell>3.16 2.72</cell><cell>1.95</cell><cell>3.22</cell><cell cols="2">1.99 -</cell></row></table><note><p>by vibrational spectroscopy studies. As shown in Table</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3</head><label>3</label><figDesc>The calculated and measured (from ref.68 and 69) vibrational frequencies (cm À1 ) of different species adsorption on the Cu surface Only the key vibrational frequencies are shown. The frequencies of acac/Cu(001) are very similar to that of acac/Cu(110), indicating that the orientation of the Cu surface has a minor effect on the normal modes of the acac-ligand.</figDesc><table><row><cell>Cu(acac) 2 /Cu(110)</cell><cell>Cu(acac)/Cu(110)</cell><cell>acac/Cu(110)</cell><cell>Cu(acac) 2</cell><cell>acac/Cu(001)</cell><cell>Cu(acac) 2</cell><cell></cell></row><row><cell>This work</cell><cell></cell><cell></cell><cell></cell><cell>Ref. 68</cell><cell>Ref. 69</cell><cell>Assignments</cell></row><row><cell>3060</cell><cell>3059</cell><cell>3077</cell><cell>3090</cell><cell>3092</cell><cell>3077</cell><cell>Methyne CH stretch</cell></row><row><cell>1507</cell><cell>1556</cell><cell>1543</cell><cell>1556</cell><cell>1563</cell><cell>1554</cell><cell>CO stretch</cell></row><row><cell>1442</cell><cell>1450</cell><cell>1439</cell><cell>1434</cell><cell>1430</cell><cell>1415</cell><cell>CH 3 deg. def.</cell></row><row><cell>1367</cell><cell>1378</cell><cell>1374</cell><cell>1355</cell><cell></cell><cell>1356</cell><cell>CH 3 sym. def.</cell></row><row><cell>1238</cell><cell>1238</cell><cell>1247</cell><cell>1249</cell><cell></cell><cell>1274</cell><cell>CC + CCH 3 stretch</cell></row><row><cell>1160</cell><cell>1199</cell><cell>1201</cell><cell>1172</cell><cell></cell><cell>1190</cell><cell>CH bending</cell></row><row><cell>1043</cell><cell>1035</cell><cell>1046</cell><cell>1023</cell><cell>1024</cell><cell>1020</cell><cell>CH 3 rock</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4</head><label>4</label><figDesc>DFT-PBE calculated reaction energies for the dissociation of the acac-ligand (CH 3 COCHCOCH 3 ) on the Cu(110) surface</figDesc><table><row><cell>Reaction</cell><cell>Energy (eV)</cell></row><row><cell>acac* -CH 3 CO* + CH 3 COCH* acac* -CH 3 * + CH 3 COCHCO* acac* -2CH 3 CO* + CH* acac* -CH 3 * + CO* + CH 3 COCH* acac* -2CH 3 * + 2CO* + CH*</cell><cell>1.69 2.14 3.03 2.01 3.66</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>This journal is © the Owner Societies 2015</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>a E ads denotes the adsorption energy. d(Cu p -Cu s ) is the distance between the Cu atom of the precursor and nearest surface Cu atom. d(Cu p -O) stands for the distance between the Cu and O atoms of the precursor. d(Cu s -O) represents the distance between the O atom of the precursor or the acac-ligand and the nearest surface Cu atom. Only the most stable adsorption structures for the Cu(acac), acac, and Cu species are presented.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>Phys. Chem. Chem. Phys., 2015, 17, 26892--26902 | 26897</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p>Phys. Chem. Chem. Phys., 2015, 17, 26892--26902 | 26899</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_4"><p>R. Rosenberg, D. C. Edelstein, C.-K. Hu and K. P. Rodbell, Annu. Rev. Mater. Sci.,</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_5"><p>2000, 30, 229-262. 2 R. Solanki and B. Pathangey, Electrochem. Solid-State Lett., 2000, 3, 479-480.Fig. 11 RMD snapshots for C-C breaking observed during the reaction between Cu(acac) 2 and ozone on the CuO(111) surface.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_6"><p>Phys. Chem. Chem. Phys., 2015, 17, 26892--26902 | 26901</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>This work was supported by the <rs type="funder">German Research Foundation (DFG)</rs> in the International Research Training Group (IRTG), Project <rs type="projectName">GRK-1215</rs> ''<rs type="projectName">Materials and Concepts for Advanced Interconnects</rs>''.</p></div>
+<div><head>References</head></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_7DZec7b">
+					<orgName type="project" subtype="full">GRK-1215</orgName>
+				</org>
+				<org type="funded-project" xml:id="_qV7jhhC">
+					<orgName type="project" subtype="full">Materials and Concepts for Advanced Interconnects</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sakamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hamaguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Numata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kodaira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Toyoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Suu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page" from="50" to="55E" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="111" to="131" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<date type="published" when="2005">2005, 97, 121301</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Knisley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Kalutarage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Winter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Coord. Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">257</biblScope>
+			<biblScope unit="page" from="3222" to="3231" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Marshall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<biblScope unit="page" from="9330" to="9331" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Nam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">U</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-M</forename><surname>Koo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Baunemann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Sung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="4536" to="4539" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Waechtler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Oswald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jako</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gessner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Moskvinova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Schulze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hietscholde</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">156</biblScope>
+			<biblScope unit="page" from="453" to="H459" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Waechtler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hofmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mothes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Oswald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Detavernier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">P</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gessner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron. Eng</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="684" to="689" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Alnes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Monakhov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fjellvag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Nilsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="173" to="178" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Mater</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="749" to="754" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="1728" to="1735" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Koo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem. Commun</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="463" to="466" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Coyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Monillas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P A</forename><surname>Yap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Barry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="683" to="689" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Willcocks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Roche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Kingsley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Lowe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Johnson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="246" to="257" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Coyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kurek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Pallister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Sirianni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P A</forename><surname>Yap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Barry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Commun</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="10440" to="10442" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Coyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zaera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="3630" to="3639" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Utriainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kro ¨ger-Laukkanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Johansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Niinisto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">¨</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page" from="151" to="158" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Niskanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arstila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">¨</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">152</biblScope>
+			<biblScope unit="page" from="25" to="G28" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Eisenbraun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="2581" to="2585" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Profijt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">50801</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Knisley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Ariyasena</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Saly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Winter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="4417" to="4419" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Adv</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="34448" to="34453" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">556</biblScope>
+			<biblScope unit="page" from="434" to="439" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dhakal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Waechtler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gessner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mothes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tuchscherer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">41505</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dhakal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Waechtler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Moeckel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gessner</surname></persName>
+		</author>
+		<title level="m">2nd International Conference on ALD Applications &amp; 3rd China ALD conference</title>
+		<meeting><address><addrLine>Shanghai</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zaera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1301" to="1309" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zaera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="01A" to="112" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<date type="published" when="2012">2012, 27, 074008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="8893" to="8901" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Teplyakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C F</forename><surname>Rodrigues-Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">21401</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gessner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron. Eng</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="23" to="31" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Machado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaczmarski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ordejo ´n</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="7608" to="7614" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Machado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaczmarski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Braida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ordejo ´n</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mol. Model</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="861" to="864" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="5914" to="5927" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Wrench</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Hagen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Keeney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dalton Trans</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="10188" to="10199" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Theor. Chem. Acc</title>
+		<imprint>
+			<biblScope unit="page">1416</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pirolli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Teplyakov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">600</biblScope>
+			<biblScope unit="page" from="3313" to="3320" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mårtensson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Larsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Carlsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page" from="137" to="146" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mårtensson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Larsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Carlsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">148</biblScope>
+			<biblScope unit="page" from="9" to="16" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mårtensson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Larsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Carlsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">157</biblScope>
+			<biblScope unit="page" from="92" to="100" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="23363" to="23373" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="26436" to="26448" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="878" to="889" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Maimaiti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="9375" to="9385" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scarel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wiemer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fanciulli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pavia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="3764" to="3773" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Derecskei-Kovacs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>O'neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Pearlstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="19454" to="19463" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Commun</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="1341" to="1344" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C T</forename><surname>Van Duin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dasgupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lorant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="9396" to="9409" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Knapas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="2766" to="2771" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bonini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Calandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Car</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cavazzoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ceresoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Chiarotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cococcioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Dabo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Corso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>De Gironcoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fabris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fratesi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gebauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Gerstmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gougoussis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kokalj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lazzeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Martin-Samos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marzari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mauri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mazzarello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Paolini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pasquarello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paulatto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sbraccia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Scandolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sclauzero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Seitsonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Smogunov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Umari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Wentzcovitch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">395502</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="3865" to="3868" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vanderbilt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="7892" to="7895" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Monkhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Pack</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Solid State</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">5188</biblScope>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rydberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schroder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Langreth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Lundqvist</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">246401</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>De Gironcoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Corso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev. Mod. Phys</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="515" to="562" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Uberuaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jonsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9901" to="9904" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jonsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9978" to="9985" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Segall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Pickard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Payne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="16317" to="16320" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Segall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J D</forename><surname>Lindan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Probert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Pickard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Hasnip</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Payne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2717" to="2744" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Plimpton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Phys</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="1" to="19" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Mortier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Ghosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shankar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="4315" to="4320" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C T</forename><surname>Van Duin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Bryantsev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Diallo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Rahaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Doren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raymand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hermansson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="9507" to="9514" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><surname>Rahaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C T</forename><surname>Van Duin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Doren</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="249" to="261" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C T</forename><surname>Van Duin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Bandosz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Gubbins</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="11327" to="11332" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lebrun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Lyon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Kuska</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Crystallogr. Spectrosc. Res</title>
+		<imprint>
+			<biblScope unit="page">889</biblScope>
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Girolami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Jeffries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Dubois</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="1015" to="1024" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nakamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Martell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="588" to="597" />
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid-State Lett</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="5" to="G7" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Vestal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Devore</surname></persName>
+		</author>
+		<title level="m">Proceedings of the Conference on High Temperature Corrosion and Materials Chemistry</title>
+		<meeting>the Conference on High Temperature Corrosion and Materials Chemistry<address><addrLine>Washington DC</addrLine></address></meeting>
+		<imprint>
+			<publisher>Electrochemical Society</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pinkas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Baxter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Chisholm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">G</forename><surname>Caulton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1589" to="1596" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Solanki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcandrew</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Res</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="2394" to="2398" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Halls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="3248" to="3250" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="19530" to="19539" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>To ¨rndahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ottosson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Carlsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="page" from="153" to="C146" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

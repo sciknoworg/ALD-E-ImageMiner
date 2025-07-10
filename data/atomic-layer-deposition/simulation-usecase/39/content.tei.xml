@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">First principles study of the atomic layer deposition of alumina by TMA-H 2 O-process</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2015-06-08">08 June 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Timo</forename><surname>Weckman</surname></persName>
+							<email>timo.weckman@aalto.fi</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Aalto University</orgName>
+								<address>
+									<addrLine>Kemistintie 1</addrLine>
+									<settlement>Espoo</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kari</forename><surname>Laasonen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Aalto University</orgName>
+								<address>
+									<addrLine>Kemistintie 1</addrLine>
+									<settlement>Espoo</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Al</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Aalto University</orgName>
+								<address>
+									<addrLine>Kemistintie 1</addrLine>
+									<settlement>Espoo</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">First principles study of the atomic layer deposition of alumina by TMA-H 2 O-process</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-06-08">08 June 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F079F580EBE6459F844CBA52EBB435EF</idno>
+					<idno type="DOI">10.1039/c5cp01912e</idno>
+					<note type="submission">Received 1st April 2015, Accepted 2nd June 2015</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Atomic layer deposition (ALD) is a coating technology used to produce highly uniform thin films.</p><p>Aluminiumoxide, Al 2 O 3 , is mainly deposited using trimethylaluminium (TMA) and water as precursors and is the most studied ALD-process to date. However, only few theoretical studies have been reported in the literature. The surface reaction mechanisms and energetics previously reported focus on a gibbsitelike surface model but a more realistic description of the surface can be achieved when the hydroxylation of the surface is taken into account using dissociatively adsorbed water molecules. The adsorbed water changes the structure of the surface and reaction energetics change considerably when compared to previously studied surface model. Here we have studied the TMA-H 2 O process using density functional theory on a hydroxylated alumina surface and reproduced the previous results for comparison. Mechanisms and energetics during both the TMA and the subsequent water pulse are presented. TMA is found to adsorb exothermically onto the surface. The reaction barriers for the ligandexchange reactions between the TMA and the surface hydroxyl groups were found to be much lower compared to previously presented results. TMA dissociation on the surface is predicted to saturate at monomethylaluminium. Barriers for proton diffusion between surface sites are observed to be low. TMA adsorption was also found to be cooperative with the formation of methyl bridges between the adsorbants.</p><p>The water pulse was studied using single water molecules reacting with the DMA and MMA surface species.</p><p>Barriers for these reactions were found to reasonable in the process conditions. However, stabilizing interactions amongst water molecules were found to lower the reaction barriers and the dynamical nature of water is predicted to be of importance. It is expected that these calculations can only set an upper limit for the barriers during the water pulse.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Atomic layer deposition is a coating technology used for the construction of various thin films. ALD is based on sequential, self-terminating gas-solid reactions. A prototype process is based on two precursors that react rapidly and violently with each other. The reaction between the precursors is forced onto the surface by alternating gas pulses while the gas-phase reactions are avoided by purging the reactor with inert gas between the pulses. Ideally each precursor pulse forms a new monolayer onto the surface. A vast majority of the ALD-processes are run at temperatures higher than 400 K. The choice for the precursors is therefore crucial for the process as there should be no reactions amongst the precursors themselves in order for the adsorption process to be self-terminating. The self-limiting nature of the adsorption in ALD enables a highly uniform and conformal deposition of a material with thickness control at the atomic level. <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> The trimethylaluminium-water-process is perhaps the most studied ALD-process. Because of the ideally self-terminating nature of the adsorption process and inertness of the reaction by-product methane, the TMA-H 2 O-system is considered as a model process for ALD <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4</ref> and is worth a careful study. However, only few theoretical studies have been published hitherto and most of the research concerning the process has been experimental work. Here we try to bridge this gap by revisiting some of the results previously published in the literature and also present reaction pathways for the initial reactions in the process.</p><p>The produced thin film, aluminum oxide (Al 2 O 3 ), is an important dielectric material with a large band gap of 9 eV and moderate permittivity. Its various commercial applications include flat-screen electroluminescent displays, protective coating, read/write heads, DRAM and it has been considered as a gate dielectric in complementary metal-oxide-semiconductors, CMOS. <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref> The total reaction of the process is This overall reaction is often divided into two parts, one ''half-reaction'' for the TMA-pulse and another one for the water-pulse (surface is described here with a J) <ref type="bibr" target="#b3">4</ref> J-OH + Al(CH 3 ) 3 -J-O-Al(CH 3 ) 2 + CH 4  (R1)</p><p>J-O-Al(CH 3 ) 2 + H 2 O -J-O-Al(CH 3 )OH + CH 4 (R2)</p><p>In addition to the straight-forward ligand-exchange reaction in eqn (R1), a reaction simultaneously with two hydroxyl groups has also been proposed <ref type="bibr" target="#b8">9</ref> 2 J-OH + Al(CH 3 ) 3 -J(-O) 2 -Al(CH 3 ) + 2CH 4 (R3) TMA has also been observed to adsorb dissociatively onto the oxygen bridges on the surface. <ref type="bibr" target="#b3">4</ref> Previously only few computational studies considering the TMA-H 2 O-system has been presented, focusing mainly on mechanisms (R1) and (R2). The first publications on the growth of Al 2 O 3 thin films was done using cluster models <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> consisting of only about a dozen atoms. Few papers <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> using the periodic slab model with gibbsite-like Al(OH) 3 -surface describing the hydroxylated alumina have been published.</p><p>As alumina is almost always covered with either dissociated or molecularly adsorbed water, hydroxylation is of great importance for alumina's surface chemistry. For example the growthper-cycle (GPC) of the TMA-H 2 O-process has been observed to be linearly dependent on the hydroxylation of the surface. <ref type="bibr" target="#b3">4</ref> This hydroxylation of the alumina surface has been taken into account in the computational studies using a gibbsite-like Al(OH) 3 surface structure. However, this proposed model by Elliott et al. <ref type="bibr" target="#b14">15</ref> neglects the finite temperature effects of the hydroxylation. A more comprehensive study of the surface composition by Lodziana et al. <ref type="bibr" target="#b15">16</ref> shows that the gibbsite-like surface exists only under large water partial pressures and low temperatures (o400 K) and is not thermodynamically stable in the process conditions (typical pulse conditions: P = 2 Pa, T = 450 K). In low pressures the surface structure is not planar as is the case with gibbsite-like surface, but dissociated water introduces two kinds of hydroxyl groups, one being higher than the other. This has large effects on the previously reported reaction mechanisms and energetics. The surface structure presented by Lodziana et al. is from here on called the hydroxylated surface model in contrast to the previously used gibbsite surface model.</p><p>Here we present detailed energetics of the initial reaction pathways on the hydroxylated surface during the TMA pulse and compare the results to the previously used gibbsite-like surface model. The dimethylaluminium and monomethylaluminium end-products from the TMA molecule calculations are used to approximate surface sites at the end of the TMA pulse in order to study the energetics during the water pulse. From these results the energetics at a finite temperature and pressure are constructed and kinetic parameters for the reactions are computed, allowing the course of the surface process to be extrapolated.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Computational methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Technical details</head><p>The reaction pathways were studied using self-consistent density functional theory as implemented in GPAW. <ref type="bibr" target="#b16">17</ref> The exchange and correlation part of the total energy was treated with gradient corrected Perdew-Burke-Ernzerhof functional <ref type="bibr" target="#b17">18</ref> using grid spacing of 0.2 Å. The TS09 van der Waals correction on top of the PBE functional was used as proposed by Tkatchenko and Scheffler. <ref type="bibr" target="#b18">19</ref> The k-points sampling of the reciprocal space was done using 2 Â 2 Â 2 Monkhorst-Pack grid for bulk calculations and 2 Â 2 Â 1 for the surface calculations. All geometry optimizations were carried out to gradients smaller than 0.05 eV Å À1 . Partial charge analysis was conducted from the electron density with a Bader analysis. <ref type="bibr" target="#b19">20</ref> Free energies of the reaction pathways were estimated in the ideal gas limit. The Gibbs free energy difference between two states was calculated as</p><formula xml:id="formula_0">DG = D(E elec + E ZPE ) À TDS (1)</formula><p>where the E elec is the electronic and E ZPE the zero-point energy of a state. DS is the change in entropy between two states. Rotational and translational energy contributions were also included for the gaseous molecules.</p><p>The translational entropy of the gaseous molecules was estimated using the Sackur-Tetrode equation</p><formula xml:id="formula_1">S trans ¼ R ln 2pMk B T h 2 3=2 k B T P " # þ 5 2 " #<label>(2)</label></formula><p>where P is the pressure of the gaseous component and M is the mass of the molecule. The rotational entropy was approximated with the rigid rotor-model</p><formula xml:id="formula_2">S rot ¼ R ln 8p 2 k B T h 2 3=2 ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ffi pI A I B I C p s " # þ 3 2 " #<label>(3)</label></formula><p>where s is the symmetry number corresponding to the molecule (6 for TMA, 12 for CH 4 and 2 for H 2 O) and I A , I B and I C are the principal moments of inertia. Bond vibrations were treated as harmonic oscillations: 21</p><formula xml:id="formula_3">S vib ¼ R X i ho i k B T e ho i =k B T À 1 ð Þ À ln 1 À e Àho i =k B T<label>(4)</label></formula><p>To reduce the computational burden associated with vibrational calculations on the solid surface the vibrations on the surface were restricted only to the top layer and bulk modes were assumed to remain unchanged. To avoid erroneous contributions from low frequency modes, modes corresponding to wavenumber less than 209 cm À1 (equal to 300 K) were omitted from the partition function.</p><p>In order to study the surface reactions, the kinetic rates were quantified. Reaction rate coefficients for the surface reactions were calculated using the Eyring equation <ref type="bibr" target="#b21">22</ref> in the harmonic approximation:</p><formula xml:id="formula_4">k i ¼ k B T h e À DG y i k B T<label>(5)</label></formula><p>where h is the Planck constant and DG y i is the Gibbs activation free energy for the reaction pathway i. For the adsorption process the rate was approximated using the particle flux from the kinetic gas theory: 22</p><formula xml:id="formula_5">k ads;i ¼ PsðT; yÞ ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ffi 2pmk B T p A i (6)</formula><p>where the P is the pressure of the adsorbant, m is mass of the precursor molecule and A i is the area of the adsorption site i.</p><p>In our calculations the area of adsorption site is taken as the reciprocal of the surface concentration. s(T,y) is the sticking probability of the adsorbant, which is unity at low surface coverage.</p><p>The minimum energy paths (MEP) for transition states were found using the nudged elastic band method <ref type="bibr" target="#b22">23</ref> where the potential energy surfaces first-order saddle point for transition from initial to final state is found by setting consecutive images of the system along the reaction path. These replicas are connected to each other by a harmonic force and relaxed along the MEP. The initial guess of the path was created by interpolating the configurations between the initial and final geometries. Transition state was found using the so-called climbing image method with alternating force constants.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Substrate models</head><p>During ALD growth amorphous alumina is deposited onto the substrate. However, amorphous structure is difficult to simulate ab initio, so a a-Al 2 O 3 crystalline structure was chosen as in previous studies. <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b23">24</ref> The a-Al 2 O 3 (0001) surface has been studied both experimentally and theoretically <ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref> and the Al-terminated surface has been shown to be the most stable surface of a-Al 2 O 3 .</p><p>The surface was modelled using the slab model with periodic boundary conditions imposed. Thickness of the slab was six Al 2 O 3 -layers as in previous calculations. <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b15">16</ref> The convergence of the surface relaxation energy with different slab thicknesses was tested and was found to be in good agreement with those presented in the literature. <ref type="bibr" target="#b29">30</ref> The bottom layers of the slab were constrained for the calculations. The surface cells consisted of 2 Â 2 unit cells (in total 120 atoms) with surface area of 0.82 nm <ref type="bibr" target="#b1">2</ref> .</p><p>The surface hydroxylation was taken into account using dissociatively adsorbed water surface presented by Lodziana et al. <ref type="bibr" target="#b15">16</ref> The resulting hydroxylated surface has a hydroxyl group coverage of about 16 mmol m À2 that is very close to the experimental value of 15 mmol m À2 . <ref type="bibr" target="#b30">31</ref> The gibbsite-like surface is constructed by replacing the top-most aluminium atoms with three hydrogen atoms. Hydroxyl concentration on the gibbsitelike surface is about 25 mmol m À2 . The previous study by Elliott and Greer 12 using gibbsite-like surface was also repeated for comparison.</p><p>The adsorption energy for the dissociatively adsorbed water molecules was calculated as an average over all the adsorbed water molecules in the monolayer,</p><formula xml:id="formula_6">E ads ¼ E slab À E Al 2 O 3 À NE H 2 O N<label>(7)</label></formula><p>where E Al 2 O 3 is bare aluminium slab or the previously filled monolayer and E H 2 O is a single water molecule in a vacuum. <ref type="bibr" target="#b31">32</ref> 3 Results</p><p>Both the TMA and water pulses were studied. The TMA adsorption and subsequent ligand-exchange reactions were studied on the hydroxylated and on the gibbsite-like surface. The water pulse was studied with few water molecules using the DMA and MMA surface species as the initial configuration.</p><p>The main mechanisms studied can be summed up by the following reaction equations:</p><formula xml:id="formula_7">J-OH + Al(CH 3 ) 3 -J-O-Al(CH 3 ) 2 + CH 4 (1a) J-OH + J-O-Al(CH 3 ) 2 -(J-O) 2 -Al(CH 3 ) + CH 4 (1b) J-OH + (J-O) 2 -Al(CH 3 ) -(J-O) 3 -Al + CH 4 (1c) J-O-Al(CH 3 ) 2 + H 2 O -J-O-Al(CH 3 )OH + CH 4 (2a) J-O-Al(CH 3 )OH + H 2 O -J-O-Al(OH) 2 + CH 4 (2b) (J-O) 2 -Al(CH 3 ) + H 2 O -(J-O) 2 -Al(OH) + CH 4 (2c)</formula><p>Eqn (1a)-(1c) represent reactions during the TMA pulse and (2a)-(2c) reactions during the water pulse. Some additional calculations were also done, e.g. the effect of several adsorbants during the TMA pulse, and will be discussed in the text. The main reaction mechanisms were treated with a vibrational analysis and the free energies for these reactions were calculated.</p><p>In the reaction (1a) the TMA is decomposed into dimethylaluminium (DMA) surface species and in the second reaction reacts with the surface even further to produce a monomethylaluminium (MMA). These two products are taken as the starting points for the water pulse. Water pulse reactions were studied with only a single TMA molecule in a 2 Â 2 unit cell representing low TMA coverage.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Alumina -bulk and surface</head><p>The bulk oxide model was optimized using DFT by scanning the potential energy surface by changing the lattice vectors and keeping the lattice angles constant. The optimized cell parameters were found to be a = b = 4.762 Å and c/a = 2.760 in close agreement with both experiment <ref type="bibr" target="#b32">33</ref> and other theoretical studies. <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b15">16</ref> In the original paper by Lodziana et al. no van der Waalscorrection was used, so we present our results with and without the vdW-correction for clearer comparison. The calculated heat of adsorption for water with different surface coverages is given in Table <ref type="table">1</ref>. The general trend in the results is in good agreement with the previous results. The bonding energies using only the PBE-functional are slightly smaller than the obtained using the similar PW91-functional.</p><p>As can be expected, the inclusion of the van der Waalscorrection increases the adsorption energy overall when compared to the pure functional. The difference is in the order of À0.3 to À0.1 eV per water molecule. Especially the adhesion of the second monolayer is increased when compared to the pure functionals PW91 and PBE. With the addition of the third monolayer, the van der Waals correction has little difference to the energies obtained using the pure functional.</p><p>Adsorbed water produces surface structure that has two distinct hydroxyl groups (see Fig. <ref type="figure" target="#fig_0">1</ref>). The higher hydroxyl groups are formed from the water molecule and the lower is formed from the dissociated hydrogen that bonds to a surface oxygen. TMA adsorption is possible only onto to higher hydroxyl group due to steric effects.</p><p>The gibbsite-like surface was constructed by replacing the top Al-atoms with three hydrogen atoms. Two of these hydrogens orient vertically and one horizontally with respect to the surface (Fig. <ref type="figure" target="#fig_1">2</ref>). Adsorption to the horizontal group is preferred due to the possible Lewis acid-base reaction between the TMA and the oxygens lone pair of electrons, but adsorption to the vertical group was also found to be possible.</p><p>The differences in the surface geometries cause a difference in the electronic structures between the two models. There is however only small difference in the bond lengths and partial charges between the two surfaces. All the Al-O bonds in the bulk phase are 1.9-2.0 Å and partial charges 2.5 and À1.6 for aluminium and oxygen, respectively. On the gibbsite-like surface Al-O bonds are close to the bulk values but on the hydroxylated surface they are slightly shorter (1.7 Å). Partial charges on the surface atoms are slightly smaller than in the bulk on both surfaces.</p><p>3.2 Reactions during the TMA pulse 3.2.1 TMA adsorption and first dissociation. On the hydroxylated surface the TMA adsorption takes place on one of the higher hydroxyl groups. Adsorption to the lower hydroxyl groups if blocked by steric interaction. The adsorption was found to be exothermic with adsorption energy of À1.13 eV. Any translational motion between adsorption sites on the surface is blocked by a diffusion barrier of 0.88 eV.</p><p>A straight-forward ligand-exchange reaction with the adsorbent hydroxyl groups was assumed to take place as in mechanism (1a). The TMAs methyl group forms a methane molecule with the proton of the hydroxyl group and desorbs into the gas phase. Barrier for this ligand-exchange reaction was found to be only 0.35 eV with reaction energy of À0.70 eV.</p><p>The same mechanism was also studied on the gibbsite-like surface. Just as previously shown by Elliott and Greer, <ref type="bibr" target="#b11">12</ref> the TMA most favourably adsorbs onto the horizontal hydroxyl group. The adsorption energy to the horizontal group was À1.60 eV, considerably more exothermic than on the hydroxylated surface. However, we found that for the ligand-exchange reaction TMA preferably bonds to a vertical hydroxyl group where the proton is more accessible. Adsorption energy directly to the vertical hydroxyl group would be À1.52 eV. The reaction barrier for the reaction is 0.69 eV in agreement with the previously reported result of 0.9 eV by Elliott and Pinto. <ref type="bibr" target="#b12">13</ref> At the end of the reaction DMA is coordinated to two oxygens which makes the configuration very stable. The overall reaction energy after the desorption of methane was À0.88 eV. The adsorbed TMA on the two different surfaces is illustrated in Fig. <ref type="figure">3</ref>.</p><p>Table <ref type="table">1</ref> The adsorption energies for water with different surface coverages given in eV per water molecule. The asterisk denotes dissociative adsorption. The monolayer is defined as a water molecule per a 1 Â 1 unit cell which gives a surface hydroxide concentration of 16 mmol m À2 for 1 ML coverage</p><p>1 4 ML 1 2 ML 1 ML 2 ML 3 ML Lodziana et al., 16 PW91-functional À1.379* À1.517* À1.516* À0.780 À0.494 This work, PBE À1.202* À1.256* À1.383* À0.607 À0.378 This work, PBE+vdW À1.336* À1.563* À1.487* À0.956 À0.409  The transition and final states on both surface models are illustrated in Fig. <ref type="figure">4</ref>.</p><p>While TMA adsorbs exothermically on both surfaces, the adsorption energy on the gibbsite-surface is 0.5 eV more negative than on the hydroxylated surface. Yet, there is very little difference between the adsorption bonds lengths (Al-O bond 2.04 Å and 2.02 Å on the hydroxylated and gibbsite surface, respectively). The TMA is more distorted from its gaseous planar structure on the gibbsite-like surface probably because of the stronger Al-O adsorption bond. The C-Al-C-Cdihedral changes from the planar 1801 to about 2401 on the adsorption to the gibbsite surface, which is considerably more than the distortion on the hydroxylated surface where the dihedral is only about 2181. The distortion can also be partially due to steric interactions between the methyl-ligands and the neighbouring hydroxyl groups. The distance between the methyl and hydroxyl groups is 0.5 Å shorter on the gibbsitesurface than on the hydroxylated surface.</p><p>Fig. <ref type="figure">3</ref> Adsorbed TMA on the hydroxylated surface (left) and on the gibbsite surface (right). Brown, red, black and white spheres represent aluminium, oxygen, carbon and hydrogen, respectively. The TMA is more distorted from its planar structure on the gibbsite surface than on the hydroxylated surface. However, the adsorption energy on the gibbsite-surface is 0.5 eV more exothermic than on the hydroxylated surface. There is no differences in the adsorption bond lengths between the two surface models.</p><p>Fig. <ref type="figure">4</ref> On the left is the transition state for the initial reaction on the hydroxylated surface (top) and on the gibbsite-like surface (below). The TMA is less hindered on the hydroxylated surface and the transition state is more easily reached. On the right side is the final state after the ligand-exchange reaction. The DMA is coordinated to one oxygen on the hydroxylated surface but twice coordinated on the gibbsite-like surface. On the hydroxylated surface, adding another TMA onto a neighbouring hydroxyl group was found to slightly increase activation energy of the reaction but also to significantly increase the adsorption energy.</p><p>This journal is © the Owner Societies 2015 Phys. Chem. Chem. Phys., 2015, 17, 17322--17334 | 17327</p><p>While there is little difference in the initial structures between the two surface models, the final states are very different. On the hydroxylated surface the aluminium is bonded only to one oxygen and hence the Al-O bond is shorter (1.71 Å) than on the gibbsite surface (1.92 and 1.81 Å) where aluminium is twice coordinated. The larger coordination on the gibbsite surface leads to a surprisingly small difference in the overall reaction energy. Just as in the adsorption of the TMA, the DMA resulting from the reaction is also more distorted on the gibbsite than on the hydroxylated surface. C-Al-C angle is closer to the triangular geometry on the hydroxylated surface (121.61) than on the gibbsite surface (100.81) where the angle deviates severely from the planar configuration.</p><p>Considering the difference in the activation energies, the difference in the bond lengths during the reaction is surprisingly small. The Al-O and Al-C bonds are slightly (0.03-0.04 Å) longer in the transition state on the gibbsite surface. From the partial charges it can be seen that the reaction takes place between the negative methyl group (ca. À0.8 charge on the carbon atom) and a positively charged proton of the hydroxyl group.</p><p>The effect of the surface coverage to the initial reaction on the hydroxylated surface was also studied. Adsorption of another TMA next to the DMA was found to lead to an increase in the adsorption energy. The adsorption energy of the second TMA is À1.32 eV, slightly more exothermic than the for a single TMA. The second TMA can undergo a similar ligand-exchange reaction with the adsorbent hydroxyl group similar to the first reaction. Higher surface coverage leads to a slight increase in the activation energy. Activation energy for the second TMA was 0.45 eV with reaction energy of À0.48 eV.</p><p>Interestingly the adsorption energy for a third TMA is even more exothermic, À1.90 eV. However, with two DMAs and one TMA per 2 Â 2 unit cell (which corresponds to methyl concentration of 8.6 Me nm À2 ), the high surface coverage leads to steric interaction with the neighbouring adsorbants and raises the activation energy for the reaction to 0.72 eV. The ligandexchange reaction becomes considerably less exothermic with reaction energy of only À0.15 eV with large surface coverage.</p><p>The cause of this cooperative adsorption is the formation of methyl-bridges between the adsorbants, illustrated schematically in Fig. <ref type="figure" target="#fig_2">5</ref>. This cooperative adsorption might be of importance during the adsorption process and may possible lead to an island-like growth of the adsorption layer. Also, the formation of methyl-bridges between the aluminium atoms can have great stabilizing effect when considering the structure of the surface at the end of the TMA pulse.</p><p>3.2.2 Second dissociation. Experiments show that the amount of adsorbed aluminium is linearly dependent on the surface hydroxylation and that the methyl concentration of the surface remains approximately constant after a TMA pulse, ca. 5-6 methyl groups per nm 2 . Thus, the Al : Me-ratio also decreases at high hydroxyl concentrations and at OH-concentration of about 15 mmol m À2 the ratio is 1.5. This suggests that the surface is mainly composed of dimethylaluminium and monomethylaluminium. <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b8">9</ref> Therefore it is to be expected that DMA undergoes further ligand-exchange reactions on the surface, i.e. mechanisms (1b) and (1c). Several possible pathways for the second reaction were studied and the lowest reaction barrier was found for direct reaction with a neighbouring hydroxyl group (see Fig. <ref type="figure">6</ref>). The activation energy for the reaction is 0.51 eV, slightly higher than for the reaction (1a). The change in the activation energy is relatively small considering that the proton on the neighbouring hydroxyl group is expected to be less acidic than the proton in the reaction (1a) and that the DMA has to react with a proton several angstroms away. This requires almost linear Al-O-Al bond to bend down to 1401. In the final state the monomethylaluminium is bonded to three oxygens of three hydroxyl groups which makes the reaction extremely exothermic with respect to previous reactions with reaction energy of À1.38 eV. As the MMA bonds with three hydroxyl groups, proton-transfer between a lower hydroxyl group and a protonless higher hydroxyl group is observed. As the ligand-exchange reactions consume protons from the surface to produce methane, the resulting bare oxygen sites make the surface even more basic. The adsorption of a TMA to the bare oxygen around the MMA is exothermic with À1.65 eV which is 0.5 eV more exothermic than adsorption onto a hydroxyl group. Addition of another TMA next to the same MMA causes steric interaction between the adsorbants leading to a weak adsorption bond for the second TMA.</p><p>Adsorption to the hydroxyl group next to the MMA is also possible. Adsorption of a TMA to the hydroxyl group that is bonded to the MMA is exothermic with À1.15 eV, same as for an isolated hydroxyl group. The activation energy for the ligand-exchange reaction with this hydroxyl group is however considerably higher than for the initial reaction, over 1 eV with reaction energy of À1.11 eV, making the hydroxyl group practically inert. Adsorption of a TMA was observed not to considerably affect the energetics of the MMAs reaction with a hydroxyl group i.e. the third dissociation.</p><p>The DMA on the gibbsite-like surface is coordinated to two oxygens and is hence constrained to its location. Only a reaction with the neighbouring hydroxyl group is possible. The activation energy for a reaction with the closest neighbour was calculated to be 0.72 eV which is slightly higher than in the first reaction. This results in a stable monomethylaluminium coordinated to three oxygens. The reaction is exothermic with reaction energy of À1.15 eV.</p><p>3.2.3 Third dissociation. The monomethylaluminium is coordinated to three oxygens on the surface and is therefore extremely rigid. The only plausible pathway for the MMA to react is to receive a proton from one of the hydroxyl groups (see Fig. <ref type="figure">7</ref>). However, due to the rigid structure of the MMA the activation energy for the ligand-exchange reaction becomes high. The activation energy for the reaction is 1.05 eV with reaction energy of À0.44 eV.</p><p>As a thin film grows thicker, the structure of the film goes through a phase transition called densification <ref type="bibr" target="#b33">34</ref> where the density of the film increases. This is not observed in the previous mechanisms (1a) or (1b) as the structures represent the initial stage of the ALD process. However, as the aluminium loses its final ligand it forms a new bond with the underlying surface oxygen. This leads to densification of the forming film, i.e. the density of the forming thin film is increased. The mechanism is however blocked by a high barrier and probably does not occur at low TMA coverages but a similar reaction might be of importance as the process progresses.</p><p>Various different mechanisms were studied for reactions (1b) and (1c). Some of these mechanisms involved proton transfer from one hydroxyl group to another. The barriers for proton diffusion on the surface amongst the lower and higher hydroxyl groups can be estimated to be around 0.5-0.6 eV with negligible reaction energies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Reactions during water pulse</head><p>After the TMA has saturated the surface, the gas-phase is cleansed with inert gas and a water pulse is introduced to the system. The water reacts with the saturated surface, removes the remaining methyl groups and hydroxylates the surface for the following TMA pulse. Here we have studied the mechanisms during the water pulse using the end-products from the TMA molecule calculations similar to other previous studies. <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b34">35</ref> The final states of reactions (1a) (DMA) and (1b) (MMA) were taken as the initial configurations for the water pulse mechanisms.</p><p>An accurate estimation of the surface structure after the TMA pulse is beyond the scope of the present work due to the complex nature of the surface saturation. Extensive simulations would be required to determine the composition of the saturated surface due to the fact that the TMA has several different dissociation-stages. The water pulse reactions studied are schematically represented by the eqn (2a)-(2c).</p><p>3.3.1 Dimethylaluminium and water. Just like the TMA, the DMA is a Lewis-acid and is therefore an ideal adsorption site for Lewis-basic water molecules. The ligand-exchange mechanism between the DMA and water is straight-forward, the water adsorbs to the DMA and donates a proton to the methyl-ligand. The water molecule has an adsorption energy and reaction barrier of À0.64 eV and 0.44 eV, respectively. This ligand-exchange reaction is exothermic with reaction energy of À0.61 eV. The reaction mechanism is depicted in Fig. <ref type="figure">8</ref>.</p><p>The resulting monomethylaluminium hydroxide can further react with water into a aluminium dihydroxide. An adsorption Fig. <ref type="figure">6</ref> The initial, transition and final states in the second ligand-exchange reaction. The initially linear Al-O-Al bond needs to bend from 1801 angle down to 1401 in order to reach the transition state. Notice that a proton in transferred to the adsorbent oxygen after the transition state. Fig. <ref type="figure">7</ref> The initial, transition and final states for the proposed third ligand-exchange reaction. The final dissociation of the TMA leads to densification of the surface which is not observed in the other reaction pathways. However, the ligand-exchange reactions are predicted to stop at the second dissociation due to the high barrier for the third reaction.</p><p>energy for a single water molecule onto the MMA-OH is significantly increased to À1.13 eV from the previous mechanism. Reaction barrier and energy for the mechanism is 0.67 eV, À0.28 eV, respectively. The mechanism for the reaction is very similar to the first DMA + H 2 O-reaction.</p><p>3.3.2 Monomethylaluminium and water. The structure of the monomethylaluminium is very different from the DMA. The aluminium is ''shielded'' by the surrounding oxygens and it was found that the closed structure made it impossible for a single water molecule to remove the methyl-ligand from the MMA. A short ab initio molecular dynamics simulation with several water molecules suggested that a water molecule might first break the MMA structure from three oxygen coordinated to a two coordinated one. This structure could then react with another water molecule. We have here studied the mechanism (2c) with several water molecules and labelled them as 2c w1 , 2c w2 and 2c w3 depending on the amount of water molecules within the mechanism.</p><p>The attack by a water molecule to the MMA aluminium is illustrated in Fig. <ref type="figure">9</ref>. The adsorption energy of the water molecule to the surface is À0.64 eV which is quite small when compared to the adsorption energies on the DMA. In the reaction path studied (mechanism 2c w1 ), the water molecule was observed to donate one of its protons to a neighbouring hydroxyl group and bonding to the MMA as a hydroxyl group. This proton transfer is an artifact resulting from the fact that hydroxylated surface has only partially reacted with the TMA pulse. The barrier for this dissociative adsorption process is small, only 0.26 eV with exothermic reaction energy of À0.62 eV. After the reaction the MMA is no longer blocked and there is enough space for another water molecule to attack.</p><p>When the MMAs structure is opened, an attack by a water molecule from the opposite side is possible. This mechanism is denoted 2c w2 since it now involves two water molecules. The reaction was found to have a barrier of 0.63 eV and reaction energy of À1.07 eV. However, also a mechanism containing an additional water molecule was tested. This was found to considerably lower the reaction barrier (mechanism 2c w3 ), illustrated in Fig. <ref type="figure" target="#fig_3">10</ref>. The barrier was brought down to 0.39 eV with increased reaction energy of À1.61 eV. The adsorption energy of a water molecule was calculated to be À0.72 eV for both mechanisms 2c w2 and 2c w3 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Free energy surface of reaction pathways</head><p>In order to investigate the results at the process conditions, finite temperature was included in our calculations. Entropic contributions were estimated using eqn (2)-( <ref type="formula" target="#formula_3">4</ref>). For gaseous species translational, rotational and vibrational contributions were considered. For surface species only vibrational contributions were included. Free energies on the pathways were calculated in temperatures 298.15 K and 450 K with TMA-H 2 O pressure of 2 Pa. Using the rate eqn ( <ref type="formula" target="#formula_4">5</ref>) and ( <ref type="formula">6</ref>) the reaction rates were computed at temperatures 298.15 K and 450 K.</p><p>Gibbs free energies for the reaction pathways are presented in Tables <ref type="table" target="#tab_4">4</ref> and <ref type="table" target="#tab_5">5</ref> and corresponding reaction rates are given in Tables <ref type="table" target="#tab_6">6</ref> and <ref type="table" target="#tab_7">7</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Reaction energetics of the TMA pulse</head><p>We have studied TMA adsorption and subsequent surface reactions on a realistic hydroxylated surface model and compared Fig. <ref type="figure">8</ref> The initial reaction for between DMA and water. From left to right, the initial, transition and final stage of the reaction. Single DMA in a 2 Â 2 unit cell corresponds to a methyl surface concentration of 4 mmol m À2 . Fig. <ref type="figure">9</ref> The MMA is not able to react with a water molecule. However, it is possible for a water molecule to break down the inert and closed structure of the MMA. Barrier for this adsorption process is 0.26 eV.</p><p>our results with previously reported study on a gibbsite-like surface model. The reaction energetics and the zero-point energy corrected values for the TMA pulse are presented in Table <ref type="table">2</ref>. Previously presented results were also replicated due to differences in computational methods.</p><p>Our reaction energetics on the gibbsite-surface are similar to previously reported results with the exception of the adsorption energy which was estimated to be 0.6 eV more exothermic than previously stated in the literature. This is mainly caused by the implemented van der Waals correction that was not included in the previous simulations. The barrier for the reaction (1a) obtained from the cluster model by Widjaja and Musgrave 10 is quite similar when compared to the hydroxylated model considering that the hybrid functional used by Widjaja and Musgrave usually gives somewhat higher energies for reaction barriers. We consider however this agreement to be somewhat accidental.</p><p>Our results show that TMA adsorbs to the hydroxylated alumina surface exothermically with adsorption energy of À1.13 eV. Adsorption energy on the hydroxylated surface is 0.5 eV less exothermic than on the gibbsite-like surface. Addition of another TMA was found to increase the adsorption and activation energies slightly. This effect was further increased with the inclusion of a third TMA indicating a cooperative effect among the adsorbants. The additional TMA is able to form methyl-bridges with the neighbouring DMAs which considerably increases the adsorption energy. However, the activation energy for the ligand-exchange reaction also increases due to steric effects as the surface becomes crowded.</p><p>A cooperative effect between neighbouring adsorbants has previously been reported during the growth of HfO 2 thin films by Shirazi and Elliott <ref type="bibr" target="#b35">36</ref> and by the same authors for the growth of Al 2 O 3 . <ref type="bibr" target="#b13">14</ref> Shirazi and Elliott found that the adsorption of H 2 O occurs only onto a low coordinated hafnium atom provided there is a another low coordinated hafnium-precursor as its neighbour. For the Al 2 O 3 process Shirazi and Elliott found that the proton transfer from surface hydroxyl groups depend strongly on the coordination of the hydroxyl groups oxygen. Using a gibbsite-like surface model they found that a DMA on the surface is relatively inert. However, the methyl groups dissociates with relatively low barrier if an additional DMA is introduced close to the reacting hydroxyl group. When the hydroxyl groups oxygens coordination is increased, the proton becomes more acidic resulting in a lower barrier. This effect is less clear on the hydroxylated surface. In our calculations we did not find the same effect, as the reaction barriers were raised due to steric interactions when adsorbants were brought to close proximity (see Section 3.2.2).</p><p>On the surface the TMA can go through three ligandexchange reactions with intermediate products dimethylaluminium (DMA) and monomethylaluminium (MMA). Reaction barriers for these ligand-exchange reactions were found to be considerably lower than previously reported. For the removal of the first methyl-ligand on the hydroxylated surface the reaction barrier was only 0.35 eV. As the surface reactions progress the methyl-group removal was found to become less favourable. For the second ligand activation energy was found to be 0.51 eV and for the final methyl the barrier rose to 1.05 eV. All the reactions were exothermic. For the first two ligand-exchange reactions the reaction energies are À0.70 eV and À1.38 eV, respectively. The reaction energy increases considerably as the Table <ref type="table">2</ref> Energies on the potential energy surface for the TMA pulse. Energy differences are taken with respect to the initial stage of the surface reaction. The overall reaction energy DE includes the desorption of the by-product methane. Adsorption energies are for a single adsorbed molecule. ZPEcorrected values are given in parenthesis. The Elliott and Pinto <ref type="bibr" target="#b12">13</ref> model is a gibbsite-like surface-slab model, while the Widjaja and Musgrave 10 model is a finite size cluster model. All values are given in eV Mechanism E ads E a DE Reaction (1a) First TMA À1.13 (À0.99) 0.35 (0.32) À0.70 (À0.73) Second TMA À1.32 (À1.14) 0.45 (0.50) À0.48 (À0.56) Third TMA À1.90 (À1.70) 0.71 (0.70) À0.15 (À0.24) Gibbsite-surface À1.52 (À1.22) 0.69 (0.51) À0.88 (À0.99) Elliot &amp; Pinto, PW91 13 À0.9 0.9 À1.2 Widjaja &amp; Musgrave, B3LYP 10 À0.61 0.52 À1.09 Reaction (1b) -0.51 (0.38) À1.38 (À1.49) Gibbsite-surface -0.72 (0.59) À0.88 (À1.01) Reaction (1c) -1.05 (0.88) À0.44 (À0.59)</p><p>reacted MMA becomes three times coordinated with oxygen.</p><p>The MMA is however very rigid, resulting in high reaction barrier and low reaction energy of À0.44 eV. Due to the high reaction barrier of the last reaction step, it is probable that at the end of the TMA pulse the surface consists mainly of MMA species.</p><p>The production of MMA consumes protons from the surface creating bare oxygen sites to which the TMA adsorption is stronger than on a hydroxyl group. For example, adsorption energy to a bare oxygen next to an MMA was À1.65 eV. Here the TMA can react with the protons from the lower hydroxyl groups. We estimate the barrier for the proton transfer between an already reacted higher hydroxyl group and a lower hydroxyl group to be of the order of 0.5-0.6 eV. However, preliminary results show that barriers for the ligand-exchange between the surface and a TMA adsorbed next to an MMA are high.</p><p>As an extreme case, adsorption of a TMA to a bare alumina surface is extremely exothermic. This has been previously noted by Elliott and Greer. <ref type="bibr" target="#b11">12</ref> TMA dissociates readily on the bare surface with adsorption energy of À2.56 eV. It could be possible that the adsorbed TMA dissociates on the surface if there are no protons left on surface to react with.</p><p>The barriers of the surface reactions on the hydroxylated surface are considerably lower than on the gibbsite-like surface previously used in the literature. The difference in the activation energies for the first two ligand-exchange reactions are 0.36 eV and 0.27 eV. However, this difference is lowered to 0.19 eV and 0.09 eV, respectively, when the zero-point energies are included.</p><p>One of the main differences between the hydroxylated surface model and the previously studied gibbsite model is the structure of the surface. The hydroxylated surface has hydroxyl groups in two different planes while the gibbsite-surface is entirely planar. The adsorbed TMA is less hindered by the neighbouring hydroxyl groups and can more easily reach the transition state on hydroxylated surface. On the gibbsite-like surface the planar structure leads to interactions with the neighbouring hydroxyl groups and makes the TMA more rigid. However, the resulting DMA is twice coordinated to oxygen on the gibbsite-like surface leading to a larger reaction energy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Reaction energetics of the water pulse</head><p>Reactions during the water pulse were studied using one to three water molecules. The final states of DMA and MMA obtained from the TMA pulse calculations were used as the initial configurations for the water pulse corresponding to surface methyl concentrations of 1.2 and 2.4 Me nm À2 , respectively. Results of these reaction energetics are presented in Table <ref type="table" target="#tab_3">3</ref>.</p><p>The water adsorbs to the DMA with relatively low adsorption energy of À0.64 eV. When compared to the water adsorption energies onto bare alumina, the adsorption energies onto DMA is between the two and three monolayer coverages. The adsorption energy to the MMA-OH is significantly increased to À1.13 eV. The mechanisms in the reactions (2a) and (2b) are similar and the larger adsorption energy leads to larger activation energy for the ligand-exchange reaction as the barrier increases from 0.44 eV to 0.67 eV.</p><p>The MMA acquired from the TMA pulse calculations was found to be inert to a direct attack by a water molecule. A possible reaction pathway was found by sampling different configurations by ab initio molecular dynamics involving several water molecules. A water molecule was found to be able to form a bond with the MMA aluminium and opening up the MMAs closed structure. Another water molecule can then attack the MMA and undergo a ligand-exchange reaction similar to the one with the DMA and MMA-hydroxide in reactions (2a) and (2b).</p><p>The interactions between water molecules were found to play an important role. A barrier for the adsorption of the water onto the MMA was 0.26 eV. However, the adsorption happened spontaneously during a dynamical simulation with ten or so water molecules so water-water-interactions can lower this barrier even further. Also, an addition of another water molecule next to the attacking water molecule in reaction pathway (2c) was able to lower the reaction barrier 0.2 eV. The importance of the dynamic nature of water during the surface reactions in an ALD-process has previously been pointed out by Mukhopadhyay et al. <ref type="bibr" target="#b34">35</ref> and Shirazi et al. <ref type="bibr" target="#b13">14</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Energetics at a finite temperature</head><p>The free energy profiles of the reaction pathways were calculated in order to include finite temperature and pressure effects. All the calculations were done in temperatures 298.15 K and 450 K at TMA-H 2 O pressure of 2 Pa. Free energies along different reaction pathways are given in Tables <ref type="table" target="#tab_4">4</ref> and <ref type="table" target="#tab_5">5</ref>.</p><p>The free energies of the reaction barriers are overall quite temperature neutral showing only small deviations as a function of temperature. However, the adsorption energies are dominated by the translational and rotational entropies of the gaseous molecules due to high temperature and especially low pressure. The entropy change in the adsorption of TMA at 298.15 K is 1.21 eV and at 450 K is 1.94 eV, which leads to positive free energies for adsorption above room temperature. While this entropic effect makes the adsorption free energy more positive, it also increases reaction energies as the methane desorption produces entropy and the free energy of the reaction steps become more negative at higher temperatures.</p><p>The overall process can be studied by comparing the reaction rates and reaction rate coefficients of different mechanisms. While the adsorption rates are not directly comparable to the reaction rate coefficients as the surface reactions depend on the surface coverage, a qualitative inspection of the rates and rate coefficients give an insight to the advancement of the surface processes. The reaction rate coefficients for different reactions can be calculated from the Gibbs free energy using eqn (5).</p><p>For example, the high temperature and low pressure of the process make the adsorption the rate limiting step. Adsorption of the TMA was found to be cooperative with the formation of methyl bridges between adsorbants. On the surface the first ligand-exchange reactions are considerably faster than the adsorption rate. The adsorption rate, k ads , can be approximated as the collision flux in kinetic theory of gases (eqn (6)). We have approximated the area of the adsorption site as a reciprocal of the surface concentration of the top-most hydroxyl groups i.e. 4.89 OH nm À2 . The sticking probability is unity at low surface coverage. The initial adsorption rate is then k ads = 4.2 Â 10 3 s À1 per a hydroxyl group at the process conditions (P = 2 Pa, T = 450 K). The adsorption rate onto the surface is several orders of magnitude smaller than the reaction rate coefficients for the first two surface reactions: for the reactions (1a)-(1c) the rates at 450 K are k 1a = 3.6 Â 10 9 s À1 , k 1b = 4.6 Â 10 8 s À1 and k 1c = 4.4 Â 10 2 s À1 , respectively.</p><p>The desorption rate can be calculated from the equilibrium constant:</p><formula xml:id="formula_8">k des ¼ k ads K ¼ k ads e DG ads</formula><p>For a single TMA the desorption rate is of the order of 5.6 Â 10 9 s À1 which is of the same order of magnitude as the initial surface reaction (1a). The initial reaction step and desorption are two competing processes and of the same magnitude at the process conditions. The desorption rate is considerably lowered at lower temperatures and at with the formation of methylbridges between the adsorbants. The cooperative effect between the adsorbants may lead to an island like growth of the adsorbed layer. The reaction rate coefficients for the TMAand water-pulse reactions are presented in Tables <ref type="table" target="#tab_6">6</ref> and <ref type="table" target="#tab_7">7</ref>.</p><p>The rate of the final ligand-exchange reaction (mechanism (1c)) is several magnitudes slower than the first two ligandexchange reactions which indicates that the main product from the TMA pulse is MMA. The production of MMA and methane consumes protons from the surface and turns hydroxyl groups into bare oxygen sites. These sites are very basic and can also adsorb TMA. As pointed out earlier in the text, the reaction barrier for the proton transfer between the lower and upper hydroxyl groups is only ca. 0.5-0.6 eV. Additional methane can be released when protons are transported from the lower hydroxyl groups to the previously reacted upper group oxygens. When all the protons on the surface have been consumed, the possible free oxygen sites are covered with new TMA. The formation of methyl-bridges between TMA and DMA/MMA can help stabilize the adsorbed molecules. Similar kinetic parameters can be estimated also for the water pulse. The adsorption rate of water to the surface is k ads = 1.2 Â 10 4 s À1 at the process conditions (P = 2 Pa, T = 450 K, with the empirical surface methyl-concentration of 5 Me nm À2 ). The adsorption rate is larger for the water pulse than for the TMA pulse due to the smaller mass of the molecule. Unlike in the TMA pulse, during the water pulse every mechanism starts with the adsorption of another water molecule. Because of the low adsorption energies for water, the desorption rates from the surface are some orders of magnitude larger than the surface reaction rates. Only for the reaction between DMA and water (2a) the rates are of the same magnitude. Reaction rates for the calculated pathways are presented in Table <ref type="table" target="#tab_7">7</ref>.</p><p>Possible interactions between the water molecules on the surface are likely to stabilize the transition states, so the estimations done using only one water molecule give an upper bound for the reaction barriers. Overall the process is shown to be thermodynamically stable with negative free energy and to have reaction barriers that are accessible in the process conditions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Conclusion</head><p>Density functional calculations for the initial surface reactions of the trimethylaluminium-water ALD-process are presented using a more realistic surface model than previously used in the literature. Several reaction pathways were searched and calculations include finite temperature effects.</p><p>TMA is found to adsorb exothermically. The overall reactions have very negative Gibbs free energy. The reaction barriers for the initial ligand-exchange reactions between the upper hydroxyl groups and the TMA were found to be small. TMA dissociation is predicted to terminate at monomethylaluminium. After the higher hydroxyl groups have reacted into MMA, the surface is left with bare oxygen sites and some remaining hydroxyl sites that are still susceptible to TMA adsorption and dissociation. This will lead to some DMA surface species. We predict that a methylbridge network is formed during the adsorption of TMA and is used to stabilize the adsorbed aluminium atoms at the end of the pulse.</p><p>Water pulse was studied using few water molecules. Water molecules were found to adsorb exothermically to DMA but adsorption to MMA has a small barrier. Reaction barriers with the products from the TMA pulse, the DMA and the MMA, are accessible in the process conditions. However, calculations with few water molecules were shown to be sensitive to waterwater-interactions.</p><p>The TMA-H 2 O system is one of the most studied ALDprocesses, mainly experimentally. The surface processes are complex and difficult to measure but with computational research it is possible to obtain insight on the possible surface mechanisms and energetics. Understanding the surface processes and kinetics is essential in the design and optimization of ALD processes. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1</head><label>1</label><figDesc>Fig.1Side-view of the hydroxylated surfaces formed from dissociatively adsorbed water. Two kinds of hydroxyl groups are present, the higher group formed from the water molecule and the lower one formed with the dissociated hydrogen and surface oxygen. A monolayer coverage is achieved when four water molecules adsorb onto a 2 Â 2 cell which corresponds to a surface concentration of 16 mmol m À2 . Only three molecules are visible from this view due to overlap.</figDesc><graphic coords="4,55.79,542.61,223.15,99.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Side-view of the gibbsite-like surface. Stoichiometric gibbsitelayer is formed when the top aluminium atoms are replaced with three hydrogen atoms. Gibbsite-like surface gives two vertical and one horizontal hydroxyl groups per unit cell. Gibbsite-like surface corresponds to a hydroxyl surface concentration of 25 mmol m À2 .</figDesc><graphic coords="4,316.86,156.42,222.46,87.93" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 5</head><label>5</label><figDesc>Fig. 5 An example of a bridged structure. The bridged structure stabilizes the adsorbed structure and increases the adsorption energy of the TMA.</figDesc><graphic coords="6,328.54,49.83,199.14,142.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 10</head><label>10</label><figDesc>Fig. 10 The initial, transition and final states in the reaction between the MMA and two water molecules. The second water molecule stabilizes the transition and final states lower the activation energy by 0.24 eV.</figDesc><graphic coords="9,71.66,49.83,452.11,93.37" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="5,82.26,49.83,430.76,161.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="5,105.39,407.17,384.63,255.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="7,54.26,49.83,486.91,114.97" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="8,61.63,49.83,472.02,124.10" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3</head><label>3</label><figDesc>Energies on the potential energy surface for the water pulse. Energy differences are taken with respect to the initial stage of the surface reaction. The overall reaction energy DE includes the desorption of the by-product methane. Adsorption energies are for a single adsorbed molecule. ZPE-corrected values are given in parenthesis. The Widjaja and Musgrave 10 model is a finite size cluster model. All values are given in eV</figDesc><table><row><cell>Mechanism</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4</head><label>4</label><figDesc>Free energy differences for adsorption, transition and final states during the TMA pulse. The activation (DG ‡ ) and reaction (DG) free energies are taken as the difference to the adsorbed TMA (the reaction free energy includes the desorption of the methane). Adsorption energies are for a single adsorbed molecule. The differences are given in two temperatures, 450 K and 298 K (in parenthesis). Values are given in eV</figDesc><table><row><cell>Mechanism</cell><cell></cell><cell>DG ads</cell><cell>DG  ‡</cell><cell>DG</cell></row><row><cell>Reaction (1a)</cell><cell>First TMA</cell><cell>0.53 (À0.05)</cell><cell>0.30 (0.32)</cell><cell>À1.64 (À1.33)</cell></row><row><cell></cell><cell>Second TMA</cell><cell>0.14 (À0.23)</cell><cell>0.49 (0.50)</cell><cell>À1.51 (À1.17)</cell></row><row><cell></cell><cell>Third TMA</cell><cell>À0.19 (À0.77)</cell><cell>0.71 (0.71)</cell><cell>À1.27 (À0.89)</cell></row><row><cell></cell><cell>Gibbsite-surface</cell><cell>0.34 (À0.26)</cell><cell>0.49 (0.50)</cell><cell>À1.95 (À1.61)</cell></row><row><cell>Reaction (1b)</cell><cell></cell><cell>-</cell><cell>0.39 (0.38)</cell><cell>À2.43 (À2.09)</cell></row><row><cell></cell><cell>Gibbsite-surface</cell><cell>-</cell><cell>0.56 (0.58)</cell><cell>À2.00 (À1.64)</cell></row><row><cell>Reaction (1c)</cell><cell></cell><cell>-</cell><cell>0.92 (0.90)</cell><cell>À1.56 (À1.21)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 5</head><label>5</label><figDesc>Free energy differences for adsorption, transition and final states during the water pulse. The activation (DG ‡ ) and reaction (DG) free energies are taken as the difference to the adsorbed water (the reaction free energy includes the desorption of the methane). Adsorption energies are for a single adsorbed molecule. The differences are given in two temperatures, 450 K and 298 K (in parenthesis). Values are given in eV</figDesc><table><row><cell>Mechanism</cell><cell></cell><cell>DG ads</cell><cell>DG  ‡</cell><cell>DG</cell></row><row><cell>Reaction (2a)</cell><cell></cell><cell>0.51 (0.15)</cell><cell>0.28 (0.29)</cell><cell>À2.05 (À1.44)</cell></row><row><cell>Reaction (2b)</cell><cell></cell><cell>0.18 (À0.42)</cell><cell>0.74 (0.72)</cell><cell>À1.61 (À0.98)</cell></row><row><cell>Reaction (2c)</cell><cell>w1</cell><cell>0.72 (0.10)</cell><cell>0.30 (0.28)</cell><cell>À0.58 (À0.62)</cell></row><row><cell></cell><cell>w2</cell><cell>0.62 (0.00)</cell><cell>0.64 (0.63)</cell><cell>À2.48 (À1.86)</cell></row><row><cell></cell><cell>w3</cell><cell>0.81 (0.12)</cell><cell>0.23 (0.24)</cell><cell>À2.94 (À2.29)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6"><head>Table 6</head><label>6</label><figDesc>Adsorption and desorption rates as well as reaction rate coefficients for different reaction pathways during the TMA pulse. The estimated rate for proton diffusion is included for comparison and corresponds to a barrier of 0.5 eV. Rate coefficients are given in temperatures 298 K and 450 K</figDesc><table><row><cell>Mechanism</cell><cell></cell><cell>k 298 /s À1</cell><cell>k 450 /s À1</cell></row><row><cell>Adsorption</cell><cell></cell><cell>5.2 Â 10 3</cell><cell>4.2 Â 10 3</cell></row><row><cell>Desorption</cell><cell>First TMA Second TMA Third TMA</cell><cell>7.4 Â 10 2 6.7 Â 10 À1 5.0 Â 10 À10</cell><cell>5.6 Â 10 9 1.6 Â 10 5 3.2 Â 10 1</cell></row><row><cell>Reaction (1a)</cell><cell>First TMA</cell><cell>1.8 Â 10 7</cell><cell>3.6 Â 10 9</cell></row><row><cell></cell><cell>Second TMA</cell><cell>2.1 Â 10 4</cell><cell>2.7 Â 10 7</cell></row><row><cell></cell><cell>Third TMA</cell><cell>7.3</cell><cell>1.0 Â 10 5</cell></row><row><cell></cell><cell>Gibbsite-surface</cell><cell>1.9 Â 10 4</cell><cell>3.1 Â 10 7</cell></row><row><cell>Reaction (1b)</cell><cell></cell><cell>1.9 Â 10 6</cell><cell>4.6 Â 10 8</cell></row><row><cell>Reaction (1c)</cell><cell>Gibbsite-surface</cell><cell>9.4 Â 10 2 0.4 Â 10 À2</cell><cell>4.9 Â 10 6 4.4 Â 10 2</cell></row><row><cell>Proton diffusion</cell><cell></cell><cell>2.2 Â 10 4</cell><cell>2.4 Â 10 7</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 7</head><label>7</label><figDesc>Adsorption and desorption rates as well as reaction rate coefficients for different reaction pathways during the water pulse. Rate coefficients are given in temperatures 298 K and 450 K</figDesc><table><row><cell>Mechanism</cell><cell></cell><cell>k 298 /s À1</cell><cell>k 450 /s À1</cell></row><row><cell>Adsorption</cell><cell></cell><cell>1.4 Â 10 4</cell><cell>1.2 Â 10 4</cell></row><row><cell>Reaction (2a)</cell><cell></cell><cell>7.1 Â 10 7</cell><cell>7.2 Â 10 9</cell></row><row><cell>Desorption (2a)</cell><cell></cell><cell>5.0 Â 10 6</cell><cell>6.0 Â 10 9</cell></row><row><cell>Reaction (2b) Desorption (2b)</cell><cell></cell><cell>4.2 1.1 Â 10 À3</cell><cell>5.3 Â 10 4 1.2 Â 10 6</cell></row><row><cell>Reaction (2c)</cell><cell>w1</cell><cell>1.2 Â 10 8</cell><cell>4.0 Â 10 9</cell></row><row><cell></cell><cell>w2</cell><cell>1.3 Â 10 2</cell><cell>6.5 Â 10 5</cell></row><row><cell></cell><cell>w3</cell><cell>4.8 Â 10 8</cell><cell>2.4 Â 10 10</cell></row><row><cell>Desorption (2c)</cell><cell>w1</cell><cell>7.1 Â 10 5</cell><cell>1.4 Â 10 12</cell></row><row><cell></cell><cell>w2</cell><cell>1.4 Â 10 5</cell><cell>1.0 Â 10 11</cell></row><row><cell></cell><cell>w3</cell><cell>1.5 Â 10 6</cell><cell>1.4 Â 10 13</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>This journal is © the Owner Societies 2015</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>Phys. Chem. Chem. Phys., 2015, 17, 17322--17334 | 17325</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>Phys. Chem. Chem. Phys., 2015, 17, 17322--17334 | 17331</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p>Phys. Chem. Chem. Phys., 2015, 17, 17322--17334 | 17333</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Atomic Layer Deposition of Nanostructured Materials</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pinna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Knez</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Wiley-VCH</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page" from="138" to="146" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="111" to="131" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Puurunen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<date type="published" when="2005">2005, 97, 121301</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Niinisto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">¨</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Trans</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="641" to="652" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gusev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Copel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cartier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Baumvol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Krug</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gribelyuk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="176" to="178" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G.-H</forename><surname>Koh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-S</forename><surname>Ahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-Y</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="1499" to="1506" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Paranjpe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gopinath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Omstead</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bubber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">148</biblScope>
+			<biblScope unit="page" from="465" to="G471" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Puurunen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lindblad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Root</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Krause</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1093" to="1102" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Widjaja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="3304" to="3306" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heyman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="5718" to="5725" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Greer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="3246" to="3250" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Pinto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electroceram</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="117" to="120" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nanoscale</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="6311" to="6318" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<title level="m">Advanced Short-time Thermal Processing for Si-based CMOS Devices: Proceedings of the International Symposium</title>
+		<imprint>
+			<publisher>The Electrochemical Society Proceedings</publisher>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="231" to="242" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lodziana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Norskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Stoltze</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="11179" to="11188" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Enkovaara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="page">253202</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">3865</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tkatchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scheffler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">73005</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bader</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="page" from="1389" to="1395" />
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Cramer</surname></persName>
+		</author>
+		<title level="m">Essentials of computational chemistry: theories and models</title>
+		<imprint>
+			<publisher>John Wiley &amp; Sons</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Atkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">De</forename><surname>Paula</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Chemistry</title>
+		<imprint>
+			<biblScope unit="page">846</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Uberuaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jo ´nsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9901" to="9904" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="20" to="25" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Marmier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Parker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<date type="published" when="2004">2004, 69, 115409</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ellis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="page">13647</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X.-G</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scheffler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page">3650</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Felice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Northrup</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="page" from="60" to="R16287" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Kelber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="271" to="303" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Hass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Curioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Andreoni</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">282</biblScope>
+			<biblScope unit="page" from="265" to="268" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Klaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">517</biblScope>
+			<biblScope unit="page">5950</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">It is unclear from the article whether or not the authors computed their results in the same manner</title>
+		<imprint/>
+	</monogr>
+	<note>The results presented suggest that this is the case, however this is not clear from the text itself</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">W</forename><surname>Finger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Hazen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="5823" to="5826" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Olivier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Duce ´re</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">´</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mastail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Landa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Rouhani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1555" to="1560" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Mukhopadhyay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Sanz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">130</biblScope>
+			<biblScope unit="page" from="11996" to="12006" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="244" to="259" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

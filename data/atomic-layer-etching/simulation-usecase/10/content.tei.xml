@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mechanism of Thermal Atomic Layer Etch of W Metal Using Sequential Oxidation and Chlorination: A First-Principles Study</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2020-07-15">July 15, 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Suresh</forename><forename type="middle">Kondati</forename><surname>Natarajan</surname></persName>
+							<email>suresh0807@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Nolan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Patrick</forename><surname>Theofanis</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Charles</forename><surname>Mokhtarzadeh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Scott</forename><forename type="middle">B</forename><surname>Clendenning</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical Engineering and Automation</orgName>
+								<orgName type="institution" key="instit1">-University College Cork</orgName>
+								<orgName type="institution" key="instit2">Tyndall National Institute</orgName>
+								<address>
+									<postCode>T12 R5CP</postCode>
+									<settlement>Cork</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Aalto University</orgName>
+								<address>
+									<postCode>02150 0000-0002 7018-5253</postCode>
+									<settlement>Espoo</settlement>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mechanism of Thermal Atomic Layer Etch of W Metal Using Sequential Oxidation and Chlorination: A First-Principles Study</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-07-15">July 15, 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">33B83EC7FA25D5AD6C4216690F65D3DD</idno>
+					<idno type="DOI">10.1021/acsami.0c06628</idno>
+					<note type="submission">Received: April 10, 2020 Accepted: July 15, 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>ACS Appl. Mater. Interfaces 2020</term>
+					<term>12</term>
+					<term>36670-36680 atomic layer etching</term>
+					<term>transistor contacts</term>
+					<term>density functional theory</term>
+					<term>self-limiting reaction</term>
+					<term>atomistic simulations</term>
+					<term>first principles</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Thermal atomic layer etch (ALE) of W metal can be achieved by sequential self-limiting oxidation and chlorination reactions at elevated temperatures. In this paper, we analyze the reaction mechanisms of W ALE using the first-principles simulation. We show that oxidizing agents such as O 2 , O 3 , and N 2 O can be used to produce a WO x surface layer in the first step of an ALE process with ozone being the most reactive. While the oxidation pulse on clean W is very exergonic, our study suggests that runaway oxidation of W is not thermodynamically favorable. In the second ALE pulse, WCl 6 and Cl 2 remove the oxidized surface W atoms by the formation of volatile tungsten oxychloride (W x O y Cl z ) species. In this pulse, each adsorbed WCl 6 molecule was found to remove one surface W atom with a moderate energy cost. Our calculations further show that the desorption of the additional etch products is endothermic by up to 4.7 eV. Our findings are consistent with the high temperatures needed to produce ALE in experiments. In total, our quantum chemical calculations have identified the lowest energy pathways for ALE of tungsten metal along with the most likely etch products, and these findings may help guide the development of improved etch reagents.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>Atomic layer etch (ALE) processing has gained considerable attention in recent years within the semiconductor industry. <ref type="bibr">[1]</ref><ref type="bibr" target="#b0">[2]</ref><ref type="bibr" target="#b1">[3]</ref><ref type="bibr" target="#b2">[4]</ref> The continued scaling of semiconductor devices demands the use of ever-thinner and higher-performing materials, which drives the development of gentle etch process technologies with atomic-level precision and high degrees of selectivity toward surrounding materials. ALE shares many similarities with the well-known atomic layer deposition (ALD), widely used in the semiconductor industry, and can be considered as the reverse of ALD. ALE permits the removal of thin films layer by layer exploiting atomic-scale precision inherent in the method using sequential and self-limiting surface reactions, 1-3,5-7 similar to ALD. Currently used ALE processes are anisotropic using directional high energy ion bombardment to drive the removal of the modified surface layers. <ref type="bibr" target="#b0">2,</ref><ref type="bibr" target="#b6">8</ref> On the other hand, a thermal ALE process relies on temperature and thermochemically favorable reactions to drive the removal of surface species. <ref type="bibr" target="#b7">9</ref> There are a multitude of examples for thermal ALE of various materials, including oxides (HfO 2 , <ref type="bibr" target="#b1">3,</ref><ref type="bibr" target="#b5">7,</ref><ref type="bibr" target="#b8">10,</ref><ref type="bibr" target="#b9">11</ref> ZrO 2 , <ref type="bibr" target="#b1">3,</ref><ref type="bibr" target="#b9">11</ref> SiO 2 , <ref type="bibr" target="#b10">12</ref> WO 3 , <ref type="bibr" target="#b11">13</ref> ZnO, <ref type="bibr" target="#b12">14</ref> and Al 2 O 3 <ref type="bibr" target="#b7">9,</ref><ref type="bibr" target="#b9">11,</ref><ref type="bibr" target="#b13">[15]</ref><ref type="bibr" target="#b14">[16]</ref><ref type="bibr" target="#b15">[17]</ref><ref type="bibr" target="#b16">[18]</ref> ), nitrides (including AlN, <ref type="bibr" target="#b17">19</ref> GaN, <ref type="bibr" target="#b18">20</ref> and TiN <ref type="bibr" target="#b19">21,</ref><ref type="bibr" target="#b20">22</ref> ), fluorides (e.g., AlF 3 <ref type="bibr" target="#b21">23</ref> ), and some work on W. <ref type="bibr" target="#b11">13,</ref><ref type="bibr" target="#b22">[24]</ref><ref type="bibr" target="#b23">[25]</ref><ref type="bibr" target="#b24">[26]</ref> Other ALE techniques include plasma ALE of SiO 2 , <ref type="bibr" target="#b25">27,</ref><ref type="bibr" target="#b26">28</ref> ZnO, <ref type="bibr" target="#b27">29</ref> and GaN, <ref type="bibr" target="#b28">30,</ref><ref type="bibr" target="#b29">31</ref> and infrared annealing ALE of Si 3 N 4 . <ref type="bibr" target="#b30">32</ref> Despite this effort, the atomistic details of the mechanism of thermal ALE processes are still not fully understood.</p><p>Tungsten, because of its low resistivity, resistance to electromigration, and ease of thin film growth by atomic layer and chemical vapor deposition, is often used in source/ drain contacts in CMOS devices. <ref type="bibr" target="#b31">33</ref> Unlike ALD processes for W, which have received considerable attention, <ref type="bibr" target="#b32">[34]</ref><ref type="bibr" target="#b33">[35]</ref><ref type="bibr" target="#b34">[36]</ref><ref type="bibr" target="#b35">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref><ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref> the utility of a complementary W atomic layer etch process has only recently emerged. <ref type="bibr" target="#b11">13,</ref><ref type="bibr" target="#b22">[24]</ref><ref type="bibr" target="#b23">[25]</ref><ref type="bibr" target="#b24">[26]</ref><ref type="bibr" target="#b42">43</ref> Due to the continued scaling of critical dimensions in next-generation semiconductor devices and the incorporation of a more varied material palette in accordance with Moore's law, the need for novel digital etch methods to enable the precise removal of thin film materials is of extreme importance. <ref type="bibr" target="#b0">2,</ref><ref type="bibr" target="#b43">44</ref> While there are anisotropic W ALE processing methodologies available, <ref type="bibr" target="#b44">45</ref> isotropic thermal ALE techniques are required to perform conformal etch in high aspect ratio structures. Indeed, progress toward the isotropic thermal ALE of metallic W has been reported by the groups of George and  Parsons. The work reported by George et al. <ref type="bibr" target="#b11">13</ref> has shown the quasi-ALE of metallic W via a conversion etch mechanism utilizing ozone (O 3 ), BCl 3 , and anhydrous HF vapor. In this system, ozone was used to oxidize the W surface to WO 3 in a diffusion-limited process, which then reacts with BCl 3 to generate a volatile etch product in the form of WO x Cl y while tandemly generating a B 2 O 3 surface layer, which is then susceptible to self-limiting etch by HF. Parsons and coworkers <ref type="bibr" target="#b22">24</ref> have recently reported the ALE process of W with sequential use of O 2 plasma or O 3 and WF 6 . The oxidizing plasma produces a diffusion-limited WO 3 surface layer, which can be removed by exposure to WF 6 yielding WO 2 F 2 as a volatile etch byproduct. They have also reported results on an oxidation plus WCl 6 -based W ALE process <ref type="bibr" target="#b23">25,</ref><ref type="bibr" target="#b24">26</ref> in which they used a thermodynamic analysis to rationalize the experimental data. Despite these recent advances in atomic layer etch, however, mechanistic insight into the ALE processes remains limited. Computational investigations of a thermal ALE process for metal oxides with Al 2 O 3 as an example have been reported previously, <ref type="bibr" target="#b45">46</ref> but a similar investigation for metal ALE is lacking in the literature. This is due to an abundance of reactive transient species and etch products in a given ALE cycle and the difficulties related to in situ metrologies needed to identify and quantify these intermediates and products. Accordingly, to enable the rapid development of such processes, it is imperative that a mechanistic understanding of W ALE be established.</p><p>Herein, we report a first-principles computational study using density functional theory (DFT) to explore an oxidation/chlorination thermal ALE mechanism for W metal. In this study, the nature of the surface oxidation step to produce a WO x layer on tungsten is investigated using O 2 , O 3 , and N 2 O as oxidants to uncover potential routes toward selflimiting oxidation of the W surface. Second, WCl 6 and Cl 2 were examined as potential etch reagents to generate volatile WO x Cl y etch species. Spin-polarized DFT coupled with density functional perturbation theory (DFPT) for a thermochemical analysis <ref type="bibr" target="#b46">47</ref> were used to address self-limiting versus continuous etching pathways. At the same time, ground state spin polarized DFT was used to calculate the energies of surface species along several proposed reaction pathways. From these results, a full atomic layer etch chemical pathway for W metal can be mapped yielding a feasible reaction mechanism featuring sequential oxidation and chlorination steps.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">COMPUTATIONAL SETUP</head><p>All calculations reported in this paper are based on spinpolarized DFT using VASP v5.4. <ref type="bibr" target="#b47">48</ref> Core electrons are represented by projector augmented wave (PAW) potentials, <ref type="bibr" target="#b48">49,</ref><ref type="bibr" target="#b49">50</ref> and valence electrons are treated explicitly by expanding their wave functions in a plane wave basis set with an energy cutoff of 400 eV. The exchange and correlation (XC) contributions are approximated by the generalized gradient approximation (GGA) using the Perdew-Burke-Ernzerhof (PBE) functional. <ref type="bibr" target="#b50">51</ref> The total energies and forces of the geometries are converged within 1 × 10 -4 eV and -0.02 eV/Å, respectively. Methfessel-Paxton first-order smearing with 0.1 eV broadening is used for the scf calculations. The effect of dispersion correction on the structure and energies of bulk and surface geometries was found to be insignificant for this system, and thus dispersion corrections are not included (see section S0 of the Supporting Information).</p><p>The reported reaction free energies are computed as follows:</p><formula xml:id="formula_0">Δ = Δ -Δ + G H T S RT Q ln( )<label>(1)</label></formula><formula xml:id="formula_1">Δ = Δ + Δ + Δ H E W T ZPE ( )<label>(2)</label></formula><formula xml:id="formula_2">∏ ∏ = μ μ Q p p / products reactants<label>(3)</label></formula><p>Here, ΔG, ΔH, and ΔS correspond to reaction free energy, reaction enthalpy, and reaction entropy, respectively. ΔE, ΔZPE, and ΔW(T) refer to the electronic reaction energy at 0 K, zero point energy change, and temperature-dependent enthalpy change, respectively. Q is the reaction quotient used to include reactant and product pressures. A reactant pressure of 0.2 Torr and a product pressure of 0.01 Torr are used for the reported free energy calculations (see section S7 of the Supporting Information for other pressure combinations). Pressure contributions to the free energy are included only for the gas phase species. R and μ are the gas constant and stoichiometric coefficient, respectively. The H and S values of the bulk and surface geometries are computed using the Phonopy code, <ref type="bibr" target="#b51">52</ref> which requires accurate force constants obtained from DFPT calculations in VASP with a strict energy convergence threshold of 1.0 × 10 -08 eV. However, for convenience, the H and S values for gas phase molecules are obtained from the Turbomole package version 6.2 53 using the PBE XC functional and the def-TZVPP basis set. W has a BCC crystal structure <ref type="bibr" target="#b52">54</ref> with a calculated lattice constant of 3.17 Å, which agrees with the experimental value of 3.16 Å. <ref type="bibr">55</ref> The cohesive energy of W is 9.1 eV/atom, which compares well to the experimental value of 8.9 eV/atom. <ref type="bibr" target="#b53">56</ref> For the bulk W calculation, a 12 × 12 × 12 Monkhorst-Pack Kpoint sampling mesh is used and the lattice constant is obtained by simultaneously relaxing the ionic positions, cell shape, and cell volume at a larger plane wave energy cutoff of 550 eV. For the surface calculations, we have chosen the (2 × 3) supercell of a 10.8 Å thick stepped W(3 1 0) surface that has a computed surface energy of 3.77 J/m 2 . The high index high energy W stepped surface was chosen so as to maximize reactivity to incoming reagents as compared to the flat, less reactive low index surfaces. This metal slab consists of six W bilayers with 12 atoms each (72 W atoms in total) with a surface area of 0.955 nm 2 . A vacuum of 19 Å separates the two surfaces of the slab along the surface normal direction. A 3 × 3 × 1 Monkhorst-Pack K-point sampling mesh is used for all surface calculations to account for the supercell size used in this study. Atomistic models of bulk W and W(3 1 0) surface are shown in Figure <ref type="figure" target="#fig_0">S1</ref> of the Supporting Information.</p><p>Tungsten sites are 8-fold coordinated in the bulk due to the BCC crystal structure. Each bulk W atom has six valence electrons shared between eight neighbors; therefore, threefourths of an electron is contributed to each metallic W-W bond. In the (2 × 3) supercell of W(3 1 0), there are 12 surface W atoms of which 6 are 4-fold coordinated and the other 6 are 6-fold coordinated. This amounts to 27 unpaired electrons on the surface. Therefore, we adsorbed 14 O atoms (coverage of 14.7 O/nm 2 ) per supercell to the bare surface to represent an oxidized W surface region, which is computationally tractable. The degree of oxidation will depend on processing conditions (Section 3.2), but this provides a reasonable model of partially oxidized W for our analysis. We considered different arrangements of O species on the surface and relaxed the geometries (see Figure <ref type="figure" target="#fig_1">S2</ref> of the Supporting Information). The most stable WO x structure we have found is shown in Figure <ref type="figure" target="#fig_0">1a</ref>,<ref type="figure">b</ref>. This geometry represents ACS Applied Materials &amp; Interfaces the partially oxidized W surface that is present after the first ALE (oxidation) pulse. From Figure <ref type="figure" target="#fig_0">1a</ref>,b, we find that the O atoms prefer to adsorb at the bridge and 3-fold sites on the surface. Moreover, the surface W-O bonds would weaken the underlying W-W bonds, which is evident from the out-oflattice positions of the surface W atoms highlighted in red.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">RESULTS</head><p>3.1. Volatile Products of Interest. The proposed W-etch species, which originate from the surface for this ALE process, have been determined to be either WOCl 4 or WO 2 Cl 2 24-26 depending on the etch gas stoichiometry. To etch a single atom of W from the surface (W s ) with a single molecule of WCl 6 , the incoming WCl 6 molecule must react with the surface to generate a minimum of two volatile W species in the form of WOCl 4 or WO 2 Cl 2 . In order to maintain proper "bookkeeping" of volatile species, it is important to note that the first volatile W species corresponds to the W atom originating from the incoming WCl 6 molecule. Due to the origin of this W atom from the reactant gas, the resulting volatile W species (either WOCl 4 or WO 2 Cl 2 ) is considered a non-W s etch species (NES), while the second W-containing species would be designated the first-W s etch species (FES). In the most favorable case, one incoming WCl 6 could react with the surface to form 3 equiv of WO 2 Cl 2 , thereby effectively etching two surface W atoms. The first molecule of WO 2 Cl 2 would be a NES, while the first and second W species that originate from the surface would be considered the first-W s etch species (FES) and second-W s etch species (SES), respectively. This nomenclature is used throughout the remainder of this paper. Alternatively, a second mechanism utilizing 2 equiv of WCl 6 to remove one surface W atom resulting in the formation three WOCl 4 species is also considered. The first two W species, which originate from the incoming WCl 6 molecule, would be considered NESs, while the last W species, which originates from the surface, would be a FES.</p><p>If we consider Cl 2 as an etch gas, each molecule of Cl 2 has the potential to remove an oxidized surface W atom in the form of WO 2 Cl 2 (a FES). Likewise, 2 equiv of Cl 2 could be used to form 1 equiv of WOCl 4 originated from the surface (a FES). A schematic showing the described volatile byproducts is shown in Figure <ref type="figure" target="#fig_2">S3</ref> of the Supporting Information. It is important to note that the formation energies for these proposed volatile species were very similar (WOCl 4 : -7.1 eV; WO 2 Cl 2 : -7.3 eV) using bulk W, O 2 , and Cl 2 molecules as a reference. However, their formation and desorption energies with respect to a reactive surface differ and will be addressed later in this text. We first study how the oxidizing agents interact with the bare surface to form the WO x surface shown in Figure <ref type="figure" target="#fig_0">1a</ref> and then examine how WCl 6 and Cl 2 molecules interact with this oxidized W surface.</p><p>3.2. Mechanisms in the Oxidation Pulse. In the first ALE pulse, we modify the W surface by oxidizing it with O 2 , O 3 , and N 2 O. N 2 O interaction with the bare W surface is the weakest when compared to O 2 and O 3 ; therefore, the discussion on N 2 O-W interaction is moved to section S2 of the Supporting Information. Oxidation of W using O 2 and O 3 has been studied quite extensively, and it is known that bulk oxidation of W in an O 2 atmosphere is appreciable only above 500 °C, which is well above the ALE processing temperature. <ref type="bibr" target="#b54">[57]</ref><ref type="bibr" target="#b55">[58]</ref><ref type="bibr" target="#b56">[59]</ref> An account on the temperature dependence of the oxidation of W using O 2 and O 3 relevant to atomic layer etching has been discussed by George and co-workers. <ref type="bibr" target="#b11">13</ref> From the N-E analysis <ref type="bibr" target="#b46">47</ref> given in section S3 of the Supporting Information, comparing the continuous and self-limiting reaction models of the first ALE pulse, we predicted a minimum (thermodynamic) energy barrier of about 2.3 eV to cause bulk oxidation. We could expect that the predicted thermodynamic barrier to be breached below 800 °C as W oxide, formed on the surface, is reported to become volatile beyond that temperature. <ref type="bibr" target="#b57">60</ref> Warren et al. <ref type="bibr" target="#b58">61</ref> found that a 1 h exposure of polycrystalline W to O 2 below 200 °C resulted in the formation of 1.0-1.6 nm of WO 3 . Therefore, by keeping the temperature below 200 °C or by controlling the exposure time and partial pressure of the reactants, a thin layer of oxide relevant for ALE can be formed. The temperature needed for the thermal ALE process will also be influenced by the activation energies required in the second ALE pulse.</p><p>On the clean W(3 1 0) surface, both O 2 and O 3 molecules dissociate spontaneously on adsorption and form surface W-O bonds as shown in Figure <ref type="figure" target="#fig_0">1a</ref>,b by releasing -7.24 and -12.13 eV per adsorbed molecule, respectively. For comparison, the most favorable binding energy of a N 2 O molecule is -5.81 eV. O 3 is a stronger oxidant than the O 2 molecule. Since the adsorption geometries and binding sites are similar for both molecules, we will only examine the adsorption of the O 2 molecule in detail. We considered different binding sites for the dissociated O atoms on the W surface as shown in Figure <ref type="figure" target="#fig_1">2a-e</ref>. The binding energies and shortest W-O bond distances from these geometries are listed in Table <ref type="table" target="#tab_0">1</ref>. The computed binding energy per O atom is in the range of -3.30 to -4.47 eV for on-surface adsorption, with the bridge sites being the most favorable followed by the atop, 3-fold, and 4-fold sites. The adsorption at subsurface sites is about 3 eV less favorable than the most favorable bridge site (Figure <ref type="figure" target="#fig_1">2f</ref>). Clearly, at this coverage of 2 O/nm 2 , diffusion to subsurface sites is not as favorable as on-surface adsorption. The O atom in the subsurface site is at least 1.9 Å away from the neighboring W atoms. The shortest W-O bond length is found at the atop site followed by the bridge, subsurface, 3-fold, and 4-fold sites. Comparing with the most favorable oxygen-covered surface model shown in Figure <ref type="figure" target="#fig_0">1a</ref>, we note that the O atoms are predominantly adsorbed at the bridge sites.</p><p>In this section, we saw the various adsorption sites preferred by the dissociated O atoms and that the O 2 molecule indeed dissociates spontaneously. We have prepared the saturated surface models as described in the computational section. Any additional O 2 molecule introduced in the system beyond a single O 2 molecule described in this section will indeed dissociate (in an exoergic reaction) until the saturated surface is formed. Thus, the intermediate steps do not need to be discussed.</p><p>3.3. Mechanisms in the Chlorination Pulse. The primary mechanism of chlorination of the oxidized W surface by WCl 6 is the dissociation of the molecule and subsequent exchange of Cl ligands from the reagent to the substrate, which requires elevated temperatures. These are complex dynamical processes unlike the simple dissociative adsorption of the reactant molecules in the first pulse. Before investigating the chlorination of the oxidized W surface, we first explored the possibility of uncontrolled etching of W metal by WCl 6 and Cl 2 . These results are discussed in detail in section S4 of the Supporting Information. The exposure of WCl 6 and Cl 2 on the bare W surface did not result in continuous etching of the substrate even at elevated temperatures. Deposition of W, when WCl 6 is used, is also not thermodynamically favorable beyond room temperature.</p><p>WCl 6 being an octahedral molecule interacts weakly with the O-covered W surface due to the net electrostatic repulsion between the O and Cl species. As a result of this net electrostatic repulsion, WCl 6 does not dissociate spontaneously after initial adsorption at low temperatures due to the presence of the kinetic energy barrier. Dissociation of the WCl 6 molecule would need elevated temperatures to excite the W-Cl bonds or O-free regions on the surface as WCl 6 readily dissociates on the bare W surface. Experiments suggest that a temperature of at least 200 °C is needed for the ALE process to take place, <ref type="bibr" target="#b23">25,</ref><ref type="bibr" target="#b24">26</ref> which means that the WCl 6 molecules would have dissociated at this temperature. A short 2.5 ps duration ab initio molecular dynamics (MD) simulation at 800 K of the WO x surface with two physisorbed WCl 6 molecules revealed a spontaneous donation of one of the Cl ligands by each of the reactant molecules to the surface W atoms as shown in Figure <ref type="figure" target="#fig_2">3</ref>. A high temperature of 800 K is used to accelerate the MD simulation; otherwise, we would have needed a significantly longer simulation time to observe this reaction step at lower temperatures.</p><p>The W atom in the WCl 6 molecule is the donor W atom (W d ), while the acceptor W (W a ) is one of the oxidized surface W atoms. In the first 300 steps (750 fs) of the simulation, we can identify the high amplitude vibrational mode of the Cl atom from the fluctuations in the interatomic W d -Cl distances (see Figure <ref type="figure" target="#fig_2">3</ref>). Moreover, an increase in the W d -Cl distance correlates with a decrease in the W a -Cl distance. This large amplitude motion, a byproduct of the thermal energy contribution, results in the dissociation of one of the Cl ligands from the WCl 6 molecule. After the crossover point at 837 fs (step 335), the dissociated Cl ligand did not attempt to bind back to the W d atom, which is evident from the continuous increase in d(W d -Cl) value beyond 1.25 ps (step 500). The inset graph in Figure <ref type="figure" target="#fig_2">3</ref> shows the distances and single-point energies of the system during the dissociation of WCl 6 . We see an energy change of 800 meV right before the dissociation takes place; this includes contribution from the motion of surface atoms as well. The dissociation of the Cl ligand from the second WCl 6 molecule was similar to the above observation.</p><p>To compute the entire dissociation pathway, the formation of non-volatile species are considered when WCl 6 is adsorbed either as an intact or dissociated molecule, for which the geometries are shown in Figure <ref type="figure" target="#fig_3">4A-E</ref>. While there are very many possibilities to arrange an intact and dissociated WCl 6 molecule on the O-covered W surface, it is not practical to study them all; therefore, we have considered these five minimum geometries as a representative for further discussion. In Figure <ref type="figure" target="#fig_3">4</ref>, geometry A shows a weak interaction between the WCl 6 molecule and the O-covered W surface with a binding energy of just -0.09 eV. Geometry B shows the state where the weakly adsorbed WCl 6 dissociates and a Cl ligand is adsorbed to a surface W atom. This reaction is not spontaneous and costs 0.48 eV. The potential energy surface cut along the pathway, obtained by a linear interpolation of the position of the dissociated Cl ligand from geometry A to B, is computed, and the computed dissociation barrier is 0.52 eV (graph and geometries in Figure <ref type="figure">S9</ref> of the Supporting Information). The reverse barrier for the reformation of WCl 6 is just 0.04 eV. However, this reaction is hindered by the diffusion of the WCl 5 fragment into the vacuum immediately after the dissociation. It is possible that all impinged WCl 6 molecules follow this process and chlorinates the WO x surface without depositing any W as WCl 5 . However, the WCl 5 fragment in the gas phase can further adsorb on the surface by forming W-O bonds as shown in geometry C (WCl 5 adsorbed), which is energetically favorable and releases -1.32 eV of energy in comparison to geometry B. Dissociation of a Cl ligand from the adsorbed  For the subsurface geometry, the distance in parentheses correspond to the O atom in the subsurface site.</p><p>WCl 5 fragment in geometry C to form geometry D has an energy cost of 1.56 eV, suggesting that further dissociation of Cl ligands from surface-adsorbed WCl 5 has a large energy penalty. Dissociation of surface-bound WCl 5 is unfavorable at 0 K due to enthalpic loss, which will be compensated by entropic gain at elevated temperatures due to the formation of the volatile species (WOCl 4 ). Another possibility for the WCl 5 fragment in geometry B is to form geometry E by donating another Cl ligand in the gas phase to the surface and adsorb as WCl 4 by forming a W-O bond (WCl 4 hop). This results in the formation of WOCl 4 , one of the proposed volatile species, which spontaneously desorbs from the surface, as shown in geometry E. Once again, this step will see an entropic gain at elevated temperatures and compensate the enthalpic loss reported at 0 K. Only geometries A and C have favorable (negative) binding energies at 0 K.</p><p>Beginning from the most favorable non-volatile adsorption geometry C, step-by-step desorption of the proposed volatile etch products and their corresponding energetics are investigated as shown in Figure <ref type="figure" target="#fig_4">5</ref>. Three cases in which the sequential removal of 1 WOCl 4 + 1 WO 2 Cl 2 , 1 WO 2 Cl 2 + 1 WOCl 4 , and 3 WO 2 Cl 2 are considered. Note that the first volatile product removed in all three cases is the NES followed by FES and SES as discussed earlier. In the first case, WOCl 4 was removed as the NES, with a desorption energy of 0.44 eV. Due to entropic gain, this step is favorable (-1.73 eV gain) at 500 K. This however does not count toward etching of the  substrate since the W atom removed is not a surface atom. Following this step, WO 2 Cl 2 is removed as the FES with an additional desorption energy of 2.57 eV (which is also not favorable at 500 K). In the second case, WO 2 Cl 2 is removed first as the NES with an energy cost of 0.57 eV, which is 0.13 eV more than WOCl 4 in the first pathway. This is because a second W-O bond must be broken in forming WO 2 Cl 2 . The subsequent removal of WOCl 4 in this sequence costs 2.72 eV of energy. We note that WOCl 4 offers more entropy than WO 2 Cl 2 due to the presence of an additional ligand, and it is evident from the reduced free energy gain in the first step (-1.37 eV for WO 2 Cl 2 against -1.73 eV for WOCl 4 ) and reduced free energy loss in the second step (0.54 eV for WOCl 4 against 0.64 eV for WO 2 Cl 2 ) when compared with the previous case. In these two cases, the removal of the FES is not favorable even at 500 K. However, the cumulative enthalpic gain in the earlier steps of the ALE cycle could offset this energy cost.</p><p>In the third case, three WO 2 Cl 2 molecules were removed sequentially. While the removal of the NES costs 0.57 eV, the removal of the FES and SES becomes increasingly expensive with energy costs of 1.00 and 4.42 eV, respectively. In contrast to the first two cases, the removal of the FES in this case is favorable at 500 K (-0.93 eV); however, the removal of the SES is not. This is due to the fact that a considerable number of surface W-O and W-W bonds have to be broken to remove the second WO 2 Cl 2 species. Similarly, from the minimum geometry E, the removal of the pre-formed non-W s etch WOCl 4 is favorable by -0.29 eV. Further removal of the etch product WO 2 Cl 2 costs an energy of 1.0 eV, but this step is entropically favorable at 500 K in contrast to the first case from geometry C. The free energy values for other reactant and product pressures for comparison is given in section S7 of the Supporting Information. It is to be noted that the influence of the reactant pressure to the free energy is very small compared to the contributions from enthalpy and entropy in this case.</p><p>From the above analysis, we find that each WCl 6 molecule is capable of removing up to two surface W atoms and six surface O atoms in the best case scenario (3 WO 2 Cl 2 ). However, the removal of the W atoms from the surface costs anywhere between 1.00 and 4.42 eV. We also find that the removal of WOCl 4 as a non-W s etch product costs less energy when compared to WO 2 Cl 2 since the former removed only one surface-bound O atom whereas the latter removes two, which costs more energy. This is further supported by the observation that, whenever a WOCl 4 species is formed on the surface, it readily desorbs from the surface. In contrast, WO 2 Cl 2 is bound to the surface primarily as a result of the strong W-W and W-O bonds. Therefore, WO 2 Cl 2 should become volatile only at elevated temperatures.</p><p>To consider other combinations of etch products, 2 WCl 6 adsorption on the O-covered W surface is studied as shown in Figure <ref type="figure" target="#fig_5">6</ref>. Similar to the low coverage case, the interaction between WCl 6 and the substrate was weak with a binding energy of just -0.07 eV/WCl 6 (geometry A). Dissociation of the adsorbed WCl 6 molecules by donating one Cl atom to the surface (geometry B) costs about 0.27 eV/WCl 6 . Keeping geometry B as the starting point, we computed the desorption energies for the removal of three consecutive WOCl 4 species. The removal of the first two volatile species (NESs) is exoergic, while the removal of the third WOCl 4 (FEP) has a cost of 1.08 eV. The removal of the above three volatile products was favorable at 500 K. In another desorption sequence, we studied the desorption of two consecutive WOCl 4 as the NES followed by two WO 2 Cl 2 as the FES and SES. While the removal of the first two WOCl 4 species was essentially the same as in the previous case, the subsequent removal of the first WO 2 Cl 2 species costs less energy compared to the energy cost for removal of WOCl 4 in the other sequence. However, the removal of the second surface W atom in the form of WO 2 Cl 2 has a huge energy penalty of 4.7 eV. We find that the removal of a surface atom as WOCl 4 is not more energetically favorable than its removal as WO 2 Cl 2 , which is understandable as more surface W-O/W-W bonds have to be broken to form the former than the latter in this particular  case. On the other hand, it is more favorable to form WOCl 4 as a NES from the incoming WCl 6 molecule when compared to WO 2 Cl 2 . Now, let us look at the chlorination pulse when Cl 2 is used as the gas phase reactant. Similar to WCl 6 , Cl 2 did not adsorb strongly via dissociation at the O-rich region of the WO x surface. A binding energy of just -0.05 eV per Cl 2 molecule is obtained. A short MD simulation at 800 K also failed to capture Cl 2 dissociation as the Cl 2 molecule simply diffused away from the surface due to the repulsion between the Cl and surface O atoms. Therefore, we studied the dissociative adsorption of 1 and 2 Cl 2 on the model WO x surface, which released an energy of -3.11 eV to -3.92 eV per adsorbed Cl 2 . The corresponding geometries are schematically presented in section S8 of the Supporting Information. From the above structures, desorption energies of volatile species such as WO 2 Cl 2 and WOCl 4 are computed to be 1.33 and 0.73 eV, respectively. It is to be noted that there is no NES when Cl 2 is used in the chlorination pulse. Also, as mentioned earlier in Section 3.1, each Cl 2 molecule is capable of forming, at most, one etch product (WO 2 Cl 2 as the FES), whereas two Cl 2 molecules are needed to form one WOCl 4 (as the FES) or two WO 2 Cl 2 (as the FES and SES). On the bare W surface, Cl 2 dissociates spontaneously at low temperatures (discussed in detail in section S4 of the Supporting Information). Homolytic dissociation of Cl 2 is required on the WO x surface so that volatile species can be formed. Dissociation of Cl 2 in vacuum requires 3.1 eV, while the dissociation of one W-Cl bond from the WCl 6 molecule in vacuum required a slightly lower 2.5 eV. Based on the above, WCl 6 may dissociate at lower temper-atures when compared to Cl 2 . Therefore, in the next section, we will discuss the full ALE cycle with WCl 6 as the second pulse chemical.</p><p>3.4. The Full Atomic Layer Etch Cycle. In this section, we discuss the full cycle of the W ALE process, with O 2 , O 3 , and N 2 O as the sfirst pulse chemical and WCl 6 as the second pulse chemical, which is summarized in Figure <ref type="figure" target="#fig_6">7A</ref>. Steps 1, 2, 3, and 4 correspond to pulse-1, purge-1, pulse-2, and purge-2 of the W ALE cycle, respectively. Step 5 is also the step 1 of the second and subsequent ALE cycles, whereas steps 2, 3, and 4 are common for all ALE cycles. The first ALE pulse is the adsorption of the oxidizing agents (O 2 , O 3 , and N 2 O). In the oxidation step, step 1 of the first ALE cycle, energy is gained by the dissociative adsorption of the reactant molecules on the bare W surface. We will show later that subsequent ALE cycles do not start with a bare W surface but rather a WO x Cl y surface. We show in Table <ref type="table" target="#tab_1">2</ref> and section S3 of the Supporting Information that this step realizes a significant enthalpy gain by the formation of stable W-O bonds, but the associated entropic loss was comparatively too small to make the reaction unfavorable at ALE relevant temperatures.</p><p>An energy of -4.31 to -4.80 eV (-3.61 to -4.63 eV at 500 K), depending on the first pulse reactant used, is gained per surface W atom in the supercell (W s , note that there are 12 W s in the supercell) in this step. This amounts to an energy of -3.69 to -4.11 eV released per O atom adsorbed. In step 2, unreacted reactant molecules are purged from the etch chamber along with any byproducts formed.</p><p>In step 3, the dissociative adsorption of WCl 6 is either mildly favorable energetically (-0.08 eV/W s ) or costs energy (0.12 eV/W s ). Moreover, this step is endergonic at 500 K mainly due to the entropic loss. However, the cumulative energetic gain through steps 1 to 3 is still exoergic, -4.19 to -4.88 eV per W s (-3.31 to -4.52 eV per W s at 500 K). We use the energy per W s since it is convenient to compare to the energy required to desorb the etch products in the next step. As discussed earlier, we have also performed a short 2.5 ps MD study and observed spontaneous dissociation of the WCl 6 molecule on the WO x surface at 800 K. We chose 800 K to accelerate the MD simulation. However, this process is also possible from simulations at temperatures close to the ALE relevant temperature, e.g., 500 K, provided long trajectories are computed, which are computationally expensive.</p><p>In step 4, the formation and desorption of the non-W s etch and W s etch byproducts (X number of WO 2 Cl 2 and Y number of WOCl 4 ) take place. The first product per incident WCl 6 is a NES, and depending on the stoichiometry of the byproduct, there could additionally be one (FES) or two (FES and SES) W s etch species. We have determined the typical energy requirement for the removal of the volatile NES, FES, and SES as shown in Table <ref type="table" target="#tab_1">2</ref>. The NES required the least energy (sometimes this is exoergic) as evident from the negative free energies at 500 K. The removal of the FES requires between 0.48 and 2.72 eV, and it can even be spontaneous at higher temperatures (0.64 to -1.45 eV at 500 K) due to net entropic gain. However, the removal of a SES requires between 4.42 and 4.47 eV of energy and it is also not favorable at high temperatures. However, the cumulative enthalpic gain per surface W atom up to this point might compensate these energy requirements for the removal of the FES and the SES at elevated temperatures. Thus, the removal of the NES is spontaneous while the removal of the FES and the SES costs energy and is subject to free energy changes in the cycle, the latter more so than the former. Since we gain a free energy of -39.72 to -54.24 eV per supercell (12 W s ) at 500 K from the first three steps, the overall energy change for the entire cycle including the removal of NES, FES, and SES from a WCl 6 molecule will still be favorable (negative free energy).</p><p>At this point, the second and subsequent ALE cycles will start from a surface that is potentially one of the four shown in Figure <ref type="figure" target="#fig_6">7B</ref>, that is WO x Cl y , WCl y , or WO x terminated or a potentially bare W surface. The reason for this is that the surface geometry after the WCl 6 pulse will be dependent on the process conditions and the reactions that take place in the second pulse and in the second purge steps. The W surface is not likely to be terminated with bare tungsten as this is only possible when all the adsorbed WCl 6 species form volatile WO x Cl y species, thereby depleting the adsorbed Cl and all surface O atoms. WO x will only result if the WCl 6 molecules in the second pulse do not dissociatively react with the substrate and cause an etch delay, which is also not very probable. It is more likely that the surface will now be partially covered with Cl species (WCl x ) because the WCl 6 and Cl 2 molecules dissociate readily on the bare W surface, which is now exposed after volatile products are removed from the WO x surface, by releasing -4.5 and -5.9 eV, respectively. It is also possible that there are some O atoms remaining on the surface forming nonvolatile WO x Cl y species as suggested by Xie et al. <ref type="bibr" target="#b23">25,</ref><ref type="bibr" target="#b24">26</ref> Our calculations also predict that the removal of the SES requires a very high energy, which indicate a O x Cl y termination of the W surface. Therefore, as subsequent ALE cycles proceed, the oxidizing agents will have to react with an (oxy)chloride termination of the W surface rather than a bare W surface and this may influence the overall etch rate. <ref type="bibr" target="#b23">25,</ref><ref type="bibr" target="#b24">26</ref> To understand the potential impact of this, we studied a model system of six O 2 molecules per supercell interacting with a fully Cl-covered W surface that may be present after one etch cycle, as shown in Figure <ref type="figure" target="#fig_7">8</ref>. When initially intact O 2 molecules are adsorbed on the Cl-covered W surface (Figure <ref type="figure" target="#fig_7">8a</ref>), no spontaneous reaction is observed due to the repulsion between the Cl and O atoms. We note that O 2 dissociates spontaneously on Cl-free regions on the W surface, though we cannot see that in our model because of the full surface passivation with Cl. We therefore examined two configurations  whereby dissociated O 2 molecules are adsorbed on the Clcovered W surface (Figure <ref type="figure" target="#fig_7">8b</ref>,<ref type="figure">c</ref>). In Figure <ref type="figure" target="#fig_7">8b</ref>, the resulting O atoms are adsorbed close to the surface W atoms, which on relaxation resulted in the spontaneous formation of surfacebound WO 2 Cl 2 species with a release of -2.4 eV per adsorbed O atom. In the second configuration (Figure 8c), oxygen atoms are adsorbed close to the Cl atoms, and upon relaxation, we observe the spontaneous formation and desorption of oxychloride species such as ClO 2 , Cl 2 O 2 , and Cl 3 O 2 , with a gain of -1.0 eV/O. This suggests that the incoming O 2 molecule in the second ALE cycle must first dissociate before adsorbing at the fully chlorinated surface in order to react with it. As mentioned earlier, this pre-dissociation of the O 2 molecules is not needed when the Cl ligands are sparsely distributed on the surface.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">CONCLUSIONS</head><p>A first-principles investigation of a thermal atomic layer etch process for metallic tungsten using sequential oxidation and chlorination is presented. O 2 , O 3 , and N 2 O were examined as the oxidizing agents to modify the oxidation state of the surface W atoms. WCl 6 and Cl 2 were examined as ligand exchange agents for the material removal pulse. The reactant molecules chosen for both ALE pulses meet the requirement of being stable in the gas phase at the ALE operating temperature. Runaway oxidation of W is possible when O 2 and O 3 are used in the first ALE pulse. However, a thin layer of WO x can be obtained by carefully controlling the reactant pressure, temperature, and exposure time. The most important aspect of the ALE process is the self-limiting nature of the reactions taking place in the two pulses. Qualitative predictions based on thermochemical analysis showed that bulk oxidation was hindered by thermodynamic barriers at ALE relevant temperatures and pressures. Similarly, spontaneous etching of W by WCl 6 and Cl 2 was predicted to be unfavorable, even though these molecules spontaneously react with the bare W surface. The mechanisms of the dissociative adsorption of the oxidizing agents on the bare W surface were reported. Exposure to O 2 , O 3 , and N 2 O resulted in an O-covered surface with ozone being the most reactive chemical for the first pulse followed by O 2 and N 2 O. To keep the computational effort tractable, we considered a monolayer oxidized surface model of W at the end of the first half ALE cycle. However, WCl 6 molecules interacted weakly with the oxidized W surface due to net repulsion between the O and Cl atoms and also because of the kinetic barriers inhibiting the dissociation of WCl 6 molecule. Thermal energy is required to dissociate the WCl 6 molecule so that it can donate its Cl ligands to the surface leading to the formation of the target volatile species, primarily WOCl 4 and WO 2 Cl 2 . The incoming WCl 6 molecule can form WOCl 4 as a non-W s etch species by exchanging two Cl ligands for one O atom from the surface. This also results in the formation of a WO 2 Cl 2 species on the surface. The desorption of WO 2 Cl 2 has a relatively higher energy cost as compared to WOCl 4 due to the relatively high coordination of the W atom in surface-bound WO 2 Cl 2 . The other possibility for the incoming WCl 6 molecule is to dissociate completely by donating all of the Cl ligands to the surface and form three WO 2 Cl 2 molecules as volatile species. Therefore, each WCl 6 molecule is capable of removing up to two surface W atoms with a maximum energy cost of 4.42 eV. The desorption of the first-W s etch product costs between 0.48 and 2.72 eV, which is thermodynamically favorable in the overall energy cycle, whereas the desorption of the second etch product costs almost 5 eV and is unfavorable.</p><p>Due to the favorable reaction of WCl 6 and Cl 2 on the bare W surface, it will be covered with O and Cl ligands at the end of the first ALE pulse. In the second ALE cycle, the oxidizing agents must remove the Cl ligands first, either by forming volatile W oxychlorides or stable oxychloride chains, before accessing the surface W atoms, which might slow down the etch process. Computational investigations of such ALE processes provide the required understanding of the mechanism of etch reactions. Such understanding is vital to the design of new and robust ALE processes in the future.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head><p>* sı Supporting Information</p><p>The Supporting Information is available free of charge at <ref type="url" target="https://pubs.acs.org/doi/10.1021/acsami.0c06628?goto=supporting-info">https://pubs.acs.org/doi/10.1021/acsami.0c06628</ref>.</p><p>Atomic models of W bulk and surface, schematics of second ALE pulse, mechanism of N 2 O pulse, Natarajan-Elliott "N-E" analysis of the oxidation pulse, reaction of WCl 6 and Cl 2 on the bare W surface, dissociation pathway of WCl 6 , description of thermal ALE of metals, influence of reactant and product pressures, and Cl 2 in material removal pulse (PDF)</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. (a) Top and (b) side views of the most stable O-covered W(3 1 0) surface. The blue region indicates the atoms used in the DFPT calculation. The top W atoms coordinated by more than two O atoms, highlighted in the red region, are lifted out of their lattice positions due to the formation of W-O bonds. The color coding is as follows: W = gray, O = red.</figDesc><graphic coords="3,84.45,93.96,88.99,84.10" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. The top and side views of dissociated O 2 molecules on the W(3 1 0) surface at atop sites, bridge sites, alternate bridge sites, 3fold sites, 4-fold sites, and subsurface sites are shown in (a), (b), (c), (d), (e), and (f), respectively. The color coding is as follows: W = gray, O = red.</figDesc><graphic coords="4,151.77,197.94,56.92,53.98" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Snapshots (X1-X3) from MD simulation of two WCl 6 molecules adsorbed on the WO x surface along with the evolution of distances between the dissociated Cl atom and the donor/acceptor W atoms. The inset graph shows the distances and single-point DFT energies of the snapshots (relative to that of snapshot 322, X1) during the bond dissociation. The color coding is as follows: W = gray, O = red, and Cl = green.</figDesc><graphic coords="5,153.57,195.57,319.96,238.75" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Relaxed geometries showing the non-volatile (dissociative) adsorption of WCl 6 on the O-covered W surface. The values in red indicate an energy cost, and the values in green indicate a gain in energy at 0 K. The values above (or left of) the arrow are the energy change with respect to the preceding configuration, while the values below (or right of) the arrow are the energy change with respect to geometry A (cumulative energy change). In geometry A, WCl 6 is intact, and in geometries B, C, D, and E, the molecule is in the dissociated state. The reference gas phase molecule used for the binding energy calculation is WCl 6 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>5 .</head><label>5</label><figDesc>Energy requirements for the removal of volatile species from geometry C and E from Figure 4. The values in red indicate a moderate energy cost, and the values in green indicate a gain in energy. The values above the arrow are the desorption energies of the respective volatile species, while the values below are the free energy change of desorption at 500 K. The desorbed molecules are either WOCl 4 or WO 2 Cl 2 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Minimum energy geometries showing the non-volatile adsorption of 2 WCl 6 on the O-covered W surface and energies needed to remove volatile species from them. The values in red indicate energy loss, and the values in green indicate energy gain. The values above the arrow are the desorption energies of the respective volatile species, while the values below are the free energy change of desorption at 500 K.</figDesc><graphic coords="6,336.96,353.58,60.07,54.67" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Panel (A) shows a schematic representation of an W ALE cycle. The energies of the individual steps are listed in Atom color coding is as follows: W = gray, O = red, and Cl = green. Step 1 depicts the initial functionalization of the surface with the desired oxidant. Step 2 describes the purging of the excess oxidant from the reaction chamber. Step 3 describes the introduction of WCl 6 , which exhibits no spontaneous dissociation until elevated temperatures. Step 4 depicts the liberation of volatile WO x Cl y species as the most likely etch species. Step 5 in an idealized system results in the repassivation of the surface leading into the next cycle and is thus labeled as equivalent to step 1. Additional passivated surface post etch is shown in panel (B). WCl x terminated surface is discussed in detail in Figure 8.</figDesc><graphic coords="7,236.46,271.26,61.90,54.85" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. of 2 on the Cl-covered W surface, which is identified as one of the possible surface terminations at the end of the ALE cycle in Figure 7. In case (a), six intact O 2 molecules are adsorbed on the surface with 0 eV/O 2 . In (b) and (c), 12 O atoms (six dissociated O 2 molecules) are adsorbed close to surface W and close to Cl atoms with a release of -4.8 and -0.5 eV/O 2 , respectively. The color coding is as follows: W = gray, O = red, and Cl = green.</figDesc><graphic coords="8,443.01,613.05,73.39,64.15" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Binding Energies and Minimum W-O Bond Distance for O 2 adsorption on the W(3 1 0) Surface a</figDesc><table><row><cell>geometry</cell><cell>E bind (eV/O)</cell><cell>d(W-O) (Å)</cell></row><row><cell>atop</cell><cell>-3.80</cell><cell>1.7</cell></row><row><cell>bridge</cell><cell>-4.47</cell><cell>1.9</cell></row><row><cell>bridge2</cell><cell>-3.99</cell><cell>1.9</cell></row><row><cell>3-fold</cell><cell>-3.31</cell><cell>2.0</cell></row><row><cell>4-fold</cell><cell>-3.30</cell><cell>2.1</cell></row><row><cell>subsurface</cell><cell>-1.45</cell><cell>1.7 (1.9)</cell></row></table><note><p>a</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Energy Requirements (Ranges with Most Favorable (MF) and Least Favorable (LF) Values in eV) for the Individual Steps of the ALE Cycle in Figure7a Here, W s refers to a surface W atom. NES, FES, and SES are acronyms for non-W s etch, first-W s etch, and second-W s etch species, respectively. The values in bold refer to the cumulative values combining oxidation pulse and chlorination pulse. For the free energy values at 500 K, the contributions from surface models are not included as they were estimated to be less than 4% of the total value.</figDesc><table><row><cell></cell><cell cols="2">ΔE (eV)</cell><cell cols="2">ΔG (eV) 500 K</cell><cell></cell></row><row><cell>step</cell><cell>MF</cell><cell>LF</cell><cell>MF</cell><cell>LF</cell><cell>per</cell></row><row><cell>O 2 /O 3 /N 2 O pulse</cell><cell>-4.80</cell><cell>-4.31</cell><cell>-4.63</cell><cell>-3.61</cell><cell>W s</cell></row><row><cell>purge 1</cell><cell>0.00</cell><cell>0.00</cell><cell>0.00</cell><cell>0.00</cell><cell>W s</cell></row><row><cell>WCl 6 pulse</cell><cell>-0.08</cell><cell>0.12</cell><cell>0.11</cell><cell>0.30</cell><cell>W s</cell></row><row><cell></cell><cell>-4.88</cell><cell>-4.19</cell><cell>-4.52</cell><cell>-3.31</cell><cell>W s</cell></row><row><cell>purge 2</cell><cell>-0.53</cell><cell>0.57</cell><cell>-2.70</cell><cell>-1.37</cell><cell>NES</cell></row><row><cell></cell><cell>0.48</cell><cell>2.72</cell><cell>-1.45</cell><cell>0.64</cell><cell>FES</cell></row><row><cell></cell><cell>4.42</cell><cell>4.74</cell><cell>2.48</cell><cell>2.80</cell><cell>SES</cell></row></table><note><p>a</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://dx.doi.org/10.1021/acsami.0c06628 ACS Appl. Mater. Interfaces 2020, 12, 36670-36680</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://dx.doi.org/10.1021/acsami.0c06628</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0" />			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Overview of Atomic Layer Etching in the Semiconductor Industry</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+		<idno>No. 020802</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Selectivity in Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b02543</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="7657" to="7665" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Predicting Synergy in Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kabansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nojiri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">L</forename><surname>Berry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4979019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="05C" to="302" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Prospects for Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsnano.6b02991</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="4889" to="4894" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A Brief Overview of Atomic Layer Deposition and Etching in the Semiconductor Processing</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">17th International Conference on Electronic Packaging Technology</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2016">2016. 2016</date>
+			<biblScope unit="page" from="1365" to="1368" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of HfO 2 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0041506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5013</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Low Damage Atomic Layer Etching of ZrO 2 by Using BCl 3 Gas and Ar Neutral Beam</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1166/jnn.2009.1748</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanosci. Nanotechnol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="7379" to="7382" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nn507277f</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2061" to="2070" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching of HfO 2 using HF for fluorination and TiCl 4 for ligand-exchange</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5045130</idno>
+		<idno>No. 061504</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Al 2 O 3 , HfO 2 , and ZrO 2 Using Sequential Hydrogen Fluoride and Dimethylaluminum Chloride Exposures</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b04767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="18455" to="18466" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of SiO 2 by a &quot;Conversion-Etch&quot; Mechanism Using Sequential Reactions of Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b01259</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="10296" to="10307" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">WO 3 and W Thermal Atomic Layer Etching Using &quot;Conversion-Fluorination&quot; and &quot;Oxidation-Conversion-Fluorination</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b09161</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mechanisms. ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="34435" to="34447" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of ZnO by a &quot;Conversion-Etch&quot; Mechanism Using Sequential Exposures of Hydrogen Fluoride and Trimethylaluminum</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1183" to="1191" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Mechanism of Thermal Al 2 O 3 Atomic Layer Etching Using Sequential Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b00300</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="3648" to="3657" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Trimethylaluminum as the Metal Precursor for the Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b00111</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2994" to="3003" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Enhanced Atomic Layer Etching of Native Aluminum Oxide For Ultraviolet Optical Applications</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hennessy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Jewell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>France</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nikzad</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4986945</idno>
+		<idno>No. 041512</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Competition Between Al 2 O 3 Atomic Layer Etching And AlF 3 Atomic Layer Deposition Using Sequential Exposures Of Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4973310</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">52819</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Crystalline Aluminum Nitride Using Sequential, Self-limiting Hydrogen Fluoride and Sn(acac) 2 Reactions and Enhancement by H 2 and Ar Plasmas</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4959779</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">050603</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Crystalline GaN Using Sequential Exposures of XeF 2 and BCl 3</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Hite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Mastro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Eddy</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5095938</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="page">243103</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Titanium Nitride Using Sequential, Self-Limiting Reactions: Oxidation to TiO 2 and Fluorination to Volatile TiF 4</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b02286</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="8202" to="8210" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Rapid Thermal-Cyclic Atomic-Layer Etching of Titanium Nitride in CHF 3 /O 2 Downstream Plasma</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-6463/ab3cf3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">475106</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of AlF 3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.5b07236</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="25385" to="25393" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Thermally Driven Self-Limiting Atomic Layer Etching of Metallic Tungsten Using WF 6 and O 2</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b19024</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="9147" to="9154" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Self-Limiting Thermal Atomic Layer Etching of Tungsten Metal Using O 2 Oxidation and WCl 6 or WF 6 : Role of Halogen Species in Temperature Dependence of ALE Reaction Rate</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>AVS ALE Workshop</publisher>
+			<pubPlace>Incheon, South Korea</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Metallic Tungsten Via Oxidation and Etch Reaction Mechanism Using O 2 or O 3 for Oxidation and WCl 6 as the Chlorinating Etchant</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5134430</idno>
+		<idno>No. 022605</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching Of SiO 2 With Ar and CHF 3 Plasmas: A Self-limiting Process For Aspect Ratio Independent Etching</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dallorto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Goodyear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cooke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Szornel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kastl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schwartzberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">W</forename><surname>Rangelow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cabrini</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/ppap.201900051</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plasma Processes Polym</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<date type="published" when="2019">2019. 1900051</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Quasi atomic layer etching of SiO 2 using plasma fluorination for surface cleaning</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Koh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chae</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5003417</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="01B" to="106" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Isotropic Atomic Layer Etching of ZnO Using Acetylacetone and O 2 Plasma</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mameli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b12767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="38588" to="38595" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching Of GaN and AlGaN Using Directional Plasmaenhanced Approach</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nojiri</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.56.06HB06</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">06</biblScope>
+			<biblScope unit="page">6</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of Gallium Nitride (0001)</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kauppinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sundqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Suyatin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suihkonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Kauppinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sopanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4993996</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">060603</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching Of Silicon Nitride Using Infrared Annealing for Short Desorption Time Of Ammonium Fluorosilicate</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kurihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kouzuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yokogawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.56.06HB01</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">06</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Application of Atomic Layer Deposition Tungsten (ALD W) as Gate Filling Metal for 22 nm and Beyond Nodes CMOS Technology</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.015404jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="82" to="P85" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of Tungsten Using Sequential Surface Chemistry With a Sacrificial Stripping Reaction</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Klaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Ferro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0040-6090(99)01076-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">360</biblScope>
+			<biblScope unit="page" from="145" to="153" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Nucleation and Growth During Tungsten Atomic Layer Deposition on SiO 2 Surfaces</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Elam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Grubbs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0040-6090(01)00762-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">386</biblScope>
+			<biblScope unit="page" from="41" to="52" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Effects of B 2 H 6 Pretreatment on ALD of W Film using a Sequential Supply of WF 6 and SiH 4</title>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E.-S</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B.-M</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-J</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-S</forename><surname>Yoon</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2035703</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid-State Lett</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="155" to="C159" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Realtime Sensing And Metrology for Atomic Layer Deposition Processes and Manufacturing</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Henn-Lecordier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Anderle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Rubloff</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.2429672</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B: Nanotechnol. Microelectron.: Mater., Process., Meas., Phenom</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="130" to="139" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<idno type="DOI">10.1021/acsami.0c06628?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acsami.0c06628" />
+	</analytic>
+	<monogr>
+		<title level="j">ACS Applied Materials &amp; Interfaces www.acsami.org Research Article</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Advanced Tungsten Plug Process for Beyond Nanometer Technology</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Luoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-T</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-Y</forename><surname>Lu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.mee.2008.04.030</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron. Eng</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="1739" to="1747" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Hot-wire Assisted ALD of Tungsten Films: In-situ Study of the Interplay Between CVD, Etching, and ALD Modes</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A I</forename><surname>Aarnink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Kovalgin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A M</forename><surname>Wolters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmitz</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssa.201532305</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi A</title>
+		<imprint>
+			<biblScope unit="volume">212</biblScope>
+			<biblScope unit="page" from="1607" to="1614" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Using Hydrogen to Expand the Inherent Substrate Selectivity Window During Tungsten Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kalanyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Atanasov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Ritz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b03319</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="117" to="126" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Understanding Inherent Substrate Selectivity During Atomic Layer Deposition: Effect of Surface Preparation, Hydroxyl Density, and Metal Oxide Composition on Nucleation Mechanisms During Tungsten ALD</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4967811</idno>
+		<idno>No. 052811</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Radamson</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s11671-017-2080-2</idno>
+	</analytic>
+	<monogr>
+		<title level="m">pMOSFETs Featuring ALD W Filling Metal Using SiH 4 and B 2 H 6 Precursors in 22 nm Node CMOS Technology</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page">306</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Isotropic Atomic Level Etching of Tungsten Using Formation and Desorption of Tungsten Fluoride</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hanaoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kawamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advanced Etch Technology for Nanopatterning VII; International Society for Optics and Photonics</title>
+		<imprint>
+			<date type="published" when="2018">2018. 105890</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">The Grand Challenges of Plasma Etching: A Manufacturing Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G N</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0022-3727/47/27/273001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">273001</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">O</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Gill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/ppap.201900081</idno>
+		<title level="m">Anisotropic Atomic Layer Etching of W Using Fluorine Radicals/Oxygen Ion Beam. Plasma Processes Polym</title>
+		<imprint>
+			<date type="published" when="2019">2019. 1900081</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Modeling the Chemical Mechanism of the Thermal Atomic Layer Etch of Aluminum Oxide: A Density Functional Theory Study of Reactions during HF Exposure</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b01930</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="5912" to="5922" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Selflimiting Temperature Window for Thermal Atomic Layer Etching of HfO 2 and ZrO 2 Based on the Atomic-Scale Mechanism</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mullins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nolan</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b05021</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3414" to="3426" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Efficient Iterative Schemes for Ab Initio Total-energy Calculations Using a Plane-wave Basis Set</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmuller</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.54.11169</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="page">11169</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Projector Augmented-Wave Method</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Blochl</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.50.17953</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="page">17953</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">From Ultrasoft Pseudopotentials to the Projector Augmented-wave Method</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Joubert</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.59.1758</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="page">1758</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Generalized gradient approximation made simple</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.77.3865</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">3865</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">TURBOMOLE; V6.2 2010, a development of University of Karlsruhe and Forschungszentrum Karlsruhe GmbH</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Togo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tanaka</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.scriptamat.2015.07.021</idno>
+		<ptr target="http://www.turbomole.com" />
+	</analytic>
+	<monogr>
+		<title level="j">Scr. Mater</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="issue">53</biblScope>
+			<biblScope unit="page" from="1" to="5" />
+			<date type="published" when="1989">2015. 1989-2007. 2007. 27/11/2019</date>
+			<publisher>TURBOMOLE GmbH</publisher>
+		</imprint>
+	</monogr>
+	<note>First Principles Phonon Calculations in Materials Science</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<author>
+			<persName><forename type="first">K ;</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W G</forename><surname>Wyckoff</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Structures</surname></persName>
+		</author>
+		<ptr target="https://materialsproject.org/materials/mp-91/" />
+	</analytic>
+	<monogr>
+		<title level="m">Electronic Structures</title>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2016-11-11">2016. 11/11/2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">1963</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<title level="m" type="main">Introduction to Solid State Physics</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kittel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mceuen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Kinetics of the Oxidation of Pure Tungsten From 500°to 1300°C</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Gulbransen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Andrew</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2427787</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="619" to="628" />
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">The Structure of Oxide Layers on Tungsten</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Kellett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Rogers</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2425800</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="502" to="504" />
+			<date type="published" when="1963">1963</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">On the Oxidation Mechanism of Pure Tungsten in the Temperature Range 600-800 °C</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Cifuentes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Monge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Peŕez</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.corsci.2011.12.027</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Corros. Sci</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="114" to="121" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Interaction of Oxygen With Polycrystalline Tungsten. Part 3.-Electron stimulated desorption</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Madey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Yates</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jr</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/f19726801347</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Soc., Faraday Trans. 1</title>
+		<imprint>
+			<biblScope unit="page">1347</biblScope>
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Oxidation of Tungsten and Tungsten Carbide in Dry and Humid Atmospheres</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Warren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nylund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Olefjord</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0263-4368(96)00027-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Refract. Hard Met</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="345" to="353" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<idno type="DOI">10.1021/acsami.0c06628?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acsami.0c06628" />
+	</analytic>
+	<monogr>
+		<title level="j">ACS Applied Materials &amp; Interfaces www.acsami.org Research Article</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="36670" to="36680" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>ACS Appl. Mater. Interfaces</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
