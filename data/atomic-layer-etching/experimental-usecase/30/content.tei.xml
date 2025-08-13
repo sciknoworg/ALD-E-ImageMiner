@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Atomic layer etching of GaN and AlGaN using directional plasma-enhanced approach</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2017-05-25">May 25, 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Tomihito</forename><surname>Ohba</surname></persName>
+							<email>tomihito.ohba@lamresearch.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Lam Research Co., Ltd</orgName>
+								<address>
+									<postCode>222-0033</postCode>
+									<settlement>Yokohama</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenbing</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Lam Research Corporation</orgName>
+								<address>
+									<postCode>94538</postCode>
+									<settlement>Fremont</settlement>
+									<region>CA</region>
+									<country key="US">U.S.A</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Samantha</forename><surname>Tan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Lam Research Corporation</orgName>
+								<address>
+									<postCode>94538</postCode>
+									<settlement>Fremont</settlement>
+									<region>CA</region>
+									<country key="US">U.S.A</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keren</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Lam Research Corporation</orgName>
+								<address>
+									<postCode>94538</postCode>
+									<settlement>Fremont</settlement>
+									<region>CA</region>
+									<country key="US">U.S.A</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kazuo</forename><surname>Nojiri</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Lam Research Co., Ltd</orgName>
+								<address>
+									<postCode>222-0033</postCode>
+									<settlement>Yokohama</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Atomic layer etching of GaN and AlGaN using directional plasma-enhanced approach</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2017-05-25">May 25, 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">89D5B09D69176034AEFEEEDB88C74C74</idno>
+					<idno type="DOI">10.7567/JJAP.56.06HB06</idno>
+					<note type="submission">Received December 29, 2016; accepted March 16, 2017;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T11:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The directional atomic layer etching (ALE) of GaN and AlGaN has been developed. The GaN ALE process consists of cyclic Cl 2 plasma chemisorption and Ar ion removal. The etch per cycle (EPC) was 0.4 nm within the self-limiting regime, which is 50 to 100 V. The root-mean-square surface roughness R RMS was 0.6 nm, which was improved from an initial roughness of 0.8 nm. For AlGaN ALE, BCl 3 was added to the chlorine step to obtain a smooth surface with R RMS of 0.3 nm and stoichiometry similar to the initial sample. The ultra smooth surface obtained by etching is promising for use in next-generation power devices.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>As next-generation power devices, wide-band-gap semiconductors are being developed. GaN is a promising candidate because of its excellent high-power and highspeed performance. The high electron mobility of GaN devices is realized by an AlGaN=GaN heterojunction, which induces two-dimensional electron gas (2DEG). However, owing to the structure, electrons always exist under the gate electrode unless it is negatively biased (normally on). For commercial applications, the normally on operation is not preferable. To make the device normally off, several structural approaches have been proposed such as a recessed gate <ref type="bibr" target="#b0">1)</ref> and p-GaN gate. <ref type="bibr" target="#b1">2)</ref> Since feature size fidelity is important to make the devices operate as designed, they are expected to be fabricated by plasma dry etching. Because of the chemically inert nature of GaN, simple wet etching using an acid or base is difficult, <ref type="bibr" target="#b2">3)</ref> and the other conventional technique of ion milling causes serious damage. <ref type="bibr" target="#b3">4)</ref> Plasma dry etching of GaN using a number of chemistries, mostly halogens or methane, <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> has been studied, mainly for the purpose of obtaining a high etching rate and anisotropy. However, exposure to plasma also induces various types of damage, <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref> which cause the degradation of device performance. Although several post-treatments have been proposed, <ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref> a damage-free etching process is desirable and atomic layer etching (ALE) is one of the promising candidates.</p><p>ALE is expected to achieve atomic-scale etching control for nanoscale device fabrication. <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30)</ref> Ultra thin layers of the material are removed by a multi step cycling process, which consists of self-limiting surface modification and removal. Several approaches can be considered for surface modification such as chemisorption, deposition, converting the top layer, and extraction. For removal, the use of thermal, chemical and bombarding energy can be considered. With the exception of removal by bombardment, process characteristics will be isotropic. ALE has been studied as a derivative of atomic layer deposition (ALD) and recently highlighted as a method that can break through the limitations of continuous etching processes. Whereas all species interact simultaneously in continuous processes, in the ALE process, surface modification and removal are functionally separated, which enables more precise process control and less ion-induced damage. High selectivity and better uniformity across the wafer are also achievable. <ref type="bibr" target="#b28">29)</ref> Moreover, since it is necessary to maintain post etching stoichiometry, ALE has been investigated for various compound semiconductors. <ref type="bibr" target="#b29">30)</ref> In previous reports of GaN=AlGaN ALE, the surface was first oxidized with either O 2 plasma <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32)</ref> or H 2 O 2 solution <ref type="bibr" target="#b32">33)</ref> and then removed with either HCl acid solution <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b32">33)</ref> or BCl 3 plasma. <ref type="bibr" target="#b31">32)</ref> In our study, a directional type of ALE is used to examine GaN and AlGaN etching for the fabrication of p-GaN gatetype devices. In our ALE approach, the surface is modified using chlorination instead of oxidation. The removal step uses Ar ion bombardment, which enables directionality in a patterned feature.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Experimental methods</head><p>All experiments were performed in a commercially established transformer coupled plasma (TCP) etching system (Kiyo ® F Series conductor etch system) equipped with advanced mixed mode pulsing (AMMP). AMMP provides fast, repeatable, and reliable power=gas switching, which ensures the sufficient robustness of the process for production. GaN and AlGaN blanket samples were used to examine the amount of etching and surface roughness. Each sample was cleaned in advance by HF to remove native oxide on the surface and N 2 dried. The ALE process consisted of cyclic plasma chlorination followed by Ar ion bombardment with applied bias voltages ranging from 20 to 150 V. The pressure in the non-biased chlorination step was 60 mT and the duration was 2.5 s. The pressure applied for Ar removal was 5 mT and the duration was 5.0 s. These step times were determined in preliminary studies to be sufficient lengths for each reaction to be fully completed under the conditions. Between these steps, a non-plasma purge step was inserted to minimize interactions. For comparison with the ALE process, a continuous process was also analyzed. The continuous process used Cl 2 =Ar chemistry simultaneously and was operated at 50 V bias.</p><p>The etch per cycle (EPC) of the ALE process was calculated by dividing the total amount etched by the number of cycles. The etch depth was measured by ellipsometry (Woollam M-2000) and transmission electron microscopy (TEM; FEI Tecnai TF-30). Atomic force microscopy (AFM; Veeco Vx310) was used to measure the surface roughness for plasma damage estimation. The initial surface roughnesses R RMS were 0.8 and 0.4 nm for GaN and AlGaN, respectively. The stoichiometry of the AlGaN surface was determined by X-ray photoelectron spectroscopy (XPS; Thermo Scientific K-Alpha with 0.1-0.2% detection limits) since the composition ratio will affect device characteristics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results and discussion</head><p>Figure <ref type="figure">1</ref> shows the EPC of GaN as a function of RF bias voltage. Three different process regimes are visible, consistent with previous studies of silicon. <ref type="bibr" target="#b33">34)</ref> In regime I (0-50 V bias) and regime III (&gt;100 V bias), the EPC increased with the bias voltage, while in regime II (50 to 100 V), the EPC is almost constant. From our prediction of GaN ALE mechanism, which is surface modification by Cl 2 plasma and the desorption of volatile by-products such as GaCl 3 and N 2 formed by the energy delivered from Ar ion bombardment, this behavior can be explained as follows. In regime I, the ion energy is insufficient to remove plasma-modified compounds completely. In regime III pure sputter etching occurs, where the ion energy exceeds the physical sputtering threshold. The boundary, 100 V is in good agreement with the reported threshold energy of approximately 100 eV for GaN obtained by experiment <ref type="bibr" target="#b34">35)</ref> and molecular dynamics simulation. <ref type="bibr" target="#b35">36)</ref> In regime II, a self-limited EPC was observed and the regime can be considered as the ALE window <ref type="bibr" target="#b29">30)</ref> for this system. The EPC in this regime of 0.4 nm corresponds to one or two layers of GaN crystal. Since the ion energy is below the sputtering threshold, it suggests that only a few layers of GaN are chemisorbed by the preceding chlorination step. As compared with the Si ALE window of 40-60 eV, <ref type="bibr" target="#b33">34)</ref> the GaN window of 50-100 eV is notably shifted to higher energies. According to basic sputtering theory, the sputter threshold, represented by the upper limit of the ALE window, scales with the surface binding energy. For example, the Si surface binding energy is 4.7 eV, <ref type="bibr" target="#b36">37)</ref> compared with the stronger GaN surface binding energy of 8.6 eV. <ref type="bibr" target="#b37">38)</ref> This widens the overall process window as observed, and is consistent with trends recently reported for other materials. <ref type="bibr" target="#b38">39)</ref> In the ALE window (80 V), etching synergy was confirmed by comparison between the EPC of ALE (full cycle), chlorination only, and Ar sputtering only (Fig. <ref type="figure">2</ref>). Each step was executed individually for 90 cycles. The EPC of chlorination was negligible and Ar sputter was 0.05 nm, contributing only ∼10-15% of the ALE process. The result showed that the basic concept of reactive ion etching, synergistic effect of neutrals and ion bombardment <ref type="bibr" target="#b39">40)</ref> was confirmed, and was completely separated in this process.</p><p>The R RMS GaN surface roughness after ALE of 0.6 nm was an order of magnitude less than that of 4.0 nm after the continuous plasma process with the same etched depth. The TEM image in Fig. <ref type="figure">3</ref>(a) suggests that crystal structures were kept intact beneath the etch front of ALE. Although we have to take into account the effect of UV light irradiation, <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22)</ref> from the surface morphology point of view, this smoothness is attributed to the layer-by-layer self-limiting nature of ALE and is a characteristic advantage over the conventional continuous plasma process. Moreover, the injection of reactive ions such as Cl + or Cl 2 + is minimized in ALE, which may prevent the increase in surface roughness seen in the continuous process.</p><p>For AlGaN ALE, we first employed the same ALE process as that used as for GaN, expecting that the same etching mechanism would form volatile metal chlorides. However, in contrast to GaN, measurable surface roughness was observed with the Cl 2 -only ALE approach. As shown in Figs. <ref type="figure">4(a</ref>) and 4(b), R RMS was 1.8 nm as compared with 0.4 nm for the preetch sample. XPS measurements detected higher amount of O on the roughened surface [Fig. <ref type="figure">5(b)</ref>], suggesting the formation of non-volatile AlO, which act as a micromask and roughens the surface. Oxygen is assumed to be provided from the ceramic parts inside the chamber. Therefore, BCl 3 was added to the chlorination step to prevent oxidization by scavenging BClO. <ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref> With BCl 3 =Cl 2 ALE, the stoichiometry post-ALE became similar to that of the initial pre-etch sample (Fig. <ref type="figure">5</ref>). As further evidence that ALE was working properly, R RMS recovered to 0.3 nm [Fig. <ref type="figure">4(c)</ref>]. 0.0 0.1 0.2 0.3 0.4 0.5 EPC [nm] ALE Chlorination only Ar sputter only 0.37 0.00 0.05 Fig. 2. Results of EPC synergy test at 80 V bias. GaN (a) AlGaN (b) GaN AlGaN Fig. 3. Cross-sectional TEM images of GaN processed with (a) ALE and (b) continuous plasma process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Conclusions</head><p>A GaN and AlGaN etching process to obtain an ultra smooth surface was realized by ALE. The ALE window was observed for GaN by cyclic Cl 2 plasma modification and Ar ion removal process. In the ALE window of 50-100 V, the EPC was around 0.4 nm. For the AlGaN process, BCl 3 was added to scavenge oxidized materials on the etch front. The post-ALE R RMS obtained was 0.3 nm, and the stoichiometry was similar to that of the initial pre-etch sample. Further work is required to confirm the correspondence between these characteristics and actual device electrical properties.</p><p>(a) (b) (c) R RMS = 0.4 nm 1.8 nm 0.3 nm Atom % Ga N Al O (a) Initial (b) Cl 2 (c) BCl 3 /Cl 2 Fig. 5. Results of XPS analysis of AlGaN surface. (a) Initial, (b) Cl 2 ALE, and (c) BCl 3 =Cl 2 ALE.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .Fig. 2 .Fig. 3 .</head><label>123</label><figDesc>Fig. 1. EPC of GaN as a function of bias voltage for a fixed Ar step time of 5 s.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4 . 2 Fig. 5 .</head><label>425</label><figDesc>Fig. 4. (Color online) AFM images of AlGaN surface. (a) Initial, (b) Cl 2 ALE, and (c) BCl 3 =Cl 2 ALE.</figDesc><graphic coords="4,48.20,61.76,241.07,78.31" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,37.50,454.29,520.00,336.41" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>06HB06-2© 2017 The Japan Society of Applied Physics</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>06HB06-3© 2017 The Japan Society of Applied Physics</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">B</forename><surname>Lanford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Otoki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adesida</surname></persName>
+		</author>
+		<idno type="DOI">10.1049/el:20050161</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electron. Lett</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">449</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Simin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gaska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Shur</surname></persName>
+		</author>
+		<idno type="DOI">10.1049/el:20000557</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electron. Lett</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">753</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Mileham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pearton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Abernathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Mackenzie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Shul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Kilcoyne</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.580399</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">836</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pearton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Abernathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ren</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.111648</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">2294</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adesida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mahajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Andideh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Olsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Kuznia</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.110331</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">2777</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Zan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Allen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Morkoc</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.110985</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">887</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Ping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adesida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Asif</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Kuznia</surname></persName>
+		</author>
+		<idno type="DOI">10.1049/el:19941247</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electron. Lett</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">1895</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Oberman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Harris</surname><genName>Jr</genName></persName>
+		</author>
+		<idno type="DOI">10.1063/1.115039</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">1754</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pearton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Abernathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Lothian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Wisk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Katz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Constantine</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0268-1242/8/2/026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">310</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ramer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Lester</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Hersee</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.116718</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">367</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Shul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Kilcoyne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hagerott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Crawford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Parmeter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Vartuli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Abernathy</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pearton</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.113359</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">1761</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nakamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Senoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nagahama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Iwasa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsushita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kiyoku</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sugimoto</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.35.L74</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>L</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Vartuli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pearton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Mackenzie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Abernathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Shul</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.117603</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">1426</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Vartuli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Abernathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Donovan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pearton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Shul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0038-1101(98)00225-1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid-State Electron</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">2277</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">I</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0040-6090(98)01551-X</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">341</biblScope>
+			<biblScope unit="page">180</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">V</forename><surname>Schoenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Petroff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Hu</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.122635</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page">2935</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hacke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Detchprohm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hiramatsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sawaki</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.110417</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">2676</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.114327</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page">2657</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Van Der Drift</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Reeves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Sloof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cheung</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1421543</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">2917</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adesida</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1418415</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">2926</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Inaoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tominaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kuwahara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mukai</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.47.6863</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">6863</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Minami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tomiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Matsumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fukasawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Uesawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sekine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tatsumi</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.50.08JE03</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="08J" to="E11" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Inaoka</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.vacuum.2008.04.009</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vacuum</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page">490</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">A</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pearton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Shul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hickman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Van Hove</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.124332</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page">232</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.373438</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page">7667</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S.-I</forename><surname>Na</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G.-Y</forename><surname>Ha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-S</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-I</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LPT.2006.877562</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Photonics Technol. Lett</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page">1512</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hierro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Ringel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Speck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">K</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Den</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Baars</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1290042</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">1499</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kometani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tokuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Egawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Amano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sekine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.51.111002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page">111002</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Hua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<title level="m">Proc. Int. Symp. Dry Process</title>
+		<meeting>Int. Symp. Dry ess</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page">149</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><surname>Buttari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Heikman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Keller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">K</forename><surname>Mishra</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LECHPD.2002.1146788</idno>
+		<title level="m">Proc. IEEE Lester Eastman Conf. High Performance Devices</title>
+		<meeting>IEEE Lester Eastman Conf. High Performance Devices</meeting>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page">461</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Burnham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Boutros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Butler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W S</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Micovic</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssc.200983644</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi C</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">2010</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Van Dorp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Arnauts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Holsteyns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">De</forename><surname>Gendt</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0081506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5061</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0031506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5010</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pearton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Abernathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Lothian</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.357849</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">1210</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Harafuji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kawamura</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.47.1536</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">1536</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">At. Data Nucl. Data Tables</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tawara</surname></persName>
+		</author>
+		<idno type="DOI">10.1006/adnd.1996.0005</idno>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">149</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nord</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Albe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Erhart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nordlund</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0953-8984/15/32/324</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">5649</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kabansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nojiri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4979019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="05C" to="302" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Winters</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.326355</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page">3189</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Banjo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tsuchihashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hanzaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ono</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.36.4824</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">4824</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zhirnov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stepanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">N</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">G</forename><surname>Shreter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Takhin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">I</forename><surname>Bochkareva</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1798711</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page">2336</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.42.L257</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">257</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

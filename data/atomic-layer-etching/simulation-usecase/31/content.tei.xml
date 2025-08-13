@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Thermodynamics of Atomic Layer Etching Chemistry on Copper and Nickel Surfaces from First Principles</title>
+				<funder ref="#_svmZCNM">
+					<orgName type="full">Extreme Science and Engineering Discovery Environment (XSEDE)</orgName>
+				</funder>
+				<funder ref="#_azQfA7A">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">UCLA Institute of Digital Research and Education</orgName>
+					<orgName type="abbreviated">IDRE</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2021-08-17">August 17, 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yantao</forename><surname>Xia</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Philippe</forename><surname>Sautet</surname></persName>
+						</author>
+						<title level="a" type="main">Thermodynamics of Atomic Layer Etching Chemistry on Copper and Nickel Surfaces from First Principles</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2021-08-17">August 17, 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E1B3B43721FF4B47C5255D6D8B23295E</idno>
+					<idno type="DOI">10.1021/acs.chemmater.1c01324</idno>
+					<note type="submission">Received: April 16, 2021 Revised: July 28, 2021</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T16:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Plasma-thermal atomic layer etching is a promising technique to enable selective and directional etching on metals. It involves a plasma activation step and a thermal step where etchant molecules remove a fraction of the surface. To accelerate process development, a computational model for the thermodynamics of the thermal removal step is highly desirable. An energy expression is developed here to calculate the removal step energy for an activated slab structure. The approach samples the configurations of the activated metal surfaces and determines the thermodynamic balance of the removal step for each obtained configuration. The heterogeneity of the surface terminations is treated by the equilibrium crystal shape method. The models are put to test with combinations of two modifiers (O and N), two substrates (Cu and Ni), and two etchants (formic acid and formamidine). It is found that higher coverages of modifiers lead to more favorable etching. In addition, our results show that removal step energies vary among different terminations, with differences on the order of 0.5 eV. This suggests that etching can preferentially occur over certain crystal terminations. Qualitative agreement with the experiment on the Ni/O/formic acid system is obtained with the layer model at high coverages of oxygen atoms.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>All solids terminate by a surface. As a result, surface processes are key for a vast array of applications. For the ultimate control of the composition and structure of surfaces, selective and accurate engineering methods at the nanometer/subnanometer scale are required. Whereas atomic layer deposition (ALD) enables the atomistic control of material addition, the reverse process of atomic layer etching (ALE) is not yet incorporated into mainstream industrial processes as it was considered too slow to be practical. <ref type="bibr" target="#b3">1</ref> However, continued feature-size scaling has made it apparent that for certain applications, precision rather than throughput is the bottleneck. <ref type="bibr" target="#b4">2</ref> Existing plasma etching techniques are fundamentally unable to fulfill this role as they all rely on inert ions as an energy source to some extent, yielding a poorly selective process with little control in thickness. <ref type="bibr" target="#b5">3</ref> Atomic layer etching is itself an outgrowth of plasma etching. The process is composed of two self-limited steps. <ref type="bibr" target="#b5">3</ref> During the activation step, the top atomic layer(s) of the pristine surface are converted to another compound by the modifiers. The activation is limited by the surface compound formed, which blocks further reaction once all pristine surface atoms/sites are consumed/occupied. Next, during the removal step, etchant molecules are introduced that remove the surface compound. The removal stops as soon as the surface compound is consumed since the etchant molecules are selected such that they cannot etch the pristine surface. The cycle is repeated until the desired etch thickness is achieved. While the abstract concepts are the same, the actual processes demonstrated to date span a wide range of chemistries and conditions. <ref type="bibr" target="#b5">3</ref> Metals lie on the frontier of integrated circuits in terms of the material choice since they offer many traits desirable for microelectronics integration, such as high electrical and thermal conductivities. This, in turn, necessitates new metal patterning techniques. Etching of metals is conventionally done in the solution phase by harsh chemicals. The random motion of etchant molecules implies that this process is inherently isotropic. To create an anisotropic process, modern patterning techniques exploit the directionality of ions in the plasma sheath. While plasma etching has been applied successfully to siliconbased materials, its application on metals is problematic since the metal species leaves the surface in the form of unstable, highenergy compounds that readily redeposit on the chamber walls and other parts of the wafer.</p><p>Recently, a novel process combining plasma activation and thermal removal was developed and successfully applied to directionally etch Ni <ref type="bibr" target="#b6">4,</ref><ref type="bibr" target="#b7">5</ref> and Cu. <ref type="bibr" target="#b8">6</ref> This process is illustrated in Figure <ref type="figure" target="#fig_0">1</ref>. An oxygen plasma is used to activate the metal surface (Figure <ref type="figure" target="#fig_0">1A-1C</ref>). The removal step (Figure <ref type="figure" target="#fig_0">1D-1F</ref>) is done with organic etchants that react with the surface oxide to form volatile complexes and water, eliminating the need for an extra energy source and avoiding redeposition. This new process, termed plasma-thermal ALE, is conceptually very similar to the thermal ALE process developed by George and co-workers. The main difference of plasma-thermal ALE lies in the activation step, where the oxidizing reagent is excited via a low-temperature plasma. Plasma imparts directionality to the process, enabling an anisotropic etching profile.</p><p>A recent review <ref type="bibr" target="#b9">7</ref> presents an excellent introduction to the large body of experimental and theoretical work on the similar thermal ALE process. A 2020 review <ref type="bibr" target="#b10">8</ref> for the various strategies to implement thermal ALE on different substrates is available as well. The existing thermal ALE processes on metal substrates require the oxidation of pristine metals by either oxygen (O 2 and/or O 3 ) or halogens, followed by the introduction of diketone molecules to form volatile metal complexes. Existing studies center on a single process, using combinations of experimental and computational tools to propose a mechanism. <ref type="bibr" target="#b11">[9]</ref><ref type="bibr" target="#b12">[10]</ref><ref type="bibr" target="#b13">[11]</ref> These allow for the classification of existing ALE processes, and the rationalization can be generalized to other substrates, modifiers, and etchants to discover new processes. However, difficulties of in situ characterization of the surface and the low pressures of the products formed prevent direct confirmation of these mechanisms. These challenges also mean that the mechanisms lack atomistic detail, limiting their usefulness in understanding the chemistry and conditions that lead to a successful metal ALE process. For this purpose, a computational thermodynamic model of ALE is necessary.</p><p>One such model, the Natarajan-Elliott analysis <ref type="bibr" target="#b14">12</ref> (N-E analysis), provides great insight into the temperature dependence of the thermal ALE fluorination step. While it already improves on the previous work by supplementing the bulk reactions (converting bulk metal to bulk oxides and halides) with surface models at different coverages, the crystal termination and the coverages are chosen arbitrarily. As a result, the effects of surface morphology cannot be evaluated from these models. In addition, the N-E analysis is developed on the activation step. For plasma-thermal ALE, the activation step is achieved using energetic ions. The substrate temperature only plays a secondary role, as the postactivation surface is mostly determined by the kinetic energy of the ions.</p><p>On the other hand, for plasma-thermal ALE, the effects of surface morphology are highly relevant from a practical point of view. For instance, the current setup does not involve a selflimited oxidation reaction, as oxides of thicknesses on the order of ∼5 nm are observed. A different modifier and/or ion energy in the plasma could potentially create a self-limited process that offers far more control. These drawbacks point to the need for a computational model to quickly determine the feasibility of proposed processes with new conditions and/or new chemistries. Ideally, given the specifications of substrates, modifiers, etchants, and relevant reaction conditions (temperatures, pressures, and ion energies), one should be able to predict, on a thermodynamic basis, whether an ALE process would be possible.</p><p>The present work attempts to provide a thermodynamic prediction for the removal step of plasma-thermal ALE processes. The layer model energy expression, the core of the model, allows the calculation of the removal step energy change from quantum chemical calculations on a slab structure. The activated surfaces, after interaction with the modifiers, are sampled with adsorption configuration search by the "greedy" algorithm. The etching products are determined computationally using literature data as input structures when available. The removal step energies on different terminations are combined via a weighted sum, with weights obtained via the equilibrium crystal shape construction. The combined approach results in a single-valued prediction for the removal step energies, based on the postplasma surface structure, modifier, and etchant. The model thus links the postactivation surface morphology to the removal step thermodynamics. We propose that this removal step energy can be used to evaluate and screen potential plasmathermal atomic layer etching processes.</p><p>The systems chosen to test the models involve two metal substrates (Cu and Ni), two modifiers (O and N), and two etchants (formamidine (HFAmd) and formic acid (HFA)). Ni, O, and formic acid serve as the obvious choices for computational investigation since process viability is already demonstrated. Additional chemistries, involving Cu, N, and HFAmd, are chosen to find useful trends. Cu is by far the most used metal in circuitry, mainly as an interconnect material. As features scale down, the existing process that couples additive patterning (damascene process) to chemical-mechanical polishing (CMP), developed to circumvent the inability to etch Cu, is too harsh for the bottom layers on the interconnect. New, "gentle" etching approaches must be developed for this niche application. N is chosen because a nitridation-based activation process more readily allows for ex situ surface characterization. Such characterization of oxidation-based process is difficult due to interference from ambient water during the vacuum break. The inclusion of formamidine is inspired by the success of the amidinate family of ligands in atomic layer deposition and by the fact that the removal step in plasma-thermal ALE is the reverse reaction.</p><p>As words of caution, the results here can only speak of thermodynamics. The reaction barriers are not considered. While we do not expect kinetic barriers to be significant in the activation step, in the removal step, the formation of the hydride and desorption of the formed complex might be activated. <ref type="bibr" target="#b15">13,</ref><ref type="bibr" target="#b16">14</ref> Existing data suggests that the desorption of the metal-organic complex is the limiting step and often high temperature is required to overcome the barrier. <ref type="bibr" target="#b9">7</ref> It is likely, however, that the magnitude of such barriers will depend to a significant extent on the surface morphology. <ref type="bibr" target="#b13">11</ref> The postplasma surface morphology is far from clear at this point, and we do not claim that the surface structure used here corresponds to the postplasma surface. In other words, the effect of kinetic energy of the ion is a missing link, deferred to a future study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">METHODS</head><p>The reactions studied are listed in reactions 1a-3b. HL refers to a generic protonated etchant since formic acid and formamidine etchings have the same stoichiometry. The symbol | indicates surface species, as in the Ni|Ni species for the Ni etching reaction (reaction 1a). The right part (|Ni) represents the surface atomic layer that is etched, and the left part (Ni|) represents the subsurface part of the slab that is exposed after one full cycle. For the discussion below, the Ni/O/HFA system is used as our working example. The etching reactions on the pristine and activated surfaces are given, respectively, by reactions 1a and 2b, where the activated surface is modeled by a NiO slab. The "bulk model" expressions for the Gibbs free-energy change for the surface layer removal step are given in eqs 1 and 2, respectively. The nickel complexes have a range of nuclearities from monomers to tetramers. For simplicity, we refer to all of these molecules as Ni(L) 2 . The specific oligomer used will be clear from the context. The notation for Cu complexes is not ambiguous since only the dimers are used (see page 9) Respective formamidinates can be found by replacing oxygen atoms with secondary amine groups. The relative stabilities are shown in Figure <ref type="figure" target="#fig_2">3</ref>. The dimer and tetramer structures are found to be the most stable for formate and formamidinate complexes, respectively. Oligomers are not investigated for Cu (see page 9).</p><formula xml:id="formula_0">Ni Ni 2HL Ni Ni(L) H 2 2 | + → | + [ ] + (1a) Cu Cu HL Cu 1 2 Cu (L) 1 2 H 2 2 2 | + → | + [ ] + (1b) Ni N 2 3 Ni N 2HL Ni(L) 2 3 NH Ni N Ni 3 3 2 3 3 + →[ ]+ + (2a) NiO NiO 2HL NiO Ni(L) H O 2 2 | + → | + [ ] + (2b) Cu N 1 3 Cu N HL Cu N 1 2 Cu (L) 1 3 NH 3 3 3 2 2 3 + → + [ ] + (3a) Cu O 1 2 Cu O HL Cu O 1 2 Cu (L) 1 2 H O 2 2 2 2 2 2 + → + [ ] +<label>(3b)</label></formula><p>The plasma-thermal ALE process is made possible by a change of metal oxidation state during the activation step. Take our working example; metallic Ni is converted from Ni(0) to Ni(II) after activation. During the etching step, the Ni(II) oxidation state is preserved. In the absence of activation, the change of oxidation state would occur during the etching, with Ni oxidizing to Ni(II) and protons from etchant reducing to form H 2 . The same can be said of copper: Cu has an oxidation state of +1 in both the activated surface and the product complex. This brief consideration shows that the redox potential of the metal is a key factor for the practicality of plasma-metal ALE processes and, in general, any oxidation state-based metal etching processes. For both metals studied, we will show that the oxidation of the pristine surface with protons is highly unfavorable on both metals studied, a prerequisite for the self-limiting behavior observed</p><formula xml:id="formula_1">G G G G G G 2 rm,Ni Ni(L) H Ni Ni Ni HL 2 2 Δ =[ + + ]-[ + ] [ ] | |<label>(1)</label></formula><formula xml:id="formula_2">G G G G G G 2 rm,NiO Ni(L) H O NiO NiO NiO HL 2 2 Δ =[ + + ]-[ + ] [ ] | |</formula><p>(2) The bulk model simplifies the problem by assuming that the same pristine nickel/nickel oxide surface is exposed after one cycle. Therefore, the surface formation energies are unchanged, and surface effects cancel out. For the pristine surface, the two surface terms cancel out to give the bulk formation energy</p><formula xml:id="formula_3">G G G Ni Ni Ni Ni,bulk - =- | |</formula><p>The bulk model further assumes that the activated surfaces are thick enough so that they can be approximated as a bulk oxide or nitride. Under this assumption, removing one atomic layer from the activated surface is equivalent to removing one layer from the bulk oxide/nitride lattice, energetically corresponding to the Gibbs free energy of formation of bulk oxide or nitride</p><formula xml:id="formula_4">G G G NiO NiO NiO NiO,bulk - =- | | G G G Ni N Ni N Ni N Ni N,bulk 3 3 3 3 - =- | |</formula><p>The energy expression of the bulk model is given in eqs 3 and 4 for etching on pristine and activated Ni systems. Note that this model avoids any calculation of surface species and hence can be applied easily. However, since the bulk oxide or nitride structure is assumed, this model cannot be applied to processes where only a thin surface activation layer is expected. For such processes, the layer model would be more appropriate</p><formula xml:id="formula_5">G G G G G 2 rm,Ni Ni(L) H HL Ni,bulk 2 2 Δ = + - - [ ]<label>(3)</label></formula><formula xml:id="formula_6">G G G G G 2 rm,NiO Ni(L) H O HL NiO,bulk 2 2 Δ = + - - [ ]<label>(4)</label></formula><p>The structures and energies of the bulk crystals used are detailed in the Supplementary Information (SI) Table <ref type="table" target="#tab_1">S1</ref>. The molecular structures of the metal formate complexes considered are shown in Figure <ref type="figure" target="#fig_1">2</ref>. The corresponding formamidinate complexes are trivially found by replacing oxygen atoms with secondary amine groups. These structures are selected by a combination of experimental <ref type="bibr" target="#b17">[15]</ref><ref type="bibr" target="#b18">[16]</ref><ref type="bibr" target="#b19">[17]</ref><ref type="bibr" target="#b20">[18]</ref><ref type="bibr" target="#b21">[19]</ref><ref type="bibr" target="#b22">[20]</ref><ref type="bibr" target="#b23">[21]</ref><ref type="bibr" target="#b24">[22]</ref><ref type="bibr" target="#b25">[23]</ref> and simulated results. X-ray diffraction spectroscopy on a range of copper(I) amidinates of the formula [R′NC(R)NR″Cu] 2 (R′ and R″ = n-propyl, isopropyl, n-butyl, isobutyl, sec-butyl, tert-butyl; R = methyl, n-butyl) in the solid phase suggests a planar dimer structure. <ref type="bibr" target="#b17">15</ref> Early mass spectroscopy suggests that the Cu formate dimerizes in the vapor phase. <ref type="bibr" target="#b23">21,</ref><ref type="bibr" target="#b24">22</ref> Although no direct structural determination exists for the formate complex, the related copper acetate complex is shown to crystallize in the P2 1 /m space group as infinite sheets of 8-membered rings. <ref type="bibr" target="#b25">23</ref> The high saturation pressure of the complex <ref type="bibr" target="#b24">22</ref> suggests that there is little structural difference between the vapor and solid phases of the copper acetate complex. Taking a clue from these, the copper(I) complexes are taken to be a dimer structure that forms an 8-membered ring containing 2 Cu atoms. The nickel complexes (written as Ni(L) 2 for simplicity by factoring out the nuclearity) have extended covalent bonds in the solid phase; hence, their gas-phase structures have been searched by constructing different structures and comparing their stabilities. The structures of the determined complexes are shown in Figure <ref type="figure" target="#fig_1">2</ref>.</p><p>The layer model accounts for the effects of surface termination and coverage, defined as the area density of modifier atoms. Here, the stoichiometry is allowed to differ from that of the bulk model. The postetch surfaces are assumed to terminate in the same orientation as the preactivation surfaces. A full-layer removal is still desirable since it allows the explicit consideration of the postremoval surface to be avoided. As a result, the postetch surface is assumed to be modifier-free. The energies of dimers, trimers, and tetramers of the nickel complex are normalized to the monomer formula unit for use in eqs 3 and 4.</p><p>Suppose, for instance, that the modifier coverage after activation is less than that specified by reaction 2b for the Ni/O/formic acid system. Since the reaction is constrained to proceed at the stoichiometry, such "insufficient" coverages would result in an incomplete etching of the surface layer, with Ni islands remaining at the termination of the etching process because the pristine surface cannot be etched by the etchant (see Section 4.2). To account for this, the surface oxide is multiplied by a factor so that just enough oxygen atoms are present in the balance ( y x</p><p>x y × = O atoms) to satisfy the stoichiometry required for the etching of xNi atoms</p><formula xml:id="formula_7">x y x x y x x Ni Ni O 2 HL Ni Ni O 1 Ni Ni O NiL H O s x y s sx 0 0 0 2 2 | + → | + - | + + i k j j j j j y { z z z z z<label>(5)</label></formula><p>The extra (x/y -1) activated nickel slabs that are brought into the reaction balance only serve to contribute the oxygen atoms. The unetched metal atoms correspond to the islands that remain on the surface after etching (one layer higher than the etched regions). s and x refer to the structure models used, with s denoting the total number of metal atoms in the unactivated layers of the slab and x denoting the number of metal atoms per layer. Hence, Ni s |Ni 0 and Ni s |Ni x are the slab models differing by one layer in vertical thickness. See the next paragraph for more details. The coefficients in reaction 4 and factors of Gibbs free energies in eq 6 would depend on the substrate/modifier/ etchant combination. The molecular terms follow directly from the bulk model reaction. The reaction energy normalized to one Ni atom removed is expressed in eq 6</p><formula xml:id="formula_8">G x G x y G x G x G x y G x G 1 1 2 rm,layer Ni Ni Ni Ni(L) H O Ni Ni O HL s s x s x y 2 2 Δ = + - + + -[ + ] | | [ ] | l m o o o n o o o Ä Ç Å Å Å Å Å Å Å Å Å Å Å i k j j j j j y { z z z z z É Ö Ñ Ñ Ñ Ñ Ñ Ñ Ñ Ñ Ñ Ñ Ñ | } o o o õ o o<label>(6)</label></formula><p>In the subscripts, following the convention set forth in eqs 1 and 2, the species on the left and right of the symbol | refer to the unactivated atomic layers and the activated layers, respectively. The meanings of "Ni s " and "Ni x " are already explained above. "Ni x O y " refers to the slab activated by y oxygen modifier atoms. The molecular terms are selfexplanatory, and the same values are used as in the bulk model. The terms in eq 6 can be regrouped to yield eq 7, in which the three terms can be assigned physical meanings: the first term on the left</p><formula xml:id="formula_9">(1/x[G Ni s | - G Ni s |Ni x ]) differs</formula><p>only in the number of layers included in the slab model and can be replaced by -μ Ni,bulk if the surface formation energy (eq 11) is converged with respect to the number of layers. The second term (1/ y[G Ni s |Ni x O y -G Ni s |Ni x ]) corresponds to the energy of the modified surface per modifier atom and is similar to the adsorption energy of the modifier (eq S2) to a constant term. The third term ([G [Ni(L) 2 ] + G H 2 O -2G HL ]) describes the bond breaking and formation of the etchant, hydride, and metal complex. For a given substrate/modifier/etchant combination, the first and last terms are constants. The information about activation (ion species, coverage, etc.) is expressed through the second term only and hence decoupled from that of the etchant. It is shown that the number of atoms (x) is canceled out, and there is no need to specify the number of atoms per layer</p><formula xml:id="formula_10">G x G G y G G G G G 1 1 2 rm,layer Ni Ni Ni Ni Ni O Ni Ni Ni(L) H O HL s s x s xy s x 2 2 Δ = [ - ]-[ - ] + [ + - ] | | | [ ]<label>(7)</label></formula><p>While the layer models are derived for the case of a deficient modifier coverage (less than the bulk model reaction stoichiometry), there is no limit on the applicability since the number of metal atoms per layer does not appear in the energy expression. In fact, the layer model reduces to the bulk model if the same assumptions are reimposed. In eq 7, the molecular term is the same as that in the bulk model. In the case of bulk NiO, x = y, therefore, the left two terms can be rewritten as</p><formula xml:id="formula_11">x G G y G G x G G 1 1 1 Ni Ni Ni Ni Ni O Ni Ni Ni Ni Ni O s s x s xy s x s s xx [ - ] -[ - ] = [ - ] | | | |</formula><p>Since the activation layer is assumed to take the form of the bulk oxide</p><formula xml:id="formula_12">G G Ni Ni O Ni (NiO) s x x s x ≈ | |</formula><p>following the bulk model, we assume a thick oxide layer so that the interface and surface formation energies are negligible compared with the energy to etch</p><formula xml:id="formula_13">x G G G 1 Ni Ni (NiO) NiO,bulk s s x [ - ] ≈ - |</formula><p>and the bulk model energy expression is recovered immediately by adding back the molecular terms. Unfortunately, the bulk model on the pristine surface is not recovered at low coverages with the layer model since it is restricted to hydride formation, while the pristine surface bulk model forms H 2 molecules. It may suggest that the layer model is more applicable at significant coverages. However, this aspect was not pursued.</p><p>The configurations of the adsorbates are obtained by a greedy-search algorithm that proceeds iteratively. At every iteration, one adsorbate is added to each available adsorption site, forming a pool of candidate structures for the next round. The adsorption sites themselves are determined by symmetry on the primitive pristine surface unit cell: every unique atom defines a top site, every unique pair of atoms defines a bridge site, etc. The supercell is not varied. Figure <ref type="figure" target="#fig_1">S2</ref> gives the supercell used and the adsorption sites. Each candidate is then fully relaxed, and the most stable candidate is selected to enter the next round. Figures <ref type="figure" target="#fig_0">S7-S10</ref> give the structures of the selected candidates at every round. The configuration search determines a unique configuration for every termination at discrete coverages. The method adopted here is a static one: the effect of finite temperature is included in the entropy contribution to the free energy obtained via calculation of the surface phonon frequencies. A full computational treatment of the temperature effect on activation, requiring dynamic calculations (e.g., as molecular dynamics simulation of ion impact), is outside our scope.</p><p>While the energy expression determines the reaction energy normalized to one Ni atom removed (ΔG rm ) for a given termination, the results for different terminations span a large range of values at any coverage. As a descriptor for process feasibility, a single-valued prediction is desirable. To minimize the experimental input required, a weighted average of the per-termination etching energies is calculated, with weights given by the equilibrium crystal shape construction (ECS) (eq 8). The Wulff construction is applied to the activated surfaces so that more stable structures with a low surface formation energy are preferred over less stable ones and assigned a larger weight (a i )</p><formula xml:id="formula_14">G aG i i i rm (100),(110),... rm ∑ Δ ̅ = Δ ∈{ }<label>(8)</label></formula><p>The determination of a i requires the surface energies, which, in turn, depend on the modifier coverage, the chemical potential of the modifier, and the substrate. Thermodynamically, the substrate is connected to a large reservoir of pristine atoms, hence (e.g., for Ni)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>G</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Gibbs free energy of formation of fcc Ni bulk, per Ni atom</head><formula xml:id="formula_15">Ni f,Ni μ = = (9)</formula><p>The chemical potential of the modifier is difficult to determine confidently due to the various excited species present. Plasma diagnostics or simulation of ion energy distributions (IEDs) is not attempted. Instead, the assumption of surface-plasma equilibrium allows us to indirectly determine the chemical potential through the simulated modifier coverage (area density). At the coverage observed (the coverage that self-limited adsorption stops at), no termination should have a positive adsorption energy. The chemical potential of the modifier is thus chosen to be the minimum required to set the adsorption free energy of all terminations greater than or equal to 0, leading to a modifier chemical potential as a function of coverage (eq 10)</p><formula xml:id="formula_16">G G y ( )<label>min</label></formula><formula xml:id="formula_17">( ) i i i O O (100),(110),... Ni Ni O O Ni Ni s x y s x μ θ θ = - ∈{ } | |<label>(10)</label></formula><p>In effect, we have substituted the chemical potential, the usual control parameter for reaction thermodynamics, with the experimentally observable parameter of modifier area density (coverage). The surface energies can be calculated by eq 11, where γ Ni i represents the surface energy of the pristine substrate (needed to correct for the bottom pristine surface exposed in asymmetric slab structures), and s is the number of metal atoms in the pristine substrate. The resulting surface energies are shown in Figure <ref type="figure" target="#fig_4">S5</ref>. The set of surface energies for a given coverage now allows Wulff construction to be performed, which minimizes the total surface energy of exposed terminations on crystal grains constrained by a fixed volume. The fractions (a i ) resulting from the minimization (see Figure <ref type="figure" target="#fig_5">S6</ref>) are used as weights for averaging the per-termination removal step energies.</p><p>The rationale behind using Wulff construction is that terminations more favorable to etching are also less stable and hence may be present in less significant fractions in the ensemble. Admittedly, the ECS method is not entirely consistent with our process since it minimizes the total surface energy subject to a fixed grain volume, whereas the surface faceting behavior is limited by a fixed cross-sectional area. Hence, we do not claim that our ECS-based model accurately describes the microfaceting that might occur in response to adsorbate coverage changes. Solving the cross-sectional area-constrained minimization problem is outside the scope of the present work, and the ECS method is adopted as a physics-inspired way to systematically assign the weights. Nor do we claim that microfaceting reconstruction will occur at our target process temperatures. The inspiration came from the transient heat spikes present locally near the ion impact region during the plasma oxidation, which can temporarily bring the local temperature close to the melting point. Nevertheless, the ECS is an ad hoc addition to the model to allow for calculation of single-valued etching energies that can be more readily compared between different proposed ALE processes. Since the per-termination removal step energies are independent of this assumption, when more reliable information on the surface is available (e.g., via the crystal orientation distribution function from X-ray diffraction), the weights can be substituted in</p><formula xml:id="formula_18">G x s y A ( ) / i i i Ni Ni O Ni Ni O Ni O 0 Ni s x y s x y γ μ μ γ = [ -+ - ] - | |<label>(11)</label></formula><p>3. COMPUTATIONAL DETAILS All electronic energy calculations are performed with density functional theory (DFT), as implemented in the Vienna ab initio simulation package (VASP). <ref type="bibr" target="#b26">[24]</ref><ref type="bibr" target="#b27">[25]</ref><ref type="bibr" target="#b28">[26]</ref> The electron-ion interactions are treated using the projector-augmented wave (PAW) method, <ref type="bibr" target="#b29">27</ref> and the valence one-electron functions are developed on a basis set of plane waves. The PBE exchange-correlation functional <ref type="bibr" target="#b30">28</ref> is used throughout. The van der Waals correction to the PBE functional was tested, for example, with the DFT-dDsC method, <ref type="bibr" target="#b31">29,</ref><ref type="bibr" target="#b32">30</ref> but not applied due to the overestimated bulk formation energies (see section "Validation of Computational Methods" in the Supporting Information). The bulk crystal parameters are obtained starting from their experimental values <ref type="bibr" target="#b33">[31]</ref><ref type="bibr" target="#b34">[32]</ref><ref type="bibr" target="#b35">[33]</ref><ref type="bibr" target="#b36">[34]</ref> by a two-step direct volume relaxation. The configuration search is done in two steps, where a reasonably crude but fast computational setup is used to relax all candidate structures and a slow but accurate setup is used for single-point calculations of the most stable structures. The two setups differ in the Monkhorst-Pack K-space sampling density with the 3 × 3 × 1 versus 5 × 5 × 1 mesh and a plane-wave cutoff (300 eV versus 400 eV). The relaxed structure and the relative stability of each adsorption site do not change with respect to these parameters. All other parameters are identical. Energies are converged to 10 -6 eV. Forces are converged to 0.02 eV/Å. For the molecules, the plane-wave cutoff is maintained at 400 eV.</p><p>For the Gaussian <ref type="bibr" target="#b37">35</ref> calculations on the gas-phase molecules, the PBE functional and the triple-zeta split valence basis set of Ahlrichs et al. (def-TZVP) <ref type="bibr" target="#b38">36</ref> were used. Geometric structures were converged, with forces converged to 1.5 × 10 -5 Hartree/ Bohr, and displacement were converged to 6 × 10 -5 Bohr on an "ultrafine" grid. These calculations were only used for confirming the relative stabilities, and the resulting energies were not used in the reported data.</p><p>Free energies reported include translational, rotational, and vibrational contributions to the entropy whenever appropriate. The phonons of the bulk systems are calculated with density functional perturbation theory (DFPT). <ref type="bibr" target="#b39">37</ref> The surface vibrational frequencies are calculated for the Γ point only with the bottom two layers frozen. The many degrees of freedom prevented the practical use of a more accurate setup. The vibrational analysis for molecules is also performed with finite difference, with a step size of 0.015 Å. Soft vibrational modes (resulting from the internal rotations of the Ni(II) complexes) with frequencies smaller than 100 cm -1 are shifted to the threshold value. Performing this shift resulted in a change in removal step energy on the order of 0.01-0.03 eV, depending on the etching chemistry (HFA vs HFAmd) and the coverage. The free energies are evaluated at 80 °C throughout the paper. The pressures are estimated according to the fluxes in the experiment (see eq S1).</p><p>The Wulffpack package is used in obtaining the evolution of surface termination distribution <ref type="bibr" target="#b40">38</ref> with respect to the modifier coverage θ. Since the adsorbates are added to substrates with finite area, the available coverages are discrete. The discrete data set is interpolated linearly to yield a continuous γ-θ curve, which is then used to perform the Wulff construction. At high coverages, terminations that saturate below a given coverage are not considered and are removed from the Wulff construction calculations (i.e., no extrapolation is performed).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">RESULTS AND DISCUSSION</head><p>4.1. Formate and Formamidinate Complexes of Ni and Cu. The energetics of the nickel complexes simulated are shown in Figure <ref type="figure" target="#fig_2">3</ref>. For the monomer case, three structures (monodentate, bidentate planar, bidentate tetrahedral) are searched and the bidentate planar is found to be the most stable. Our results contradict an earlier study <ref type="bibr" target="#b19">17,</ref><ref type="bibr" target="#b41">39</ref> that suggested tetrahedral being more stable. We confirmed the trend by performing atomic basis set calculations in Gaussian <ref type="bibr" target="#b37">35</ref> (see Section 3). Dimers, trimers, and tetramers of various configurations are built and compared. Three tetramers are built (Figure <ref type="figure" target="#fig_1">2</ref>), and only the most stable structures' energies are plotted in Figure <ref type="figure" target="#fig_2">3</ref>. For the dimers, trimers, and tetramer #3, the chelation angles are the same as the tetrahedral monomer. The bonds from the metal center to the ligand atoms are progressively elongated with respect to the nuclearity to accommodate more ligands. The formate and formamidinate complexes follow the same pattern, although the metalnitrogen bonds in amidinate complexes are slightly longer than the corresponding metal-oxygen bonds in formate complexes, presumably due to steric repulsion among the amine groups. By the Gibbs free energy, the most stable formate complex is the dimer, and the most stable formamidinate complex is the trimer. Since thermodynamics cannot preclude kinetic barriers that may prevent the formation of these large complexes, the main results are recalculated with the monomer complex as the product in Figures <ref type="figure" target="#fig_0">S11</ref> and <ref type="figure" target="#fig_1">S12</ref>.</p><p>4.2. Bulk Model. The results from the bulk model on the pristine (ΔG rm,pris ) and activated (ΔG rm,act ) substrates are shown in Tables <ref type="table" target="#tab_1">1</ref> and <ref type="table" target="#tab_2">2</ref>, respectively.</p><p>Both Ni and Cu in their pristine forms are found to resist etching by HFA and HFAmd due to the large positive values of ΔG rm,pris , making self-limited reactions possible. The results on bare metal substrates involving HFAmd are expected since substituted derivatives of the formamidinate complex are used to deposit Cu and Ni in atomic layer deposition (ALD). <ref type="bibr" target="#b17">15</ref> The reducing agent used is H 2 ; hence, the ALD reaction is the exact reversal of the ALE reaction. Overall, Ni has a higher (more unfavorable) removal step energy than Cu for the pristine surface.</p><p>The results on activated surfaces show a sharp contrast between Cu and Ni. Throughout the text, the units for reaction   <ref type="bibr" target="#b42">40</ref> We highlight the fact that etching O-activated Ni with formic acid is predicted to be unfavorable by 0.26 eV, inconsistent with the experimentally observed etching. <ref type="bibr" target="#b43">41</ref> The bulk model results suggest that formamidine etching is preferable compared to formic acid by 0.24 and 0.07 eV, respectively, on Ni and Cu. The differences between oxygen and nitrogen activation (0.08 eV favoring oxygen on Ni, 0.09 eV favoring nitrogen on Cu) are not significant.</p><p>To better understand the trend, energy decomposition is performed. The decomposed reactions (reactions 5a-6b) on the pristine surfaces separate the influence of the metal substrate from that of the etchant. In Table <ref type="table" target="#tab_3">3</ref>, it can be seen that it is more costly to atomize Ni than Cu, yet Ni binds the complexes more strongly. The two effects cancel somewhat, and the overall result is that Ni is less favorable to etch. A similar conclusion can be drawn from the energy decomposition of the activated substrates (reactions 7a-10b) where the activation with nitrogen or oxygen is separated from the binding of the metal to the complexes and the formation of hydrides. Table <ref type="table" target="#tab_4">4</ref> shows the results. First, note that the oxides are thermally stable with respect to O 2 , while the nitrides are not stable with respect to N 2 . Second, activation with both N and O are more favorable on Ni (e.g., by comparing Ni/N/FA and Cu/N/FA, reaction a) relative to Cu, effectively stabilizing the Ni metal. Since the relative difference on the b reactions for each set are the same as that of the pristine metal (which already indicates that pristine Cu is more favorable to etch), this further stabilization makes the nickel nitride less favorable to etch compared with Cu 3 N. The same can be said of the oxides, hence giving the global qualitative difference between Ni and Cu, Ni being harder to etch.</p><p>The role of oxidation states can be seen clearly in the data. The fact that reaction 8a on NiO is 0.93 eV less favorable than reaction 10a on Cu 2 O can be partially attributed to the difference in the oxidation state change. This is evident since the difference for the nitrides, between reaction 7a on Ni 3 N and reaction 9a on Cu 3 N, is only 0.15 eV, much smaller compared with that on the oxides.</p><p>On the other hand, note that the decomposed reactions cannot be used to compare N and O activation (e.g., by comparing reactions 7a to 8a), as the reference points to N 2 and O 2 are arbitrary and they bear no significance for the actual plasma activation process. The decomposed reactions obviously do not correspond to the actual reaction mechanisms, and their sole purpose here is to separate the influences of the substrate, the modifier, and the ligand on a thermodynamic level  Steps a and b correspond to the labels in reactions 5a-6b and refer to bulk metal evaporating and complex/H 2 formation, respectively. The energy values are normalized to one metal atom etched. </p><formula xml:id="formula_19">Ni(bulk) Ni(atom) → (5a) Ni(atom) 2HL NiL H 2 2 + →[ ]+ (5b) Cu(bulk) Cu(atom) → (6a) Cu(atom) HL 1/2 Cu L 1 2 H 2 2 2 + → [ ] + (6b) 2 3 Ni N 2Ni(bulk) 1 3 N 3 2 → + (7a) 2Ni(bulk) 1 3 N 2HL NiL 2 3 NH Ni(bulk) 2 2 3 + + → [ ] + + (7b) NiO Ni(bulk) 1 2 O 2 → + (8a) Ni(bulk) 2HL 1 2 O NiL H O 2 2 2 + + →[ ]+ (8b) 1 3 Cu N Cu(bulk) 1 6 N 3 2 → + (9a) Cu(bulk) HL 1 6 N 1 2 Cu L 1 3 NH 2 22 3 + + → [ ] + (9b)</formula><formula xml:id="formula_20">+ + → [ ] + (10b)</formula><p>4.3. Layer Model: Per Termination. The fact that HFA is able to etch nickel films activated with oxygen plasma suggests that the substrate resulting from the plasma activation could be quite different from the bulk nickel oxide. The predicted unfavorable Gibbs free energy for the removal step of 0.26 eV is significant enough to conclude that the bulk model is inadequate to offer qualitatively correct predictions for the plasma-activated surface. While the bulk model lacks the flexibility to account for the variety of surface structures since it is limited to the few known bulk lattices, its simplicity makes it useful as a reference and sanity check for the more sophisticated layer model.</p><p>The layer model energy expression given in eq 7 relies on the adsorption energy as the central coverage-dependent term. As adsorption energy is the more established metric to quantify the adsorbate-surface interaction, we discuss our sampling of the surface structures in terms of it. The adsorption energies of the structures picked by the configuration search are shown in Figure <ref type="figure" target="#fig_3">4</ref>. The reference points are arbitrarily chosen to be gasphase O 2 and N 2 for O and N adsorptions, respectively. This choice does not affect the rest of the model. The general trend in all four combinations is that the adsorption energies tend to increase (become less favorable) with increasing coverage as the more favorable sites are preferentially occupied by our algorithm. The lateral repulsion among adsorbates at high coverages also makes the high-coverage configurations less favorable. However, on the Cu/N system, the trend is not completely followed. In Figure <ref type="figure" target="#fig_3">4</ref>, around 0.06 Å -2 , all adsorption energies on all terminations except (100) decreased to form a "dip". This is explained by referring back to the structures shown in Figure <ref type="figure">S8</ref>. On the Cu(111) termination, the most significant "dip" occurred between structures with 2 and 3 nitrogen atom adsorbates. On the 3-adsorbate structure, the surface in the vicinity of one of the adsorbed nitrogen atoms relaxed into a square pseudo-(100) structure, as previously reported both experimentally <ref type="bibr" target="#b44">42</ref> and computationally. <ref type="bibr" target="#b45">43</ref> The 4-adsorbate structure has two adsorbates forming the pseudo-(100) structure. Eventually, the increasing trend resumed due to the interadsorbate repulsion as the adsorbates become closer. It also explains why the "dip" is not observed on the (100) termination. The (211) and (221) terminations follow a similar trend due to the large (111) terraces present.</p><p>The adsorption energy of nitrogen is ∼1.5 eV less favorable on Cu than Ni, while oxygen adsorption is ∼0.5 eV less favorable. In particular, nitrogen adsorption is unfavorable with respect to N 2 at all coverages for Cu surfaces and at coverages above ∼0.10 Å -2 on Ni surfaces, suggesting that these surface nitrides on Cu and Ni are not thermodynamically stable. Without significant energy barriers, the surface nitride may spontaneously decompose to form N 2 and the pristine surface. The practical implication is that if nitrogen is used as the modifier, the activated surface must present a significant kinetic barrier to prevent desorption once the nitrogen plasma is purged. The O adsorption on both substrates is favorable with respect to O 2 for all terminations and coverages considered.</p><p>The adsorption of oxygen on Cu and Ni in some experimentally known low-coverage configurations is indicated in Figure <ref type="figure" target="#fig_3">4</ref>. The complete list of structures investigated is shown in Table <ref type="table" target="#tab_3">S3</ref>. The comparison reveals that the adsorption energy trajectories discovered by the configuration search lie very close to the experimentally observed surface structures, as can be seen for the Ni(100), Ni(111), and Cu(100) terminations. The surface supercell used is briefly investigated for the (100), (111), and (211) surfaces by considering a few supercells of symmetries different from those used for the configuration search. The results (see Figure <ref type="figure" target="#fig_2">S3</ref>) indicate that the errors introduced by supercell selection are small. Furthermore, in the event that the configuration search misses some more stable structures at a given coverage, this error does not propagate significantly through the Wulff construction to the final, averaged removal step energy. For structures with extended reconstruction (e.g., missing row (MR) and pairing row (PR) reconstructions on the (110) termination), the adsorption energies are much more favorable than what we have found. Since these structures require the addition or removal of metal atoms, our algorithm cannot recover them. Depending on the size of the crystalline domains on the amorphous or polycrystalline surface, these reconstructed domains may or may not be important. The comparison indicates that our configurations lie close to the global minimum when extended reconstructions are not considered.</p><p>The removal step energies for each surface termination are shown in Figure <ref type="figure" target="#fig_4">5</ref>. The formic acid and formamidine results are shown on the left and right y-scales, respectively. The results from the bulk model are indicated with horizontal lines. Unlike the adsorption energies, here the absolute scales are meaningful.</p><p>For the Ni surfaces, the layer model produces removal step energies similar to that of the pristine bulk model at low coverages. As the coverages increase, all terminations become more favorable to etch than the pristine bulk. The curves of different terminations decrease with roughly the same slope, but some terminations saturate (terminate) at lower coverages. At the highest coverages explored (the "saturation coverage"), ΔG rm is slightly below 0.0 eV for all terminations except (110), which saturated just above 0.0 eV. In particular, on Ni(111) surfaces, at a coverage of 0.18 Å -2 , etching is the most favorable (-0.50 and -0.75 eV for Ni/N and Ni/O with formic acid, respectively) among all terminations investigated.</p><p>For the Cu systems, all terminations lie below the line of the bulk metal (Figure <ref type="figure" target="#fig_4">5b</ref>,d, solid black line). The curves do not have an easily recognizable slope due to reconstructions discussed earlier. The terminations for the Cu/N system saturate early compared with those in other three systems, suggesting that nitrogen-based modification may not persist long enough for thermal activation, as noted earlier. As with the Ni surface, most of the curves crossed the 0 eV line, resulting in favorable etching at high enough coverage.</p><p>4.4. Layer Model: ECS Averaged. While a lot of information is presented in the per-termination ΔG rm , it is difficult to relate to the experimental data. At a given coverage, the difference between the most favorable and least favorable terminations is on the order of 0.5 eV for every system. To proceed, one must average the removal step energies on the different occurring terminations. The present work relies on the equilibrium crystal shape with the inverse definition of modifier chemical potentials, as described in Section 2. The chemical potential determined for four pairs of substrates and modifiers is shown in Figure <ref type="figure" target="#fig_3">S4</ref>. The resulting surface energies and fractions of surfaces are shown in Figures <ref type="figure" target="#fig_4">S5</ref> and <ref type="figure" target="#fig_5">S6</ref>, respectively. The average removal step energies ΔG̅ rm , the final result of the layer model calculated via eq 8, are given in Figure <ref type="figure" target="#fig_5">6</ref>. The results from the bulk model (both pristine and activated) are also provided for comparison.</p><p>To illustrate the effect of the surface-averaging method, compare Figure <ref type="figure" target="#fig_4">5a</ref> to Figure <ref type="figure" target="#fig_5">6</ref>. On the Ni substrate, both O and N modifiers show a significantly more favorable etching on the (111) termination compared with the rest. The averaged curves in Figure <ref type="figure" target="#fig_5">6</ref>, however, do not follow the trend indicated by the (111) due to its diminishing surface fractions (see Figures <ref type="figure" target="#fig_4">S5</ref> and <ref type="figure" target="#fig_5">S6</ref>) according to the ECS method. Above 0.08 Å -2 on Ni/N and 0.10 Å -2 on Ni/O, the (111) termination is essentially absent, and the averaged removal step energies are dominated by the higher-indexed terminations. The method therefore prevents biasing the final averaged removal step energy toward any termination.</p><p>The Ni/N and Ni/O curves follow a smooth, nearly linear decrease with respect to coverage. Both rapidly decreased below the bulk oxide and nitride lines. Over the coverage investigated, the bulk model results lie near the center of the range of removal step energies found. It can be seen that the bulk model predictions lie close to the center of the range spanned by the layer model prediction. The N and O curves give very similar energetics in the middle of the range observed, and both crossed the ΔG̅ rm = 0 eV line to become favorable to etching at ∼0.14 Å -2 . Thus, our layer model predicts that with overlayer adsorption structures and oligomer product structures, etching on Ni can become favorable already. The experimental fact is that O 2 plasma-activated Ni can be favorably etched with formic acid at 80 °C. Our results thus qualitatively agree with the experiments, despite significant difference in activation layer thickness.</p><p>On the Cu substrates, the most striking observation is that the two curves of Cu/N and Cu/O nearly parallel each other. This is especially surprising when we see in Figure <ref type="figure" target="#fig_5">S6</ref> that the parallel curves are results of contributions from different terminations. The Cu/N curve mostly consists of contributions from (100) and ( <ref type="formula">221</ref>) terminations, whereas on the Cu/O curve, the (100) is suppressed at low coverages, and the significant contributors are (210) and (211). Our results clearly indicate that the energetics of surface adsorption structures are similar between N and O adsorbates, as was previously demonstrated by a DFT study. <ref type="bibr" target="#b46">44</ref> Additionally, the layer model predicts that etching Nactivated Cu stays ∼0.2 eV more favorable than the O-activated Cu, consistent with a bulk model prediction of 0.09 eV more favorable etching with N. This can be understood in terms of the difference in bonding: Cu 3 N has 1/3 Cu-N bonds per Cu atom, while Cu 2 O has 1/2 Cu-O bonds per Cu atom. Since etching 1 Cu atom leads to 1 O-H/N-H bond being formed in both cases, etching Cu/N breaks fewer bonds in total, and more favorable removal step energy is expected. The same cannot be said of the Ni etching due to its nitride and oxide having different valences.</p><p>As we have shown earlier, the layer model reduces to the bulk model and will give identical removal step energies if additional assumptions of the bulk model are imposed. Our results show that the energetics of etching oxide/nitride on top of the pristine crystal is different from that predicted by the bulk model. Indeed, the integral heats of adsorption at high coverages of oxygen on Ni have been determined to be much lower than bulk NiO formation energy. <ref type="bibr" target="#b47">45</ref> The most useful results obtained are that (1) nitrogen activation could also lead to working processes similar to oxide (already demonstrated with formic acid) on both substrates, as the nitrogen activation gives a more favorable removal step than the oxygen activation, and (2) formamidine leads to more favorable removal step energies compared with formic acid. This is potentially important as formamidine is a much more volatile etchant than formic acid (337 vs 40 mmHg at 298 K). Potentially, formamidine could yield higher etch rates than formic acid, important for the industry and for characterizing the etching product. Furthermore, the trend toward more favorable removal step energies at higher coverages suggests that activation should always aim for a higher modifier content.</p><p>Note that the configuration search is limited to surface adsorption sites. Following the general trend of more favorable etching at higher coverages, it is expected that the inclusion of subsurface sites into the configuration search scheme will continue this trend and yield more favorable sites. As our published results <ref type="bibr" target="#b43">41</ref> show, this is indeed the case. The results from our previous work on the nickel oxide systems with nickel formate monomer as the etching product are marked in Figure <ref type="figure" target="#fig_1">S12</ref> for comparison. Etching with formic acid on these metastable oxide structures is favorable. Note that the earlier results are calculated for the nickel formate monomer product, while the product used throughout this study is the dimer.</p><p>It is observed through our study that the viability of the ALE process is determined by several factors. As expected, the cohesive energy of the metal clearly plays a significant role. The easier it is to atomize the metal crystal, the more favorable etching would become. The relative strength of metal-modifier, hydrogen-modifier, and hydrogen-hydrogen bonding, as well as the number of bonds broken and formed, also influences the removal step energy outcome. In particular, the redox potential of the metal will clearly play a role in the strength of the metalmodifier bond since this interaction involves a change in the metal oxidation state. Moreover, the difference between hydrogen-modifier bond energy and hydrogen-hydrogen bond energy will affect the selectivity of etching the activated surface to the pristine surface: the stronger hydrogen binds to the modifier compared with another hydrogen atom, the stronger the driving force for the etching reaction on the activated surface, and the more likely the removal step will be self-limited. The free energy of the metal complex is also of the utmost importance. While the most stable structure can be searched in a straightforward manner as is done here, there is little guarantee that the most stable molecule is the actual molecule formed. The case in point is the nickel complexes (Figure <ref type="figure" target="#fig_1">2</ref>). While the dimers, trimers, and tetramers are all thermodynamically more stable than the monomer, the formation of these large complexes on the surface may be prohibitively slow. In such cases, the monomer-based thermodynamics could be more relevant to the design of ALE processes.</p><p>The factors discussed above can be estimated easily by either simple calculations or reference to standard thermochemical data tables. Influences more difficult to treat involve surface effects, including (1) evolution of surface morphology on the same termination under modifier adsorption and (2) surface heterogeneity effects. Such effects cannot be determined a priori without a detailed study. The influence of surface morphology is clearly indicated when the layer model (assuming a mononuclear nickel formate complex) predicts etching with formic acid to be unfavorable on Ni(111) but favorable when the subsurface sites become occupied. <ref type="bibr" target="#b43">41</ref> The heterogeneity among different terminations must be treated carefully for thermodynamic predictions to guide the experiments. The approach taken in the present work relies on the surface energies to summarize the results from various terminations (higher surface energy structures are suppressed). Whenever experimental crystal orientation distribution functions are available, such information can be directly utilized to yield more accurate pictures.</p><p>To summarize, the factors favoring metal-plasma ALE processes are weaker metal-metal bonding (that still allows self-limited etching), stronger modifier-hydrogen bonding, more stable (small) complexes, and less stable activation layer (that does not desorb spontaneously).</p><p>As a final note, it is readily seen from the results of the layer model that "atomic layer etching" is not removing strictly one atomic layer for certain substrates. To achieve the precise atomic layer removal, the activation has to be limited to the top layer. However, for some substrates, this constraint might make it difficult to find modifiers and etchants that give a favorable removal step energy at these coverages. Alternatively, etching may stop before all of the modifiers are consumed since the low coverage of modifiers left on the surface would lead to unfavorable etching. Thus, the observed etch per cycle can be still one layer or less but the modification penetrates deeper than that, persisting to the next activation step. In both cases, the etching process influences more than one atomic layer. The reader is reminded that the layer model itself was derived with the hypothetical reaction that leads to complete removal of modifier atoms and exposure of the underlying pristine metal. In essence, it is a thermodynamic average of the removal step, where, as the etch proceeds, modifier coverage continuously decreases. It is not possible to pinpoint the coverage or activation thickness at which the etching will stop with the present model. Such a prediction would require eq 6 to be rewritten with the postremoval surface on the product side, which is outside the scope of this work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">CONCLUSIONS</head><p>Atomic layer etching (ALE) is a technique poised to transform existing semiconductor manufacturing processes. At the ideal level, it uses time-separated steps of self-limited surface reactions to achieve high selectivity, specificity, and anisotropy, at the same time opening up the process to many new, traditionally hard-to-etch materials. The large chemical space of ALE, involving the antecedent choices of substrates, modifiers, etchants, and process parameters, is impossible to exhaust by a trial-and-error approach. In the present work, the thermodynamics of the removal step is proposed as a descriptor for ALE chemistries. A computational framework that attempts to evaluate this descriptor has been developed. Only a minimal input from the experiment is required to keep it as self-contained as possible, but experimental information on the etch product, the distribution of the crystal terminations, and the postplasma surface structure can be readily used to improve the accuracy of the model.</p><p>Two models are proposed and evaluated. The bulk model is the simplest approach. While easy to use, it lacks the flexibility needed to treat the complex surface effects. The layer model is developed to remedy this. Relying on surface adsorption calculations, an approach has been developed to yield a singlevalued removal step free-energy change. It is found through the layer model study that the etching tends to become more favorable at higher coverages of modifier atoms. At high coverages, the surface oxides and nitrides are more favorable to etch than the bulk oxides and nitrides. Nitrogen activation results in more favorable etching than oxygen activation on the Cu surfaces, and the two give similar removal step energies on Ni surfaces. Qualitative agreement with the experiment can be obtained by destabilizing the surface via sublayer adsorption structures or stabilizing the products via forming polynuclear metal complexes.</p><p>As directly simulating molecular impact at the DFT level is still prohibitively expensive, the surface activation layers were obtained using the so-called greedy-search algorithm. The free energies are obtained as extrapolations from 0 K using ab initio thermodynamics. When an atomistic model of plasma activation becomes available, our layer model energy expression can be applied directly to such realistic structures.</p><p>Our modeling efforts can help ALE process development in the following ways. First, the effect of etchants can be separated from the rest of the process provided that accurate free energies of etchants and complexes are available. This allows the decoupling of the etchant design from the rest of the process at the basic thermodynamic level, which may allow for rapid screening of etchant structures with high-throughput calculations. Second, the importance of surface morphology and</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Chemistry of Materials</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Plasma-thermal atomic layer etching process depicted here for the Ni/O/formic acid system. The metal surface (A) is first subjected to a plasma ion bombardment (B), forming a surface activation layer until saturation (C). Etchant molecules are then introduced (D) after the plasma has been switched off. The etchants adsorb dissociatively on the activated surface (E), etching the top layers by the formation of volatile metal complexes and water. The reaction stops when all of the modifier atoms are consumed, exposing the metal surface again (F).</figDesc><graphic coords="2,132.49,69.17,360.00,181.87" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Structures of the Ni(II) and Cu(I) complexes considered. Only the formates are shown. Respective formamidinates can be found by replacing oxygen atoms with secondary amine groups. The relative stabilities are shown in Figure3. The dimer and tetramer structures are found to be the most stable for formate and formamidinate complexes, respectively. Oligomers are not investigated for Cu (see page 9).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Electronic potential energies (ΔE) and Gibbs free energies (ΔG 80°C ) of nickel formate (Ni(FA) 2 ) and formamidinate (Ni-(FAmd) 2 ) oligomer (olig.) complexes relative to the monomer (mono.) complex. Energy differences are normalized by nuclearity (nucl.) for comparison on a per-metal atom basis.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Adsorption energies of different terminations of the Ni/N, Cu/N, Ni/O, and Cu/O systems as a function of coverage. The labels "PR" and "MR" represent the "pairing row" and "missing row" reconstructions of the (110) surfaces, respectively.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Removal step energies by terminations on the Ni/N, Cu/N, Ni/O, and Cu/O systems as functions of coverage, evaluated at 80 °C. Two axes are shown. The y-axis on the left corresponds to the formamidine chemistry. The y-axis on the right corresponds to the formic acid chemistry. The bulk model results on the pristine and activated substrates are, respectively, marked with colored and black horizontal lines for comparison. The values are in eV per-metal atom etched.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Wulff construction-averaged removal step energies as functions of coverage (dashed lines) for (a) nickel and (b) copper systems. The solid lines correspond to the results from the bulk model for the pristine (black) and modified (colored) systems. The values are in eV per-metal atom etched.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1 .</head><label>1</label><figDesc>Gibbs Free Energy of the Removal Step Reactions are eV per-metal atom etched, unless otherwise stated. All four modifier and etchant combinations give a slightly favorable (negative) removal step energy on Cu, whereas, on Ni, the same four combinations are unfavorable (positive). The calculated ΔG rm,act is 0.10 eV for the HFAmd etching of Ni 3 N, which is consistent with the reports of Ni 3 N deposition using amidinate complexes of nickel (which can be subsequently reduced by H 2 to give Ni films), although the ligands in the report are heavily substituted.</figDesc><table><row><cell cols="3">(Reactions 1a and 1b) on Pristine Substrates from the Bulk Model (ΔG rm,pris 80°C ; eq 1) a</cell></row><row><cell>substrate</cell><cell>etchant</cell><cell>ΔG rm,pris 80°C [eV]</cell></row><row><cell>Ni</cell><cell>HFA</cell><cell>1.00</cell></row><row><cell>Ni</cell><cell>HFAmd</cell><cell>0.76</cell></row><row><cell>Cu</cell><cell>HFA</cell><cell>0.50</cell></row><row><cell>Cu</cell><cell>HFAmd</cell><cell>0.44</cell></row></table><note><p>a The energy values are normalized to one metal atom etched. energies</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2 .</head><label>2</label><figDesc>Gibbs Free Energy of the Removal Step on Activated</figDesc><table><row><cell cols="4">Substrates (Reactions 2a-3b) from the Bulk Model (ΔG rm,act 80°C ; eq 2) a</cell></row><row><cell>substrate</cell><cell>modifier</cell><cell>etchant</cell><cell>ΔG rm,act 80°C [eV]</cell></row><row><cell>Ni</cell><cell>N</cell><cell>HFA</cell><cell>0.34</cell></row><row><cell>Ni</cell><cell>N</cell><cell>HFAmd</cell><cell>0.10</cell></row><row><cell>Ni</cell><cell>O</cell><cell>HFA</cell><cell>0.26</cell></row><row><cell>Ni</cell><cell>O</cell><cell>HFAmd</cell><cell>0.02</cell></row><row><cell>Cu</cell><cell>N</cell><cell>HFA</cell><cell>-0.15</cell></row><row><cell>Cu</cell><cell>N</cell><cell>HFAmd</cell><cell>-0.22</cell></row><row><cell>Cu</cell><cell>O</cell><cell>HFA</cell><cell>-0.06</cell></row><row><cell>Cu</cell><cell>O</cell><cell>HFAmd</cell><cell>-0.12</cell></row></table><note><p>a</p><p>The energy values are normalized to one metal atom etched.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 3 .</head><label>3</label><figDesc>Energy Decomposition of Bulk Model on Pristine Surfaces a</figDesc><table><row><cell>substrate</cell><cell>etchant</cell><cell>ΔG a 80°C [eV]</cell><cell>ΔG b 80°C [eV]</cell></row><row><cell>Ni</cell><cell>HFA</cell><cell>+4.19</cell><cell>-3.23</cell></row><row><cell>Ni</cell><cell>HFAmd</cell><cell>+4.19</cell><cell>-3.47</cell></row><row><cell>Cu</cell><cell>HFA</cell><cell>+3.05</cell><cell>-2.55</cell></row><row><cell>Cu</cell><cell>HFAmd</cell><cell>+3.05</cell><cell>-2.62</cell></row><row><cell>a</cell><cell></cell><cell></cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 4 .</head><label>4</label><figDesc>Energy Decomposition of Bulk Model on Activated Surfaces a</figDesc><table><row><cell>substrate</cell><cell>modifier</cell><cell>etchant</cell><cell>ΔG a 80°C [eV]</cell><cell>ΔG b 80°C [eV]</cell></row><row><cell>Ni</cell><cell>N</cell><cell>HFA</cell><cell>-0.37</cell><cell>+0.71</cell></row><row><cell>Ni</cell><cell>N</cell><cell>HFAmd</cell><cell>-0.37</cell><cell>+0.47</cell></row><row><cell>Ni</cell><cell>O</cell><cell>HFA</cell><cell>+1.45</cell><cell>-1.19</cell></row><row><cell>Ni</cell><cell>O</cell><cell>HFAmd</cell><cell>+1.45</cell><cell>-1.43</cell></row><row><cell>Cu</cell><cell>N</cell><cell>HFA</cell><cell>-0.52</cell><cell>+0.37</cell></row><row><cell>Cu</cell><cell>N</cell><cell>HFAmd</cell><cell>-0.52</cell><cell>+0.31</cell></row><row><cell>Cu</cell><cell>O</cell><cell>HFA</cell><cell>+0.52</cell><cell>-0.58</cell></row><row><cell>Cu</cell><cell>O</cell><cell>HFAmd</cell><cell>+0.52</cell><cell>-0.64</cell></row><row><cell cols="5">a Steps a and b correspond to the labels in reactions 7a-10b and refer</cell></row><row><cell cols="5">to the reverse of oxidation/nitridation (modifier desorption) and</cell></row><row><cell cols="5">complex/hydride formation, respectively. The energy values are</cell></row><row><cell cols="3">normalized to one metal atom etched.</cell><cell></cell><cell></cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1021/acs.chemmater.1c01324 Chem. Mater. 2021, 33, 6774-6786</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>■ ACKNOWLEDGMENTS</head><p>The authors gratefully acknowledge the support from <rs type="funder">UCLA Institute of Digital Research and Education (IDRE)</rs> for computational resources on the <rs type="institution" subtype="infrastructure">UCLA Hoffman2 cluster</rs>. This work used the <rs type="funder">Extreme Science and Engineering Discovery Environment (XSEDE)</rs> Comet and Expanse cluster at <rs type="institution">San Diego Supercomputer Center</rs>, and Bridges-2 cluster at <rs type="institution">Pittsburgh Computing Center</rs>. These XSEDE resources are accessed through allocation <rs type="grantNumber">TG-CHE170060</rs>. XSEDE is supported by <rs type="funder">National Science Foundation</rs> Grant number <rs type="grantNumber">ACI-1548562</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_svmZCNM">
+					<idno type="grant-number">TG-CHE170060</idno>
+				</org>
+				<org type="funding" xml:id="_azQfA7A">
+					<idno type="grant-number">ACI-1548562</idno>
+				</org>
+			</listOrg>
+
+			<listOrg type="infrastructure">
+				<org type="infrastructure">					<orgName type="extracted">UCLA Hoffman2 cluster</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>heterogeneity is highlighted to call for the diverse sampling of the surface structures and physically consistent terminationaveraging models. Existing concepts in surface science, such as adsorption energy, surface formation energy, etc., offer an additional understanding of the parameters that control the calculated removal step energy descriptor.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head><p>* sı Supporting Information</p><p>The Supporting Information is available free of charge at <ref type="url" target="https://pubs.acs.org/doi/10.1021/acs.chemmater.1c01324?goto=supporting-info">https://pubs.acs.org/doi/10.1021/acs.chemmater.1c01324</ref>.</p><p>The Supporting Information first discusses the estimation of reactant and product pressures based on the flow rates of the reactant and carrier gas; the errors introduced by the uncertain product pressure are quantified; the computational methods are validated with the lattice parameters and cohesive energies of the bulk solids; the effect of dispersion correction is illustrated to be uniform across the coverages and small compared with our etching reaction energetics; the configuration search setup is then explained in detail, with figures attached showing the structures obtained at each coverage; the formation energies and the fractions of surfaces determined via the Wulff construction are provided; and finally, the main results on the nickel substrates are represented with the nickel monomer complexes as the product (PDF) </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1021/acs.chemmater.1c01324?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.1c01324" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<idno type="DOI">10.1021/acs.chemmater.1c01324?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.1c01324" />
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="6774" to="6786" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>Chem. Mater.</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">■</forename><surname>References</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching: An Industry Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Plombon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Tronic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Turkot</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0021506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5005" to="N5009" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The 2017 Plasma Roadmap: Low temperature plasma science and technology</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adamovich</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-6463/aa76f5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<date type="published" when="2017">2017. 323001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching at the Tipping Point: An Overview</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0061506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5041" to="N5053" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Patterning nickel for extreme ultraviolet lithography mask application. II. Hybrid reactive ion etch and atomic layer etch processing</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000191</idno>
+		<idno>No. 042604</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Patterning nickel for extreme ultraviolet lithography mask application I. Atomic layer etch processing</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000190</idno>
+		<idno>No. 042603</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<date type="published" when="2020">2020</date>
+			<publisher>American Vacuum Society</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Review Article: Plasma-surface interactions at the atomic scale for patterning metals</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Altieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Minardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4993602</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">05</biblScope>
+			<biblScope unit="page">203</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching: A review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Routzahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000894</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">030801</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Mechanisms of Thermal Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.accounts.0c00084?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="1151" to="1160" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Self-Limiting Temperature Window for Thermal Atomic Layer Etching of HfO2 and ZrO2 Based on the Atomic-Scale Mechanism</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mullins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kondati Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nolan</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b05021?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3414" to="3426" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Molecular mechanisms of atomic layer etching of cobalt with sequential exposure to molecular chlorine and diketones</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Konh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pallem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Opila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Teplyakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5082187</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<date type="published" when="2019">2019. 021004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Formation and desorption of nickel hexafluoroacetylacetonate Ni(hfac)2 on a nickel oxide surface in atomic layer etching processes</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Basher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Krstic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Fink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Karahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wenzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hamaguchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000293</idno>
+		<idno>No. 052602</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Aluminum Oxide (Al2O3) Using Sequential Exposures of Niobium Pentafluoride (NbF5) and Carbon Tetrachloride (CCl4): A Combined Experimental and Density Functional Theory Study of the Etch Mechanism</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Blomberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haukka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Givens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tuominen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.1c00142?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="2883" to="2893" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Self-limiting processes in thermal atomic layer etching of nickel by hexafluoroacetylacetone</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Basher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hamaguchi</surname></persName>
+		</author>
+		<idno type="DOI">10.35848/1347-4065/aba9a7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="issue">090905</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Stability of hexafluoroacetylacetone molecules on metallic and oxidized nickel surfaces in atomic-layer-etching processes</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Basher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Krstic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Takeuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Isobe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kiuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Karahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wenzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hamaguchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5127532</idno>
+		<idno>No. 022610</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Synthesis and Characterization of Copper(I) Amidinates as Precursors for Atomic Layer Deposition (ALD) of Copper Metal</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ic048492u?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="1728" to="1735" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of transition metals</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmat1000</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Mater</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="749" to="754" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">On the relative stability of cobalt-and nickel-based amidinate complexes against beta-migration</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/qua.21880</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Quantum Chem</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="756" to="763" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">First-Row Transition Metal Bis(amidinate) Complexes; Planar Four-Coordination of FeII Enforced by Sterically Demanding Aryl Substituents</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Nijhuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Jellema</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J J</forename><surname>Sciarone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Meetsma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H M</forename><surname>Budzelaar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hessen</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/ejic.200500094</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Eur. J. Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="page" from="2089" to="2099" />
+			<date type="published" when="2005">2005. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Proton NMR Study of Nickel Formate Di-Hydrate, Ni(HCOO)2•2H2O</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zenmyo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tokita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yamagata</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JPSJ.75.104704</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<date type="published" when="2006">2006. 104704</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Thermogravimetry-FTIR study of the surface formate decomposition on Cu, CuCl, Cu2O and CuO. Correlations between reaction selectivity and structural properties</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">G</forename><surname>Neoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Teo</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/FT9949000355</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Soc., Faraday Trans</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="355" to="362" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">The mass spectra of copper(I) carboxylates. Inorg</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Richards</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.1c01324?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.1c01324" />
+	</analytic>
+	<monogr>
+		<title level="m">Chemistry of Materials pubs.acs.org/cm Article</title>
+		<imprint>
+			<date type="published" when="1972">1972. 2021</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="6774" to="6786" />
+		</imprint>
+	</monogr>
+	<note>Chem. Mater.</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Mass spectrometry and structures of copper(I) carboxylates in the vapor phase</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ogura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Fernando</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ic50129a024?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="2611" to="2615" />
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Structure of a planar four-coordinate complex of copper(I)</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ogura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Mounts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Fernando</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ja00784a067?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="949" to="951" />
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Projector augmented-wave method</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Blöchl</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.50.17953</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="17953" to="17979" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Efficient iterative schemes for ab initio total-energy calculations using a plane-wave basis set</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmuller</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.54.11169</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="11169" to="11186" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmuller</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0927-0256(96)00008-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="15" to="50" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">From ultrasoft pseudopotentials to the projector augmented-wave method</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Joubert</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.59.1758</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="1758" to="1775" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Generalized Gradient Approximation Made Simple</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.77.3865</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="3865" to="3868" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A generalized-gradient approximation exchange hole model for dispersion coefficients</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Steinmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Corminboeuf</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3545985</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">134</biblScope>
+			<biblScope unit="issue">044117</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Comprehensive Benchmarking of a Density-Dependent Dispersion Correction</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Steinmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Corminboeuf</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ct200602x?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="3567" to="3577" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">CRC Handbook of Chemistry and Physics</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Haynes</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>CRC Press</publisher>
+			<biblScope unit="page" from="5" to="30" />
+		</imprint>
+	</monogr>
+	<note>th ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Structure and magnetic properties of nickel nitride thin film synthesized by plasma-based ion implantation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vempaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Miraglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sulpice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ortega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hlil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fruchart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pelletier</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jmmm.2004.01.069</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Magnetism</title>
+		<meeting>the International Conference on Magnetism</meeting>
+		<imprint>
+			<publisher>ICM</publisher>
+			<date type="published" when="2003">2004. 2003</date>
+			<biblScope unit="page" from="272" to="276" />
+		</imprint>
+	</monogr>
+	<note>E843-E844</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Thermodynamics of ternary nitride formation by ammonolysis: application to lithium molybdenum nitride (LiMoN2), sodium tungsten nitride (Na3WN3), and sodium tungsten oxide nitride (Na3WO3N)</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Elder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Disalvo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Topor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Navrotsky</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm00034a027?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1545" to="1553" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Heats of Formation of Nickel and Cobalt Oxides (NiO and CoO) of Combustion Calorimetry</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Boyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Conway</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ja01643a072?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="3835" to="3837" />
+			<date type="published" when="1954">1954</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Gaussian 16, revision C.01</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Wallingford CT</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Fully optimized contracted Gaussian basis sets for atoms Li to Kr</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schäfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Horn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.463096</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="2571" to="2577" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Greenas-function approach to linear response in solids</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Testa</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.58.1861</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="1861" to="1864" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">WulffPack: A Python package for Wulff constructions</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Rahm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Erhart</surname></persName>
+		</author>
+		<idno type="DOI">10.21105/joss.01944</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Open Source Softw</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="1944">2020. 1944</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Computational Study on the Relative Reactivities of Cobalt and Nickel Amidinates via beta-H Migration</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gaffney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A T</forename><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/om060910a?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Organometallics</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="2803" to="2805" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Direct-Liquid-Injection Chemical Vapor Deposition of Nickel Nitride Films and Their Reduction to Nickel Films</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pallem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Shenai</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm903636j?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="3060" to="3066" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Atomic layer etching of metals with anisotropy, specificity, and selectivity</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sautet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000225</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">043005</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Nitrogen-induced pseudo-(100) reconstruction of the Cu(111) surface identified by STM</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Driver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Woodruff</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0039-6028(99)00906-1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">442</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Nitrogen adsorption and thin surface nitrides on Cu(111) from firstprinciples</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Soon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Todorova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Delley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stampfl</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.susc.2007.07.011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">601</biblScope>
+			<biblScope unit="page" from="4775" to="4785" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Morphology of copper nanoparticles in a nitrogen atmosphere: A first-principles investigation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Soon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Delley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stampfl</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.77.125423</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<date type="published" when="2008">2008. 125423</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Femtomole Adsorption Calorimetry on Single-Crystal Surfaces</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kose</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>King</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.1c01324?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.1c01324" />
+	</analytic>
+	<monogr>
+		<title level="m">Chemistry of Materials pubs.acs.org/cm Article</title>
+		<imprint>
+			<date type="published" when="1998">1998. 2021</date>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="6774" to="6786" />
+		</imprint>
+	</monogr>
+	<note>Chem. Rev.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

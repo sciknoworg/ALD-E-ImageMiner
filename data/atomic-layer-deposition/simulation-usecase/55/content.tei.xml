@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Molecular dynamics simulation of the Al 2 O 3 film structure during atomic layer deposition</title>
+				<funder>
+					<orgName type="full">The University of Alabama</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zheng</forename><surname>Hu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemical and Biological Engineering</orgName>
+								<orgName type="institution">University of Alabama</orgName>
+								<address>
+									<settlement>Tuscaloosa</settlement>
+									<region>AL</region>
+									<country>USA;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junxia</forename><surname>Shi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">Cornell University</orgName>
+								<address>
+									<settlement>Ithaca</settlement>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">C</forename><forename type="middle">Heath</forename><surname>Turner</surname></persName>
+							<email>hturner@eng.ua.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemical and Biological Engineering</orgName>
+								<orgName type="institution">University of Alabama</orgName>
+								<address>
+									<settlement>Tuscaloosa</settlement>
+									<region>AL</region>
+									<country>USA;</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Molecular dynamics simulation of the Al 2 O 3 film structure during atomic layer deposition</title>
+					</analytic>
+					<monogr>
+						<idno type="ISSN">0892-7022 print/ 1029-0435 online</idno>
+					</monogr>
+					<idno type="MD5">038B1DE3A72EA1F9DFB490593DD345D4</idno>
+					<idno type="DOI">10.1080/08927020802468372</idno>
+					<note type="submission">Received 12 June 2008; final version received 8 September 2008</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T16:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>molecular dynamics</term>
+					<term>atomic layer deposition</term>
+					<term>interface</term>
+					<term>Al 2 O 3</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Based on an understanding of atomic layer deposition (ALD) from prior experimental and computational results, all-atom molecular dynamics (MD) simulations are used to model the Al 2 O 3 film structure and composition during ALD processing. By separating the large time-scale surface reactions from the small time-scale structural relaxation, we have focused on the growth dynamics of amorphous Al 2 O 3 films at the atomic scale. The simulations are able to reproduce some important properties and growth mechanisms of Al 2 O 3 ALD films, and hence provide a bridge between atomic-level information and experimental measurements. Information about the evolution of the microscopic structures of the Al 2 O 3 films is generated, and the influence of operation parameters on the Al 2 O 3 ALD process. The simulations predict a strong influence of the initial surface composition and process temperature on the surface roughness, growth rate and growth mode of the deposited films.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>As the controlled deposition of thin films becomes a critical problem in the electronic materials industry, the utility of atomic layer deposition (ALD) is growing significantly. ALD is a deposition method by which precursor vapours are alternately pulsed onto the surface of a substrate, with a purge cycle of an inert gas between the precursor pulses. The surface reactions in ALD are complementary and selflimiting, which enables the deposition of a material through highly uniform and conformal growth, with thickness control at the atomic level <ref type="bibr" target="#b0">[1]</ref>.</p><p>The surface chemistry of ALD has been investigated both experimentally <ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref> and computationally <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref>. However, the overall ALD growth dynamics are not yet fully understood, especially at the atomic level. The actual ALD growth mechanism is complicated by competing reactions and significant structural relaxation, as surface coverage increases and subsequent layers are deposited <ref type="bibr" target="#b13">[14]</ref>. In addition, the actual growth process depends on the operating conditions (temperature, partial pressure of the precursors, purge times, exposure times, etc.) and the configurations and densities of surface reactive sites <ref type="bibr" target="#b10">[11]</ref>, often leading to amorphous structures and point defects in the deposited film. Unfortunately, as with many physical and chemical processes, the overall ALD growth is too complex to be fully modelled by using precise electronic structure calculations, and hence we need simulation methods that can extend the time and length scales accessible in our simulations. Along this line, the ALD growth dynamics have been simulated previously using lattice kinetic Monte Carlo (LKMC) simulations <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b15">16]</ref> and continuous analytical models <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b17">18]</ref>. However, all of these models are based on approximations of the bulk geometries of the thin films, and hence sacrifice important atomic-level information, such as critical information about the interface structure. For instance, an integrated method, which combines KMC and molecular dynamics (MD) methods, was used to model the initial steps of ZrO 2 ALD onto a Si(100) surface <ref type="bibr" target="#b18">[19]</ref>. However, the LKMC is not a suitable method to describe the amorphous structure of ALD films, and it is hard to incorporate complex steric hindrance effects into rate constants, so the authors modelled only the initial first half-cycle of ZrO 2 ALD.</p><p>In this work, we present an atomic-scale simulation approach, which can model the overall ALD structural dynamics in a more realistic (flexible) way. Specifically, we focused on all-atom simulations of Al 2 O 3 ALD, due to its value as a high-k gate dielectric alternative to SiO 2 . However, this approach can be easily extended to other ALD systems by assigning the relevant intermolecular parameters and simulation details. In this work, we studied the film density, composition, roughness, and growth rate during the ALD process. The influence of initial ZOH concentration on the ALD process was explored. We also compared the ALD process at different temperatures (150 and 3008C). Overall, we have tried to explain the interrelationships between the properties of the ALD films and the atomic details obtained from our simulations. Our simulations predict a strong influence of the initial surface composition and process temperature on the surface roughness, growth rate and growth mode of the deposited films.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Computational details</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">The simulation approach</head><p>To better understand the complicated physicochemical processes that control ALD growth, it is important that a simulation can describe the time evolution of interacting atoms during the ALD process. MD simulation with an empirical inter-atomic potential is a well-suited approach to describe the defects and relaxation phenomena in ALD. However, the time scale is the main obstacle for a generalised application of the MD method to model thin film growth. The characteristic MD simulation time scale (nanoseconds) is very small compared with the realistic time of ALD (seconds per pulse). To address this problem, we separated the large time scale of surface reactions (which are often characterised by significant activation energies, with time scale spanning from ns to s at typical ALD temperatures) from the small time scale of structural relaxation (ps). The chemisorption of precursors and surface reactions were described by an empirical model based on our understanding of Al 2 O 3 ALD from ab initio calculations and previous experimental results, and the structural relaxation is modelled by the MD method.</p><p>Although some types of strained oxygen bridges on dehydroxylated SiO 2 were found to be reactive at ALD conditions, most of the siloxane bonds are chemically stable and only a small fraction of the siloxane bonds exist either as strained edge-shared tetrahedra or much less reactive SiO trimer rings <ref type="bibr" target="#b19">[20]</ref>. Similarly, we did not find any highly strained oxygen bridges on the hydroxylated Al 2 O 3 surfaces in our simulations. Therefore, we assumed that the ALD reactions occur only on the active ZOH groups on the surface. This is consistent with the experimental evidence and our previous DFT calculations. We also assumed that the products of the metal precursor pulse can be fully hydroxylated. Along with these approximations, we also assumed that there are no impurities from the metal precursors left in the ALD films. Based on these relatively mild assumptions, we eliminated the direct simulations of large (multi-)time-scale surface reactions and instead developed an approximate deposition algorithm as outlined in Figure <ref type="figure" target="#fig_0">1</ref>.</p><p>The deposition algorithm is not intended to be mechanistically rigorous, but is meant only to deposit the successive precursor pulses in a physically plausible way. Starting with a hydroxylated surface, the simulation algorithm begins by searching for the ZOH groups on the surface, which are the active sites. After that, an available ZOH is randomly picked for the deposition of the ALD product. Steric hindrance and overlap restrictions are then checked for the selected deposition site. If deposition occurs on an ZOH group, any other ZOH groups within a distance of less than 4.5 A ˚(estimated from our DFT calculations) are prohibited for deposition events in this cycle, since these sites would be inaccessible to other incoming adsorbates. Once all of the deposition rules shown in Figure <ref type="figure" target="#fig_0">1</ref> are satisfied, a H atom in the selected ZOH group is removed and an aluminium dihydroxide is attached to the O atom in ZOH, with a random orientation in the xy plane. Here, we assumed that the -Al(CH 3 ) 2 products left on the surfaces during the TMA pulse are fully hydroxylated during the subsequent H 2 O pulse. This deposition process continues until the surface is saturated with precursors. After each (sub)monolayer was deposited, the structure was relaxed using MD simulation for 500 ps. The system reached equilibration within the first 200 ps, and the sampling was performed over the final 300 ps. After the system has relaxed, the cycle is repeated multiple times in order to deposit the Al 2 O 3 film layer by layer. Although not all of the ALD reactions and possible surface species are taken into account in this approach, the dominant reactions on the surface and the most prevalent species are explicitly included in the simulation algorithm <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22]</ref>. In addition, unlike analytical ALD models, this all-atom simulation offers us an atomiclevel understanding of the ALD process, which has been unavailable previously. Using this simulation methodology, we can also model different precursors and capture the steric interactions between neighbouring adsorbates. This deposition algorithm is assumed to be relevant during the conditions when the reaction kinetics and gasphase transport are fast and when the reverse reactions are negligible. This tends to be valid during the experimental operation, due to the continuous removal of the gas products during ALD. At these conditions, it is reasonable to assume that the reaction occurs on a reactive site with 100% possibility if the steric effects are negligible. In addition, this algorithm approximately describes the stochastic deposition process, which is an important factor that influences the structure of the ALD films. The surface composition and structure are handled with MD simulations to generate rigorous dynamics of the surface relaxation process between deposition cycles.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">MD simulation details</head><p>In our MD simulations, the inter-atomic potentials used for the hydroxylated alumina surface are of the Buckingham type, derived by Matsui <ref type="bibr" target="#b22">[23,</ref><ref type="bibr" target="#b23">24]</ref>. This is a fixed charge potential and has been previously used successfully for studying the amorphous alumina surface <ref type="bibr" target="#b23">[24,</ref><ref type="bibr" target="#b24">25]</ref>. The pair interaction potential between atoms i and j as a function of the inter-atomic distance r ij is given by</p><formula xml:id="formula_0">U ij ¼ q i q j r ij þ DðB i þ B j Þ exp A i þ A j 2 r ij B i þ B j 2 C i C j r 6 ij :<label>ð1Þ</label></formula><p>This potential consists of a long-ranged electrostatic potential and a short-ranged Buckingham potential, which include the repulsion and dispersion interactions. In the equation above, D (4.184 kJ A ˚21 mol 21 ) is a force constant, r ij is the relative distance between the atoms i and j, and q is the effective charge on each atom. The empirically fitted parameters, A, B and C and are listed in Table <ref type="table">1</ref>. One notable deficiency of this empirical potential is its inability to describe pure species association (i.e. H -H, O -O or Al -Al). Since this potential does not include attractive interactions (except the small dispersion interactions) for like -like dimers, and the species charges are fixed (regardless of the neighbouring species), it is effectively incapable of forming like -like dimers during the simulations. However, our focus is on the ALD growth of stoichiometric Al 2 O 3 films. In this case, the aggregation of like -like species is expected to be less important to our investigation.</p><p>All of the MD simulations were carried out in the canonical ensemble (NVT) using a time step of 0.5 fs. The short-range Buckingham interactions were calculated by using a cut-off of 8 A ˚. The long-range dispersion interactions were calculated using the dispersion summation method <ref type="bibr" target="#b25">[26]</ref>, and the Coulomb interactions were calculated using the Ewald summation with a correction for two-dimensional slab systems <ref type="bibr" target="#b26">[27,</ref><ref type="bibr" target="#b27">28]</ref>. In all of the MD simulations, the Nose `-Hoover chain algorithm <ref type="bibr" target="#b28">[29]</ref> was used for integration of the equations of motion. The equations of motion were coupled with two Nose `-Hoover chains to generate a canonical distribution. In our simulations, the Ewald parameters are chosen as follows.</p><p>The real space force cut-off (r cut ) was given an initial value, but was treated as an adjustable parameter during the simulation. The real/reciprocal space partition parameter (a) and the reciprocal lattice vector (k) are dependent on r cut and determined by ensuring that the relative errors in the real space sum and reciprocal space sum are negligible (below 10 27 ). The r cut was adjusted to maximise the rate of convergence of both sums. In most of our simulations, the r cut was set close to half of the simulation box length.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Substrate preparation</head><p>In our simulations, the hydroxylated Al 2 O 3 surface was used as the substrate for the ALD of Al 2 O 3 . As shown in Figure <ref type="figure">2</ref>, MD simulation was used to generate the surface model using a procedure similar to the approach used by Adiga et al. <ref type="bibr" target="#b23">[24]</ref>. At first, a bulk Al 2 O 3 sample consisting of 600 atoms was created according to the Al 2 O 3 crystal structure (a</p><formula xml:id="formula_1">¼ 15.3836208 A ˚, b ¼ 20.5114944 A ˚, c ¼ 25.639368 A ˚, a ¼ b ¼ g ¼ 55.2826358).</formula><p>Then, the simulation box was anisotropically scaled to a large cubic supercell with box lengths a ¼ b ¼ c ¼ 26 A ˚. After annealing the sample at 5000 K for 300 ps, the simulation box was scaled to obtain the desired density of the oxide. Then, the sample was quenched to 300 K in 100 ps at a rate of 47 K/ps. Following this, the box was replicated twice in the x and y directions (in order to increase the system size), and the surface was created by increasing the box length in the z direction to 55.344 A ˚. In order to create the Table <ref type="table">1</ref>. Inter-atomic potential parameters corresponding to Equation (1) <ref type="bibr" target="#b22">[23,</ref><ref type="bibr" target="#b23">24]</ref>.</p><formula xml:id="formula_2">q (e) A(A ˚) B(A ˚) C(A ˚3 kJ 1/2 mol</formula><p>21/2 ) Al 1.4175 0.78520 0.03400 36.82 O 2 0.9450 1.82150 0.13800 90.61 H 0.4725 2 0.17607 20.02462 1.86285 Figure 2. The preparation process of the hydroxylated Al 2 O 3 surface.</p><p>hydroxylated surface, certain amounts of H atoms were added above the frozen layers to obtain the desired H content. To add a H atom into the system, an Al atom was randomly picked and replaced by a H atom. Simultaneously, an O atom was randomly selected and removed to maintain the overall charge neutrality of the system. Finally, the surface was annealed at 1000 K for 500 ps.</p><p>Consistent with the simulations of Adiga et al. <ref type="bibr" target="#b23">[24]</ref> the H atoms migrated to the surface region after annealing, resulting in a ZOH terminated surface. During the subsequent simulation studies, the atoms in the bottom 3 A of the simulation box were frozen at their relaxed geometries.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results and discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">In situ characterisation of Al 2 O 3 films during the ALD process</head><p>Total density profiles for the ALD of Al 2 O 3 films after zero, four and eight ALD cycles and at a temperature of 3008C are plotted in Figure <ref type="figure" target="#fig_1">3</ref>, as a function of the distance along the Z direction to the surface). Unless otherwise noted, all of the simulation results presented here were also obtained at 3008C. The number density is calculated using layers of height DZ ¼ 1 A ˚parallel to the surfaces. As shown in Figure <ref type="figure" target="#fig_1">3</ref>, there is a decrease in density in the region of height Z ¼ 3-5 A ˚. This decrease arises from the boundary conditions used. Since the atoms in the bottom 3 A ˚are frozen, the atoms directly contacting the frozen layers receive large repulsive forces, due to exclusion. As a result, the motion of these atoms is more restricted, leading to a depleted density in this region. The effects of the boundary constraints are less influential to the atoms with larger distances from the frozen layers.</p><p>Overall, the density profiles become more flat as the number of deposited layers increases. This shows that, in the initial ALD stage, the film deposited by ALD has a smaller density in the surface region than the initial substrate. Number density profiles for individual atoms (O, Al, H) as a function of the distance along the Z direction are shown in Figure <ref type="figure" target="#fig_2">4</ref>. It is clear from the number density profiles that H and O have larger densities than Al at the surface region. This indicates that the Al 2 O 3 surface is mainly terminated by H and O, even as additional layers are deposited and the surface structure relaxes. This can mainly be explained by the empirical potential used in this work. In order to minimise the total energy of the H-terminated Al 2 O 3 surfaces, the atoms in the surface region rearrange to form a different structure from that of bulk Al 2 O 3 in order to decrease the repulsive interactions (the short-ranged Buckingham term in Equation ( <ref type="formula" target="#formula_0">1</ref>)) and increase the electrostatic attractive interactions between Al and O. Different from the bulk Al 2 O 3 , the H terminated Al 2 O 3 surface has more structural freedom, and hence the atoms in the surface region can further increase the distance among themselves in order to decrease the shortranged Buckingham repulsion interactions. Consequently, as shown in Figure <ref type="figure" target="#fig_1">3</ref>, the density in the surface region is smaller than that in the bulk region. In addition, the system is stabilised by increasing the Al -O attractive electrostatic interactions. Since the empirical two-body potential being used was well-parameterised to stoichiometric Al 2 O 3 , in which the coordination number of Al is twice the coordination number of O, Al atoms tend to go down inside the film. This maximises the total coordination among Al and O, and hence minimise the electrostatic energy. This gives rise to larger O densities in the surface region. In accordance with the total energy minimisation, the H atoms tend to prefer the ambient. These species are  electrostatically repelled by the Al atoms within the film, and at the same time, they are incapable of displacing the Al atoms, since three H atoms would be needed to preserve the local charge neutrality of an extracted Al atom. Hence, the bulk of the film tends to adopt an Al 2 O 3 stoichiometry, while the O and H atoms are pushed towards the surface, resulting in ZOH termination.</p><p>The ratios of different coordinated Al (Al <ref type="bibr" target="#b3">[4]</ref>/Al <ref type="bibr" target="#b2">[3]</ref>) for the Al 2 O 3 films after zero, four and eight ALD cycles are plotted in Figure <ref type="figure" target="#fig_3">5</ref>, as a function of the distance along the Z direction. The coordination number of an atom is defined as the number of other atoms located within the first nearest-neighbour shell of the central atom. Therefore, in this work, the coordination numbers are computed by accounting for neighbours of a central atom using a sitesite cut-off criteria of 2.1 and 1.05 A ˚for the Al -O and the O -H bond distances, respectively. As shown in Figure <ref type="figure" target="#fig_3">5</ref>, it is evident that most of the Al atoms exist as Al <ref type="bibr" target="#b2">[3]</ref> at the surface and as Al <ref type="bibr" target="#b3">[4]</ref> in the interior of the film, where the number in brackets indicates the coordination number. We also notice that the ratio of Al <ref type="bibr" target="#b3">[4]</ref> in the surface region increases when more layers are deposited. This effect is due to the increase of the surface ZOH concentration with the growth of the thin film. As explained in the following sections, the surface ZOH concentration increases in the initial ALD cycles if the starting ZOH concentration is low. The available ZOH species can attach to the Al <ref type="bibr" target="#b2">[3]</ref> on the surface and increase its coordination to Al <ref type="bibr" target="#b3">[4]</ref>. Similarly, as shown in Figure <ref type="figure" target="#fig_4">6</ref>, most of the O atoms exist as O <ref type="bibr" target="#b1">[2]</ref> at the surface region. This is mainly because both ZOH and oxygen bridges on the surface lead to O <ref type="bibr" target="#b1">[2]</ref>. Going inside the films, the fraction of O <ref type="bibr" target="#b2">[3]</ref> increases quickly, indicating the predominance of O <ref type="bibr" target="#b2">[3]</ref> in the interior of the film.</p><p>The surface ZOH concentrations and the roughness of the surfaces as a function of ALD cycles are plotted in Figure <ref type="figure" target="#fig_5">7</ref>. The surface roughness (R a ) was evaluated by</p><formula xml:id="formula_3">R a ¼ X i jZ i 2 Z ave j N ;<label>ð2Þ</label></formula><p>where Z i is a measured surface height, Z ave is the average height and N is the number of measurements. As shown in Figure <ref type="figure" target="#fig_5">7</ref>, both roughness and (OH concentration increase during the first few ALD cycles. This can be explained by the island growth mode in the initial ALD stage. Starting with a low ZOH concentration, deposition can only proceeded on the few active sites available, which serve as   growth seeds for the film. Therefore, at the beginning of ALD, the growth process features island growth, which leads to an increase of the surface roughness. From Figure <ref type="figure" target="#fig_12">14</ref>(b), which is a representative simulation snapshot after two ALD cycles, we can clearly observe that islands are formed on the surface. As the islands grow, the ZOH concentration on the surface also increases, until an entire monolayer is eventually deposited.</p><p>The effect of atomic radii on surface roughness was evaluated by idealising the atoms as hard spheres. All of the atoms were approximated as hard balls with empirical atomic radii (1.25 A ˚for Al, 0.60 A ˚for O and 0.25 A ˚for H) <ref type="bibr" target="#b29">[30]</ref>, and the surface roughness was evaluated by the approach described above. Within the simulation cell, the surface heights were measured by using a uniform grid that corresponds to the conditions of the AFM measurements with a tip size equal to 3.5 A ˚. The surface roughness of the Al 2 O 3 film calculated by treating the atoms as points and hard balls is compared in Table <ref type="table" target="#tab_1">2</ref>. Compared with the approximation of the atoms as spatial points, replacing the atoms with hard balls has minimal influence on the surface roughness calculation. When more OH groups are present on the surface (with increasing ALD cycles), we obtained essentially the exact same surface roughness using the two approaches. The uniformity of the surface functional groups reduces the effect of the atomic radii on surface roughness to a negligible level.</p><p>The growth per cycle as a function of the ALD cycles is shown in Figure <ref type="figure" target="#fig_6">8</ref>. The growth rate is defined by the growth per cycle in terms of the average height and mass. As shown in the growth rate profiles, the height growth rate may be larger or smaller than the mass growth rate during the ALD process. A larger height growth rate suggests that the film deposited in this cycle has a lower density. On the contrary, a larger mass growth rate indicates significant structural relaxation and densification occurring in that cycle. For example, as shown in Figure <ref type="figure" target="#fig_6">8</ref>, the mass growth rate of the ninth ALD cycle is larger than that of the eighth ALD cycle, while the height growth rate of the ninth ALD cycle is larger than that of the eighth ALD cycle. This indicates structural relaxation and densification occurring in the ninth ALD cycle, which is consistent with the experimental result that ultra-thin amorphous Al 2 O 3 is quite defective and can undergo densification to reduce its free volume <ref type="bibr" target="#b30">[31]</ref>. The densification process can also be quantified by analysing the coordination number of Al and O. For the Al 2 O 3 film prepared by ALD, both the Al <ref type="bibr" target="#b3">[4]</ref>/Al <ref type="bibr" target="#b2">[3]</ref> and O <ref type="bibr" target="#b2">[3]</ref>/O <ref type="bibr" target="#b1">[2]</ref> ratios are larger after nine cycles (2.39 for Al <ref type="bibr" target="#b3">[4]</ref>/Al <ref type="bibr" target="#b2">[3]</ref> and 0.93 for O <ref type="bibr" target="#b2">[3]</ref>/O <ref type="bibr" target="#b1">[2]</ref>) than those after eight cycles (2.14 for Al <ref type="bibr" target="#b3">[4]</ref>/Al <ref type="bibr" target="#b2">[3]</ref> and 0.89 for O <ref type="bibr" target="#b2">[3]</ref>/O <ref type="bibr" target="#b1">[2]</ref>). The overall increase in the coordination number of O and Al leads to a reduction in vacancy defects and a redistribution of Al over the tetrahedral interstices associated with the densification process <ref type="bibr" target="#b30">[31]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Factors influencing ALD</head><p>The initial ZOH concentration has a significant influence on the ALD process. To investigate the effect of the initial ZOH concentration on ALD, we compared the ALD process starting with two different initial ZOH concentrations (0.2 and 2.8 nm 22 ). As shown in Figure <ref type="figure" target="#fig_7">9</ref>, with a  low initial ZOH concentration, the population of ZOH increases rapidly during the ALD process. Correspondingly, as shown in Figure <ref type="figure" target="#fig_8">10</ref>, a low initial ZOH concentration yields a growth rate that is initially very slow, but the growth rate increases quickly. This is consistent with the rapid increase of the ZOH concentration. On the contrary, a high initial ZOH concentration leads to a slow increase of ZOH to an equilibrium concentration of approximately 5 nm 22 (Figure <ref type="figure" target="#fig_7">9</ref>), and hence a relatively stable growth rate (Figure <ref type="figure" target="#fig_8">10</ref>). Therefore, it is clear that the ZOH concentration has an important effect on the growth rate. However, the fluctuation of the growth rates (Figure <ref type="figure" target="#fig_8">10</ref>) suggests that the ZOH concentration is not the only factor that influences the ALD growth. In fact, we found, in addition to the ZOH concentration, the ZOH distribution and steric hindrance effects are also important factors that influence the ALD growth. For example, for two surfaces with the same ZOH concentration, a more uneven or clustered ZOH distribution will yield a slower growth than a more even ZOH distribution, due to the steric hindrance among the adsorbates. The evolution of surface roughness during the ALD process starting with two different initial ZOH concentrations are compared in Figure <ref type="figure" target="#fig_9">11</ref>. As shown in the surface roughness profiles, a low ZOH concentration leads to a rougher surface after eight ALD cycles. This is a result of the island growth mode at the low ZOH concentration.</p><p>As shown in Figure <ref type="figure" target="#fig_8">10</ref>, after saturation of OH groups on the surface, the Al 2 O 3 growth rate fluctuates around 0.06 nm per cycle, which is very close to the experimental values (about 0.08 nm per cycle) in the literature <ref type="bibr">[32 -35]</ref>. The small difference between our simulation results and experimental measurements may be attributed to the following two possible factors. One possibility is that the steric hindrance factor used in our simulation may not exactly match the steric effects in the experiments. In our simulation, a sphere with a radius of 4.5 A ˚is used to designate the regions of steric hindrance. The steric hindrance factor (which was estimated from DFT calculations) is only an approximate description of the true steric effects in Al 2 O 3 ALD. Therefore, it may be adjusted to refine our model. The second explanation involves the assumptions in the deposition algorithm. Although the predominant ALD reactions have been incorporated in our simulations, there might be other   reactions, such as the decomposition of the precursors in the gas phase or on the surface, which may contribute to the ALD growth of Al 2 O 3 . Therefore, future work may need to be performed to investigate the sensitivity of the results to these assumptions.</p><p>Temperature is another important factor in ALD. Starting with the same initial surface, we compared the ALD processes at two different temperatures (150 and 3008C). The effect of temperature on the surface ZOH concentration is shown in Figure <ref type="figure" target="#fig_10">12</ref>. It is clear that the higher temperature (3008C) leads to a faster increase in the ZOH group concentration on the surface. Correspondingly, a larger growth rate is observed at the higher temperature (Figure <ref type="figure" target="#fig_11">13</ref>). This can be explained by closely examining the structures of the films deposited at 150 and 3008C. The initial surface for both simulations is shown in Figure <ref type="figure" target="#fig_12">14(a)</ref>. In order to investigate the effect of temperature on the ALD films, the two ZOH groups denoted by the two arrows in Figure <ref type="figure" target="#fig_12">14</ref>(a) were traced during the MD simulations at the two different temperatures. As the simulations were performed for 500 ps, the ZOH group (denoted by the pink arrow) migrated to a different area on the surface when the MD simulation was performed at 3008C (Figure <ref type="figure" target="#fig_12">14(b)</ref>). During the next ALD cycle, this allowed additional material to be deposited on both of the two 'largely' separated ZOH groups. On the contrary, the two ZOH groups were relatively immobile during the MD simulation performed at 1508C (Figure <ref type="figure" target="#fig_12">14(c)</ref>). As a result, the subsequent deposition proceeded only on one of these two OH groups during the next ALD cycle, due to the steric hindrance effect. Thus, the higher temperature is predicted to increase the ALD growth rate by increasing the migration of ZOH groups on the surface, allowing the surface to accommodate additional precursor molecules. However, higher temperatures do not always lead to larger ALD growth rates. At higher temperatures, adjacent ZOH groups on the surface have a tendency to dehydrate, releasing a H 2 O molecule. In our simulations, we have directly observed this dehydration process. Therefore, higher temperature may lower the ALD growth by lowering the surface coverage of ZOH groups, if the temperature becomes too high. This phenomenon has also been observed experimentally <ref type="bibr" target="#b35">[36]</ref>.   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Conclusions</head><p>Based on an atomic-level understanding of ALD obtained from previous ab initio calculations and experiments, MDbased all-atom simulations were designed to simulate the dynamic surface relaxation process during ALD of Al 2 O 3 . These simulations enabled us to trace the evolution of the microscopic structure of the Al 2 O 3 films, as the films grow in thickness. Based on our simulations, the Al 2 O 3 surface is found to be terminated mainly by H and O due to their preference for the ambient. This explains why H impurities in ALD Al 2 O 3 films are usually low. The H atoms tend to easily rise to the film surface, rather than becoming incorporated into the bulk of the film. The densification process has also been observed during our ALD simulations. Accompanying the densification of the thin film, Al <ref type="bibr" target="#b2">[3]</ref> is converted to Al <ref type="bibr" target="#b3">[4]</ref> and Al <ref type="bibr" target="#b4">[5]</ref> from its initial precursor state to its bulk state during the process of ALD film growth. Also, we were able to investigate the influence of operating parameters (temperature, initial ZOH concentration, etc.) on the ALD process at the atomic level. An initially low surface coverage of ZOH groups leads to an island growth mode, and hence a rough film at the beginning of ALD. In addition to the ZOH concentration, the ZOH distribution on the surface is also an important factor that influences the ALD growth mode, due to steric hindrance effects. This indicates that avoiding sparsely and inconsistently populated ZOH at the initial ALD stage is critical for reducing nucleation periods.</p><p>Temperature can have complex structural effects on the ALD film. On one hand, high temperature can increase the ALD growth rate by increasing the migration of ZOH groups on the surface. On the other hand, high temperature may lower the ALD growth by lowering the surface coverage of ZOH groups. Although the reaction kinetics are not modelled with our simulation approach, temperature will also have a strong influence on the precursor deposition, rates of reaction and the surface coverage of the products.</p><p>Based on our simulations, the Al 2 O 3 growth rate was predicted to be around 0.06 nm per cycle, which is very close to the experimental values (about 0.08 nm per cycle) in the literature. Possible approaches to improve our model involve refining the steric hindrance criteria and incorporating other reaction events that can capture a more complete and more realistic representation of ALD. From this perspective, our model can serve as an approach to identify the elements required to characterise the essence of ALD by comparing the simulation results and experimental measurements.</p><p>This approach enables us to model the atomic structural details during the layer-by-layer ALD growth. We do not expect these simulations to accurately predict all features of Al 2 O 3 ALD. However, we do hope to gain useful insight into how Al 2 O 3 films evolve at the atomic level at different ALD operating conditions, which can increase an experimentalist's understanding of how the operation parameters influence the properties of ALD films. Our all-atom MD simulations of ALD aim at building a bridge between atomic-level information and experimental measurements for a complex system.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. The deposition method used to model the Al 2 O 3 film growth.</figDesc><graphic coords="3,322.19,70.81,222.19,263.79" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Total density profiles after zero (blue), four (red) and eight (green) ALD cycles as a function of the distance along the Z direction of the Al 2 O 3 film at 3008C.</figDesc><graphic coords="5,65.82,505.02,220.95,177.34" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Number density profiles for O, Al and H as a function of the distance along the Z direction of the Al 2 O 3 film at 3008C.</figDesc><graphic coords="5,322.24,515.62,222.11,176.66" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Ratio of Al[4]/Al[3] after zero (blue), four (red) and eight (green) ALD cycles as a function of the distance along the Z direction of the Al 2 O 3 film at 3008C.</figDesc><graphic coords="6,63.33,489.49,226.09,192.81" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Ratio of O[3]/O[2] after zero (blue), four (red) and eight (green) ALD cycles as a function of the distance along the Z direction of the Al 2 O 3 film at 3008C.</figDesc><graphic coords="6,320.49,70.81,225.87,195.87" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Surface -OH concentrations and roughness of the Al 2 O 3 film at 3008C as a function of ALD cycles.</figDesc><graphic coords="6,320.14,511.71,226.37,180.57" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Growth per cycle in terms of mass (red) and average height (blue) as a function of ALD cycles during the Al 2 O 3 ALD at 3008C.</figDesc><graphic coords="7,320.03,505.64,226.55,176.71" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. The evolution of the surface -OH concentration during the Al 2 O 3 ALD starting with two different initial -OH concentrations at 3008C.</figDesc><graphic coords="8,63.16,70.81,226.41,198.71" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 10 .</head><label>10</label><figDesc>Figure 10. The evolution of the growth rate during the Al 2 O 3 ALD starting with two different initial -OH concentrations at 3008C.</figDesc><graphic coords="8,63.27,480.30,226.07,202.05" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 11 .</head><label>11</label><figDesc>Figure 11. The evolution of the surface roughness during the Al 2 O 3 ALD starting with two different initial -OH concentrations at 3008C.</figDesc><graphic coords="8,319.97,490.11,226.76,192.19" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. The evolution of the surface -OH concentration during the ALD process at two different temperatures.</figDesc><graphic coords="9,63.21,476.79,226.38,215.49" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 13 .</head><label>13</label><figDesc>Figure 13. The evolution of the surface roughness during the ALD process at two different temperatures.</figDesc><graphic coords="9,320.20,70.81,226.58,183.69" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 14 .</head><label>14</label><figDesc>Figure 14. The effect of temperature on the migration of -OH on the Al 2 O 3 surfaces: (a) starting surface, (b) surface after the MD simulation at 3008C for 500 ps and (c) surface after the MD simulation at 1508C for 500 ps.</figDesc><graphic coords="9,320.43,450.88,226.03,221.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Surface roughness of the Al 2 O 3 film at 3008C as a function of ALD cycles. Surface roughness is calculated by treating the atoms as spatial points and as hard balls, respectively.</figDesc><table><row><cell>Roughness (A ˚)</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We are grateful for the financial support from <rs type="funder">The University of Alabama</rs> and supercomputer resources from the <rs type="affiliation">Alabama Supercomputer Centre</rs> and an MRAC allocation on the TeraGrid.</p></div>
+<div><head>Notes</head><p>1. Email: hu007@bama.ua.edu 2. Email: js544@cornell.edu</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition (ALD): From precursors to thin film structures</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page" from="138" to="146" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Non-growth ligand exchange reactions in atomic layer deposition of HfO 2</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Mukhopadhyay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">421</biblScope>
+			<biblScope unit="page" from="215" to="220" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Nucleation and interface formation mechanisms in atomic layer deposition of gate oxides</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Wilk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="4758" to="4760" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Surface chemistry of atomic layer deposition: a case study for the trimethylaluminum/water process</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Modelling the deposition of high-k dielectric films by first principles</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Pinto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electroceram</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="117" to="120" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Mechanism for zirconium oxide atomic layer deposition using bis(methylcyclopentadienyl)methoxymethyl zirconium</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Elam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Pellin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zydor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Faia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Hupp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page">253123</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Adsorption and reaction of HfCl 4 with H 2 O-Terminated Si(100)-2 £ 1</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Willis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mathew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Wielunski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Opila</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="1994" to="2003" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Quantum chemical study of the initial surface reactions of atomic layer deposition GaAs for photonic crystal fabrication</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">Q</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">111105</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of Al 2 O 3 on H-passivated Si. I. Initial surface reaction pathways with H/Si(100)-2 £ 1</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Halls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="10221" to="10226" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">A quantum chemical study of the atomic layer deposition of Al 2 O 3 using AlCl 3 and H 2 O as precursors</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heyman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="5718" to="5725" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of TiO 2 from TiI 4 and H 2 O onto SiO 2 surfaces: ab initio calculations of the initial reaction mechanisms</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Turner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page" from="3863" to="3878" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Oxygen incorporation mechanism during atomic layer deposition of Al 2 O 3 onto H-Passivated Si(100)-2 £ 1</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Turner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="5756" to="5759" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Mechanistic details of atomic layer deposition (ALD) processes for metal nitride film growth</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tiznado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bournan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zaera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mol. Catal. A: Chem</title>
+		<imprint>
+			<biblScope unit="volume">281</biblScope>
+			<biblScope unit="page" from="35" to="43" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Atomic scale modeling of ZrO 2 and HfO 2 atomic layer deposition on silicon: linking density functional theory and kinetic Monte Carlo</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Este `ve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jeloaica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mazaleyrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dkhissi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Djafari-Rouhani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Messaoud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fazouan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">MRS Symposium Proceedings</title>
+		<editor>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Albernathy</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Gusev</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Schlom</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Stemmer</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Pittsburg, USA; Pittsburg, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="page">35</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A methodology for the kinetic Monte Carlo simulation of alumina atomic layer deposition onto silicon</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mazaleyrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jeloaica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Djafari-Rouhani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="74" to="82" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Roughness simulation for thin films prepared by atomic layer deposition</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Iskandarova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Knizhnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">V</forename><surname>Belov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Rykova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bagatur'yants</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Umanskii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Potapkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Stoker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Russ. J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="102" to="112" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Simulation of growth dynamics in atomic layer deposition. Part I. Amorphous films</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Nilsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">B</forename><surname>Karlsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kjekshus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fjellvag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">515</biblScope>
+			<biblScope unit="page" from="4527" to="4537" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Analytical model for island growth in atomic layer deposition using geometrical principles</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Nilsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Mohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kjekshus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fjellvag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page">24906</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">An integrated kinetic Monte Carlo molecular dynamics approach for film growth modeling and simulation: ZrO 2 deposition on Si(100) surface</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Knizhnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bagaturyants</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">V</forename><surname>Belov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Potapkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Korkin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="128" to="132" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Strained siloxane rings on the surface on silica -Their reaction with organosiloxanes, organosilanes, and water</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Grabbe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Michalske</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="4648" to="4654" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Density functional theory study of HfCl 4 , ZrCl 4 , and Al(CH 3 ) 3 decomposition on hydroxylated SiO 2 : initial stage of high-k atomic layer deposition</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jeloaica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Rouhani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Esteve</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="542" to="544" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Sequential surface chemicalreaction limited growth of high-quality Al 2 O 3 dielectrics</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Higashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Fleming</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="1963" to="1965" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">A transferable interatomic potential model for crystals and melts in the system CaO-MgO-Al 2 O 3 -SiO 2</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Matsui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mineral. Mag</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="571" to="572" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Structure and morphology of hydroxylated amorphous alumina surfaces</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Adiga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zapol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="7422" to="7429" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Atomistic simulations of amorphous alumina surfaces</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Adiga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zapol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page">64204</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Acceleration of convergence for lattice sums</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Karasawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="7320" to="7327" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Long-range interactions</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Frenkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Smit</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Understanding Molecular Simulation</title>
+		<meeting><address><addrLine>San Diego, CA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Academic Press</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="291" to="320" />
+		</imprint>
+	</monogr>
+	<note>nd ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Ewald summation for systems with slab geometry</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">C</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Berkowitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="3155" to="3162" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Explicit reversible integrators for extended systems dynamics</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Martyna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Tuckerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Tobias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Klein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Phys</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="1117" to="1157" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Atomic radii in crystals</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Slater</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="3199" to="3204" />
+			<date type="published" when="1964">1964</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Structural ordering of ultra-thin, amorphous aluminium-oxide films</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Snijders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P H</forename><surname>Jeurgens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Sloof</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">589</biblScope>
+			<biblScope unit="page" from="98" to="105" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">In situ reflective high-energy electron diffraction analysis during the initial stage of a trimethylaluminum/water ALD process</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bankras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Holleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sturm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zinine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wormeester</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Poelsema</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="275" to="279" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Interface and material characterization of thin Al 2 O 3 layers deposited by ALD using TMA/H 2 O</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Gosset</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Damlencourt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Renault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rouchon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Holliger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ermolieff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Trimaille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Ganem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Semeria</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Non-Cryst. Solids</title>
+		<imprint>
+			<biblScope unit="volume">303</biblScope>
+			<biblScope unit="page" from="17" to="23" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Influence of oxidant source on the property of atomic layer deposited Al 2 O 3 on hydrogenterminated Si substrate</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Ha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Roh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">476</biblScope>
+			<biblScope unit="page" from="252" to="257" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Thin film atomic layer deposition equipment for semiconductor processing</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sneh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Clark-Phelps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Londergan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Winkler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Seidel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">402</biblScope>
+			<biblScope unit="page" from="248" to="261" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">In situ quartz crystal microbalance and quadrupole mass spectrometry studies of atomic layer deposition of aluminum oxide from trimethylaluminum and water</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alaranta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="6506" to="6509" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

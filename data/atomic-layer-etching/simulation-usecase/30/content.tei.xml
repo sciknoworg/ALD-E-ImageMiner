@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Thermal Atomic Layer Etching of Aluminum Oxide (Al 2 O 3 ) Using Sequential Exposures of Niobium Pentafluoride (NbF 5 ) and Carbon Tetrachloride (CCl 4 ): A Combined Experimental and Density Functional Theory Study of the Etch Mechanism</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2021-04-09">April 9, 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Varun</forename><surname>Sharma</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tom</forename><surname>Blomberg</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Suvi</forename><surname>Haukka</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">E</forename><surname>Givens</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Marko</forename><surname>Tuominen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mikko</forename><surname>Ritala</surname></persName>
+						</author>
+						<title level="a" type="main">Thermal Atomic Layer Etching of Aluminum Oxide (Al 2 O 3 ) Using Sequential Exposures of Niobium Pentafluoride (NbF 5 ) and Carbon Tetrachloride (CCl 4 ): A Combined Experimental and Density Functional Theory Study of the Etch Mechanism</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2021-04-09">April 9, 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F519EA2D822E6EC6157CEF803E160AE7</idno>
+					<idno type="DOI">10.1021/acs.chemmater.1c00142</idno>
+					<note type="submission">Received: January 15, 2021 Revised: March 18, 2021</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T16:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Thermal atomic layer etching (ALEt) of amorphous Al 2 O 3 was performed by alternate exposures of niobium pentafluoride (NbF 5 ) and carbon tetrachloride (CCl 4 ). The ALEt of Al 2 O 3 is observed at temperatures from 380 to 460 °C. The etched thickness and the etch rate were determined using spectroscopic ellipsometry and verified by X-ray reflectivity. The maximum etch rate of about 1.4 Å/cycle and a linear increase of the removed film thickness with the number of etch cycles were obtained at a temperature of 460 °C. With the help of density functional theory calculations, an etch mechanism is proposed where NbF 5 converts part of the Al 2 O 3 surface into an AlF 3 or aluminum oxyfluoride layer, which upon reacting with CCl 4 is converted into volatile halide-containing byproducts, thus etching away the converted portion of the material. Consistent with this, a significant surface fluorine content of about 55 at. % was revealed when the elemental depth profile analysis of a thick NbF 5 -treated Al 2 O 3 layer was performed by X-ray photoelectron spectroscopy. The surface morphology of the reference, pre-, and postetch Al 2 O 3 surfaces was analyzed using atomic force microscopy and brightfield transmission electron microscopy. Moreover, it is found that this process chemistry is able to etch Al 2 O 3 selectively over silicon dioxide (SiO 2 ) and silicon nitride (Si 3 N 4 ).</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>In an era of emerging nano-technologies, the fabrication of sub-10 nm, complex, and 3-D device structures demands unprecedented thickness control in the atomic regime. Specific advances in semiconductor manufacturing techniques are therefore required, <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref> and several techniques are being actively developed, such as thermal atomic layer deposition (ALD), <ref type="bibr" target="#b4">5</ref> plasma enhanced ALD, plasma-based atomic layer etching (ALE), <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b5">6</ref> and the recently explored thermal atomic layer etching (ALEt). <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref> Complementary to ALD, ALEt is a technique that utilizes either partial or complete self-limiting sequential gas-solid reactions to allow the removal of material from the surface with atomic-level precision. <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> Due to the self-limiting nature of at least one of the ALEt half-reactions, it can be preferred over plasma-based ALE for isotropic etching of material from non-line-of-sight features.</p><p>Several thermal ALEt processes have been developed that employ a conversion-etch reaction mechanism. <ref type="bibr" target="#b11">12</ref> During the conversion step, the surface is converted into a more reactive material, which during the etch step is exposed to a coreactant and forms volatile products. In ALEt, the conversion step can form an oxide, <ref type="bibr" target="#b12">13</ref> fluoride, <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref> or another type of reactive surface that differs from the actual etch target. In the etch step, ligands from the coreactant molecules can undergo surface reactions such as ligand-exchange transmetalation, <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b10">11</ref> fluorination, <ref type="bibr" target="#b12">13</ref> or chlorination <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b14">15</ref> to form species that may leave the surface.</p><p>In most of the reported ALEt reactions, hydrogen fluoride (HF) is used as a fluorinating agent in either the conversion <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref> or the etch step. <ref type="bibr" target="#b12">13</ref> However, the use of HF can be restricted due to the safety concerns associated with its handling and storage. Moreover, its corrosive nature can pose some compatibility issues with gas-feed as well as exhaust lines, pumps, and other reactor parts, especially when kept at elevated temperatures. Therefore, alternatives to HF-based ALEt chemistries would prove to be beneficial. Several other highly reactive and toxic <ref type="bibr" target="#b15">16</ref> fluorinating agents such as SF 4 , XeF 2 , F 2 , CCl 2 F 2 , and CHClF 2 have been proposed. <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref> In this paper, we explore a novel ALEt chemistry for etching amorphous Al 2 O 3 . It is proposed that NbF 5 can be used as a fluorinating agent, replacing HF. CCl 4 is used to carry out the halide-exchange reactions with the fluorinated aluminum oxide surface in order to form volatile AlF X Cl Y species. Moreover, CCl 4 is relatively more stable <ref type="bibr" target="#b20">21</ref> than the trimethyl aluminum (TMA) used in the ALE literature, <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11</ref> which decomposes below 400 °C. <ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref> Despite NbF 5 being solid, it has sufficient vapor pressure (about 0.1 Torr at 45 °C25 ) and forms volatile species upon fluorinating the Al 2 O 3 surface (at least at 460 °C) and thus leads to almost no surface contaminations. Moreover, it is relatively safer to handle and store and is compatible with the semiconductor vacuum processing equipment.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ EXPERIMENTAL SECTION</head><p>Substrates and Process Gases. The target films deposited on ptype 200 mm silicon wafers that were used in the etch experiments are thermally grown SiO 2 (TOx), high-quality low-pressure chemical vapor deposited Si 3 N 4 , and ALD-grown Al 2 O 3 . The SiO 2 and Si 3 N 4 films were about 20 and 30 nm thick, respectively. The Al 2 O 3 films were deposited at 300 °C by the TMA and water (H 2 O) ALD process. <ref type="bibr" target="#b25">26</ref> The fluorinating agent was 99.5% pure NbF 5 purchased from abcr GmbH, (Germany). The CCl 4 (anhydrous) was bought from Merck KGaA (Germany) and had a purity ≥99.5%. The NbF 5 vessel was kept at 45 °C, and the CCl 4 source vessel was operated at room temperature. CCl 4 has a vapor pressure of about 90 Torr at room temperature <ref type="bibr" target="#b26">27</ref> and was therefore used in a vapor-draw mode, whereas NbF 5 was used in a vapor-push mode. Nitrogen (99.999%) was used as an inert purge gas. Both the purge gas flows as well as CCl 4 dose were controlled by needle valves.</p><p>Experimental Setup. The etch experiments were conducted on a Pulsar 2000 (P2000) cross-flow reactor manufactured by ASM International N.V. designed to process 200 mm silicon wafers. The P2000 chamber was operated at isothermal conditions to a maximum T etch of 460 °C. Prior to any etching, all target substrates were kept in a vacuum chamber for 5 min in order to ensure stabilization of the wafer surface temperature. The chamber pressure was between 2 and 4 Torr.</p><p>Characterization Techniques. The thickness and optical constants of the films were evaluated using SE-800 spectroscopic ellipsometer from SENTECH Instruments GmbH, (Germany). X-ray reflectometry (XRR) was performed for confirming the removed thickness values, measuring the postetched surface roughness, and film densities using Xpert PRO MRD X-ray diffractometer from Malvern Panalytical Ltd. (United Kingdom). For consistency, the exact center points of the wafers were chosen as measurement spots.</p><p>Elementary surface composition investigations were performed by X-ray photoelectron spectroscopy (XPS) and conducted on PHI Quantera SXM. Monochromatic Al Kα (1486.6 eV/15 kV) X-rays with a take-off angle of 45°were used. The analysis chamber pressure was 3 × 10 -6 Pa. In all XPS depth profile measurements, the argonion energy was set to 1 keV and the X-ray spot size was 100 μm. The pass energy of 140 eV was used. The detection limit of this particular tool is about 0.1-0.5 at. %.</p><p>Transmission electron microscopy (TEM) imaging was performed by Evans Analytical Group (California, USA) on FEI Tecnai TF-20 FEG/TEM operated at 200 kV in a bright-field imaging mode. The TEM lamellas for imaging were prepared by using the focused ion beam lift-out technique. The thicknesses of the TEM lamellas were around 100 nm. For preserving the contrast and structural integrity of the sample, a carbon coating was performed prior to the ion-milling.</p><p>Computational Techniques. The chemical mechanism of the ALEt process was investigated using first-principles density functional theory (DFT) as implemented in the Schrodinger Materials Science Suite. <ref type="bibr" target="#b27">28</ref> Atomic-scale models of bulk materials, surfaces, and gas-phase molecules were optimized under periodic boundary conditions with the Perdew-Burke-Ernzerhof (PBE) functional, <ref type="bibr" target="#b28">29</ref> a plane wave basis to a wavefunction cut-off of 40 Ry, PBE ultrasoft pseudopotentials, <ref type="bibr" target="#b29">30</ref> and Monkhorst-Pack k-point sets 31 using the Quantum ESPRESSO code. <ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b32">33</ref> Total energies from DFT are used to calculate reaction energies ΔE for possible chemical transformations of these surfaces by the etchants during ALEt.</p><p>Since etching is likely to be driven by entropy (S), it is important to also determine reaction free energies (ΔG) that include the effect of temperature (T) and pressure of reactants (p react ) and products (p prod ), which for ideal gases at constant volume is given by ΔG = ΔE -TΔSk B T ln(Πp prod μ/Πp react μ) where μ are stoichiometric coefficients. <ref type="bibr" target="#b33">34</ref> For the etchants, we use p react = 0.1 Torr, approximating the experimental conditions, and assume equilibrium with product gases at p prod = sp react where the sticking coefficient s is an unknown precursor parameter that is typically in the range 10 -2 to 10 -4 for ALD precursors. <ref type="bibr" target="#b34">35</ref> As explained in the Supporting Information, the entropy terms at 100 °C &lt; T &lt; 600 °C and p react or p prod were derived from molecular vibrational analysis of the gas-phase reactant and product molecules at the PBE/LAV3D** level with the Jaguar code. <ref type="bibr" target="#b35">36</ref> The (2̅ 0 1) surface of θ-Al 2 O 3 was used as the periodic slab model for the alumina surface during ALEt. θ-Al 2 O 3 was chosen because ions in this polymorph have a similar coordination environment to those in the amorphous as-deposited Al 2 O 3 . <ref type="bibr" target="#b36">37</ref> The 2 × 1 expansion of a 3-layer (2̅ 0 1) slab was selected as a representative model surface on the basis of its stability and level of corrugation when bare or fluorinated (see the Supporting Information).</p><p>As shown in Figure <ref type="figure" target="#fig_0">1</ref>, half of the Al atoms on the bare surface are exposed (4-coordinate to O) and half are covered (6-coordinate).</p><p>Fluorinated and chlorinated surfaces were generated by progressively replacing O with F or Cl in the topmost layer of the slab, always adding two halide monoanions for each oxide dianion removed so as to preserve stoichiometry and charge neutrality.</p><p>The maximum level of chlorination was determined to be 3 Cl per 4-coordinate Al (12 Cl per 2 × 1 cell), which we designate as 100%-Cl coverage since higher coverages led to the spontaneous desorption of AlCl 3 molecules during optimization. By contrast, fluorination up to 166%-F (20 F per 2 × 1 cell) was energetically favorable, albeit with a substantial reorganization to give a surface resembling AlF 3 structural motifs. In this study, we focus on interconversions between the 166%- F, 100%-F, 100%-Cl, and 0% (i.e., bare alumina) surfaces depicted in Figure <ref type="figure" target="#fig_0">1</ref>.</p><p>The aim of the DFT simulations is to map out the general form of the ALEt mechanism. Many reactions and byproducts can be possible, and we seek here to distinguish which surface transformations are thermodynamically favorable as a function of process conditions. This can reveal the nature of the saturating surface after each precursor exposure during the ALEt cycle and hence account for the etch rate. However, ALEt is actually a non-equilibrium process, driven by kinetics and the irreversible removal of byproducts from the surface into the gas flow. Computing the detailed sequence of surface adsorbates, intermediates, reaction pathways, and associated kinetics with DFT would be a possible future step but is beyond the current scope. It is worth remembering, therefore, that a reaction computed here to be thermodynamically feasible (with ΔG &lt; 0 at a given T) may in fact face a high kinetic barrier and so not be observed on the experimental time scale. Nevertheless, in the absence of kinetic data, we assume that for a family of competing reactions, the kinetic barriers scale with reaction energies and therefore the most exoergic reaction is the most kinetically likely one.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ RESULTS AND DISCUSSION</head><p>Etch-Process Characterization. Al 2 O 3 is etched by utilizing sequential exposures of NbF 5 and CCl 4 precursors at elevated temperatures (380-460 °C). An inert gas purging was introduced after each exposure to remove the volatile byproducts and excess of precursor molecules from the reaction chamber. The etch per cycle (EPC) was estimated by subtracting the post-etch thickness from the initial thickness and dividing by the number of etch cycles. The Al 2 O 3 film thickness values were reliably determined by spectroscopic ellipsometry (SE) and in some cases confirmed with the help of XRR and TEM images.</p><p>As shown in Figure <ref type="figure" target="#fig_1">2</ref>, an increase in EPC is observed with increasing NbF 5 pulse time at an etch temperature (T etch ) of 460 °C. In the figure, NbF 5 pulse time is varied from 0 to 3 s, while the CCl 4 pulse time is fixed to 3 s. For each data point plotted in Figure <ref type="figure" target="#fig_1">2</ref>, a total of 150 etch cycles were performed. In the absence of NbF 5 , no Al 2 O 3 etching was observed as confirmed by XRR, TEM, and XPS. When the NbF 5 pulse time is increased to 0.5 s, an etch rate of about 0.5 Å per cycle is noticed. Further increase in the NbF 5 pulse time to 3 s provides an etch rate of about 1.4 Å/cycle. Longer NbF 5 pulse times were not tested. The figure shows that at a T etch of 460 °C, the EPC did not show strong self-limiting characteristics but may still indicate a soft saturation behavior. A nonsaturative fluorination behavior may affect the etch uniformity across the wafer especially in a cross-flow reactor. This nonself-limiting behavior can be explained by enhanced diffusion of fluoride ions at 460 °C. The thickness of the converted layer may depend on factors such as surface temperature, partial pressure, as well as flux of the precursor molecules, <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b37">38</ref> reaction time, adsorbate concentration, interaction between surface and diffusing adspecies, presence of defects, being accompanied by phase transitions, and so forth. <ref type="bibr" target="#b38">39</ref> Thus, in thermal-based ALE processes there may not exist an ALE window.</p><p>For studying the temperature-dependent kinetics of the fluorination step, excess fluorination was carried out by exposing the aluminum oxide surface to NbF 5 at 400 and 460 °C (Figure <ref type="figure" target="#fig_2">3</ref>). At 400 °C, excess fluorination was performed for 150 and 600 cycles of 4.5 s NbF 5 pulse times, while 150 and 800 cycles of 3 s NbF 5 pulse times were used at 460 °C. After performing the excess fluorination step, the thickness of the formed AlF X [O] layer was measured by ex situ SE. About 11 and 14 nm thick fluorinated layers were obtained after 450 and 2400 s of total NbF 5 exposure time, respectively, at 460 °C. The formation of thick (&gt;10 nm) AlF X [O] layers must be due to the prolonged fluorination step and the fluoride ions diffusing deeper into the aluminum oxide layer. The diffusion of fluoride is evidently dependent on the temperature and thus may hint at the existence of no ALE window. According to Morelock et al., <ref type="bibr" target="#b39">40</ref> aluminum trifluoride adopts a cubic form above 440 °C, which upon cooling changes to a rhombohedral phase. The X-ray diffraction (XRD) analysis of about 11 nm AlF X [O] layer revealed the rhombohedral phase (see the Supporting Information S4) and is thus consistent with the literature. <ref type="bibr" target="#b39">[40]</ref><ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b42">[42]</ref><ref type="bibr" target="#b43">[43]</ref><ref type="bibr" target="#b44">[44]</ref> On the contrary, at 400 °C, the thickness of the fluorinated layer stayed around 3 nm even after prolonged total NbF 5 exposure of 2700 s. Chen et al. showed the fluoride ions penetrating up to 2 nm thick aluminum oxide after treating fluorinated alumina at 400 °C, <ref type="bibr" target="#b45">45</ref> and neutral/ion beams-assisted fluorination lead to a thicker AlF X [O] layer. <ref type="bibr" target="#b46">46</ref> Moreover, up to 0.5 nm thick AlF 3 layer was obtained at a lower temperature of 300 °C with HF as a fluorinating agent. <ref type="bibr" target="#b37">38</ref> This temperature-dependent thickness of  the converted fluorinated layer suggests that the conversion step is diffusion-limited.</p><p>The fluorination step produced a very hydrophilic surface with water contact angles ≤15°, which is consistent with earlier reports from Roodenko et al. <ref type="bibr" target="#b18">19</ref> The low water contact angle of the AlF X [O] surface is attributed to the high Lewis acidity of Al-F species, resulting in strong adsorption of H 2 O molecules at under-coordinated aluminum sites. <ref type="bibr" target="#b18">19</ref> Figure <ref type="figure" target="#fig_3">4</ref> reveals the effect of variation in the CCl 4 pulse time on EPC at 460 °C. The NbF 5 pulse and N 2 purge lengths were set to 3 and 6 s, respectively, and the CCl 4 pulse time was changed from 0.5 to 3 s. The figure shows that an EPC around 1.1 Å is observed for CCl 4 pulse times between 0.5 and 1.75 s. However, when 3 s CCl 4 pulse time is used, an etch rate of 1.4 Å/cycle is noticed. This could indicate a partial self-limiting nature of the etching step, which could be due to limited AlF X material available at the surface for CCl 4 to react with and volatilize. Moreover, Figures <ref type="figure" target="#fig_2">3</ref> and <ref type="figure" target="#fig_3">4</ref> together indicate a twostep ALEt mechanism of conversion followed by etching.</p><p>Figure <ref type="figure" target="#fig_4">5</ref> plots EPC values at various etch temperatures for the Al 2 O 3 ALEt process by NbF 5 + CCl 4 (red curve). The figure also demonstrates that CCl 4 alone (blue curve) does not etch Al 2 O 3 within the tested temperature range of 380-460 °C. The incapability of CCl 4 alone in etching Al 2 O 3 is also confirmed by XRR and TEM images as seen below. However, at 380 °C, the etch rate of Al 2 O 3 by the NbF 5 + CCl 4 ALEt process is comparatively low, at about 0.08 Å/cycle, and no significant etching was observed at temperatures &lt;380 °C.</p><p>From Figure <ref type="figure" target="#fig_4">5</ref>, it can be seen that the EPC increases with the etch temperature and reaches an etch rate of 1.4 Å/cycle at 460 °C. The Figures <ref type="figure" target="#fig_1">2</ref><ref type="figure" target="#fig_2">3</ref><ref type="figure" target="#fig_3">4</ref>also corroborate the proposed ALEt mechanism, whereby NbF 5 is necessary to fluorinate the Al 2 O 3 and the converted layer is etched by a subsequent pulse of CCl 4 . In most of the thermal ALE reports, the ALE window is not observed, <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b47">[47]</ref><ref type="bibr" target="#b48">[48]</ref><ref type="bibr" target="#b49">[49]</ref><ref type="bibr" target="#b50">[50]</ref> and the EPC is dependent on the partial pressure <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b37">38</ref> and temperature. <ref type="bibr" target="#b47">47,</ref><ref type="bibr" target="#b49">49,</ref><ref type="bibr" target="#b51">51</ref> Similarly, it is evident from our findings that there exists no ALE window. However, a few ALE processes exhibit an ALE window such as ALE of HfO 2 , 47 TiO 2 , <ref type="bibr" target="#b12">13</ref> and TiN. <ref type="bibr" target="#b51">51</ref> Selective Etching. In thin-film technology, many applications may benefit from thermal ALEt processes that provide selective etching of Al 2 O 3 over SiO 2 and Si 3 N 4 . Figure <ref type="figure" target="#fig_5">6</ref> shows that the NbF 5 + CCl 4 ALEt process is able to etch Al 2 O 3 linearly with the number of etch cycles at 460 °C. A linear fit of Al 2 O 3 -etched thickness with respect to etch cycles yields a constant etch rate of 0.11 nm/cycle when 0.5 s NbF 5 and 3 s CCl 4 pulse times are used. By contrast, under all conditions tested here, no etching of SiO 2 and Si 3 N 4 films was observed. In other words, between 380 and 460 °C, Al 2 O 3 can be etched selectively over SiO 2 and Si 3 N 4 by the NbF 5 + CCl 4 etch process.</p><p>Surface Characterization. XPS studies were conducted in order to understand the etch mechanism. An Al 2 O 3 surface exposed to NbF 5 was the test subject. Figure <ref type="figure" target="#fig_7">7</ref> shows the XPS elemental depth profile analysis of the surface that has been fluorinated. The aluminum oxide surface was subjected to a total of 150 cycles of 3 s NbF 5 pulses with intermittent 6 s N 2 purges at 460 °C. Reasons for conducting the fluorination step under such extreme conditions were to ensure a significant as well as meaningful fluorine signal, to understand the fluorination step, and to deduce a reliable reaction mechanism. From the XPS depth profiling and SE measurements, the thickness of the AlF X [O] layer formed under these conditions was estimated to be around 11 nm.</p><p>After 15 s of sputtering, a very high fluorine content of about 55 at. % (similar F content was found by Kim et al. <ref type="bibr" target="#b52">52</ref> after fluorinating Al 2 O 3 ) and a decreased oxygen content of 17 at. % (as compared to roughly 60 at. % oxygen in Al 2 O 3 ) is observed.   The fluorine content gradually decreases with sputter time and may indicate the presence of a gradient in the composition of the AlF X [O] layer. Furthermore, a very low niobium content of about 1 at. %, decreased oxygen, and high fluorine content support the proposed reaction mechanism in favor of reaction R2 described below. This confirms that the NbF 5 molecules impart at least some fluoride ions to aluminum and form a volatile species with oxygen. Moreover, the formation of an about 11 nm thick AlF X [O] layer upon excess fluorination may explain the non-self-limiting EPC curve in Figure <ref type="figure" target="#fig_1">2</ref>. at. % and very low amounts of niobium (&lt;0.3 at. %) and chlorine (&lt;0.2 at. %). The presence of surface fluorine may indicate that a CCl 4 pulse time longer than 0.5 s is necessary to either fully remove the converted layer or complete the halidetransmetalation reaction or it does not go to completion. From SE and XPS depth profiling, the fluorine-containing top layer is estimated to be around 1.2 nm thick.</p><p>In Figure <ref type="figure" target="#fig_9">9</ref>, cross-sectional bright-field transmission electron micrographs of Al 2 O 3 -coated silicon substrate are displayed. The thickness of an original Al 2 O 3 film was 56 nm as revealed by SE and confirmed by XRR. Figure <ref type="figure" target="#fig_9">9a</ref> shows the Al 2 O 3 film that remained unetched after being exposing to 150 cycles of 3 s CCl 4 pulses. The figure also shows very smooth films devoid of significant surface defects. In Figure <ref type="figure" target="#fig_9">9b</ref>, it is shown that after exposing the Al 2 O 3 film to 150 etch cycles of the NbF 5 + CCl 4 ALEt process, about 18 nm of the film is removed and the remaining Al 2 O 3 film appears to be rougher than the unetched film. In addition, atomic force microscopy (AFM) measurements (see the Supporting Information) revealed a slight increase in the surface root-mean-squared (or R a ) roughness. This increase in surface roughness can be associated with the fluorination step and therefore can be due to either the variation in the diffusion depths or the reorganization of the near-surface region during diffusion-based fluorination. The etched surface does not appear to be crystalline.</p><p>Computation of Mechanism. Although the gaseous reactants undergo individual reaction steps when they adsorb to the surface during ALEt, along with bulk-surface diffusion, the net effect of each cycle is the removal of bulk Al 2 O 3 and regeneration of surface functionality. The most straightforward way to assess the viability of ALEt is therefore to compute the thermodynamics of bulk etching, which is presented next. Afterward, DFT results for the thermodynamics of surface reactions are presented (more details in the Supporting Information)</p><p>We first investigate whether it is thermodynamically favorable for either precursor alone to etch bulk alumina, transforming it into gas-phase products. NbF 5 can in principle remove both Al and O as follows</p><formula xml:id="formula_0">+ → + Al O 3NbF 2AlF 3NbOF<label>2 3(s) 5(g) 3(g) 3(g) (R1)</label></formula><p>and for this reaction, periodic DFT yields ΔE = +140 kJ/mol-NbF 5 and ΔG 300 °C = -100 kJ/mol-NbF 5 . The positive value of ΔE indicates a net cost in bond energies, while the negative value of ΔG reflects the entropy gain in volatilizing the solid. Bulk alumina may be more readily etched by the Cl source alone according to the reaction</p><formula xml:id="formula_1">+ → + Al O 3CCl 2AlCl 3COCl 2 3(s) 4(g) 3(g) 2(g) (R7)</formula><p>which has DFT-computed energetics of ΔE = -18 kJ/mol-Al 2 O 3 and ΔG 300 °C = -248 kJ/mol-Al 2 O 3 . (If the reaction would proceed to completion, CO 2 could be produced, but it seems more likely that COCl 2 would desorb first). However, no etching is observed experimentally with CCl 4 alone (Figure <ref type="figure" target="#fig_3">4</ref>), which suggests that kinetic barriers prevent this reaction from taking place. Consistent with this, periodic DFT simulations show that the CCl 4 molecule resists adsorption to a bare alumina surface probably because the molecule is nonpolar. We therefore exclude these single-etchant reactions from the reaction equations below and restrict our analysis to reactions that etch away either Al or O as volatile products but not both simultaneously. Such reactions are the prerequisite for a successful, self-limiting ALEt process. The conversion of bulk alumina into solid aluminum fluoride according to</p><formula xml:id="formula_2">+ → + Al O 3NbF 2AlF 3NbOF 2 3(s) 5(g) 3(s) 3(g) (R2)</formula><p>is computed to show that ΔE = -24 kJ/mol-NbF 5 and ΔG 300 °C = -58 kJ/mol-NbF 5 (Table <ref type="table">1</ref>). Although labeled as "conversion" in the ALEt literature, this reaction necessarily involves the etching of oxygen, as one oxide dianion is exchanged with two fluoride monoanions. The thermodynamics of conversion of the bare alumina surface into a 100%  fluorinated surface is found to be similar in terms of energetics to that of the bulk (R3: ΔE = -27 kJ/mol-NbF 5 and ΔG 300 °C = -60 kJ/mol-NbF 5 ). Further fluorination of the surface is slightly less favorable (e.g., R4: ΔE = +0.8 kJ/mol-NbF 5 and ΔG 300 °C = -33 kJ/mol-NbF 5 for 100% F to 166% F) but still exoergic, indicating that surface conversion does not self-limit. As shown in Figure <ref type="figure" target="#fig_11">10</ref>, there is little variation with temperature in these free energies of fluorination of the bulk and surface by NbF 5 .</p><p>We conclude that continuous conversion of alumina into aluminum fluoride is moderately exoergic under the experimental conditions, but again, the extent to which such conversion actually takes place depends on the kinetics of individual steps that bring NbF 5 and alumina into contact. We suggest that this is likely to be dictated by the kinetics of diffusion across the Al 2 O 3 -AlF 3 interface. The NbF 5 pulse therefore produces a surface layer and possibly also subsurface layers that are fluorinated and is experimentally verified in Figures <ref type="figure" target="#fig_2">3</ref> and <ref type="figure" target="#fig_6">8</ref>.</p><p>We now examine the potential reactions of such fluorinated surfaces (considering the sample surfaces 100% F and 166% F) with gas-phase CCl 4 in the next phase of the ALEt cycle. The computations show that the most energetically favorable products are CFCl 3 and AlCl 3 , and the resulting thermodynamics are given in Table <ref type="table">1</ref> and Figure <ref type="figure" target="#fig_12">11</ref>.</p><p>CFCl 3 is the likely product of halide-exchange between the CCl 4 reagent and the fluorinated surface. The simplest of such reactions produces a chlorinated surface with the same coverage</p><formula xml:id="formula_3">- + → - + 100% F slab 12CCl 100% Cl slab 12CFCl 4(g) 3(g) (R10)</formula><p>which is computed to be endoergic across a wide temperature range (ΔG 300 °C = +41 kJ/mol-CCl 4 ). The reaction becomes more favorable if Al is also etched away as AlCl 3 . For instance, ΔG 300 °C = +4.3 kJ/mol-CCl 4 for partial etching</p><formula xml:id="formula_4">- + + → - + + 100% F slab 12CCl 2/3Al O 66% Cl slab 12CFCl 4/3AlCl 4(g) 2 3(s) 3(g) 3(g) (R11)</formula><p>and ΔG 300 °C = -58 kJ/mol-CCl 4 for complete etching to a bare surface:</p><formula xml:id="formula_5">- + + → - + + 100% F slab 12CCl 2Al O 0% slab 12CFCl 4AlCl 4(g) 2 3(s) 3(g) 3(g) (R13)</formula><p>Similar results for the 166% F surface are displayed in Figure <ref type="figure" target="#fig_12">11</ref>. As expected, these etch reactions are driven by entropy and thus become more favored at high temperatures. We can not confidently state the exact temperature above which a given reaction becomes exoergic since this is affected by the pressure correction and thus by the arbitrary choice of the sticking coefficient s. Nevertheless, Figure <ref type="figure" target="#fig_12">11</ref> allows us to conclude that it is thermodynamically favored for CCl 4 to entirely etch away the aluminum fluoride layer and reveal bare alumina (0% surface).</p><p>Since CCl 4 may in principle etch bulk alumina (reaction R7), we need to consider whether the bare alumina surface is reactive with this precursor. Converting the bare surface to a 100%-chlorinated surface is found to be exoergic, with ΔE = -40 kJ/mol-CCl 4 and ΔG 300 °C = -51 kJ/mol-CCl 4 (reaction R9) following a similar trend to the conversion of bulk alumina to bulk aluminum chloride (reaction R8). However, as noted above, the experimental result of no etching by CCl 4 alone indicates that this reaction pathway is not accessible. A bare alumina surface is therefore the thermodynamically favored outcome of the CCl 4 pulse.</p><p>In case fluorinated or chlorinated portions of the surface persist into the NbF 5 pulse of the next ALEt cycle, we include exemplary reactions of 100% F and 100% Cl surfaces with NbF 5 in Figure <ref type="figure" target="#fig_11">10</ref> (reactions R4-R6). In this case, halideexchange to NbClF 4 is the most favorable reaction, but the addition of F and removal of O is also exoergic across the entire temperature range. Therefore, these reactions also lead to a fluorinated surface as the outcome of the NbF 5 pulse.</p><p>Having identified the saturated surfaces at the end of each precursor pulse, we are now able to combine half-reactions (R3 + R13 or R4 + R14) into the overall ALEt reaction</p><formula xml:id="formula_6">+ + + + Al O 3NbF 6CCl 2AlCl 3NbOF 6CFCl<label>2 3(s) 5(g) 4(g) 3(g) 3(g) 3(g) (R15)</label></formula><p>The overall energies per ALEt cycle computed with DFT are ΔE = +421 kJ/mol-Al 2 O 3 and ΔG 300 °C = -329 kJ/mol-Al 2 O 3 . Table 1. Reaction Thermodynamics Computed with DFT for Potential Half-Reactions in the NbF a Bulk solid is labeled (s), gas-phase molecules (g), and coverage is indicated as a percentage for surface slabs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Chemistry of Materials</head><p>Consistent with the data in Figure <ref type="figure" target="#fig_1">2</ref>, the EPC in this mechanism depends on the level of conversion that is achieved in the NbF 5 pulse. 100% F means the etching of 2 (Al 2 O 3 )/ cycle in the 2 × 1 slab. Dividing by the cross-sectional area of the slab (84.5 Å 2 ) and multiplying by the molar volume of θalumina (48.5 Å 3 /Al 2 O 3 ) yields a theoretical EPC of 1.2 Å/ cycle for this F-coverage. Converting a greater proportion of the surface zone to AlF 3 means a higher EPCfor example, 166% F means etching 3.3 (Al 2 O 3 )/cycle per slab and an EPC of 1.9 Å/cycle.</p><p>Proposed Reaction Mechanism. Many reported thermal ALEt reactions undergo a two-step, conversion-etch mechanism, <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b12">13</ref> with the conversion (or fluorination) step followed by an etch step. The experimental findings in this report also suggest a two-step etch mechanism.</p><p>The first step of the proposed reaction mechanism shown in Figure <ref type="figure" target="#fig_13">12</ref> is the conversion step. Figure <ref type="figure" target="#fig_13">12a</ref> depicts the initial Al 2 O 3 film on the silicon substrate, and Figure <ref type="figure" target="#fig_13">12b</ref> shows the fluorinated Al 2 O 3 layer after exposing to the NbF 5 . As evident from Figures <ref type="figure" target="#fig_2">3</ref> and <ref type="figure" target="#fig_7">7</ref>, the NbF 5 is believed to act like a fluorinating agent similar to HF 7 or WF <ref type="bibr">6 13</ref> and converts the Al 2 O 3 surface into AlF X [O]. The experimental findings suggest that the fluorination is not self-limiting, and therefore, with excessive fluorination, a thicker AlF X [O] layer is formed, as depicted in Figure <ref type="figure" target="#fig_13">12c</ref>.</p><p>From the DFT calculations for gas-bulk (R1 and R2) as well as gas-surface reactions R3-R5, it is proposed that niobium most likely forms the volatile NbOF 3 species. The existence of gaseous NbOF 3 has been previously reported, and its volatility has been studied. <ref type="bibr" target="#b53">[53]</ref><ref type="bibr" target="#b54">[54]</ref><ref type="bibr" target="#b55">[55]</ref><ref type="bibr" target="#b56">[56]</ref> The reaction NbOF 3(s) → NbOF 3(g) is favorable (ΔG &lt; 0) above 140 °C. <ref type="bibr" target="#b24">25</ref> Moreover, thermogravimetric analysis of NbOF 3 showed mass loss above 80 °C. <ref type="bibr" target="#b24">25</ref> During this conversion step, the oxygen from the Al 2 O 3 layer is also removed at least partially if not completely and therefore the fluorinated layer is labeled as AlF X [O]. Moreover, it is also possible that the fluorinated layer is AlF 3 which partially oxidizes in the air to form AlF X [O]. Figure <ref type="figure" target="#fig_13">12d</ref> depicts an outcome of the excess fluorination step and is supported by Figures <ref type="figure" target="#fig_2">3</ref> and <ref type="figure" target="#fig_7">7</ref>.</p><p>In the second step, the AlF X [O] layer can be etched as shown in Figure <ref type="figure" target="#fig_13">12 (d-f</ref>). The etch step involves halideexchange transmetalation to form volatile byproducts such as AlF a Cl 3-a and CCl 1+a F 3-a , where 0 ≤ a ≤ 2. The DFT computations reveal AlCl 3 and CFCl 3 as being the most favorable etch products from the various chlorination halfreactions R10-R14. In this fashion, an etching of Al 2 O 3 can be achieved by alternating exposures of NbF 5 and CCl 4 , which   may follow the described conversion-etch mechanism by the overall reaction R15.</p><p>Discussion of Etch Rate. According to the overall etch reaction R15, the theoretical EPC of 1.2 Å/cycle for 100% Fslab coverage is evaluated. For prolonged fluorination as per reactions R4 and R5, where 166% F-slab is used, an EPC of 1.9 Å/cycle is obtained. An EPC of 1.4 Å/cycle is recorded for 3 s NbF 5 and CCl 4 pulse lengths (as shown in Figure <ref type="figure" target="#fig_1">2</ref>), which is therefore consistent with a coverage of 120% F during etching by R15. Moreover, both the experiment and the DFT calculations indicate that the EPC is not self-limiting for NbF 5 pulse time variation and strongly depends on the fluorination step.</p><p>Another parameter that largely impacts the EPC is the etch temperature. Higher EPC values are observed at higher temperatures (≥380 °C). At temperatures below 380 °C, no etching was observed. However, DFT thermodynamic calculations did not show any evidence for this behavior. Therefore, this temperature dependence probably reflects the kinetics of diffusion and structural reorganization at the Al 2 O 3 -AlF 3 interface. Based on our examination of the DFT-computed structures, it may be that atoms near the interface have to reorganize so that aluminum takes a low coordination number (i.e., 4 rather than 6) as the prerequisite for the fluoride to form and hence for the etching to take place.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSIONS</head><p>ALEt of amorphous Al 2 O 3 is demonstrated using cyclic exposures of NbF 5 and CCl 4 etchants. The Al 2 O 3 ALEt is found to follow a two-step etch mechanism. In the first step, NbF 5 converts part of the Al 2 O 3 layer into AlF X [O], or more evidently AlF 3 , which is described as a conversion or fluorination step. The most likely volatile byproduct is found to be NbOF 3 . In the second step, the chlorine atoms from CCl 4 undergo halide-exchange with the converted AlF X [O] surface. As a result of such an interaction, various volatile byproducts such as AlF 2 Cl, AlFCl 2 , AlCl 3 , and several chlorofluorocarbon molecules can be produced. Of these, AlCl 3 and CFCl 3 are found by DFT to be the most favorable, which leads to the overall etching reaction</p><p>+ + → + + Al O 3NbF 6CCl 2AlCl 3NbOF 6CFCl 2 3(s) 5(g) 4(g) 3(g) 3(g) 3(g)</p><p>Similar reactions can be written for the other possible byproducts.</p><p>In this manner, the converted AlF X [O] layer is volatilized from the surface by CCl 4 and hence the desired etching takes place. The feasibility of the proposed reaction mechanism was confirmed with thermodynamic calculations based on DFT. In addition, XPS and XRD analyses confirmed the formation as well as the removal of the fluorinated AlF X [O] layer.</p><p>The dependence of the EPC on NbF 5 pulse time shows soft self-limiting characteristics, which can be due to slow kinetics, diffusion-limited gas-solid reaction, high residence time of NbF 5 , low concentration or partial pressure of NbF 5 , or slow sublimation of volatile NbOF 3 surface species. The CCl 4 reaction is found to be more self-limiting than that of NbF 5 .</p><p>Aluminum oxide ALEt is observed between 380 and 460 °C. From its onset (removing just 0.08 Å/cycle at 380 °C), the etch rate tends to increase with etch temperature. We tentatively link this temperature-dependence to the kinetics of diffusion across the oxide-fluoride interface. The linear removal of Al 2 O 3 with cycles is observed with an etch rate of about 1.1 Å/cycle at 460 °C. An etch rate of about 1.4 Å/cycle is measured when the exposure time for each precursor is set to 3 s, separated by 6 s N 2 purges. This etch rate is consistent with fluorination that extends partly into the subsurface layer. As revealed by TEM analysis, the surface of the post-etch Al 2 O 3 film was rougher than the unetched film, again pointing to diffusion at the interface.</p><p>It is proposed that the thermal NbF 5 + CCl 4 ALEt process reported here could etch other metal oxides in a similar twostep etch mechanism with selectivity against SiO 2 and Si 3 N 4 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED</head><p>CONTENT * sı Supporting Information The Supporting Information is available free of charge at <ref type="url" target="https://pubs.acs.org/doi/10.1021/acs.chemmater.1c00142?goto=supporting-info">https://pubs.acs.org/doi/10.1021/acs.chemmater.1c00142</ref>. Details on DFT calculations; bulk calculations; optimized unit cells of bulk structures of θ-Al 2 O 3 and AlF 3 ; slab calculations; entropy estimation; computed structural and energetic data of the surface slabs; optimized surface slabs; grazing-incidence XRD (GIXRD) analysis of aluminum fluoride and the formed aluminum fluoride layer after prolonged fluorination at 460°C; and surface morphology determination by AFM (PDF) Computed bare slabs in crystallographic information file (.cif) format (ZIP) ■ AUTHOR INFORMATION Corresponding Authors</p><p>Varun Sharma -ASM Microchemistry Oy, Helsinki, Uusimaa 00560, Finland; Department of Chemistry, University of Helsinki, Helsinki, Uusimaa 00014, Finland; orcid.org/ 0000-0003-0079-2434; Email: varun.sharma@asm.com, varun.sharma@helsinki.fi Mikko Ritala -Department of Chemistry, University of Helsinki, Helsinki, Uusimaa 00014, Finland; orcid.org/ 0000-0002-6210-2980; Email: mikko.ritala@helsinki.fi</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Structural models optimized with DFT for the (a) bare Al 2 O 3 surface with 0% halides, (b) surface covered with 166%-F, (c) 100%-F, and (d) 100%-Cl. The colors are as follows: Al = yellow, O = red, F = light green, and Cl = dark green.</figDesc><graphic coords="2,315.50,368.84,239.98,212.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Change in EPC vs NbF 5 pulse time at the etch temperature of 460 °C. The CCl 4 pulse time was set to 3 s and in-between N 2 purges were 6 s each.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. AlF X [O] film thickness vs variation in total NbF 5 exposure time at 400 and 460 °C. The total NbF 5 exposure time is calculated by multiplying the NbF 5 pulse time by the total number of cycles. The NbF 5 pulse times of 4.5 and 3 s were used at 400 and 460 °C, respectively. Each NbF 5 pulse was separated by a 6 s long N 2 purge step.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Effect of CCl 4 pulse time variation on EPC at 460 °C. A total of 150 etch cycles were performed per data point.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Change in EPC with etch temperature for the NbF 5 and CCl 4 cyclic etching process and compared to no-etching by CCl 4 only. A total of 150 etch cycles were performed per data point. The EPC at etch temperatures below 380 °C stayed zero for both curves.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Etched thickness of Al 2 O 3 , SiO 2 , and Si 3 N 4 as a function of the number of etch cycles at 460 °C. The NbF 5 and CCl 4 pulse times are 3 and 0.5 s, respectively. The N 2 purge time was kept constant at 6 s.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 8</head><label>8</label><figDesc>reveals atomic percentages of several elements found on the Al 2 O 3 surface as a function of sputtering time after removing about 18 nm of the 56 nm Al 2 O 3 film by the NbF 5 + CCl 4 ALEt process. A total of 150 ALEt cycles at 460 °C were performed with CCl 4 being the last pulse. The zoomed part of the figure depicts the fluorine content around 5</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. XPS depth profile of Al 2 O 3 exposed to NbF 5 for a total of 450 s at 460 °C. The atomic percentage of elements found in the converted film is plotted with respect to the sputter time.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. XPS depth profile of the remaining Al 2 O 3 after removing about 18 nm film by the NbF 5 and CCl 4 ALEt process. A zoomed picture at the top right corner focuses on Nb, F, and Cl signals.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Cross-sectional BF-TEM images of (a) unetched 57.5 nm (includes 1.5 nm native silicon oxide) Al 2 O 3 after exposing to 150 cycles of each 3 s long CCl 4 pulses and (b) after etching about 18 nm Al 2 O 3 film by 150 cycles of the NbF 5 + CCl 4 ALEt process. Initially, about 56 nm Al 2 O 3 was measured by SE (TEM not taken). The NbF 5 and CCl 4 pulse times were 3 and 0.5 s, respectively. For both experiments, an etch temperature of 460 °C was used.</figDesc><graphic coords="6,143.55,60.21,319.92,159.08" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>5R</head><figDesc>Pulse (Reactions R1-R6), CCl 4 Pulse (R7-R14), and the Overall ALEt Cycle (R15) a</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 10 .</head><label>10</label><figDesc>Figure 10. Change in the Gibbs free energy with temperature for various fluorination ALEt-half-reactions.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 11 .</head><label>11</label><figDesc>Figure 11. Change in the Gibbs free energy with temperature for possible chlorination or halide-exchange reactions.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 12 .</head><label>12</label><figDesc>Figure 12. Proposed ALEt mechanism consists of a conversion step followed by an etch step: (a) starting Al 2 O 3 surface, (b) after partial fluorination by NbF 5 , (c) upon excess NbF 5 exposure, a thick AlF X [O] is formed, (d) AlF X [O] surface with Al-F bonds, (f) possible halideexchange interaction between CCl 4 and the AlF X [O] surface, and (g) converted AlF X [O] layer removed and the underlying Al 2 O 3 surface revealed.</figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1021/acs.chemmater.1c00142 Chem. Mater. 2021, 33, 2883-2893 Downloaded via LEIBNIZ UNIVERSITAET HANNOVER on August 10, 2025 at 15:07:10 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://doi.org/10.1021/acs.chemmater.1c00142 Chem. Mater. 2021, 33, 2883-2893</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Authors</head><p>Simon D. Elliott  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ACKNOWLEDGMENTS</head><p>The authors thank Bernd Böck from Tascon GmbH (Munster, Germany) for XPS depth profile analysis of the Al 2 O 3 films. We acknowledge the support from Eurofins EAG Materials Science, LLC (California, USA) for the TEM analysis and understanding the data associated with it.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Chemistry of Materials</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Overview of atomic layer etching in the semiconductor industry</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching at the Tipping Point: An Overview</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0061506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5041" to="N5053" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Technology options for 22 nm and beyond</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kennel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Workshop on Junction Technology Extended Abstracts</title>
+		<meeting><address><addrLine>Shanghai, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="1" to="6" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The ultimate CMOS device and beyond</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kuhn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Electron Devices Meeting</title>
+		<meeting><address><addrLine>Francisco, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>San</publisher>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="1" to="8" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">ALD Technology -Present and Future Challenges</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haukka</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2721470</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Trans</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="15" to="26" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Perspectives in nanoscale plasma etching: what are the ultimate limits?</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marchack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0022-3727/44/17/174011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">44</biblScope>
+			<date type="published" when="2011">2011. 174011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Mechanism of Thermal Al 2 O 3 Atomic Layer Etching Using Sequential Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b00300</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="3648" to="3657" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Trimethylaluminum as the Metal Precursor for the Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b00111</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2994" to="3003" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching of silicon nitride using an oxidation and &quot;conversion etch&quot; mechanism</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Abdulagatov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5140481</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">22607</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of ZnO by a &quot;Conversion-Etch&quot; Mechanism Using Sequential Exposures of Hydrogen Fluoride and Trimethylaluminum</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1183" to="1191" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of SiO 2 by a &quot;Conversion-Etch&quot; Mechanism Using Sequential Reactions of Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b01259</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="10296" to="10307" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Mechanisms of Thermal Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.accounts.0c00084</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="1151" to="1160" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Thermal Selective Vapor Etching of TiO 2 : Chemical Vapor Etching via WF 6 and Self-Limiting Atomic Layer Etching Using WF 6 and BCl 3</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b00985</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="6653" to="6665" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Etching of Nb 2 O 5 Thin Films by NbCl 5</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Knapas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.200906795</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="269" to="273" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Mechanism of Thermal Atomic Layer Etch of W Metal Using Sequential Oxidation and Chlorination: A First-Principles Study</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kondati Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Theofanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mokhtarzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Clendenning</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.0c06628</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="36670" to="36680" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A Bridge Not Attacked: Chemical Warfare Civilian Research During World War II (review)</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E V C</forename><surname>Moon</surname></persName>
+		</author>
+		<idno type="DOI">10.1353/jmh.2005.0038</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Military History</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">269</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">A novel method for the synthesis of well-crystallized β-AlF 3 with high surface area derived from γ-Al 2 O 3</title>
+		<author>
+			<persName><forename type="first">W.-Z</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Q</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-F</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c1jm11630d</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="8987" to="8990" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Surface modification of fluorinated aluminas: Application of solid state NMR spectroscopy to the study of acidity and surface structure</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Chupas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Grey</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcat.2004.02.013</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Catal</title>
+		<imprint>
+			<biblScope unit="volume">224</biblScope>
+			<biblScope unit="page" from="69" to="79" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Nature of Hydrophilic Aluminum Fluoride and Oxyaluminum Fluoride Surfaces Resulting from XeF 2 Treatment of Al and Al 2 O 3</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Roodenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Halls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gogte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Seitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-F</forename><surname>Veyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp207839w</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="21351" to="21357" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">SF 4 as the Fluorination Reactant for Al 2 O 3 and VO 2 Thermal Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Bright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b05294</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="3624" to="3635" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Thermal decomposition of carbon tetrachloride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Michael</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Kumaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Kiefer</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/j100111a032</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="1914" to="1919" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Decomposition of trimethylaluminum on silicon(100)</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Gow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Cadwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Backman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Masel</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm00004a006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="406" to="411" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">The adsorption and thermal decomposition of trimethylaluminium and dimethylaluminium hydride on GaAs(100)</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aquino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mulcahy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Harwood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Jones</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0039-6028(95)00683-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">340</biblScope>
+			<biblScope unit="page" from="49" to="56" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Mechanistic studies of the decomposition of trimethylaluminum on heated surfaces</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Squire</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.582976</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B: Microelectron. Nanometer Struct.-Process., Meas., Phenom</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1513" to="1519" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Niobium and tantalum beneficiation using gasphase fluorination</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Pienaar</surname></persName>
+		</author>
+		<ptr target="http://hdl.handle.net/2263/46243" />
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of Pretoria</orgName>
+		</respStmt>
+	</monogr>
+	<note>Ph.D. Dissertation</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Interface and material characterization of thin Al 2 O 3 layers deposited by ALD using TMA/H 2 O</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Gosset</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-F</forename><surname>Damlencourt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Renault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rouchon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Holliger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ermolieff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Trimaille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-J</forename><surname>Ganem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-N</forename><surname>Séméria</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s0022-3093(02)00958-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Non-Cryst. Solids</title>
+		<imprint>
+			<biblScope unit="volume">303</biblScope>
+			<biblScope unit="page" from="17" to="23" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The Heat of Vaporization and Vapor Pressure of Carbon Tetrachloride; The Entropy from Calorimetric Data</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Hildenbrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Mcdonald</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/j150579a053</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="1521" to="1522" />
+			<date type="published" when="1959">1959</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">Llc</forename><surname>Schrodinger</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schrodinger</surname></persName>
+		</author>
+		<ptr target="https://www.schrodinger.com/user-announcement/announcing-schrodinger-software-release-2020-1" />
+		<title level="m">Maestro Suite</title>
+		<meeting><address><addrLine>New York, NY</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>version 11.0</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Generalized Gradient Approximation Made Simple</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.77.3865</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="3865" to="3868" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Garrity</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Bennett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Rabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vanderbilt</surname></persName>
+		</author>
+		<ptr target="https://www.physics.rutgers.edu/gbrv/" />
+		<title level="m">GBRV pseudopotential library</title>
+		<imprint>
+			<date type="published" when="2020-07-25">July 25, 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Special points for Brillouin-zone integrations</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Monkhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Pack</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevb.13.5188</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="5188" to="5192" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0953-8984/21/39/395502</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">395502</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Advanced capabilities for materials modelling with QUANTUM ESPRESSO</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-648x/aa8f79</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">465901</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Self-Limiting Temperature Window for Thermal Atomic Layer Etching of HfO 2 and ZrO 2 Based on the Atomic-Scale Mechanism</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mullins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kondati Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nolan</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b05021</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3414" to="3426" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Sticking probabilities of H 2 O and Al(CH 3 ) 3 during atomic layer deposition of Al 2 O 3 extracted from their impact on film conformality</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vandalon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Utriainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Knoops</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5093620</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">30908</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">A high-performance quantum chemistry software program with strengths in life and materials sciences</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Bochevarov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Harder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Hughes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Greenwood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Braden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Philipp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rinaldo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Halls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Friesner</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jaguar</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/qua.24481</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Quantum Chem</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="2110" to="2142" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Probing the Atomic-Scale Structure of Amorphous Aluminum Oxide Grown by Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Bedford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yanguas-Gil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Letourneau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Coile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Mandia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Aoun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Elam</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.0c01905</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="22804" to="22814" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Effect of HF Pressure on Thermal Al2O3 Atomic Layer Etch Rates and Al2O3 Fluorination</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b00124</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="10346" to="10355" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">Elementary Processes at Surfaces II. Surface Diffusion. Surface Science: An Introduction</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Oura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Katayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Zotov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">G</forename><surname>Lifshits</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Saranin</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<publisher>Berlin</publisher>
+			<biblScope unit="page" from="325" to="356" />
+			<pubPlace>Berlin Heidelberg; Heidelberg</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Thermal expansion and phase transitions of α-AlF3</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Morelock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Hancock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Wilkinson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jssc.2014.07.031</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Solid State Chem</title>
+		<imprint>
+			<biblScope unit="volume">219</biblScope>
+			<biblScope unit="page" from="143" to="147" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Aluminum Fluxing Salts: A Critical Review of the Chemistry and Structure of Alkali Aluminum Chemistry of Materials pubs</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sorrell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Groetsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Soboroff</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.1c00142?rel=cite-as&amp;ref=PDF&amp;jav=VoR</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.1c00142" />
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="2883" to="2893" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Halides</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986">1986</date>
+			<biblScope unit="page" from="1" to="37" />
+		</imprint>
+	</monogr>
+	<note>United States Department of the Interior (Bureau of Mines Information circular 9069</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title level="m" type="main">Functionalized Inorganic Fluorides: Synthesis, Characterization &amp; Properties of Nanostructured Solids</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tressaud</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<publisher>John Wiley and Sons</publisher>
+			<biblScope unit="page" from="173" to="203" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Study of the Nature and Mechanism of the Rhombohedral-to-Cubic Phase Transition in α-AlF3with Molecular Dynamics Simulations</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chaudhuri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Chupas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Madden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Grey</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp034533g</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="3437" to="3445" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Equations of state of anhydrous AlF 3 and AlI 3 : Modeling of extreme condition halide chemistry</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Stavrou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Zaug</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bastea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Crowhurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Goncharov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Radousky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Armstrong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Plaue</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4921896</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">214506</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Fabrication of Enhancement-Mode AlGaN/GaN MIS-HEMTs by Using Fluorinated Al 2 O 3 as Gate Dielectrics</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/led.2011.2162933</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="1373" to="1375" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Fluorination of Aluminum Oxide Gate Dielectrics Using Fluorine Neutral/Ion Beams</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Yeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1166/jnn.2011.4359</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanosci. Nanotechnol</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="5904" to="5908" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of HfO 2 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0041506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5013</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Thermal etching of AlF 3 and thermal atomic layer etching of Al 2 O 3</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Routzahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5135911</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">22603</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Selectivity in Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b02543</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="7657" to="7665" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer etching of germanium-rich SiGe using an oxidation and &quot;conversion-etch&quot; mechanism</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Abdulagatov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000834</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">22602</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Titanium Nitride Using Sequential, Self-Limiting Reactions: Oxidation to TiO 2 and Fluorination to Volatile TiF 4</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b02286</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="8202" to="8210" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Reactive ion etching mechanism of plasma enhanced chemically vapor deposited aluminum oxide film in CF 4 /O 2 plasma</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.360181</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="2045" to="2049" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">The Thermal Decomposition of NbO 2 F</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Andersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Åström</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Issidorides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kallner</surname></persName>
+		</author>
+		<idno type="DOI">10.3891/acta.chem.scand.19-2136</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Chem. Scand</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="2136" to="2138" />
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Binnewies</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Glaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chemische Transportreaktionen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<publisher>De Gruyter</publisher>
+			<biblScope unit="page" from="159" to="285" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Beitrage zur Chemie der Elemente Niob und Tantal. XXX. Chemische Transportreaktionen. VIII. U ̈ber die Darstellung der Nioboxide und ihren Transport im Temperaturgefalle</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schäfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huësker</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/zaac.19623170506</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Anorg. Allg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">317</biblScope>
+			<biblScope unit="page" from="321" to="333" />
+			<date type="published" when="1962">1962</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Laser-Assisted Etching of Lithium Niobate</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Orloff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Bernasek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Wolk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Coyle</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/proc-126-251</idno>
+	</analytic>
+	<monogr>
+		<title level="j">MRS Proc</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="page" from="251" to="256" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

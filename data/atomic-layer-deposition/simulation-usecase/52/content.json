@@ -1,0 +1,358 @@
+[
+    {
+        "type": "text",
+        "text": "Overall reaction mechanism for a full atomic layer deposition cycle of W films on TiN surfaces: first-principles study†",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Hwanyeol Park,a Sungwoo Lee,  $\\oplus$  a Ho Jun Kim,b Daekwang Woo,c Jong Myeong Lee,c Euijoon Yoon\\*ad and Gun- Do Lee  $\\oplus$  \\*ad",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "We investigated the overall ALD reaction mechanism for W deposition on TiN surfaces based on DFT calculation as well as the detailed dissociative reactions of  $\\mathsf{WF}_6$ . Our calculated results suggest that the overall reactions of the  $\\mathsf{WF}_6$  on the B- covered TiN surfaces are energetically much more favorable than the one on the TiN surfaces, which means that the high reactivity of  $\\mathsf{WF}_6$  with the B- covered TiN surface is attributed to the presence of B- covered surface made by  $\\mathsf{B}_2\\mathsf{H}_6$  molecules. As a result, an effect of the  $\\mathsf{B}_2\\mathsf{H}_6$  flow serves as a catalyst to decompose  $\\mathsf{WF}_6$  molecules. Two additional reaction processes right after  $\\mathsf{WF}_6$  bond dissociation, such as W substitution and  $\\mathsf{BF}_3$  desorption, were also explored to clearly understand the detailed reactions that can occur by  $\\mathsf{WF}_6$  flow. At the first additional reaction process, W atoms can be substituted into B site and covered on the TiN surfaces due to the stronger bonding nature of W with the TiN surface than B atoms. At the second additional reaction process, remaining atoms, such as B and F, can be easily desorbed as by- product, that is,  $\\mathsf{BF}_3$  because  $\\mathsf{BF}_3$  desorption is an energetically favorable reaction with a low activation energy. Furthermore, we also investigated the effect of  $\\mathsf{H}_2$  post- treatment on W- covered TiN surface in order to remove residual F adatoms, which are known to cause severe problems that extremely degrade the characteristics of memory devices. It was found that both  $\\mathsf{H}_2$  dissociative reaction and HF desorption can occur sufficiently well under somewhat high temperature and  $\\mathsf{H}_2$  ambience, which is confirmed by our DFT results and previously reported experimental results. These results imply that the understanding of the role of gas molecules used for W deposition gives us insight into improving the W ALD process for future memory devices.",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. Introduction",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Following Moore's law for decades, thin film deposition techniques have been intensively advanced to meet the demand for miniaturized and highly integrated devices in the electronics industry.1 Recently, conformal film deposition techniques, which allow precise thickness control at the atomic scale, are becoming very important.2 Nitride materials, such as titanium nitride and silicon nitride, have been deposited using conventional deposition methods such as low- pressure chemical vapor deposition  $(\\mathrm{LPCVD})^{3,4}$  and plasma- enhanced chemical vapor deposition (PECVD).5,6 However, development of memory devices has required another deposition technique such as atomic layer deposition  $(\\mathrm{ALD})^{7 - 9}$  to meet the demand for excellent step coverage and high conformality on extremely high aspect ratio structures. The ALD processes utilize well- controlled sequential surface reactions to obtain uniform and conformal films.10,11",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "As one of the most essential materials in fabrication of future memory devices, tungsten (W) has been used as a metal gate with lower resistivity than other candidate materials, which results in enhancement of device performance.12,13 In the fabrication of recent memory devices, tungsten films have been deposited using ALD by alternatively exposing W precursors such as tungsten hexafluoride  $(\\mathrm{WF}_6)$  and reducing agents such as diborane  $(\\mathrm{B}_2\\mathrm{H}_6)$  in an ABAB1. sequence. In the ALD processes for W deposition,  $\\mathrm{B}_2\\mathrm{H}_6$  closing process can play an important role in deposition of W films with low resistivity and in removal of residual fluorine (F) atoms on the surface.14- 16",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "However, as the size of the memory device becomes smaller and smaller, it becomes difficult to deposit W films having excellent step coverage and conformality due to a severe",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "problem that a seam or void is formed in the process of filling the W metal gate. This problem is a primary obstacle of the development for future memory devices.17,18 To treat this problem, theoretical comprehension of the ALD process for W deposition is required due to the experimentally limited observations on the sub- nanometer scale. Although a few experimental results on ALD W have been reported, there has been no theoretical report on the overall reaction mechanism for ALD W process.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In our previous study,19 we reported that these severe problems, such as seam or void, in filling the W metal gate for memory devices would be attributed to the difference of deposition rate of W film depending on the orientations of TiN surfaces by analyzing dissociation reaction of  $\\mathrm{B}_2\\mathrm{H}_6$  on three different TiN surfaces, such as TiN (001), Ti- terminated TiN (111), and N- terminated TiN (111) using density functional theory (DFT) calculation method. Since this previous study gives only information for  $\\mathrm{B}_2\\mathrm{H}_6$  dosing process, we want to report how important the understanding of the overall ALD reaction mechanism could be for improving W deposition process.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Here, we present first- principles study based on DFT calculation to explore overall ALD reaction mechanism for W deposition on the underlying TiN surfaces well as the detailed dissociative reactions of  $\\mathrm{WF}_6$ . From our DFT calculated results, the structure of TiN surfaces can be changed depending on exposure to gas molecules, such as  $\\mathrm{B}_2\\mathrm{H}_6$ ,  $\\mathrm{WF}_6$ , and  $\\mathrm{H}_2$ . As a result, the changed structure of the TiN surfaces can have a significant impact on the ALD W process because the underlying surfaces can have significant effects on the characteristics of the subsequent W nucleation layers.20,21 The TiN surfaces have been widely utilized as a glue/barrier layer for subsequent W nucleation.22 Three different planes of TiN surfaces, TiN (001), Ti- terminated TiN (111), and N- terminated TiN (111) can be generated because poly- crystalline TiN layers with (001) and (111) preferred orientations were mainly observed in deposition of TiN films.23,24 Our previous results19 imply that B- covered surface can be generated very well by  $\\mathrm{B}_2\\mathrm{H}_6$  flow especially on N- terminated TiN (111) surface rather than other TiN surfaces due to even higher reactivity of  $\\mathrm{B}_2\\mathrm{H}_6$  on the former than the latter.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In this study, both N- terminated TiN (111) and B- covered N- terminated TiN (111) surfaces were selected to compare surface reactivities of  $\\mathrm{WF}_6$ . At the first step, the  $\\mathrm{WF}_6$  decomposition processes on both N- terminated TiN (111) and B- covered N- terminated TiN (111) surfaces were carefully analyzed in order to investigate the effect of the B- covered surface made by  $\\mathrm{B}_2\\mathrm{H}_6$ . Then, at the second step, two additional reaction processes right after  $\\mathrm{WF}_6$  bond dissociation, such as W substitution into B site and  $\\mathrm{BF}_3$  desorption, were investigated to understand the detailed reactions that can occur by  $\\mathrm{WF}_6$  flow. At the final step, we also studied the effect of  $\\mathrm{H}_2$  post- treatment on W- covered N- terminated TiN (111) surface in order to remove residual F adatoms, which are known to cause severe problems that extremely degrade characteristics of memory devices. It is expected that the understanding of the role of gas molecules used for W deposition gives us insight into improving the W ALD process for future memory devices.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2. Computational methods",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In our theoretical results, all DFT calculations were performed using Vienna ab initio simulation package (VASP) program with the Perdew- Burke- Ernzerhof (PBE) functional in the generalized gradient approximation (GGA).25,26 We used PBE- D2 functional27 based on projector augmented wave (PAw) method28 with a correction to the conventional Kohn- Sham DFT energy to treat the van der Waals (vdW) interactions for all TiN surface calculations. TiN surfaces with B1- NaCl structure were used as the reactive surfaces with the  $\\mathrm{WF}_6$  precursor.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The optimized lattice parameter of TiN was  $a_0 = 4.259\\mathrm{\\AA}$ , which overestimate somewhat the experimental value ( $a_0 = 4.24\\mathrm{\\AA}$ )29 since generally PBE functionals tend to overestimate the lattice parameters. For the N- terminated TiN (111) surface, a 5- layer slab of  $(2\\times 2)$  supercell was considered with vacuum gaps of  $25.6\\mathrm{\\AA}$  in the  $z$  direction were included to avoid interactions between adjacent slabs. For comparison, the B- covered N- terminated TiN surface was considered with a 5- layer slab of  $(2\\times 2)$  supercell with vacuum gaps of  $24.5\\mathrm{\\AA}$ . Valence orbitals were described by a plane- wave basis set with the cutoff energy of  $400\\mathrm{eV}$ . Electronic energies were calculated with a self- consistent- field (SCF) tolerance of  $10^{- 4}\\mathrm{eV}$  on the total energy. Ultrasoft Vanderbilt- type pseudopotentials30 were used to describe the interactions between ions and electrons. A  $3\\times 3\\times 3$  Monkhorst  $k$ - point mesh for bulk TiN was chosen. The Brillouin zone for all TiN surfaces was sampled with a  $3\\times 3\\times 1$  Monkhorst- Pack  $k$ - point mesh. Geometry optimization was performed by minimizing the forces of all atoms to less than  $0.02\\mathrm{eV}\\mathrm{\\AA}^{- 1}$  with the total energy of the system converged to within  $10^{- 4}\\mathrm{eV}$  during self- consistent iterations. In addition, we have calculated total energies for various configurations to determine the energy barrier for dissociative reactions of  $\\mathrm{WF}_6$  on both TiN surfaces in the first step, for both W substitution and  $\\mathrm{BF}_3$  desorption in the second step, and for both  $\\mathrm{H}_2$  dissociative reaction and HF desorption in the final step. This procedure for calculation of transition state is required to find not only the accurate final state but also transition state especially in complicated system, such as  $\\mathrm{WF}_6$  dissociation. After this procedure, we used nudged elastic band (NEB) method31 using the calculated final state to check accurate transition state. To optimize adsorption structures, we considered two orientations and three positions of  $\\mathrm{WF}_6$  on the N- terminated TiN surface. The details of all six cases are shown in the ESI (Fig. S4†). The optimized adsorption structures with the lowest energy in the ESI (Table S2†) were used in this paper. We also checked two orientations and thirteen positions of  $\\mathrm{WF}_6$  on the B- covered N- terminated TiN (111) surface. The details of all twenty- six cases are shown in the ESI (Fig. S5†). The optimized adsorption structures with the lowest in the ESI (Table S3†) were used in this paper.",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "3. Results and discussion",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Charge density distribution for prediction of the surface reactivity of  $\\mathrm{WF}_6$  precursor was described in the ESI (Fig. S1- S3 and Table S1†)",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "3.1.  $\\mathbf{W}\\mathbf{F}_6$  dissociative chemisorption on N-terminated TiN (111)",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For ALD reaction to proceed, the  $\\mathrm{WF}_6$  precursor first undergo dissociative reaction on the TiN surfaces. The optimized structures of initial, transition, and final states for the first dissociative reaction step of  $\\mathrm{WF}_6$  molecule on the N- terminated TiN (111) surface are shown in Fig. 1. The calculated overall energy diagram of  $\\mathrm{WF}_6$  decomposition on the N- terminated.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "In order to check the preference of F atom for the hollow site (on top of Ti atom) and the N site on the N- terminated TiN (111) surface, we have checked adsorption characteristics of one F atom on Ti site of the nitride surface. During the structural relaxation, we found that the F atom moved from the hollow site (on top of Ti atom) to N site on the surface. As seen in side- view of Fig.  $^{54,\\dagger}$  Ti atoms underneath N atoms on the surface would be hard to interact with F atom due to the Ti atoms.",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "TiN (111) surface is shown in Fig. 2. The initial state (IS) in Fig. 1 shows the optimized structure with the lowest adsorption energy of  $\\mathrm{WF}_6$  on the surface, which is  $0.01\\mathrm{eV}$  The final state (FS) presents that the dissociated F atom from the  $\\mathrm{WF}_6$  molecule reacts with the N atom of the surface, and remaining  $\\mathrm{WF}_5$  reacts with another N atom of the surface. The reaction energy can be calculated as the energy difference between the initial state and the final state. As shown in Fig.2, the calculated reaction energy of  $\\mathrm{WF}_6$  for the first reaction step on the Nterminated TiN (111) surface is  $- 0.39\\mathrm{eV}$  The first reaction step is kinetically difficult due to a high activation energy of  $2.98\\mathrm{eV}$",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "To complete the overall reaction energetics of  $\\mathrm{WF}_6$  the calculated energy diagram of  $\\mathrm{WF}_6$  decomposition on the Nterminated TiN (111) surface is depicted in Fig.2. The detailed structures of  $\\mathrm{WF}_6$  during the overall reactions on the Nterminated TiN (111) surface for transition state calculations can be found in the ESI (Fig. S6 and Table  $^{54\\dagger}$  ).During the dissociative reactions of the  $\\mathrm{WF}_6$  molecule on the surface, this calculation shows that the overall reaction process is endothermic, with a calculated overall reaction energy of  $4.73\\mathrm{eV}$  These results indicate that the reaction is thermodynamically unfavorable due to the uphill reactions. Furthermore,  $\\mathrm{WF}_6$  dissociative chemisorption on the N- terminated TiN (111) is kinetically difficult due to high activation energies that range from a minimum of  $0.70\\mathrm{eV}$  to a maximum of  $3.45\\mathrm{eV}$  The low reactivity of  $\\mathrm{WF}_6$  with the N- terminated TiN (111) surface might be attributed to weak N- F bonding nature, which makes it difficult for W- F bond breaking of  $\\mathrm{WF}_6$  to occur. The weak N- F bonding nature may be originated from electron- withdrawing nature of both atoms due to high electronegativity of them (N  $= 3.04$ $\\mathrm{F} = 3.98$  ), which causes N- F bonding nature to weaken, while strong bonding nature of B- N (B- N bond length  $= 1.48\\mathrm{\\AA}$  in Table  $^{51\\dagger}$  may be attributed to the electron- donation nature of B atom and the electron- withdrawing nature of N atom, which causes B- N bond to strengthen.32",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/677986b6db7de8703eb0fc3c7474ef0765602ae6d7e493047610af5a9c3c8748.jpg",
+        "image_caption": [
+            "Fig.2 Calculated energy diagram of  $\\mathrm{WF}_6$  decomposition on the N-terminated TiN (111) surface."
+        ],
+        "image_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "3.2.  $\\mathrm{WF}_6$  dissociative chemisorption on B-covered N-terminated TiN (111)",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "After  $\\mathrm{B}_2\\mathrm{H}_6$  flow on the N- terminated TiN (111) surface, B- covered N- terminated TiN (111) surface can be made due to energetically favorable reaction of  $\\mathrm{B}_2\\mathrm{H}_6$  bond dissociation on",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/d4e39cac319e9a1c533bd86bdcd9d278e63cd5f96140293c99812651d129d572.jpg",
+        "image_caption": [
+            "Fig. 1 The optimized initial, transition, final structures for the first dissociative reaction step of  $\\mathrm{WF}_6$  on the N-terminated TiN (111) surface."
+        ],
+        "image_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/3bda5b6844e498c002f52acd06131a0950be4f7390f3fcd31e0896b0a1884d65.jpg",
+        "image_caption": [
+            "Fig. 3 The optimized initial, transition, final structures for the first dissociative reaction step of  $\\mathsf{WF}_6$  on the B-covered N-terminated TiN (111) surface."
+        ],
+        "image_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "the N- terminated TiN surface, which was confirmed by our previous report.19 In order to estimate the difference between the N- terminated TiN (111) and B- covered N- terminated TiN (111) surfaces, the decomposition mechanism of  $\\mathrm{WF}_6$  was also studied on the B- covered N- terminated TiN (111) surface. The optimized structures of initial, transition, and final states for the first dissociative reaction step of  $\\mathrm{WF}_6$  molecule are shown in Fig. 3. It was found that dissociated F atoms were adsorbed on the B atoms, and remaining  $\\mathrm{WF}_4$  species was adsorbed on the N atom.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "3.3.  $\\mathrm{WF}_6$  dissociative chemisorption on B-covered N-terminated TiN (111)",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "After  $\\mathrm{B}_2\\mathrm{H}_6$  flow on the N- terminated TiN (111) surface, B- covered N- terminated TiN (111) surface can be made due to energetically favorable reaction of  $\\mathrm{B}_2\\mathrm{H}_6$  bond dissociation on the N- terminated TiN surface, which was confirmed by our previous report.19 In order to estimate the difference between the N- terminated TiN (111) and B- covered N- terminated TiN (111) surfaces, the decomposition mechanism of  $\\mathrm{WF}_6$  was also studied on the B- covered N- terminated TiN (111) surface. The optimized structures of initial, transition, and final states for the first dissociative reactions step of  $\\mathrm{WF}_6$  molecule are shown in Fig. 3. It was found that dissociated F atoms were adsorbed on the B atoms, and remaining  $\\mathrm{WF}_4$  species was adsorbed on the N atom. The lowest adsorption energy of  $\\mathrm{WF}_6$  on the B- covered N- terminated TiN (111) surface is  $- 0.10\\mathrm{eV}$  showing that the adsorption is energetically favorable. The reaction energy from IS to FS during the first dissociative step of  $\\mathrm{WF}_6$  is  $- 0.28\\mathrm{eV}$  indicating that the reaction is exothermic with low activation energy of  $0.19\\mathrm{eV}$",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "To complete the overall reaction energetics of  $\\mathrm{WF}_6$ , the calculated energy diagram of  $\\mathrm{WF}_6$  decomposition on the B- covered N- terminated TiN (111) surface is shown in Fig. 4. The detailed structures of  $\\mathrm{WF}_6$  during the overall reaction pathway on the surface for transition state calculations can be found in the ESI (Fig. S7 and Table S5†). During the reaction of the  $\\mathrm{WF}_6$  molecule, this calculation shows that the overall reaction process is exothermic, with a calculated overall reaction energy of  $- 2.86\\mathrm{eV}$ . This result indicates that  $\\mathrm{WF}_6$  dissociative chemisorption on B- covered N- terminated TiN (111) is energetically favorable due to the downhill reactions and low activation energies that range from a minimum of  $0.19\\mathrm{eV}$  to a maximum of  $0.69\\mathrm{eV}$ .  $\\mathrm{WF}_3$  species has the highest activation energy of W- F bond dissociation among  $\\mathrm{WF}_x$  species, which implies that the W- F bond dissociation of  $\\mathrm{WF}_3$  is the rate- determining step along the overall reaction.",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Our calculated results suggest that the high reactivity of  $\\mathrm{WF}_6$  with the surface is attributed to the presence of B- covered surface made by  $\\mathrm{B}_2\\mathrm{H}_6$  with compared to bare surface as discussed above Section 3.2, proving that dissociative reaction of  $\\mathrm{WF}_6$  is energetically unfavorable on the N- terminated TiN (111) surface. Aforementioned in Section 3.1, B- covered surface can have even larger reactivity with  $\\mathrm{WF}_6$  molecule than the case of bare surface since the B atoms that lose electron can easily react with F atoms that acquire electrons, which induces W- F bond breaking of  $\\mathrm{WF}_6$  to occur easily. This analysis was confirmed by higher binding energy of F adatom with the B- covered N- terminated TiN (111) than N- terminated TiN (111), the former",
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/fb47b6dc58b1150d612cfcc8841ab0524097b4915364e8489d35eb28362ccd07.jpg",
+        "image_caption": [
+            "Fig. 4 Calculated energy diagram of  $\\mathrm{WF}_6$  decomposition on the B-covered N-terminated TiN (111) surface."
+        ],
+        "image_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/81e7036c0d7fe782f65f978a6bef083940abfbcf880a5f622480466296fb8342.jpg",
+        "image_caption": [
+            "Fig. 5 W adatom diffusion from atop (IS) to sub-layer (FS): (a) top and side views of W adatom on B-covered N-terminated TiN (111) surfaces. (b) Energy profile."
+        ],
+        "image_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "is  $6.3\\mathrm{eV}$  and the latter is  $3.6\\mathrm{eV}$  in our calculations. As a result, an effect of the  $\\mathrm{B}_2\\mathrm{H}_6$  flow on the surface is to make the TiN surface be reactive for  $\\mathrm{WF}_6$  bond dissociation, meaning that the  $\\mathrm{B}_2\\mathrm{H}_6$  serves as a catalyst to decompose  $\\mathrm{WF}_6$ .",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "3.4. Two additional reaction processes right after  $\\mathrm{WF}_6$  bond dissociation; W substitution and  $\\mathrm{BF}_3$  desorption",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Right after  $\\mathrm{WF}_6$  dissociative reaction on B- covered N- terminated TiN (111), two additional reaction processes can occur; W substitution and  $\\mathrm{BF}_3$  desorption. For the first additional reaction process, the diffusion barrier of W adatom from atop (IS) to sublayer (FS) was calculated to see if the W adatom can be substituted by B atoms in the sub- layer. As shown in Fig. 5(a), it was found that during W adatom diffusion from IS to FS, B- N bonded atoms just below the W adatom were broken and pushed out to bond with other B, N atoms in the vicinity. This phenomenon is attributed to strong binding energy of W adatom with the TiN surface than other B and N atoms (W:  $10.9\\mathrm{eV}$ , B:  $5.9\\mathrm{eV}$ , N:  $9.4\\mathrm{eV}$ , F:  $4.4\\mathrm{eV}$ ) in our calculations. This gives new information why the TiN surface is greatly suitable for adhesion layer of W thin films. Fig. 5(b) shows W adatom diffusion from atop (IS) to sublayer (FS) with a low activation energy of  $0.43\\mathrm{eV}$  and large reaction energy of  $- 7.37\\mathrm{eV}$ , which means that the diffusion is energetically favorable. This indicates that W atoms can be covered on the TiN surfaces due to the strong bonding nature of W with the TiN surface rather than B atoms covered on the surface. As a result, W- covered N- terminated TiN (111) surface can be made by an additional process of W substitution. In addition, remaining atoms, such as B and F, can be adsorbed on the W- covered N- terminated TiN (111) surface due to lower binding energy of those atoms with the surface than the one of W atom.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "For the second additional reaction process, energy diagram of  $\\mathrm{BF}_3$  desorption was calculated to see if remaining B and F atoms can be desorbed as  $\\mathrm{BF}_3$  molecule. The calculated energy diagram of  $\\mathrm{BF}_3$  desorption on the W- covered N- terminated TiN (111) surface is shown in Fig. 6. The detailed structures during the overall reaction pathway on the surface for transition state calculations can be found in the ESI (Fig. S8 and Table S6†). During the reaction for  $\\mathrm{BF}_3$  desorption, this calculation shows that the overall reaction process is exothermic, with a calculated overall reaction energy of  $- 0.69\\mathrm{eV}$ . This result indicates that  $\\mathrm{BF}_3$  desorption on W- covered N- terminated TiN (111) is energetically favorable due to the downhill reactions and low activation energies that range from a minimum of  $0.25\\mathrm{eV}$  to a maximum of  $0.72\\mathrm{eV}$ . As a result, right after W substitution, remaining B and F atoms can be easily desorbed as by- product, that is,  $\\mathrm{BF}_3$  molecule on the W- covered N- terminated TiN (111) surface.",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "3.5. Effect of  $\\mathrm{H}_2$  post-treatment on W-covered N-terminated TiN (111)",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Even though F adatoms can be removed by  $\\mathrm{BF}_3$  desorption, it may be difficult to completely remove F adatoms on the W-",
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/bfa67db6a1c036d0dd3ad9eceeec8a792e5c7487f02c4c16769f12f6ee35ac0a.jpg",
+        "image_caption": [
+            "Fig. 6 Calculated energy diagram of  $\\mathrm{BF}_3$  desorption on the W-covered N-terminated TiN (111) surface."
+        ],
+        "image_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/cb3230dd9fb87979e45575ba8fa45ae7bb10c10261f041d04eca6c0f3cfa2b7c.jpg",
+        "image_caption": [
+            "Fig. 7 Calculated energy diagram of (a)  $\\mathsf{H}_{2}$  dissociation on the W-covered N-terminated TiN (111) surface and (b) HF desorption on the H-saturated W-covered N-terminated TiN (111) surface."
+        ],
+        "image_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "covered N- terminated TiN (111) surface because a large number of F adatoms can be generated right after  $\\mathrm{WF}_6$  dissociative reaction, which means that it is difficult to remove too many F adatoms by  $\\mathrm{BF}_3$  desorption. In fact, these residual F adatoms cause severe problems, such as, attack on under- layer materials and degradation of performance of memory devices, which is because F atoms with highly electron withdrawing nature have strong reactivity on other atoms with electron donation nature, such as Al, B, Si, etc., leading to breaking the atomic bond of under- layer materials.33,34 In order to see if F adatoms can be removed by HF desorption, we investigated the effect of  $\\mathrm{H}_{2}$  posttreatment on W- covered N- terminated TiN (111) surface.",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/b3c328b10101e28e403829fb79e3b31b01c0d8c403b11b23bff3160367a23592.jpg",
+        "image_caption": [
+            "Fig. 8 Proposed overall ALD reaction mechanism for W deposition."
+        ],
+        "image_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The calculated energy diagrams of  $\\mathrm{H}_{2}$  dissociation on the Wcovered N- terminated TiN (111) and HF desorption on the Hsaturated W- covered N- terminated TiN (111) surface are shown in Fig. 7(a) and (b), respectively. As for the first reaction step in Fig. 7(a), it shows that  $\\mathrm{H}_{2}$  dissociative reaction is ener- . getically favorable, with a reaction energy of  $- 1.22\\mathrm{eV}$  and a low activation energy of  $0.26\\mathrm{eV}$  . This indicates that the injection of  $\\mathrm{H}_{2}$  molecule makes the W- covered N- terminated TiN (111) surface be the H- saturated surface.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "As for the second reaction step in Fig. 7(b), it shows that HF desorption is energetically unfavorable, with a reaction energy of  $0.85\\mathrm{eV}$  and an activation energy of  $1.17\\mathrm{eV}$  . However, the forward reaction  $[\\mathrm{H}(\\mathrm{s}) + \\mathrm{F}(\\mathrm{s})\\rightarrow \\mathrm{HF}(\\mathrm{g})]$  can be increased under  $\\mathrm{H}_{2}$  ambience since large amount of H adatoms generated by  $\\mathrm{H}_{2}$  dissociation can increase the frequency of the forward reaction, which results in enhancing the reaction rate. In addition, the forward reaction may occur well under somewhat high temperature due to a bit high activation energy. In previous experimental study, Berc Kalanyan et al.35 reported that adding  $\\mathrm{H}_{2}$  with  $\\mathrm{WF}_6$  molecule promotes HF formation during the ALD process of W deposition. The combination of their results and our results provides how to effectively remove residual F atoms on the TiN surface.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "3.6.Proposed overall ALD reaction mechanism for W deposition",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "3.6. Proposed overall ALD reaction mechanism for W depositionIn order to summarize overall ALD reaction mechanism for W deposition as above discussed in Section 3.1- 3.5, we drew the overall ALD reaction scheme for clear understanding of W deposition. Fig. 8 shows proposed overall ALD reaction scheme for W deposition. At the process 1 for  $\\mathrm{B}_2\\mathrm{H}_6$  flow, there are two reaction steps;  $\\mathrm{B}_2\\mathrm{H}_6$  dissociative reaction and  $\\mathrm{H}_{2}$  desorption. It shows that  $\\mathrm{B}_2\\mathrm{H}_6$  dissociative reaction is easy to occur on the N- terminated TiN (111) due to low activation energies  $(E_{\\mathrm{a,min}} =$  barrier- less,  $E_{\\mathrm{a,max}} = 0.39\\mathrm{eV})$  and overall reaction energy  $(E_{\\mathrm{rxn,overall}} = - 19.0\\mathrm{eV})$  , which was reported in our previous results.19 Therefore, B- covered N- terminated TiN (111) surface can be made by  $\\mathrm{B}_2\\mathrm{H}_6$  flow. The remaining H adatoms on the surface can be desorbed as  $\\mathrm{H}_{2}$  molecule with activation energy  $(E_{\\mathrm{a}}$ $= 0.81\\mathrm{eV})$  and reaction energy  $(E_{\\mathrm{rxn}} = 0.48\\mathrm{eV})$  under  $\\mathrm{B}_2\\mathrm{H}_6$  ambience because large amount H adatoms generated by  $\\mathrm{B}_2\\mathrm{H}_6$  dissociation can increase the frequency of the forward reaction  $[\\mathrm{H}(\\mathrm{s}) + \\mathrm{H}(\\mathrm{s})\\rightarrow \\mathrm{H}_2(\\mathrm{g})]$  even though the reaction energy is positive value. At the process 2 for  $\\mathrm{WF}_6$  flow, there are three reaction steps:  $\\mathrm{WF}_6$  dissociative reaction, W substitution, and  $\\mathrm{BF}_3$  desorption. It shows that all three reaction steps are easy to occur due to low activation energies and overall reaction energies as above discussed in Section 3.3- 3.5. At the process 3 for the effect of  $\\mathrm{H}_{2}$  post- treatment, there are two reaction steps;  $\\mathrm{H}_{2}$  dissociative reaction, HF desorption. It shows that both  $\\mathrm{H}_{2}$  dissociative reaction and HF desorption can occur enough well as above discussed in Section 3.5, therefore, a uniform W film could be deposited by removing residual F adatoms, which extremely degrade device performance. Our results indicate that the understanding of the role of gas molecules used for W deposition plays an important role in improving the properties of the subsequent W nucleation layers during the W ALD process.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "4. Conclusions",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "4. ConclusionsIn summary, we investigated overall ALD reaction mechanism for W deposition on the TiN surfaces based on DFT calculation as well as the detailed dissociative reactions of  $\\mathrm{WF}_6$ . Our calculated results suggest that the overall reactions of the  $\\mathrm{WF}_6$  on the B-covered TiN surfaces are energetically much more favorable than the one on the TiN surfaces, which means that the high reactivity of  $\\mathrm{WF}_6$  with the B-covered TiN surface is attributed to the presence of B-covered surface made by  $\\mathrm{B}_2\\mathrm{H}_6$  molecule. As a result, an effect of the  $\\mathrm{B}_2\\mathrm{H}_6$  flow serves as a catalyst to decompose  $\\mathrm{WF}_6$  molecule. Two additional reaction processes right after  $\\mathrm{WF}_6$  bond dissociation, such as W substitution and  $\\mathrm{BF}_3$  desorption, were also explored to clearly understand the detailed reactions that can occur by  $\\mathrm{WF}_6$  flow. At the first additional reaction process, W atoms can be substituted into B site and covered on the TiN surfaces due to the strong bonding nature of W with the TiN surface than B atoms. At the second additional reaction process, remaining atoms, such as B and F, can be easily desorbed as by-product, that is,  $\\mathrm{BF}_3$  because  $\\mathrm{BF}_3$  desorption is energetically favorable reaction with low activation energy. Furthermore, we also investigated the effect of  $\\mathrm{H}_{2}$  posttreatment on W-covered TiN surface in order to remove residual F adatoms, which are known to cause severe problems that extremely degrade characteristics of memory devices. It was found that both  $\\mathrm{H}_{2}$  dissociative reaction and HF desorption can occur enough well under somewhat high temperature and  $\\mathrm{H}_{2}$  ambience, which is confirmed by the our DFT results and previously reported experimental results. These results imply that the understanding of the role of gas molecules used for W deposition gives us insight into improving the W ALD process for future memory devices.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Conflicts of interest",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "There are no conflicts to declare.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Acknowledgements",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "AcknowledgementsEuijoon Yoon and Gun- Do Lee acknowledge support from the Supercomputing Center/Korea Institute of Science and Technology Information with supercomputing resources (KSC- 2017- C3- 0045), from the joint program for Samsung Electronics Co., Ltd. (SEC), from BK21PLUS SNU Materials Division for Educating Creative Global Leaders (21A20131912052), and from the National Research Foundation of Korea (NRF) grant funded by the Korea government (RIAM NRF- 2016R1D1A1A02937045) and the Ministry of Science, ICT and Future Planning (2017M3D1A1040688).",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "References",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "1 S.B.Baek,D.H.Kim and Y.C.KimAppl.Surf.Sci.2012,258, 6341- 6344. 2 M. C. Schwille, T. Schossler, J. Barth, M. Knaut, F. Schon, A. Hochst, M. Oettel and J. W. Bartha, J. Vac. Sci. Technol., A,2017,35.",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "3 W. D. Huang, X. H. Wang, M. Sheng, L. Q. Xu, F. Stubhan, L. Luo, T. Feng, X. Wang, F. M. Zhang and S. C. Zou, Mater. Sci. Eng. B Solid State Mater. Adv. Technol., 2003, 98, 248- 254. 4 A. El Amrani, A. Bekhtari, B. Mahmoudi, A. Lefgoum and H. Menari, Vacuum, 2011, 86, 386- 390. 5 N. Sharma, M. Hooda and S. K. Sharma, J. Mater. Sci., 2014, 2014, 8. 6 B. C. Joshi, G. Eranna, D. P. Runthala, B. B. Dixit, O. P. Wadhawan and P. D. Vyas, LPCVD and PECVD silicon nitride for microelectronics technology, 2000. 7 W. J. Lee, J. H. Lee, C. O. Park, Y. S. Lee, S. J. Shin and S. K. Rha, J. Korean Phys. Soc., 2004, 45, 1352- 1355. 8 J. W. Klaus, A. W. Ott, A. C. Dillon and S. M. George, Surf. Sci., 1998, 418, L14- L19. 9 C. A. Murray, S. D. Elliott, D. Hausmann, J. Henri and A. LaVoie, ACS Appl. Mater. Interfaces, 2014, 6, 10534- 10541. 10 S. M. George, Chem. Rev., 2010, 110, 111- 131. 11 S.- J. Won, J. R. Kim, S. Suh, N.- I. Lee, C. S. Hwang and H. J. Kim, ACS Appl. Mater. Interfaces, 2011, 3, 1633- 1639. 12 S. H. Kim, N. Kwak, J. Kim and H. Sohn, J. Electrochem. Soc., 2006, 153, G887- G893. 13 S. H. Kim, J. K. Kim, N. Kwak, H. Sohn, J. Kim, S. H. Jung, M. R. Hong, S. H. Lee and J. Collins, Electrochem. Solid- State Lett., 2006, 9, C54- C57. 14 J. W. Klaus, S. J. Ferro and S. M. George, Thin Solid Films, 2000, 360, 145- 153. 15 C. H. Kim, I. C. Rho, S. H. Kim, I. K. Han, H. S. Kang, S. W. Ryu and H. J. Kim, J. Electrochem. Soc., 2009, 156, H685- H689. 16 G. L. Wang, Q. Xu, T. Yang, J. J. Xiang, J. Xu, J. F. Gao, C. L. Li, J. F. Li, J. Yan, D. P. Chen, T. C. Ye, C. Zhao and J. Luo, ECS J. Solid State Sci. Technol., 2014, 3, P82- P85. 17 T. Omstead, G. C. D'Couto, S. H. Lee, P. Wongsenakaum, J. Collins and K. Levy, Solid State Technol., 2002, 45, 51- 55. 18 S. H. Kim, E. S. Hwang, S. C. Ha, S. H. Pyi, H. J. Sun, J. W. Lee, N. Kawk, J. K. Kim, H. Sohn and J. Kim, J. Electrochem. Soc., 2005, 152, C408- C417.",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "19 H. Park, S. Lee, H. J. Kim, E. Yoon and G.- D. Lee, RSC Adv., 2017, 7, 55750- 55755. 20 S. H. Kim, S. J. Yeom, N. Kwak and H. Sohn, J. Electrochem. Soc., 2008, 155, D148- D154. 21 G. Ramanath, H. Kim, H. Goindi, M. Frederick, C.- S. Shin, R. Goswami, I. Petrov and J. Greene, AIP Conf. Proc., 2002, 612, 10. 22 C. H. Kim, I. C. Rho, S. H. Kim, Y. S. Sohn, H. S. Kang and H. J. Kim, Electrochem. Solid- State Lett., 2009, 12, H80- H83. 23 U. C. Oh and J. H. Je, J. Appl. Phys., 1993, 74, 1692- 1696. 24 J. H. Je, D. Y. Noh, H. K. Kim and K. S. Liang, J. Appl. Phys., 1997, 81, 6126- 6133. 25 J. P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett., 1996, 77, 3865- 3868. 26 G. Kresse and J. Furthmuller, Phys. Rev. B: Condens. Matter Mater. Phys., 1996, 54, 11169- 11186. 27 S. Grimme, J. Comput. Chem., 2006, 27, 1787- 1799. 28 P. E. Blochl, Phys. Rev. B: Condens. Matter Mater. Phys., 1994, 50, 17953- 17979. 29 N. Schonberg, Acta Chem. Scand., 1954, 8, 213- 220. 30 D. Vanderbilt, Phys. Rev. B: Condens. Matter Mater. Phys., 1990, 41, 7892- 7895. 31 G. Henkelman and H. Jonsson, J. Chem. Phys., 2000, 113, 9978- 9985. 32 H. R. Jiang, T. S. Zhao, L. Shi, P. Tan and L. An, J. Phys. Chem. C, 2016, 120, 6612- 6618. 33 H. Yang, G. A. Brown, J. C. Hu, J. P. Lu, R. Kraft, A. L. P. Rotondaro, S. V. Hattangady, I. Chen, J. D. Luttmer, R. A. Chapman, P. J. Chen, H. L. Tsai, B. Amirhekmat and L. K. Magel, IEDM Tech. Dig., 1997, 459- 462. 34 M. Dammann, M. Chertouk, W. Jantz, K. Köhler and G. Weimann, Microelectron. Reliab., 2000, 40, 1709- 1713. 35 B. Kalanyan, P. C. Lemaire, S. E. Atanasov, M. J. Ritz and G. N. Parsons, Chem. Mater., 2016, 28, 117- 126.",
+        "page_idx": 7
+    }
+]
