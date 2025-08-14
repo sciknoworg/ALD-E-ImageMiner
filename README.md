@@ -15,14 +15,13 @@
 
 #### 1. Overall
 
-| Category | Sub-category | PDFs | Figures | Tables | Formulas | Total |
-| --- | --- | --- | --- | --- | --- | --- |
-| atomic-layer-deposition | experimental-usecase | 66 | 108 | 15 | 39 | 162 |
-| atomic-layer-deposition | simulation-usecase | 58 | 476 | 95 | 385 | 956 |
-| atomic-layer-etching | experimental-usecase | 47 | 274 | 5 | 5 | 363 |
-| atomic-layer-etching | simulation-usecase | 32 | 284 | 10 | 52 | 436 |
-| Total |  | 203 | 1142 | 125 | 481 | **1748** |
-
+| Category | Sub-category | PDFs | Figures | Formulas | Tables |
+| --- | --- | --- | --- | --- | --- |
+| atomic-layer-deposition | experimental-usecase | 66 | 552 | 102 | 76 |  796 |
+| atomic-layer-deposition | simulation-usecase | 58 | 579 | 413 | 131 | 1181 |
+| atomic-layer-etching | experimental-usecase | 47 | 461 | 116 | 28 |  652 |
+| atomic-layer-etching | simulation-usecase | 32 | 346 | 165 | 55 |  598 |
+| **Total** |  | **203** | **1938** | **796** | **290** |
 
 #### 2. Classification
 
@@ -32,7 +31,7 @@
 | Bar chart | 13 | 0 |
 | 3D bar chart | 1 | 0 |
 | Grouped bar chart | 11 | 0 |
-| stacked bar chart | 5 | 0 |
+| Stacked bar chart | 5 | 0 |
 | Box plot | 1 | 0 |
 | Bubble chart | 4 | 0 |
 | Donut chart | 7 | 0 |
