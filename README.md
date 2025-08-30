@@ -83,7 +83,7 @@ data
 
 ### 📊 Statistics
 
-#### Overall
+#### Overall Statistics
 
 | Category | Sub-category | PDFs | Figures | Formulas | Tables |
 | --- | --- | --- | --- | --- | --- |
@@ -93,29 +93,37 @@ data
 | atomic-layer-etching | simulation-usecase | 32 | 346 | 165 | 55 |  598 |
 | **Total** | - | **203** | **1938** | **796** | **290** |
 
-#### Classification
+#### Figure type classification
 
 | Chart Type | Auto Labels | Human Labels |
 | --- | --- | --- |
 | Area chart | 0 | 0 |
 | Bar chart | 13 | 0 |
-| 3D bar chart | 1 | 0 |
-| Grouped bar chart | 11 | 0 |
-| Stacked bar chart | 5 | 0 |
+| 3D bar chart | 18 | 0 |
+| Grouped bar chart | 46 | 0 |
+| Stacked bar chart | 7 | 0 |
 | Box plot | 1 | 0 |
-| Bubble chart | 4 | 0 |
-| Donut chart | 7 | 0 |
+| Bubble chart | 6 | 0 |
+| Donut chart | 2 | 0 |
 | Funnel chart | 0 | 0 |
-| Heatmap | 61 | 0 |
-| Line chart | 67 | 0 |
-| Multiple Line chart | 276 | 0 |
-| Pie chart | 2 | 0 |
+| Heatmap | 36 | 0 |
+| Line chart | 360 | 0 |
+| Multiple Line chart | 580 | 0 |
+| Multi-axis chart | 197 | 0 |
+| Pie chart | 5 | 0 |
+| Polar chart | 9 | 0 |
 | Radar chart | 1 | 0 |
-| Rose chart | 8 | 0 |
-| Scatter plot | 182 | 0 |
+| Rose chart | 0 | 0 |
+| 3D scatter plot | 1 | 0 |
+| Scatter plot | 91 | 0 |
 | Treemap | 0 | 0 |
-| Unknown | 1167 | 0 |
-
+| Unknown | 546 | 0 |
+| --- | --- | --- |
+| flowchart | 2 | 0 |
+| table | 1 | 0 |
+| | 15 | 0 |
+| ['scatter plot', 'line chart'] | 1 | 0 |
+| **Total** | **1938** | **0** |
 
 ## 🛠️ Datamining Tools
 
