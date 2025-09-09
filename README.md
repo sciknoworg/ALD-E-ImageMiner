@@ -66,19 +66,19 @@ data
 - Author et al.pdf - (PDF) actual PDF document
 
 #### 2. Text
-- content.json - (JSON) structured content
-- content.md - (Markdown) structured content
-- content.tei.xml - (TEI-XML) structured content
-- content.txt - (Text) unstructured content
+- content.json - (JSON) structured content extracted using MinerU
+- content.md - (Markdown) structured content extracted using MinerU
+- content.tei.xml - (TEI-XML) structured content extracted using GROBID
+- content.txt - (Text) unstructured content extracted using MinerU
 
 #### 3. Image
-- filename.jpg - (JPEG) actual figure image
-- filename.class.txt - (Text) chart visualization class/category
-- filename.data.txt  - (Text) data extracted as a markdown table
-- filename.summary.txt - (Text) summarization of chart visualization
+- filename.jpg - (JPEG) actual figure image extracted using MinerU
+- filename.class.txt - (Text) chart visualization class/category extracted using Qwen 2.5 VL
+- filename.data.txt  - (Text) data extracted as a markdown table extracted using instruction tuned Qwen 2.5 VL
+- filename.summary.txt - (Text) summarization of chart visualization extracted using Qwen 2.5 VL
 
 #### 4. Others
-- layout.json - (JSON) bounding box and segmentation data containing the PDF layout information
+- layout.json - (JSON) bounding box and segmentation data containing the PDF layout information extracted using MinerU
 
 
 ### 📊 Statistics
@@ -125,16 +125,25 @@ data
 | ['scatter plot', 'line chart'] | 1 | 0 |
 | **Total** | **1938** | **0** |
 
-## 🛠️ Datamining Tools
+## 🛠️ Datamining Tools, Libraries and AI Models
 
-### MinerU
-[MinerU](https://mineru.net/) was used to extract JSON, figures, formulas and tables.
+### 1. GROBID
+GROBID (GeneRation Of BIbliographic Data) is an open-source, machine-learning-based tool designed to parse and extract structured information from scholarly documents, primarily in PDF format. It takes raw, unstructured documents—such as research papers and identifies, tags, and extracts their constituent parts into a standardized TEI XML format. This includes precisely parsing the document's header (title, authors, affiliations, abstract), body text (sections, paragraphs), and, most notably, its citations and bibliography.
+
+URL: [https://github.com/kermitt2/grobid](https://github.com/kermitt2/grobid)
+
+### 2. MinerU
+MinerU, created by OpenDataLab, is an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
+
+URL: [https://github.com/opendatalab/MinerU](https://github.com/opendatalab/MinerU)
+
+### 3. Qwen 2.5 VL
+Qwen2.5-VL is the open=source multimodal (Vision-Language) version of the Qwen 2.5 series of large language models, also developed by Alibaba. This state-of-the-art model is designed to understand and converse about both text and images simultaneously. It can accept image inputs alongside text prompts and perform a wide range of tasks, including generating detailed descriptions of images, answering questions about visual content (Visual Question Answering), interpreting complex charts and graphs, and engaging in open-ended dialogue about a picture.
+
+URL: [https://github.com/QwenLM/Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)
 
 
-### GROBID
-[GROBID](https://github.com/kermitt2/grobid) was used to extract TEI-XML data.
+### 4. GROBID Python Client
+The GROBID Python Client is a software library that provides a convenient Pythonic interface to interact with a GROBID service from within a Python application.
 
-### GROBID Python Client
-[GROBID Python client](https://github.com/kermitt2/grobid_client_python) was used as a REST-API client in Python.
-
-
+URL: [https://github.com/kermitt2/grobid_client_python](https://github.com/kermitt2/grobid_client_python)
