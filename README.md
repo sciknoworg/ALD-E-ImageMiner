@@ -95,6 +95,8 @@ data
 
 #### Figure type classification
 
+There are 22 figure types consisting of 19 unique chart visualizations. The list of figures area vailable in [figure_types.txt](figure_types.txt) file.
+
 | Chart Type | Auto Labels | Human Labels |
 | --- | --- | --- |
 | Area chart | 0 | 0 |
