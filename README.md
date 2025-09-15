@@ -130,22 +130,22 @@ There are 22 figure types consisting of 19 unique chart visualizations. The list
 ## 🛠️ Datamining Tools, Libraries and AI Models
 
 ### 1. GROBID
-GROBID (GeneRation Of BIbliographic Data) is an open-source, machine-learning-based tool designed to parse and extract structured information from scholarly documents, primarily in PDF format. It takes raw, unstructured documents—such as research papers and identifies, tags, and extracts their constituent parts into a standardized TEI XML format. This includes precisely parsing the document's header (title, authors, affiliations, abstract), body text (sections, paragraphs), and, most notably, its citations and bibliography.
+[GROBID (GeneRation Of BIbliographic Data)](https://github.com/kermitt2/grobid) is an open-source, machine-learning-based tool designed to parse and extract structured information from scholarly documents, primarily in PDF format. It takes raw, unstructured documents—such as research papers and identifies, tags, and extracts their constituent parts into a standardized TEI XML format. This includes precisely parsing the document's header (title, authors, affiliations, abstract), body text (sections, paragraphs), and, most notably, its citations and bibliography.
 
 URL: [https://github.com/kermitt2/grobid](https://github.com/kermitt2/grobid)
 
 ### 2. MinerU
-MinerU, created by OpenDataLab, is an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
+[MinerU](https://github.com/opendatalab/MinerU), created by OpenDataLab, is an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
 
 URL: [https://github.com/opendatalab/MinerU](https://github.com/opendatalab/MinerU)
 
 ### 3. Qwen 2.5 VL
-Qwen2.5-VL is the open=source multimodal (Vision-Language) version of the Qwen 2.5 series of large language models, also developed by Alibaba. This state-of-the-art model is designed to understand and converse about both text and images simultaneously. It can accept image inputs alongside text prompts and perform a wide range of tasks, including generating detailed descriptions of images, answering questions about visual content (Visual Question Answering), interpreting complex charts and graphs, and engaging in open-ended dialogue about a picture.
+[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) is the open=source multimodal (Vision-Language) version of the Qwen 2.5 series of large language models, also developed by Alibaba. This state-of-the-art model is designed to understand and converse about both text and images simultaneously. It can accept image inputs alongside text prompts and perform a wide range of tasks, including generating detailed descriptions of images, answering questions about visual content (Visual Question Answering), interpreting complex charts and graphs, and engaging in open-ended dialogue about a picture. Specifically, for the classification, data extraction and summarization we've used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).
 
 URL: [https://github.com/QwenLM/Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)
 
 
 ### 4. GROBID Python Client
-The GROBID Python Client is a software library that provides a convenient Pythonic interface to interact with a GROBID service from within a Python application.
+The [GROBID Python Client](https://github.com/kermitt2/grobid_client_python) is a software library that provides a convenient Pythonic interface to interact with a GROBID service from within a Python application.
 
 URL: [https://github.com/kermitt2/grobid_client_python](https://github.com/kermitt2/grobid_client_python)
