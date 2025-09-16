@@ -127,6 +127,18 @@ There are 22 figure types consisting of 19 unique chart visualizations. The list
 | ['scatter plot', 'line chart'] | 1 | 0 |
 | **Total** | **1938** | **0** |
 
+
+## Question–Answer Categories for Materials Science Figures
+
+[Q&A examples](QA_Examples.md) for **10 categories**, each containing **at least 5 Q\&A examples**, suitable for figures in **materials science literature**.
+
+
+## Prompts for Information Extraction
+
+The [Prompts.md](Prompts.md) contains prompts for information extraction (figure type, data, summary, figure labels) which were used via [Qwen 2.5 VL](https://github.com/QwenLM/Qwen2.5-VL)
+
+
+
 ## 🛠️ Datamining Tools, Libraries and AI Models
 
 ### 1. GROBID
