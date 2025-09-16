@@ -64,39 +64,18 @@ Questions can be answered in **yes/no, factoid, list, or paragraph** format. At 
 
 | Figure No. | Main Content | Question Types | Suggested Answer Types | Example Question | Example Answer |
 |------------|--------------|----------------|------------------------|-----------------|----------------|
-| **[figure 1](.../figure_1.jpg)** | Publication counts per year (ALD vs ALD/MLD) | Comparative/Trend | Paragraph | How has the number of ALD publications changed since 2000? | Publications increased steadily, peaking ~2010; ALD/MLD appears post-2015. |
-| **[figure 2](.../figure_2.jpg)** | ALD & ALD/MLD cycle schematic | Process-Oriented | List; Paragraph | What are the four main steps of the ALD/MLD cycle? | Precursor pulse → Purge → Co-reactant pulse → Purge. |
-| **[figure 3](.../figure_3.jpg)** | GPC vs T, pulse length, cycles | Comparative/Trend | Factoid; Paragraph | How does GPC change with temperature? | GPC decreases as temperature increases from 210 °C to 240 °C. |
-| **[figure 4](.../figure_4.jpg)** | Precursor families + periodic table | Structure–Property | List | Which ligand families are most used for Eu and Ce? | Eu: diketones, amidinates; Ce: diketones, alkoxides. |
-| **[figure 5](.../figure_5.jpg)** | Precursor source temperatures | Structure–Property | Factoid | Which ligand class shows the lowest median source T? | Amidinates. |
-| **[figure 6](.../figure_6.jpg)** | GPC of Y precursors | Comparative/Trend; Structure–Property | Factoid; List | Which oxidant gives lowest GPC? | O₂ plasma. |
-| **[figure 12](.../figure_12.jpg)** | EL spectra + device schematic | Application/Performance | Paragraph | How does Tb₂O₃ doping affect EL intensity? | Optimal ratios (4:2, 4:4) maximize green emission intensity. |
-| **[figure 13](.../figure_13.jpg)** | CIE diagram vs lamps | Application/Performance | List; Paragraph | How do film colors compare to LEDs? | Green region close to LEDs, distinct from incandescent lamps. |
-| **[figure 14](.../figure_14.jpg)** | Solar spectrum + upconversion device | Comparative/Trend; Application/Performance | Paragraph | What effect does upconversion layer have on J–V? | Higher current density vs reference, due to IR→visible conversion. |
-| **[figure 15](.../figure_15.jpg)** | FRET schematic + spectra | Process-Oriented; Application/Performance | Paragraph | How does Eu³⁺ → AF 647 transfer enable FRET emission? | Eu³⁺ absorbs UV and transfers energy to AF 647, which emits red light. |
+| **[figure 1](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_1.jpg)** | Publication counts per year (ALD vs ALD/MLD) | Comparative/Trend | Paragraph | How has the number of ALD publications changed since 2000? | Publications increased steadily, peaking ~2010; ALD/MLD appears post-2015. |
+| **[figure 2](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_2.jpg)** | ALD & ALD/MLD cycle schematic | Process-Oriented | List; Paragraph | What are the four main steps of the ALD/MLD cycle? | Precursor pulse → Purge → Co-reactant pulse → Purge. |
+| **[figure 3](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_3.jpg)** | GPC vs T, pulse length, cycles | Comparative/Trend | Factoid; Paragraph | How does GPC change with temperature? | GPC decreases as temperature increases from 210 °C to 240 °C. |
+| **[figure 4](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_4.jpg)** | Precursor families + periodic table | Structure–Property | List | Which ligand families are most used for Eu and Ce? | Eu: diketones, amidinates; Ce: diketones, alkoxides. |
+| **[figure 5](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_5.jpg)** | Precursor source temperatures | Structure–Property | Factoid | Which ligand class shows the lowest median source T? | Amidinates. |
+| **[figure 6](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_6.jpg)** | GPC of Y precursors | Comparative/Trend; Structure–Property | Factoid; List | Which oxidant gives lowest GPC? | O₂ plasma. |
+| **[figure 12](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_12.jpg)** | EL spectra + device schematic | Application/Performance | Paragraph | How does Tb₂O₃ doping affect EL intensity? | Optimal ratios (4:2, 4:4) maximize green emission intensity. |
+| **[figure 13](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_13.jpg)** | CIE diagram vs lamps | Application/Performance | List; Paragraph | How do film colors compare to LEDs? | Green region close to LEDs, distinct from incandescent lamps. |
+| **[figure 14](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_14.jpg)** | Solar spectrum + upconversion device | Comparative/Trend; Application/Performance | Paragraph | What effect does upconversion layer have on J–V? | Higher current density vs reference, due to IR→visible conversion. |
+| **[figure 15](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_15.jpg)** | FRET schematic + spectra | Process-Oriented; Application/Performance | Paragraph | How does Eu³⁺ → AF 647 transfer enable FRET emission? | Eu³⁺ absorbs UV and transfers energy to AF 647, which emits red light. |
 
 ---
 
 ## Summary
 By covering **Process-Oriented, Comparative/Trend, Structure–Property, and Application/Performance** questions with clear **answer types and examples**, this guide supports consistent, high-quality annotation of ALD/MLD images.
-
-
-## Figure–Question Type Mapping
-
-| Figure No. | Main Content                                               | Applicable Question Types                     |
-|------------|------------------------------------------------------------|-----------------------------------------------|
-| **[figure 1](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_1.jpg)**      | Publication counts per year (ALD vs ALD/MLD)               | Comparative/Trend                             |
-| **[figure 2](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_2.jpg)**      | ALD & ALD/MLD cycle schematic (metal/organic pulses)       | Process-Oriented                              |
-| **[figure 3](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_3.jpg)**      | Plots: GPC vs T, GPC vs pulse length, thickness vs cycles  | Comparative/Trend                             |
-| **[figure 4](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_4.jpg)**      | Precursor ligand families + periodic table coverage        | Structure–Property                            |
-| **[figure 5](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_5.jpg)**      | Box plots of precursor source temperatures by ligand type  | Structure–Property                            |
-| **[figure 6](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_6.jpg)**      | GPC of Y precursors vs ligands/oxidants                    | Comparative/Trend; Structure–Property         |
-| **[figure 12](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_12.jpg)**     | EL spectra + device schematic + emission images            | Application/Performance                       |
-| **[figure 13](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_13.jpg)**     | CIE chromaticity diagram vs lamp standards                 | Application/Performance                       |
-| **[figure 14](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_14.jpg)**     | Solar spectrum overlap + upconversion device schematic     | Comparative/Trend; Application/Performance    |
-| **[figure 15](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_15.jpg)**     | FRET schematic + spectra + emission enhancement            | Process-Oriented; Application/Performance     |
-
----
-
-## Summary
-By covering these four categories—**Process-Oriented, Comparative/Trend, Structure–Property, and Application/Performance**—the question set challenges contextual inference, reasoning, and scientific understanding specific to ALD/E images.
