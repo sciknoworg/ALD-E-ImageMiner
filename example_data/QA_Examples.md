@@ -53,16 +53,16 @@ Questions can be answered in **yes/no, factoid, list, or paragraph** format. At 
 
 | Figure No. | Main Content                                               | Applicable Question Types                     |
 |------------|------------------------------------------------------------|-----------------------------------------------|
-| **[1](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_1.jpg)**      | Publication counts per year (ALD vs ALD/MLD)               | Comparative/Trend                             |
-| **2**      | ALD & ALD/MLD cycle schematic (metal/organic pulses)       | Process-Oriented                              |
-| **3**      | Plots: GPC vs T, GPC vs pulse length, thickness vs cycles  | Comparative/Trend                             |
-| **4**      | Precursor ligand families + periodic table coverage        | Structure–Property                            |
-| **5**      | Box plots of precursor source temperatures by ligand type  | Structure–Property                            |
-| **6**      | GPC of Y precursors vs ligands/oxidants                    | Comparative/Trend; Structure–Property         |
-| **12**     | EL spectra + device schematic + emission images            | Application/Performance                       |
-| **13**     | CIE chromaticity diagram vs lamp standards                 | Application/Performance                       |
-| **14**     | Solar spectrum overlap + upconversion device schematic     | Comparative/Trend; Application/Performance    |
-| **15**     | FRET schematic + spectra + emission enhancement            | Process-Oriented; Application/Performance     |
+| **[figure 1](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_1.jpg)**      | Publication counts per year (ALD vs ALD/MLD)               | Comparative/Trend                             |
+| **[figure 2](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_2.jpg)**      | ALD & ALD/MLD cycle schematic (metal/organic pulses)       | Process-Oriented                              |
+| **[figure 3](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_3.jpg)**      | Plots: GPC vs T, GPC vs pulse length, thickness vs cycles  | Comparative/Trend                             |
+| **[figure 4](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_4.jpg)**      | Precursor ligand families + periodic table coverage        | Structure–Property                            |
+| **[figure 5](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_5.jpg)**      | Box plots of precursor source temperatures by ligand type  | Structure–Property                            |
+| **[figure 6](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_6.jpg)**      | GPC of Y precursors vs ligands/oxidants                    | Comparative/Trend; Structure–Property         |
+| **[figure 12](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_12.jpg)**     | EL spectra + device schematic + emission images            | Application/Performance                       |
+| **[figure 13](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_13.jpg)**     | CIE chromaticity diagram vs lamp standards                 | Application/Performance                       |
+| **[figure 14](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_14.jpg)**     | Solar spectrum overlap + upconversion device schematic     | Comparative/Trend; Application/Performance    |
+| **[figure 15](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_15.jpg)**     | FRET schematic + spectra + emission enhancement            | Process-Oriented; Application/Performance     |
 
 ---
 
