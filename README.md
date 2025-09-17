@@ -133,10 +133,9 @@ Please cite this paper if you find this work useful:
 
 The **ALD/E-ImageMiner** project is supported by:  
 
-- The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative  
-  <img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="100" align="right"/>  
-  funded by the **German Research Foundation (DFG, Grant ID: 460234259)**, under the *Speedboat Annotation Project* funding scheme.  
+**<img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="100" align="middle"/> [NFDI4DataScience](https://www.nfdi4datascience.de/)**, funded by the **German Research Foundation (DFG, Grant ID: 460234259)** under the *Speedboat Annotation Project* funding scheme.  
 
-- The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover’s L3S Research Centre (co-led by applicants)**, and **University of Warwick**. AWASES hosts three fully funded PhD positions and supports advances in **generative AI, multimodal models, and FAIR scientific knowledge graph construction**.  
+- The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover’s L3S Research Centre (co-led by applicants)**, and **University of Warwick**.  
+
 
 
