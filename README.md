@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="300"/>
+  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="400"/>
 </div>
 
 ## Project Overview
