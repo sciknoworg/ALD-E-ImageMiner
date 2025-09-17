@@ -23,6 +23,7 @@ data
 │   │   │   │   ├── images
 │   │   │   │   │   ├── figures
 │   │   │   │   │   │   ├── filename 1.jpg          # (JPEG) actual figure image extracted using MinerU
+│   │   │   │   │   │   ├── filename.caption.txt    # (Text) figure caption extracted from the paper.
 │   │   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
 │   │   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
 │   │   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
@@ -75,7 +76,7 @@ data
 
 We have defined a taxonomy of 40 figure types including "unknown". The full taxonomy with descriptions, parent taxonomy category, and aliases is here [figure_taxonomy.tsv](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/figure_taxonomy.tsv). The ALD/E-ImageMiner project maintains a focus only on figures of parent taxonomy category `quantitative plot`.
 
-Individual statistics for each annotation task dataset distribution are also available i.e. [pilot-annotation-task](pilot-annotation-task/README.md) and [full-annotation-task](full-annotation-task/README.md).
+Individual statistics for each annotation task dataset distribution are also available i.e. [pilot-annotation-task](data/pilot-annotation-task/README.md) and [full-annotation-task](data/full-annotation-task/README.md).
 
 | Figure Type | Auto Labels | Human Labels |
 | --- | --- | --- |
