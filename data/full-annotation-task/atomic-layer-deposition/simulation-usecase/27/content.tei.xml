@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Atomistic Simulations of Plasma-Enhanced Atomic Layer Deposition</title>
+				<funder ref="#_TNGj3Mm">
+					<orgName type="full">Deutsche Forschungsgemeinschaft (DFG, German Research Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2019-08-15">15 August 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Martin</forename><surname>Becker</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Otto Schott Institute of Materials Research</orgName>
+								<orgName type="institution" key="instit2">Friedrich Schiller University Jena</orgName>
+								<address>
+									<postCode>07743</postCode>
+									<settlement>Jena</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Marek</forename><surname>Sierka</surname></persName>
+							<email>marek.sierka@uni-jena.de</email>
+							<idno type="ORCID">0000-0001-8153-3682</idno>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Otto Schott Institute of Materials Research</orgName>
+								<orgName type="institution" key="instit2">Friedrich Schiller University Jena</orgName>
+								<address>
+									<postCode>07743</postCode>
+									<settlement>Jena</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Atomistic Simulations of Plasma-Enhanced Atomic Layer Deposition</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-08-15">15 August 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C154BAA07FBB00CB054C1C1AC95138F6</idno>
+					<idno type="DOI">10.3390/ma12162605</idno>
+					<note type="submission">Received: 25 July 2019; Accepted: 12 August 2019;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>plasma-enhanced atomic layer deposition</term>
+					<term>Monte Carlo simulation</term>
+					<term>molecular dynamics simulations</term>
+					<term>density functional theory</term>
+					<term>ReaxFF reactive force field</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Plasma-enhanced atomic layer deposition (PEALD) is a widely used, powerful layer-by-layer coating technology. Here, we present an atomistic simulation scheme for PEALD processes, combining the Monte Carlo deposition algorithm and structure relaxation using molecular dynamics. In contrast to previous implementations, our approach employs a real, atomistic model of the precursor. This allows us to account for steric hindrance and overlap restrictions at the surface corresponding to the real precursor deposition step. In addition, our scheme takes various process parameters into account, employing predefined probabilities for precursor products at each Monte Carlo deposition step. The new simulation protocol was applied to investigate PEALD synthesis of SiO 2 thin films using the bis-diethylaminosilane precursor. It revealed that increasing the probability for precursor binding to one surface oxygen atom favors amorphous layer growth, a large number of -OH impurities, and the formation of voids. In contrast, a higher probability for precursor binding to two surface oxygen atoms leads to dense SiO 2 film growth and a reduction of -OH impurities. Increasing the probability for the formation of doubly bonded precursor sites is therefore the key factor for the formation of dense SiO 2 PEALD thin films with reduced amounts of voids and -OH impurities.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Atomic layer deposition (ALD) is a coating technology based on self-terminating reactions of gaseous precursor molecules with surface functional groups of the substrate. As shown in Figure <ref type="figure" target="#fig_0">1</ref>, a precursor vapor (usually an organometallic compound) is introduced in the chemical reactor. It reacts with the functional groups at the surface of the substrate, until the surface is saturated (first half-cycle). Excess precursor and reaction byproducts are purged by inert gases. Next, a second precursor is pulsed in the reactor, such as an oxidizing agent like H 2 O, ozone, O 2 , or O 2 plasma, which reacts with the remaining ligands of the precursor material (second half-cycle). The reactor is purged again. The ALD process is continued by repeating the above pulsing and purging steps, which constitute the ALD cycle, until the desired film thickness is reached. These reactions depend only on the abundancy and variety of the surface functional groups for a specific precursor, and not on the shape of the substrate. Hence, the ALD technology leads to extremely conformal coatings on highly curved <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref> or nanostructured substrates. Additionally, the composition of the thin films can be controlled with atomic precision by alternating the organometallic compound for binary or more complex mixtures <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b4">5]</ref>. Plasma-enhanced ALD (PEALD), which utilizes oxygen plasma, is applied in order to increase the reactivity of the oxidizing agent <ref type="bibr" target="#b5">[6]</ref>. This enables, for example, room temperature deposition of SiO 2 thin films, which is possible only at 200 • C in typical thermal processes using O 3 <ref type="bibr" target="#b6">[7]</ref>. However, recently developed highly reactive precursors allow for thermal ALD processes at temperatures approaching room temperature <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9]</ref>. The O radical species present in the plasma allow for additional tailoring of material properties <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b10">11]</ref>. For example, in the case of TiO 2 coatings, PEALD films are denser and have a higher refractive index <ref type="bibr" target="#b11">[12]</ref>.</p><p>Atomistic simulations of PEALD processes are of particular interest for the fundamental understanding of the growth processes, mechanisms of material densification and crystallization, void formation, intermixing, and mechanical properties of the coatings at an atomic level <ref type="bibr" target="#b12">[13]</ref>. However, such simulations are very challenging due to the usually significant number of competing chemical reactions and the thickness-dependent structure relaxation of the growing surface <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>. For mechanistic questions, such as reaction paths, reaction energies and barriers electronic structure approaches are the methods of choice <ref type="bibr" target="#b12">[13]</ref>. In particular, the advent of modern density functional theory (DFT) based on accurate gradient-corrected and hybrid functionals allowed for the identification and understanding of elementary chemical reactions of a number of ALD processes <ref type="bibr" target="#b12">[13]</ref>. For example, the understanding of SiO 2 ALD mechanisms has proceeded through a number of computational studies employing DFT <ref type="bibr" target="#b15">[16]</ref>. The reactivities have been investigated for a number of aminosilane precursors <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref>, which display low activation energies for reactions with surface hydroxyl groups. Despite the progress in the applications and development of electronic structure methods, their computational cost is still too high to reliably simulate the overall ALD growth <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b14">15]</ref>. This task can only be achieved by employing more approximate methods capable of extending the spatiotemporal scale accessible for simulations. The two such approaches applied for studies of ALD growth dynamics are the atomistic kinetic Monte Carlo (KMC) model and molecular dynamics (MD) <ref type="bibr" target="#b23">[24]</ref>.</p><p>KMC is a stochastic method intended to simulate the time evolution of processes that occur with priori known transition rates among states. The main advantage of the KMC method is its ability to model a broad range of time scales <ref type="bibr" target="#b23">[24]</ref>. However, it relies on an accurate knowledge of rate constants for all elementary reaction steps. Such information is difficult to obtain by employing DFT due to the deficiencies of existing exchange-correlation functionals and requires more accurate and computationally much more demanding electronic structure methods. Another disadvantage of the KMC approach is its inability to simulate the morphology of the growing ALD film, i.e., crystalline vs. amorphous growth. Atomistic KMC simulations using DFT-derived reaction mechanisms and activation energies have been used, e.g., to investigate ALD growth of HfO 2 <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b24">25]</ref>.</p><p>In MD simulations, the time evolution of interacting atoms is described directly by solutions of the corresponding equations of motion <ref type="bibr" target="#b23">[24]</ref>. Therefore, the MD method, in combination with carefully parameterized potential functions or reactive force fields, is able to describe relaxation phenomena and defects in ALD-generated films. However, the temporal scale of MD simulations (ps to ns) is very small compared to the duration of ALD pulses. This problem has been addressed by Hu et al. in MD simulations of Al 2 O 3 ALD by separating the large time scale of surface reactions (ns to s) from the small time scale of structural relaxation (ps) <ref type="bibr" target="#b14">[15]</ref>. Their deposition algorithm assumes that ALD reactions occur only on the active -OH groups on the growing surface and that the products of the metal precursor pulses can be fully hydroxylated, i.e., -Al(CH 3 ) 2 is fully converted to -Al(OH) 2 . The direct (large time scale) simulations of surface reactions are replaced by a deposition algorithm. This starts with a hydroxylated surface and randomly picks one of the available surface -OH groups for the deposition of the ALD product (-Al(OH) 2 ). Approximate steric and overlap restrictions with neighboring atoms are checked and, if satisfied, an H atom in the selected -OH group is replaced by -Al(OH) 2 . After each deposition step, the structure is relaxed using MD simulation. Unlike KMC, this MD-based approach enables us to study the thickness-dependent evolution of the microscopic structures of ALD layers. In addition, the influences of operating parameters, such as precursor type, temperature, external fields, initial surface structure (crystalline vs. amorphous), number and distribution of -OH, etc. on the ALD process can be investigated at the atomic level.</p><p>Due to a high computational cost, MD simulations of large systems are rarely performed using electronic structure methods. Instead, more approximate approaches, such as interatomic potential functions or force fields, are used. However, the applicability of many interatomic potentials is restricted to one element oxidation state and a small number of polymorphs <ref type="bibr" target="#b25">[26]</ref>. A relatively new and promising trend in the development of simulation methods for nanomaterials is the use of so-called reactive force fields, such as the ReaxFF approach of van Duin and co-workers <ref type="bibr" target="#b26">[27]</ref>. This has been applied to a wide range of materials including amorphous and crystalline SiO 2 <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b28">29]</ref> and Al 2 O 3 <ref type="bibr" target="#b29">[30]</ref>, yielding very good agreement with experimental data. Although parameterization of ReaxFF is relatively complex, it is very powerful since it allows for an accurate description of the chemistry of nanostructures with a computational cost far below that of quantum mechanical methods. In our recent study, we demonstrated that the structure of amorphous SiO 2 could be accurately described at the ReaxFF level by employing relatively small semi-amorphous periodic models <ref type="bibr" target="#b30">[31]</ref>. A simulation cell containing only 64 SiO 2 units yielded a structure that properly reproduced experimental structural parameters, mechanical properties, and IR spectra of bulk silica, using subsequent refinement at the DFT level.</p><p>In this article, we present an atomistic simulation scheme for a PEALD process that combines the Monte Carlo (MC) deposition algorithm and structure relaxation using MD. Our scheme is based on the one proposed by Hu et al. <ref type="bibr" target="#b14">[15]</ref>. However, in contrast to their implementation that directly deposits hydroxylated products of the second ALD half-cycle, we use a real, atomistic model of the precursor deposited in the first half-cycle. In addition, for the MC deposition step, our approach introduces site occupation probabilities for precursor reaction products. The performance of our simulation scheme is demonstrated for PEALD synthesis of SiO 2 thin films, using a bis-diethylaminosilane (BDEAS) precursor with the structural formula H 2 Si(NEt 2 ) 2 , Et = C 2 H 5 . We show that the resulting structure of the SiO 2 coating strongly depends on the occupation probabilities for precursor products. Densification of the SiO 2 film and reduction of -OH impurities are observed for increasing occupation probability of doubly coordinated surface sites.</p><p>Materials 2019, 12, 2605 3 of 11</p><p>and promising trend in the development of simulation methods for nanomaterials is the use of so-called reactive force fields, such as the ReaxFF approach of van Duin and co-workers <ref type="bibr" target="#b26">[27]</ref>. This has been applied to a wide range of materials including amorphous and crystalline SiO2 <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b28">29]</ref> and Al2O3 <ref type="bibr" target="#b29">[30]</ref>, yielding very good agreement with experimental data. Although parameterization of ReaxFF is relatively complex, it is very powerful since it allows for an accurate description of the chemistry of nanostructures with a computational cost far below that of quantum mechanical methods. In our recent study, we demonstrated that the structure of amorphous SiO2 could be accurately described at the ReaxFF level by employing relatively small semi-amorphous periodic models <ref type="bibr" target="#b30">[31]</ref>. A simulation cell containing only 64 SiO2 units yielded a structure that properly reproduced experimental structural parameters, mechanical properties, and IR spectra of bulk silica, using subsequent refinement at the DFT level.</p><p>In this article, we present an atomistic simulation scheme for a PEALD process that combines the Monte Carlo (MC) deposition algorithm and structure relaxation using MD. Our scheme is based on the one proposed by Hu et al. <ref type="bibr" target="#b14">[15]</ref>. However, in contrast to their implementation that directly deposits hydroxylated products of the second ALD half-cycle, we use a real, atomistic model of the precursor deposited in the first half-cycle. In addition, for the MC deposition step, our approach introduces site occupation probabilities for precursor reaction products. The performance of our simulation scheme is demonstrated for PEALD synthesis of SiO2 thin films, using a bis-diethylaminosilane (BDEAS) precursor with the structural formula H2Si(NEt2)2, Et = C2H5. We show that the resulting structure of the SiO2 coating strongly depends on the occupation probabilities for precursor products. Densification of the SiO2 film and reduction of -OH impurities are observed for increasing occupation probability of doubly coordinated surface sites. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Method and Implementation</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">PEALD Simulation Procedure</head><p>Figure <ref type="figure" target="#fig_2">2</ref> shows the implemented protocol for simulation of the first PEALD deposition half-cycle. In contrast to the original scheme of Hu et al. <ref type="bibr" target="#b14">[15]</ref>, it used the MC method to simulate the full precursor deposition process. In the first step of each precursor deposition half-cycle, the surface -OH groups were enumerated. Then, during each MC step, a free surface -OH group was randomly selected. The surface was scanned for neighboring free -OH groups and, depending on their number and precursor type, a MC move was performed that creates one of possible precursor products. This </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Method and Implementation</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">PEALD Simulation Procedure</head><p>Figure <ref type="figure" target="#fig_2">2</ref> shows the implemented protocol for simulation of the first PEALD deposition half-cycle. In contrast to the original scheme of Hu et al. <ref type="bibr" target="#b14">[15]</ref>, it used the MC method to simulate the full precursor deposition process. In the first step of each precursor deposition half-cycle, the surface -OH groups were enumerated. Then, during each MC step, a free surface -OH group was randomly selected. The surface was scanned for neighboring free -OH groups and, depending on their number and precursor type, a MC move was performed that creates one of possible precursor products. This part is also different than in the original scheme of Hu et al. <ref type="bibr" target="#b14">[15]</ref>, where direct deposition of the product of the second half-cycle (i.e., -Al(OH) 2 ) was performed. Steric hindrance and overlap restrictions at the surface corresponding to the real precursor deposition step were accounted for only in an approximate way, by defining an exclusion zone around each successfully deposited -Al(OH) 2 group. In contrast, our approach employs a real, atomistic model of the precursor. After each attachment step, the structure was relaxed, either by local structure optimization or by short simulated annealing using molecular dynamics (MD). The energy of the chemisorption was calculated and used to calculate the acceptance criterion employing the usual Metropolis-Hastings rule <ref type="bibr" target="#b31">[32]</ref>. The procedure was repeated until all enumerated surface -OH groups were either reacted or excluded from MC moves due to steric hindrance and overlap with chemisorbed precursor molecules. Alternatively, a predefined concentration of surface -OH groups can be left unreacted. The final precursor monolayer structure was relaxed and equilibrated using MD. The second ALD half-cycle was modeled by simply replacing all organic surface groups with -OH groups, followed by relaxation and equilibration using MD. This corresponds to full conversion of the products of the precursor pulse to surface hydroxyl species. Such an approach is particularly well suited for simulating ALD growth of systems with primary reactions that have relatively low activation energies <ref type="bibr" target="#b13">[14]</ref>. It has been shown that, unlike thermal ALD, PEALD can be efficiently performed even at room temperature <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7]</ref>, justifying the assumption of low activation energies. It has also been shown by calculations that oxygen plasma can quantitatively oxidize organic surface precursor species <ref type="bibr" target="#b16">[17]</ref>.</p><p>The selection of created chemisorbed precursor products depends on predefined occupation probabilities which remain constant during the simulated thin film growth. For example, considering a precursor yielding two possible chemisorbed precursor products P1 or P2 requires the corresponding occupation probabilities p P1 , p P2 ∈ [0, 1] , with</p><formula xml:id="formula_0">p P1 + p P2 = 1<label>(1)</label></formula><p>This approach can be easily generalized to a set of N products {P1, P2, . . . , PN} with occupation probabilities p P1 , p P2 , . . . , p PN ∈ [0, 1] fulfilling the condition</p><formula xml:id="formula_1">p P1 + p P2 + . . . + p PN = 1 (2)</formula><p>Materials 2019, 12, 2605 4 of 11 part is also different than in the original scheme of Hu et al. <ref type="bibr" target="#b14">[15]</ref>, where direct deposition of the product of the second half-cycle (i.e., -Al(OH)2) was performed. Steric hindrance and overlap restrictions at the surface corresponding to the real precursor deposition step were accounted for only in an approximate way, by defining an exclusion zone around each successfully deposited -Al(OH)2 group. In contrast, our approach employs a real, atomistic model of the precursor. After each attachment step, the structure was relaxed, either by local structure optimization or by short simulated annealing using molecular dynamics (MD). The energy of the chemisorption was calculated and used to calculate the acceptance criterion employing the usual Metropolis-Hastings rule <ref type="bibr" target="#b31">[32]</ref>. The procedure was repeated until all enumerated surface -OH groups were either reacted or excluded from MC moves due to steric hindrance and overlap with chemisorbed precursor molecules. Alternatively, a predefined concentration of surface -OH groups can be left unreacted.</p><p>The final precursor monolayer structure was relaxed and equilibrated using MD. The second ALD half-cycle was modeled by simply replacing all organic surface groups with -OH groups, followed by relaxation and equilibration using MD. This corresponds to full conversion of the products of the precursor pulse to surface hydroxyl species. Such an approach is particularly well suited for simulating ALD growth of systems with primary reactions that have relatively low activation energies <ref type="bibr" target="#b13">[14]</ref>. It has been shown that, unlike thermal ALD, PEALD can be efficiently performed even at room temperature <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b6">7]</ref>, justifying the assumption of low activation energies. It has also been shown by calculations that oxygen plasma can quantitatively oxidize organic surface precursor species <ref type="bibr" target="#b16">[17]</ref>.</p><p>The selection of created chemisorbed precursor products depends on predefined occupation probabilities which remain constant during the simulated thin film growth. For example, considering a precursor yielding two possible chemisorbed precursor products P1 or P2 requires the corresponding occupation probabilities {𝑝 𝐏𝟏 , 𝑝 𝐏𝟐 ∈ [0,1]}, with 𝑝 𝐏𝟏 + 𝑝 𝐏𝟐 = 1</p><p>This approach can be easily generalized to a set of 𝑁 products {P1, P2, …, PN} with occupation probabilities {𝑝 𝐏𝟏 , 𝑝 𝐏𝟐 , … , 𝑝 𝐏𝑵 ∈ [0,1]} fulfilling the condition  </p><formula xml:id="formula_3">𝑝 𝐏𝟏 + 𝑝 𝐏𝟐 + ⋯ + 𝑝 𝐏𝑵 = 1<label>(2)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Implementation</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Implementation</head><p>The implementation of our PEALD simulation protocol used the Python programming language. It was designed in a modular way employing the Atomic Simulation Environment (ASE) <ref type="bibr" target="#b32">[33]</ref>, which was used for storing and manipulating structure models as well as for the reading and writing of all necessary input and output files. Structure relaxation and simulated annealing steps were accomplished employing the General Utility Lattice Program (GULP) <ref type="bibr" target="#b33">[34]</ref>. The Python library ASE provided a built-in GULP interface which enabled single-energy calculations, structure optimizations, and MD simulations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Test Application-PEALD of SiO 2</head><p>As a test, the PEALD simulation protocol was applied to investigate the synthesis of SiO 2 thin films using a bis-diethylaminosilane (BDEAS) precursor with the structural formula H 2 Si(NEt 2 ) 2 , Et = C 2 H 5 . BDEAS belongs to the class of aminosilanes widely used in ALD, and it has been successfully applied for improving surface characteristics in PEALD of SiO 2 <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b34">35]</ref>. It has been shown in <ref type="bibr" target="#b16">[17]</ref> that Si precursors with amino ligands can dramatically lower the activation energies for reactions of aminosilane with surface hydroxyl groups, making BDEAS-based PEALD a very good case for testing our simulation protocol.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Computational Details</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.1.">Model Systems</head><p>Hydroxylated SiO 2 substrate and deposited precursor products are modeled using two types of cluster models of two neighboring -OH groups and a two-dimensional (2D) periodic surface. Figure <ref type="figure" target="#fig_7">3a</ref> The implementation of our PEALD simulation protocol used the Python programming language. It was designed in a modular way employing the Atomic Simulation Environment (ASE) <ref type="bibr" target="#b32">[33]</ref>, which was used for storing and manipulating structure models as well as for the reading and writing of all necessary input and output files. Structure relaxation and simulated annealing steps were accomplished employing the General Utility Lattice Program (GULP) <ref type="bibr" target="#b33">[34]</ref>. The Python library ASE provided a built-in GULP interface which enabled single-energy calculations, structure optimizations, and MD simulations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Test Application-PEALD of SiO2</head><p>As a test, the PEALD simulation protocol was applied to investigate the synthesis of SiO2 thin films using a bis-diethylaminosilane (BDEAS) precursor with the structural formula H2Si(NEt2)2, Et = C2H5. BDEAS belongs to the class of aminosilanes widely used in ALD, and it has been successfully applied for improving surface characteristics in PEALD of SiO2 <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b34">35]</ref>. It has been shown in <ref type="bibr" target="#b16">[17]</ref> that Si precursors with amino ligands can dramatically lower the activation energies for reactions of aminosilane with surface hydroxyl groups, making BDEAS-based PEALD a very good case for testing our simulation protocol.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Computational Details</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.2.">Methods</head><p>All DFT calculations employed our implementation of Kohn-Sham DFT for molecular and periodic systems <ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref> within the TURBOMOLE program package <ref type="bibr" target="#b40">[41,</ref><ref type="bibr" target="#b41">42]</ref>. The Perdew-Burke-Ernzerhof (PBE) exchange-correlation functional <ref type="bibr" target="#b42">[43]</ref>, triple zeta valence plus polarization (def2-TZVP) <ref type="bibr" target="#b43">[44]</ref> basis sets, and Grimme dispersion correction (DFT-D3) <ref type="bibr" target="#b44">[45,</ref><ref type="bibr" target="#b45">46]</ref> were used. MD and MC simulations employed the ReaxFF reactive force field <ref type="bibr" target="#b26">[27]</ref> using GULP-provided combined force field parameters <ref type="bibr" target="#b26">[27,</ref><ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b47">48]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Surface Reactions and Plasma Pulse Model</head><p>Figure <ref type="figure" target="#fig_9">4</ref> shows the possible elementary surface reactions for PEALD synthesis of SiO2 thin films using a BDEAS precursor. The first half-cycle starts with the deposition of BDEAS on the hydroxylated SiO2 surface and its reaction with -OH groups. There are two possible reactions (1 and 2a in Figure <ref type="figure" target="#fig_9">4</ref>) that yield the organic precursor bonded to one or two surface oxygen atoms, denoted </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.2.">Methods</head><p>All DFT calculations employed our implementation of Kohn-Sham DFT for molecular and periodic systems <ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref> within the TURBOMOLE program package <ref type="bibr" target="#b40">[41,</ref><ref type="bibr" target="#b41">42]</ref>. The Perdew-Burke-Ernzerhof (PBE) exchange-correlation functional <ref type="bibr" target="#b42">[43]</ref>, triple zeta valence plus polarization (def2-TZVP) <ref type="bibr" target="#b43">[44]</ref> basis sets, and Grimme dispersion correction (DFT-D3) <ref type="bibr" target="#b44">[45,</ref><ref type="bibr" target="#b45">46]</ref> were used. MD and MC simulations employed the ReaxFF reactive force field <ref type="bibr" target="#b26">[27]</ref> using GULP-provided combined force field parameters <ref type="bibr" target="#b26">[27,</ref><ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b47">48]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Surface Reactions and Plasma Pulse Model</head><p>Figure <ref type="figure" target="#fig_9">4</ref> shows the possible elementary surface reactions for PEALD synthesis of SiO 2 thin films using a BDEAS precursor. The first half-cycle starts with the deposition of BDEAS on the hydroxylated SiO 2 surface and its reaction with -OH groups. There are two possible reactions (1 and 2a in Figure <ref type="figure" target="#fig_9">4</ref>) that yield the organic precursor bonded to one or two surface oxygen atoms, denoted as P1 and P2, respectively. Reaction 2b converts P1 to P2. After the plasma pulse, P1 and P2 lead to a surface Si atom with three or two -OH groups, denoted as S1 and S2, respectively. Alternatively, S1 can be converted to site S2 by reaction 3, which releases H 2 O. We have concentrated on reactions 1, 2a, 2b, and 3, since calculations indicate that oxidation of the organic precursor by oxygen radical species does not alter bonds between the precursor Si atom and the surface <ref type="bibr" target="#b16">[17]</ref>.</p><p>Materials 2019, 12, 2605 6 of 11</p><p>as P1 and P2, respectively. Reaction 2b converts P1 to P2. After the plasma pulse, P1 and P2 lead to a surface Si atom with three or two -OH groups, denoted as S1 and S2, respectively. Alternatively, S1 can be converted to site S2 by reaction 3, which releases H2O. We have concentrated on reactions 1, 2a, 2b, and 3, since calculations indicate that oxidation of the organic precursor by oxygen radical species does not alter bonds between the precursor Si atom and the surface <ref type="bibr" target="#b16">[17]</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Reaction Energies</head><p>As the first step, we investigated the energetics of the elementary reactions using DFT and the cluster models of two neighboring OH groups on a hydroxylated SiO2 surface, shown in Figure <ref type="figure" target="#fig_7">3a</ref>,<ref type="figure">b</ref>. The aim of the cluster studies was to obtain insights into the intrinsic energetics of the reactions without the spatial and steric constraints present at silica surfaces. All three reactions (1, 2a, and 2b) of the precursor with the cluster model in Figure <ref type="figure" target="#fig_7">3a</ref> are exothermic, with reaction energies ∆𝐸 r of -58.3, -64.3, -6.0 kJ/mol, respectively. Reaction 3, converting S1 to S2, is slightly endothermic, with an ∆𝐸 r of 37.5 kJ/mol. For the bigger cluster model in Figure <ref type="figure" target="#fig_7">3b</ref>, the calculated reaction energies ∆𝐸 r of reactions 1, 2a, 2b, and 3 are -67.0, -30.5, +36.5, and +63.0 kJ/mol, respectively. In the next step, we investigated the energetics of the same reactions on a hydroxylated -quartz (0001) surface (Figure <ref type="figure" target="#fig_7">3c</ref>). The calculated reaction energies ∆𝐸 r were -63.0, -18.4, +44.6, and +60.9 kJ/mol for reactions 1, 2a, 2b, and 3, respectively. The value for exothermic reaction 1, involving only one surface OH group and yielding site P1, is very similar for all three models shown in Figure <ref type="figure" target="#fig_6">3</ref>. Reaction energies for reaction 2a increase with increasing rigidity of the structure, while remaining exothermic. In contrast, reaction 2b is slightly exothermic for the small, flexible cluster model, but becomes endothermic for the structurally rigid models of the bigger cluster and surface. Reaction 3 is endothermic for all models, but reaction energies increase with increasing rigidity of the structure. Thus, reactions 1 and 2a are always energetically favorable. In contrast, reactions 2b and 3, transforming P1 to P2 and S1 to S2, respectively, are energetically unfavorable in a rigid atomic environment. This can be attributed to constraints of the surface on the one hand, since bringing two surface oxygen atoms close enough to create sites P2 and S2 is connected with energy penalty. On the other hand, this demonstrates the high stability of the Si-O bonds, especially in the case of S1.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">PEALD Simulations</head><p>The cluster and periodic calculations demonstrate that the actual amount of precursor deposition products P1 and P2 as well as the plasma products S1 and S2 formed at each PEALD cycle will be influenced by the actual surface structure and the availability of neighboring -OH Elementary surface reactions during PEALD deposition of SiO 2 film using a bis-diethylaminosilane (BDEAS) precursor. P1 and P2 are products of the precursor deposition. S1 and S2 are products of the plasma pulse.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Reaction Energies</head><p>As the first step, we investigated the energetics of the elementary reactions using DFT and the cluster models of two neighboring OH groups on a hydroxylated SiO 2 surface, shown in Figure <ref type="figure" target="#fig_7">3a</ref>,<ref type="figure">b</ref>. The aim of the cluster studies was to obtain insights into the intrinsic energetics of the reactions without the spatial and steric constraints present at silica surfaces. All three reactions (1, 2a, and 2b) of the precursor with the cluster model in Figure <ref type="figure" target="#fig_7">3a</ref> are exothermic, with reaction energies ∆E r of -58.3, -64.3, -6.0 kJ/mol, respectively. Reaction 3, converting S1 to S2, is slightly endothermic, with an ∆E r of 37.5 kJ/mol. For the bigger cluster model in Figure <ref type="figure" target="#fig_7">3b</ref>, the calculated reaction energies ∆E r of reactions 1, 2a, 2b, and 3 are -67.0, -30.5, +36.5, and +63.0 kJ/mol, respectively. In the next step, we investigated the energetics of the same reactions on a hydroxylated α-quartz (0001) surface (Figure <ref type="figure" target="#fig_7">3c</ref>). The calculated reaction energies ∆E r were -63.0, -18.4, +44.6, and +60.9 kJ/mol for reactions 1, 2a, 2b, and 3, respectively. The value for exothermic reaction 1, involving only one surface OH group and yielding site P1, is very similar for all three models shown in Figure <ref type="figure" target="#fig_6">3</ref>. Reaction energies for reaction 2a increase with increasing rigidity of the structure, while remaining exothermic. In contrast, reaction 2b is slightly exothermic for the small, flexible cluster model, but becomes endothermic for the structurally rigid models of the bigger cluster and surface. Reaction 3 is endothermic for all models, but reaction energies increase with increasing rigidity of the structure. Thus, reactions 1 and 2a are always energetically favorable. In contrast, reactions 2b and 3, transforming P1 to P2 and S1 to S2, respectively, are energetically unfavorable in a rigid atomic environment. This can be attributed to constraints of the surface on the one hand, since bringing two surface oxygen atoms close enough to create sites P2 and S2 is connected with energy penalty. On the other hand, this demonstrates the high stability of the Si-O bonds, especially in the case of S1.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">PEALD Simulations</head><p>The cluster and periodic calculations demonstrate that the actual amount of precursor deposition products P1 and P2 as well as the plasma products S1 and S2 formed at each PEALD cycle will be influenced by the actual surface structure and the availability of neighboring -OH groups. In addition, temperature, pressure, and concentration of precursor species, and plasma energy are expected to play an important role. Accurate simulations including all these parameters would be a very complex task. As described earlier, our scheme takes the process parameters into account in a simplified way, employing predefined occupation probabilities at each deposition MC step. The probabilities for the creation of P1 (precursor bonded to one surface O atom) and P2 (precursor bonded to two surface O atoms) are p P1 and p P2 = 1p P1 , respectively. The value p P2 = 1 means that each Monte Carlo step attempts to create P2, and P1 is created only if P2 cannot be formed due to missing neighboring surface -OH groups or steric constraints. In contrast, p P2 = 0 means that no P2 is directly created during MC moves. As shown in Figure <ref type="figure" target="#fig_11">5</ref>, these probabilities have significant impacts on the structures of PEALD layers. The simulated structures of SiO 2 deposited for probabilities p P2 = 0 (p P1 = 1), p P2 = 0.5 (p P1 = 0.5), and p P2 = 1 (p P1 = 0) clearly demonstrate the densification of the growing SiO 2 layer with increasing p P2 . For p P2 = 0, each precursor molecule is allowed to react with only one surface -OH group, yielding P1. The plasma pulse converts P1 to S1, with three hydroxyl groups connected to the deposited silicon atom. This increases the number of hydroxyl groups compared to the initial state, thus favoring the creation of voids, -OH impurities, and amorphous growth of deposited films. In contrast, for p P2 = 1, after the first ALD half-cycle, the maximum possible number of P2 precursor sites is created. The plasma pulse converts P2 to S2, with two hydroxyl groups connected to the deposited silicon atom. In this case, the number of hydroxyl groups remains unchanged after the deposition step compared to the initial surface state, and, in combination with compact Si-O-Si bridges, it results in a dense film growth. Figure <ref type="figure" target="#fig_13">6</ref> shows the average growth per cycle (GPC) and mass densities of deposited SiO 2 thin films obtained by 30 simulations of seven PEALD cycles for each of p P2 = 0.0, 0.25, 0.5, 1.0. Virtually identical results were obtained for MD simulations at temperatures ranging from 300 to 1000 K at a time scale of up to 10 ps. GPC and mass densities were basically converged after seven simulated PEALD cycles. Decreasing GPC and increasing density were observed for increasing p P2 , confirming the observed densification of thin films shown in Figure <ref type="figure" target="#fig_11">5</ref>. The very low values for GPC and density in the case of p P2 = 0 are mainly due to the strong steric effects when only creation of singly coordinated P1 and S1 is allowed and creation of P2 and S2 is completely excluded. This confirms again the key role of doubly coordinated surface sites for the densification of SiO 2 PEALD thin films.</p><p>Materials 2019, 12, 2605 7 of 11</p><p>groups. In addition, temperature, pressure, and concentration of precursor species, and plasma energy are expected to play an important role. Accurate simulations including all these parameters would be a very complex task. As described earlier, our scheme takes the process parameters into account in a simplified way, employing predefined occupation probabilities at each deposition MC step. The probabilities for the creation of P1 (precursor bonded to one surface O atom) and P2 (precursor bonded to two surface O atoms) are 𝑝 𝐏𝟏 and 𝑝 𝐏𝟐 = 1 -𝑝 𝐏𝟏 , respectively. The value 𝑝 𝐏𝟐 = 1 means that each Monte Carlo step attempts to create P2, and P1 is created only if P2 cannot be formed due to missing neighboring surface -OH groups or steric constraints. In contrast, 𝑝 𝐏𝟐 = 0 means that no P2 is directly created during MC moves. As shown in Figure <ref type="figure" target="#fig_11">5</ref>, these probabilities have significant impacts on the structures of PEALD layers. The simulated structures of SiO2 deposited for probabilities 𝑝 𝐏𝟐 = 0 (𝑝 𝐏𝟏 = 1), 𝑝 𝐏𝟐 = 0.5 (𝑝 𝐏𝟏 = 0.5), and 𝑝 𝐏𝟐 = 1 (𝑝 𝐏𝟏 = 0) clearly demonstrate the densification of the growing SiO2 layer with increasing 𝑝 𝐏𝟐 . For 𝑝 𝐏𝟐 = 0, each precursor molecule is allowed to react with only one surface -OH group, yielding P1. The plasma pulse converts P1 to S1, with three hydroxyl groups connected to the deposited silicon atom. This increases the number of hydroxyl groups compared to the initial state, thus favoring the creation of voids, -OH impurities, and amorphous growth of deposited films. In contrast, for 𝑝 𝐏𝟐 = 1, after the first ALD half-cycle, the maximum possible number of P2 precursor sites is created. The plasma pulse converts P2 to S2, with two hydroxyl groups connected to the deposited silicon atom. In this case, the number of hydroxyl groups remains unchanged after the deposition step compared to the initial surface state, and, in combination with compact Si-O-Si bridges, it results in a dense film growth. Figure <ref type="figure" target="#fig_13">6</ref> shows the average growth per cycle (GPC) and mass densities of deposited SiO2 thin films obtained by 30 simulations of seven PEALD cycles for each of 𝑝 𝐏𝟐 = 0.0, 0.25, 0.5, 1.0. Virtually identical results were obtained for MD simulations at temperatures ranging from 300 to 1000 K at a time scale of up to 10 ps. GPC and mass densities were basically converged after seven simulated PEALD cycles. Decreasing GPC and increasing density were observed for increasing 𝑝 𝐏𝟐 , confirming the observed densification of thin films shown in Figure <ref type="figure" target="#fig_11">5</ref>. The very low values for GPC and density in the case of 𝑝 𝐏𝟐 = 0 are mainly due to the strong steric effects when only creation of singly coordinated P1 and S1 is allowed and creation of P2 and S2 is completely excluded. This confirms again the key role of doubly coordinated surface sites for the densification of SiO2 PEALD thin films.   The actual reaction conditions were accounted for only in an approximate way in our occupation probability model. For instance, possible precursor desorption due to the substrate heating was not directly simulated. Possible influences from precursor temperature and concentration were not directly simulated, since our MC scheme deposits one precursor molecule after the other, disregarding the actual reaction path. However, we expect that our model can describe plasma energy effects, since the presence of plasma ions in the second half-cycle may affect reactions 2b and 3 (Figure <ref type="figure" target="#fig_9">4</ref>), and therefore the occupation probabilities of doubly coordinated products P2 and S2.</p><p>Our simulation scheme has been tested for BDEAS as a bis-aminosilane precursor containing two amino ligands. For mono-aminosilane precursors, we expect simulated structures resembling the case of 𝑝 𝐏𝟏 = 1 in Figure <ref type="figure" target="#fig_11">5</ref>, but with denser films and less steric hindrance effects, since in this case there are no remaining precursor amino ligands after the first deposition half-cycle. Aminosilane precursors with three or four amino ligands can lead, in principle, to even higher surface densification, since they can increase the number of compact Si-O-Si bridges. However, the higher number of amino ligands favors steric hindrance effects, and triply and quadruply occupied surface sites strongly reduce the availability of surface -OH groups, thus inhibiting the overall film growth. In summary, the size and number of precursor amino ligands are expected to be determining factors for the steric effects and availability of -OH groups in our MC simulation scheme.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Conclusions</head><p>In this study, we presented an atomistic simulation scheme for PEALD that combines the Monte Carlo deposition algorithm and structure relaxation using molecular dynamics. In contrast to previous implementations, our approach employed a real, atomistic model of the precursor. This allowed us to account for steric hindrance and overlap restrictions at the surface corresponding to the real precursor deposition step. In addition, our scheme took various process parameters into account in a simplified way, employing predefined occupation probabilities for precursor products at each Monte Carlo deposition step. The new simulation protocol was applied to investigate the PEALD synthesis of SiO2 thin films using a bis-diethylaminosilane precursor. Initial analysis of the precursor products with hydroxylated SiO2 surfaces employing DFT calculations demonstrated a strong dependence of reaction energies on the surface structure, in particular for the precursor bonded to two surface oxygen atoms. PEALD simulations employing our new method revealed that precursor binding to one surface oxygen atom favors amorphous layer growth, a large number of -OH impurities, and the formation of voids. In contrast, precursor binding to two surface oxygen atoms leads to dense SiO2 film growth and reduction of -OH impurities. Increasing the probability for the formation of doubly bonded precursor sites is therefore the key factor for the formation of dense SiO2 PEALD thin films with reduced amounts of voids and -OH impurities. The actual reaction conditions were accounted for only in an approximate way in our occupation probability model. For instance, possible precursor desorption due to the substrate heating was not directly simulated. Possible influences from precursor temperature and concentration were not directly simulated, since our MC scheme deposits one precursor molecule after the other, disregarding the actual reaction path. However, we expect that our model can describe plasma energy effects, since the presence of plasma ions in the second half-cycle may affect reactions 2b and 3 (Figure <ref type="figure" target="#fig_9">4</ref>), and therefore the occupation probabilities of doubly coordinated products P2 and S2.</p><p>Our simulation scheme has been tested for BDEAS as a bis-aminosilane precursor containing two amino ligands. For mono-aminosilane precursors, we expect simulated structures resembling the case of p P1 = 1 in Figure <ref type="figure" target="#fig_11">5</ref>, but with denser films and less steric hindrance effects, since in this case there are no remaining precursor amino ligands after the first deposition half-cycle. Aminosilane precursors with three or four amino ligands can lead, in principle, to even higher surface densification, since they can increase the number of compact Si-O-Si bridges. However, the higher number of amino ligands favors steric hindrance effects, and triply and quadruply occupied surface sites strongly reduce the availability of surface -OH groups, thus inhibiting the overall film growth. In summary, the size and number of precursor amino ligands are expected to be determining factors for the steric effects and availability of -OH groups in our MC simulation scheme.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Conclusions</head><p>In this study, we presented an atomistic simulation scheme for PEALD that combines the Monte Carlo deposition algorithm and structure relaxation using molecular dynamics. In contrast to previous implementations, our approach employed a real, atomistic model of the precursor. This allowed us to account for steric hindrance and overlap restrictions at the surface corresponding to the real precursor deposition step. In addition, our scheme took various process parameters into account in a simplified way, employing predefined occupation probabilities for precursor products at each Monte Carlo deposition step. The new simulation protocol was applied to investigate the PEALD synthesis of SiO 2 thin films using a bis-diethylaminosilane precursor. Initial analysis of the precursor products with hydroxylated SiO 2 surfaces employing DFT calculations demonstrated a strong dependence of reaction energies on the surface structure, in particular for the precursor bonded to two surface oxygen atoms. PEALD simulations employing our new method revealed that precursor binding to one surface oxygen atom favors amorphous layer growth, a large number of -OH impurities, and the formation of voids. In contrast, precursor binding to two surface oxygen atoms leads to dense SiO 2 film growth and reduction of -OH impurities. Increasing the probability for the formation of doubly bonded precursor sites is therefore the key factor for the formation of dense SiO 2 PEALD thin films with reduced amounts of voids and -OH impurities.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Schematic representation of a surface using plasma-enhanced atomic layer deposition (PEALD).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Schematic representation of a surface using plasma-enhanced atomic layer deposition (PEALD).</figDesc><graphic coords="3,175.51,396.62,248.29,212.65" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Monte Carlo (MC) simulation protocol for growth of PEALD thin films.</figDesc><graphic coords="4,213.56,506.82,175.55,233.23" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Monte Carlo (MC) simulation protocol for growth of PEALD thin films.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><figDesc>,b shows both cluster models. The smaller, flexible cluster model has the composition Si 2 O 7 H 6 , while the bigger and more rigid cage cluster model has the composition Si 8 O 14 H 8 . The 2D periodic substrate model shown in Figure 3c is a hydroxylated α-quartz (0001) surface containing 216 atoms, with the unit cell composition Si 48 O 120 H 48 and lattice parameters a = 14.778 Å, b = 17.077 Å, γ = 90.081 • . Materials 2019, 12, 2605 5 of 11</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>3. 1</head><label>1</label><figDesc>.1. Model Systems Hydroxylated SiO2 substrate and deposited precursor products are modeled using two types of cluster models of two neighboring -OH groups and a two-dimensional (2D) periodic surface. Figure 3a,b shows both cluster models. The smaller, flexible cluster model has the composition Si2O7H6, while the bigger and more rigid cage cluster model has the composition Si8O14H8. The 2D periodic substrate model shown in Figure 3c is a hydroxylated -quartz (0001) surface containing 216 atoms, with the unit cell composition Si48O120H48 and lattice parameters 𝑎 = 14.778 Å , 𝑏 = 17.077 Å , 𝛾 = 90.081°.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a,b) Two cluster models of two neighboring -OH groups on a hydroxylated SiO2 surface. The shaded lower part indicates the "surface" part of the clusters. (c) 2D periodic model of a hydroxylated -quartz (0001) surface.</figDesc><graphic coords="5,98.88,473.31,397.82,83.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a,b) Two cluster models of two neighboring -OH groups on a hydroxylated SiO 2 surface. The shaded lower part indicates the "surface" part of the clusters. (c) 2D periodic model of a hydroxylated α-quartz (0001) surface.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Elementary surface reactions during PEALD deposition of SiO2 film using a bis-diethylaminosilane (BDEAS) precursor. P1 and P2 are products of the precursor deposition. S1 and S2 are products of the plasma pulse.</figDesc><graphic coords="6,123.05,183.47,349.20,197.04" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4.Elementary surface reactions during PEALD deposition of SiO 2 film using a bis-diethylaminosilane (BDEAS) precursor. P1 and P2 are products of the precursor deposition. S1 and S2 are products of the plasma pulse.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Simulated structures of PEALD-deposited SiO2 with different occupation probabilities 𝑝 𝐏𝟏 and 𝑝 𝐏𝟐 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Simulated structures of PEALD-deposited SiO 2 with different occupation probabilities p P1 and p P2 .</figDesc><graphic coords="7,109.04,536.70,378.96,150.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Simulated (a) growth per cycle and (b) mass density of deposited SiO2 films as a function of the probability 𝑝 𝐏𝟐 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Simulated (a) growth per cycle and (b) mass density of deposited SiO 2 films as a function of the probability p P2 .</figDesc><graphic coords="8,80.94,91.63,442.14,136.80" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>Funding: This research was funded by the <rs type="funder">Deutsche Forschungsgemeinschaft (DFG, German Research Foundation</rs>) in the framework of the <rs type="programName">Priority Programme 1959</rs> "<rs type="projectName">Manipulation of matter controlled by electric and magnetic field: Towards novel synthesis and processing routes of inorganic materials</rs>" within the project <rs type="grantNumber">SI 938/8-1</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_TNGj3Mm">
+					<idno type="grant-number">SI 938/8-1</idno>
+					<orgName type="project" subtype="full">Manipulation of matter controlled by electric and magnetic field: Towards novel synthesis and processing routes of inorganic materials</orgName>
+					<orgName type="program" subtype="full">Priority Programme 1959</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of Interest:</head><p>The authors declare no conflict of interest.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Nanoporous SiO 2 thin films made by atomic layer deposition and atomic etching</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ghazaryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">B</forename><surname>Kley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tünnermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szeghalmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0957-4484/27/25/255603</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nanotechnology</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<date type="published" when="2016">2016. 255603</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Antireflection Coatings for Strongly Curved Glass Lenses by Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pfeiffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tünnermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szeghalmi</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/coatings7080118</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Coatings</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>118. [CrossRef</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Antireflection coating with consistent near-neutral color on complex-shaped substrates prepared by ALD</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pfeiffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Dewald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szeghalmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/OL.44.003270</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Lett</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="3270" to="3273" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Wide-Angle Broadband Antireflection Coatings Prepared by Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pfeiffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ghazaryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szeghalmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.9b03125</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="21887" to="21894" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">On the Properties of Nanoporous SiO 2 Films for Single Layer Antireflection Coating</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ghazaryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sekman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Schröder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mühlig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Stevanovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Botha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Aghaee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Creatore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tünnermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szeghalmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adem.201801229</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Eng. Mater</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<date type="published" when="2019">2019. 1801229</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Plasma-Assisted Atomic Layer Deposition: Basics, Opportunities, and Challenges</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Profijt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3609974</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Room-Temperature ALD of Metal Oxide Thin Films by Energy-Enhanced ALD</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Profijt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Roelofs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.201207033</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Depos</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="125" to="133" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Thermal atomic layer deposition of device-quality SiO 2 thin films under 100 • C using an aminodisilane precursor</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Shong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b01107</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Low temperature atomic layer deposition of SiO 2 thin films using di-isopropylaminosilane and ozone</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Shong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Oh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ceramint.2016.10.186</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ceram. Int</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="2095" to="2099" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Tuning Material Properties of Oxides and Nitrides by Substrate Biasing during Plasma-Enhanced Atomic Layer Deposition on Planar and 3D Substrate Topographies</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Faraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A A</forename><surname>Van Helvoirt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Beladiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szeghalmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Henri</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b00183</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="13158" to="13180" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Energetic ions during plasma-enhanced atomic layer deposition and their role in tailoring material properties</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Faraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Karwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-6595/aaf2c7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plasma Sources Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">24002</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Influence of the oxygen plasma parameters on the atomic layer deposition of titanium dioxide</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ratzsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">B</forename><surname>Kley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tünnermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szeghalmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0957-4484/26/2/024003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nanotechnology</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<date type="published" when="2015">2015. 024003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Atomic-scale simulation of ALD chemistry</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0268-1242/27/7/074008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<date type="published" when="2012">2012, 27, 074008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Atomistic Kinetic Monte Carlo Study of Atomic Layer Deposition Derived from Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.23491</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="244" to="259" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Molecular dynamics simulation of the Al 2 O 3 film structure during atomic layer deposition</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">X</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Heath Turner</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08927020802468372</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Simulat</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="270" to="279" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Theoretical Understanding of the Reaction Mechanism of SiO 2 Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b04422</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1247" to="1255" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Self-catalysis by aminosilanes and strong surface oxidation by O-2 plasma in plasma-enhanced atomic layer deposition of high-quality SiO 2</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Q</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">G</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C4CC08004A</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Commun</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="1341" to="1344" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">On the Mechanisms of SiO 2 Thin-Film Growth by the Full Atomic Layer Deposition Process Using Bis(t-butylamino)silane on the Hydroxylated SiO 2 (001) Surface</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Karwacki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Derecskei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>O'neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp2094802</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="947" to="952" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">First-Principles Study of a Full Cycle of Atomic Layer Deposition of SiO 2 Thin Films with Di(sec-butylamino)silane and Ozone</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Derecskei-Kovacs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>O'neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Pearlstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Chandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="19454" to="19463" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Adsorption and surface reaction of bis-diethylaminosilane as a Si precursor on an OH-terminated Si (0 0 1) surface</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Baek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apsusc.2012.03.033</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">258</biblScope>
+			<biblScope unit="page" from="6341" to="6344" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Initial reaction of silicon precursors with a varying number of dimethylamino ligands on a hydroxyl-terminated silicon (0 0 1) surface</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Baek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apsusc.2013.04.129</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">280</biblScope>
+			<biblScope unit="page" from="207" to="211" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">On the Dissociative Chemisorption of Tris(dimethylamino)silane on Hydroxylated SiO 2 (001) Surface</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Karwacki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp900119b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9731" to="9736" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Effect of Reaction Mechanism on Precursor Exposure Time in Atomic Layer Deposition of Silicon Oxide and Silicon Nitride</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Henri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lavoie</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/am5021167</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="10534" to="10541" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Multiscale modeling in nanomaterials science</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Karakasidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Charitidis</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.msec.2006.06.029</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Sci. Eng. C</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1082" to="1089" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Multiscale Modeling of the Atomic Layer Deposition of HfO 2 Thin Film Grown on Silicon: How to Deal with a Kinetic Monte Carlo Procedure</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dkhissi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Estève</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mastail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Olivier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mazaleyrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jeloaica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Rouhani</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ct8001249</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1915" to="1927" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Atomistic theory and simulation of the morphology and structure of ionic nanoparticles</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Spagnoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Gale</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C1NR11106J</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nanoscale</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1051" to="1067" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A reactive force field for hydrocarbons</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C T</forename><surname>Van Duin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dasgupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lorant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Reaxff</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp004368u</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="9396" to="9409" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Parallel Optimization of a Reactive Force Field for Polycondensation of Alkoxysilanes</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Deetz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Faller</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp504138r</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="10966" to="10978" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The Structure of Silica Surfaces Exposed to Atomic Oxygen</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Schwartzentruber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Leverentz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Meana-Paneda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Paukku</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp4019525</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="9311" to="9321" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Ionic motion during field-assisted oxidation of aluminium studied by molecular dynamics simulations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gubbels-Elzas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Thijsse</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.commatsci.2014.03.062</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="196" to="202" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Dynamics of ultrathin gold layers on vitreous silica probed by density functional theory</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hühn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wondraczek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C5CP04803F</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PCCP</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="27488" to="27495" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The Monte Carlo method in science and engineering</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Amar</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/MCSE.2006.34</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Sci. Eng</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="9" to="19" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The atomic simulation environment-a Python library for working with atoms</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Larsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Mortensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Blomqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">E</forename><surname>Castelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Christensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dulak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Groves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hammer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hargus</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-648X/aa680e</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<date type="published" when="2017">2017. 273002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">The General Utility Lattice Program (GULP)</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Gale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Rohl</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0892702031000104887</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Simulat</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="291" to="341" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Improved film quality of plasma enhanced atomic layer deposition SiO 2 using plasma treatment cycle</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hwang</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4904147</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="01A" to="146" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Resolution of identity approximation for the Coulomb term in molecular and periodic systems</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Burow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mohamed</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3267858</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<date type="published" when="2009">2009. 214101</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Linear Scaling Hierarchical Integration Scheme for the Exchange-Correlation Term in Molecular and Periodic Systems</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Burow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ct200412r</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="3097" to="3104" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Density Functional Theory for Molecular and Periodic Systems Using Density Fitting and Continuous Fast Multipole Methods</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lazarski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Burow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jctc.5b00252</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="3029" to="3041" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Density Functional Theory for Molecular and Periodic Systems Using Density Fitting and Continuous Fast Multipole Method: Analytical Gradients</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lazarski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Burow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Grajciar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.24477</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="2518" to="2526" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Density Functional Theory for Molecular and Periodic Systems Using Density Fitting and Continuous Fast Multipole Method: Stress Tensor</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.26033</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Electronic-Structure Calculations on Workstation Computers-The Program System Turbomole</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bär</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Häser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Horn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kölmel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0009-2614(89)85118-8</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page" from="165" to="169" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Furche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hättig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sierka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Weigend</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Turbomole</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/wcms.1162</idno>
+	</analytic>
+	<monogr>
+		<title level="j">WIREs Comput. Mol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="91" to="100" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Generalized gradient approximation made simple</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.77.3865</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="3865" to="3868" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Balanced basis sets of split valence, triple zeta valence and quadruple zeta valence quality for H to Rn: Design and assessment of accuracy</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Weigend</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/b508541a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PCCP</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="3297" to="3305" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Antony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Krieg</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3382344</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">132</biblScope>
+			<date type="published" when="2010">2010. 154104</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Effect of the Damping Function in Dispersion Corrected Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Goerigk</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.21759</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="1456" to="1465" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Reactive Molecular Dynamics Study on the First Steps of DNA Damage by Free Hydroxyl Radicals</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Abolfath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C T</forename><surname>Van Duin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Brabec</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp204894m</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="11045" to="11049" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Development of a ReaxFF Reactive Force Field for Glycine and Application to Solvent Effect and Tautomerization</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Rahaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C T</forename><surname>Van Duin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Doren</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="249" to="261" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

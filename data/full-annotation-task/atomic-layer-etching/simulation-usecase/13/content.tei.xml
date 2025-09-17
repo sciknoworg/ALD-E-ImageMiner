@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Molecular dynamics simulation of atomic layer etching of silicon</title>
+				<funder ref="#_fGzcYFQ">
+					<orgName type="full">State of Texas</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Satish</forename><forename type="middle">D</forename><surname>Athavale</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemical Engineering</orgName>
+								<orgName type="laboratory">Plasma Processing Laboratory</orgName>
+								<orgName type="institution">University of Houston</orgName>
+								<address>
+									<postCode>77204-4792</postCode>
+									<settlement>Houston</settlement>
+									<region>Texas</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Demetre</forename><forename type="middle">J</forename><surname>Economou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemical Engineering</orgName>
+								<orgName type="laboratory">Plasma Processing Laboratory</orgName>
+								<orgName type="institution">University of Houston</orgName>
+								<address>
+									<postCode>77204-4792</postCode>
+									<settlement>Houston</settlement>
+									<region>Texas</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Molecular dynamics simulation of atomic layer etching of silicon</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4A094038B1F5F6513E80ED39BB171400</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract/>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>͑Received 5 October 1994; accepted 13 March 1995͒</p><p>A molecular dynamics study of 50 eV Ar ϩ ion bombardment of a Si͑100͒ crystal with a monolayer of adsorbed chlorine was conducted to simulate atomic layer etching ͑ALET͒ of Si. The total reaction yield ͑Si atoms removed per ion͒ was 0.172; 84% of silicon was removed as SiCl, 8% as elemental Si and 8% as SiCl 2 . Based on the total yield, an ion dose of 1.16ϫ10 <ref type="bibr" target="#b15">16</ref> ions/cm 2 is necessary to remove one monolayer of silicon. Reaction occurs during the ps time scale of the ion-solid interaction. Long time-scale chemistry ͑100s of ms͒ which is possible in ion-assisted etching with simultaneous exposure to neutral and ion beams does not happen in ALET. It was further found that 93% of Si originated from the top silicon layer and 7% from the layer underneath. In addition, some structural ''damage'' was induced to the top three silicon layers. It appears that perfect ALET of silicon is not possible for an ion energy of 50 eV. © 1995 American Vacuum Society.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Dimensional control down to the atomic level is becoming progressively important in the fabrication of abrupt heterostructure interfaces and extremely thin layers for optoelectronics, quantum devices, and nanostructures. <ref type="bibr" target="#b0">1</ref> For example, molecular-beam epitaxy ͑MBE͒ and metalorganic chemical vapor deposition ͑MOCVD͒ have been used to grow extremely thin layers of compound semiconductors and their alloys. <ref type="bibr" target="#b1">2</ref> Also, atomic layer epitaxy ͑ALE͒ and flow-rate modulation epitaxy ͑FME͒ have been developed to deposit with atomic-resolution heterointerfaces which are smoother than conventional MBE. <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4</ref> In ALE, the precursor species ͑e.g., trimethylgallium and arsine to deposit GaAs͒ are fed to the epitaxial reactor in a sequential manner such that GaAs is grown one layer at a time.</p><p>Much attention has been paid to deposition, but etching with atomic layer resolution is also a crucial step for fabrication of nanoelectronic devices. Dry etching techniques <ref type="bibr" target="#b4">5</ref> such as reactive ion etching ͑RIE͒ and chemically assisted ion beam etching ͑CAIBE͒ are not capable of atomic layer resolution because etching is too rapid. In addition, the relatively high ion energy ͑100s of eV͒ can damage the crystal. Atomic layer etching ͑ALET͒ can provide monolayer resolution without substrate damage. By exposing the crystalline substrate to a reactive gas and an energetic beam ͑ions, electrons, photons͒ in a cyclic manner, etching of a monolayer per cycle may be achieved.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Atomic layer etching:</head><p>The ALET concept is demonstrated schematically in Fig. <ref type="figure" target="#fig_0">1</ref>, which shows a complete cycle of the process. <ref type="bibr" target="#b8">9</ref> The cycle consists of the following four steps.</p><p>͑1͒ Exposure of the clean semiconductor surface to a gas, and adsorption ͑chemisorption͒ of the gas onto the surface. ͑2͒ Evacuation of the chamber, so that only the chemisorbed layer can subsequently react. This step is necessary to avoid etching by gas-phase species in step ͑3͒.</p><p>͑3͒ Exposure to an energetic beam, to effect chemical reaction between the adsorbed gas and the underlying solid. In this step a monolayer of the solid is removed. ͑4͒ Evacuation of the chamber to exhaust the reaction products.</p><p>Completion of a cycle results in etching of one atomic layer of the film. The cycle can be repeated to etch as many atomic layers as required.</p><p>Etching with monolayer accuracy places some limitations regarding the choice of gas and energetic beam. For example, the gas must be selected such that spontaneous etching of the solid does not occur in step ͑1͒. This is not a severe limitation since, even if spontaneous etching could normally occur, cooling of the substrate at sufficiently low temperature would quench the spontaneous reaction, without affecting the reaction in step ͑3͒ ͓in step ͑3͒ energy is supplied by the energetic beam, i.e., this is not a thermally activated process͔. Also, the energetic beam must be chosen so that the process is self-limiting, i.e., once surface reaction has been completed in step ͑3͒, any further irradiation by the energetic beam should not damage the exposed underlayer. If the above precautions are not taken, etching with monolayer accuracy is not possible.</p><p>ALET of GaAs has been demonstrated <ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> by using Cl 2 /Cl gas and low-energy Ar ϩ bombardment or KrF excimer laser irradiation. It has been shown that by carefully controlling the reactive species and energetic beam exposure, it is possible to achieve monolayer etching. However, monolayer etching of Si is difficult to achieve. Oxygen in the reactor atmosphere, even in minute amounts, can lead to formation of oxide islands on the surface, resulting in less than a monolayer etching per cycle and rough surfaces. ALET of Si <ref type="bibr">14 -16</ref> has been studied using Cl 2 /Cl or fluorine-containing gases and Ar ϩ bombardment. Molecular chlorine or chlorine radicals do not spontaneously etch undoped Si at room temperature. <ref type="bibr" target="#b16">17</ref> Chlorine does chemisorb on the silicon surface <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b18">19</ref> but surface reaction leading to volatile chlorides ͑SiCl x ͒ does not occur. This reaction can be induced by energetic ion bombardment. In fact the etching of silicon under simultaneous exposure to chlorine gas and Ar ϩ ions has been reported extensively in the literature. <ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref> Assuming that a suitable combination of gas and energetic beam have been identified, one needs to determine the duration of steps ͑1͒-͑4͒ so that a monolayer of the substrate is removed per cycle. The duration of exposure to the reactive gas ͓step ͑1͔͒ and the energetic beam ͓step ͑3͔͒ are of particular importance. For example, if less than a monolayer of gas is adsorbed during step ͑1͒, less than a monolayer etching per cycle and a rough surface are expected. In the case of ions used as an energetic beam in step ͑3͒, the ion dose and energy must be such that the top layer reacts completely, yet damage of the underlayers does not occur.</p><p>Molecular dynamics ͑MD͒ simulations are suitable for studying the interaction of energetic ions with materials. MD follows the trajectory of each atom in the simulation cell as a function of time for several ps of the ion-solid interaction; physical quantities of interest may be calculated by time or ensemble averaging. MD simulations have been used in the past to study physical sputtering, <ref type="bibr" target="#b25">26</ref> physical vapor deposition, <ref type="bibr" target="#b26">27</ref> and the reaction of energetic neutrals with a surface in the absence of ion bombardment. <ref type="bibr" target="#b27">28</ref> MD simulations have also been used to study the interaction of Ar ϩ ions with Si under simultaneous exposure to chlorine <ref type="bibr" target="#b28">29</ref> and fluorine. <ref type="bibr" target="#b29">30</ref> Some of the key results of these simulations are the formation of surface roughness <ref type="bibr" target="#b28">29</ref> and the creation of weakly bound species that can desorb spontaneously. <ref type="bibr" target="#b29">30</ref> In this work, we have performed MD simulations to study the interaction of 50 eV Ar ϩ ions with a Si͑100͒ surface covered with a monolayer of chlorine. The focus of the simulations is step ͑3͒ of ALET. Emphasis was placed on the extent of subsurface damage created by the ions, the nature and energy distribution of the products, the etching mechanism, and the ion dose required for complete reaction to occur. The goal is to identify conditions under which etching with monolayer accuracy may be possible. The results ob-tained from these simulations are used to guide our experimental ALET system. This work differs from other MD simulation studies reported in the literature <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30</ref> in that there is no simultaneous exposure of the substrate to neutral and ion beams.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. MD SIMULATION</head><p>The simulation cell consisted of 288 Si atoms arranged in nine layers of 32 atoms each to form a Si͑100͒ lattice. The top silicon layer was covered with a monolayer of chlorine, as shown in Fig. <ref type="figure">2</ref>. The approximate dimensions of the cell are 21.7 Åϫ21.7 Åϫ12.9 Å. The surface area of the cell in the x -z plane is approximately 472 Å. Periodic boundary conditions were applied in the x and z directions to simulate an infinite crystal. Ar ϩ ions with 50 eV kinetic energy were introduced perpendicular to the cell surface. The x and z coordinates of the ion location were picked at random but the vertical distance was fixed at yϭ8.5 Å. At this distance the interaction between the ion and the cell is negligible. Distance y was measured with respect to the chlorine layer ͑layer No. 1͒ on top of a pristine Si lattice.</p><p>MD is a deterministic simulation which follows the trajectory of individual atoms by solving Newton's equation of motion. <ref type="bibr" target="#b30">31</ref> The force on each atom is calculated as the spatial gradient of the potential field. The interatomic potential consists of contributions due to two-body and three-body interactions. We have used the interatomic potentials developed by Feil et al. <ref type="bibr" target="#b28">29</ref> The Si-Cl, Si-Si, and Cl-Cl interactions were calculated using two-body and three-body interactions similar to those first developed by Stillinger and Weber <ref type="bibr" target="#b31">32</ref> for the Si-F system. When an ion approaches the surface, the ion wave functions overlap those of the surface atoms and charge transfer takes place through Auger or resonant tunneling processes. <ref type="bibr" target="#b32">33</ref> Therefore, the Ar ion is modeled as an energetic neutral. The Ar-Ar, Ar-Cl, and Ar-Si interactions were expressed by a purely repulsive Moliere potential with a screening length of 0.88 times the Firsov values. <ref type="bibr" target="#b33">34</ref> A dimensionless time step of 0.005 was used, where ϭ0.0766 ps corresponds to the period of vibrations of an isolated Si-Si bond. A fifth-order predictor-corrector algorithm of the Gear type <ref type="bibr" target="#b30">31</ref> was used to advance the simulation in time by integrating the equation of motion for each atom in the simulation cell.</p><p>Each simulation run consisted of two phases: ͑a͒ an ''equilibration'' phase lasting 600 time steps during which FIG. 2. Schematic of the cell used for molecular dynamics simulations. The filled circles represent Cl atoms and the open circles represent Si atoms.</p><p>the system was allowed to relax to 300 K, and ͑b͒ an ''etching'' phase which started with the introduction of an argon ion at tϭ0 and continued for 3500 time steps until tϭ1.34 ps. Some simulations were continued further up to tϭ4 ps but no substantial change in the results was observed. However, for ion energies higher than 50 eV used here, a simulation for more than 1.34 ps may be necessary. At the beginning of the etching phase of each simulation run, an Ar ϩ was directed at a pristine Si surface covered with a monolayer of Cl atoms. Subsequent ions were directed at the lattice generated by the previous ions. This way the depletion of Cl from the surface as etching proceeds was accounted for properly. Such a sequence of ion bombardments represented one group of simulation runs. An average of 60 simulation runs were conducted for each group. Five groups of runs were performed, each starting with a pristine cell, to gather statistics. <ref type="bibr" target="#b34">35</ref> At the end of each simulation run, a search was made for weakly bound species ͑wbs͒ on the surface. A wbs is defined as one with a binding energy of less than 1 eV. <ref type="bibr" target="#b29">30</ref> The binding energy of each surface species was determined by the difference of the potential of the crystal with that species on the surface and with the species removed to an infinite distance away from the surface.</p><p>The temperature of the crystal rises during ion bombardment, and heat must be removed so as to represent the physical mechanisms of heat loss from the crystal. Heat removal can be carried out in a number of different ways. The simplest way is to scale the atomic velocities so that the temperature of the crystal remains at a desired set point. Another method, proposed by Berendsen et al., <ref type="bibr" target="#b35">36</ref> uses an algorithm to remove/add a quantity of heat from the simulation cell depending on the actual temperature and the set point. We have used the Berendsen scheme of coupling to a heat bath maintained at Tϭ300 K with a coupling constant of 30 fs. For this purpose, the simulation cell was divided into three regions as shown in Fig. <ref type="figure">2</ref>. The top seven atomic layers constitute the adiabatic region where the atomic velocities were not rescaled during the 3500 etching time steps of the simulation ͑the velocities were rescaled during the 600 equilibration time steps͒. The next two atomic layers form the heat sink region, where heat was removed throughout the simulation. Finally, the bottom layer of the cell was fixed in space.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS AND DISCUSSION</head><p>In the figures to follow, tϭ0 refers to the time of introduction of the argon ion at a vertical distance of yϭ8.5 Å. It is interesting to analyze the sequence of events that occur when an individual Ar ϩ ion bombards the surface. Eventually the ion is either reflected/recoiled from the surface or it is trapped inside the lattice. A plot of the ion kinetic energy and its projected position along the y axis as a function of time is shown in Fig. <ref type="figure" target="#fig_1">3</ref>. The energetic Ar ͑starting kinetic energy 50 eV͒ penetrates the lattice and undergoes collisions with the atoms in the top few layers of the crystal, rapidly losing its kinetic energy ͑KE͒; more than 95% of the Ar KE is lost within about 0.14 ps. Ar continues its journey inside the lattice further losing KE reaching a minimum of less than 0.2 eV. At this moment ͑0.17 ps͒, Ar is at its maximum penetration depth ͑yϭϪ2 Å͒. Collisions with the lattice atoms continue, until a violent collision causes Ar to regain a significant portion of the lost KE and start its upward movement. Ar eventually leaves the lattice after about 0.4 ps with 2 eV kinetic energy. We consider an atom to leave the ''influence'' of the lattice when this atom crosses the yϭ4.50 Å plane moving upwards. It is clear from Fig. <ref type="figure" target="#fig_1">3</ref> that the kinetic energy of the Ar atom remains constant after it has crossed the yϭ4.50 Å plane suggesting that the atom is then outside the influence of the surface.</p><p>Quantitative measures related to Fig. <ref type="figure" target="#fig_1">3</ref> were for the particular ion bombardment events shown in that figure . Average values of interesting quantities obtained from a total of 300 MD simulation runs and the corresponding 95% confidence intervals are shown in Table <ref type="table">I</ref>. TABLE I. Average values for different physical quantities. Quantity Average value with 95% confidence intervals Time at which Ar loses more than 95% of 0.14Ϯ0.01 its kinetic energy ͑ps͒ Time at which Ar is at the maximum depth 0.16Ϯ0.02 inside the lattice ͑ps͒ Time at which Ar leaves the lattice ͑ps͒ 0.46Ϯ0.08 Time at which product species leaves the 0.20Ϯ0.01 lattice ͑ps͒ Time at which the hot spot is at maximum 0.08Ϯ0.02 temperature ͑ps͒ Time at maximum number of atoms in the 0.36Ϯ0.04 hot spot ͑ps͒ Time at which the lattice is at maximum 0.13Ϯ0.01 temperature ͑ps͒ Maximum penetration depth of Ar inside 3.66Ϯ0.32 lattice when it is reflected ͑Å͒ Maximum penetration depth of Ar inside 5.82Ϯ0.47 lattice when it is trapped ͑Å͒ Maximum temperature of the lattice ͑K͒ 1070Ϯ53 Maximum hot-spot temperature ͑K͒ 3235 Ϯ 815 Maximum number of atoms in the hot spot 78Ϯ8</p><p>The instantaneous temperature of the crystal, averaged over all the atoms in the adiabatic region, rises significantly reaching a maximum of about 1070 K around the time when most of the kinetic energy of the ion has dissipated in collisions with the lattice atoms ͑ϳ0.15 ps͒. Beyond that point ''heat'' removal by the constant temperature bath dominates, causing the crystal temperature to gradually decay ͑over a few ps͒ towards the bath temperature ͑300 K͒. One can characterize the development of the ''hot spot'' by considering only the atoms in the crystal which are ''directly'' affected by the energetic Ar. The temperature of the hot spot was calculated as an average over all atoms with ''temperature'' in excess of 400 K. The time evolution of the hot-spot temperature and the number of atoms in the hot spot, again averaged over 300 simulations runs, are shown in Fig. <ref type="figure" target="#fig_2">4</ref>. The hot-spot temperature passes through a maximum of over 3000 K around 0.10 ps, when only a dozen or so atoms are directly affected by the impinging Ar. These relatively energetic atoms transfer part of their energy to the surroundings increasing the number of atoms in the hot spot. This is equivalent to spatial spreading of the hot spot with a concomitant decrease in temperature. As the process continues, the number of atoms in the hot spot passes through a broad maximum at around 0.35 ps when approximately 75 atoms are in the hot spot. Later on the number of atoms in the hot spot decreases as the KE is dissipated further. The hot-spot temperature should be considered only qualitatively, since temperature is difficult to define for a small number of atoms.</p><p>Table <ref type="table">II</ref> lists the product yields obtained by the MD simu-lation. Of the silicon-containing species, SiCl is the majority product followed by SiCl 2 and Si. Chlorine atoms are removed with a 4% yield. Also, for every 100 argon ions impinging on the surface, 80 are reflected/recoiled back during the same ion bombardment event and the remaining 20 are thermalized inside the lattice only to be removed during the subsequent ion bombardment event. The statistics are not adequate to report the fraction of impinging ions that are permanently trapped in the lattice; it seems that this fraction is below 1%. When the product is SiCl, the Cl atom corresponds to the one originally attached to the Si atom at the beginning of the group of simulation runs. When SiCl 2 is removed, the Cl atom was previously attached to an adjacent Si atom. This is to be expected since surface diffusion is negligible under the conditions of our simulation.</p><p>Because in ALET the surface is deficient in chlorine, products of higher chlorination are unlikely to form. This explains the relatively small yield of SiCl 2 and the absence of any products of higher chlorination. The total sputtering yield of silicon under the conditions studied ͑0.172͒ is lower than that of a silicon surface exposed to chlorine and 50 eV Ar ϩ bombardment simultaneously ͑0.25͒, but it is higher than the physical sputtering yield of Si͑0.015͒ by 50 eV Ar ϩ ions. <ref type="bibr" target="#b20">21</ref> The enhancement of the sputtering yield due to the presence of Cl is evident; the lower sputtering yield under ALET conditions is expected due to the limited amount of Cl available on the surface compared to that available during simultaneous and continuous exposure of Si to chlorine and Ar ϩ ions.</p><p>The kinetic energies of the product species ranged from 0.2 to 7.0 eV. The products leave the surface about 0.2 ps following ion impact, which is after the peak in the crystal temperature ͑0.13 ps͒ and the peak in the hot-spot temperature ͑0.08 ps͒, but before the time ͑0.36 ps͒ at which the number of atoms in the hot spot reaches a maximum ͑Table I͒. The kinetic energy distribution of the products could not be fit to either collision cascade or ''evaporation'' from a hot spot. The latter mechanism was postulated by Oostra et al., <ref type="bibr" target="#b21">22</ref> for 75 eV Ar ϩ bombardment of Si with simultaneous exposure to chlorine.</p><p>No weakly bound species ͑wbs͒ have been detected in our simulations. This is consistent with the results of Barone and Graves <ref type="bibr" target="#b29">30</ref> who observed no wbs when the F/Si atomic ratio in the fluorinated top layers of the silicon lattice was Ͻ0.39. These authors observed that, when F atoms were plentiful enough to passivate the silicon dangling bonds, weakly bound species formed readily. These wbs may be sputtered or desorbed spontaneously on a much longer time scale ͑ms͒ than it is possible to capture by the MD simulation. Under simultaneous exposure to neutral and ion beams, as in the study of Barone and Graves, wbs can be formed when the neutral to ion flux ratio is high enough. Under the ALET conditions, the Cl/Si ratio is too low for wbs to be formed.</p><p>Figure <ref type="figure" target="#fig_3">5</ref> shows the layer-by-layer distribution of ''damage'' of the crystal lattice after 43 consecutive ion bombardments starting from the pristine cell of Fig. <ref type="figure" target="#fig_0">1</ref>. The amount of damage is expressed as the displacement, in Å, of the atoms from their position in the pristine cell. We only accounted for atoms that were present in the lattice after 43 bombardment TABLE II. Average product yield. Yield Average value Ϯ ͑95% confidence intervals͒ Si 0.013Ϯ0.002 Cl 0.040Ϯ0.003 Ar 0.803Ϯ0.078 Ar thermalization 0.192Ϯ0.062 Ar trapped permanently Ͻ0.01 SiCl 0.145Ϯ0.035 SiCl 2 0.014Ϯ0.003</p><p>events, neglecting the species that were removed as products.</p><p>As expected, the damage is maximum at the topmost atomic layer, ͑layer 1͒ and diminishes as one goes deeper into the lattice. The average displacement for the heat sink layers ͑layers 8 and 9͒ is about 0.1 Å, as expected for a crystal at room temperature ͑ϳ5%-10% of interatomic distance 37 ͒. The crystal ''damage'' can also be studied in terms of creation of vacancies and interstitial atoms. Following the treatment used by Karetta and Urbassek, <ref type="bibr" target="#b37">38</ref> we observed that the number of vacancies and interstitials is maximum in the topmost atomic layer. Although, no vacancies are present below the third atomic layer, a few interstitials can be created in those deeper layers during the early stages of an ion bombardment event. However, these interstitials are annealed quickly before the ion leaves the lattice.</p><p>Implication for ALET: Table <ref type="table">III</ref> shows that almost 93% of the Si-containing species originate from the topmost silicon layer ͑layer 2 in Fig. <ref type="figure">2͒</ref>; however, some product removal occurs from the underlying silicon layer. Also, crystal ''damage'' extends over a few atomic layers at the top ͑Fig. 5͒, which may result in unacceptable surface ''roughness'' <ref type="bibr" target="#b28">29</ref> with repeated ALET cycling. Hence perfect atomic layer etching cannot be achieved with an ion energy of 50 eV. Also, practical systems may be limited by residual oxygen in the chamber forming oxide islands on the surface. The ion energy should then be high enough to remove any oxide by sputtering. Otherwise, surface roughness will again be a problem. Based on a total sputtering yield of 0.172 for the silicon-containing species ͑Table II͒, and the silicon surface atom density ͑2ϫ10 15 atoms/cm 2 ͒, the required ion dose to remove a monolayer is 1.16ϫ10 <ref type="bibr" target="#b15">16</ref> ions/cm 2 . For an ion current density of 1 mA/cm 2 , the ion irradiation step 3 would require an exposure for about 2 s.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSIONS</head><p>Atomic layer etching ͑ALET͒ is a technique to etch a crystalline solid with monolayer accuracy. It is a cyclic process consisting of gas adsorption on the surface ͑step 1͒, evacuation of excess gas ͑step 2͒, irradiation of the surface by an energetic beam ͑step 3͒, and evacuation to remove the reaction product ͑step 4͒. Completion of a cycle results in etching of one monolayer of the solid. A molecular dynamics simulation of ALET of silicon with chlorine gas was performed focusing on step 3. For this purpose, a Si͑100͒ surface with an adsorbed monolayer of chlorine was bombarded by 50 eV Ar ϩ ions. Ion bombardment creates a ''hot spot'' with temperatures in excess of 3000 K. The hot spot is dissipated within a few ps after ion bombardment, and the crystal returns to ambient temperature. The total silicon etch yield was 0.172 ͑Si atoms removed per ion͒; 84% of silicon was removed as SiCl, 8% as elemental Si, and 8% as SiCl 2 . Based on the total yield, an ion dose of 1.16ϫ10 <ref type="bibr" target="#b15">16</ref> ions/cm 2 is necessary to remove one monolayer of silicon. It should be cautioned that, in reality, the silicon total yield would be smaller than that predicted by the simulation. This is because simulation of complete reaction of the adsorbed Cl would require an excessive amount of computer time, as the yield decreases with decreasing surface coverage by Cl.</p><p>The reaction products were removed during the collision cascade, a few tenths of ps after ion bombardment. No weakly bound species were detected after ion bombardment. In addition, surface diffusion is negligible under the conditions of interest. These observations suggest that, in ALET, chemistry happens only during the ps time scale of ion-solid interaction. This is in sharp contrast to ion-assisted etching effected by simultaneous and continuous exposure of the surface to reactive neutral and ion beams. Under these conditions long time-scale ͑100s of ms͒ chemistry can readily happen. Because MD can only capture the events occurring on the ps time scale, MD is suitable for the study of ALET.</p><p>It was found that 93% of the silicon removed originated from the topmost silicon layer; the remaining 7% was from the layer underneath. An ion energy of 50 eV caused some structural ''damage'' to the top three silicon layers. This could result in unacceptable surface ''roughness'' with repeated ALET cycling. Furthermore, the ion energy may be limited by the need to sputter away surface oxides which may form as a result of residual oxygen, that can also lead to rough surfaces. TABLE III. Fraction of Si atoms removed from different atomic layers in the crystal. See Fig. 2 for layer numbering. Layer No. Fraction of Si atoms removed from this layer 2 0.93 3 0.07 4 -9 0.00</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. Schematic of the ALET process. The filled circles represent Cl atoms, the open circles represent Si atoms, and ϩ represent Ar ϩ ions.</figDesc><graphic coords="2,72.17,48.77,205.44,202.56" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 3 .</head><label>3</label><figDesc>FIG. 3. A typical plot of Ar kinetic energy ͑filled circles͒ and Ar projected position along the vertical axis ͑empty circles͒ as a function of time. The dashed horizontal line indicates the position at which an atom moving away from the lattice is removed from the simulation cell.</figDesc><graphic coords="3,316.69,48.77,243.84,159.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 4 .</head><label>4</label><figDesc>FIG. 4. The hot-spot temperature ͑triangles͒ and the number of atoms in the hot spot ͑circles͒ as a function of time. The figure shows an average over 300 simulation runs.</figDesc><graphic coords="4,52.55,48.77,243.84,156.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIG. 5 .</head><label>5</label><figDesc>FIG.5. The layer-by-layer distribution of the atomic displacements in the lattice after 43 ion bombardments of the same cell starting from a pristine silicon crystal with a monolayer of chlorine at the surface. See Fig.2for layer numbering.</figDesc><graphic coords="5,56.51,48.77,236.16,210.48" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>JVST A -Vacuum, Surfaces, and Films</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>J. Vac. Sci. Technol. A, Vol. 13, No. 3, May/Jun 1995</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The authors gratefully acknowledge the financial support provided by the <rs type="funder">State of Texas</rs> through the <rs type="programName">Advanced Technology Program</rs>. They would like to thank <rs type="person">Dr. H. Feil</rs> for helpful discussions and <rs type="person">Dr. M. Barone</rs> and <rs type="person">Professor D. Graves</rs> for helpful discussions and for sharing a preprint prior to publication. Thanks are also due to <rs type="person">Dr. James M. Briggs</rs> for allowing the use of the visualization facilities of the <rs type="institution">Institute for Molecular Design at the University of Houston</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_fGzcYFQ">
+					<orgName type="program" subtype="full">Advanced Technology Program</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Kuech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Dapkus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Res. Soc. Symp. Proc</title>
+		<imprint>
+			<biblScope unit="volume">222</biblScope>
+			<biblScope unit="page">1991</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Advances in Materials, Processing, and Devices in III-V Compound Semiconductors</title>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Res. Soc. Symp. Proc. No. 144 ͑Materials Research Society</title>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Sadana</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">L</forename><surname>Eastman</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><surname>Dubuis</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="1989">1989</date>
+			<pubPlace>Pittsburgh, PA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Uesugi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kamiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fujimoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="996" to="1990" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Makimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamauchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Horikoshi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page">1989</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Rossnagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Cuomo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Westwood</surname></persName>
+		</author>
+		<title level="m">Handbook of Plasma Processing Technology ͑Noyes</title>
+		<meeting><address><addrLine>Park Ridge, NJ</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hamagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Modaressi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamamoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page">1990</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Res. Soc. Symp. Proc</title>
+		<imprint>
+			<biblScope unit="volume">222</biblScope>
+			<biblScope unit="page">1991</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinmura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kawasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Namba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nakamoto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="968" to="1992" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kodama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">1992</biblScope>
+			<date type="published" when="2212">2212</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinmura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kawasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nakamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Namba</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">225</biblScope>
+			<biblScope unit="page">1993</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kodama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">225</biblScope>
+			<biblScope unit="page">1993</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">L</forename><surname>Bourne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D'arcy</forename><surname>Hart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Rayner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Hackett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="556" to="1993" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Meguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sugano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Aoyagi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">1993</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Horiike</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Iseda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sakaue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nagata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shindo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Miyazaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hirose</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date>1844 ͑1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sakaue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Asami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ichihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ishizuka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kawamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Horiike</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Res. Soc. Symp. Proc</title>
+		<imprint>
+			<biblScope unit="volume">222</biblScope>
+			<biblScope unit="page">1991</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kawakasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sakaue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shingubara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Horiike</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">225</biblScope>
+			<biblScope unit="page">1993</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Ogryzlo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Flamm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Ibbotson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Mucha</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">1988</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J D</forename><surname>Sullivan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Flaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Kummel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename><forename type="middle">Q</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Choyke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Yates</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">1993</biblScope>
+			<date>12051</date>
+		</imprint>
+	</monogr>
+	<note>J. Chem. Phys. 8308 ͑1993͒, see references therein</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Rowe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Margaritondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Christman ; ͒;</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Whitman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Joyce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Yarmoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Mcfeely</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Terminello</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">1990</biblScope>
+		</imprint>
+	</monogr>
+	<note>Surf. Sci.</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dieleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H M</forename><surname>Sanders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Kolfschoten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Zalm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>De Vries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Haring</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1384" to="1985" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Oostra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Van Ingen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Haring</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>De Vries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N A</forename><surname>Van Veen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="1506" to="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Oostra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Haring</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Van Ingen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>De Vries</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page">1988</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Zwol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Laar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Kolfschoten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dieleman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1410" to="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1384" to="1994" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J P</forename><surname>Joosten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J M</forename><surname>Vugts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Spruijt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A J</forename><surname>Senhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C W</forename><surname>Bieijerinck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">636 ͑1994͒; H. F. Winters, ibid</title>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">1988</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Maboudian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Postwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>El-Maazawi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Garrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Winograd</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="7311" to="1990" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Muller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="2161" to="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Weakliem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Carter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Schoolcraft</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Garrison</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">1991</biblScope>
+		</imprint>
+	</monogr>
+	<note>J. Chem. Phys.</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Feil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dieleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Garrison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="1303" to="1993" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">1995</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Haile</surname></persName>
+		</author>
+		<title level="m">Molecular Dynamics Simulation: Elementary Methods ͑Wiley</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Stillinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Weber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Stillinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Weber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<editor>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Stillinger</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Weber</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="2144" to="1989" />
+		</imprint>
+	</monogr>
+	<note>Phys. Rev. B J. Chem. Phys.</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sigmund</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev</title>
+		<imprint>
+			<biblScope unit="volume">184</biblScope>
+			<biblScope unit="page">1969</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">The Stopping and Range of Ions in Solids ͑Pergamon</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Ziegler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Biersack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Littmark</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1985">1985</date>
+			<biblScope unit="volume">1</biblScope>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Efficiency in Research, Development and Production: The Statistical Design and Analysis of Chemical Experiments ͑Royal Society of Chemistry</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Davies</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1993">1993</date>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C J</forename><surname>Berendsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P M</forename><surname>Postma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Van Gunsteren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dinola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Haak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">1984</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Wert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Thomson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physics of Solids</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<date type="published" when="1970">1970</date>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>nd ed. ͑McGraw-Hill</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Karetta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Urbassek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page">1992</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

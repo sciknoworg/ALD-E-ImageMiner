@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Investigating routes toward atomic layer deposition of silicon carbide: Ab initio screening of potential silicon and carbon precursors</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2016-10-18">18 October 2016</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ekaterina</forename><forename type="middle">A</forename><surname>Filatova</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dennis</forename><surname>Hausmann</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tyndall National Institute</orgName>
+								<orgName type="institution" key="instit2">University College Cork</orgName>
+								<address>
+									<postCode>T12 R5CP</postCode>
+									<settlement>Cork</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Lam Research Corporation</orgName>
+								<address>
+									<postCode>97062</postCode>
+									<settlement>Portland</settlement>
+									<region>Oregon</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">Tyndall National Institute</orgName>
+								<orgName type="institution" key="instit2">University College Cork</orgName>
+								<address>
+									<postCode>T12 R5CP</postCode>
+									<settlement>Cork</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Investigating routes toward atomic layer deposition of silicon carbide: Ab initio screening of potential silicon and carbon precursors</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2016-10-18">18 October 2016</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9C386DB2BF4072364E86AB79EA1E66A3</idno>
+					<idno type="DOI">10.1116/1.4964890</idno>
+					<note type="submission">Received 16 June 2016; accepted 3 October 2016;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Silicon carbide (SiC) is a promising material for electronics due to its hardness, and ability to carry high currents and high operating temperature. SiC films are currently deposited using chemical vapor deposition (CVD) at high temperatures 1500-1600 C. However, there is a need to deposit SiC-based films on the surface of high aspect ratio features at low temperatures. One of the most precise thin film deposition techniques on high-aspect-ratio surfaces that operates at low temperatures is atomic layer deposition (ALD). However, there are currently no known methods for ALD of SiC. Herein, the authors present a first-principles thermodynamic analysis so as to screen different precursor combinations for SiC thin films. The authors do this by calculating the Gibbs energy DG of the reaction using density functional theory and including the effects of pressure and temperature. This theoretical model was validated for existing chemical reactions in CVD of SiC at 1000 C. The precursors disilane (Si 2 H 6 ), silane (SiH 4 ), or monochlorosilane (SiH 3 Cl) with ethyne (C 2 H 2 ), carbontetrachloride (CCl 4 ), or trichloromethane (CHCl 3 ) were predicted to be the most promising for ALD of SiC at 400 C. V</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Silicon carbide (SiC) is a promising material for electronic devices. It is harder than Si and can sustain higher voltages, carry higher currents, and operate at higher temperatures. There is a need to deposit SiC-based films on the surface of high aspect ratio features for various applications for electronics, e.g., low-k spacers/liners and air gap liners for interlayer dielectric, exploiting the low dielectric constant (&lt;5) and low wet etch rate of SiC. SiC occurs naturally in different crystal polytypes. The most common polytypes being developed for electronics are 3C, 4H, and 6H. <ref type="bibr" target="#b0">1</ref> SiC-based films are currently deposited using chemical vapor deposition (CVD). This technique is operated at elevated temperatures 1500-1600 C and may suffer from nonuniformity due to fast surface reactions. <ref type="bibr" target="#b1">2</ref> One of the most precise thin film growth techniques is a variant of CVD called atomic layer deposition (ALD). Thin films deposited by ALD or plasma-enhanced ALD (PEALD) are highly conformal even on high-aspect-ratio surfaces and are grown at low temperatures (e.g., &lt;400 C). However, there are currently no known low temperature methods for ALD of SiC.</p><p>The most commonly used precursors in SiC CVD growth are silane (SiH 4 ) <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref> as a silicon precursor, and propane (C 3 H 8 ) <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref> or ethylene (C 2 H 4 ) 9,10 as a carbon precursor. <ref type="bibr" target="#b10">11</ref> They provide a better morphology and higher growth rate than other precursors. <ref type="bibr" target="#b11">12</ref> However, many different precursors apart from those mentioned above were used for CVD of SiC. Nine different carbon precursors [methane (CH 4 ), ethane (C 2 H 6 ), ethyne (C 2 H 2 ), ethylene (C 2 H 4 ), propane (C 3 H 8 ), propene (C 3 H 6 ), propadiene (C 3 H 4 ), propyne (C 3 H 4 ), butane (C 4 H 10 )] with silane (SiH 4 ) were analyzed by Hallin et al. <ref type="bibr" target="#b3">4</ref> for the CVD growth of 4H and 6H SiC epitaxial layers, in the temperature range of 1550-1600 C. The most stable growth at high growth rates was achieved with propane (C 3 H 8 ). <ref type="bibr" target="#b3">4</ref> For silicon precursors besides silane (SiH 4 ) the most commonly used are chlorosilanes, such as dichlorosilane SiH 2 Cl 2 (DCS), <ref type="bibr" target="#b4">5</ref> trichlorosilane SiHCl 3 (TCS), <ref type="bibr" target="#b8">9</ref> methyltrichlorosilane SiCH 3 Cl 3 (MTS), <ref type="bibr" target="#b12">13</ref> and tetrachlorosilane SiCl 4 (TET). <ref type="bibr" target="#b13">14</ref> TET and TCS are the most common. <ref type="bibr" target="#b11">12</ref> A review of chloride-based CVD growth of SiC was done by Pedersen et al. <ref type="bibr" target="#b14">15</ref> Singlesource precursors (containing both Si and C in the same molecule) have also been used for CVD of SiC. <ref type="bibr" target="#b15">16</ref> These precursors include: MTS, methylsilane (CH 3 -SiH 3 ), <ref type="bibr" target="#b16">17</ref> diethylmethylsilane [(C 2 H 5 ) 2 SiHCH 3 ], <ref type="bibr" target="#b17">18</ref> tetramethylsilane [Si(CH 3 ) 4 ], <ref type="bibr" target="#b18">19</ref> hexamethyldisilane [Si 2 (CH 3 ) 6 ], <ref type="bibr" target="#b18">19</ref> silacyclobutane [SiH 2 (CH 2 ) 3 ], <ref type="bibr" target="#b19">20</ref> and 1,3-disilabutane (SiH 3 -CH 2 -SiH 2 -CH 3 ). <ref type="bibr" target="#b15">16</ref> As was mentioned above, experimentalists are facing difficulties in growing SiC films by ALD or PEALD. Theoretical modeling of ALD using density functional theory (DFT) provides a complementary view to the experimental techniques. DFT is usually used to calculate the pathways for precursor adsorption, ligand migration, and by-product formation on the surface, yielding reaction energies and activation energies for each step of the ALD cycle. A review of previous theoretical studies of Si-based materials can be found in Ref. 21. In this paper, we present a theoretical thermodynamic analysis of different precursor combinations for SiC deposition thin film by calculating Gibbs energy DG using DFT as implemented in a) Electronic mail: ekaterina.filatova@tyndall.ie</p><p>01B103-1 J. Vac. Sci. Technol. A 35(1), Jan/Feb 2017 0734-2101/2017/35(1)/01B103/6/$30.00 V C 2016 American Vacuum Society 01B103-1 TURBOMOLE (Ref. 22) and VASP (Ref. 23) software. The effects of CVD conditions (1000 C) and ALD conditions (400 C) are evaluated. It is found that chemical reactions of disilane (Si 2 H 6 ), silane (SiH 4 ), monochlorosilane (SiH 3 Cl), or DCS (SiH 2 Cl 2 ) precursors with all suggested carbon precursors are thermodynamically favorable. The most negative DG are for disilane (Si 2 H 6 ), silane (SiH 4 ), monochlorosilane (SiH 3 Cl), ethyne (C 2 H 2 ), carbontetrachloride (CCl 4 ), and trichloromethane (CHCl 3 ). Hence, silane (SiH 4 ), disilane (Si 2 H 6 ), monochlorosilane (SiH 3 Cl), ethyne (C 2 H 2 ), carbontetrachloride (CCl 4 ), and trichloromethane (CHCl 3 ) can be predicted to be the most favorable precursors for ALD of SiC thin films.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. METHODOLOGY</head><p>Atomic-scale modeling was performed to investigate routes toward the ALD of SiC-based films using first principles calculations based on DFT. All precursors were modeled as isolated molecules in vacuum using the TURBOMOLE software. <ref type="bibr" target="#b21">22</ref> Optimized structures of the Si and C precursors are shown in Fig. <ref type="figure" target="#fig_1">1</ref>. The generalized gradient approximation to DFT (Ref. 24) was implemented by using the exchange correlation functional of Perdew, Burke, and Ernzerhof (PBE). <ref type="bibr" target="#b23">24</ref> The atom-centered basis set def2-TZVPP was used for all the atoms <ref type="bibr" target="#b24">25</ref> along with an auxiliary basis set for the density within the resolution of identity (RI) approximation. <ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b26">27</ref> The energy for SiC-3C bulk was obtained using the Vienna ab initio simulation package (VASP) <ref type="bibr" target="#b22">23</ref> also with the PBE exchange-correlation functional. The projector augmented wave method <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b27">28</ref> was used to describe the core electrons of atoms. A plane wave basis set with a cut-off energy 400 eV was used for the valence orbitals. An 8 Â 8 Â 8 kpoint grid within the Monkhorst-Pack scheme in the Brillioun zone was employed. Full geometry relaxation was carried out using the conjugate gradient method for energy minimization at convergence level of 0.01 eV/ Å on each ion.</p><p>Reaction energetics for SiC from various silicon and carbon precursors were evaluated using the general formula in Eq. ( <ref type="formula" target="#formula_0">1</ref>), assuming that by-products of the reactions were CH 4 , HCl, Cl 2 , and H 2 where applicable. Competing reactions to formation of SiC are not considered.</p><formula xml:id="formula_0">nSi a X b þ aC n Y m ! anSiC þ amXY þ nb À am 2 X 2 if nb &gt; am; nSi a X b þ aC n Y m ! anSiC þ nbXY þ am À nb 2 Y 2 if nb &lt; am:<label>(1)</label></formula><p>For example, for SiCl</p><formula xml:id="formula_1">4 (X ¼ Cl, a ¼ 1, b ¼ 4) and C 2 H 6 (Y ¼ H, n ¼ 2, m ¼ 6), Eq. (1) becomes 2SiCl 4 þ C 2 H 6 ! 2SiC þ 6HCl þ Cl 2 :<label>(2)</label></formula><p>A list of all the analyzed reactions is presented in Tables I and II in supplementary material. <ref type="bibr" target="#b32">33</ref> Gibbs energies DG were calculated for these reactions using Eq. ( <ref type="formula" target="#formula_2">3</ref>)</p><formula xml:id="formula_2">DG ¼ DE À TDS þ RTlnQ;<label>(3)</label></formula><p>where DE ¼ P E products À P E reactants using ground state energies obtained from DFT calculations, DS are entropies at temperature T obtained from DFT calculations in TURBOMOLE, assuming that S SiC ¼ 0, and reaction quotient Q ¼</p><formula xml:id="formula_3">Q P l products = Q P l reactants ,</formula><p>where partial pressures of products are P products ¼ 0.01 Torr, partial pressures of reactants P reactants ¼ 1 Torr and l are stoichiometric coefficients. Partial pressures were chosen in correspondence with experimental ALD data. DG indicates whether a reaction is thermodynamically favorable.</p><p>In VASP, the one-electron orbitals are expressed in plane wave basis sets, which make it inefficient and timeconsuming for calculating gas-phase molecules, while bulk SiC can be easily simulated with VASP. Therefore, we use a reference gas-phase molecule to estimate energies for bulk SiC in TURBOMOLE. We choose gas-phase tetramethylsilane Si(CH 3 ) 4 as a reference molecule for SiC. It contains Si-C bonds like SiC. First DE 1 is computed with VASP for decomposition of the reference molecule using Eq. ( <ref type="formula" target="#formula_4">4</ref>)</p><formula xml:id="formula_4">SiðCH 3 Þ 4 ðgÞ ! SiCðsÞ þ 3CH 4 ðgÞ:<label>(4)</label></formula><p>Calculations for Si(CH 3 ) 4 (g) and CH 4 (g) molecules were done at single C-point in the Brillioun zone at convergence level for the forces on each ion of 0.01 eV/ Å. The size of the cell was chosen as 15 Â 15 Â 15 Å. DE 1 is calculated only once. Then, DE 2 is computed for the gas-phase reaction to the reference molecule with TURBOMOLE for each X and Y using</p><formula xml:id="formula_5">nSi a X b g ð Þ þ aC n Y m g ð Þ þ 3anCH 4 g ð Þ ! anSi CH 3 ð Þ 4 g ð Þ þ amXY g ð Þ þ nb À am 2 X 2 g ð Þ if nb &gt; am; nSi a X b g ð Þ þ aC n Y m þ 3anCH 4 g ð Þ ! anSi CH 3 ð Þ 4 g ð Þ þ nbXY g ð Þ þ am À nb 2 Y 2 g ð Þ if nb &lt; am:<label>(5)</label></formula><p>In the example above, Eq. ( <ref type="formula" target="#formula_5">5</ref>) becomes</p><formula xml:id="formula_6">2SiCl 4 ðgÞ þ C 2 H 6 ðgÞ þ 6CH 4 ðgÞ ! 2SiðCH 3 Þ 4 ðgÞ þ 6HClðgÞ þ Cl 2 ðgÞ:<label>(6)</label></formula><p>The final corrected DE 3 that we use for calculating Gibbs energy DG in Eq. ( <ref type="formula" target="#formula_2">3</ref>) will be a sum of DE 2 and DE 1 . This approach can be represented as a Hess cycle; see Fig. <ref type="figure">2</ref> for the example of 2SiCl</p><formula xml:id="formula_7">4 þ C 2 H 6 ! 2SiC þ 6HCl þ Cl 2 .</formula><p>The difference between DE computed in VASP and in TURBOMOLE for this sample reaction of Eq. ( <ref type="formula" target="#formula_6">6</ref>) is just 0.0002 eV, well within the precision of the method.</p><p>Including the effects of temperature allowed us to validate the approach for known precursor combinations for CVD at 1000 C. Furthermore, reaction energetics were calculated at 400 C to predict precursors for ALD of SiC at around this temperature.</p><formula xml:id="formula_8">DG [A(g) þ B(g) ! AB(s) þ C(g)]</formula><p>reflects the actual thermodynamics of the CVD reaction. If DG &lt; 0, the reaction is permitted and DG &gt; 0 means that it is not permitted. Kinetics is less important at high T. By contrast, in an ALD process, reactants A(g) and B(g) do not meet in the reactor, but</p><formula xml:id="formula_9">DG [A(g) þ B(g) ! AB(s) þ C(g)</formula><p>] is still relevant for describing the ALD process. Our finding so far with ALD has been that the formation of A-B bonds in the solid product is the main driving force for the process (and that the formation of by-product C plays a secondary role). The A þ B reaction is thus a way of measuring this driving force. <ref type="bibr" target="#b20">21</ref> The actual surface reaction steps in each ALD cycle are (1) unknown for SiC, (2) expected to be quite complex, and (3) dependent on kinetics of each step (because ALD is performed at lower T than CVD). It is therefore not possible to screen a wide range of chemicals for their actual detailed behavior in ALD.</p><p>Instead, we use the simple DG model. However, we bear in mind that the absolute value of DG has no meaning for the ALD reaction, i.e., DG &gt; 0 does not necessarily mean that ALD will not work and DG &lt; 0 does not necessarily mean that all the individual surface reactions take place. Therefore, the same gas-phase reactions were used to investigate ALD and CVD processes. In both cases, a surface was not introduced in the model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS AND DISCUSSION</head><p>Different Si and C precursors for ALD of SiC were screened with respect to their thermodynamic reactivity 01B103-3 Filatova, Hausmann, and Elliott: Investigating routes toward ALD of silicon carbide 01B103-3 The most positive DG are computed for reactions of TET and tetrafluorosilane (SiF 4 ). For tetrafluorosilane (SiF 4 ), DG is positive for reactions with all suggested carbon precursors and is also positive for TET with ethylene, propene, -2butene, propyne, and carbon tetrachloride. In the experiment, TET together with TCS are the most commonly used chlorosilane precursors for CVD of SiC. <ref type="bibr" target="#b14">15</ref> The use of TET with hexane (C 6 H 14 ) for epitaxial growth of 6H-SiC was demonstrated at 1850 C with a growth rate of 3.6-7.2 lm/h. <ref type="bibr" target="#b28">29</ref> Propane was also used with TET at high temperatures up to 1850 C yielding growth rates up to 200 lm/h. <ref type="bibr" target="#b29">30</ref> Our model shows near-zero exothermicity for TET reacting with propane and hexane at 1000 C (DG À0.3 and 0.0 eV, respectively), but much more negative values at 1850 C (À2.9 and À2.6 eV, respectively, not shown in the tables), corresponding very well with the experimental finding.</p><p>Experimentally, SiC films were grown by CVD using TCS and ethylene (C 2 H 4 ) precursors with a growth rate of 100 lm/h at 1600 C. <ref type="bibr" target="#b8">9</ref> Our calculations found TCS reacting with all of the carbon precursors to be thermodynamically favorable.</p><p>The above data include the effects of pressure via the RTlnQ term of Eq. ( <ref type="formula" target="#formula_2">3</ref>). We find that this is important: in general, including the effects of pressure makes the reactions more thermodynamically favorable, as seen in DG becoming more negative by an average of 0.6 eV/SiC at T ¼ 1000 C and by 0.3 eV/SiC at T ¼ 400 C.</p><p>It is also important to include the effects of entropy. The above data include the effects of entropy via TDS. Including TDS makes the reactions more thermodynamically favorable by decreasing DG by an average of 1.3 eV/SiC for T ¼ 1000 C and 1.0 eV/SiC for T ¼ 400 C depending on the size of the molecules. For example, for small C 2 H 2 reacting with different silicon precursors, including TDS decreased DG by an average of 0.1 eV/SiC for T ¼ 1000 C and 0.2 eV/ SiC for T ¼ 400 C, while for the bigger molecule C 6 H 14 including TDS decreased DG by an average of 1.8 eV/SiC for T ¼ 1000 C and 1.2 eV/SiC for T ¼ 400 C.</p><p>To evaluate the viability of these precursors for ALD of SiC, Gibbs energies DG at T ¼ 400 C and partial pressures P products ¼ 0.01 Torr and P reactants ¼ 1 Torr of products and reactants, respectively, were calculated and are presented in Fig. <ref type="figure" target="#fig_4">4</ref> and Table II in supplementary material. In general, we can see that most of the reactions are less favorable at this lower T, compared to DG at higher T presented in Fig. <ref type="figure">3</ref>, which may be one reason why ALD of SiC is difficult. Nevertheless, direct chemical reactions of disilane (Si 2 H 6 ), silane (SiH 4 ), monochlorosilane (SiH 3 Cl), or DCS Si precursors with all suggested carbon precursors are thermodynamically favorable which suggests that these precursor combinations may give viable indirect reactions in ALD. The most negative DG are for ethyne (C 2 H 2 ), carbontetrachloride (CCl 4 ), and trichloromethane (CHCl 3 ). FIG. <ref type="figure">2</ref>. Hess cycle representing screening approach for calculating DE using gas-phase cluster software (in our case <ref type="bibr">TURBOMOLE)</ref> and periodic software (in our case <ref type="bibr">VASP)</ref> with tetramethylsilane [Si(CH 3 ) 4 ] as a reference molecule for SiC. DE 3 is the desired energy, which is used to calculate Gibbs energy in Eq. (3). 01B103-4 Filatova, Hausmann, and Elliott: Investigating routes toward ALD of silicon carbide 01B103-4 J. Vac. Sci. Technol. A, Vol. 35, No. 1, Jan/Feb 2017</p><p>A quite different process for low temperature silicon carbide ALD was proposed by Thompson using silicontetrachloride and trimethylaluminium as precursors. <ref type="bibr" target="#b30">31</ref> We postulated that the corresponding chemical reaction is 3SiCl 4 þ Al(CH 3 ) 3 ! 3SiC þ AlCl 3 þ 9HCl and found that DG for this reaction at 400 C is À0.54 eV per SiC. This is of the same magnitude as DG for the other ALD processes that we have computed to be viable and thus provides further validation for our approach.</p><p>To assess single-source precursors, the thermodynamics of their decomposition into SiC and by-products was calculated at T ¼ 400 C and T ¼ 1000 C. The corresponding DG are presented in Fig. <ref type="figure">5</ref> and in the supplementary material. We find that unimolecular decomposition of most of these precursors is thermodynamically favorable at low temperature. Experimentally, growth of SiC by CVD using singlesource precursors was shown for 1,3-disilabutane (SiH 3 -CH 2 -SiH 2 -CH 3 ) (low pressure CVD, 750 C), <ref type="bibr" target="#b15">16</ref> silacyclobutane [SiH 2 (CH 2 ) 3 ] (T ¼ 800-1200 C), 20 methylsilane (CH 3 -SiH 3 ) (T ¼ 800 C), <ref type="bibr" target="#b16">17</ref> and MTS (T ¼ 1570 C). <ref type="bibr" target="#b31">32</ref> Our calculations show that decomposition of 1,3-disilabutane, silacyclobutane, and methylsilane is thermodynamically favorable at T ¼ 1000 C with DG ¼ À3.5, À4.5, and À3.8 eV/SiC, respectively. For decomposition of the MTS precursor, we obtained negative DG ¼ À1.8 eV/SiC at 1000 C. Experimentally, it was shown that growth of SiC using MTS is favorable only at 1570 C. Indeed our theoretical estimation of the Gibbs energy for MTS at 1570 C gives negative DG ¼ À3.4 eV/SiC. This shows that our theoretical results correspond to experimental studies in all of the cases.</p><p>Unimolecular decomposition is undesirable as a reaction strategy for ALD because it does not allow surface reactions to self-limit. It is therefore important to check whether proposed ALD precursors can decompose and lead to non-ALD growth. The data in Fig. <ref type="figure">5</ref> show that the precursors that are the most resistant toward decomposing at 400 C are dichlorosilacyclobutane [SiCl 2 (CH 2 ) 3 ] and MTS with DG ¼ 0.9 and 0.2 eV/SiC, respectively. On the other hand, the precursors silacyclobutane [SiH 2 (CH 2 ) 3 ] and DIPAS are the most likely to decompose at 400 C.</p><p>In conclusion, we carried out a theoretical thermodynamic analysis of different precursor combinations for SiC thin film by calculating Gibbs energy DG, including the effects of pressure and temperature (G ¼ DE À TDS þRTlnQ). The theoretical model was validated for existing chemical reactions in CVD of SiC process at 1000 C and partial pressures P products ¼ 0.01 Torr and P reactants ¼ 1 Torr. In all of the cases, our theoretical results correspond to experimental studies. For ALD of SiC at 400 C and FIG. 5. (Color online) Gibbs energies DG for decomposition reactions of single-source precursors containing both Si and C at CVD temperature 1000 C and at ALD temperature 400 C. The most favorable reactions are with the most negative DG. The least favorable reaction is with the positive DG. (Et)-ethyl group -CH 2 -CH 3 ; (iPr)-iso-propyl group -CH 2 -CH 2 -CH 3 . 01B103-5 Filatova, Hausmann, and Elliott: Investigating routes toward ALD of silicon carbide 01B103-5 JVST A -Vacuum, Surfaces, and Films</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>01B103- 2 2 J</head><label>22</label><figDesc>Filatova, Hausmann, and Elliott: Investigating routes toward ALD of silicon carbide 01B103-. Vac. Sci. Technol. A, Vol. 35, No. 1, Jan/Feb 2017</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. (Color online) Optimized structures for the possible precursors for ALD of SiC performed in TURBOMOLE with PBE functional. (a) methane (CH 4 ), (b) ethane (C 2 H 6 ), (c) propane (C 3 H 8 ), (d) n-butane (C 4 H 10 ), (e) n-hexane (C 6 H 14 ), (f) ethylene (C 2 H 4 ), (g) propene (C 3 H 6 ), (h) -2-butene (C 4 H 8 ), (i) ethyne (C 2 H 2 ), (j) propyne (C 3 H 4 ), (k) carbontetrachloride (CCl 4 ), (l) iodomethane (CH 3 I), (m) trichloromethane (CHCl 3 ), (n) chloromethane (CH 3 Cl), (o) disilane (Si 2 H 6 ), (p) silane (SiH 4 ), (q) monochlorosilane (SiH 3 Cl), (r) DCS, (s) TCS, (t) hexachlorodisilane (Si 2 Cl 6 ), (u) TET, (v) tetrafluorosilane (SiF 4 ), (w) dichlorosilacyclobutane [SiCl 2 (CH 2 ) 3 ], (x) dimethyldichlorosilane [Si(CH 3 ) 2 Cl 2 ], (y) bis(trichlorosilyl)methane [(SiCl 3 ) 2 CH 2 ], (z) methylsilane (CH 3 -SiH 3 ), (aa) 1,3disilabutane(SiH 3 -CH 2 -SiH 2 -CH 3 ), (bb) silacyclobutane [SiH 2 (CH 2 ) 3 ], (cc) tetraethylorthosilicate Si(OEt) 4 , (dd) DIPAS, (ee) bis(diethylamino)silane H 2 Si[N(Et) 2 ] 2 , and (ff) MTS. (Et)-ethyl group -CH 2 -CH 3 ; (iPr)-iso-propyl group -CH 2 -CH 2 -CH 3 .</figDesc><graphic coords="4,128.75,58.96,354.69,439.37" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 3 . 4 J</head><label>34</label><figDesc>FIG. 3. (Color online) Gibbs energies DG for reactions of various Si and C precursors at CVD temperature 1000 C. The most favorable reactions are those with the most negative DG. The least favorable reactions have the most positive DG.</figDesc><graphic coords="5,53.63,611.72,504.91,111.18" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><figDesc>The most negative DG are for decomposition of diisopropylaminosilane [DIPAS, SiH 3 N(iPr) 2 ] and silacyclobutane [SiH 2 (CH 2 ) 3 ]. The most positive DG is for dichlorosilacyclobutane [SiCl 2 (CH 2 ) 3 ].</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIG. 4 .</head><label>4</label><figDesc>FIG. 4. (Color online) Gibbs energies DG for reactions of various Si and C precursors at ALD temperature 400 C. The most favorable reactions are those with the most negative DG. The least favorable reactions have the most positive DG. Silane (SiH 4 ), disilane (Si 2 H 6 ), monochlorosilane (SiH 3 Cl), ethyne (C 2 H 2 ), carbontetrachloride (CCl 4 ), and trichloromethane (CHCl 3 ) are predicted to be the most favorable precursors for ALD of SiC thin films.</figDesc><graphic coords="6,53.63,58.96,504.91,108.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>J. Vac. Sci. Technol. A, Vol. 35, No. 1, Jan/Feb 2017</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>P products ¼ 0.01 Torr and P reactants ¼ 1 Torr, the precursors disilane (Si 2 H 6 ), silane (SiH 4 ) or monochlorosilane (SiH 3 Cl) with ethyne (C 2 H 2 ), carbontetrachloride (CCl 4 ), or trichloromethane (CHCl 3 ) are predicted to be the most promising.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ACKNOWLEDGMENT</head><p>The authors thank Lam Research Corporation for the financial support of this work.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">G</forename><surname>Neudeck</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Handbook</surname></persName>
+		</author>
+		<editor>W.-K. Chen, 2nd ed.</editor>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>CRC</publisher>
+			<biblScope unit="page" from="5" to="6" />
+			<pubPlace>Boca Raton, FL</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hultqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mater</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.mattod.2014.04.026</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">236</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V S</forename><surname>Chandrashekhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Sudarshan</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssa.201228319</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi</title>
+		<imprint>
+			<biblScope unit="volume">209</biblScope>
+			<biblScope unit="page">2455</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hallin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">G</forename><surname>Ivanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Egilsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kordina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Janz En</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0022-0248(97)00409-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cryst. Growth</title>
+		<imprint>
+			<biblScope unit="volume">183</biblScope>
+			<biblScope unit="page">163</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V S</forename><surname>Chandrashekhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">B</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Caldwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sudarshan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcrysgro.2010.11.128</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cryst. Growth</title>
+		<imprint>
+			<biblScope unit="volume">316</biblScope>
+			<biblScope unit="page">60</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Matsunami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nishino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Odaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0022-0248(75)90113-X</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cryst. Growth</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">72</biblScope>
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Furumura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Doki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mieno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Eshita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maeda</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2095945</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">135</biblScope>
+			<biblScope unit="page">1255</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Macmillan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Loboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Carlson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wan</surname></persName>
+		</author>
+		<idno type="DOI">10.4028/www.scientific.net/MSF.527-529.175</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Sci. Forum</title>
+		<imprint>
+			<biblScope unit="volume">527</biblScope>
+			<biblScope unit="page">175</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Leone</surname></persName>
+		</author>
+		<idno type="DOI">10.4028/www.scientific.net/MSF.527-529.179</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Sci. Forum</title>
+		<imprint>
+			<biblScope unit="volume">527</biblScope>
+			<biblScope unit="issue">259</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Glass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/JMR.1988.0521</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Res</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">521</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hassan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Bergman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hallin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Janz En</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.200606470</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">475</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Advances in SiC Growth Using Chloride-Based CVD</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Leone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Link€ oping</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+		<respStmt>
+			<orgName>Linkoping University</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Leone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Beyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Darakchieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Janz En</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcrysgro.2007.07.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cryst. Growth</title>
+		<imprint>
+			<biblScope unit="volume">307</biblScope>
+			<biblScope unit="page">334</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kotamraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Krishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Koshka</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssr.200903149</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi RRL</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">157</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Leone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kordina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nishizawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Koshka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Janz En</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr200257z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page">2434</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Roper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Carraro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">T</forename><surname>Howe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Maboudian</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2357267</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Trans. 3</title>
+		<imprint>
+			<biblScope unit="page">267</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Sturm</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.366192</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">4558</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D.-C</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-G</forename><surname>Jee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-B</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Boo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tsf.2003.12.140</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">459</biblScope>
+			<biblScope unit="page">7</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B.-T</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-K</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-K</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/JMR.1999.0006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Res</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">24</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Steckl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Loboda</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.110140</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">3347</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Maimaiti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ablat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Filatova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Fomengia</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adma.201504043</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">5367</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>B€ Ar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>H€ Aser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Horn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Olmel</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0009-2614(89)85118-8</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page">165</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthm€ Uller</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0927-0256(96)00008-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">15</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.77.3865</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">3865</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Weigend</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/B508541A</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">3297</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Eichkorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Treutler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ohm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0009-2614(95)00621-A</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">240</biblScope>
+			<biblScope unit="page">283</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hogekamp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1567253</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page">9136</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Bl€ Ochl</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.50.17953</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page">17953</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">V</forename><surname>Muench</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Pfaffeneder</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0040-6090(76)90353-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">39</biblScope>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dhanaraj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dudley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ragothamachar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcrysgro.2005.11.021</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cryst. Growth</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page">344</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Low temperature silicon carbide deposition process</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Thompson</surname></persName>
+		</author>
+		<idno>WO/2012/039833</idno>
+		<imprint>
+			<date type="published" when="2012-03-29">29 March 2012</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">patent</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Leone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lundskog</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Janz En</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssr.200802183</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi RRL</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">278</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">for the analyzed reactions</title>
+		<idno type="DOI">10.1116/1.4964890</idno>
+		<ptr target="http://dx.doi.org/10.1116/1.4964890" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

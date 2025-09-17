@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Atomic layer etching of indium tin oxide  Special Collection: Atomic Layer Etching (ALE)</title>
+				<funder ref="#_GXTtXwZ">
+					<orgName type="full">European Union</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-01-30">30 January 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Christoffer</forename><surname>Kauppinen</surname></persName>
+							<email>christoffer.kauppinen@vtt.fi</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Quantum photonics research team</orgName>
+								<orgName type="institution">VTT Technical Research Centre of Finland Ltd</orgName>
+								<address>
+									<addrLine>Tietotie 3</addrLine>
+									<postCode>FI-02044</postCode>
+									<settlement>VTT</settlement>
+									<region>Espoo</region>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Quantum photonics research team</orgName>
+								<orgName type="institution">VTT Technical Research Centre of Finland Ltd</orgName>
+								<address>
+									<addrLine>Tietotie 3</addrLine>
+									<postCode>FI-02044</postCode>
+									<settlement>VTT</settlement>
+									<region>Espoo</region>
+									<country key="FI">Finland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Atomic layer etching of indium tin oxide  Special Collection: Atomic Layer Etching (ALE)</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-01-30">30 January 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F6E1A3341FFEA72465FC0B419358CAEB</idno>
+					<idno type="DOI">10.1116/6.0003170</idno>
+					<note type="submission">Submitted: 25 September 2023 • Accepted: 26 December 2023 •</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Correlation between optical emission spectroscopy of hydrogen/germane plasma and the Raman crystallinity factor of germanium layers</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Indium tin oxide (ITO) is a degenerate n-type semiconductor with a wide bandgap, <ref type="bibr" target="#b0">1</ref> making it widely used as a transparent conducting oxide in various applications, such as displays <ref type="bibr" target="#b1">2</ref> and solar cells, <ref type="bibr" target="#b2">3</ref> but has not been widely used as an active material in logic applications like transistors. Lately, oxide semiconductors are being studied as emerging materials for back-end-of-line (BEOL) compatible transistors for monolithic 3D integration on complementary metal-oxide-semiconductor (CMOS) logic. <ref type="bibr" target="#b3">4</ref> Controlling lateral doping, like in Si transistors used in CMOS, is challenging in oxide semiconductors. Even having p-type doping is a challenge as the oxide semiconductors are typically n-type not to even speak of having lateral anisotype homojunctions like in conventional Si CMOS. For these reasons, the high-off state resistance in oxide transistors is commonly provided with a very thin layer of semiconductor forming the channel. The channel is fabricated then either by depositing a thin layer of semiconductor or having a recessed channel where the channel has been thinned down via etching. Examples of oxide transistors having high (. 10 6 ) on/off ratios stemming from the thin channel semiconductors are thin (%4:0-10 nm) channel ITO transistors where the sputtering rate and uniformity are painstakingly finely controlled, <ref type="bibr" target="#b4">5</ref> atomic layer deposition (ALD) <ref type="bibr" target="#b5">6</ref> indium oxide channel transistors with very thin (%1:0-3.5 nm) channels <ref type="bibr" target="#b6">7</ref> (enabled naturally by ALD), and ITO transistors with ultra-thin (%1:0-2.0 nm) recessed channels wet etched with a dilute acid solution. <ref type="bibr" target="#b7">8</ref> While ALD can naturally control the channel thickness quite ideally, the throughput of ALD is inferior to sputtering, and having a recessed channel has been demonstrated to achieve low contact resistivity merely by having a thicker semiconductor layer as the source and drain regions. <ref type="bibr" target="#b7">8</ref> Therefore, etching a channel recess has some benefits over depositing an ultra-thin channel material. Thus, etching the channel recess is critical for oxide semiconductors in 3D monolithic CMOS integration. Wet etching the channel recess by dilute acid has been demonstrated, <ref type="bibr" target="#b7">8</ref> but this is undoubtedly difficult to control due to nm s -scale etch rate <ref type="bibr" target="#b7">8</ref> and isotropic etch profiles typical in wet etching, <ref type="bibr" target="#b8">9</ref> which cause unwanted undercut. In addition, while the dilution slows the etch process, it is not selflimited and can still be highly dependent on pattern density due to differences in local density of reactants/reaction products, also known as the loading effect. A digital etch has been demonstrated for amorphous indium gallium zinc oxide (IGZO) nanowire field-effect transistors using sequential BCl 3 plasma treatment and isopropanol rinse to remove the chloride layer, <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> but naturally, a true dry process would be preferred as the described process is extremely slow and mandates taking into account the unavoidable undercut due to the wet etch isotropicity.</p><p>Atomic layer etching (ALE) <ref type="bibr" target="#b12">13</ref> is ideally suited to controllably etch semiconductor materials layer by layer with a self-limited etch rate, giving simple control of the channel recess thickness. ALE is a technique where a material is removed layer by layer using sequential self-limiting reactions, usually two sequential gas-solid reactions (Reaction A and Reaction B) with purges (Purge A and Purge B) in between, <ref type="bibr" target="#b12">13</ref> where typically, Reaction A is the surface modification step and Reaction B is the modified surface removal step.</p><p>ALE processes have been developed for a multitude of oxide materials like insulating oxides, e.g., alumina (Al 2 O 3 ), <ref type="bibr" target="#b13">14</ref> silica (SiO 2 ), <ref type="bibr" target="#b14">15</ref> zirconia (ZrO 2 ), <ref type="bibr" target="#b15">16</ref> and hafnia (HfO 2 ), <ref type="bibr" target="#b16">17</ref> as well as for semiconducting oxides, e.g., titania (TiO 2 ), <ref type="bibr" target="#b17">18</ref> zinc oxide (ZnO) <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b19">20</ref> and gallium oxide (Ga 2 O 3 ), <ref type="bibr" target="#b20">21</ref> but for ITO there is no reported ALE process. For etching, the channel recess for high performance ITO transistors, an anisotropic ALE process is highly desired, thus the BCl 3 surface modification and anisotropic modified surface removal, that is popular in oxide ALE, <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> is a tempting starting point.</p><p>In this work, an ALE process for sputtered ITO thin films is studied using thermal surface modification with BCl 3 and modified surface removal by low ion energy Ar plasma in a conventional reactive-ion etching (RIE) system. This is the first published oxide ALE using BCl 3 and Ar ions, as previous works used an Ar neutral beam in their studies. <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. EXPERIMENT</head><p>First, ITO thin films were fabricated for ALE studies. ITO was sputtered onto 4 in. Si wafers from an ITO target (from Testbourne) with a composition of 90 wt% In2O3 and 10 wt% SnO2 with a purity of 99.99%, using RF sputtering at 400 W in a VonArdenne CS 730 S cluster system sputtering tool. For the ALE tests, the sputtered films had over 100 nm thickness measured by ellipsometry.</p><p>The ALE experiments were conducted in an Oxford Instruments PlasmalabSystem 100, a conventional inductively coupled plasma (ICP) reactive ion etching (RIE) tool, though the ICP function was not used, so the system was used essentially in a capacitively coupled plasma RIE configuration. To clarify the system is a conventional dry etch tool and not a dedicated ALE tool. The author used the same system for GaN ALE studies previously, <ref type="bibr" target="#b21">22</ref> and the same model has been used in various ALE studies. <ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref> The tool handles one wafer at a time, and, before the ALE process begins, the wafer is first vacuumed in a load-lock below p ¼ 4 Â 10 À2 Torr, then inserted in the main chamber, where the wafer is pumped to vacuum that is lower than p ¼ 9 Â 10 À5 Torr. The ALE process is schematically shown in Fig. <ref type="figure">1</ref>. In Reaction A, the BCl 3 reacts with the surface forming surface metal chlorides and boron oxychlorides (BOCl). BCl 3 gas is known to efficiently bind with surface oxygen and to form stable volatile boron oxychlorides, <ref type="bibr" target="#b25">26</ref> which is commonly exploited when dry etching oxide materials or surface deoxidation in dry etching. <ref type="bibr" target="#b25">26</ref> BCl 3 has been used as the surface modification step in realizing oxide ALE, <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> as the BCl 3 gas can react with oxides to form volatile boron oxychlorides. <ref type="bibr" target="#b25">26</ref> In Purge A, the excess, unreacted BCl 3 is purged out. Then, in Reaction B, the modified surface is removed with low energy Ar ions. The Ar ions provide energy to volatilize the tin and indium surface chlorides on the surface. The oxygen is removed as boron oxychlorides like BOCl, <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b25">26</ref> which is known to be volatile. The thermal energy also contributes in removing the modified surface, and two temperatures: room temperature 22 C and 150 C were used in the end for ALE experiments. Finally, in Purge B, the reaction products are removed and the cycle can start again. He backing was used to keep the wafers at the set (platen) temperature. Thermal surface modification with BCl 3 was chosen over plasma modification due to the simplicity of thermal surface modification. Although plasma modification can be faster than thermal due to enhanced plasma reactivity, there are less parameters to optimize in thermal surface modification, namely, no plasma inductively couple power nor RF power at all in Reaction A. An additional issue with plasma surface modification using BCl 3 is the formation of chemically passivating BClx polymers, that the low energy Ar ions in Reaction B would have to punch through. <ref type="bibr" target="#b25">26</ref> Thus, if plasma modification using BCl 3 would be used it might necessitate using higher ion energies due to polymer formation, which could lower the synergy.</p><p>The etch per cycle (EPC) was monitored ex situ with a He-Ne laser ellipsometer (Philips Plasmos SD-2300). 30 points from each wafer was measured at 70 angle of incidence before and after each ALE run. EPC was calculated from the change of the average thickness divided by the number of cycles, and ALE effect on uniformity was obtained from the average, and standard deviation, of the thin film thickness.</p><p>Atomic force microscopy (AFM) was used to study resulting topography and roughness. An Oxford Instruments model Jupiter XR AFM tool was used in tapping mode for this purpose. For this study, ITO was sputtered onto 6 in. wafers and patterned using standard photolithography using AZ5214E photoresist (from Microchemicals). The ITO was then etched using the ALE process, after which the photoresist was removed using acetone. Acetone was then rinsed first in isopropanol and de-ionized water. Finally, photoresist residues were removed using O 2 plasma stripping in a PRS900 plasma stripper (Oxford Instruments) to have a clean surface for the AFM.</p><p>The Gwyddion software was used in analyzing the AFM data. <ref type="bibr" target="#b26">27</ref> The VESTA 3 software 12 was used to visualize and draw the crystals, atoms, and molecules in Fig. <ref type="figure">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS AND DISCUSSION</head><p>Initially, ITO ALE at room temperature was investigated. The parameters are similar to the ones discussed later (see Fig. <ref type="figure">1</ref> for the parameters) except that room temperature was used and the required RF powers were much higher. The room temperature ALE process uses thermal surface modification with BCl 3 (Reaction A), and modified surface removal with Ar ions (Reaction B), with corresponding Ar purges in between. The room temperature ALE resulted in a very low etch per cycle (EPC) of EPC = 0.47 Å when using RF = 50 W (DC bias % À25 V). See supplementary material <ref type="bibr" target="#b27">28</ref> for Fig. <ref type="figure">S1</ref> for the saturation curve of Reaction B at room temperature. This room temperature ITO ALE process was then tested for synergy using the conventional definition S ¼</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ALEÀ(αþβ) ALE</head><p>Â 100% where ALE is the ALE EPC, α is the EPC for just Reaction A and β is the EPC for just Reaction B. <ref type="bibr" target="#b28">29</ref> See ARTICLE pubs.aip.org/avs/jva supplementary material <ref type="bibr" target="#b27">28</ref> for Fig. <ref type="figure" target="#fig_3">S2</ref> for the synergy test at room temperature. For this, runs with only Reaction A followed by purges were done as well as runs with only Reaction B followed by purges and naturally the whole sequence (Reaction A, Purge A, Reaction B, Purge B). 100 cycles of BCl 3 exposure (Reaction A) followed by Ar purges (Purge A) did not etch the surface but according to ellipsometry increased the thickness by 3 Å. This could be the added thickness due to BCl 3 chemisorption as the van der Walls diameter of a Cl atom is roughly 3.5 Å. <ref type="bibr" target="#b29">30</ref> The individual Ar ion step (Reaction B) followed by an Ar purge (Purge B) gave an EPC = 1.26 Å, which has a higher EPC than the combined ALE process. So, in fact, at room temperature, BCl 3 actually lowers ITO ALE EPC. This is very likely due to the low volatility of indium chlorides, which have high boiling points. <ref type="bibr" target="#b29">30</ref> As for the synergy parameter, <ref type="bibr" target="#b28">29</ref> the higher etch rate with only Reaction B and only Reaction A giving essentially zero EPC compared to the combined ALE cycle (Reaction A+B) gives a synergy parameter of S ¼ 0:47 ÅÀ(À0:03 Åþ1:26 Å) 0:47 Å Â 100% % À163%. To the best of the author's knowledge, this is the first reported negative synergy parameter. It is not entirely impossible to imagine an ALE process where the surface modification step (Reaction A) is pulsing one chemical to inhibit the etch rate in Reaction B (Ar milling or other step) to obtain self-limited layer-by-layer ALE. However, in the context of this work, where argon ions are used in Reaction B, the milling without BCl 3 pulsing is so aggressive that there is a risk of damage ITO. Then, the desired application, recessed transistor channels, would surely be impacted detrimentally, for example, by reduced mobility due to damage in the polycrystalline material. The room temperature experiments proved to be unfruitful, but the results are in supplementary material <ref type="bibr" target="#b27">28</ref> for the enthusiastic reader. Figure <ref type="figure">S1</ref>  <ref type="bibr" target="#b27">28</ref> shows the saturation curve for Reaction B at room temperature, where no self-limiting EPC is seen. Figure <ref type="figure" target="#fig_3">S2</ref>  <ref type="bibr" target="#b27">28</ref> shows the room temperature ALE synergy test with the described negative synergy parameter.</p><p>To combat the low volatility of the indium chlorides, the temperature of the ALE process was increased to 150 C and this temperature was used in all following experiments and data points. This temperature of 150 C was chosen as typically when InP is dry etched using Cl 2 plasma an elevated temperature, between 150 and 180 C, <ref type="bibr" target="#b30">31</ref> is needed due to the low volatilities of indium chlorides. The elevated temperature enhanced the EPC, as can be seen in the energy scan in Fig. <ref type="figure" target="#fig_3">2</ref>  crosses) and the Ar milling EPC (black squares) as a function of the RF power. The Ar milling (Reaction B) process is just the ALE process with BCl 3 surface modification (Reaction A) removed. The Ar milling only data are presented here to asses when the Ar ions might start to appreciably mill or damage the ITO and to visually show the etch synergy. The resulting DC bias from the RF power is shown on the top axis. The DC bias accelerates the Ar ions during Reaction B and thus determines the ion energy.  <ref type="figure" target="#fig_3">2(a)</ref> shows that now at 150 C the EPC is higher at 10 W plasma power than with 50 W at room temperature, a clear indication that the temperature was initially too low for efficient desorption of the indium chlorides. Furthermore, the ALE EPC seems to plateau after 20 W indicating that the ALE energy window could be 20-30 W. However, the Ar milling EPC starts to rise appreciably after 15 W, and a more careful analysis is warranted.</p><p>Figure <ref type="figure" target="#fig_3">2</ref>(b) presents the synergy scan that is the synergy parameter as a function of the plasma power. For the synergy scan, energy scan data were used together with a measurement of Reaction A only to calculate the synergy parameter <ref type="bibr" target="#b28">29</ref> as a function of the plasma power. The shapes and behavior of both the energy scan (which does not extend to the unwanted sputtering regime) and synergy scan are very similar to other ALE work. <ref type="bibr" target="#b28">29</ref> Figure <ref type="figure" target="#fig_3">2(b)</ref> shows both 15 W and 20 W ALE processes to have good synergies of 82% and 78%, respectfully, but drops below 60% for 30 W. Clearly using only the energy scan, see Fig. <ref type="figure" target="#fig_3">2(a)</ref>, alone to determine the ALE energy window is not practical. It is then determined here that the practical ALE energy window to lay here roughly between 15 and 20 W as in this region (1) the EPC has roughly saturated to an appreciable level, (2) the parasitic milling is low, and (3) the synergy is high. The following discussion will revolve around characterizing the 15 W plasma power ITO ALE process at 150 C.</p><p>Figure <ref type="figure" target="#fig_4">3</ref>(a) shows the synergy test for the ITO ALE process at 15 W. In the synergy test, the ALE cycle was run with both reactions (Reaction A+B) with purges in between, and with the individual Reactions A or B (with purges in between) whose EPC is marked respectfully α and β. Ideally, the individual reactions do not etch the ITO. The EPC was measured for each bar from 100 cycles and measured with ellipsometry as described earlier. Both Reaction A and Reaction B remove a small amount of material. The BCl 3 surface modification in Reaction A has an EPC of α ¼ 0:09 Å. Then, apparently at the elevated temperature of 150 C Reaction A can remove material from the surface but extremely slowly. Interestingly the boiling point of SnCl 4 <ref type="bibr" target="#b29">30</ref> is below the used process temperature, so it is possible that in the absence of ion bombardment that BCl 3 first attacks tin on the surface and thus enables further, albeit slow, attack to the surface indium and oxygen. Reaction B's milling has an EPC of β ¼ 0:11 Å. A small but measurable milling rate like this is expected. The combined ALE cycle of Reaction A+B has an average EPC = 1.10 Å. Thus, the combined Reaction A and B into the ALE cycle gives a much higher EPC than the individual reactions, indicating high synergy. The ALE EPC = 1.10 Å is in line with other oxide ALE EPCs using BCl 3 and argon removal, where the EPCs are roughly around 1 Å. <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> Here Ar ions are for the first time used for modified surface removal in combination with BCl 3 surface modification for oxide ALE instead of energetic Ar neutrals that have been used in many pioneering oxide ALE studies with BCl 3 . <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> Ar ions are commonly available in RIE tools and often used in many ALE studies for Reaction B. <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b28">29</ref> The synergy parameter value of S = 82% is very high and indicates a quite ideal ALE process.</p><p>Figure <ref type="figure" target="#fig_4">3</ref>(b) shows the etch depth and EPC of the ITO ALE process as a function of the number of cycles. The EPC seems to be nearly constant and, therefore, does not depend on the number cycles as expected for a quite ideal ALE process, see Fig. <ref type="figure" target="#fig_4">3(a)</ref>. Therefore, the etch depth naturally increases fairly linearly, which is typical for ALE processes. <ref type="bibr" target="#b12">13</ref> Figure <ref type="figure" target="#fig_4">3</ref>(c) presents the saturation curve for Reaction A. The EPC seems to be at least quasi-self-limiting if not totally selflimiting. There seems to be a gentle upward slope when increasing the BCl 3 exposure time. This is not surprising when looking at the synergy test in Fig. <ref type="figure" target="#fig_4">3(a)</ref>. At the used elevated temperature of 150 C the BCl 3 seems to slightly attack the surface (α ¼ 0:09 Å). The very small slope could probably be mitigated to perfect self-saturation by reducing temperature as at room temperature BCl 3 alone did not cause etching, but this is not worth the effort as lowering temperature from 150 C would likely strongly decrease the overall ALE EPC and the synergy due to the low volatility of the indium chlorides. The chosen time of 20 s for surface modification (Reaction A) saturates the EPC well. Furthermore, the long reactant pulse choice most likely enables also surface modification not only on planar ITO surfaces where the gas easily reaches, but also into narrow photoresist openings. Finally, the saturation behavior in Fig. <ref type="figure" target="#fig_4">3(c</ref>) is a clear sign that the BCl 3 contributing to ALE is chemisorbed to the surface instead of physisorbed. <ref type="bibr" target="#b5">6</ref> The EPC is selflimiting even when the BCl 3 dose is increased from 5 to 20 s so the BCl 3 contributing to ALE has to be chemisorbed to a layer of self-limited thickness. <ref type="bibr" target="#b5">6</ref> As physisorbtion is always reversible the very long 20 s Purge A would remove physisorbed BCl 3 from the surface, <ref type="bibr" target="#b5">6</ref> the removal of which would induce a large change in EPC, especially at low doses, if the BCl 3 contributing to the ALE would be physisorbed. Some BCl 3 can be physisorbed but the Purge A seems to be long enough that extra BCl 3 is removed and only the chemisorbed reactant contributes to ALE.</p><p>Figure <ref type="figure" target="#fig_4">3</ref>(d) present the saturation curve for Reaction B, the modified surface removal step using Ar ions. The ITO ALE EPC is plotted as a function of the Ar plasma step time (red crosses). There seems to be an initial lag time of roughly 2 s before the EPC starts to aggressively rise, as it does between 5 and 8 s of Ar plasma exposure. The lag time can be attributed to the finite ignition time of the plasma. After ignition, the Ar ions hitting the ITO surface start removing the volatile compounds, and the EPC saturates to a near constant value after 8 s. The ALE process window is clearly the plateau from 8 to 15 s where the EPC is nearly constant with a very small increase in EPC due to Ar ion milling. However, after 15 s there is a nonliner increase in the EPC. Similar behavior related to prolonged ion removal step in ALE causing a nonlinear increase in EPC has been found in other works. <ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b32">33</ref> As the behavior is only apparent at long ion bombardment times in Reaction B, then the heat accrued during the step might lead to enhanced milling at the ITO top surface. For this reason, Fig. <ref type="figure" target="#fig_4">3(d</ref>) also shows the Ar milling only (Reaction B only) EPC as a function of the step time (black squares). Clearly, Ar milling has linear EPC as a function of the ion dose. Therefore, the nonlinear increase in EPC when the ion dose is increased is not related to heat but is unfortunately connected somehow to the surface modification step Reaction A. The increase might be due to the prolonged Ar milling creating a more reactive surface, for example, by amorphizing the surface with increasing dose or increasing the reactive surface area in the ångströmscale. However, when the ion dose is kept moderate, 8-15 s, the EPC shows good self-saturation.</p><p>The thin film uniformity is of vital importance in semiconductor technology processes and, especially, when discussing accurate dry etching processes like the ångström-scale accuracy of the ITO ALE. Table <ref type="table">I</ref> shows the uniformity data of the samples in Fig. <ref type="figure" target="#fig_4">3(b)</ref>, which are all with same ALE process parameters but with varying cycles. As is the standard in ALD and ALE literature when discussing uniformity the nonuniformity metrics (lower is better) are used. In Table <ref type="table">I</ref>, both the absolute nonuniformity or standard deviation (σ) and relative nonuniformity (CV) are given. For the relative nonuniformity, the coefficient of variation (standard deviation divided by the average thickness hence the acronym CV) is used as a metric instead of the often used max-min divided by average as with 30 measurement points the σ describes the film better than the max-min. The change in uniformity after ALE is the most interesting information in Table <ref type="table">I</ref>. What jumps out from the data is that for every sample the absolute uniformity is slightly better (σ decreases). If the ALE would only retain the absolute uniformity one would expect that by process variability alone that Δσ would have both small negative and positive values. The dataset in Table <ref type="table">I</ref> is not large enough for proper statistical analysis (the ALE treatments are with varying cycles with maximum 2 point with the exact same treatment) but what can be said even from this data is that the absolute uniformity does not degrade, that is, the absolute uniformity is either retained or improved. The relative uniformity on the other hand seems to degrade a bit especially with longer cycle numbers. This is hardly surprising as if the surface features would be perfectly retained and the film would be just thinned, then the relative nonuniformity would naturally increase even in this scenario. From Table <ref type="table">I</ref>, the ITO ALE etch nonuniformity (ALE effect on relative nonuniformity or ΔCV) is then 2%pt. in the worst case. Overall, the developed ITO ALE process shows excellent properties as the absolute uniformity is at least retained if not improved. Only very few works <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35</ref> report the ALE effect on uniformity, and if ALE processes are going to be widely adopted there is a need to report uniformity in a standardized fashion and the absolute nonuniformity σ and relative nonuniformity CV are natural candidates.</p><p>Figure <ref type="figure" target="#fig_5">4</ref> shows an AFM scan of a grating photolithographically patterned on ITO using the ALE process. The ITO grating has 1 μm lines with 3 μm period. Conventional photoresist (AZ5241E, from Microchemicals) was photolithographically patterned on ITO and then used as a soft mask for the ALE, see Experiment section for details. 100 cycles using 20 W RF power was used for the ALE.</p><p>TABLE I. ALE effect on ITO thin film thickness nonuniformity. Thickness nonuniformity is characterized on the wafer level as absolute nonuniformity (standard deviation, σ) and as relative nonuniformity (coefficient of variation or standard deviation divided by average, CV) in percentage.  shows the 2D map of the topography of the grating. The etched stripes in Fig. <ref type="figure" target="#fig_5">4</ref>(a) are clearly smoother when looking at the 3D graph, and overall, the ALE seems to produce nice clean and anisotropic etch profiles. Anisotropicity is much valued in dry etch processes for high resolution photolithography as it enables dense lines to be patterned without fear of undercut. Figure <ref type="figure" target="#fig_5">4</ref>(b) shows the 2D topography of the grating, and the lines are well defined. Some shallow scratches are visible on the unetched surface. From Fig. <ref type="figure" target="#fig_5">4</ref>(b), the root mean square (RMS) areal surface roughness can be calculated. The etched areas have a surface roughness of 0.49 nm while the unetched areas have a surface roughness of 0.99 nm. Thus, the developed ALE has a smoothing effect on the etched ITO surface. The 100 cycles reduced surface roughness by 51% and a deeper etch would probably reduce this even more. This dramatic roughness reduction is not entirely unexpected, as high synergy ALE processes are expected to show the ALE smoothing effect, <ref type="bibr" target="#b33">34</ref> and the developed ITO ALE showed a very high synergy of 82%. The ALE smoothing effect is well known <ref type="bibr" target="#b33">34</ref> and manifests also in anisotropic ALE processes and is one of the emerging key benefits of dry etching with ALE. <ref type="bibr" target="#b33">34</ref> Smoothing of the etched surface is highly desirable when patterning transistor channels as surface roughness causes extra surface scattering, which reduces carrier mobility. A self-smoothing dry etch process brings either extra flexibility or speed to nanofabrication processes, as initially rougher films can be used in nanofabrication to make smooth channels, or processing steps can be reduced for thin films, as there is no need for an additional smoothing step after dry etching as roughness does not increase.</p><p>As the described ALE process worked on ITO, then it is reasonable to expect that it would also work on undoped indium oxide thin films with the exact same parameters as described here. The ALE on undoped indium oxide could have even higher synergy than the already high 82% for ITO as some Sn can be removed as SnCl 4 just in Reaction A as the process temperature is over its boiling point. <ref type="bibr" target="#b29">30</ref> BCl 3 and Ar are widely available in many conventional dry etch tools and the author hopes that many ALE processes for oxide semiconductors are developed using this simple and widely available chemistry.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSIONS</head><p>The ALE process for ITO was demonstrated using thermal surface modification with BCl 3 and modified surface removal by low ion energy Ar plasma. An elevated temperature of 150 C was needed for high synergy ALE, which resulted in a synergy parameter of 82%. Room temperature ALE of ITO with the described chemistry proved to have a negative synergy parameter and was deemed unsuccessful for the ITO ALE application. The 150 C ALE ITO process gave self-limited EPC for both the surface modification and modified surface removal step. The ALE EPC = 1.1 Å is comparable to other oxide ALE processes using BCl 3 . The developed ALE process did not increase the absolute nonuniformity of the thin film. The presented ITO ALE was used successfully to etch ITO gratings with a micrometer scale period using standard photolithography and conventional photoresist as an etch mask. This demonstrates the straightforward applicability of the ITO ALE process with soft masks. Self-smoothing by ALE was observed in the etched ITO surfaces, indicating a very ideal ALE process. Dry etch processes, like the demonstrated ITO ALE, that reduce surface roughness while keeping highly anisotropic or vertical sidewalls are extremely useful when patterning very small features. Furthermore, a conventional RIE system was used in the ALE enabling scalable adoption of the process without need for dedicated tools. The low processing temperature, retention of thin film uniformity, photolithographic patterning with standard photoresists as etch masks, anisotropic etch profile, combined with self-smoothing make this ITO ALE process suitable for fabricating recessed channel ITO transistors and other ITO components.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><figDesc>(a).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><figDesc>FIG.1. Atomic layer etching process for ITO. Final developed process parameters below each step schematic. In Reaction A, the BCl 3 pulse modifies the surface. Surface metal atoms are chlorinated and surface oxygen forms boron oxychlorides with the reactant. Purge A is an argon purge that removes excess unreacted BCl 3 from the chamber. Reaction B is the modified surface removal step. A low ion energy Ar ion bombardment gives enough energy to volatilize and remove metal chlorides and the surface boron oxychlorides. Purge B removes reaction products with argon. Oxygen in black, argon in red, boron in yellow, chlorine in green, indium in purple, and tin in blue. VESTA 3 was used in drawing the images.<ref type="bibr" target="#b11">12</ref> </figDesc><graphic coords="4,53.97,101.99,504.00,283.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><figDesc>Figure</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIG. 2 .</head><label>2</label><figDesc>FIG. 2. (a) Energy scan and (b) synergy scan of the ITO ALE process at 150 C. Error bars in (a) and (b) show standard deviation from the mean, when multiple measurements are done with the same parameters.</figDesc><graphic coords="5,53.97,101.99,504.00,171.10" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIG. 3 .</head><label>3</label><figDesc>FIG. 3. (a) Synergy test for the chosen ITO ALE parameters. For parameters, see Fig. 1. Synergy parameter, ALE EPC, and the individual reaction EPCs, α, for Reaction A and β for Reaction B, are displayed in the graph. (b) ALE EPC (crosses) and etch depth (circles) as a function of the number of cycles. The lines are linear fits. The EPC line fit is nearly parallel. (c) Saturation curve for Reaction A. The BCl 3 exposure time is varied. Other parameters are constant. (d) Saturation curve for Reaction B. The ALE EPC and Ar milling only EPC as a function of the Ar plasma exposure time are shown. Other parameters constant. Error bars in (b)-(d) show standard deviation from the mean, when multiple measurements are done with the same parameters.</figDesc><graphic coords="6,53.97,101.99,504.00,335.74" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 4 .</head><label>4</label><figDesc>FIG. 4. AFM micrograph of a photolithographically patterned ITO grating using ALE. The ITO grating has 1 μm lines with 3 μm period. Conventional photoresist was used as an etch mask. The etched areas are visibly smoother than unetched areas. 100 cycles using 20 W RF power was used. (a) shows the 3D view and (b) shows the conventional 2D AFM measurement of the same region. The scan area was 10Â10 μm.</figDesc><graphic coords="7,317.03,331.48,239.98,292.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 4 (</head><label>4</label><figDesc>Figure 4(a) shows the 3D map of the topography, and Fig. 4(b)shows the 2D map of the topography of the grating. The etched stripes in Fig.4(a) are clearly smoother when looking at the 3D graph, and overall, the ALE seems to produce nice clean and anisotropic etch profiles. Anisotropicity is much valued in dry etch processes for high resolution photolithography as it enables dense lines to be patterned without fear of undercut. Figure4(b) shows the 2D topography of the grating, and the lines are well defined. Some shallow scratches are visible on the unetched surface.From Fig.4(b), the root mean square (RMS) areal surface roughness can be calculated. The etched areas have a surface roughness of 0.49 nm while the unetched areas have a surface roughness of 0.99 nm. Thus, the developed ALE has a smoothing effect on the etched ITO surface. The 100 cycles reduced surface roughness by 51% and a deeper etch would probably reduce this even more. This dramatic roughness reduction is not entirely unexpected, as high synergy ALE processes are expected to show the ALE smoothing effect,<ref type="bibr" target="#b33">34</ref> and the developed ITO ALE showed a very high synergy of 82%. The ALE smoothing effect is well known<ref type="bibr" target="#b33">34</ref> and manifests also in anisotropic ALE processes and is one of the emerging key benefits of dry etching with ALE.<ref type="bibr" target="#b33">34</ref> Smoothing of the etched surface is highly desirable when patterning transistor channels as surface roughness causes extra surface scattering, which reduces carrier mobility. A self-smoothing dry etch process brings either extra flexibility or speed to nanofabrication processes, as initially rougher films can be used in nanofabrication to make smooth channels, or processing steps can be reduced for thin films, as there is no need for an additional smoothing step after dry etching as roughness does not increase.As the described ALE process worked on ITO, then it is reasonable to expect that it would also work on undoped indium oxide thin films with the exact same parameters as described here. The ALE on undoped indium oxide could have even higher synergy than the already high 82% for ITO as some Sn can be removed as SnCl 4 just in Reaction A as the process temperature is over its boiling point.<ref type="bibr" target="#b29">30</ref> BCl 3 and Ar are widely available in many conventional dry etch tools and the author hopes that many ALE processes for oxide semiconductors are developed using this simple and widely available chemistry.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>J. Vac. Sci. Technol. A 42(2) Mar/Apr 2024; doi: 10.1116/6.0003170</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The author would like to thank <rs type="person">Olli-Pekka Kilpi</rs> and <rs type="person">Karl-Magnus Persson</rs> for interesting talks about ITO as a prospective material for ALE as well as for support. The author would also like to thank <rs type="person">Kimmo Rutanen</rs> and <rs type="person">Kristiina Rutanen</rs> for their technical help in sputtering the ITO. This work was partially supported by the <rs type="funder">European Union</rs>'s <rs type="programName">Horizon 2020 research and innovation programme</rs>'s <rs type="projectName">MISEL</rs> Project (Grant No. <rs type="grantNumber">101016734</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_GXTtXwZ">
+					<idno type="grant-number">101016734</idno>
+					<orgName type="project" subtype="full">MISEL</orgName>
+					<orgName type="program" subtype="full">Horizon 2020 research and innovation programme</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DATA AVAILABILITY</head><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Published under an exclusive license by the AVS</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AUTHOR DECLARATIONS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflict of Interest</head><p>The authors have no conflicts to disclose.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Contributions</head><p>Christoffer Kauppinen: Conceptualization (lead); Data curation (lead); Formal analysis (lead); Investigation (lead); Methodology (lead); Software (lead); Validation (lead); Visualization (lead); Writingoriginal draft (lead); Writingreview &amp; editing (lead).</p><p>Published under an exclusive license by the AVS</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hamberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Granqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-F</forename><surname>Berggren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Sernelius</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Engström</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.30.3240</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">3240</biblScope>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Jeong</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0268-1242/30/2/024002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">24002</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S.-Y</forename><surname>Lien</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tsf.2010.03.023</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">518</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Datta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dutta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Grisafe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Srinivasa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/MM.2019.2942978</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Micro</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41563-019-0455-8</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Mater</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page">1091</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1940727</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41928-022-00718-w</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Electron</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">164</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Andler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Datta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Agrawal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsnano.0c03978</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">11542</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Franssila</surname></persName>
+		</author>
+		<title level="m">Introduction to Microfabrication</title>
+		<meeting><address><addrLine>Chichester, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>nd ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">First demonstration of oxide semiconductor nanowire transistors: A novel digital etch technique, IGZO channel, nanowire width down to 20 nm, and ion exceeding 1300 μA/μm</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Han</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2021 Symposium on VLSI Technology</title>
+		<meeting><address><addrLine>Kyoto, Japan; Piscataway</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2021-06">June 2021</date>
+			<biblScope unit="page" from="1" to="2" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TED.2021.3113893</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">6610</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Momma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Izumi</surname></persName>
+		</author>
+		<idno type="DOI">10.1107/S0021889811038970</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Crystallogr</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page">1272</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jhon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jhon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.mee.2013.03.170</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron. Eng</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page">457</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Bruce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Engelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Joseph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4843575</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="01B" to="101" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1166/jnn.2009.1748</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanosci. Nanotechnol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">7379</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2832427</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid-State Lett</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">71</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.3938/jkps.54.976</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Korean Phys. Soc</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page">976</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">1183</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mameli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b12767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">38588</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c00131</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">5937</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kauppinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sundqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Suyatin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suihkonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Kauppinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sopanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4993996</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">60603</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Suyatin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sundqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Graczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Junige</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kauppinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kvennefors</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Maximov</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsanm.8b00509</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Nano Mater</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">2476</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kuzmenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lebedinskij</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Miakonkikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rudenko</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.vacuum.2022.111585</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Vacuum</title>
+		<imprint>
+			<biblScope unit="volume">207</biblScope>
+			<biblScope unit="page">111585</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dallorto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Goodyear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cooke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Szornel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kastl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schwartzberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">W</forename><surname>Rangelow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cabrini</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/ppap.201900051</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plasma Process. Polym</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">1900051</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Boron trichloride dry etching</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kobelev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Andrianov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Barsukov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Smirnov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Encyclopedia of Plasma Technology-Two Volume Set</title>
+		<meeting><address><addrLine>Boca Raton</addrLine></address></meeting>
+		<imprint>
+			<publisher>CRC</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="193" to="202" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nečas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Klapetek</surname></persName>
+		</author>
+		<idno type="DOI">10.2478/s11534-011-0096-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cent. Eur. J. Phys</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">181</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">See supplementary material online for the saturation curve of Reaction B at room temperature and for the synergy test at room temperature</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4979019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="05C" to="302" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<author>
+			<persName><forename type="first">W</forename><surname>Haynes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lide</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bruno</surname></persName>
+		</author>
+		<title level="m">CRC Handbook of Chemistry and Physics</title>
+		<meeting><address><addrLine>Boca Raton, FL</addrLine></address></meeting>
+		<imprint>
+			<publisher>CRC</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">97</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Karouta</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0022-3727/47/23/233501</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">233501</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mannequin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vallée</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Akimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chevolleau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Durand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Dussarrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Teramoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gheeraert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Mariette</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5134130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">32602</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Michaels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Delegan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tsaturyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Renzas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Awschalom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Eden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Heremans</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0002447</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">32607</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpclett.8b00997</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">4814</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hennessy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Jewell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>France</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nikzad</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4986945</idno>
+		<ptr target="ARTICLEpubs.aip.org/avs/jva" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">41512</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
