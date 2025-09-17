@@ -1,5 +1,6 @@
-## 📋 ALD-E-ImageMiner Overview
+![ALD/E-ImageMiner Logo](assets/logo.png)
 
+## 📋 ALD-E-ImageMiner Overview
 
 ## Dataset
 
