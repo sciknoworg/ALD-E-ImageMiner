@@ -4,21 +4,16 @@
 
 ## Project Overview  
 
-**ALD/E-ImageMiner** is an annotation project on figures from atomic layer deposition (ALD) and atomic layer etching (ALE) literature.  
+**ALD/E-ImageMiner** is an annotation project on figures from **atomic layer deposition (ALD)** and **atomic layer etching (ALE)** literature.  
 It aims to host gold-standard annotations for chart classification, data extraction, summarization, and question answering—providing both pilot and full-phase data to support multimodal AI research in scientific image understanding.  
 
+The project covers two main **categories**:  
+- `atomic-layer-deposition`  
+- `atomic-layer-etching`  
 
-### Organization
-
-#### Categories
-
-- atomic-layer-deposition
-- atomic-layer-etching
-
-#### Sub-categories
-
-- experimental-usecase
-- simulation-usecase
+Within each category, data is further organized into **sub-categories**:  
+- `experimental-usecase`  
+- `simulation-usecase`  
 
 ### 🗂️ Directory Structure
 ```text
@@ -33,11 +28,6 @@ data
 │   │   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
 │   │   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
 │   │   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
-│   │   │   │   │   │   ├── ...
-│   │   │   │   │   │   ├── filename B.jpg
-│   │   │   │   │   │   ├── filename.class.txt
-│   │   │   │   │   │   ├── filename.data.txt
-│   │   │   │   │   │   └── filename.summary.txt
 │   │   │   │   │   ├── formulas
 │   │   │   │   │   │   ├── filename.jpg            # (JPEG) actual formula image extracted using MinerU
 │   │   │   │   │   └── tables
@@ -48,61 +38,18 @@ data
 │   │   │   │   ├── content.tei.xml                 # (TEI-XML) structured content extracted using GROBID
 │   │   │   │   ├── content.txt                     # (Text) unstructured content extracted using MinerU
 │   │   │   │   └── layout.json                     # (JSON) bounding box and segmentation data from MinerU
-│   │   │   ├── paper #
 │   │   │   └── ...
 │   │   └── simulation-usecase
-│   │       ├── paper #
-│   │       │   ├── images
-│   │       │   │   ├── figures | formulas | tables
-│   │       │   ├── Author et al.pdf
-│   │       │   ├── content.json
-│   │       │   ├── content.md
-│   │       │   ├── content.tei.xml
-│   │       │   ├── content.txt
-│   │       │   └── layout.json
 │   │       └── ...
 │   └── atomic-layer-etching
-│       ├── experimental-usecase
-│       │   ├── paper #
-│       │   │   ├── images
-│       │   │   │   ├── figures | formulas | tables
-│       │   │   ├── Author et al.pdf
-│       │   │   ├── content.json
-│       │   │   ├── content.md
-│       │   │   ├── content.tei.xml
-│       │   │   ├── content.txt
-│       │   │   └── layout.json
-│       │   └── ... 
-│       └── simulation-usecase
-│           ├── paper #
-│           │   ├── images
-│           │   │   ├── figures | formulas | tables
-│           │   ├── Author et al.pdf
-│           │   ├── content.json
-│           │   ├── content.md
-│           │   ├── content.tei.xml
-│           │   ├── content.txt
-│           │   └── layout.json
-│           └── ...
+│       └── ...
 └── full-annotation-task
     ├── atomic-layer-deposition
     │   ├── experimental-usecase
-    │   │   ├── paper #
-    │   │   ├── ...
-    │   │   └── N
     │   └── simulation-usecase
-    │       ├── paper #
-    │       ├── ...
-    │       └── N
     └── atomic-layer-etching
         ├── experimental-usecase
-        │   ├── paper #
-        │   ├── ...
-        │   └── N
         └── simulation-usecase
-            ├── paper #
-            ├── ...
-            └── N
 ```
 
 ### 📊 Statistics
