@@ -1,7 +1,5 @@
 ![ALD/E-ImageMiner Logo](assets/logo-github.png)
 
-## 📋 ALD-E-ImageMiner Overview
-
 ## Dataset
 
 ### Organization
