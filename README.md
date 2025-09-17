@@ -1,4 +1,4 @@
-![ALD/E-ImageMiner Logo](assets/logo.png)
+![ALD/E-ImageMiner Logo](assets/logo-github.png)
 
 ## 📋 ALD-E-ImageMiner Overview
 
