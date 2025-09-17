@@ -106,11 +106,6 @@ We have defined a taxonomy of 40 figure types including "unknown". The full taxo
 | **Total** | **1938** | **0** |
 
 
-## Question–Answer Categories for Materials Science Figures
-
-[Q&A examples](QA_Examples.md) for **10 categories**, each containing **at least 5 Q\&A examples**, suitable for figures in **materials science literature**.
-
-
 ## 📖 Citation  
 
 The **ALD/E-ImageMiner project vision** is described in the following working paper, pre-released on Zenodo.  
@@ -129,10 +124,11 @@ Please cite this paper if you find this work useful:
 }
 ```
 
-## 🙏 Acknowledgements  
+## ⭐ Acknowledgements  
 
 The **ALD/E-ImageMiner** project is supported by:  
 
 - The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative, funded by the **German Research Foundation (DFG, Grant ID: 460234259)**, under the *Speedboat Annotation Project* funding scheme.  
 
 - The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover’s L3S Research Centre (co-led by applicants)**, and **University of Warwick**. AWASES hosts three fully funded PhD positions and supports advances in **generative AI, multimodal models, and FAIR scientific knowledge graph construction**.  
+
