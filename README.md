@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="180"/>
+  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo"/>
 </p>
 
 ## 📋 ALD-E-ImageMiner Overview
