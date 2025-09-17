@@ -2,7 +2,10 @@
   <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="400"/>
 </div>
 
-## Project Overview
+## Project Overview  
+
+**ALD/E-ImageMiner** is an annotation project on figures from atomic layer deposition (ALD) and atomic layer etching (ALE) literature.  
+It aims to host gold-standard annotations for chart classification, data extraction, summarization, and question answering—providing both pilot and full-phase data to support multimodal AI research in scientific image understanding.  
 
 
 ### Organization
