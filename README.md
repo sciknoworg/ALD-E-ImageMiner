@@ -1,4 +1,8 @@
-![ALD/E-ImageMiner Logo](assets/logo-github.png)
+<p align="center">
+  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="180"/>
+</p>
+
+## 📋 ALD-E-ImageMiner Overview
 
 ## Dataset
 
