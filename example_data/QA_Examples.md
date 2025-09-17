@@ -62,7 +62,8 @@ Questions can be answered in **yes/no, factoid, list, or paragraph** format. At 
 - Q: *How do the emission colors of ALD/MLD thin films compare to LED and incandescent lamps?* [figure 13](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_13.jpg) 
   A (paragraph): ALD/MLD films typically emit in the green region of the spectrum, similar to the output of LEDs and fluorescent lamps. This overlap suggests their potential use in solid-state lighting and display technologies. However, their emission is distinct from incandescent lamps, which have a warmer, broad-spectrum output, highlighting the unique advantages of thin-film phosphors.  
 
-- Q: *What performance advantage is shown when emission intensity is enhanced by a plasmonic substrate?* [figure 15](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_15.jpg) 
+- Q: *What performance advantage is shown when emission intensity is enhanced by a plasmonic substrate?* [figure 15](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_15.jpg)
+ 
   A (paragraph): The plasmonic substrate significantly amplifies the red emission from Eu-HQA films, making the signal brighter and more detectable. This enhancement arises from localized surface plasmon resonance, which boosts the excitation and emission processes. The result is a stronger photoluminescence output, which can be particularly advantageous for bio-detection applications where sensitivity is critical.  
 
 ---
