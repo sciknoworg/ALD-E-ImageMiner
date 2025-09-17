@@ -8,7 +8,12 @@
 
 It aims to host gold-standard annotations for chart classification, data extraction, summarization, and question answering—providing both pilot and full-phase data to support multimodal AI research in scientific image understanding.   
 
-### 🗂️ Directory Structure
+### 🗂️ Directory Structure  
+
+We have compiled the dataset for annotation in this repository, structured into clearly defined categories and sub-categories.  
+The layout reflects the distinction between ALD and ALE literature, as well as between experimental and simulation studies, making it easier to navigate both the pilot and full annotation phases.  
+
+
 ```text
 data
 ├── pilot-annotation-task
