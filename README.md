@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/logo.png" alt="ALD/E-ImageMiner Logo" width="300"/>
-</p>
+![ALD/E-ImageMiner Logo](assets/logo.png)
 
 ## 📋 ALD-E-ImageMiner Overview
 
