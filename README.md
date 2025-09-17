@@ -1,9 +1,5 @@
-<p align="center">
-  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="500"/>
-</p>
-
-## 📋 ALD-E-ImageMiner Overview
-
+## 📋 ALD-E-ImageMiner Overview  
+<img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="120" align="right"/>
 ## Dataset
 
 ### Organization
