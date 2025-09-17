@@ -23,6 +23,7 @@ data
 │   │   │   │   ├── images
 │   │   │   │   │   ├── figures
 │   │   │   │   │   │   ├── filename 1.jpg          # (JPEG) actual figure image extracted using MinerU
+│   │   │   │   │   │   ├── filename.caption.txt    # (Text) figure caption extracted from the paper.
 │   │   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
 │   │   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
 │   │   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
