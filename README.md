@@ -77,34 +77,39 @@ We have defined a taxonomy of 40 figure types including "unknown". The full taxo
 
 | Figure Type | Auto Labels | Human Labels |
 | --- | --- | --- |
-| Area chart | 0 | 0 |
-| Bar chart | 13 | 0 |
-| 3D bar chart | 18 | 0 |
-| Grouped bar chart | 46 | 0 |
-| Stacked bar chart | 7 | 0 |
-| Box plot | 1 | 0 |
-| Bubble chart | 6 | 0 |
-| Donut chart | 2 | 0 |
-| Funnel chart | 0 | 0 |
-| Heatmap | 36 | 0 |
-| Line chart | 360 | 0 |
-| Multiple Line chart | 580 | 0 |
-| Multi-axis chart | 197 | 0 |
-| Pie chart | 5 | 0 |
-| Polar chart | 9 | 0 |
-| Radar chart | 1 | 0 |
-| Rose chart | 0 | 0 |
-| 3D scatter plot | 1 | 0 |
-| Scatter plot | 91 | 0 |
-| Treemap | 0 | 0 |
-| Unknown | 546 | 0 |
-| --- | --- | --- |
-| flowchart | 2 | 0 |
-| table | 1 | 0 |
-| | 15 | 0 |
-| ['scatter plot', 'line chart'] | 1 | 0 |
-| **Total** | **1938** | **0** |
-
+| 3d bar chart | 5 | 0 |
+| 3d scatter plot | 23 | 0 |
+| apparatus diagram | 98 | 0 |
+| area chart | 6 | 0 |
+| band diagram | 12 | 0 |
+| bar chart | 46 | 0 |
+| box plot | 4 | 0 |
+| bubble chart | 1 | 0 |
+| conceptual diagram | 127 | 0 |
+| formula | 3 | 0 |
+| grouped bar chart | 26 | 0 |
+| heatmap | 89 | 0 |
+| histogram | 2 | 0 |
+| image panel | 526 | 0 |
+| line chart | 1066 | 0 |
+| line plot | 2 | 0 |
+| map/geo chart | 4 | 0 |
+| molecular structure diagram | 807 | 0 |
+| multi-axis chart | 114 | 0 |
+| multiple line chart | 44 | 0 |
+| network diagram | 1 | 0 |
+| periodic table map | 3 | 0 |
+| pie chart | 8 | 0 |
+| polar chart | 14 | 0 |
+| process flow diagram | 28 | 0 |
+| reaction scheme | 443 | 0 |
+| scatter plot | 201 | 0 |
+| spectra chart | 419 | 0 |
+| stacked bar chart | 4 | 0 |
+| table | 6 | 0 |
+| timeline chart | 6 | 0 |
+| unknown | 12 | 0 |
+| **Total** | **4150** | **0** |
 
 ## 📖 Citation  
 
