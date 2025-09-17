@@ -1,0 +1,138 @@
+# You may also like
+
+# Remote Plasma ALD of Platinum and Platinum Oxide Films
+
+- Improved Model of Wafer/Pad Powder Slurry for CMP Y eau- Ren Jeng and Hung- Jung Tsai
+
+- Remote Plasma ALD of  $\mathrm{SrTiO_3}$  Using Cyclopentadienyl-Based Ti and Sr Precursors E. Langereis, R. Roijmans, F. Roozeboom et al.
+
+To cite this article: H. C. M. Knoops et al 2009 Electrochem. Solid- State Lett. 12 G34
+
+- Resistive Switching in Pt  $\mathrm{Al}_2\mathrm{O}_3\mathrm{TiO}_2$  Ru Stacked Structures Kyung Min Kim, Byung Joon Choi, Bon Wook Koo et al.
+
+View the article online for updates and enhancements.
+
+# ECC-Opto-10 Optical Battery Test Cell: Visualize the Processes Inside Your Battery!
+
+- Battery Test Cell for Optical Characterization Designed for light microscopy, Raman spectroscopy and XRD.
+
+- Optimized, Low Profile Cell Design (Device Height 21.5 mm) Low cell height for high compatibility, fits on standard samples stages.
+
+- High Cycling Stability and Easy Handling Dedicated sample holders for different electrode arrangements included!
+
+- Cell Lids with Different Openings and Window Materials Available
+
+![](images/7d27804408ba2e6f99a618b992148657ee87c5159a567f35af2d07092a1258f9.jpg)
+
+Contact us: +49 40 79012- 734 sales@tel- cell.com www.ell- cell.com
+
+![](images/04d777b973cc074ecb43d3a4bb9860e24ac5aa4e5b84efa9e25dc4d3397d1cc8.jpg)
+
+# Remote Plasma ALD of Platinum and Platinum Oxide Films
+
+H.C.M. Knoops, $^{a,b,z}$  
+A.J.M. Mackus, $^{b}$  
+M.E. Donders, $^{a,b}$  
+M.C.M. van de Sanden, $^{b}$  
+P.H.L. Notten, $^{b,c,**}$  and 
+W.M.M. Kessels $^{b,**,z}$
+
+$^{a}$ Materials Innovation Institute M2i, 2600 GA Delft, The Netherlands  $^{b}$ Eindhoven University of Technology, 5600 MB Eindhoven, The Netherlands  $^{c}$ Philips Research, 5656 AE Eindhoven, The Netherlands
+
+Platinum and platinum oxide films were deposited by remote plasma atomic layer deposition (ALD) from the combination of (methylcyclopentadienyl)trimethylplatinum  $(\mathrm{MeCpPtMe}_3)$  precursor and  $\mathrm{O_2}$  plasma. A short  $\mathrm{O_2}$  plasma exposure  $(0.5\mathrm{s})$  resulted in low resistivity  $(15\mu \Omega \mathrm{cm})$  , high density  $(21\mathrm{g / cm^3})$  , cubic Pt films, whereas a longer  $\mathrm{O_2}$  plasma exposure  $(5\mathrm{s})$  resulted in semiconductive  $\mathrm{PtO_2}$  films. In situ spectroscopic ellipsometry studies revealed no significant nucleation delay, different from the thermal ALD process with  $\mathrm{O_2}$  gas which was used as a benchmark. A broad temperature window  $(100 - 300^{\circ}\mathrm{C})$  for remote plasma ALD of Pt and  $\mathrm{PtO_2}$  was demonstrated.
+
+$\mathfrak{G}$  2009 The Electrochemical Society. [DOI: 10.1149/1.3125876] All rights reserved.
+
+Manuscript submitted February 20, 2009; revised manuscript received April 7, 2009. Published April 27, 2009.
+
+When deposited with the precise thickness control and high conformality of atomic layer deposition (ALD), platinum films have a large variety of potential applications in microelectronics and energy technologies due to their chemical stability, catalytic activity, and excellent electronic properties.1- 7 While being less investigated, platinum oxide is of interest because of its optical properties and because  $\mathrm{PtO}_x$  can be (locally) reduced to  $\mathrm{Pt}$  8- 10 In the research efforts toward the applications of these films deposited by ALD, nucleation properties, material quality, and process temperature window are of key importance.
+
+Few Pt ALD processes have been reported, of which the thermal ALD process using (methylcyclopentadienyl)trimethylplatinum  $(\mathrm{MeCpPtMe}_3)$  and  $\mathrm{O_2}$  gas described by Aaltonen et al. has become the most adopted.2,3 This process relies on the dissociative chemisorption of  $\mathrm{O_2}$  on the  $\mathrm{Pt}$  surface for oxidative decomposition of the precursor ligands.11,12 For  $\mathrm{PtO}_x$  only one ALD process has been reported, to the best of our knowledge.13  $\mathrm{PtO}_x$  films were obtained from the combination of  $\mathrm{Pt(acac)}_2$  (acac  $=$  acetylacetonate) and  $\mathrm{O_3}$  in the small temperature window of  $120–130^{\circ}\mathrm{C}$  13
+
+In this article, ALD processes are reported for  $\mathrm{Pt}$  and  $\mathrm{PtO_2}$  from the combination of  $\mathrm{MeCpPtMe}_3$  precursor and  $\mathrm{O_2}$  plasma exposure. In the  $\mathrm{O_2}$  plasma, O radicals are created, providing atomic O to the surface directly from the gas phase, enhancing oxygen chemisorption and oxidation.14 The growth and nucleation properties, material properties, and substrate- temperature dependence of the  $\mathrm{Pt}$  and  $\mathrm{PtO_2}$  process are investigated for remote plasma ALD and benchmarked against the thermal ALD of Pt.
+
+# Experimental
+
+The Pt and  $\mathrm{PtO_2}$  films were deposited in the open- load ALD- I setup described extensively in Ref. 15. In short, a deposition chamber was connected to an inductively coupled plasma source and a pump unit through gate valves. The pump unit consisted of a turbo molecular pump and a rotary pump reaching a base pressure of  $< 10^{- 5}$  mbar by overnight pumping.  $\mathrm{MeCpPtMe}_3$  precursor  $(98\%$  Sigma- Aldrich), heated to  $70^{\circ}\mathrm{C}$  was vapor drawn into the chamber. The substrates were heated to  $100 - 300^{\circ}\mathrm{C}$  (precursor decomposition starts above  $310^{\circ}\mathrm{C}$  3 while the reactor walls were kept at a temperature of  $75^{\circ}\mathrm{C}$
+
+For the processes investigated the first half- cycle consisted of  $\mathrm{MeCpPtMe}_3$  precursor dosing with the bottom valve closed (no pumping) to maximize precursor usage. After the precursor exposure the reaction products were pumped out by opening the bottom valve to the turbo pump. For thermal ALD the second half- cycle consisted of a  $5\mathrm{sO}_2$  exposure at  $0.03\mathrm{mbar}$  For the remote plasma process the  $\mathrm{O_2}$  gas flowed through the plasma source (0.01 mbar pressure) while a  $100\mathrm{W}$  plasma power was applied. A  $0.5\mathrm{sO}_2$  plasma exposure was used for  $\mathrm{Pt}$  deposition, while a  $5\mathrm{s}$  plasma exposure resulted in the deposition of  $\mathrm{PtO_2}$  films. Si(100) with native oxide or with  $400\mathrm{nm}$  thermally grown  $\mathrm{SiO_2}$  was used as the substrate.
+
+In situ spectroscopic ellipsometry (SE) with a J. A. Woollam, Inc. M2000U  $(0.75 - 5.0\mathrm{eV})$  ellipsometer was employed to determine the thickness and the dielectric function of the films during the ALD process. After deposition the optical range was extended to  $6.5\mathrm{eV}$  using ex situ variable- angle measurements with a J. A. Woollam, Inc. M2000D.15 Electrical resistivity was measured by a four- point probe (FPP), whereas the atomic composition and mass density of the films were determined from Rutherford backscattering spectrometry (RBS) using  $2\mathrm{MeV}^{4}\mathrm{He}^{+}$  ions. The microstructure of the films was studied using X- ray diffraction (XRD) with a Philips X'Pert MPD diffractometer equipped with a  $\mathrm{CuK}\alpha$  source  $(1.54\mathrm{\AA}$  radiation). Additionally, the thickness and mass density were determined by X- ray reflectometry (XRR) measurements on a Bruker D8 Advance X- ray diffractometer. The surface roughness of the films was determined by atomic force microscopy (AFM) using an NT- MDT Solver P47 SPM.
+
+# Results and Discussion
+
+ALD growth and nucleation delay.- Pt films were deposited by remote plasma and thermal ALD, and  $\mathrm{PtO_2}$  was deposited by remote plasma ALD at a substrate temperature of  $300^{\circ}\mathrm{C}$  A summary of the conditions and material properties is given in Table I. For the thermal process a  $\mathrm{MeCpPtMe}_3$  dosing time of  $1\mathrm{s}$  is necessary to reach saturation of the growth cycle, while the remote plasma process requires  $3\mathrm{s}$  The length of the plasma exposure time determines whether  $\mathrm{Pt}$  or  $\mathrm{PtO_2}$  is deposited. A short  $\mathrm{O_2}$  plasma exposure of  $0.5\mathrm{s}$  results in  $\mathrm{Pt}$  while a long  $\mathrm{O_2}$  plasma exposure of  $5\mathrm{s}$  results in  $\mathrm{PtO_2}$  .When using  $\mathrm{O_2}$  gas,  $\mathrm{Pt}$  is obtained up to long  $\mathrm{O_2}$  exposure times in line with the results reported by Aaltonen et al.
+
+When measuring the thickness as a function of the number of cycles by in situ SE for the three processes (Fig. 1), no growth was observed for thermal ALD on c- Si substrates with  $400\mathrm{nm}$ $\mathrm{SiO_2}$  or native oxide for the conditions employed. Pt growth on these substrates could only be achieved by using a higher  $\mathrm{O_2}$  pressure  $(>0.8$  mbar) as also typically used in the literature.1,3 On the contrary, remote plasma ALD of Pt  $(0.5\mathrm{sO}_2$  plasma) leads to immediate growth without a substantial nucleation delay. From the ellipsometry measurements, which have a reduced accuracy in the first  $1 - 2\mathrm{nm}$  it is concluded that growth per cycle is constant after the first 50 cycles. On the  $\mathrm{Pt}$  film deposited by remote plasma ALD, the thermal ALD process continues without nucleation delay, demonstrating the possibility to deposit a Pt seed layer by remote plasma
+
+Table I. The material properties of Pt and  $\mathrm{PtO_2}$  films deposited at  $300^{\circ}\mathrm{C}$  by thermal and remote plasma ALD from  $\mathrm{MeCpPtMe}_3$  and  $\mathbf{O}_2$  gas or  $\mathbf{O}_2$  plasma. In situ SE, XRR, AFM, RBS, and FPP measurements were used for analysis. The typical experimental errors are given in the first row.  
+
+<table><tr><td rowspan="2">Material</td><td rowspan="2">ALD process</td><td colspan="2">Thickness 
+(nm)</td><td rowspan="2">Roughness 
+(nm)</td><td rowspan="2">Growth per cycle 
+(Å/cycle)</td><td colspan="2">Mass density 
+(g cm-3)</td><td colspan="2">Atomic composition 
+(atom %)</td><td rowspan="2">Electrical resistivity 
+(μΩ cm)</td><td></td></tr><tr><td>SE</td><td>XRR</td><td>XRR</td><td>RBS</td><td>Pt</td><td>O</td><td></td></tr><tr><td>Pt</td><td>5 s O2 gasa</td><td>27.3 ± 0.5</td><td>26.6 ± 0.3</td><td>0.7 ± 0.3</td><td>0.45 ± 0.04</td><td>22 ± 1</td><td>20.8 ± 0.5</td><td>100</td><td>&amp;lt;5</td><td>&amp;lt;5</td><td>13 ± 1</td></tr><tr><td>Pt</td><td>0.5 s remote plasma</td><td>~30 b</td><td>29.2</td><td>0.4</td><td>0.47</td><td>22</td><td>20.0</td><td>100</td><td>&amp;lt;5</td><td>&amp;lt;5</td><td>15</td></tr><tr><td>PtO2</td><td>5 s remote plasma</td><td>26.7</td><td>26.5</td><td>0.4</td><td>0.47</td><td>10</td><td>8.9</td><td>31</td><td>69</td><td>&amp;lt;5</td><td>&amp;gt;1 × 108</td></tr></table>
+
+a Includes a  $7\mathrm{nm}$  Pt seed layer deposited by the remote plasma ALD process. b Thickness determination less accurate due to opacity of the film at SE wavelengths.
+
+ALD. The remote plasma process of Pt shows a similar growth rate as the thermal process, which in turn is close to that reported by Aaltonen et al.  $(\sim 0.045 \mathrm{nm / cycle})$  1
+
+The  $\mathrm{PtO_2}$  process (5 s  $\mathrm{O_2}$  plasma) also shows immediate growth with potentially a brief nucleation delay. After  $\sim 50$  cycles the growth per cycle is constant at  $0.047 \mathrm{nm / cycle}$  compared to  $\sim 0.055 \mathrm{nm / cycle}$  found by Hamalainen et al. using  $\mathrm{Pt(acac)}_2$  and  $\mathrm{O_3}$  13 From the difference in  $\mathrm{Pt}$  atomic density, it is concluded that for  $\mathrm{PtO_2}$  fewer  $\mathrm{Pt}$  atoms are deposited per cycle than for the  $\mathrm{Pt}$  process  $(1.1\times 10^{14}\mathrm{Pt cm}^{- 2}\mathrm{cycle}^{- 1}$  for  $\mathrm{PtO_2}$  compared to 3.0  $\times 10^{14}\mathrm{Pt cm}^{- 2}\mathrm{cycle}^{- 1}$  for  $\mathrm{Pt}$  ). This is different from the thermal  $\mathrm{Ru}$  and  $\mathrm{RuO_2}$  ALD process where the growth rate increases with the partial  $\mathrm{O_2}$  pressure going from  $\mathrm{Ru}$  to  $\mathrm{RuO_2}$  material.16
+
+The dielectric functions determined by SE for  $\mathrm{Pt}$  and for  $\mathrm{PtO_2}$  are shown in Fig. 2. The two materials result in very distinct dielectric functions, whereas the dielectric functions for  $\mathrm{Pt}$  obtained by thermal ALD and remote plasma ALD are indistinguishable. The  $\mathrm{Pt}$  was modeled using a Drude- Lorentz parametrization, where the Drude term, dominant at low photon energies, accounts for the intraband absorption by conduction electrons. Several Lorentz oscillators (at  $0.9$ ,  $1.5 \mathrm{eV}$ , and higher energies) were used for the interband absorption. In agreement with its semiconductive nature, the dielectric function of  $\mathrm{PtO_2}$  could be parametrized by a single Tauc- Lorentz oscillator ( $0.9 \mathrm{eV}$  bandgap and  $4.8 \mathrm{eV}$  peak energy). The optical Tauc bandgap was  $\sim 1.5 \mathrm{eV}$ , which is close to the bandgap reported for sputtered amorphous  $\mathrm{PtO_2}$  ( $1.2 - 1.3 \mathrm{eV}$ ).
+
+![](images/8c00cc6b52bd5f5920d74fe06e666981cae243abba3e2ffe1a0a595a2663590b.jpg)  
+Figure 1. (Color online) Thickness measured by in situ SE as a function of the number of cycles for the  $\mathrm{Pt}$  and  $\mathrm{PtO_2}$  ALD processes. The process conditions are listed in Table I. The starting substrate at 0 cycles was  $\mathrm{Si(100)}$  with  $400 \mathrm{nm} \mathrm{SiO_2}$ . After 150 cycles of remote plasma ALD, the  $\mathrm{Pt}$  film growth is continued by thermal ALD.
+
+Material properties.- As shown in Table I both the remote plasma and thermal ALD process result in very similar material properties for the  $\mathrm{Pt}$  films. In both cases high density  $(\sim 21 \mathrm{g / cm^3})$ , low resistivity  $(\sim 15 \mu \Omega \mathrm{cm})$ , and high purity  $\mathrm{Pt}$  films were deposited. The density and resistivity for these  $\sim 30 \mathrm{nm}$  thick films are close to the bulk values of  $21.4 \mathrm{g / cm^3}$  and  $10.8 \mu \Omega \mathrm{cm}$ , and they are similar to the values reported for thermal ALD of  $\mathrm{Pt}$ . The O and C contents remain below the RBS detection limit  $(< 5\%)$  and grazing incidence XRD spectra (Fig. 3) revealed a cubic phase composition for both the thermal and remote plasma ALD  $\mathrm{Pt}$  films. The relatively high intensity of the (220) peak indicates that the  $\mathrm{Pt}$  crystallites have a preferred orientation with their (111) lattice planes parallel to the sample surface as also reported for the thermal ALD process. The remote plasma ALD  $\mathrm{Pt}$  film, which is only slightly thicker than the thermal ALD film, shows much stronger diffraction peaks, indicating a higher crystallinity. Both processes resulted in smooth films and had generally lower root- mean- square roughness values ( $0.4 - 0.7 \mathrm{nm}$ ) than reported ( $0.75 - 4 \mathrm{nm}$ ). Because island growth is known to promote surface roughening, the fast nucleation and, consequently, more pronounced layer- by- layer growth can be related to the lower surface roughness obtained for the remote plasma ALD process.
+
+The platinum oxide has a lower density and is slightly overstoichiometric  $(\mathrm{PtO_{2.2}})$  . The resistivity is very high as it is above the detection limit of the FPP  $(>100\Omega \mathrm{cm})$  . For the process employing  $\mathrm{Pt(acac)_2}$  and  $\mathrm{O_3}$  a lower resistivity  $(1.5 - 5\Omega \mathrm{cm})$  was reported most probably due to a lower O content  $(\mathrm{PtO_{1.6}})$  13,20 The
+
+![](images/cca41bf7685c30c4dd3180017e163a4d4a351b81abf68bea1f11ebf350cbdebf.jpg)  
+Figure 2. (Color online) The imaginary part of the dielectric function  $(\epsilon_2)$  for  $\mathrm{Pt}$  and  $\mathrm{PtO_2}$  as determined by in situ SE measurements evaluated using Drude-Lorentz and Tauc-Lorentz parametrizations, respectively.
+
+![](images/f771e0647dc55a03ca96251ed2cf41972dd7dd4be07023d780fde85d9e872d0a.jpg)  
+Figure 3. (Color online) Grazing incidence XRD spectra for a remote plasma ALD Pt film  $29\mathrm{mm}$  thickness),a thermal ALD Pt film  $27~\mathrm{nm}$  thickness),and a remote plasma ALD  $\mathrm{PtO_2}$  film  $27~\mathrm{nm}$  thickness).The Miller indexes of cubic Pt are indicated.
+
+$\mathrm{PtO_2}$  film is amorphous or nanocrystalline,13 and no diffraction peaks from the  $\alpha$  and  $\beta$ $\mathrm{PtO_2}$  phases can be identified in the XRD spectra.8
+
+Temperature dependence.- Figure 4 shows the growth per cycle for the three processes over a wide temperature range. The thermal ALD Pt process has a temperature window starting at  $\sim 200^{\circ}\mathrm{C}$  The fact that the growth per cycle is reduced at lower substrate temperatures is not yet understood.21 From surface science studies, it can be inferred that the dissociative chemisorption of  $\mathrm{O}_2$  [on  $\mathrm{Pt(111)}]$  should not be the limiting factor.12 On the other hand, the remote plasma ALD process which uses atomic oxygen from the gas phase has a higher growth rate than the thermal process at  $200^{\circ}\mathrm{C}$  The higher resistivity  $(\sim 500\mu \Omega \mathrm{cm})$  found for this temperature, however, suggests incomplete removal of O and C impurities from the material. The poorer material properties could be overcome by an  $\mathrm{H}_{2}$  plasma treatment. Exposure of the film to  $300\mathrm{~s~H_2}$  plasma at  $100^{\circ}\mathrm{C}$  reduced the resistivity to  $61\mu \Omega \mathrm{cm}$  .Moreover, tests with an ALD cycle containing a  $\mathrm{H}_{2}$  gas exposure step (no plasma power applied) of  $2\mathrm{~s~}$  after the  $\mathrm{O_2}$  plasma step resulted in excellent materials properties for  $\mathrm{Pt}$  at  $100^{\circ}\mathrm{C}$  (mass density of  $19.8\mathrm{~g~cm}^{- 3}$  no C and O impurities detected, and a resistivity of  $19\mu \Omega$  cm at  $22~\mathrm{nm}$  film thickness). These results demonstrate that the temperature window for remote plasma ALD of  $\mathrm{Pt}$  can effectively be extended down to  $100^{\circ}\mathrm{C}$  For  $\mathrm{PtO_2}$  the growth per cycle decreases slightly with increasing substrate temperature between 100 and  $300^{\circ}\mathrm{C}$  demonstrating that this process also has a large temperature window. At the substrate temperature of  $300^{\circ}\mathrm{C}$  decomposition of  $\mathrm{PtO_2}$  is reported to start for sputtered films, while in air decomposition starts at  $550^{\circ}\mathrm{C}$  due to the higher partial pressure of oxygen.26 For the process employing  $\mathrm{Pt(acac)_2}$  and  $\mathrm{O_3}$  only a small temperature window was observed  $(120 - 130^{\circ}\mathrm{C})$  .13 Therefore, the large temperature window of our  $\mathrm{PtO_2}$  process suggests a higher stability of the material, which can most likely be related to the higher oxygen content  $\mathrm{(PtO_{2.2}}$  compared to  $\mathrm{PtO_{1.6}}$
+
+![](images/9372f2ef5656b3fe7b82565f3b055ce28245363cde72ccb9e251f0e8ced56f7e.jpg)  
+Figure 4. (Color online) The growth per cycle for remote plasma and thermal ALD of Pt and remote plasma ALD of  $\mathrm{PtO_2}$  as a function of the substrate temperature. At  $100^{\circ}\mathrm{C}$  the growth rate of the remote plasma process including a  $\mathrm{H}_{2}$  gas exposure step in the ALD cycle is shown. For thermal ALD of  $\mathrm{Pt}$  deposition took place on  $10 \mathrm{nm}$  thick  $\mathrm{Pt}$  starting surfaces prepared by remote plasma ALD at  $300^{\circ}\mathrm{C}$  The lines serve as guides to the eye.
+
+# Conclusions
+
+Remote plasma ALD processes of  $\mathrm{Pt}$  and  $\mathrm{PtO_2}$  were developed from the combination of  $\mathrm{MeCpPtMe}_3$  precursor and  $\mathrm{O}_2$  plasma, and compared to the thermal ALD process of  $\mathrm{Pt}$  using the same precursor and  $\mathrm{O}_2$  gas. High purity  $\mathrm{Pt}$  can be obtained by a short  $\mathrm{O}_2$  plasma exposure, whereas  $\mathrm{PtO_2}$  can be obtained by a long  $\mathrm{O}_2$  plasma exposure. In situ SE revealed that the remote plasma processes lead to immediate growth without substantial nucleation delay, whereas the thermal ALD process leads to no growth at all unless a  $\mathrm{Pt}$  starting surface or a high  $\mathrm{O}_2$  pressure is employed. A broad temperature window of  $100 - 300^{\circ}\mathrm{C}$  was achieved for both materials when deposited by remote plasma ALD. For  $\mathrm{Pt}$  a  $\mathrm{H}_{2}$  gas exposure step was included in the ALD cycle to obtain high purity films at  $100^{\circ}\mathrm{C}$
+
+# Acknowledgments
+
+This work was sponsored by the Materials Innovation Institute M2i under project no. MC3.06278, and by the Netherlands Technology Foundation STW.
+
+Eindhoven University of Technology assisted in meeting the publication costs of this article.
+
+# References
+
+1. T. Aaltonen, M. Ritala, T. Sajavaara, J. Keinonen, and M. Leskelii, Chem. Mater. 15, 1924 (2003). 
+2. Y. Zhu, K. A. Dunn, and A. E. Kaloyeros, J. Mater. Res., 22, 1292 (2007). 
+3. X. Jiang and S. F. Bent, J. Electrochem. Soc., 154, D648 (2007). 
+4. P. H. Lein, G. Ter, F. Roozeboom, R. A. H. Niessen, and L. Baggetto, Adv. Mater. (W/inh. Noten), 19, 4564 (2007). 
+5. M. Armand and J. M. Tarascon, Nature (London), 451, 652 (2008). 
+6. L. Baggetto, R. A. H. Niessen, F. Roozeboom, and P. H. L. Notten, Adv. Funct. Mater., 10, 1057 (2008). 
+7. R. R. Hoover and Y. V. Tolmachev, J. Electrochem. Soc., 156, A37 (2009). 
+8. L. Maya, L. Riester, T. Thundat, and C. S. Yust, J. Appl. Phys., 84, 6382 (1998). 
+9. K. Kurihara, Y. Yamakawa, T. Nakano, and J. Tominaga, J. Opt. A, Pure Appl. Opt., 8, S139 (2006). 
+10. F. Machalet, K. Gartner, K. Edinger, and M. Diegel, J. Appl. Phys., 93, 9030 (2003). 
+11. T. Aaltonen, A. Raita, M. Ritala, and M. Lorkkili, Electrochem. Solid-State Lett., 6, C130 (2003). 
+12. C. T. Campbell, G. Ertl, H. Kuipers, and J. Segner, Surf. Sci., 107, 220 (1981). 
+13. J. Hämäläinen, F. Munnik, M. Ritala, and M. Leskelii, Chem. Mater., 20, 6840 (2008). 
+14. J. F. Weaver, J. J. Chen, and A. L. Gerrard, Surf. Sci., 592, 83 (2005). 
+15. E. Langereis, H. C. M. Knoops, A. J. M. Mackus, F. Roozeboom, M. C. M. van de Sanden, and W. M. M. Kessels, J. Appl. Phys., 102, 083517 (2007). 
+16. O. K. Kwon, J. H. Kim, H. S. Park, and S. W. Kang, J. Electrochem. Soc., 151, G109 (2004). 
+17. W. S. Choi, S. S. A. Seo, K. W. Kim, T. W. Non, M. Y. Kim, and S. Shin, Phys. Rev. B, 74, 205117 (2006). 
+18. G. E. Jellison, Jr. and F. A. Modine, Appl. Phys. Lett., 69, 371 (1996). 
+19. R. L. Puurunen and W. Vandervorst, J. Appl. Phys., 96, 7686 (2004). 
+20. Y. Abe, M. Kawamura, and K. Sasaki, Jpn. J. Appl. Phys., Part I, 38, 2092 (1999). 
+21. T. Aaltonen, M. Ritala, Y. L. Tung, Y. Chi, K. Arstila, K. Meinander, and M. Leskelii, J. Mater. Res., 19, 3353 (2004).

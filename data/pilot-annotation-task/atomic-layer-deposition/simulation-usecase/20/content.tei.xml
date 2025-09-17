@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Effects of gap size, temperature and pumping pressure on the fluid dynamics and chemical kinetics of in-line spatial atomic layer deposition of Al 2 O 3</title>
+				<funder ref="#_6Fbv86M">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2016-01-25">25 January 2016</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dongqing</forename><surname>Pan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">University of Wisconsin-Milwaukee</orgName>
+								<address>
+									<postCode>53201</postCode>
+									<settlement>Milwaukee</settlement>
+									<region>WI</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tien-Chien</forename><surname>Jen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Mechanical Engineering Science</orgName>
+								<orgName type="institution">University of Johannesburg</orgName>
+								<address>
+									<postCode>2006</postCode>
+									<settlement>Auckland Park</settlement>
+									<country key="ZA">South Africa</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Chris</forename><surname>Yuan</surname></persName>
+							<email>cyuan@uwm.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">University of Wisconsin-Milwaukee</orgName>
+								<address>
+									<postCode>53201</postCode>
+									<settlement>Milwaukee</settlement>
+									<region>WI</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Effects of gap size, temperature and pumping pressure on the fluid dynamics and chemical kinetics of in-line spatial atomic layer deposition of Al 2 O 3</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2016-01-25">25 January 2016</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1DD979149C49B9274F48BF42A9990676</idno>
+					<idno type="DOI">10.1016/j.ijheatmasstransfer.2016.01.034</idno>
+					<note type="submission">Received 30 July 2015 Received in revised form 29 November 2015 Accepted 11 January 2016</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>In-line spatial ALD Gap size Temperature Pumping pressure Fluid dynamics Chemical kinetics</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Low throughput is a major limitation for industrial level atomic layer deposition (ALD) applications. Spatial ALD is regarded as a promising solution to this issue. With numerical simulations, this paper studies an in-line spatial ALD reactor by investigating the effects of gap size, temperature, and pumping pressure on the flow and surface chemical deposition processes in Al 2 O 3 ALD. The precursor intermixing is a critical issue in spatial ALD system design, and it is highly dependent on the flow and material distributions. By numerical studies, it's found that bigger gap, e.g., 2 mm, results in less precursor intermixing, but generates slightly lower saturated deposition rate. Wafer temperature is shown as a significant factor in both flow and surface deposition processes. Higher temperature accelerates the diffusive mass transport, which largely contributes to the precursor intermixing. On the other hand, higher temperature increases film deposition rate. Well-maintained pumping pressure is beneficial to decrease the precursor intermixing level, while its effect on the chemical process is shown very weak. It is revealed that the time scale of in-line spatial ALD cycle is in tens of milliseconds, i.e., $15 ms. Considering that the in-line spatial ALD is a continuous process without purging step, the ALD cycle time is greatly shortened, and the overall throughput is shown as high as $4 nm/s, compared to several nm/min in traditional ALD.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Atomic layer deposition (ALD) is an approved nano-scale thin film fabrication technique with remarkable uniformity and conformity in surface geometry. Since the materials are deposited layer by layer in atomic level, ALD is an excellent technology to precisely control the thickness of deposited thin films <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b1">2]</ref>. However, this intrinsic superiority comes along with a serious limitation: low throughput, especially in the industrial level ALD applications <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b3">4]</ref>. The conventional single wafer ALD, for instance, can only achieve 1.1-1.3 Å/cycle growth rate, that is a few nm per min for deposition of Al 2 O 3 <ref type="bibr" target="#b4">[5]</ref>. This growth rate is considered too low <ref type="bibr" target="#b5">[6]</ref>.</p><p>Various solutions have been proposed to resolve this issue. It's widely accepted that scaling up to batch ALD with novel reactor design can improve the throughput dramatically <ref type="bibr" target="#b5">[6]</ref>. As early as 1970s, for instance, flat panel displays were already fabricated through batch ALD reactors <ref type="bibr" target="#b2">[3]</ref>. Fig. <ref type="figure" target="#fig_0">1</ref>(a) shows a typical stack-type batch ALD reactor. Unlike single wafer ALD, batch ALD reactors allow multiple substrates to be processed simultaneously <ref type="bibr" target="#b6">[7]</ref>. However, the scaling-up to batch ALD is not always straightforward. Because of the increased reactor chamber volume and the presence of multiple wafers, the gas flow field in batch ALD is altered by the stacks of wafers inside the chamber. As a result, mass transport process is decelerated, and consequently, precursor exposure and purging processes are much longer than single wafer ALD reactors <ref type="bibr" target="#b5">[6]</ref>. This weakens the benefits of increased throughput brought by the batch configuration.</p><p>The multi-wafer batch ALD still adopts the original conventional ALD philosophy of separating the two half ALD reactions in time. Spatial ALD, however, as illustrated in Fig. <ref type="figure" target="#fig_0">1(b)</ref>, is totally based on a brand new concept <ref type="bibr" target="#b7">[8]</ref>. In conventional ALD, the precursors are dosed one by one, and separated in time by a purging step, but with the spatial idea, the ALD surface reactions are separated in space other than in time, and precursors are dosed simultaneously and continuously with the relative movement of wafer belt <ref type="bibr" target="#b4">[5]</ref>. Particularly, as shown in Fig. <ref type="figure" target="#fig_0">1</ref>(b), the precursors are introduced at different positions on the wafer surface to enable the corresponding half ALD surface reactions. By introducing a pumping system and an inert separating gas, e.g., nitrogen or argon, the precursors and the reactions are separated in space. A complete full cycle of ALD is achieved by the relative movement of wafer belt. This continuous dosing process makes the spatial ALD system highly superior in film grow rate. It is demonstrated the spatial ALD can achieve as high as a few nm/s deposition rate, compared to a few nm/min in the conventional ALD system <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b8">9]</ref>.</p><p>Following the same idea, spatial ALD reactors have two variations in structure: in-line spatial ALD as illustrated in Fig. <ref type="figure" target="#fig_0">1(b)</ref>, Nomenclature A pre-exponential factor in the Arrhenius equation b 0 stoichiometric coefficient for reactant bulk species b 00 stoichiometric coefficient for product bulk species B bulk (solid) species c local molar fraction E total energy (J) E a reaction activation energy (J mol À1 ) F external body forces (N) g 0 stoichiometric coefficient for reactant gaseous species g 00 stoichiometric coefficient for product gaseous species G gaseous species h enthalpy (J kg À1 ) J m mass diffusive flux (kg m À2 s À1 ) J h energy diffusive flux (W m À2 ) k material thermal conductivity (W m À1 K À1 ) k f rate constant of reaction r M molecular weight (kg mol À1 ) N b total number of bulk species N g total number of gaseous species N R total number of surface reactions N s total number of surface species P static pressure (Pa) p boundary partial pressure (Pa) p 0 base pressure (Pa) R the gas constant (J mol À1 K À1 ) R i Arrhenius molar rate of production of the ith species (mol m À3 s À1 ) R net rate of production of species by chemical reaction (mol m À3 s À1 ) R mass reaction rate (kg m À3 s À1 ) s 0 stoichiometric coefficient for reactant surface species s 00 stoichiometric coefficient for product surface species S surface species t time (s) T temperature (K) V velocity (m s À1 ) X Xdirection in Cartesian coordinate Y Ydirection in Cartesian coordinate Z Zdirection in Cartesian coordinate Greek symbols q mixture density (kg m À3 ) s stress tensor (N m À2 ) b temperature exponent in the Arrhenius equation Subscripts b bulk species g gaseous species i the ith species r the rth reaction s surface species w wall surfaces Superscript ⁄</p><p>surface site species and rotary spatial ALD in Fig. <ref type="figure" target="#fig_0">1(c</ref>). A typical thermal spatial ALD system (in-line or rotary) includes a wafer belt driving system, a heating unit, an exhaust pumping system, and a gas delivery system, which consists of precursors and separating gas injecting pipelines, the precursor dosing cylinders, and separating gas injecting cylinders. The pumping system is to maintain a relatively low pressure ($10 À1 torr) in the system, and to purge the residual gases. A gap must be kept between the gas cylinders and the wafer belt to allow gas flow development and the wafer-cylinder relative movement.</p><p>Choice of gap size is an critical issue in designing spatial ALD reactors, because inappropriate gap size may result in intermixture of precursor gases, and hence intermixing reactions <ref type="bibr" target="#b3">[4]</ref>. To investigate the influence of the gap on the flow fields, Suh et al. performed gas flow simulations and Al 2 O 3 deposition experiments for a rotary spatial ALD reactor with a gap of 5 mm <ref type="bibr" target="#b3">[4]</ref>. Generally, too big gaps (&gt;5 mm) will inevitably cause precursor gases intermixing, whereas too smaller gaps (&lt;1 mm) will hinder the gas flow, and thus the deposition process. Smaller gaps also pose a practical problem of wafer movement in massive production when the large wafer size and uneven wafer surfaces are considered <ref type="bibr" target="#b3">[4]</ref>.</p><p>Besides, the deposition process in a thermal spatial ALD system is also highly dependent on a variety of process factors, such as temperature, precursor surface concentration, system pressure, and the precursor exposure time <ref type="bibr" target="#b4">[5]</ref>. Since the chemical kinetic information involved in the ALD deposition process is highly temperature-dependent, the deposition rate is largely affected by the deposition temperature <ref type="bibr" target="#b10">[11]</ref>. Precursor concentration on the wafer surface is determined by the mass flow field, which is influenced by the precursor and pumping pressures, and the gap size as well. The exposure time is determined by the configuration of spatial ALD rectors (e.g., size of dosing cylinders, gap size, etc.) and the relative movement speed of the wafer belt.</p><p>Due to the above complexity, studying these influential factors is crucial in designing spatial ALD systems, not only avoiding unnecessary long cycle time but also the non-uniform depositions due to the fluctuations in deposition temperature, gas flows and exposure times <ref type="bibr" target="#b4">[5]</ref>. Poodt et al. carried an experimental study on the chemical kinetics of depositing Al 2 O 3 in a rotary spatial ALD system at atmospheric pressure <ref type="bibr" target="#b4">[5]</ref>. The effects of deposition temperature, precursor pressures, and precursor exposure times were investigated and discussed for a rotary spatial ALD system in this cited work. As an important factor in gas flow development and deposition process, the gap size, however, is not included in their studies. Furthermore, the results obtained from the rotary spatial reactor may not apply to the in-line ALD system.</p><p>To better serve the purpose of investigating the effects of the geometric and process parameters on the in-line spatial ALD process, in this paper we have implemented a systematic study using an experimentally-verified fluid dynamic and chemical kinetic model for an in-line spatial ALD system. To be specific, the transient spatial ALD process of depositing Al 2 O 3 films on a silicon wafer belt using trimethylaluminum (TMA) and water is studied numerically. Three geometric and process factors (gap size, deposition temperature, and pumping pressures) are considered in two essential aspects of flow field and surface chemical deposition kinetics. Their influences on the fluid dynamics and surface chemical kinetics are explored and discussed in the following sections.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">In-line spatial ALD process modeling</head><p>ALD is a strongly coupled process, but mathematical modeling is more feasible for the weakly-coupled or uncoupled process. Therefore, modeling spatial ALD firstly involves decoupling of the ALD processes. In a word, the mathematical modeling requires separating or decoupling the actual processes, but seeking solutions to the targeted system from mathematical models requires integrating and coupling each specific process.</p><p>Particularly, in the concerned in-line spatial system, ALD can be dissociated into several physical and chemical processes. ALD is a dry film fabrication technique, and the materials interact with solid surfaces in gaseous states, so the process is firstly decoupled into gas dynamics (momentum transport). ALD process involves two or more precursor species, e.g., TMA and water in Al 2 O 3 ALD, and hence it is also a multi-species transport process. To activate the surface chemistry in ALD process, the system is heated to certain temperature, and thus heat transfer is also considered. The knowledge in these fields is well-established, and the individual mathematical model is readily available.</p><p>The precursor materials in ALD react with the ligandterminated surface sites, and thus, the surface chemical kinetics is considered for the deposition process. Owing to the complexity of ALD actual reaction mechanisms, detailed chemical modeling of ALD still remains a big challenge <ref type="bibr" target="#b0">[1]</ref>. The main reason is that few experimental studies can be found on the detailed information of the ALD chemical kinetics and side reactions. Theoretical studies regarding ALD surface reaction mechanisms and chemical reaction pathways are mainly based on the first principle methods, such as density functional theory (DFT) method <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref>. Therefore, adopting simplified theoretical reaction mechanisms and kinetic information is the feasible and practical way to model the deposition process.</p><p>With above decoupling, each process is modeled by corresponding partial differential equations (PDEs) as given in Eqs. ( <ref type="formula">1</ref>)- <ref type="bibr" target="#b7">(8)</ref>. Analytical solutions to these PDEs would be extremely difficult and even impossible, mainly because of their nonlinearities. Numerical solutions, however, can be readily obtained on defined discrete nodes in the fluid domain through iterative numerical approximations. Obtaining the overall numerical solutions requires coupling the system of PDEs by taking interactions between each physical and chemical process into account. The detailed modeling process is described in our previous paper <ref type="bibr" target="#b0">[1]</ref>. The numerical model adopted surface reaction kinetics and mechanisms based on the atomic-level calculations <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b14">15]</ref>, and the numerical model has been validated through experiments <ref type="bibr" target="#b0">[1]</ref>. In this paper we focus on using the numerical model to investigate the transient gas flow and chemical deposition processes in the in-line spatial ALD of Al 2 O 3 .</p><p>The modeling equations for the physical processes, including momentum transport, species transport and heat transfer, are briefly summarized as follows,</p><formula xml:id="formula_0">@q @t þ r Á ðq ṼÞ ¼ 0 ð1Þ @ @t ðq ṼÞ þ r Á ðq ṼṼ Þ ¼ ÀrP þ r Á s þ qg þ F<label>ð2Þ</label></formula><formula xml:id="formula_1">@ @t ðqc i Þ þ r Á ðqc i ṼÞ ¼ Àr Á Jm;i þ R i<label>ð3Þ</label></formula><formula xml:id="formula_2">@ @t ðqEÞ þ r Á ṼðqE þ PÞ h i ¼ r Á krT À X i h i Jh;i þ ðs Á ṼÞ " #<label>ð4Þ</label></formula><p>where q is the density, Ṽ is the velocity vector, P is the static pressure, qg and F are the gravitational body force and external body forces, respectively; s is the stress tensor, c i is the local molar fraction of species i, R i is the net rate of production of species i by chemical reaction, Jm;i is the mass diffusive flux of mixture species i, k is the material thermal conductivity, h i is the enthalpy of mixture species i, and Jh;i is the energy diffusive flux of mixture species i.</p><p>In our study, we adopted a continuum-based method, which treats the concerned domain as a continuum. The continuity Eq. ( <ref type="formula">1</ref>) conserves mass. The Navier-Stokes Eq. ( <ref type="formula" target="#formula_0">2</ref>) are adopted to model the process of momentum transport in the laminar flow of spatial ALD reactor <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b16">17]</ref>. The species transport process is governed by the convection-diffusion Eq. ( <ref type="formula" target="#formula_1">3</ref>) in the spatial ALD system <ref type="bibr" target="#b17">[18]</ref>. The energy Eq. ( <ref type="formula" target="#formula_2">4</ref>) is modeling the overall heat transfer in spatial ALD reactor.</p><p>For the surface chemical kinetics, the laminar finite-rate (LFR) method is adopted. Due to the instabilities of flow caused by turbulent fluctuations even in an identified laminar flow, numerical imitations have huge difficulties in terms of computational convergence and stability. In the LFR method, a laminar approximation is used with the effect of turbulence ignored, considering the verified laminar flow in our ALD system <ref type="bibr" target="#b1">[2]</ref>. To couple the surface reactions, the chemistry contributions in species transport must be taken into account, and the finite species generation rates by reactions are determined by the Arrhenius expression.</p><p>Consider the general form of an irreversible surface reaction in spatial ALD reactor, and assume there are N g gaseous species, N b bulk species and N s surface species involved,</p><formula xml:id="formula_3">X Ng i¼1 g 0 i G i þ X N b i¼1 b 0 i B i þ X Ns i¼1 s 0 i S i ! k f X Ng i¼1 g 00 i G i þ X N b i¼1 b 00 i B i þ X Ns i¼1 s 00 i S i<label>ð5Þ</label></formula><p>where G, B, and S are gaseous, bulk and surface species, g 0 i , b 0 i and s 0 i are the stoichiometric coefficients for the ith species as a reactant, g 00 i b 00 i and s 00 i are the stoichiometric coefficients for the ith species as a product. The reaction rate constant k f is determined through the Arrhenius expression,</p><formula xml:id="formula_4">k f ¼ AT b exp ÀE a RT<label>ð6Þ</label></formula><p>where A is the pre-exponential factor, b is the temperature exponent, E a is the activation energy, T is temperature in K, and R is the universal gas constant. By the chemical kinetics rate law <ref type="bibr" target="#b18">[19]</ref>, the reaction rate (in mol/m 3 Ás) R is obtained for the above surface reaction,</p><formula xml:id="formula_5">R ¼ k f Y Ng i¼1 ½G i g 0 i w Y Ns j¼1 ½S j s 0 j w<label>ð7Þ</label></formula><p>where, [ ] w represents surface coverage and molar concentrations (mol/m 3 ) on the wafer surfaces for surface and gaseous species, respectively. The net molar production rate of each species i is determined by considering the species both as a reactant and a product,</p><formula xml:id="formula_6">RG;i ¼ ðg 00 i À g 0 i ÞR; i ¼ 1; 2; . . . ; N g RB;i ¼ ðb 00 i À b 0 i ÞR; i ¼ 1; 2; . . . ; N b RS;i ¼ ðs 00 i À s 0 i ÞR; i ¼ 1; 2; . . . ; N s 8 &gt; &gt; &lt; &gt; &gt; :<label>ð8Þ</label></formula><p>It has been shown by DFT calculations, the chemisorption reaction mechanism is more kinetically favorable than ligand exchange mechanism <ref type="bibr" target="#b12">[13]</ref>. In Al 2 O 3 thin film deposition process, surface chemisorption reactions in the spatial ALD reactor are modeled by the following two half reactions as:</p><formula xml:id="formula_7">2AlðCH 3 Þ 3 ðgÞ þ 3 Ã OHðsÞ ) Ã Al À CH 3 ðsÞ þ Ã Al À ðCH 3 Þ 2 ðsÞ þ 3OðbÞ þ 3CH 4 ðgÞ "<label>ð9Þ</label></formula><formula xml:id="formula_8">3H 2 OðgÞ þ Ã Al À CH 3 ðsÞ þ Ã Al À ðCH 3 Þ 2 ðsÞ ) 3 Ã OHðsÞ þ 2AlðbÞ þ 3CH 4 ðgÞ "<label>ð10Þ</label></formula><p>where ⁄ and (s) represent surface site species, b for bulk (solid) species, and g for gas. At the initial state, the wafer surface is covered by hydroxyl group.The deposition reaction is initialized with TMA dosing process as modeled by Eq. ( <ref type="formula" target="#formula_7">9</ref>). This leaves the wafer surface with OAAl bonds and methyl-terminated surface sites, which are prepared for the second half reaction in water dosing process as given by Eq. <ref type="bibr" target="#b9">(10)</ref>. After water dosing, the surface is built with AlAO bonds and hydroxyl-terminated sites. At this point, the surface is coated with one layer of aluminum and oxygen atoms foming the Al 2 O 3 film materials. Multilayer depositions are achieved by repeating the two half reactions. The mass production rate of species i (in kg/m 3 Ás) R i referred in Eq. ( <ref type="formula" target="#formula_1">3</ref>) is readily determined from the surface reactions,</p><formula xml:id="formula_9">R i ¼ M w;i X N R r¼1 Ri;r<label>ð11Þ</label></formula><p>where N R is the total number of surface reactions in ALD chamber, e.g., for Al 2 O 3 ALD process, there are two half reactions ( <ref type="formula" target="#formula_7">9</ref>) and ( <ref type="formula" target="#formula_8">10</ref>), and M w;i is the molecular weight of species i.</p><p>In summary, the precursor distributions (mass transfer) in the spatial ALD system are obtained by solving the species transport Eq. ( <ref type="formula" target="#formula_1">3</ref>), which is coupled with the mass conservation Eq. ( <ref type="formula">1</ref>), momentum conservation Eq. ( <ref type="formula" target="#formula_0">2</ref>) and energy Eq. ( <ref type="formula" target="#formula_2">4</ref>). To take the reaction contributions into account, the species production rate R i in Eq. ( <ref type="formula" target="#formula_1">3</ref>) is achieved by solving the chemical kinetics rate Eq. ( <ref type="formula" target="#formula_5">7</ref>) for both TMA and water dosing processes represented by Eqs. ( <ref type="formula" target="#formula_7">9</ref>) and ( <ref type="formula" target="#formula_8">10</ref>), respectively. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Numerical implementations</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">System boundary definition</head><p>The system boundary is firstly defined to model the spatial ALD process. The spatial ALD cycle is defined in space, and therefore the system boundary is determined by relevant components. Fig. <ref type="figure" target="#fig_1">2</ref> illustrates the 3D computational domain of in-line spatial ALD reactor. A complete inline spatial ALD cycle of Al 2 O 3 goes through half reactions. Since a specific position on wafer can only complete a half reaction at one time experiencing one precursor material flow under the dosing cylinder, a complete cycle requires the position move to the second precursor dosing cylinder. Consequently, the system includes two precursor cylinders in order to model a complete spatial ALD cycle. Additionally, between water and TMA dosing cylinders, separating gas (nitrogen) is introduced to separate the two precursors. Besides, two exhaust cylinders are connected to a vacuum pump as shown in Fig. <ref type="figure" target="#fig_1">2</ref>(a). The system boundary is presented as the three-dimensional domain in Fig. <ref type="figure" target="#fig_1">2</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Boundary conditions</head><p>Boundary conditions are the physical (fluid, thermal, etc.) and chemical constraints (concentration, surface coverage, etc.) defined on each boundary of the fluid domain, such as inlets, outlets, walls, and reactive surfaces in the spatial ALD domain <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>. Water/ TMA inlets are defined as the vapor partial pressure entering the system with room temperature (25 °C). The actual partial pressure is determined by the saturated precursor vapor pressure and the background pressure in the ALD system. Separating gas is fed at a certain flow rate to ensure proper separation of the precursor gases.</p><p>The spatial ALD reactor is driven by a vacuum pump with base pressure as low as 0.22 torr. The high vacuum environment is desirable for better surface reactions and gas separation. The exhaust outlet is the pumping pressure which can be adjusted from 0.22 to 0.32 torr. When assigning a pressure boundary condition, for an incompressible flow, it implies the flow velocity can be computed via Bernoulli's equation as following <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b16">17]</ref>,</p><formula xml:id="formula_10">p ¼ p 0 þ 1 2 qV 2<label>ð12Þ</label></formula><p>where p is the boundary partial pressure, p 0 is the base pressure, V is the gas flow velocity. With the equation, the boundary mass flow rate and fluxes of momentum, energy, and species can then be computed from the velocity information.</p><p>The system wall (cylinder and pipe wall) is treated as stationary wall boundary conditions with no mass transfer but only heat transfer across the boundary. Thermal constraint for the wall is a certain maintained temperature condition. To prevent precursor vapors from condensing, 150 °C is maintained on these walls. The moving wafer belt usually has relative higher temperature, e.g., 200 °C, to activate the surface reaction. The wafer top surface is defined as reactive sites, where there are both heat and mass transfers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Initial conditions</head><p>For a transient system, numerical methods are approaching to the analytical solutions iteratively starting from the initial values, and hence the fluid, thermal and chemical initial numerical values need be assigned before calculations <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>. Specifically, in actual spatial ALD applications, the separating gas is firstly injected into the system for a few minutes to purge the air out and stabilize the system to the prescribed base pressure. The system domain is fully taken by the separating gas, nitrogen before depositions. Therefore, in our simulations, the pressure, velocity, concentration values of nitrogen are adopted as the initial conditions.</p><p>For chemical initial values, full coverages of hydroxyl and methanl group are assumed on the wafer surfaces under TMA and water dosing cylinder, respectively. Three levels of gap size (1, 1.5, and 2 mm), temperature (150 °C, 200 °C and 250 °C), and pumping pressure (0.22, 0.27 and 0.32 torr) are simulated to study their effects on the flow and suface depostion process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">Numerical calculations</head><p>Numerical calculations of the model equations are carried out within the framework of ANSYS Fluent using the Finite Volume Method (FVM). The 3D domain is firstly divided into numerous finite volumes with a non-structural tetrahedron meshing scheme as shown in Fig. <ref type="figure" target="#fig_1">2(a)</ref>. The actual meshing size is finally decided by a compromise between calculation accuracy and computational cost.</p><p>The model equations are then discretized in space by the second-order upwind method and the values at each domain node are calculated by FVM with a pressure-velocity coupled scheme as given in Eq. ( <ref type="formula" target="#formula_10">12</ref>). The second-order implicit method is used for the discretization of the model equations in time domain. The implicit method is to ensure computational stability, and the second-order method is for a sufficient computational accuracy. As shown in Fig. <ref type="figure" target="#fig_1">2(b)</ref>, during the calculations, transient values at the four points on the wafer top surface are probed for species concentrations (position B and C) and surface depositions (position A and D). With species concentration information, flow and intermixing of precursor materials are investigated, and with surface reactions, the film deposition process is studied.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Results and discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Effects on the in-line spatial ALD flow field</head><p>In this section, effects of the three factors on the spatial ALD flow field are characterized numerically, including gap size, temperature and pumping pressure. The main concern of precursor intermixture in in-line spatial ALD is paid special attention in this part, because the intermixture would deteriorate the film deposition quality by enabling the chemical vapor deposition (CVD)type reactions in the system. Fig. <ref type="figure" target="#fig_2">3</ref> shows the transient process during the dosing steps for different gap sizes.</p><p>The precursor concentrations at point B and C are shown in Fig. <ref type="figure" target="#fig_2">3(a)</ref> and <ref type="figure">(b)</ref>, respectively. It's seen that TMA material is indeed present at the water side for all the gap sizes, and water is detected at the TMA side. Both precursor concentrations are increasing until the steady states are achieved during the 0.1 s dosing process. TMA concentration level (in 10 À5 mol/m 3 ), however, is much lower than water concentration (in 10 À3 mol/m 3 ) as shown in Fig. <ref type="figure" target="#fig_2">3(a)</ref>.</p><p>Comparing the steady concentration levels, it is found that gap size influences the precursor distributions significantly. In Fig. <ref type="figure" target="#fig_2">3</ref> (a), 1.5 mm and 2 mm gap sizes both result in lower TMA concentration levels (&lt;10 À5 mol/m 3 ), and 1 mm gap yields the highest level (&gt;3 Â 10 À5 mol/m 3 ). Together with Fig. <ref type="figure" target="#fig_2">3</ref>(b), it is found that intermixing is reversely related to the gap size from 1 mm to 2 mm. Bigger gap spatial ALD reactor has less intermixing, and smaller gap makes the dosing process much longer. As indicated by both figures, it takes much longer time for the spatial ALD process with 1 mm gap to reach the steady state.</p><p>The observations are mainly due to the weaker convective mass transfer in smaller gap spatial ALD reactor. With 1 mm gap, for instance, the gas flow is largely hindered by the narrow gap. Considering the fact that in-line spatial ALD is a high vacuum system (0.22 torr), the material transport in such cases is mainly driven by mass and thermal diffusions other than convection. Because mass diffusive effect is much weaker compared to convection, the mass transfer process is much prolonged. These diffused molecules are accumulated in the exhaust cylinder due to lack of convective forces, and consequently a relative higher concentration is resulted in 1 mm gap in-line spatial ALD reactor as shown in Fig. <ref type="figure" target="#fig_2">3</ref>. However, in the case of large gas size, e.g., 5 mm, stronger convective mass transport also increases the intermixing.</p><p>At TMA side (position C) as shown in Fig. <ref type="figure" target="#fig_2">3</ref>(b), a relatively higher intermixing is observed, especially for 1 mm gap size compared to the water side. Water concentration is $5 Â 10 À4 mol/m 3 at position C. As a comparison, TMA concentration is $2 Â 10 À3 mol/m 3 with a relative intermixing ratio (defined as the concentration ratio of the foreign gas to the home gas) 1:4 for 1 mm gap size. This is owing to the fact that water has a relative higher inlet vapor pressure resulting stronger water diffusive process. This is further confirmed by Fig. <ref type="figure" target="#fig_3">4</ref>, which compares the relative intermixing ratio at both sides. As revealed in both Figs. <ref type="figure" target="#fig_2">3</ref> and <ref type="figure" target="#fig_3">4</ref>, intermixing is weaker at water side. At both sides, increasing gap size from 1 mm to 2 mm decreases the intermixing.</p><p>The effect of pumping pressure on material transport is examined by changing the relative pressure (to the base pressure) from 0, 0.05, to 0.1 torr, while the gap size and wafer temperature are fixed at 0.15 mm and 200 °C. The values are consider no less than the base pressure because in actual in-line spatial ALD system the pumping pressure is usually a little higher than the stable base vacuum pressure due to the imperfection of vacuum pump.</p><p>Fig. <ref type="figure" target="#fig_4">5</ref> presents the effects of pumping pressure on precursor distribution and intermixing for position B and C. It is found that higher pumping pressure (e.g., 0.1 torr) results in higher TMA concentration at water side (position B) and higher water concentration at TMA side (position C). For instance, water steady   concentration level is $2 Â 10 À4 , 3 Â 10 À4 , and 5 Â 10 À4 mol/m 3 for 0, 0.05 and 0.1 torr pumping pressure at position C (TMA side), respectively. Hence, properly maintained pumping and base pressure in ALD reactor is crucial to avoid precursor intermixing.</p><p>Wafer temperature effects on the flow field and precursor intermixing in in-line spatial ALD reactor are investigated numerically with 1.5 mm gap and 0.22 torr pumping pressure. The results presented in Fig. <ref type="figure" target="#fig_5">6</ref> show that at both sides higher wafer temperature yields higher precursor concentration level from the other side. With the wafer temperature as high as 250 °C, the mass diffusive process is accelerated, and hence higher TMA concentration level is seen at water (position B) as Fig. <ref type="figure" target="#fig_5">6</ref>(a), and higher water concentration level at TMA side (position C) as Fig. <ref type="figure" target="#fig_5">6(b)</ref>.</p><p>From the above flow and species transport simulations, it's concluded that in the high vacuum in-line spatial ALD system, diffusive mass transfer is the major reason for precursor intermixing, especially in scenarios of very small gap size. As demonstrated by the numerical studies, 1 mm gap size yields highest intermixing level because of the dominant mass diffusive effect. Higher pumping pressure decreases the pressure difference from inlets to outlets, and thus weakens the flow convective effect. The intermixing concentration level is seen lower if the low pumping pressure is well maintained. Because higher temperature increases the mass diffusion process, it results in higher intermixing concentration level.</p><p>In summary, bigger gap ($2 mm), lower pump pressure, and lower wafer temperature are desirable to minimize the intermixing level in the concerned in-line spatial ALD system. However, the optimal choices of these factors must also be reconsidered in terms of chemical deposition process. For example, lower wafer temperature   Fig. 9. Growth per cycle of bulk Al 2 O 3 thin films with different relative pumping pressure (to the base pressure, 0.22 torr) 0, 0.05 and 0.1 torr with 1.5 mm gap size and 200 °C wafer temperature.</p><p>is beneficial for avoiding intermixing, but it is not favorable for material deposition process, because lower temperature may decrease the film deposition rate. Further numerical investigations on material deposition process are presented in the following section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Effects on the in-line spatial ALD chemical depositions</head><p>The effects of the three factors on the depositions of bulk Al 2 O 3 in the in-line spatial ALD reactor is studied numerically in terms of growth per cycle (GPC) of thin films on the silicon wafer belt. From simulations, the transient mass deposition rate of bulk species O(b) and Al(b) in the two half reactions as presented in Eqs. ( <ref type="formula" target="#formula_7">9</ref>) and ( <ref type="formula" target="#formula_8">10</ref>) is achieved by probing the material deposition values at position A and D, respectively. Bulk Al 2 O 3 mass growth rate is obtained from integral of the resulted bulk species O(b) and Al(b). Thickness growth per cycle in Å/cycle is then determined by introducing alumina thin film density <ref type="bibr" target="#b21">[22]</ref>. Fig. <ref type="figure" target="#fig_6">7</ref> presents Al 2 O 3 deposition GPCs under different deposition temperature conditions from 150, 200 to 250 °C. The gap size and pumping pressure are set as 1.5 mm and 0.22 torr. From the GPC curves, material depositions are saturated at about 0.015 s dosing time, or the critical dosing time. This critical dosing time is shown sufficient to complete the surface reactions, which completely consume all the reactive surface sites. In this case beyond the critical dosing time, the GPC remains unchanged even if the precursor is still being dosed. This is the very desirable self-limiting feature of ALD process. However, if dosing is shorter than the critical time, the deposition rate increases rapidly with the precursor dosing time. This is called the unsaturated growth period.</p><p>With the critical dosing time, the wafer belt moving speed is readily to be defined. For a specific point on the wafer belt, it takes 0.015 s to complete the half surface reactions contacting with the precursor molecules under the dosing cylinders. The diameter of precursor dosing cylinder in our in-line spatial ALD reactor is 1 cm, and hence the wafer belt movement speed is promptly calculated as $0.67 m/s.</p><p>The overall throughput of the in-line spatial ALD system can also be achieved from the critical dosing time. For example, as shown in Fig. <ref type="figure" target="#fig_6">7</ref>, GPC at 200 °C is $1.2 Å/cycle, and the critical dosing time is $0.015 s. Since an ALD cycle takes two half reactions, the growth thickness per second is calculated using the total cycle time, which is 0.03 s. GPC ¼ 1:2 Å=cycle ¼ 1:2 Å=0:03 s ¼ 4 nm=s</p><p>The overall throughput is significantly improved compared to a few nanometers per minute of growth rate in the conventional ALD system <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b8">9]</ref>. By Fig. <ref type="figure" target="#fig_6">7</ref>, it is seen higher temperature does increase the saturated GPC, but the increment is much smaller and even negligible during the unsaturated growth period, i.e., 0-0.015 s. The numerical simulation results have an excellent agreement with the experimental results of cited work as presented in Ref. <ref type="bibr" target="#b4">[5]</ref>. The temperature effects reveal the chemical kinetic information on the surface reactions. During the surface reactions, the introduced thermal energy has to overcome the reaction barrier (activation energy) to enable the reactions. Higher temperature increases the reactivity of surface species as well as the species molecule kinetic energy, and hence increases the collision probabilities, which finally results in a higher reaction rate.</p><p>The effects of gap size on the chemical deposition process are presented in Fig. <ref type="figure">8</ref>. It takes much longer dosing time for GPC to get saturated for smaller gap size spatial ALD process. For instance, with 1 mm gap size, $0.025 s dosing is required for GPC to get saturated, compared to $0.01 s for 2 mm gap. This is mainly attributed to the slower mass transportation process caused by the narrower gap as illustrated in Fig. <ref type="figure" target="#fig_2">3</ref>. From the GPC curves in Fig. <ref type="figure">8</ref>, however, 1 mm gap size has a relatively higher saturated GPC level. Spatial ALD process with 1.5 mm gap size has a saturated GPC level as high as 1 mm gap size, and requires shorter dosing time ($0.012 s) to get saturated. This shows that the depositions process is highly affected by the flow and mass transfer process.</p><p>The effect of pumping pressure on the surface deposition process is shown relatively weaker in Fig. <ref type="figure">9</ref>. During the unsaturated growth period before 0.015 s, smaller pumping pressure increases the film deposition rate slightly. Once saturated, they have the same level of GPC. With different pumping conditions on the outlet boundaries, as given by Fig. <ref type="figure" target="#fig_4">5</ref> the precursor intermixing is altered, but the dominant precursor concentrations are comparable for all the pumping cases. For instance, water concentration difference as shown in Fig. <ref type="figure" target="#fig_4">5</ref>(a) is within 1 Â 10 À3 mol/m 3 from 0 to 0.1 torr relative pumping pressure. This is well correlated with the similar thin film deposition rate as illustrated in Fig. <ref type="figure">9</ref>.</p><p>To depict the overall transient flow and reaction process, Fig. <ref type="figure" target="#fig_8">10</ref> presents the slice contours of transient flow and deposition process in the in-line spatial ALD reactor at 0.005, 0.015, 0.025 and 0.035 s, respectively for 1 mm gap size, 0.22 torr pumping pressure, and 250 °C deposition temperature. The most left cylinder is for water dosing, and the right one for TMA. The left wafer surface under water dosing cylinder shows the half reaction of water dosing, and the right for TMA dosing. At the initial state, the system is full of the separating gas, nitrogen. With dosing proceeds, precursor molecules gradually fill the dosing cylinders. The middle three slice contours show methane generation and distribution in the system. Methane is generated from the both half reactions on the wafer surfaces, and is purged out through the two pumping cylinders. Very few methane can be detected in the middle separating cylinder during the whole process as shown in Fig. <ref type="figure" target="#fig_8">10(c)</ref> and <ref type="figure">(d)</ref>.</p><p>To summarize the information on the in-line spatial ALD growth process, the deposition is a strictly self-limiting process depending on the reactive surface site status. The film growth is saturated to certain levels within different critical dosing times under different deposition conditions. Demonstrated by the simulation results, the saturated GPC level is heavily dependent on the wafer temperature, gap size, but rarely on pumping pressure. To be specific, higher wafer temperature (e.g., 250 °C), a slightly smaller gap size (e.g., 1.5 mm) and better maintained pumping condition (e.g., 0.22 torr) are desirable to achieve higher film growth rate. It is also revealed that the chemical deposition process is highly affected by the flow and concentration conditions of precursors. Surface chemical kinetics of the in-line spatial ALD is a function of deposition temperature, flow conditions, reactive surface sites, and precursor distributions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusions</head><p>This paper systematically studied an in-line spatial ALD system by numerical investigations of the gas flow and surface chemical deposition processes in ALD of Al 2 O 3 . The effects of three geometric and process parameters, namely, gap size, temperature, and pumping pressure, were considered with three levels, respectively. The information on the fluid dynamics in spatial ALD system is crucial to avoid the precursor intermixing. By simulations, it's found that bigger gap (e.g., 2 mm) results in less precursor intermixing. However, when it comes to the surface chemistry, larger gap size generates slightly lower saturated deposition GPC level, despite the critical dosing time is shorter. The optimal gap size is heavily dependent on the geometrical and process parameter setup, as well the trade-off between precursor intermixing and deposition rate.</p><p>Wafer temperature is a significant factor in both flow and surface deposition processes. Higher temperature, 250 °C for example, accelerates the diffusive mass transport which largely contributes to the precursor intermixing. However, high temperature also increases the film deposition rate and results in a higher saturated GPC level. Well-maintained pumping pressure is beneficial to decrease the concentration of precursor from the other side, but its effect on the deposition process is seen very weak.</p><p>It is also concluded that the time scale of in-line spatial ALD process is only in tens of milliseconds. As demonstrated in our study, the typical critical dosing time of a half cycle in in-line spatial ALD system is $0.015 s, and it only takes 30 ms for a specific point on the moving wafer belt to complete a full deposition cycle. With this critical dosing time, it is possible to define the wafer belt moving speed as $ 0.67 m/s. Considering the in-line spatial ALD is a continuous process without purging step, the ALD cycle time is greatly shortened, and the overall throughput is shown as high as $4 nm/s, which is much higher compared to the conventional sing-wafer ALD with several nanometers growth in a minute.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. (a) stack-type multi-wafer batch ALD reactor [7]; (b) in-line spatial ALD reactor [8,10]; and (c) rotary spatial ALD reactor.</figDesc><graphic coords="2,106.41,483.87,368.56,254.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. 3D computational domain of in-line spatial ALD reactor: (a) fluid domain in the two precursor dosing cylinders, one separating gas injecting cylinder, two exhaust cylinders, and the gap spaces between each arrangement, dimension scale in meters, and (b) center slice of the 3D domain, A, B, C and D are the probing points for the flow or chemical deposition analysis.</figDesc><graphic coords="4,306.71,353.37,241.06,351.04" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. The effects of gap size on precursor intermixing with ideal pumping condition (0.22 torr) and 200 °C deposition temperature: (a) TMA and water concentration in mol/m 3 at water side (position B) with gap size 1, 1.5, and 2 mm, and (b) at TMA side (position C) with gap size 1, 1.5, and 2 mm.</figDesc><graphic coords="6,37.76,67.92,240.94,330.07" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 .</head><label>4</label><figDesc>Fig.4. Comparison of relative intermixing ratios for position B (water side) and C (TMA side) with different gap sizes, and the relative intermixing ratios is defined as the concentration ratio of the foreign gas to the home gas.</figDesc><graphic coords="6,305.63,67.92,243.21,207.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. The effects of relative pumping pressure (0, 0.05, to 0.1 torr) on the precursor intermixing with gap size and wafer temperature fixed at 1.5 mm and 200 °C: (a) TMA and water concentration in mol/m 3 at water side (position B), and (b) at TMA side (position C). The simulation time is 0.04 s with 1.5 mm gap size.</figDesc><graphic coords="6,308.24,330.97,237.94,332.05" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. The effects of wafer temperature (150 °C, 200 °C and 250 °C) on the precursor intermixing with gap size and pumping pressure fixed at 1.5 mm and 0.22 torr: (a) TMA and water concentration in mol/m 3 at position B (water side), and (b) at position C (TMA side). The simulation time is 0.04 s with 1.5 mm gap size.</figDesc><graphic coords="7,53.07,390.96,230.00,321.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. Growth per cycle of bulk Al 2 O 3 thin films with different deposition temperatures, 150 °C, 200 °C and 250 °C with 1.5 mm gap size and the ideal pumping condition (0.22 torr).</figDesc><graphic coords="7,336.70,67.92,200.69,165.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 8 .Fig. 9 .</head><label>89</label><figDesc>Fig. 8. Growth per cycle of bulk Al 2 O 3 thin films with different gap sizes 1, 1.5 and 2 mm with ideal pumping condition (0.22 torr) and 200 °C wafer temperature.</figDesc><graphic coords="7,320.77,288.85,232.70,192.93" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 10 .</head><label>10</label><figDesc>Fig. 10. Slice contours of transient flow and deposition process in the in-line spatial ALD reactor at 0.005, 0.015, 0.025, and 0.035 s for 1 mm gap size, 0.22 torr pumping pressure, and 250 °C wafer temperature.</figDesc><graphic coords="8,63.89,296.22,453.77,433.87" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>D. Pan et al. / International Journal of Heat and Mass Transfer 96 (2016) 189-198</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>D. Pan et al. / International Journal of Heat and Mass Transfer 96 (2016) 189-198</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgement</head></div>
+<div><head>Financial</head><p>support by <rs type="funder">National Science Foundation</rs> (<rs type="grantNumber">CMMI-1200940</rs>) is gratefully acknowledged.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_6Fbv86M">
+					<idno type="grant-number">CMMI-1200940</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">On the physical and chemical details of alumina atomic layer deposition: a combined experimental and numerical approach</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Jen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Numerical modeling of carrier gas flow in atomic layer deposition vacuum reactor: a comparative study of lattice Boltzmann models</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Q</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Jen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">ALD technology -present and future challenges</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haukka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Trans. 3</title>
+		<imprint>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page" from="15" to="26" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Investigation on spatially separated atomic layer deposition by gas flow simulation and depositing Al2O3 films</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Won</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">On the kinetics of spatial atomic layer deposition</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Lieshout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Illiberi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Knaapen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Van Asten</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition for photovoltaics: applications and prospects for solar cell manufacturing</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A V</forename><surname>Delft</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Garcia-Alonso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">74002</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Batch ALD: characteristics, comparison with single wafer ALD, and examples</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Granneman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pierreux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Terhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zagwijn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Coat. Technol</title>
+		<imprint>
+			<biblScope unit="volume">201</biblScope>
+			<biblScope unit="issue">22-23</biblScope>
+			<biblScope unit="page" from="8899" to="8907" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition process for barrier applications of flexible packaging</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Johansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lahtinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kuusipalo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kääriäinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Maydannik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cameron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Tappi 2010 PLACE Conference</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">High-speed spatial atomic-layer deposition of aluminum oxide layers for solar cell passivation</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lankhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Spee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Maas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vermeer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">32</biblScope>
+			<biblScope unit="page" from="3564" to="3567" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Spatial atomic layer deposition: a route towards further industrialization of atomic layer deposition</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Poodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Cameron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dickey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kuznetsov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sundaram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vermeer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition: an overview</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="111" to="131" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Growth mechanism of atomic layer deposition of zinc oxide: a density functional theory approach</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Afshar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Cadien</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="issue">25</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Reaction mechanisms for atomic layer deposition of aluminum oxide on semiconductor substrates</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Delabie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sioncke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rip</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Elshocht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pourtois</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Beckhoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pierloot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Simulating the atomic layer deposition of alumina from first principles</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Greer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="3246" to="3250" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Growth per cycle in atomic layer deposition: a theoretical model</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="249" to="257" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Munson</surname></persName>
+		</author>
+		<title level="m">Fundamentals of Fluid Mechanics sixth ed. with WileyPlus fifth ed. Set</title>
+		<imprint>
+			<publisher>John Wiley and Sons Canada, Limited</publisher>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Mcdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Pritchard</surname></persName>
+		</author>
+		<title level="m">Introduction to Fluid Mechanics</title>
+		<imprint>
+			<publisher>John Wiley &amp; Sons Canada, Limited</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Mills</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Basic</forename><surname>Heat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mass</forename><surname>Transfer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>Pearson Education, Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Steinfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Francisco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Hase</surname></persName>
+		</author>
+		<title level="m">Chemical Kinetics and Dynamics</title>
+		<imprint>
+			<publisher>Prentice Hall</publisher>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Hoffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Frankel</surname></persName>
+		</author>
+		<title level="m">Numerical Methods for Engineers and Scientists</title>
+		<imprint>
+			<publisher>Taylor &amp; Francis</publisher>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>second ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chapra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Chapra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Canale</surname></persName>
+		</author>
+		<title level="m">Numerical Methods for Engineers</title>
+		<imprint>
+			<publisher>McGraw-Hill Higher Education</publisher>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Low-temperature Al2O3 atomic layer deposition</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Groner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H</forename><surname>Fabreguette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Elam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="639" to="645" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

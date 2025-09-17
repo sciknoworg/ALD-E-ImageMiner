@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main"></title>
+				<funder ref="#_NbeGcj5">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2015-01-09">9 January 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dongqing</forename><surname>Pan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Lulu</forename><surname>Ma</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanyuan</forename><surname>Xie</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tien</forename><surname>Chien</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Chris</forename><surname>Yuan</surname></persName>
+							<email>cyuan@uwm.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">University of Wisconsin-Milwaukee</orgName>
+								<address>
+									<postCode>53201</postCode>
+									<settlement>Milwaukee</settlement>
+									<region>Wisconsin</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">University of Wisconsin-Milwaukee</orgName>
+								<address>
+									<postCode>53201</postCode>
+									<settlement>Milwaukee</settlement>
+									<region>Wisconsin</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Engineering</orgName>
+								<orgName type="institution">University of Alaska Anchorage</orgName>
+								<address>
+									<postCode>99508</postCode>
+									<settlement>Anchorage</settlement>
+									<region>Alaska</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">University of Wisconsin-Milwaukee</orgName>
+								<address>
+									<postCode>53201</postCode>
+									<settlement>Milwaukee</settlement>
+									<region>Wisconsin</region>
+								</address>
+							</affiliation>
+						</author>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-01-09">9 January 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0937ACD8AB87192C9708A0260ED9AB9E</idno>
+					<idno type="DOI">10.1116/1.4905726</idno>
+					<note type="submission">Received 27 October 2014; accepted 29 December 2014;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Alumina thin film is typically studied as a model atomic layer deposition (ALD) process due to its high dielectric constant, high thermal stability, and good adhesion on various wafer surfaces. Despite extensive applications of alumina ALD in microelectronics industries, details on the physical and chemical processes are not yet well understood. ALD experiments are not able to shed adequate light on the detailed information regarding the transient ALD process. Most of current numerical approaches lack detailed surface reaction mechanisms, and their results are not well correlated with experimental observations. In this paper, the authors present a combined experimental and numerical study on the details of flow and surface reactions in alumina ALD using trimethylaluminum and water as precursors. Results obtained from experiments and simulations are compared and correlated. By experiments, growth rate on five samples under different deposition conditions is characterized. The deposition rate from numerical simulation agrees well with the experimental results. Details of precursor distributions in a full cycle of ALD are studied numerically to bridge between experimental observations and simulations. The 3D transient numerical model adopts surface reaction kinetics and mechanisms based on atomic-level studies to investigate the surface deposition process. Surface deposition is shown as a strictly self-limited process in our numerical studies. ALD is a complex strong-coupled fluid, thermal and chemical process, which is not only heavily dependent on the chemical kinetics and surface conditions but also on the flow and material distributions. V</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>On the physical and chemical details of alumina atomic layer deposition: A combined experimental and numerical approach I. INTRODUCTION Atomic layer deposition (ALD) has been adopted extensively in silicon microelectronics and thin-film device industries and is on rapid expansion to more industrial applications. <ref type="bibr" target="#b0">1</ref> ALD is operated by injecting two or more chemical precursors into a chamber alternately to enable material deposition on substrates layer by layer. The sequential saturated surface reaction makes ALD process highly selflimited, and thus, the resultant films are perfectly uniform in surface geometry. Film thickness can be accurately controlled in A ˚ngstrom or monolayer level with high precisions. <ref type="bibr" target="#b0">1</ref> Thanks to its high dielectric constant, high thermal stability, and good adhesion on various wafer surfaces, Al 2 O 3 thin film is typically studied as a model ALD process. <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2</ref> The Al 2 O 3 dielectric film was first reported to be deposited by ALD using trimethylaluminum (TMA) and H 2 O, <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4</ref> and recently, more researchers adopt TMA and ozone as precursors. <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> Our study focuses on the typical Al 2 O 3 ALD using TMA and H 2 O, whose surface deposition process can be represented as following two half reactions:</p><formula xml:id="formula_0">Ã AlÀOHþAlðCH 3 Þ 3 ! Ã AlÀOÀAlðCH 3 Þ 2 þCH 4 ; (1) Ã Al À CH 3 þ H 2 O ! Ã Al À OH þ CH 4 ;<label>(2)</label></formula><p>where * items denote surface species. Although a lot of materials are being deposited by ALD, details on its physical and chemical processes are not yet well understood. <ref type="bibr">8</ref> In general, studies of ALD process have been developing into two domains: experimental and numerical. Experimental researchers improve the deposited films by adjusting experimental conditions, e.g., process pressure, temperature, and dosage. <ref type="bibr" target="#b10">[9]</ref><ref type="bibr" target="#b11">[10]</ref><ref type="bibr" target="#b12">[11]</ref><ref type="bibr" target="#b13">[12]</ref><ref type="bibr" target="#b14">[13]</ref><ref type="bibr" target="#b15">[14]</ref> Li et al. studied the effects of process temperature and pressure on Al 2 O 3 film properties by characterizing the film thickness uniformity, impurity incorporation, and the step coverage in high aspect ratio features. <ref type="bibr" target="#b1">2</ref> Mousa et al. presented a study of the effects of temperature and gas velocity on film growth in Al 2 O 3 and ZnO ALD, respectively. <ref type="bibr" target="#b16">15</ref> Sammelselg et al. studied the growth unevenness and film compositions in ALD of TiO 2 thin films. <ref type="bibr" target="#b17">16</ref> Influence of growth temperature on properties of zirconium dioxide films by ALD was examined by Kukli et al. <ref type="bibr" target="#b18">17</ref> Similar research was conducted by Scarel et al. to study the electric properties of ZrO 2 films. <ref type="bibr" target="#b19">18</ref> Confined by technical, economic and time infeasibilities in experimental implementations, ALD experiments are always facing a "black box" without knowing enough details about the transient process, and thus, they only focus on the "output," such as growth rate, film properties. Consequently, they are not able to shed adequate light on the detailed information of ALD process.</p><p>With progresses in computing technologies, many researchers are devoted to studying physical interactions and chemical kinetics of ALD by numerical approaches. ALD process is in essence a multiscale process, which not only involves atomic bonds formations, species chemisorptions, and nanofilm deposition (in molecular scale), but also includes material interactions and energy transport in macroscopic scale (in chamber scale).</p><p>In molecular scale, most numerical investigations adopt the first principle methods, such as the density function theory (DFT) method to explore surface reaction mechanisms and chemical reaction pathways. <ref type="bibr" target="#b20">19</ref> In the paper of Delabie et al., ALD of Al 2 O 3 using TMA and water was studied using DFT to investigate reaction pathways and possible mechanisms for growth inhibition in ALD cycles. <ref type="bibr" target="#b21">20</ref> The atomic-scale structure of alumina film by ALD was also studied by Elliott and Greer using the DFT method. <ref type="bibr" target="#b22">21</ref> Besides DFT, Puurunen derived a mathematical model to describe the growth rate in ALD. <ref type="bibr" target="#b23">22</ref> In the cited paper, "ligand exchange" and "dissociation or association" were proposed as two types of chemisorption mechanisms. <ref type="bibr" target="#b23">22</ref> The above atomic-level models revealed certain microscopic details of the surface reaction mechanisms and chemical kinetics, but few of them considered the material and energy transfer processes in ALD.</p><p>Some researchers took the macroscopic transport processes into consideration using other methods such as Monte Carlo method, molecular dynamics, and Lattice Boltzmann method. Gilmer et al. applied the Monte Carlo models to simulate film deposition in atomic scale. <ref type="bibr" target="#b24">23</ref> Kinetic Monte Carlo methods were proposed in Refs. 24 and 25 to investigate ALD process of HfO 2 and Al 2 O 3 , respectively. Hu et al. used molecular dynamics model to study the structure of Al 2 O 3 film in the aspects of surface composition, roughness and growth rate. <ref type="bibr" target="#b27">26</ref> Similar method was adopted by Gou et al. to simulate surface interactions on silicon wafer in ALD. <ref type="bibr" target="#b28">27</ref> Lattice Boltzmann method is a relatively new but rapidly developing mesoscopic approach, which uses the lattice schemes to solve the Boltzmann equation. <ref type="bibr" target="#b29">28</ref> He et al. first applied the Lattice Boltzmann method to simulate diffusionconvection processes with surface chemical reactions on solid surfaces. <ref type="bibr" target="#b30">29</ref> Finally, we extended the method and used it in simulating the gas flow in ALD. <ref type="bibr" target="#b29">28</ref> Due to multiple scales both in space and time, ALD simulation in chamber scale remains challenging. In this filed, Adomaitis developed numerical models to describe the ballistic transport of chemical precursor species in ALD process. <ref type="bibr" target="#b31">30</ref> Holmqvist et al. claimed a mechanistic model of continuous flow reactors. <ref type="bibr" target="#b32">31,</ref><ref type="bibr" target="#b33">32</ref> By continuum-based models in the cited papers, gas-phase fluid dynamics, mass transport, and heterogeneous gas-surface reaction mechanisms were analyzed numerically. We recently constructed a similar mechanistic model with detailed chemical kinetics to study alumina ALD process. <ref type="bibr" target="#b34">33</ref> In a paper published by Adomaitis, a multiscale model of ALD was developed by coupling the lattice Monte Carlo method with a continuum approach of precursor transport. <ref type="bibr" target="#b35">34</ref> These chamber-scale models can fundamentally describe the ALD process together with the chemical kinetics in a larger picture. However, most of them lack detailed surface reaction mechanisms and numerical results are not well correlated with the experimental observations. In this paper, we perform a combined experimental and numerical study on the details of flow and surface reactions in ALD and the results from both experiments and simulations are correlated. By experiments, the growth rate under different deposition conditions is studied and characterized. Details regarding precursor pulsing and purging processes in a full cycle of ALD simulation are studied numerically to bridge between growth rate and precursor distributions. The 3D transient numerical model adopts surface reaction kinetics and mechanisms based on the atomic-level calculations <ref type="bibr" target="#b21">20,</ref><ref type="bibr" target="#b23">22</ref> to study the surface deposition process. The combined experimental and numerical methodology could be applied in further research for in-depth understanding of ALD process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Experiments</head><p>The surface reaction process and Al 2 O 3 film growth rate are characterized by the Cambridge NanoTech Savannah 100 ALD system using TMA þ H 2 O reactions. The ALD system shown in Fig. <ref type="figure" target="#fig_0">1</ref> consists of precursor cylinders, precursor manifold, carrier gas manifold, chamber, outlet pipe, and a vacuum pump. TMA and water stored in separate precursor cylinders are injected into chamber by their own vapor pressure at room temperature (25 C), and pulsing (in milliseconds) is controlled by ALD stop valves. Nitrogen is  the carrier gas flowing through the system continuously during all the operations. A vacuum pump is connected with outlet pipe to maintain the low vacuum pressure ($10 À1 Torr) in chamber. The reactor chamber (with 150 mm inner diameter) is designed for deposition of films on substrates with diameter up to 100 mm and can be heated from 100 to 250 C depending on specific deposition conditions.</p><p>In our experiments, alumina films are deposited on substrates of crystal silicon 100 with dimensions of 10 mm Â 10 mm, using 99.9% TMA as the metal provider and 99.0% distilled water as the oxidizer. The wafers are prepared by first being immersed in 5% HF acid solution for 5 min, and rinsed in distilled water. With HF treatment, the layers of native oxide are removed. <ref type="bibr" target="#b36">35</ref> Then, the wafers are immersed in 30% H 2 O 2 and 70% H 2 SO 4 mixed acid solution for 5 min and washed by distilled water. For each experiment, five samples are placed inside the chamber, with one in the center, the other four around equilaterally. Specifically, substrate A is placed at the inlet, C at the outlet, B and D at the upper and lower positions, and E in the center of chamber.</p><p>Before depositions, each component of ALD system is heated to the prescribed temperature and the system is stabilized for 300 s. Pulsing time for both TMA and water vapor is 0.015 s, while purging time for both TMA and water vapor is tested with 8 and 20 s, respectively. In our ALD cycle, TMA is pulsed, and then purged in the first half cycle, and in the second half cycle, water is injected and purged. To be specific, the ALD cycle in 8 s purging experiment is TMA/purge/ water/purge ¼ 0.015 s/8 s/0.015 s/8 s and in 20 s purging experiment, TMA/purge/water/purge ¼ 0.015 s/20 s/0.015 s/ 20 s. Nitrogen is flowing through the system at 20 sccm. A total of 60 cycles are deposited in our experiments. The accumulated film thickness by ALD is characterized by the UVISEL Spectroscopic Ellipsometer (HORIBA, Ltd.).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Mathematical modeling</head><p>ALD cycle can be decoupled into several physical and chemical procedures, such as momentum transport (material flow), convective heat transfer (system heating), mass transfer (species transport), as well as chemical reactions (surface species chemisorption). Each process is governed by corresponding partial differential equations (PDEs), which can be solved numerically on the defined domain. These PDEs are derived using the finite volume method (FVM). The surface reaction kinetics and mechanisms are defined on surface sites to simulate the material deposition process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Fluid dynamics</head><p>The continuum-based Finite Volume Method assumes the concerned domain as a continuum. The continuity equation conserves mass <ref type="bibr" target="#b37">36,</ref><ref type="bibr" target="#b38">37</ref> @q @t þ r Á qV</p><formula xml:id="formula_1">* ¼ S m ;<label>(3)</label></formula><p>where q is the density, V * is the velocity vector, and S m is a mass source term.</p><p>The flow in S100 ALD system was confirmed as a laminar flow. <ref type="bibr" target="#b29">28</ref> The process of momentum transport within the laminar flow in the ALD chamber is governed by the momentum conservation equation <ref type="bibr" target="#b37">36,</ref><ref type="bibr" target="#b38">37</ref> </p><formula xml:id="formula_2">@ @t qV * þ r Á qV * V * ¼ ÀrP þ r Á s þ qg * þ F * ;<label>(4)</label></formula><p>where P is the static pressure; qg * and F * are the gravitational body force and external body forces, respectively; and s is the stress tensor, which is defined as <ref type="bibr" target="#b37">36,</ref><ref type="bibr" target="#b38">37</ref> </p><formula xml:id="formula_3">s ¼ l rV * þ rV * T À 2 3 r Á V * Ĩ ! ; (<label>5</label></formula><formula xml:id="formula_4">)</formula><p>where l is the fluid dynamic viscosity, Ĩ is the unit tensor, and the term ð2=3Þr Á V * Ĩ is the effect of volume dilation.</p><p>To model the species transport in ALD system, the convection-diffusion equation is adopted. In ALD system, the two-component gaseous mixture is concerned: (1) water vapor and nitrogen; (2) TMA vapor and nitrogen. The convection-diffusion equation for species i takes the following form: 38</p><formula xml:id="formula_5">@ @t qc i ð Þ þ r Á qc i V * ¼ Àr Á J * m;i þ R i þ S i ;<label>(6)</label></formula><p>where c i is the local molar fraction of species i, R i is the net rate of production of species i by chemical reaction, and S i is the source of species i.</p><p>The diffusion flux, J * m;i , is the mass diffusion due to the gradients of concentration and temperature. In a mixture, when concentration of one species is much lower than the major component, the dilute approximation is satisfied, and Fick's law is used to model mass diffusive flux of the dilute species. <ref type="bibr" target="#b39">38</ref> In ALD system, although each precursor is pulsed in a very short time (e.g., 0.015 s), the amount of precursor injection is shown large in our numerical flow characterization and experimental observations. The dilute approximation does not hold in our case, so the Maxwell-Stefan equation for full multicomponent diffusion is more appropriate 38</p><formula xml:id="formula_6">J * m;i ¼ À X NÀ1 j ¼ 1 j 6 ¼ i qD ij rc i À D T;i rT T ;<label>(7)</label></formula><p>where D ij is the binary Maxwell-Stefan diffusive coefficient of species i and j; N is the total number of species in the mixture.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Heat transfer</head><p>In ALD process, heat transfer is in forms of conduction between chamber and pipe, and convection between wall and gaseous mixture. Also, there is heat transfer by species diffusion, e.g., heat transfer because of mass diffusion caused by material concentration gradients. <ref type="bibr" target="#b39">[38]</ref><ref type="bibr" target="#b40">[39]</ref><ref type="bibr" target="#b41">[40]</ref> With the very small portion of radiation between chamber and gases neglected, the overall heat transfer within ALD chamber is governed by the energy equation </p><formula xml:id="formula_7">@ @t qE ð Þ þ r Á V * qE þ P ð Þ h i ¼ r Á krT À X i h i J * h;i þ s Á V * À Á ! þ S;<label>(8)</label></formula><p>where k is the material thermal conductivity and h i is the enthalpy of mixture species i; and J * h;i is the diffusion heat flux of mixture species i. S is the source term of heat, which is due to chemical reaction or other heat sources. The term E is defined as <ref type="bibr" target="#b40">39,</ref><ref type="bibr" target="#b41">40</ref> </p><formula xml:id="formula_8">E ¼ h À P q þ V 2 2 :<label>(9)</label></formula><p>In summary, precursor distribution in the ALD system is achieved by solving the species transport Eq. ( <ref type="formula" target="#formula_5">6</ref>) with incorporation of the momentum conservation Eq. ( <ref type="formula" target="#formula_2">4</ref>) and energy Eq. ( <ref type="formula" target="#formula_7">8</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Chemical kinetics</head><p>Because gas flow in the concerned ALD system is shown as laminar, the laminar finite-rate method is adopted to couple the surface reactions with species transport. In laminar finite-rate model, the effect of turbulent fluctuations is ignored and the finite reaction rates are determined by Arrhenius expressions. To model the reactions accompanying species transport in ALD chamber, the production rate of species i by chemical reactions, R i in Eq. ( <ref type="formula" target="#formula_5">6</ref>) is calculated through the laminar finite-rate model using Arrhenius expressions</p><formula xml:id="formula_9">R i ¼ M w;i X N r i¼1 Ri;r ;<label>(10)</label></formula><p>where M w;i is the molecular weight of species i and Ri;r is the Arrhenius molar rate of creation or destruction of species i in reaction r. In real ALD system, there are two kinds of reactions involved: gaseous volumetric reaction and solid surface reaction. However, in alumina ALD, gaseous volumetric reactions happen only when the two gaseous precursors (TMA and water) coexist in ALD chamber. Since surface reactions enable film depositions, gaseous reactions are not the main concerns for studying the film deposition process. The general form of the rth irreversible surface reaction in ALD chamber takes the form as</p><formula xml:id="formula_10">X N g i¼1 g 0 i;r G i þ X N b i¼1 b 0 i;r B i þ X N s i¼1 s 0 i;r S i ! k r X N g i¼1 g 00 i;r G i þ X N b i¼1 b 00 i;r B i þ X N s i¼1 s 00 i;r S i ;<label>(11)</label></formula><p>where G, B, and S denote gaseous species, bulk (solid) species, and surface species, respectively; Ng, Nb, and Ns are the total number of the corresponding gaseous, bulk and surface species; g 0 i;r b 0 i;r and s 0 i;r are the stoichiometric coefficients for each reactant species i; g 00 i;r b 00 i;r and s 00 i;r are the stoichiometric coefficients for each product species i; the rate constant k r is evaluated by the Arrhenius expression</p><formula xml:id="formula_11">k r ¼ A r T b r exp ÀE r RT ; (<label>12</label></formula><formula xml:id="formula_12">)</formula><p>where A r is the pre-exponential factor; b r is the temperature exponent; E r is the activation energy; and R is the universal gas constant. The reaction rate of surface reaction &lt; r represented by Eq. ( <ref type="formula" target="#formula_10">11</ref>) is calculated as</p><formula xml:id="formula_13">&lt; r ¼ k f ;r Y N g i¼1 ½G i g 0 i;r w Y N s j¼1 ½S j s 0 i;r w ;<label>(13)</label></formula><p>where, for gaseous species, [] w represents molar concentrations on wall surfaces and for surface species, and [] w is the surface coverage. The bulk species are not included, because reaction rate is independent of bulk species. The net molar rate of production or consumption of each species i is given by</p><formula xml:id="formula_14">Ri;g ¼ X N R r¼1 ðg 00 i;r À g 0 i;r Þ&lt; r ; i ¼ 1; 2:::N g ; Ri;b ¼ X N R r¼1 ðb 00 i;r À b 0 i;r Þ&lt; r ; i ¼ 1; 2:::N b ; Ri;s ¼ X N R r¼1</formula><p>ðs 00 i;r À s 0 i;r Þ&lt; r ; i ¼ 1; 2:::N s ;</p><p>where N R represents the total number of surface reactions in ALD chamber. By substituting Eq. ( <ref type="formula" target="#formula_15">14</ref>) into Eq. ( <ref type="formula" target="#formula_9">10</ref>), the production (or destruction) rate of species i, R i in Eq. ( <ref type="formula" target="#formula_5">6</ref>) can be evaluated.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Surface reaction mechanisms</head><p>The surface deposition mechanisms of alumina ALD are quite complicated. In a theoretical model by Puurunen, two possible chemisorption mechanisms of ALD surface reactions were proposed: "ligand exchange" and "dissociation and association." <ref type="bibr">8,</ref><ref type="bibr" target="#b23">22</ref> Delabie et al. studied the pathways of TMA and H 2 O surface reactions using DFT method. <ref type="bibr" target="#b21">20</ref> ALD surface reactions are accomplished through two possible mechanisms, namely, "ligand exchange reaction" and "chemisorption reaction." <ref type="bibr" target="#b21">20</ref> At the initial state, wafer surface is covered by hydroxyl group. In the ligand exchange mechanism, surface species *OH sites are exchanged with a methyl group of TMA</p><formula xml:id="formula_16">AlðCH 3 Þ 3 þ Ã OH ! Ã CH 3 þ AlðCH 3 Þ 2 OH:<label>(15)</label></formula><p>For the chemisorption reaction type, the H atom from the surface sites is transferred to one of the methyl groups of TMA, resulting in gaseous CH 4 and Al-O bond</p><formula xml:id="formula_17">AlðCH 3 Þ 3 þ Ã OH ! Ã O-AlCH 3 ðsÞ þ CH 4 :<label>(16)</label></formula><p>It has been shown by the DFT calculations the chemisorption reactions are strongly favored kinetically over the ligand exchange reactions. <ref type="bibr" target="#b21">20</ref> Therefore, in this study, we adopted the chemisorption reaction mechanisms to study the reactions in TMA and water pulsing steps. The corresponding complete surface reactions are formulated by two half reactions as TMA pulse :</p><formula xml:id="formula_18">2AlðCH 3 Þ 3 ðgÞ þ 3 Ã OHðsÞ ! Ã AlCH 3 ðsÞ þ Ã AlðCH 3 Þ 2 ðsÞ þ 3Ohsi þ 3CH 4 ðgÞ; Water pulse : 3H 2 OðgÞ þ Ã Al-CH 3 ðsÞ þ Ã Al-ðCH 3 Þ 2 ðsÞ ! 3 Ã OHðsÞ þ 2Alhsi þ 3CH 4 ðgÞ;<label>(17)</label></formula><p>where hsi denotes solid (or bulk) species and g stands for the gaseous species. The two half reactions involve two gaseous species, three surface species, and two bulk species. Besides, for the numerical model in this paper, the following assumptions are presumed for the reaction mechanisms: (1) Only surface reactions are considered; (2) both half surface reactions are irreversible considering generations of gaseous methane; and (3) at the initial state, full coverage of hydroxyl group on wafer surfaces is assumed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Numerical solution details</head><p>A transient 3D numerical model based on the Cambridge Nanotech S100 ALD system is created and solved under the framework of ANSYS Fluent. The computational domain is shown in Fig. <ref type="figure" target="#fig_1">2</ref>.</p><p>The boundary condition for carrier gas nitrogen is volumetric flow rate, e.g., 20 sccm. By continuous operations of vacuum pump, the background pressure of the ALD chamber is maintained at $0.30 Torr. Precursors are stored in cylinders at room temperature, and precursors are injected into the system by their vapor pressure. In the numerical model, pressure boundary conditions are imposed on the two precursor inlets: 9.43 Torr for TMA vapor, and 23.68 Torr for water vapor, which are both assumed as saturated vapor pressure at 25 C. The outlet is connected with a vacuum pump and boundary condition for the outlet is pressure boundary and set as background pressure, which is also the full-load working pressure of the vacuum pump. By doing so, the steady flow field is actually presumed.</p><p>Materials are deposited on the inner surfaces of the whole ALD system in actual ALD process, but in numerical modeling, for computational simplicity, we only enable deposition reactions on the bottom wall of chamber, where the wafers are placed. Boundary conditions for any other inner walls are assumed no-slip, no-flux of mass, but their temperature is maintained at certain levels.</p><p>Using the numerical model, a full cycle of precursor pulsing and purging process is investigated to retrieve the information regarding flow field and material distribution. Mechanisms of surface reactions formulated in Eq. ( <ref type="formula" target="#formula_18">17</ref>) are enabled on the chamber bottom wall surface to study the surface deposition process. Numerical simulation is implemented on the 3D domain (Fig. <ref type="figure" target="#fig_1">2</ref>) with a nonstructural meshing scheme by the commercial solver package of ANSYS Fluent. Second-order upwind method is adopted for spatial discretization and approximation of the continuity equation, energy equation, and species transport equations. By FVM with a pressure-velocity coupled scheme, the values at each domain node are calculated. Second-order implicit method is used for the time discretization and approximation. The second order numerical methods are adopted in our simulation to ensure a sufficient computational accuracy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS AND DISCUSSION</head><p>A. Experiments: Effects of purging time and process temperature Alumina film is deposited at four levels of chamber temperature: 100, 150, 200, and 250 C, each with five wafer samples. The deposited Al 2 O 3 film thickness in 60 cycles is measured using a spectroscopic ellipsometer (Horiba UVISEL model).</p><p>Figure <ref type="figure" target="#fig_2">3</ref> presents film growth per cycle (GPC) in A ˚/cycle at each temperature for 8 and 20 s purging time, respectively. To be more specific, purging time is defined as the time between two precursor injections, and in one purging period, both precursor stop valves are closed, and carrier gas is flowing through the system continuously with the vacuum pump working. All the five samples have similar dependence on process temperature. Specifically, for 8 s purging experiments as indicated in Fig. <ref type="figure" target="#fig_2">3</ref>(a), $0.06 A ˚of GPC is increased with every 50 C increase of process temperature below 200 C. A slight decrease (&lt;0.02 A ˚/cycle) for sample A is seen from 200 to 250 C, but a larger decrease is shown from the outlet sample C. In the case of 20 s purging time as presented in Fig. <ref type="figure" target="#fig_4">3(b)</ref>, the turning temperature for sample D and E is lowered to 150 C and other three samples have same turning temperature as seen in 8 s purging process.</p><p>From these experimental results, film growth rate varies greatly at different chamber positions. This is due to the surface saturation conditions. Generally, as surface reactions get saturated, growth rate reaches its peak. As long as the surface saturation is not achieved, more seconds it takes in the purging step, more likely precursor molecules collide with the reactive surface species on wafer surfaces and thus more materials are deposited. To be specific, the highest growth rate for inlet sample A is $1.18 A ˚/cycle at 200 C with 8 s purging time. The reactive surface species is not The overall temperature effect on GPC presented in Fig. <ref type="figure" target="#fig_2">3</ref> can be well interpreted by the concept of "ALD window." 1 At lower temperature, e.g., 100 C, the growth rate is low because the precursor would condense on the surface in liquid state or there is no sufficient thermal energy to enable and finish the surface reactions. <ref type="bibr" target="#b0">1</ref> The decreased growth rate at higher temperature (250 C) is attributed to the enhanced desorption of the formed surface species at higher temperature. <ref type="bibr" target="#b0">1</ref> Another interesting feature exposed by the growth rate experiments is that at each deposition temperature, materials are deposited faster on inlet wafers than outlet substrates. In 8 s purging time, growth rate of outlet sample is $0.10 A ˚/ cycle lower than the inlet sample. The lower deposition rate on sample C is possibly attributed to the following facts: (1)  The outlet sample C is close to the vacuum pump, and the flow at outlet is much faster than at inlets. The convective effect on precursor transport is much stronger at outlet, and consequently, weaker diffusive effect decreases the deposition rate; (2) For the sample C, although all the precursor molecules gather at outlet, most precursor molecules are consumed in the surface reactions on the wafers and also the system inner surfaces. In fact, the amount of precursor molecules reaching at outlet would be much smaller than the inlet area. Furthermore, precursors are diluted by the resultant gas product CH 4 , and hence, its concentration is largely decreased at the outlet. Therefore, lower GPCs are observed at outlet sample. Additional light is also shed on this observation in the aspect of unevenness of precursor distributions inside the chamber by simulations and numerical analysis in Sec. III B.</p><p>Surface-averaged growth rates from both experimental and numerical investigations are demonstrated in Fig. <ref type="figure">4</ref>. Deposition rates obtained from numerical simulation are very close to the experimental results. The numerical alumina growth rate is achieved by considering the resulted bulk species from both half reactions described in Eq. ( <ref type="formula" target="#formula_18">17</ref>) and is averaged for the five sample surfaces. The numerical GPC increases from $1.10 A ˚/cycle at 100 C to $1. <ref type="figure" target="#fig_3">22 A</ref> ˚/ cycle at 200 C. A slight decrease is also seen at 250 C as the experimental curves.</p><p>The numerical GPC is $0.05 A ˚/cycle larger than the experimental results averagely. The larger values are mainly due to the presumed assumptions in numerical modeling. The theoretical modeling process has simplified the actual process with several assumptions listed in Sec. II B, while in experiments several factors are involved to hinder the deposition process. For instance, at the initial state, FIG. 4. (Color online) Comparisons of surface-averaged Al 2 O 3 film growth rates in A ˚/cycle by experimental and numerical investigations. hydroxylization of the wafer surfaces cannot be perfectly 100% (which is assumed in numerical modeling). Also, calculations based on DFT showed that complex intermediate products are generated in ALD reactions. <ref type="bibr" target="#b21">20</ref> However, for computational feasibility and simplicity, numerical model neglects these intermediate species. The involvement of intermediate reactions is difficult to be predicted without actual experimental conditions, because they are heavily dependent on precursor dosage, purging time, local precursor concentration, surface species coverage, and local temperature, etc. <ref type="bibr">[8]</ref><ref type="bibr" target="#b10">[9]</ref><ref type="bibr" target="#b11">[10]</ref><ref type="bibr" target="#b12">[11]</ref><ref type="bibr" target="#b13">[12]</ref><ref type="bibr" target="#b14">[13]</ref><ref type="bibr" target="#b15">[14]</ref> The agreement of GPC between experimental and numerical results confirms the validity of our numerical model, which are used for further exploration of ALD process in detail.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Numerical investigations</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Full cycle flow simulation: effect of carrier gas flow rate</head><p>To correlate the growth rate observed in experiments (Fig. <ref type="figure" target="#fig_2">3</ref>) with material distributions, precursor concentrations are obtained by solving the species transport Eq. ( <ref type="formula" target="#formula_5">6</ref>) with incorporation of the momentum conservation Eq. ( <ref type="formula" target="#formula_2">4</ref>) and the energy Eq. ( <ref type="formula" target="#formula_7">8</ref>). The numerical study is implemented by running a full cycle of ALD simulation.</p><p>Molar concentrations of TMA and water are probed during the transient calculations at five spots corresponding to the samples in experiments. Figures <ref type="figure">5(a</ref>) and 5(b) show TMA distribution for purging flow rate 20 and 200 sccm, respectively. At the initial state, only N 2 exists in chamber. TMA vapor is injected into the system by opening the ALD stop valve for 0.015 s. The inlet sample (point A) responds much faster than any other samples. TMA at both point C and E reach to the highest concentration within the pulsing step, but the peak molar fraction at B and D is only $60%.</p><p>In the following 10 s precursor purging step, TMA is diluted in chamber by the continuously incoming carrier gas and purged by the vacuum pump. TMA concentration at point A decreases dramatically from its peak value, but molar fractions at B and D increase to nearly 80% at the end of purging process (10.015 s) after a slight decrease. In the first half ALD cycle (0.015 s/10 s), TMA at point A remains at higher concentration level for longer time than any other samples. Higher concentration increases the collision probabilities of precursor molecules with the surface sites and results in higher deposition rates in the inlet area observed in experimental GPC results (Fig. <ref type="figure" target="#fig_2">3</ref>). On the other hand, the lower deposition rates at sample B and D are due to the lower precursor concentration levels.</p><p>By comparing Figs. 5(a) and 5(b), it is concluded carrier gas flow rate exerts little influence on pulsing step, but it largely determines precursor distributions during purging step. In the case of 20 sccm flow rate, TMA concentrations remain high in the most area of chamber (at B, D, and E &gt; 50%), while much lower concentrations (all the samples &lt; 20%) are observed for 200 sccm flow rate.</p><p>In the second-half cycle, water vapor is introduced into chamber. Figures <ref type="figure">5(c</ref>) and 5(d) demonstrate water vapor distribution for carrier gas flow rate of 20 and 200 sccm, respectively. Comparing with TMA, water vapor molecules take the whole chamber space much faster. Different purging gas flow rate makes no difference on water distributions in the pulsing step, neither. However, for 20 sccm flow rate as shown in Fig. <ref type="figure">5(c)</ref>, precursor concentrations at the four samples except A are kept at higher levels through the 10 s purging step. This implies that 20 sccm flow rate is not sufficient to purge all the precursor material out of ALD system. By 200 sccm flow rate, the situation is much improved as shown in Fig. <ref type="figure">5(d)</ref>.</p><p>From simulations, it has been shown the driving force to inject precursors into ALD system is mainly due to the relatively strong flow field caused by high precursor vapor pressure, but after the very rapid pulsing (0.015 s) process, precursor molecules are mainly driven by the relatively weak flow field formed from carrier gas. During the slow purging procedure, precursor molecules still have chances to collide and react with the reactive surface sites. This is why longer purging time slightly increases the growth rate as seen in experiments.</p><p>Increasing carrier gas flow rate will speed up the purging procedure, but this will also shorten collision time of precursor molecules with surface species which hence will result in lower deposition rate. An alternative way is to increase the purging time. However, this implies longer ALD cycle time, which is usually unfeasible in real applications considering hundreds of cycles needed to deposit a film.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Surface chemistry simulation: effect of process temperature</head><p>To further study the surface reaction details numerically, ALD surface chemical kinetics modeled by Eqs. ( <ref type="formula" target="#formula_15">14</ref>) and ( <ref type="formula" target="#formula_9">10</ref>) is integrated into species transport and flow simulation by evaluating the production or destruction rate of species i, R i in Eq. (6).</p><p>Figure <ref type="figure" target="#fig_5">6</ref> shows the correlations of surface deposition rate of Ohsi and TMA molar fraction with surface coverage of *Al(CH 3 ) 2 (s) for TMA pulsing step at 100, 150, 200, and 250 C, respectively. Coverage of species *Al(CH 3 ) 2 (s) increases in the first 0.005 s, and Ohsi deposition rate reaches its peak. When *Al(CH 3 ) 2 (s) is saturated to 50% [another half is taken by *AlCH 3 (s)], the deposition rate declines drastically. Thereafter, despite the increasing TMA concentration, the surface coverage and deposition rate remain unchanged.</p><p>The gray dotted lines indicated in Fig. <ref type="figure" target="#fig_5">6</ref> show temperature effect on surface reactions. The mass deposition rate increases with temperature from 100 to 250 C in the first 0.004 s. However, at 0.004 s, deposition rate of 250 C is seen slightly lower than that of 200 C. The reason can be found by observing *Al(CH 3 ) 2 (s) surface coverage at 250 C. At 0.004 s, surface species has already been saturated at 250 C, compared to an unsaturated condition at 200 C. This implies that surface deposition is highly dependent on surface coverage conditions.  021511-8 Pan et al.: On the physical and chemical details of alumina ALD 021511-8 J. Vac. Sci. Technol. A, Vol. 33, No. 2, Mar/Apr 2015</p><p>It is also worthwhile to point out that the peak deposition rate is independent of process temperature. With temperature changing from 100 to 200 C, the peak values of deposition rate are mostly the same. However, higher temperature indeed accelerates the deposition process before surface species get saturated.</p><p>Figure <ref type="figure" target="#fig_6">7</ref> presents the relation of mass deposition rate of Alhsi with H 2 O concentration and surface coverage of species *OH during water pulsing step. As water vapor is injected into the system, water concentration is increased and *OH coverage is approaching its saturation status. The mass deposition rate increases and then is restrained as surface sites are saturated with *OH.</p><p>Temperature effect on the second half surface reaction shows more complicated features. Surface deposition rate is increasing with temperature only in a very short time, and after 0.003 s, the surface deposition becomes hindered by higher temperature. This could be explained by surface species coverage in Fig. <ref type="figure" target="#fig_6">7</ref>. With increasing temperature, higher deposition rate corresponds to higher coverage ($50%) of *OH at 250 C. Surface species *OH at 250 C gets saturated much faster than other temperature conditions. Decreased deposition rates are resulted from smaller coverage of reactive species *Al(CH 3 ) 2 (s) and *AlCH 3 (s). However, the peak value of surface deposition rate in pulsing process is increased by higher temperature.</p><p>Figure <ref type="figure">8</ref> presents bulk Al 2 O 3 mass deposition rate in pulsing step at five probed points for the four temperature treatments. Bulk Al 2 O 3 growth rate is obtained from summation of the resulted bulk species Ohsi and Alhsi in the two half reactions. Inlet sample (point A) is shown having a quicker and larger response of surface deposition rate.</p><p>These observations are consistent with the flow simulation results shown in Fig. <ref type="figure">5</ref>: the sample that has a quicker and larger response to the precursor flow has a quicker and larger response to the surface reactions. Flow impacts the deposition process through material distributions. This also agrees with the experimental observations presented in Fig. <ref type="figure" target="#fig_2">3</ref> in which the highest deposition rate is observed at the inlet sample.</p><p>To summarize, both our experimental and numerical investigations on alumina ALD process show that the film deposition rate is dependent on process temperature. Higher temperature accelerates surface deposition processes, but surface reactions also heavily depend on the surface conditions, such as precursor concentration, precursor contacting time with the wafer surface and surface species saturation status. Before surface species get saturated, deposition rate is increasing with precursor concentration and the rate is largely restrained once the surface sites are fully taken by nonreactive surface species. Surface reactions are strictly self-terminated after reactive surface species are totally substituted, even though precursor concentration is still being increased. This is the self-limiting nature of ALD operations, which ensures the uniformity and accurate thickness controllability of deposited films.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSIONS</head><p>This paper presented a combined experimental and numerical study on the physical and chemical details of Al 2 O 3 ALD using TMA and water. It's been found in our experiments that the film deposition rates of all the five samples are positively dependent on temperature below 200 C. The growth rate is seen increasing with process temperature, but declines at higher temperature, e.g., 250 C for 8 s purging time. The inlet sample has higher growth rate than other samples. Longer purging time slightly increases the surface-averaged growth rate, but specific sample responds differently.</p><p>By numerical simulations, several insightful observations were made to better understand the ALD process. The discrepancies revealed among the five samples in experiments were correlated with precursor distributions during pulsing and purging processes. Higher GPC observed at inlet sample in experimental treatments is mainly due to the longer and larger precursor concentrations. Pulsing is a quite rapid 021511-9 Pan et al.: On the physical and chemical details of alumina ALD 021511-9 By tuning the carrier gas flow rate from 20 to 200 sccm, it was observed the flow rate has little influence on pulsing process. However, the amount of residual precursors left in the system after purging procedure is largely determined by carrier gas, because purging process is mainly driven by the flow field formed from carrier gas. The purpose of introducing inert gases such as nitrogen and argon into ALD system is more to "purge" the precursor out of ALD system than to "carry" the precursor molecules into the chamber.</p><p>The results from numerical chemistry simulations confirmed the self-limiting feature of ALD cycles. Surface deposition was seen a strictly self-limited process: surface deposition reactions are restrained once the surface species get saturated, even though the precursor material is still being introduced into the system. By the transient numerical simulations, effect of chamber temperature was shown to increase the deposition rate, but this effect is confined by the saturation conditions of surfaces sites. The differences of surface reactions among the five samples are consistent with the observations from experiments. ALD is a complex strong-coupled fluid, thermal and chemical process, which is not only heavily dependent on the chemical kinetics and surface conditions but also on the flow and material distributions.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. (Color online) Cambridge Nanotech Savannah S100 ALD system consists of precursor cylinders, precursor manifold, carrier gas manifold, chamber, outlet manifold, and a vacuum pump (not shown in the figure).</figDesc><graphic coords="3,323.55,483.82,228.46,229.55" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>021511- 2</head><label>2</label><figDesc>Pan et al.: On the physical and chemical details of alumina ALD 021511-2</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>021511- 3</head><label>3</label><figDesc>Pan et al.: On the physical and chemical details of alumina ALD 021511-3 JVST A -Vacuum, Surfaces, and Films</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIG. 2 .</head><label>2</label><figDesc>FIG. 2. (Color online) 3D computational domain in the numerical model is based on S100 ALD reactor system. There are three inlets, one outlet, and surface reactions are enabled only on the chamber bottom wall.</figDesc><graphic coords="6,66.10,603.04,216.46,110.32" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIG. 3 .</head><label>3</label><figDesc>FIG. 3. (Color online) Al 2 O 3 film growth rate in A ˚/cycle for: (a) 8 s purging experiments; (b) 20 s purging experiments. Sample A is located in the inlet area and sample C in the outlet area.</figDesc><graphic coords="7,66.10,58.96,216.46,364.37" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>021511- 6</head><label>6</label><figDesc>Pan et al.: On the physical and chemical details of alumina ALD 021511-6</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>021511- 7</head><label>7</label><figDesc>FIG. 6. (Color online) Correlations of surface deposition rate of Ohsi and TMA molar fraction with coverage of *Al(CH 3 ) 2 (s) for TMA pulsing step at 100, 150, 200, and 250 C, respectively. The gray dotted lines show the temperature effect on surface deposition. Surface deposition rate of Ohsi in mass per area per second is achieved by substituting Eq. (14) into Eq. (10).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>FIG. 5 . 8 J</head><label>58</label><figDesc>FIG. 5. (Color online) Precursor distributions during the full cycle of flow simulations for: (a) TMA molar fraction for carrier gas flow rate of 20 sccm; (b) TMA molar fraction for carrier gas flow rate of 200 sccm; (c) water molar fraction for carrier gas flow rate of 20 sccm; and (d) water molar fraction for carrier gas flow rate of 200 sccm. A is located in inlet area and C in the outlet area.</figDesc><graphic coords="9,71.66,58.96,468.92,399.86" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>FIG. 7 .</head><label>7</label><figDesc>FIG. 7. (Color online) Relation of surface deposition rate of Alhsi, H 2 O molar fraction and coverage of species *OH for water pulsing step at 100, 150, 200, and 250 C, respectively. The gray dotted lines show the process temperature effect on surface deposition. Surface deposition rate of Alhsi in mass per area per second is achieved by substituting Eq. (14) into Eq. (10).</figDesc><graphic coords="10,137.76,58.96,336.69,174.95" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="11,71.66,58.96,468.92,373.78" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENT</head><p>Support from <rs type="funder">National Science Foundation</rs> (<rs type="grantNumber">CMMI-1200940</rs>) is gratefully acknowledged.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_NbeGcj5">
+					<idno type="grant-number">CMMI-1200940</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page">111</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Y</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Lue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2778861</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">154</biblScope>
+			<biblScope unit="page">967</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Soto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Tysoe</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.577226</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">2686</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Higashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Fleming</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.102337</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page">1963</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B M</forename><surname>Mousa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Oldham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/la500796r</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">3741</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mcdonnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pirkle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Colombo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Wallace</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4766408</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page">104110</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">N</forename><surname>Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Mccormick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp804296a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page">19530</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Fig</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Color online) Surface deposition rate of bulk Al 2 O 3 hsi at five different positions in TMA pulsing step for 100, 150, 200, and 250 C, respectively. The bulk Al 2 O 3 growth rate is obtained from summation of the resulted bulk species Ohsi and Alhsi in the two half reactions described in Eq</title>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2015-04">Mar/Apr 2015</date>
+		</imprint>
+	</monogr>
+	<note>Point A is located in the inlet area and point C in the outlet area. 021511-10 Pan et al.: On the physical and chemical details of alumina ALD 021511-10</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1940727</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Hsu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tsf.2005.03.049</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">485</biblScope>
+			<biblScope unit="page">59</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>King</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tsf.2011.02.025</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">519</biblScope>
+			<biblScope unit="page">4192</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Krajewski</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.mejo.2008.07.053</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron. J</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page">293</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Uustare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Forsgren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Harsta</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0040-6090(02)00272-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">410</biblScope>
+			<biblScope unit="page">53</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">R</forename><surname>Rai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vandalon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Agarwal</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/la201136k</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">350</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Wind</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp9049268</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">1281</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B M</forename><surname>Mousa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Oldham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Jur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3670961</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="01A" to="155" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sammelselg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rosental</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tarre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Niinisto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Heiskanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ilmonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Johansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Uustare</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0169-4332(98)00224-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">134</biblScope>
+			<biblScope unit="page">78</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Uustare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1493657</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">1833</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scarel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ferrari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Spiga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wiemer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tallarida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fanciulli</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1564032</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">1359</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Afshar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Cadien</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4852655</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page">251906</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Delabie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sioncke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rip</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Elshocht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pourtois</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Beckhoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pierloot</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3664090</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="01A" to="127" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Greer</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/b405776g</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">3246</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.200306265</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">249</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>De La Rubia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dalla Torre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Baumann</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0040-6090(99)01057-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">365</biblScope>
+			<biblScope unit="page">189</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dkhissi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mastail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Olivier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mazaleyrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jeloaica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Rouhani</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ct8001249</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">1915</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mazaleyrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jeloaica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Djafari-Rouhani</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.commatsci.2004.12.069</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">74</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">X</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Heath</forename><surname>Turner</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08927020802468372</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Simul</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">270</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Kleyn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Gleeson</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/01442350801928014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. Rev. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">229</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Q</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Jen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4833561</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="01A" to="110" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Y</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Goldstein</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08927020008044120</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Simul</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">145</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Adomaitis</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.201106922</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">353</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Holmqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Torndahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stenstrom</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ces.2012.06.063</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Eng. Sci</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page">316</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Holmqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Torndahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Stenstrom</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ces.2012.07.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Eng. Sci</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">260</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cej.2014.07.105</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Eng. J</title>
+		<imprint>
+			<biblScope unit="volume">259</biblScope>
+			<biblScope unit="page">213</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Adomaitis</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcrysgro.2009.12.041</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cryst. Growth</title>
+		<imprint>
+			<biblScope unit="volume">312</biblScope>
+			<biblScope unit="page">1449</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Kurhekar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Apte</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/2228-5326-3-10</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. Nano Lett</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">10</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Fundamentals of Fluid Mechanics 6th Edition</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Munson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<publisher>Wiley</publisher>
+			<pubPlace>Toronto, Canada</pubPlace>
+		</imprint>
+	</monogr>
+	<note>with Wiley Plus 5th Edition Set</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Mcdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Pritchard</surname></persName>
+		</author>
+		<title level="m">Introduction to Fluid Mechanics</title>
+		<meeting><address><addrLine>Toronto, Canada</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Mills</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Basic</forename><surname>Heat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mass</forename><surname>Transfer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>Pearson</publisher>
+			<pubPlace>Boston, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kays</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Crawford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Weigand</surname></persName>
+		</author>
+		<title level="m">Convective Heat and Mass Transfer W/Engineering Subscription Card</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>McGraw-Hill</publisher>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">On the physical and chemical details of alumina ALD 021511-11 JVST A -Vacuum</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Bergman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">P</forename><surname>Incropera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Fundamentals of Heat and Mass Transfer</title>
+		<meeting><address><addrLine>Hoboken, NJ</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="21511" to="21511" />
+		</imprint>
+		<respStmt>
+			<orgName>Surfaces, and Films</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

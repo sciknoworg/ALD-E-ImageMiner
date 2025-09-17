@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Atomic layer etching of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2019-01-23">23 January 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hiroyuki</forename><surname>Fukumizu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Corporate Manufacturing Engineering Center</orgName>
+								<orgName type="institution">Toshiba Corporation</orgName>
+								<address>
+									<postCode>235-0017</postCode>
+									<settlement>Yokohama</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Makoto</forename><surname>Sekine</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Plasma Nanotechnology Research Center</orgName>
+								<orgName type="department" key="dep2">Graduate School of Engineering</orgName>
+								<orgName type="institution">Nagoya University</orgName>
+								<address>
+									<postCode>464-8603</postCode>
+									<settlement>Nagoya</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Masaru</forename><surname>Hori</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Plasma Nanotechnology Research Center</orgName>
+								<orgName type="department" key="dep2">Graduate School of Engineering</orgName>
+								<orgName type="institution">Nagoya University</orgName>
+								<address>
+									<postCode>464-8603</postCode>
+									<settlement>Nagoya</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Koji</forename><surname>Kanomaru</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Corporate Manufacturing Engineering Center</orgName>
+								<orgName type="institution">Toshiba Corporation</orgName>
+								<address>
+									<postCode>235-0017</postCode>
+									<settlement>Yokohama</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Takuo</forename><surname>Kikuchi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Corporate Manufacturing Engineering Center</orgName>
+								<orgName type="institution">Toshiba Corporation</orgName>
+								<address>
+									<postCode>235-0017</postCode>
+									<settlement>Yokohama</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Atomic layer etching of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-01-23">23 January 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">48941C156D0822E4A734D9E7743E4881</idno>
+					<idno type="DOI">10.1116/1.5063795</idno>
+					<note type="submission">Received 1 October 2018; accepted 28 December 2018;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T11:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The atomic layer etching (ALE) characteristics of AlGaN using Cl 2 plasma in the modification step and Ar plasma in the removal step were investigated in comparison with conventional reactive ion etching (RIE). Although surface roughening and GaN composition changes were observed in the RIE process, the ALE process did not result in such changes. However, the etching damage of the AlGaN layer evaluated using cathodoluminescence in AlGaN/GaN stacked films in the case of ALE was 30% higher than that in RIE. This was attributed to the longer process time of ALE compared to RIE. The GaN layer underneath the AlGaN layer was also damaged. This could be mainly caused by UV photons during the modification step using Cl 2 plasma. The authors introduced a modification step using Cl 2 gas instead of Cl 2 plasma; thus, the etching damage was successfully reduced while maintaining good surface characteristics.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>For next-generation power devices, wide-bandgap semiconductors such as SiC and GaN are being developed. The GaN-based high electron mobility transistor (HEMT) is a promising candidate for ultralow-loss power switching devices owing to its high breakdown voltage and high electron carrier velocity in the transistor channel giving a low on-state resistance. While power switching applications strongly demand normally-off operation from the fail-safe point of view, this normally-off operation for a GaN/AlGaN HEMT is still a challenge. Several normally-off structures have been investigated such as recess gate, <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref> fluorine ion treatment, <ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref> and p-GaN gate structures. <ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref> In general, the recess gate is considered a simple structure and can be fabricated without complicated process steps in comparison with other structures. The recess gate HEMT has the AlGaN layer partially removed using dry etching, resulting in an in-plane AlGaN/GaN heterojunction. In this structure, a gate insulator can be used to suppress the gate leakage current and increase the on-state operation swing. However, the recess gate poses three main challenges in the etching process, such as control of the residual AlGaN film thickness, surface roughness, and plasma-induced damage. First, the residual AlGaN thickness directly affects the initial gate threshold voltage (Vth); therefore, very precise control of this thickness is required. <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5</ref> In addition, from a manufacturing point of view, controllability, uniformity, and repeatability of the etch depth across a large wafer are major challenges. Second, a rough surface would increase the interface state density and reduce electron mobility. <ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b13">14</ref> Third, plasma induces surface damages, such as lattice defects, discharge-gas-related residues, and nonstoichiometric surfaces, <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref> which degrade the electrical characteristics of the device. <ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> Recently, it was reported that some etching damages could be reversed via an additional thermal annealing process after etching. <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b24">25</ref> The higher the temperature in the annealing process, the higher the extent to which the damages could be reversed; however, it was difficult to reverse the etching damages completely. Therefore, one of the promising methods to solve these three problems in AlGaN etching could be atomic layer etching (ALE).</p><p>ALE is mainly composed of four steps: surface modification such as adsorption of etch species, oxidation, and nitridation, purging, removal of the modified layer, and purging again. <ref type="bibr" target="#b25">26</ref> Both the modification and removal steps are selflimiting, and therefore, ALE has the advantage of good controllability of the etch depth, compared to conventional reactive ion etching (RIE). In previous studies on ALE of GaN or AlGaN, the surface was oxidized with O 2 plasma, and subsequently, this oxidized layer was removed with BCl 3 plasma. <ref type="bibr" target="#b26">27</ref> This oxidation step was a self-limiting process, but BCl 3 plasma etching in the removal step was not selflimiting. Recently, a directional type of ALE for GaN and AlGaN films using Cl 2 or BCl 3 /Cl 2 plasma and Ar ion bombardment was investigated. <ref type="bibr" target="#b27">28</ref> In this process, both the modification and removal steps are self-limiting. The root mean square (RMS) surface roughness of the GaN film etched via ALE using Cl 2 and Ar plasma was 0.6 nm while that obtained via RIE was 4.0 nm; the surface of the AlGaN film etched via ALE using BCl 3 /Cl 2 and Ar plasma was also very smooth, and its RMS surface roughness was 0.3 nm. The etching damages caused in the GaN film using RIE were evaluated via photoluminescence analysis. <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b31">[30]</ref><ref type="bibr" target="#b32">[31]</ref><ref type="bibr" target="#b33">[32]</ref> However, etching damage caused by ALE is not reported so far. 021002-1 J. Vac. Sci. Technol. A 37(2), Mar/Apr 2019 0734-2101/2019/37(2)/021002/7/$30.00 Published by the AVS. 021002-1</p><p>Therefore, in this study, we precisely investigated the ALE process of AlGaN/GaN stacked films using Cl 2 /Ar gas chemistry and the possible etching damage caused by ALE.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. EXPERIMENT A. Experimental setup</head><p>The AlGaN/GaN heterostructure was epitaxially grown on a Si substrate via metal organic chemical vapor deposition. A 30-nm AlGaN film was stacked on a 100-nm GaN film. Conventional RIE and ALE processes were performed in a standard transformer coupled plasma (TCP) etching system, operating at a 13.56 MHz RF power, and a separate 13.56 MHz RF power was also supplied to the bottom electrode. The sample stage temperature was 25 °C, and the chamber pressure was kept at 20 mTorr. First, the native oxide layer on the AlGaN surface was removed via RIE using the BCl 3 /Cl 2 chemistry at a self-bias voltage of 131 V and a TCP power of 700 W. This etching process was termed the break through (BT) step, and the etch depth of AlGaN at this step was approximately 5 nm. Next, the AlGaN surface was etched using RIE or ALE. In the case of RIE, AlGaN was etched using the Cl 2 /Ar chemistry, with a self-bias voltage of 45 V and a TCP power of 700 W. Cl 2 plasma and Ar plasma were used for the modification step and the removal step, respectively. The AlGaN surface was exposed to Cl 2 plasma at a pressure of 20 mTorr for 30 s at a TCP power of 700 W, in which the self-bias voltage was set at 0 V to prevent the etching of the AlGaN film. After 30 s of Cl 2 plasma exposure, the surface was irradiated by Ar plasma at a pressure of 20 mTorr and a TCP power of 700 W where the self-bias voltage was changed from 0 to 100 V, and exposure time to Ar plasma was changed from 0 to 100 s. Between the modification and removal steps, a purge step without plasma was carried out to avoid contamination by residual gas and radicals. The purge time after the modification and removal steps was 30 s at a pressure of 20 mTorr with Ar gas flow. Optical emission spectroscopy (OES) was carried out to estimate the reactive species in the plasmas.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Film characterization</head><p>The thickness of the unetched and etched AlGaN films was measured using spectroscopic ellipsometry (Woollam M-2000). The surface roughness was measured using atomic force microscopy (AFM, Hitachi High-Tech Science E-sweep). The measurements were performed in tapping mode under ambient conditions, and the scanning area was 1 × 1 μm 2 . The initial surface roughness of AlGaN was 0.09 nm. The atomic composition and chemical bonding of the etched surfaces were analyzed using x-ray photoelectron spectroscopy (XPS, ULVAC-PHI PHI 5000). To evaluate the plasma-induced damage, the etched AlGaN/GaN surface was analyzed via cathodoluminescence (CL). For CL measurements, a JEOL JSM-7100F/TTLS scanning electron microscopy (SEM) system was used as the excitation source, and the emitted light was analyzed via a HORIBA Jobin Yvon iHR-320. The acceleration voltage of the electron beam for SEM was 2 kV, and the electron penetration depth in AlGaN was approximately 45 nm. Under this condition, we could evaluate not only the etched AlGaN film but also the underlying GaN film.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS AND DISCUSSION</head><p>A. Basic etching characteristic of ALE First, we evaluated the modification step performed using Cl 2 plasma. After the BT step, the AlGaN film was exposed to Cl 2 plasma. According to XPS analysis results, the Cl/Ga atomic composition ratio increased with an increase in the Cl 2 plasma exposure time and then became saturated. The AlGaN film was not etched by the Cl 2 plasma regardless of the exposure time. Based on this result, we chose 30 s as the Cl 2 plasma exposure for the modification step. Figure <ref type="figure">1</ref> shows the AlGaN etch depth per cycle (EPC) depending on the self-bias voltage of Ar plasma for the removal step. This EPC was determined using the average etch depth for five cycles. The AlGaN film was not etched at self-bias voltages below 25 V, but started to be etched above 30 V, corresponding to regime (i). A constant EPC of ∼0.5 nm was obtained at the bias condition from 35 to 50 V. This corresponded to regime (ii), and this removal step was selflimiting in this regime. <ref type="bibr" target="#b25">26</ref> EPC increased significantly above 60 V owing to the sputtering effect, which corresponded to regime (iii). <ref type="bibr" target="#b25">26</ref> We chose a self-bias voltage of 45 V for our ALE process. Figure <ref type="figure">2</ref> shows the dependence of EPC on the Ar plasma exposure time. EPC increased with an increase in the Ar plasma exposure time for the first 30 s and then became saturated after 30 s. We chose an Ar exposure time of 30 s for our ALE process. In this process, both the modification and removal steps were self-limiting, and a good linearity between the etch depth and the number of cycles was obtained. Thus, it was confirmed that the process had good controllability in terms of the etch depth. FIG. 1. EPC of ALE for the AlGaN film as a function of self-bias voltage for a fixed 30 s of Ar plasma exposure in the removal step: (i) incomplete removal, (ii) ALE window, and (iii) sputtering. 021002-2 Fukumizu et al.: ALE of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation 021002-2</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Surface roughness comparison between RIE and ALE</head><p>film, which was etched using conventional RIE and ALE.</p><p>The self-bias voltage in RIE was 45 V, and this was the same as that of ALE for the removal step using Ar ion bombardment. Both the modification step using Cl 2 plasma and the removal step using Ar plasma were performed for 30 s.</p><p>The roughness of AlGaN after the BT step slightly increased to 0.13 nm from 0.09 nm of the initial unetched surface. Both the etch depth and surface roughness variation, respectively, shown on the x-axis and y-axes of Fig. <ref type="figure" target="#fig_1">3</ref> were measured from the end of the BT step. In the case of RIE, the roughness increased with an increase in the etch depth. On the other hand, the surface roughness in ALE did not change regardless of the etch depth. According to the XPS analysis results, the N/Ga composition ratio on the AlGaN surface etched using ALE was the same as that after the BT step.</p><p>The N/Ga ratio in the case of RIE decreased after etching. This nitrogen desorption from the surface etched using RIE is supposed to induce surface roughness. <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b28">29</ref> Because the vapor pressures of the etching by-products such as NCl x or N 2 are higher than that of GaCl x , <ref type="bibr" target="#b34">33</ref> nitrogen trends to desorb preferentially. In the case of ALE, after the uniform modified layer was formed during the modification step, this layer was completely removed during the removal step. Thus, a smooth surface was obtained via ALE.</p><p>In the case of ALE, the etch depth in the Ar removal step was very less and independent of the Ar plasma exposure time, which could have suppressed roughening of the surface. This result shows that the ALE process could produce an AlGaN film with a smooth and stoichiometric surface.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Etching damage evaluation using CL</head><p>To evaluate crystal defects induced by etching, CL measurements were performed. The etching damage in GaN films introduced by conventional RIE was analyzed via CL. <ref type="bibr" target="#b35">[34]</ref><ref type="bibr" target="#b36">[35]</ref><ref type="bibr" target="#b37">[36]</ref> After the BT step, 2.5 nm of the AlGaN film was etched using ALE or RIE, and the residual thicknesses etched using ALE and RIE were 22.6 and 23.0 nm, respectively. The penetration depth of the electrons was approximately 45 nm for our CL measurements; hence, we could evaluate not only the etched AlGaN film but also the underlying GaN film. FIG. 2. EPC of ALE for the AlGaN film as a function of Ar plasma exposure time in the removal step with a self-bias voltage of 45 V. FIG. 4. CL spectra of the AlGaN/GaN stacked film without etching, etched by RIE, and etched by ALE: (a) NBE of AlGaN and (b) NBE of GaN. after etching, indicating that severe damages were introduced by both the RIE and ALE processes. Furthermore, it was found that the etching damage caused by ALE was higher than that caused by RIE; the AlGaN NBE intensity decreased by 64% after RIE, while its intensity decreased by 86% after ALE. Figure <ref type="figure" target="#fig_4">4</ref>(b) shows the CL spectra for the GaN film. The NBE signal of GaN was observed at approximately 364 nm (3.4 eV). The GaN film underneath the AlGaN film was not etched at all in both ALE and RIE, but the GaN NBE signal intensity decreased after etching. The GaN film underneath the etched AlGaN film was also defective, and the defects caused by ALE were also larger than those caused by RIE. A 6% decrease in the GaN NBE intensity was observed after RIE, while a 17% decrease was observed after ALE. We compared the etching process time between RIE and ALE. The etching time in RIE was 20 s. On the other hand, in the case of ALE, the duration of the Cl 2 plasma modification step was 30 s and that of the Ar plasma removal step was 30 s; thus, the total plasma exposure time in five ALE cycles for etching 2.5 nm was 300 s. The plasma exposure time in ALE was 15 times longer than that in RIE. We speculate that the longer process time in ALE would induce more plasma damage. Next, we discuss the root cause of etching damage.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Root cause of etching damage</head><p>In general, plasma-induced damages were mainly introduced by radicals, ions, and photons. Radicals do not have much energy, and the radical penetration depth is limited to only the surface. The penetration depth of Ar ions was estimated to be approximately 0.5 nm for a self-bias voltage of 45 V, determined using the SRIM/TRIM software package. <ref type="bibr" target="#b38">37</ref> Next, the photon penetration depths of the AlGaN and GaN films were evaluated. While Ar plasma does not have strong emission peaks in the UV region (200-320 nm), Cl 2 plasma has several strong emission peaks. <ref type="bibr" target="#b39">38</ref> Figure <ref type="figure">5</ref> shows the optical emissions of the Cl 2 plasma in the modification step. We also observed strong emissions at approximately 257 nm (4.8 eV) and 308 nm (4.0 eV), related to Cl 2 molecules in the UV region. The penetration depths into the AlGaN film at 308 and 257 nm are 104 and 63 nm, respectively. Both these penetration depths were larger than 23 nm, the thickness of the residual AlGaN film; this indicates that photons at these wavelengths could cause defects in the entire AlGaN film. The penetration depths into the GaN film at 308 and 257 nm were 97 and 66 nm, respectively. According to this estimation, the photons at these wavelengths could penetrate into not only the AlGaN film but also the GaN film, damaging both the GaN film and the AlGaN film. Therefore, the damage induced in the unetched GaN film was attributed not to ions and radicals but to UV photons.</p><p>To separately analyze the etching damage induced by UV photons and that induced by ions and radicals, the AlGaN/ GaN stacked film was etched with and without a quartz window (QW) (0.5-mm thick) on the sample for five cycles after the BT step, as shown in Fig. <ref type="figure">6(a)</ref>. Figures <ref type="figure">6(b</ref> FIG. 6. NBE signal intensities of etched AlGaN/GaN with and without quartz windows: (a) sample setup, (b) NBE signal intensity of AlGaN, and (c) NBE signal intensity of GaN. 021002-4 Fukumizu et al.: ALE of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation 021002-4 J. Vac. Sci. Technol. A, Vol. 37, No. 2, Mar/Apr 2019</p><p>NBE signal intensity in the presence of the QW was much lower than that in the absence of the QW, which was induced by only UV photons. The damage to the AlGaN film induced by ions and radicals was larger than that induced by photons. The decrease in GaN NBE signal intensity in the cases with and without the QW shown in Fig. <ref type="figure">6</ref>(c) was caused by only photons because ions and radicals could not reach the GaN layer. These results clearly indicated that photons could damage both the AlGaN and GaN layers. The amount of degradation during etching without the QW was slightly larger than that with the QW in Fig. <ref type="figure">6(c</ref>). This is because a slightly etched (approximately 7 nm) AlGaN layer resulted in increased photon penetration.</p><p>As mentioned earlier, Ar does not have inherently strong emissions between 200 and 320 nm; this indicates that the damage on the AlGaN and GaN films might be caused by only Cl 2 plasma exposure. To compare the UV photon damage between Cl 2 and Ar plasmas, the following experiment was carried out. After the BT step, we exposed the AlGaN/GaN stacked layer to either only Cl 2 plasma or only Ar plasma, with the same conditions as those employed in the modification or removal steps, respectively. The AlGaN film was not etched by the Ar plasma without Cl 2 plasma exposure. Figure <ref type="figure" target="#fig_5">7</ref> shows a normalized GaN NBE signal intensity as a function of the plasma exposure time. The NBE signal intensity after Cl 2 or Ar plasma exposure was normalized using that obtained after the BT step. The GaN NBE signal intensity after exposure to Cl 2 or Ar plasma decreased with an increase in the plasma exposure time. Photon damage on the GaN caused by Cl 2 plasma was larger than that caused by Ar plasma. It was observed that even Ar plasma induced photon damage, although there are inherently no strong emission peaks between 200 and 320 nm. We will discuss the reason for this phenomenon later. After 360 s of plasma exposure, the amount of deterioration caused by Cl 2 plasma was the same as that caused by Ar plasma. Under our CL measurement conditions, only the 19-nm top layer of the GaN film was analyzed. This top layer was completely damaged by UV radiation during the long plasma exposure time; therefore, there is no large difference in the NBE signal intensities between the Cl 2 and Ar plasmas.</p><p>We examined the reason why the Ar plasma induced damage on the GaN film. Figure <ref type="figure">8</ref>(a) shows an emission intensity of 308 nm, corresponding to Cl 2 molecules as a function of the process time for both the Cl 2 plasma modification step and the Ar plasma removal step. A strong emission intensity was observed in the Cl 2 plasma step, and this intensity was relatively stable. Moreover, the 308-nm emission line was also observed during the Ar plasma step, and this intensity was smaller than that in the Cl 2 plasma step. UV emissions related to Cl 2 during the Ar plasma step might be attributed to the chlorine residue on the chamber wall, and these UV emissions could induce photon damage on the GaN and AlGaN films even in the Ar plasma step. We analyzed the etched AlGaN film using XPS. Just after the modification step using Cl 2 plasma, a Cl 2p peak with a binding energy of approximately 198 eV was observed (not shown). This intensity decreased with the Ar plasma exposure time of the removal step, but a Cl 2 -related peak was still observed even after 30 s of exposure in the Ar plasma step. This suggests that Cl adsorbed on the chamber wall was not removed completely during the removal step; therefore, this residual Cl would appear again.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Photon damage reduction</head><p>It was found that UV-induced damage was serious in ALE owing to its long process time. The primary reason for degradation was UV emission from Cl 2 plasma. To reduce UV photon damage, we propose a remote Cl 2 plasma or Cl 2 gas process in the modification step because it is possible to remove UV photons during the modification step. Ar plasma potentially causes less UV damage. However, the residual Cl on the chamber wall is desorbed into the Ar plasma, and it would produce UV photons in the removal step as long as FIG. 8. Emission intensity at 308 nm as a function of process time: (a) ALE using Cl 2 plasma and (b) ALE using Cl 2 gas. 021002-5 Fukumizu et al.: ALE of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation 021002-5</p><p>we use the same chamber for the modification and removal steps. Therefore, it could be possible to suppress UV damage during the removal step using the following two methods. The first one is the use of the same Ar plasma, but this process should be carried out in a separate chamber and not the one used in the modification step with Cl 2 plasma. The second one is using a neutral Ar beam, which has very limited plasma radiation. <ref type="bibr" target="#b40">39,</ref><ref type="bibr" target="#b41">40</ref> Hemmi et al. reported that the current collapse caused by the interface traps at the gate electrode is suppressed by neutral-beam etching of the stacked AlGaN/GaN structure. <ref type="bibr" target="#b42">41</ref> However, additional chambers or equipment would increase the process time and cost. Therefore, we examined Cl 2 gas exposure instead of using Cl 2 plasma for the modification step and Ar plasma for the removal step in the same chamber. The EPC of the Cl 2 gas process at a pressure of 200 mTorr was 0.34 nm. Figure <ref type="figure" target="#fig_3">3(d)</ref> shows the dependence of the surface roughness variation on the etched depth in the Cl 2 gas process. Regardless of the etched depth, the surface roughness produced in ALE using Cl 2 gas did not increase, as with Cl 2 plasma. We compared the photon damage on the GaN film caused in ALE using Cl 2 gas, ALE using Cl 2 plasma, and RIE using Cl 2 /Ar plasma. The total etched depth of AlGaN was 7 nm, including the BT step. First, OES of Cl 2 plasma was performed. No emission, even at 308 nm, was observed during the modification step in the case of ALE using Cl 2 gas, as shown in Fig. <ref type="figure">8(b</ref>). However, the 308-nm emission in the Cl 2 gas process still appeared just after ignition of the Ar plasma. The emission intensity was not significantly suppressed in the Ar plasma step even when Cl 2 gas was used for ALE. When we performed ALE with Cl 2 gas using the same chamber for the modification and removal steps, it was difficult to suppress Cl-related emissions in the Ar plasma step. The 308-nm photon flux at the same etch depth was estimated from OES. The total photon flux of the process with Cl 2 gas drastically decreased to 7% of that with Cl 2 plasma owing to the elimination of Cl 2 plasma radiation in the modification step. Finally, the sample etched by ALE using Cl 2 gas was analyzed via CL. The NBE signal intensity of GaN and AlGaN etched by ALE using Cl 2 gas was twice that obtained when using Cl 2 plasma. However, the damage amount in ALE using Cl 2 gas was larger than that in RIE because of the residual Cl on the chamber wall and the longer process time. It was difficult to reduce the photon damage in ALE to less than that in RIE.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. SUMMARY</head><p>We investigated plasma-induced damages on AlGaN/GaN stacked layers during RIE and ALE processes. In the case of RIE, the surface roughness of the layers etched using the Cl 2 /Ar gas-mixture plasma increased with an increase in the etched depth, and nitrogen was desorbed from the surface of the AlGaN layer. On the other hand, these deteriorations were not observed in the ALE process at the same etched depth. It was, however, revealed that photon damages in ALE were larger than those in RIE owing to the longer plasma irradiation time of the modification and/or removal steps. As surface roughness and residual thickness are the most critical factors influencing device operations, we conclude that ALE could be a promising etching process for next-generation power devices.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><figDesc>Note: This paper is part of the 2019 special collection on Atomic Layer Etching (ALE). a) Electronic mail: hiroyuki.fukumizu@toshiba.co.jp b) Present address: Institute of Memory Research &amp; Development, Toshiba Memory Corporation, Yokohama 235-0017, Japan.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3</head><label>3</label><figDesc>Figure3shows the surface roughness variation measured using AFM as a function of the etch depth of the AlGaN</figDesc><graphic coords="3,341.52,545.95,191.96,167.47" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><figDesc>FIG. 3. Surface roughness variation of AlGaN as a function of etch depth of the AlGaN film after (a) BT step, (b) RIE, (c) ALE using Cl 2 plasma, and (d) ALE using Cl 2 gas.</figDesc><graphic coords="4,78.52,533.37,191.96,180.11" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>021002- 3</head><label>3</label><figDesc>Fukumizu et al.: ALE of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation 021002-3 JVST A -Vacuum, Surfaces, and Films</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>4 J</head><label>4</label><figDesc>FIG.5. Optical emission from Cl 2 plasma in the adsorption step with a TCP power of 700 W, a self-bias voltage of 0 V, and a pressure of 20 mTorr.</figDesc><graphic coords="5,78.52,577.19,191.96,145.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 7 .</head><label>7</label><figDesc>FIG. 7. Normalized NBE signal intensity of GaN underneath the AlGaN film: (a) after the BT step, (b) after exposure to Cl 2 plasma, and (c) after exposure to Ar plasma as a function of plasma exposure time.</figDesc><graphic coords="6,78.52,524.13,191.96,189.35" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The authors thank <rs type="person">Kazuyuki Ito</rs> of <rs type="affiliation">Toshiba Corporation</rs> for his technical support in surface analysis and also thank <rs type="person">Junichi Tonotani</rs> of <rs type="institution">Toshiba Corporation</rs>, as well as <rs type="person">Kazuaki Kurihara</rs>, <rs type="person">Hisataka Hayashi</rs>, and <rs type="person">Keiji Suzuki</rs> of <rs type="affiliation">Toshiba Memory Corporation</rs> for their useful discussions and suggestions.</p></div>
+			</div>			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">B</forename><surname>Lanford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Otoki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adesida</surname></persName>
+		</author>
+		<idno type="DOI">10.1049/el:20050161</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electron. Lett</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">449</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Saito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Takada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kuraguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tsuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Omura</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TED.2005.862708</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page">356</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kuraguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Takada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hirose</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tsuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Saito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Saito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Omura</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssa.200674720</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi A</title>
+		<imprint>
+			<biblScope unit="volume">204</biblScope>
+			<biblScope unit="page">2010</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kanamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kikkawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Imanishi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Imada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Hara</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LED.2009.2039026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">189</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Tadjer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Mastro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Hite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Hobart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Eddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Kub</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11664-010-1111-x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electron. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">478</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Lau</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LED.2005.851122</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page">435</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C W</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Lau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LED.2007.891281</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">189</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-Y</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/LED.2009.2015897</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Electron Device Lett</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">430</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Simin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gaska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Shur</surname></persName>
+		</author>
+		<idno type="DOI">10.1049/el:20000557</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electron. Lett</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">753</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Uemoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hikita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ueno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Matsuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ishida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yanagihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ueda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ueda</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TED.2007.908601</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page">3393</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yuliang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yujie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yongbing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hongxi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Junxi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jinmin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.sse.2014.04.017</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Semiconduct</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">114002</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Miyashita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Motoyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ohno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-P</forename><surname>Ao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.sse.2014.04.017</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Electron</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page">99</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ambacher</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.369664</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page">3222</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Egawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Jimbo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Umeno</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S1386-9477(00)00097-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physica E</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">963</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Ping</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Schmitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Adesida</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11664-997-0162-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electron. Mater</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page">266</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">A</forename><surname>Cao</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.124332</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page">232</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yatabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Asubar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hashizume</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssa.201431652</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi A</title>
+		<imprint>
+			<biblScope unit="volume">212</biblScope>
+			<biblScope unit="page">1075</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TED.2014.2385062</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trans. Electron Devices</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">776</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Chua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Raman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T S</forename><surname>Wee</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1311605</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">1795</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">P</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Z</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">B</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.42.6409</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">6409</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Inaoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Minamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kikuhara</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tsf.2007.08.019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">516</biblScope>
+			<biblScope unit="page">3478</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-L</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1557316</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">1233</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Terano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Imadate</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shiojima</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.mssp.2016.10.027</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Sci. Semicond. Process</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">92</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Hahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">H</forename><surname>Im</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Nahm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1336830</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">1277</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Chao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Chyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Tzeng</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0254-0584(02)00014-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">411</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">2802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Burnham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Boutros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Butler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W S</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Micovic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi C</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">2010</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nojiri</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.56.06HB06</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="06H" to="B6" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Inaoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tominaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kuwahara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mukai</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.47.6863</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">6863</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">ALE of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation</title>
+		<author>
+			<persName><surname>Fukumizu</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="21002" to="21006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2019-04">Mar/Apr 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Minami</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.50.08JE03</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="08J" to="E11" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kometani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sekine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/APEX.6.056201</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Express</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">56201</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kako</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Oda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sekine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.54.06GB04</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="06G" to="B10" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kataoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Horibuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nonaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Narita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kanechika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dohmae</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/sia.3876</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Interface Anal</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page">709</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schauler</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.123463</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page">1123</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Breitschadel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schweizer</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0169-4332(01)00104-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">175</biblScope>
+			<biblScope unit="page">450</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">A</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Leboeuf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">B</forename><surname>Kaminsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Arthur</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcrysgro.2006.02.026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Crystal Growth</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page">82</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Ziegler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Ziegler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Biersack</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.nimb.2010.02.091</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nucl. Instrum. Methods Phys. Res. B</title>
+		<imprint>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="page">1818</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Malyshev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schabel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kornblit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Tai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">P</forename><surname>Herman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">C M</forename><surname>Fuller</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0963-0252/11/3A/303</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plasma Sources Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note>A</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Samukawa</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.45.2395</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page">2395</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Samukawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Okumura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tohji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ishida</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0022-3727/41/2/024006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">24006</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">ALE of AlGaN using Cl 2 and Ar gas chemistry and UV damage evaluation</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Hemmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pssa.201600617</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Status Solidi A</title>
+		<imprint>
+			<biblScope unit="volume">214</biblScope>
+			<biblScope unit="page" from="21002" to="21007" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><surname>Jvst A -Vacuum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surfaces, and Films</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

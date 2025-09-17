@@ -1,0 +1,2361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Atomic Layer Deposition of CsI and CsPbI 3</title>
+				<funder>
+					<orgName type="full">Nanosciences (MATRENA)</orgName>
+				</funder>
+				<funder ref="#_hhUWSqm">
+					<orgName type="full">Finnish Center of Excellence in Atomic layer Deposition</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Walter Ahlström</orgName>
+				</funder>
+				<funder ref="#_gnvhBVD">
+					<orgName type="full">Academy of Finland</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2022-06-27">June 27, 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Alexander</forename><surname>Weiß</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Georgi</forename><surname>Popov</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Elisa</forename><surname>Atosuo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Anton</forename><surname>Vihervaara</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Pasi</forename><surname>Jalkanen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Marko</forename><surname>Vehkamäki</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Markku</forename><surname>Leskelä</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mikko</forename><surname>Ritala</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Marianna</forename><surname>Kemell</surname></persName>
+						</author>
+						<title level="a" type="main">Atomic Layer Deposition of CsI and CsPbI 3</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-06-27">June 27, 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">25C448041DE12F49F9575EAAD698B14C</idno>
+					<idno type="DOI">10.1021/acs.chemmater.2c01202</idno>
+					<note type="submission">Received: April 21, 2022 Revised: June 14, 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T11:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Cesium iodide (CsI) is a well-established scintillator material that also serves as a precursor for all-inorganic halide perovskite solar absorbers, such as CsPbI 3 . However, the lack of conformal and scalable methods to deposit halide perovskite thin films remains a major challenge on their way to commercialization. In this work, we employ atomic layer deposition (ALD) as the key method due to its inherent scalability to large areas and complex-shaped surfaces. We demonstrate two new ALD processes for the deposition of CsI and CsPbI 3 thin films. The CsI process relies on cesium bis(trimethylsilyl) amide (Cs(btsa)) and tin(IV) iodide (SnI 4 ) as precursors and yields high-purity, uniform, and phase-pure thin films. This process works in a wide temperature range (140-350 °C) and exhibits a large growth per cycle value (GPC) of 3.3 Å (85% of a CsI monolayer). Furthermore, we convert CsI into CsPbI 3 perovskite by exposing a CsI film to our earlier PbI 2 ALD process. We demonstrate the deposition of phase-pure γor δ-CsPbI 3 perovskite thin films, depending on the applied deposition temperature and number of PbI 2 cycles. We believe that the ALD-based approach described in this work will offer a viable alternative for depositing perovskite thin films in applications that involve complex high aspect ratio structures or large substrate areas.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>Cesium iodide (CsI) is one of the most studied and used scintillator materials. Due to its exceptionally high detective quantum efficiency (DQE), CsI is mainly used in flat-panelbased systems for indirect X-ray imaging in radiology. <ref type="bibr" target="#b4">1,</ref><ref type="bibr" target="#b5">2</ref> The outstanding scintillating properties of CsI are based on two reasons: Its band gap, located in the UV region (5.42 eV), <ref type="bibr" target="#b6">3</ref> and its columnar crystal growth, channeling light in the forward direction. <ref type="bibr" target="#b7">4</ref> For these reasons, CsI detectors reach DQE values as high as 65%, which is three times higher compared to other detector materials such as powder phosphors. <ref type="bibr" target="#b8">5</ref> Moreover, CsI offers further applications, such as in photocathodes <ref type="bibr" target="#b10">6</ref> and as part of the electron transport layer in organic solar cells. <ref type="bibr" target="#b11">7</ref> CsI thin films are also precursors to some halide perovskites that are used in another important application: perovskite solar cells (PSCs). <ref type="bibr" target="#b12">8</ref> CsI thin films can be converted with Pb halides and Sn halides to ternary absorber materials, such as CsPbI 3 , 9 CsSnI 3 , <ref type="bibr" target="#b14">10,</ref><ref type="bibr" target="#b15">11</ref> and Cs 2 SnI 6 . <ref type="bibr" target="#b16">12</ref> In the past decade, researchers have delved into the promising new field of PSCs because of their potential to deliver low-cost solar energy. <ref type="bibr" target="#b17">13</ref> Most recently, PSCs reached a power conversion efficiency (PCE) of 25.5% <ref type="bibr" target="#b19">14,</ref><ref type="bibr" target="#b20">15</ref> and therefore catch up to the PCE of Si-based solar cells that is around 26%. <ref type="bibr" target="#b21">16</ref> However, there is a bottleneck of two yet unsolved challenges: First, perovskite thin-film solar cells larger than 10 × 10 cm 2 remain difficult to manufacture by conventional fabrication methods like spin-coating <ref type="bibr" target="#b22">17</ref> without sacrificing the film quality. The second unsolved issue lies within the ternary perovskite absorber layer itself, particularly the most studied and employed methyl ammonium lead iodide CH 3 NH 3 PbI 3 (MAPI). <ref type="bibr" target="#b23">18</ref> Although perovskites exhibit exceptional optoelectronic properties that are crucial for solar applications, they suffer from high sensitivity to humidity, temperature, and light in ambient conditions that leads to degradation of the compound. <ref type="bibr" target="#b24">[19]</ref><ref type="bibr" target="#b25">[20]</ref><ref type="bibr" target="#b26">[21]</ref><ref type="bibr" target="#b27">[22]</ref><ref type="bibr" target="#b28">[23]</ref><ref type="bibr" target="#b29">[24]</ref> Research has been conducted to address these issues, e.g., by encapsulation, new synthesis routes, and tuning of the perovskite structure by including additives, but no ultimate solution has been found yet. <ref type="bibr" target="#b30">[25]</ref><ref type="bibr" target="#b31">[26]</ref><ref type="bibr" target="#b32">[27]</ref><ref type="bibr" target="#b33">[28]</ref><ref type="bibr" target="#b34">[29]</ref><ref type="bibr" target="#b35">[30]</ref> Our approach to tackle the scalability issue relies on atomic layer deposition (ALD). ALD is a highly controllable method for depositing thin films on large areas and complex-shaped surfaces. It provides uniform and conformal film growth with an accurate control over film thickness and composition. <ref type="bibr" target="#b36">[31]</ref><ref type="bibr" target="#b37">[32]</ref><ref type="bibr" target="#b38">[33]</ref> On the downside, ALD is considered to be rather slow and expensive compared to other thin-film techniques. However, its excellent scalability to large areas and batches, or alternatively to roll-to-roll processing, <ref type="bibr" target="#b39">34,</ref><ref type="bibr" target="#b40">35</ref> enables high throughput, which offsets its slowness. This is evidenced by the fact that ALD has been in industrial use for decades in large-scale applications, such as electroluminescent displays <ref type="bibr" target="#b41">36</ref> and microelectronics. <ref type="bibr" target="#b42">37</ref> In addition, ALD can be used to form thin films onto high aspect ratio (HAR) substrates. <ref type="bibr" target="#b43">38</ref> This feature enables manufacturing of more complex and efficient devices, which is challenging by conventional methods.</p><p>We believe that developing an ALD process for CsI will also contribute to solving the perovskite stability issue. Literature reports give evidence that perovskite solid solutions have better stability than pure perovskites. The key to the improved stability of solid solution perovskites is the controlled addition of several cations (HC(NH 2 ) 2 + , CH 3 NH 3 + , Cs + ) and/or anions (Cl -, Br -, I -) into their structure, which improves the stability of the perovskite against humidity and further increases its photovoltaic activity. <ref type="bibr" target="#b44">[39]</ref><ref type="bibr" target="#b45">[40]</ref><ref type="bibr" target="#b46">[41]</ref><ref type="bibr" target="#b47">[42]</ref> Currently, ALD lacks processes to deposit such perovskite solid solutions. Despite the availability of an enormous library of ALD processes, <ref type="bibr" target="#b48">43</ref> only one metal iodide process existsthe PbI 2 process that we developed previously. <ref type="bibr" target="#b49">44</ref> PbI 2 films from this process can be converted to MAPI perovskite upon gas treatment. Developing an ALD process for CsI and combining it with the PbI 2 process to deposit CsPbI 3 would be the first step toward depositing solid solution perovskites with ALD from CsPbI 3 with MAPI.</p><p>First, to develop an ALD process for CsI, we tried to apply chemistry similar to the one that is used in ALD of some metal fluorides. In these fluoride processes, metal β-diketonates act as the metal precursors and volatile metal fluorides, such as TiF 4 <ref type="bibr" target="#b50">45</ref> or TaF 5 , <ref type="bibr" target="#b51">46</ref> act as the fluoride precursors. A ligand exchange between the precursors yields the desired metal fluoride. Analogously, when a volatile metal iodide is used instead of fluoride, the ligand exchange would yield metal iodide. For ALD of CsI, we used commercially available 2,2,6,6-tetramethyl-3,5-heptanedionato cesium (Cs(thd)) as the cesium precursor and titanium(IV) iodide (TiI 4 ) or tin(IV) iodide (SnI 4 ) as iodine precursors. These precursor combinations yielded crystalline CsI at deposition temperatures of 250-350 °C. However, only films that had thicknesses exceeding 400 nm were continuous whereas thinner films had pinholes and gaps in them (Figure <ref type="figure" target="#fig_0">S1</ref>). Disappointed by this outcome, we hypothesized that lower deposition temperatures would decrease agglomeration and thinner continuous films could be made. However, lower deposition temperatures required a different, more volatile Cs precursor.</p><p>In this work, we report a new ALD CsI process that relies on cesium bis(trimethylsilyl) amide <ref type="bibr" target="#b52">47</ref> (Cs(btsa)) as the cesium precursor and tin(IV) iodide (SnI 4 ) as the iodine precursor. The high volatility of Cs(btsa) enables deposition of phasepure, uniform, and high-purity CsI thin films at low (&gt;140 °C) temperatures. Furthermore, we demonstrate the deposition of ternary CsPbI 3 perovskite thin films with a two-step approach: First, we deposit a CsI thin film via ALD. In the second step, by applying our earlier PbI 2 ALD process on top of CsI, the film is converted into CsPbI 3 perovskite thin film. This combination of CsI and PbI 2 ALD allows us to prepare phasepure γ-CsPbI 3 and δ-CsPbI 3 thin films.</p><p>■ RESULTS AND DISCUSSION Film Deposition. We explored CsI film deposition with Cs(btsa) (Figure <ref type="figure" target="#fig_0">1a</ref>) and SnI 4 as precursors in the 140-350 °C temperature range (Figure <ref type="figure" target="#fig_0">1b</ref>). The lowest deposition temperature was limited by the evaporation temperature of Cs(btsa). Although CsI deposition was still possible at temperatures up to 350 °C, partial Cs(btsa) precursor decomposition was observed at temperatures &gt; 300 °C from Growth per cycle value (GPC) of CsI films on silicon as a function of deposition temperature, deposited with 300 cycles and pulse durations of 1.5 and 0.5 s for Cs(btsa) and SnI 4 , respectively, and 1.0 s purge durations. Inset shows an image of a CsI film on a 5 × 5 cm 2 Si substrate deposited at 150 °C. (c) CsI film thickness on silicon as a function of applied deposition cycles, deposited at 150 °C, pulse durations of 1.5 and 0.5 s for Cs(btsa) and SnI 4 , respectively, and 1.0 s purge durations. (d) GPC of CsI films on silicon as a function of Cs(btsa) pulse duration at 150 °C, SnI 4 pulse and purge durations fixed at 0.5 and 1.0 s, respectively. (e) GPC of CsI films on silicon as a function of SnI 4 pulse duration at 150 °C, Cs(btsa) pulse and purge durations fixed at 1.5 and 1.0 s, respectively. (f) GPC of CsI films on silicon as a function of purge duration at 150 °C, Cs(btsa) and SnI 4 pulse durations fixed at 1.5 and 0.5 s, respectively. a residue built up at the hot end of the precursor delivery tube. In the temperature region between 150 and 170 °C, the growth per cycle value (GPC) was 3.3 Å and was found to be independent of the deposition temperature (so-called ALD window <ref type="bibr" target="#b37">32</ref> ). The exceptionally high GPC (85% of one monolayer) results from several factors. First, the monolayer of CsI has a relatively large thickness (3.87 Å) because of the large ionic radii of Cs (r ion,Cs = 1.81 Å) and I (r ion,I = 2.06 Å).</p><p>Second, the chemistry used for CsI deposition, namely, the use of a metal halide as an iodine precursor, enables deposition of up to two monolayers during one ALD cycle. This "double monolayer"-type growth is a typical phenomenon in ALD processes of metal fluorides that use TiF 4 or TaF 5 as fluoride precursors and that also demonstrate exceptionally high GPC. <ref type="bibr" target="#b50">45,</ref><ref type="bibr" target="#b53">[48]</ref><ref type="bibr" target="#b54">[49]</ref><ref type="bibr" target="#b55">[50]</ref> For reference, GPC of some metal fluoride ALD processes are tabulated in Table <ref type="table" target="#tab_0">S1</ref>. <ref type="bibr" target="#b50">45,</ref><ref type="bibr" target="#b51">46,</ref><ref type="bibr" target="#b53">[48]</ref><ref type="bibr" target="#b54">[49]</ref><ref type="bibr" target="#b55">[50]</ref><ref type="bibr" target="#b56">[51]</ref><ref type="bibr" target="#b57">[52]</ref><ref type="bibr" target="#b58">[53]</ref> In the double monolayer-type growth when the precursor is pulsed, it reacts with the second precursor adsorbed on the surface and the desired material is deposited just like in normal monolayertype growth. The key difference is that during that same pulse, the excess precursor also adsorbs on the surface of the newly formed material. Both precursors behave this way, and the deposition takes place every half-cycle leading to the theoretical maximum of two monolayers per cycle for such processes.</p><p>For a detailed study on the influence of the process parameters, we chose the deposition temperature of 150 °C. At this deposition temperature, the GPC saturates with respect to both precursor pulse durations and is independent of the purge durations (Figure <ref type="figure" target="#fig_0">1d-f</ref>). As optimal parameters for further depositions, we chose 1.5 and 0.5 s pulse durations for Cs(btsa) and SnI 4 , respectively, as well as 1.0 s purge durations. With these parameters, the thickness depended linearly on the number of applied deposition cycles (Figure <ref type="figure" target="#fig_0">1c</ref>). These results are consistent with the behavior typically observed in ALD.</p><p>Film Properties. X-ray diffraction (XRD) measurements of CsI films confirm that our process produces crystalline and phase-pure CsI thin films in the whole temperature range (Figure <ref type="figure" target="#fig_1">2c</ref>).</p><p>Examination by cross-sectional field-emission scanning electron microscopy (FESEM) shows that the films consist of columnar crystallites (Figure <ref type="figure" target="#fig_1">2a</ref>). Because scintillator applications usually require film thicknesses up to several micrometers, <ref type="bibr" target="#b59">54,</ref><ref type="bibr" target="#b60">55</ref> we demonstrate a deposition of 1.1-μm-thick CsI film in 3.6 h. Thanks to the high GPC of this processas mentioned aboveALD offers a new and attractive fabrication route for this material. Top-down SEM images show that at deposition temperatures below 180 °C, films are continuous, uniform, and pinhole-free (Figure <ref type="figure" target="#fig_1">2b</ref>). As the deposition temperature increases to 180 °C and above, the GPC drops and films deposited with the same number of cycles start to become thinner and discontinuous. SEM images reveal the appearance of pinholes in these films. Film roughness measured by atomic force microscopy (AFM) reflects the changes occurring in the film morphology (Figure <ref type="figure" target="#fig_1">2d</ref>,<ref type="figure">e</ref>). At 150 °C, the films are relatively smooth (R q = 8.6 nm). As the deposition temperature increases toward 180 °C, the roughness gradually increases due to larger growth of grains. At deposition temperatures ≥ 180 °C, pinholes and film discontinuity cause an even larger increase of the roughness. Characterization of film composition with energy dispersive Xray spectroscopy (EDS) and time-of-flight elastic recoil detection analysis (TOF-ERDA) showed that the films are stoichiometric CsI (Table <ref type="table" target="#tab_0">1</ref>). Assessing the concentrations of all elements of interest required a combination of the two methods. For Cs, Sn, and I contents, we relied on EDS because the masses of these elements were too close to resolve their individual concentrations from the TOF-ERDA data. No Sn was observed with EDS, and the Cs to I ratios were close to 1:1. TOF-ERDA, in turn, provided light element concentrations. There was a small amount (&lt;5 atom %) of light element impurity in the films. Most notably, oxygen was present even though the precursors are oxygen-free. CsI is known to be hygroscopic. <ref type="bibr" target="#b61">[56]</ref><ref type="bibr" target="#b62">[57]</ref><ref type="bibr" target="#b63">[58]</ref> Although we stored the films in either dry or inert conditions, they were still exposed to ambient air during transfer and sample preparation. CsHCO 3 reflections appeared in the XRD pattern of the film stored in ambient air for more than a month (Figure <ref type="figure" target="#fig_2">S3</ref>). Upon exposure to ambient air, CsI films react with CO 2 and H 2 O to produce CsHCO 3 (eq 1). Gradual reaction of CsI into CsHCO 3 in ambient air accounts for the H, C, and O impurities in the films and the decrease in the I content. Heating the reacted film in an inert atmosphere does not restore its original state because of the partial loss of iodine in the reaction (Figure <ref type="figure" target="#fig_3">S4</ref>).</p><formula xml:id="formula_0">+ + → + CsI(s) CO (g) H O(g) CsHCO (s) HI(g) 2 2 3<label>(1)</label></formula><p>The optical properties of the ALD CsI films are in good agreement with those reported in the literature. The films are transparent in the visible range (Figure <ref type="figure" target="#fig_2">3a</ref>) and absorb in the UV range. We attribute this absorption to the band gap absorption of CsI. The band gap, extracted from the Tauc plot <ref type="bibr" target="#b6">3,</ref><ref type="bibr" target="#b64">59,</ref><ref type="bibr" target="#b65">60</ref> (Figure <ref type="figure" target="#fig_2">3b</ref>) is 5.49 eV (lit. 5.43 eV <ref type="bibr" target="#b66">61</ref> ) and the refractive index is 1.80 (λ = 580 nm) (lit. 1.78 at λ = 579 nm). <ref type="bibr" target="#b67">62</ref> Capacitance measurements of ALD CsI thin films resulted in a dielectric constant of 6.8. This is close to the dielectric constant for bulk CsI (6.3) reported in the literature. <ref type="bibr" target="#b68">63</ref> Deposition of CsPbI 3 . We prepared CsPbI 3 films by depositing PbI 2 with ALD on top of CsI films. The supercycle approach, a common way to deposit ternary compounds with ALD, was inapplicable in our case. The supercycle approach Films deposited at 150 °C, pulse durations 1.5 and 0.5 s for Cs(btsa) and SnI 4 , respectively, and purge durations 1.0 s. For more details on the composition, see Figure <ref type="figure" target="#fig_1">S2</ref>. relies on alternating deposition cycles of the binary constituents of the desired ternary compound. Therefore, it requires a temperature at which both binary constituent processes work.</p><p>In the PbI 2 ALD process, deposition on Si occurs at temperatures below 90 °C and Pb precursor decomposition starts near 150 °C. Because CsI deposition occurs at 140 °C and above, there is no temperature that can be exploited for CsPbI 3 deposition with the supercycle approach. Furthermore, in our previous work, <ref type="bibr" target="#b69">64</ref> we observed that in our ALD reactors, PbI 2 films sublime at temperatures above 100 °C. Hence, the only remaining pathway to deposit CsPbI 3 films with these two processes was the two-step approach where PbI 2 is deposited on top of a CsI film.</p><p>Our two-step approach had potential conceptual challenges as well. In essence, it is a solid-solid reaction that would yield stoichiometric CsPbI 3 only when the amounts of CsI and PbI 2 films are equal (eq 2). This would require knowledge of the GPC of PbI 2 on CsI. But if PbI 2 , after being formed, immediately reacts with CsI, then estimating the PbI 2 GPC would be difficult. For this reason, instead of attempting to estimate the GPC of PbI 2 and trying to hit the specific amount of substance that would yield stoichiometric CsPbI 3 , we performed a series of depositions with different numbers of CsI films (100 nm) were deposited at 150 °C with 300 cycles. The pulse durations were 1.5 s for Cs(btsa) and 1.0 s for SnI 4 and purge durations were 1.0 s. In the PbI 2 deposition, the durations of the precursor pulses were 0.8 and 2.0 s for Pb(btsa) 2 and SnI 4 , respectively, whereas purge durations were 1.0 s. PbI 2 deposition cycles. This experimental series also allows us to observe what happens if the amount of PbI 2 deposited is insufficient or is in excess. We exploited XRD to study the changes in the phase composition.</p><formula xml:id="formula_1">+ → CsI PbI CsPbI 2 3<label>(2)</label></formula><p>At 75 °C, the optimal temperature for the ALD PbI 2 process, <ref type="bibr" target="#b49">44</ref> the depositions failed to produce phase-pure CsPbI 3 perovskite (Figure <ref type="figure" target="#fig_3">4a</ref>,<ref type="figure">b</ref>). Perovskite phase (γ) of CsPbI 3 does form when insufficient amount (500 cycles) of PbI 2 is deposited, but the conversion is not complete and unreacted CsI is still present. Depositing more PbI 2 causes the formation of δ-CsPbI 3 , a nonperovskite phase. The δ-phase replaces the perovskite γ-phase as more PbI 2 is deposited. However, conversion does not proceed to completion: PbI 2 starts to accumulate as a separate phase whereas CsI and δ-CsPbI 3 remain almost unchanged. Such a film stack, that contains unreacted PbI 2 , CsI, and δ-CsPbI 3 can still be converted into phase-pure γ-CsPbI 3 by annealing under nitrogen at ≥ 325 °C (Figure <ref type="figure" target="#fig_3">4c</ref>). However, we were dissatisfied with this outcome as it introduces an extra non-ALD step and significantly increases the highest processing temperature used.</p><p>Increasing the PbI 2 deposition temperature to 100 °C enables preparation of phase-pure perovskite γ-CsPbI 3 films as well as phase-pure nonperovskite δ-CsPbI 3 films (Figure <ref type="figure" target="#fig_3">4d</ref>). Although PbI 2 does not grow on typical substrates (silicon, glass etc.) at temperatures above 90 °C and even sublimes at higher temperatures, we hypothesized that the case might be different if metal halides are used as substrates. Indeed, in a spin-off experiment, we were able to deposit PbI 2 at 100 °C on ALD LiF <ref type="bibr" target="#b57">52</ref> and AlF 3 films 50 (Figure <ref type="figure" target="#fig_4">S5</ref>). These fluorides do not react with PbI 2 , but CsI on the other hand can convert into CsPbI 3 (eq 2). The conversion reaction can immediately consume PbI 2 deposited on CsI, and thus the stability of PbI 2 becomes irrelevant. Indeed, PbI 2 deposition on CsI at 100 °C causes the formation of CsPbI 3 . Three thousand cycles of PbI 2 yield a γ-CsPbI 3 film, whereas 4000 cycles yield a δ-CsPbI 3 film (Figure <ref type="figure" target="#fig_3">4e</ref>,<ref type="figure">f</ref>).</p><p>Formation of CsPbI 3 occurs via ALD of PbI 2 followed by a solid-solid reaction with CsI (eq 2) rather than a direct reaction of the PbI 2 precursors with CsI. No CsPbI 3 forms when CsI is exposed to either Pb(btsa) 2 or SnI 4 at 100 °C (Figure <ref type="figure" target="#fig_7">S6</ref>). EDS composition analysis shows that with the increasing number of PbI 2 deposition cycles, lead and iodine concentrations increase, whereas the cesium concentration decreases (Figure <ref type="figure">S7a</ref>). The changes continue until 3000 PbI 2 cycles. At this cycle number, the element concentrations correspond to CsPbI 3 stoichiometry. The film composition remains constant if the number of PbI 2 deposition cycles is further increased. The EDS results are in excellent agreement with the XRD data (Figure <ref type="figure" target="#fig_3">4</ref>). The composition is independent of the PbI 2 precursor pulse and purge durations, provided they are long enough. Too short pulse or purge times cause incomplete conversion (Figure <ref type="figure">S7b-d</ref>).</p><p>We also explored other deposition temperatures for PbI 2 in the 75-130 °C range. These experiments, performed with 3000 PbI 2 cycles, produced only perovskite γ-CsPbI 3 at 100 °C (Figure <ref type="figure">S8</ref>). Films prepared at temperatures higher than 100 °C consisted of both γand δ-CsPbI 3 phases, with δ-phase being the dominant one. However, it is possible that γ-CsPbI 3 films can be prepared at those temperatures as well, by optimizing the amount of PbI 2 deposited, as was the case at 100 °C (Figure <ref type="figure" target="#fig_3">4e</ref>). PbI 2 deposition onto CsI films drastically changes their morphology. At 75 °C after 500 cycles of PbI 2 , a layer of CsPbI 3 forms on top of the CsI film and scattered flakes of PbI 2 appear on the surface (Figure <ref type="figure" target="#fig_4">5a</ref>,<ref type="figure">b</ref>). After 3000 cycles, when viewed top-down, the film resembles a PbI 2 film where PbI 2 flakes form a continuous porous network. However, the cross section reveals a denser CsPbI 3 layer underneath the PbI 2 network and unreacted columnar grains of CsI below CsPbI 3 (Figure <ref type="figure" target="#fig_4">5c</ref>,<ref type="figure">d</ref>). In contrast to the experiments at 75 °C, no PbI 2 flakes are present at 100 °C after 500 cycles and only a top layer of CsPbI 3 and unreacted CsI are visible (Figure <ref type="figure" target="#fig_4">5e</ref>,<ref type="figure">f</ref>). With more PbI 2 cycles (3000 and 4000), the conversion consumes all of the remaining CsI and the films solely consist of CsPbI 3 (Figure <ref type="figure" target="#fig_4">5g-j</ref>). The above observations are in excellent agreement with the XRD data (Figure <ref type="figure" target="#fig_3">4</ref>).</p><p>We can conclude that at 100 °C, the conversion reaction is self-directing to the stoichiometric CsPbI 3 composition. Only the required amount of PbI 2 needed for the ternary phase formation is deposited, while all of the excess is sublimed away.</p><p>As evident from the cross-sectional SEM images (Figure <ref type="figure" target="#fig_4">5</ref>), the thickness of the film increases when CsI reacts with PbI 2 (eq 2). The ratio between the thicknesses of fully converted CsPbI 3 and the original CsI can be derived from the amount of substance ratios in the reaction equation and expressions for density, volume, and amount of substance (eq 3, where d is film thickness; for derivation, see Section S1). Equation <ref type="formula" target="#formula_2">3</ref> ρ ρ = d d M M CsPbI CsI CsPbI CsPbI CsI CsI 3 3 3</p><p>The conformality advantage of ALD is retained in our approach for depositing CsPbI 3 . Without any process parameter optimizations, we were able to deposit a CsPbI 3 film with a good conformality in holes with 10:1 aspect ratio (AR) (Figure <ref type="figure" target="#fig_4">5k</ref>).</p><p>Similar to the results on planar substrates, 3000 PbI 2 cycles on a patterned substrate coated with 100 nm CsI film yielded γ-CsPbI 3 (Figure <ref type="figure">S9</ref>). EDS mapping of the patterned substrate cross section shows uniform element distribution through the coating in the structure (Figure <ref type="figure" target="#fig_0">S10</ref>).</p><p>The optical properties of our CsPbI 3 films are in line with the literature. The transmittance of CsPbI 3 films differs radically from the transmittance of CsI films (Figure <ref type="figure" target="#fig_7">6a</ref>), which is also reflected in the visual appearance of the films (Figure <ref type="figure" target="#fig_7">6b</ref>). Deposition of 3000 cycles of PbI 2 on CsI results in a dark red-brown film with an optical band gap of 1.72 eV (Figure <ref type="figure" target="#fig_0">S11a</ref>) whereas deposition of 4000 PbI 2 cycles results in a light lime-yellow film with a band gap of 2.85 eV (Figure <ref type="figure" target="#fig_0">S11b</ref>). These colors and band gap values are typical for the γand δ-CsPbI 3 phases, respectively. <ref type="bibr" target="#b71">65</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSIONS</head><p>To conclude, we described two new ALD processes for the deposition of CsI and CsPbI 3 thin films. The use of Cs(btsa) and SnI 4 as precursors yielded phase-pure, uniform, and highpurity CsI thin films in a large deposition temperature range (140-350 °C). The large growth per cycle value (3.3 Å) of this ALD process allows deposition of thicker films in the micrometer range with a reasonable number of deposition cycles. While CsI is a well-established scintillator material for X-ray detector applications, we also demonstrated its conversion into halide perovskite by combining it with our earlier PbI 2 ALD process. At 75 °C, incomplete conversion resulted in a stack of CsI, δ-CsPbI 3 (nonperovskite phase), and PbI 2 films; however, annealing under nitrogen at ≥325 °C yielded γ-CsPbI 3 (perovskite phase). At 100 °C, complete conversion took place and formed phase-pure γor δ-CsPbI 3 thin films depending on the number of PbI 2 deposition cycles. We believe that the ALD-based approach described in this work will offer a viable alternative for depositing perovskite thin films in applications that involve complex high aspect ratio structures or large substrate areas.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ EXPERIMENTAL SECTION</head><p>Precursor Synthesis. Cesium bis(trimethylsilyl) amide (Cs-(btsa)) was synthesized according to Ojeda-Amador et al. <ref type="bibr" target="#b52">47</ref> by employing Schlenk line techniques using lithium bis(trimethylsilyl) amide (Li(btsa), 97%, Aldrich) and cesium fluoride (CsF, 99.9%, Aldrich). In short, Li(btsa) dissolved in n-hexane was added dropwise to CsF in n-hexane over a water bath at 50 °C and left to stir overnight with protection from ambient light. Afterward, the solvent was removed under vacuum and toluene was added. The reaction mixture was filtered and the precipitate was washed with toluene. After removal of the solvent by vacuum, the resulting white product was purified by sublimation to yield white crystals. <ref type="bibr" target="#b4">1</ref> H NMR (400.144 MHz, 298 K, C 6 D 6 ): δ 0.25 (s, 18 H). <ref type="bibr" target="#b17">13</ref> C NMR (100.616 MHz, 298 K, C 6 D 6 ): δ 7.30.</p><p>Pb(btsa) 2 was synthesized by employing Schlenk line techniques using PbCl 2 (99.999%, Alfa Aesar) and Li(btsa) (97%, Aldrich), as described in our previous work. <ref type="bibr" target="#b49">44,</ref><ref type="bibr" target="#b72">66</ref> Li(btsa) dissolved in tetrahydrofuran (THF) was added dropwise to PbCl 2 in THF over a cold water bath and left to stir overnight with protection from ambient light. THF was removed under vacuum and hexane was added. The reaction mixture was filtered. Hexane was removed from the filtered solution under vacuum over a warm water bath (45 °C), which yielded a red-orange oil. The oil was purified by sublimation under vacuum and the distillate was cooled with liquid nitrogen, which yielded a bright yellow solid that does not melt at room temperature (RT). <ref type="bibr" target="#b4">1</ref> H NMR (400.144 MHz, 298 K, C 6 D 6 ): δ 0.25 (s, 36 H). <ref type="bibr" target="#b17">13</ref> C NMR (100.616 MHz, 298 K, C 6 D 6 ): δ 5.93.</p><p>Film Deposition. Thin films were grown in a commercial crossflow F-120 ALD reactor (ASM Microchemistry Ltd., Finland) under reduced nitrogen pressure (99.999%, AGA, about 10 mbar) at different temperatures. Nitrogen was used as a carrier and purging gas and led into the reactor through a gas purifier (SAES Pure Gas, MC1-902F, H 2 O, O 2 , CO, CO 2 , H 2 , NMHC removal &lt; 1 ppb). Precursor pulsing was realized by inert gas valving. CsI depositions were carried out using solid tin(IV) iodide (SnI 4 , &gt;99%, -10 mesh, ACROS Organics) and the synthesized solid Cs(btsa) as precursors. Cs(btsa) and SnI 4 precursors were sublimed from open quartz boats held inside the reactor at 140 and 75 °C, respectively. For the PbI 2 depositions, the precursor source temperatures were 50 and 62 °C for Pb(btsa) 2 and SnI 4 , respectively. Some depositions, described in Figure <ref type="figure" target="#fig_0">S1</ref>, were made with Cs(thd) (STREM) and TiI 4 (Alfa Aesar, 99.9%) sublimed at 225 and 105 °C, respectively.</p><p>Primarily native oxide-covered 5 × 5 cm 2 silicon (100) (Si, Okmetic) was used as a substrate for CsI depositions. Additionally, for some depositions, sapphire wafers (2″, University Wafer) and tindoped indium oxide-covered glass (ITO, Glastron) were used as substrates. Sapphire wafers were heated at 1000 °C in an air oven for 2 h to induce atomic step formation. <ref type="bibr" target="#b73">67,</ref><ref type="bibr" target="#b74">68</ref> Prior to deposition, all substrates except sapphire were cleaned in an ultrasonic bath, first in a solution of industrial strength cleaning concentrate (Branson) for 20 min at 50 °C, then in H 2 O for 10 min at RT, and finally in isopropanol for 10 min at RT. Cleaned substrates were dried in an oven at 100 °C and blown with N 2 .</p><p>Film Characterization. Surface morphology of the films was examined with a Hitachi S-4800 field-emission scanning electron microscope (FESEM). Film thicknesses were determined from energy dispersive X-ray spectroscopy (EDS) data measured using an Oxford INCA 350 microanalysis system connected to FESEM. The thicknesses were calculated from the EDS data with GMRFilm software <ref type="bibr" target="#b75">69</ref> using the bulk density of CsI (4.51 g/cm <ref type="bibr" target="#b6">3</ref> ). The errors in thickness values were estimated using weight % uncertainty in the EDS measurements and the propagation of uncertainty expression. Element concentrations were estimated from EDS data using IL α , CsL α , and PbL α lines.</p><p>Light element contents in the films were evaluated with time-offlight elastic recoil detection analysis (ToF-ERDA) in a 20°/20°g eometry using a 45 MeV Au beam or 40 MeV Br beam.</p><p>Grazing incidence XRD (GIXRD) patterns were measured with a Rigaku Smartlab diffractometer using a Cu Kα (λ = 1.54 Å) X-ray beam and parallel beam optics. For CsI films, an incidence angle of 1°w as used in the GIXRD measurements. Samples that involved PbI 2 were measured with an incidence angle of 2°. In these measurements, the 2°angle and the orientation of the sample relative to the X-ray beam were chosen based on a series of Ω and φ scans so that the Bragg condition is fulfilled for Si(311) and the corresponding reflection is observed at ca. 54.5°2θ. This arrangement ensures that the X-ray beam penetrates though the whole thickness of the sample down to the Si substrate.</p><p>In situ high-temperature XRD (HTXRD) measurements were conducted with an Anton-Paar HTK 1200N furnace connected to the PANalytical X'pert Pro MPD diffractometer. Before the measurement, the furnace was filled with 99.999% nitrogen and further purified with a MicroTorr MC1-902F gas purifier. Then, the furnace was heated to 300 °C, pumped to 10 -5 mbar, kept there for 1 h, and afterward cooled and filled with nitrogen again. The measurement was done under 50 sccm nitrogen flow. The temperature range was 25-500 °C and the measurements were done with 25 °C intervals. The measurements were conducted using parallel beam optics in the grazing incidence mode (incident angle 2°). The 2θ range was 9-35°.</p><p>Optical measurements (UV-vis) were performed with a Hitachi U2000 spectrophotometer. Transmittance spectra measured from samples deposited on sapphire were used for the construction of Tauc plots from which the optical band gaps were estimated. <ref type="bibr" target="#b64">59,</ref><ref type="bibr" target="#b65">60</ref> The band gaps of CsI and CsPbI 3 were assumed to be direct allowed.</p><p>Atomic force microscopy (AFM) was performed using a Veeco Multimode V instrument. Tapping mode images were captured in air using silicon probes with a nominal tip radius of 10 nm and a nominal spring constant of 3 N/m (RFESP-75 from Bruker). Images were flattened to remove artefacts caused by a sample tilt and a scanner bow. Projected areas were measured from 1 × 1 and 2 × 2 μm 2 images.</p><p>The dielectric permittivity of CsI was measured by preparing a simple capacitor structure. A 950 nm CsI layer was deposited on indium tin oxide-coated glass, followed by electron-beam evaporation of Pt top electrodes through a shadow mask. An HP 4284A Precision LCR meter was used to measure the capacitance from which the relative permittivity was calculated using a standard plate capacitor equation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head><p>* sı Supporting Information</p><p>The Supporting Information is available free of charge at <ref type="url" target="https://pubs.acs.org/doi/10.1021/acs.chemmater.2c01202?goto=supporting-info">https://pubs.acs.org/doi/10.1021/acs.chemmater.2c01202</ref>. Derivation of an equation for the CsPbI 3 film thickness determination, GPC of published metal fluoride ALD processes, FESEM images of CsI films deposited with Cs(thd) and SnI 4 , TOF-ERDA element depth profiles of CsI films stored in inert or ambient atmosphere, XRD patterns of the as-deposited CsI film and after being stored in ambient air, contour plot of XRD patterns of a CsI film stored in ambient air, XRD patterns and digital photographs of PbI 2 films deposited at 100 °C on LiF and AlF 3 ALD films, XRD patterns of CsI films before and after exposure to PbI 2 precursors at 100 °C, element concentrations as a function of PbI 2 deposition cycles, precursor pulse and purge durations, contour plot of XRD patterns measured from CsI films on which 3000 cycles of PbI 2 were applied at different deposition temperatures, XRD patterns of a patterned Si substrate after each step during CsPbI 3 coating preparation, EDS element mapping and a linescan of a hole in a patterned Chemistry of Materials</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. (a) Cesium precursor used in this work (Cs(btsa)). (b) Growth per cycle value (GPC) of CsI films on silicon as a function of deposition temperature, deposited with 300 cycles and pulse durations of 1.5 and 0.5 s for Cs(btsa) and SnI 4 , respectively, and 1.0 s purge durations. Inset shows an image of a CsI film on a 5 × 5 cm 2 Si substrate deposited at 150 °C. (c) CsI film thickness on silicon as a function of applied deposition cycles, deposited at 150 °C, pulse durations of 1.5 and 0.5 s for Cs(btsa) and SnI 4 , respectively, and 1.0 s purge durations. (d) GPC of CsI films on silicon as a function of Cs(btsa) pulse duration at 150 °C, SnI 4 pulse and purge durations fixed at 0.5 and 1.0 s, respectively. (e) GPC of CsI films on silicon as a function of SnI 4 pulse duration at 150 °C, Cs(btsa) pulse and purge durations fixed at 1.5 and 1.0 s, respectively. (f) GPC of CsI films on silicon as a function of purge duration at 150 °C, Cs(btsa) and SnI 4 pulse durations fixed at 1.5 and 0.5 s, respectively.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. (a) Cross-sectional field-emission scanning electron microscopy (FESEM) images of CsI films deposited on Si with 400 cycles (left) and 3300 cycles (right). (b) Top-down FESEM images of CsI films deposited on Si with 300 cycles at different deposition temperatures T Dep . (c) GIXRD patterns of CsI films on Si deposited at different temperatures. CsI reference pattern ICDD 6-311 is indicated as red bars. (d) Relative atomic force microscopy (AFM) roughness R q calculated as absolute R q divided by the film thickness. (e) AFM images of CsI films deposited at 150 and 250 °C. Unless otherwise evident, data are from films deposited with 300 cycles at 150 °C, pulse durations of 1.5 and 0.5 s for Cs(btsa) and SnI 4 , respectively, and 1.0 s purge durations.</figDesc><graphic coords="3,93.43,60.44,419.98,329.73" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a) Transmittance spectra of a 100 nm CsI film on sapphire and bare sapphire substrate. (b) Tauc plot of the CsI film in panel (a). The CsI film was deposited at 150 °C, pulse durations were 1.5 and 0.5 s for Cs and I precursors, respectively, and 1.0 s purge durations.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Contour plot of XRD patterns measured from CsI films on which PbI 2 was deposited with different number of cycles at 75 °C. (b) Relative intensity (peak area) of different phases in the patterns from panel (a) as a function of the number of PbI 2 deposition cycles. (c) Contour plot of XRD patterns measured during an anneal of the CsI film after 3000 PbI 2 deposition cycles at 75 °C. (d) XRD patterns of CsI films after 3000 and 4000 PbI 2 deposition cycles at 100 °C. The as-deposited CsI film pattern is also shown for reference. (e) Contour plot of XRD patterns measured from CsI films on which PbI 2 was deposited with different number of cycles at 100 °C. (f) Relative intensity (peak area) of different phases in the patterns from panel (e) as a function of the number of PbI 2 deposition cycles.CsI films (100 nm) were deposited at 150 °C with 300 cycles. The pulse durations were 1.5 s for Cs(btsa) and 1.0 s for SnI 4 and purge durations were 1.0 s. In the PbI 2 deposition, the durations of the precursor pulses were 0.8 and 2.0 s for Pb(btsa) 2 and SnI 4 , respectively, whereas purge durations were 1.0 s.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Panels (a), (c), (e), (g), and (i) show top-down SEM images of samples where PbI 2 was deposited on top of the CsI film. Panels (b), (d), (f), (h), and (j) show cross-sectional SEM images of the same samples. Panel (k) shows a cross-sectional FESEM image of a hole with 10:1 AR in a patterned Si substrate.Similar to the other samples, also on this sample, CsI film was deposited first, followed by PbI 2 deposition. CsI films (100 nm) were deposited at 150 °C with 300 cycles. The pulse durations were 1.5 s for Cs(btsa) and 1.0 s for SnI 4 and purge durations were 1.0 s. In the PbI 2 deposition, the durations of the precursor pulses were 0.8 and 2.0 s for Pb(btsa) 2 and SnI 4 , respectively, whereas purge durations were 1.0 s.</figDesc><graphic coords="6,152.96,60.44,300.93,347.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><figDesc>becomes d γ = 2.49 d CsI and d δ = 2.33 d CsI for γand δ-CsPbI 3 , respectively.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. (a) Transmittance spectra of the samples made by depositing CsI on a sapphire wafer and then depositing PbI 2 on CsI. Transmittance spectra of sapphire and the as-deposited CsI film are shown for reference. Measurements were made from the center of the sample. (b) Digital photographs of selected samples from panel (a). CsI films were deposited at 150 °C with 300 cycles. The pulse durations were 1.5 s for Cs(btsa) and 1.0 s for SnI 4 and purge durations were 1.0 s. In the PbI 2 deposition, the durations of the precursor pulses were 0.8 and 2.0 s for Pb(btsa) 2 and SnI 4 , respectively, whereas purge durations were 1.0 s. The diameter of the sapphire wafers was 5.08 cm.</figDesc><graphic coords="7,123.48,60.44,360.00,149.95" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="11,316.80,433.60,240.00,323.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>EDS and ToF-ERDA Composition Analysis of ALD CsI Thin Films a</figDesc><table><row><cell>sample</cell><cell>cycles</cell><cell>I/Cs ratio (EDS)</cell><cell>element atom % (ToF-ERDA)</cell></row><row><cell>Si/CsI (stored in inert atmosphere, transfer through air)</cell><cell>400</cell><cell>1.08</cell><cell>H 1.2</cell></row><row><cell></cell><cell></cell><cell></cell><cell>C 0.7</cell></row><row><cell></cell><cell></cell><cell></cell><cell>N 0.25</cell></row><row><cell></cell><cell></cell><cell></cell><cell>O 2.1</cell></row><row><cell></cell><cell></cell><cell></cell><cell>Cs and I 95.7</cell></row><row><cell>Si/CsI (stored open in ambient air at ≤20% RH for 7 days)</cell><cell>300</cell><cell>1.04</cell><cell>H 1.8</cell></row><row><cell></cell><cell></cell><cell></cell><cell>C 0.97</cell></row><row><cell></cell><cell></cell><cell></cell><cell>N 0.16</cell></row><row><cell></cell><cell></cell><cell></cell><cell>O 2.3</cell></row><row><cell></cell><cell></cell><cell></cell><cell>Cs and I 94.8</cell></row><row><cell>Si/CsI (stored open in ambient air at ≤40% RH for ca. 42 days)</cell><cell>300</cell><cell>4 × 10 -4</cell><cell>H 19.5</cell></row><row><cell></cell><cell></cell><cell></cell><cell>C 25.1</cell></row><row><cell></cell><cell></cell><cell></cell><cell>N &lt; 2.0</cell></row><row><cell></cell><cell></cell><cell></cell><cell>O 32.7</cell></row><row><cell></cell><cell></cell><cell></cell><cell>Cs and I 20.7</cell></row><row><cell>a</cell><cell></cell><cell></cell><cell></cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1021/acs.chemmater.2c01202 Chem. Mater. 2022, 34, 6087-6097 Downloaded via LEIBNIZ UNIVERSITAET HANNOVER on August 7, 2025 at 14:07:46 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://doi.org/10.1021/acs.chemmater.2c01202Chem. Mater. 2022, 34, 6087-6097</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>■ ACKNOWLEDGMENTS The authors thank the <rs type="funder">Academy of Finland</rs> (Decision Number <rs type="grantNumber">330086</rs>) and the <rs type="funder">Finnish Center of Excellence in Atomic layer Deposition</rs> (<rs type="grantNumber">ALDCoE 2012-2017</rs>) for financial support. G.P. acknowledges the doctoral program in Materials Research and <rs type="funder">Nanosciences (MATRENA)</rs> of the <rs type="institution">University of Helsinki</rs> as well as <rs type="person">Emil Aaltonen</rs> and <rs type="funder">Walter Ahlström</rs> foundations for funding and support. The work was conducted in the <rs type="institution">ALD Center, Finland</rs>, infrastructure. The authors thank <rs type="person">Dr. Miia Mäntymäki</rs> for providing LiF and <rs type="person">AlF 3 ALD</rs> films.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_gnvhBVD">
+					<idno type="grant-number">330086</idno>
+				</org>
+				<org type="funding" xml:id="_hhUWSqm">
+					<idno type="grant-number">ALDCoE 2012-2017</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Author Contributions § A.W. and G.P. contributed equally to this work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notes</head><p>The authors declare no competing financial interest.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">substrate coated with CsPbI 3 , and Tauc plots of γand δ-CsPbI 3 thin films on sapphire (PDF)</title>
+		<idno type="DOI">10.1021/acs.chemmater.2c01202/suppl_file/cm2c01202_si_001.pdf</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Information</surname></persName>
+		</author>
+		<idno>orcid.org/0000- 0001-5585-2655; Phone: +358 406826310</idno>
+		<ptr target="Email:alexander.weiss@helsinki.fi" />
+		<imprint>
+			<pubPlace>Helsinki, Finland</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Corresponding Authors Alexander Weiß -Department of Chemistry, University of Helsinki</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Email: marianna.kemell@helsinki.fi Authors Georgi Popov -Department of Chemistry</title>
+		<idno>orcid.org/0000- 0003-1233-8327</idno>
+		<imprint>
+			<pubPlace>Helsinki, Finland; Helsinki, Finland</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Marianna Kemell -Department of Chemistry, University of Helsinki ; University of Helsinki</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">FI-00014 Helsinki</title>
+		<idno type="DOI">10.1021/acs.chemmater.2c01202?ref=pdf</idno>
+		<idno>orcid.org/0000- 0002-6210-2980</idno>
+		<ptr target="https://pubs.acs.org/10.1021/acs.chemmater.2c01202■REFERENCES" />
+		<imprint>
+			<pubPlace>Finland</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Mikko Ritala -Department of Chemistry, University of Helsinki</orgName>
+		</respStmt>
+	</monogr>
+	<note>Complete contact information is available at</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Flat Panel Detector</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Itaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Shoji</surname></persName>
+		</author>
+		<idno>US2013/ 0068953 A12013</idno>
+		<imprint/>
+	</monogr>
+	<note type="report_type">U.S. Patent</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Comparison of an amorphous silicon/cesium iodide flat-panel digital chest radiography system with screen/film and computed radiography systemsA contrast-detail phantom study</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">J</forename><surname>Rong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Shaw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Lemacks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Thompson</surname></persName>
+		</author>
+		<idno type="DOI">10.1118/1.1408620</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Med. Phys</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2328" to="2335" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Optical and structural properties of CsI thin film photocathode</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Singh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.nima.2015.02.059</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nucl. Instrum. Methods Phys. Res., Sect. A</title>
+		<imprint>
+			<biblScope unit="volume">785</biblScope>
+			<biblScope unit="page" from="70" to="76" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Amorphous Silicon Detectors</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Rowlands</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Comprehensive Biomedical Physics</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="315" to="329" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A.-R</forename><surname>Penelope</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Farr's</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physics for Medical Imaging</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Saunders</forename><surname>Elsevier</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">CsI UV photocathodes: history and mystery</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Breskin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0168-9002(95)01145-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nucl. Instrum. Methods Phys. Res., Sect. A</title>
+		<imprint>
+			<biblScope unit="volume">371</biblScope>
+			<biblScope unit="page" from="116" to="136" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Interfacial engineering of electron transport layer using Caesium Iodide for efficient and stable organic solar cells</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Upama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Elumalai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Mahmud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Haque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Uddin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apsusc.2017.04.164</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page" from="834" to="844" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">All-inorganic cesium lead iodide perovskite solar cells with stabilized efficiency beyond 15%</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41467-018-07485-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">4544</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Inorganic CsPbI3 perovskite-based solar cells: A choice for a tandem device</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ahmad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tang</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/solr.201700048</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solar RRL</title>
+		<imprint>
+			<biblScope unit="volume">2017</biblScope>
+			<date>1700048</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">CsSnI3: semiconductor or metal? High electrical conductivity and strong nearinfrared photoluminescence from a single material. High hole mobility and phase-transitions</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Im</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Androulakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Malliakas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Freeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Kenney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Kanatzidis</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ja301539s?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">134</biblScope>
+			<biblScope unit="page" from="8579" to="8587" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Electronic band structure, phonons, and exciton binding energies of halide perovskites CsSnCl 3, CsSnBr 3, and CsSnI 3</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>-Y.; Lambrecht</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.88.165203</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<date type="published" when="2013">2013. 165203</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">From unstable CsSnI3 to air-stable Cs2SnI6: A lead-free perovskite solar cell light absorber with bandgap of 1.48 eV and high absorption coefficient</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Kanatzidis</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.solmat.2016.09.022</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sol. Energy Mater. Sol. Cells</title>
+		<imprint>
+			<biblScope unit="volume">159</biblScope>
+			<biblScope unit="page" from="227" to="234" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Rong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Saidaminov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Seok</surname></persName>
+		</author>
+		<imprint>
+			<pubPlace>Il</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Challenges for commercializing perovskite solar cells</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Mcgehee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Sargent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aat8235</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">361</biblScope>
+			<biblScope unit="issue">6408</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Stable perovskite solar cells with efficiency exceeding 24.8% and 0.3-V voltage loss</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">W</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Go</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.abb7167</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">369</biblScope>
+			<biblScope unit="page" from="1615" to="1620" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Solar cell efficiency tables (version 57)</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dunlop</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hohl-Ebinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yoshita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kopidakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Hao</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/pip.3371</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Photovoltaics 2021</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="3" to="15" />
+			<publisher>Prog</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The main progress of perovskite solar cells in 2020-2021</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40820-021-00672-w</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nano-Micro Lett</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1" to="18" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Scalable fabrication of perovskite solar cells</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Berry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Van Hest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/natrevmats.2018.17</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Mater</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<date type="published" when="2018">2018. 18017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Stability Issue of Perovskite Solar Cells under Real-World Operating Conditions</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Haji Ladi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/ente.201900744</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Technol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2020">2020. 1900744</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Making and breaking of lead halide perovskites</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Manser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Saidaminov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Christians</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">M</forename><surname>Bakr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Kamat</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.accounts.5b00455?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="330" to="338" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Organometal halide perovskite solar cells: degradation and stability</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Berhe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-N</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-J</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-M</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-C</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Dubale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B.-J</forename><surname>Hwang</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C5EE02733K</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Environ. Sci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="323" to="356" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Intrinsic thermal instability of methylammonium lead trihalide perovskite</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Conings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Drijkoningen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gauquelin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Babayigit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>D'haen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>D'olieslaeger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ethirajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Verbeeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Manca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mosconi</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/aenm.201500477</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2015">2015. 1500477</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Investigation of CH3NH3PbI3 degradation rates and mechanisms in controlled humidity environments using in situ techniques</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Siempelkamp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Kelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nn506864k?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1955" to="1963" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Atomistic origins of CH3NH3PbI3 degradation to PbI2 in vacuum</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Deretzis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alberti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pellegrino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Smecca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Giannazzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Miyasaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>La Magna</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4916821</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<date type="published" when="2015">2015. 131904</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Super-resolution luminescence microspectroscopy reveals the mechanism of photoinduced degradation in CH3NH3PbI3 perovskite nanocrystals</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Merdasa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Källman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dobrovolsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">G</forename><surname>Scheblykin</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.6b03512?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="10711" to="10719" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Improving the stability of MAPbI3 films by using a new synthesis route</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gordillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">G</forename><surname>Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Abella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Penã</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Virguez</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jmrt.2020.09.095</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Res. Technol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="13759" to="13769" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Bismuth Enhances the Stability of CH3NH3PbI3 (MAPI) perovskite under high humidity</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Siegler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Houck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Milliron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Korgel</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.8b11674?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="963" to="970" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">A review: thermal stability of methylammonium lead halide based perovskite solar cells</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Ava</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Al Mamun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Marsillac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Namkoong</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/app9010188</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Sci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">188</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Elucidating the failure mechanisms of perovskite solar cells in humid environments using in situ grazing-incidence wide-angle X-ray scattering</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Fransishyn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kundu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Kelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsenergylett.8b01300?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Energy Lett</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="2127" to="2133" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Formamidinium and cesium hybridization for photo-and moisture-stable perovskite solar cell</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/aenm.201501310</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2015">2015. 1501310</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Efficient and Stable All-Inorganic Perovskite Solar Cells</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Choy</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/solr.202000408</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solar RRL</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2020">2020. 2000408</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Crystallinity of inorganic films grown by atomic layer deposition: Overview and general trends</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Miikkulainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4757907</idno>
+		<idno>No. 021301</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Thin Films</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="103" to="159" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition chemistry: recent developments and future challenges</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/anie.200301652</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="5548" to="5554" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Low-temperature roll-to-roll atmospheric atomic layer deposition of Al2O3 thin films</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-H</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/la503406v?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="14195" to="14203" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Spatial atmospheric pressure atomic layer deposition of tin oxide as an impermeable electron extraction layer for perovskite solar cells with enhanced thermal stability</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hoffmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">O</forename><surname>Brinkmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Malerczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rogalla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Theirich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Shutsko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Görrn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Riedl</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b17701?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="6006" to="6013" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Studies on polycrystalline ZnS thin films grown by atomic layer deposition for electroluminescent applications</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Yun</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apsusc.2004.01.050</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">229</biblScope>
+			<biblScope unit="page" from="105" to="111" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition: An Enabling Technology for Microelectronic Device Manufacturing</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Marcus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Wilk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Swerts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Maes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Blomberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Delabie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gros-Jean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Deloffre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE/SEMI Advanced Semiconductor Manufacturing Conference</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2007">2007. 2007</date>
+			<biblScope unit="page" from="359" to="365" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Interface engineering of high efficiency perovskite solar cells based on ZnO nanorods using atomic layer deposition</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sarvari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">D</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s12274-016-1407-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Res</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1092" to="1103" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Progress on perovskite materials and solar cells with mixed cations and halide anions</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">K</forename><surname>Ono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Juarez-Perez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Qi</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b06001?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="30197" to="30246" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Spray reaction prepared FA 1-x Cs x PbI 3 solid solution as a light harvester for perovskite solar cells with improved humidity stability</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C5RA23359C</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>RSC Adv</publisher>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="14792" to="14798" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Dipolar cations confer defect tolerance in wide-bandgap metal halide perovskites</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Che</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Saidaminov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Todorovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Broberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Walters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhuang</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41467-018-05531-8</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">3100</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Stable and high-efficiency methylammonium-free perovskite solar cells</title>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">X</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zuẗtel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Nazeeruddin</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adma.201905502</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<date type="published" when="2020">2020. 1905502</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<title level="m" type="main">Database of Materials Prepared by Atomic Layer Deposition (ALD)</title>
+		<ptr target="https://www.atomiclimits.com/alddatabase/" />
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of PbI2 thin films</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Popov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mattinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hatanpää</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vehkamäki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kemell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mizohata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Räisänen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b04969?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="1101" to="1109" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Study of a novel ALD process for depositing MgF 2 thin films</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pilvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hatanpää</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Puukilainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arstila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bischoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/b710903b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="5077" to="5083" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of MgF2 thin films using TaF5 as a novel fluorine source</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pilvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Puukilainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Kreissig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm800948k?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="5023" to="5028" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Structural studies of cesium, lithium/cesium, and sodium/cesium bis (trimethylsilyl) amide (HMDS) complexes</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Ojeda-Amador</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Martínez-Martínez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>O'hara</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.inorgchem.6b00839?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Chem</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="5719" to="5728" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of LaF3 thin films using La (thd) 3 and TiF4 as precursors</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pilvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Puukilainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arstila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.200706681</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="85" to="91" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Novel ALD process for depositing CaF2 thin films</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pilvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arstila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm0629412?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="3387" to="3392" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of AlF3 thin films using halide precursors</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mäntymäki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Heikkila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Puukilainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mizohata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Marchand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Raisanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm504238f?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="604" to="611" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">ALD of YF3 thin films from TiF4 and Y (thd) 3 precursors</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pilvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Puukilainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Munnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.200806721</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="27" to="32" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of LiF thin films from lithd and TiF4 precursors</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mäntymäki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hämäläinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Puukilainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Munnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/cvde.201207026</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="111" to="116" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Atomic layer deposition of TbF3 thin films</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Atosuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ojala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Heikkilä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mattinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mizohata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Räisänen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskelä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000790</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note>No. 022404</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Simulated performances of pixelated CsI (Tl) scintillation screens with different micro-column shapes and array structures in X-ray imaging</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ni</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-018-34852-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2018">2018. 16819</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">X-ray imaging performance of structured cesium iodide scintillators</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ristic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rowlands</surname></persName>
+		</author>
+		<idno type="DOI">10.1118/1.1782676</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Med. Phys</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="2594" to="2605" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Effect of humidity on scintillation performance in Na and Tl activated CsI crystals</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harmon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">P</forename><surname>Doty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Ohlhausen</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TNS.2014.2300471</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Nucl. Sci</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="1024" to="1031" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Influence of humidity on the photoemission properties and surface morphology of cesium iodide photocathode</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Dutta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Singh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.nima.2011.10.019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nucl. Instrum. Methods Phys. Res., Sect. A</title>
+		<imprint>
+			<biblScope unit="volume">695</biblScope>
+			<biblScope unit="page" from="279" to="282" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Study of Humidity on the Structure and Optical Properties of Cesium Iodide Thin Film</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xiong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Optics and Photonics for Energy and the Environment</title>
+		<imprint>
+			<publisher>Optical Society of America</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="3A" to="6" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Determination of the thickness and optical constants of amorphous silicon</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Swanepoel</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0022-3735/16/12/023</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. E: Sci. Instrum</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<date type="published" when="1214">1983. 1214</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">A simple spectrophotometric method for determination of the optical constants and band gap energy of multiple layer TiO2 thin films</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sreemany</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.matchemphys.2003.09.030</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="169" to="177" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Photoemission and optical constant measurements of a Cesium Iodide thin film photocathode</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Jammal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Singh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.nima.2014.11.085</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nucl. Instrum. Methods Phys. Res., Sect. A</title>
+		<imprint>
+			<biblScope unit="volume">787</biblScope>
+			<biblScope unit="page" from="161" to="165" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Optical properties of cesium iodide</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Rodney</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/JOSA.45.000987</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Am</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="987" to="992" />
+			<date type="published" when="1955">1955</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">The dielectric constant of ionic solids and its change with hydrostatic pressure</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Jones</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/14786436708229695</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Philos. Mag</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1085" to="1096" />
+			<date type="published" when="1967">1967</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<author>
+			<persName><forename type="first">G</forename><surname>Popov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bacǐc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mattinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Manner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lindström</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Seppänen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suihkonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vehkamäki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kemell</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jalkanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.2c01202?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.2c01202" />
+	</analytic>
+	<monogr>
+		<title level="m">Chemistry of Materials pubs.acs.org/cm Article</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="6087" to="6097" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of PbS Thin Films at Low Temperatures</title>
+		<author>
+			<persName><forename type="first">P</forename></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c01887?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="8216" to="8228" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Inorganic caesium lead iodide perovskite solar cells</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Eperon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Paterno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zampetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Haghighirad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cacialli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Snaith</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C5TA06398A</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="19688" to="19695" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Subvalent group 4B metal alkyls and amides. Part 5. The synthesis and physical properties of thermally stable amides of germanium (II), tin (II), and lead (II)</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J S</forename><surname>Gynane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Lappert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Power</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Riviere</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Riviere-Baudet</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/DT9770002004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<date type="published" when="1977">1977. 2004-2009</date>
+			<pubPlace>Dalton Trans</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Atomic-scale formation of ultrasmooth surfaces on sapphire substrates for high-quality thin-film fabrication</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yoshimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Maeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohnishi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Koinuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ishiyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shinohara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Miura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Miyamoto</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.114313</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="2615" to="2617" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Suppressing nucleation in metal-organic chemical vapor deposition of MoS2 monolayers by alkali metal halides</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ovchinnikov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Deiana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Unuchek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kis</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.nanolett.7b02311?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Lett</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="5056" to="5063" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">An iteration procedure to calculate film compositions and thicknesses in electron-probe microanalysis. Microbeam Anal</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Waldo</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.2c01202?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.2c01202" />
+	</analytic>
+	<monogr>
+		<title level="m">Chemistry of Materials pubs.acs.org/cm Article</title>
+		<imprint>
+			<date type="published" when="1988">1988. 2022</date>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="6087" to="6097" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

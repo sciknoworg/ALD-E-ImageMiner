@@ -1,0 +1,622 @@
+Research paper
+
+# Optimal design of novel precursor materials for the atomic layer deposition using computer-aided molecular design
+
+Mina Shahmohammadi a,1, Rajib Mukherjee b,c,1, Christos G. Takoudis a,d,\*, Urmila M. Diwekar b,d,\*
+
+a Department of Chemical Engineering, University of Illinois at Chicago, Chicago, IL 60607, United States  b Vishwamitra Research Institute, Crystal Lake, IL 60012, United States  c Department of Chemical Engineering, University of Texas Permian Basin, Odessa, TX 79762, United States  d Department of Bioengineering, University of Illinois at Chicago, Chicago, IL 60607, United States
+
+# HIGHLIGHTS
+
+- Derived a group contribution method for Atomic Layer Deposition (ALD).  
+- Computed UNIFAC interaction parameters for functional groups of ALD precursors.  
+- Developed computer-aided molecular design along with ALD.  
+- Used UNIFAC interaction parameters of functional groups to design new precursors.  
+- Designed novel titanium precursors for ALD with enhanced properties.
+
+# ARTICLE INFO
+
+Article history:  Received 8 September 2020  Received in revised form 21 December 2020  Accepted 24 December 2020  Available online 5 January 2021
+
+# Keywords:
+
+Atomic layer deposition  Group contribution method  Computer- aided molecular design  Adsorbate solid solution theory  Efficient ant colony optimization
+
+# ABSTRACT
+
+Nanomaterials and nanostructures with multi- functional properties found widespread applications such as electronics, optics, and coatings that can be fabricated using Atomic Layer Deposition (ALD). ALD is a vapor phase deposition technique to generate thin films of metals and metal oxides on a substrate. In this process, a precursor, which often comprises of organic functional groups that surround the depositing metal, chemisorbs on the substrate or reacts with the surface sites and with each other. Precursor chemisorption on the substrate leads ALD to be a self- limiting process. Thus, the precursor(s) should be chosen in a way to enhance deposition based on the ALD conditions. For a given application, it is practically impossible to carry out a large number of experiments using numerous precursors with varied deposition conditions to find the one that maximizes the growth rate in ALD. In addition, only existing precursors can be tested experimentally. The overall objective of this work is to develop a computational tool for the in- silico design of precursor materials using adsorbate solid solution theory (ASST). In the first part of this paper, we apply the ASST to derive properties of the functional groups present in the precursor using a new Group Contribution Method (GCM). The GCM is successfully derived and compared with the experimental data from ALD. The method shows good agreement and is useful for the design of novel materials. In the second part of this paper, using the thermodynamic properties as obtained from GCM, we develop a computer- aided molecular design (CAMD) framework for the optimal design of novel precursor materials with enhanced deposition properties for the ALD of metal oxides and metals. The metaheuristic efficient ant colony optimization algorithm (EACO) developed in- house is used for both parts. CAMD is a combinatorial optimization methodology, where molecules with optimal desired properties are generated from functional groups. The precursor selection optimization problem is posed as a mixed integer nonlinear programming problem, which is solved using EACO. The ALD growth kinetics is used as an objective of optimization and a solution is validated with thermodynamic constraints. Along with the number of groups, the temperature is also included in the optimization framework as decision variables. Forty- one novel titanium precursor molecular structures for ALD are generated with growth rates ranging from 1.23 Å/cycle to as high as 1.65 Å/cycle. Thus, these precursors have shown growth rates higher than the known titanium precursors. ALD growth rate is found to be a function of the combination of the precursor functional groups as well as temperature with a complex correlation among them.
+
+© 2021 Elsevier Ltd. All rights reserved.
+
+# Nomenclature
+
+A Area  $(\mathbb{m}^2)$  Ag Van der Waals surface area  $(\mathrm{cm}^2 /\mathrm{mol})$  anm Interaction parameters C Number  $\mathbb{C}_1$  Initial concentration of adsorbate  $(\mathrm{mol} / \mathrm{L})$  Eq Total number of equations used to solve the problem Err Error  $\mathbb{G}^{\mathrm{E}}$  Gibbs excess free energy (J) GR Growth rate (nm/cyc)  $\mathbf{g}^{\mathrm{ad}}$  Free energy of immersion of the adsorbed solution  $(\mathrm{J / kg})$  h Thickness (nm) 1 Bond distances (A)  $\mathbb{M}_0$  Molecular weight of adsorbent  $(\mathrm{g / mol})$ $\mathbb{N}_{\mathrm{gt}}$  Total functional groups NA Avogadro's number n Molar quantity (moles) P Pressure (Pa)  $\mathbb{P}_{\mathbb{V}}$  Vapor pressure (Torr)  $\mathbb{q}$  Adsorption capacity  $(\mathrm{mol / g})$ $\mathbb{q}_{\mathrm{i}}$  Parameter for Vander Waal surface calculation  $\mathbb{Q}$  Molar flow rate (mole/s)  $\mathbb{Q}_{\mathrm{g}}$  Van der Waals group surfaces of group K  $(\mathfrak{m}^2)$ $\mathbf{r}_{\mathrm{i}}$  Parameter for van der Waal volume calculation  $\Gamma_{\mathrm{w}}$  Van der Waals radius (A)  $\Gamma_{1}$  Van der Waals radii for both atoms (A)  $\mathbb{R}_{\mathrm{g}}$  Van der Waals group volumes of group K  $(\mathfrak{m}^3)$  R Ideal gas constant  $(8.314\mathrm{J / molK})$  t Precursor pulse time (s) T Temperature of adsorption (K)  $\mathbf{V}_{\mathrm{p}}$  Pore volume of the adsorbent  $(\mathrm{cm}^3 /\mathrm{g})$ $\mathbf{V}_{\mathrm{oi}}$  Molar volume of the respective fluid  $(\mathrm{cm}^3 /\mathrm{mol})$ $\mathrm{Vg}$  Van der Waals volume  $(\mathrm{cm}^3 /\mathrm{mol})$  V Volume  $(\mathrm{cm}^3)$  X Molar fraction
+
+# Greek letters
+
+$\gamma$  Activity coefficient  $\gamma_{GEi}^{*}$  Activity coefficient of a binary adsorbate solid solution  $\phi^{*}$  Chemical potential of the wetted solid  $(\mathrm{J / g})$ $\phi_{0i}^{*}$  Chemical potential of the wetted solid plus adsorption of the pure component i  $(\mathrm{J / g})$
+
+$\phi_{i}$  Volume fraction for UNIFAC calculation  $\theta_{i}$  Surface area fraction for UNIFAC calculation  $\Gamma_{mi}^{s}$  Surface phase capacity of component  $i(\mathrm{mol / g})$ $\rho$  Density  $(\mathrm{g / mL})$
+
+# Subscripts
+
+$i$  Component i 0 Adsorbent 1 Adsorbate (Ti or Hf) 2,3,4 Component 2,3, or 4 Oi Pure component i or pure adsorbed component i cyc In one cycle film In the film  $\mathrm{g}$  Group index  $j$  Number of components ml In each monolayer T Total Sln Solution
+
+# Superscripts
+
+\* Adsorbate solid solution 1 Initial feed ad Adsorption b Bulk phase C Combinatorial C Combinatorial in ASS phase cal Calculated Cb Combinatorial in bulk phase cyc Cycle  $\mathrm{E}^{*}$  Excess adsorbate solid solution Es Excess of the surface phase exp Experimental ml Monolayer n Adsorbate solid solution opt Optimal R Residual  $\mathbb{R}^*$  Residual in the ASS phase Rb Residual in the bulk phase S Surface phase
+
+# 1. Introduction
+
+Multifunctional thin- film nanomaterials have found widespread applications in different areas such as in electronics, optics, protective and decorative coatings, and biomedical implants. Design, development, and implementation of new thin- film technology is often time- consuming, expensive, and heuristic. It took nearly 15,000- panel trails and two and a half years for U.S. Naval Air Systems Command (NAVAIR), to come up with an acceptable alternative to toxic hexavalent chromium  $(\mathrm{Cr} + 6)$  used in chromate conversion coating (Matzdorf et al., 2002). High- temperature dielectric is another area where new material development is actively pursued to increase the temperature- endurance of capacitors used in high- temperature aerospace power electronic systems for the future generation of nanoelectronics (Xu et al., 2012). Many such applications warrant extensive materials search. No proven theory or method yet exists to help us expedite material selection/property prediction during this technology development cycle. It has been realized that simulation- based materials design has the potential to dramatically reduce the need for expensive down- stream characterization and testing for these materials.
+
+However, currently, we don't even have a good grasp of how combining different elements into particular compounds gives them specific properties, or how these properties give materials functional qualities.
+
+Nanomaterials and nanostructures with multi- functional properties and widespread applications can be fabricated using Atomic Layer Deposition (ALD). ALD is a vapor phase technique in which the deposition of thin films takes place on a substrate. Sequential and self- limiting surface reactions that happen in the ALD process create conformal and pinhole- free films, which can be precisely controlled over thickness and composition (Bishal et al., 2015; George, 2010). The thin films produced by ALD have extensive applications such as in semiconductors (Kim, 2003), optical coatings, solar cells (M Ritala et al., 1994), ferroelectric material (Chang et al., 2016), high- k transistors, fuel cells (Johnson et al., 2014), and biomedical applications (Bishal et al., 2017, 2018; Shahmohammadi et al., 2020a). A precursor used in this process has certain desirable qualities, such as being volatile, thermally stable, and highly reactive. Precursor molecules, which are mostly a metal surrounded by organic functional groups, chemisorb on the substrate or react with the surface sites and with each other. Part
+
+of the molecule subsequently desorbs from the surface after completion of the reaction. The precursors then proceed to react with other unreacted surface areas and produce a conformal film. Precursor chemisorption on the substrate saturates, leading to a self- limiting process and eventually forms films with accurate thickness at Angstrom levels (Aaltonen et al., 2003; Leskelä and Ritala, 2002). The ALD precursor is usually selected based on few key physical properties, which is thought to produce thin films with the desired property (e.g., adsorption capacity, dielectric constant, leakage current, gas impermeability, electrical conductivity, photochemical activity, and antimicrobial activity) (Huang, 2017; Leskelä and Ritala, 2002; Majumder et al., 2007; Xu et al., 2012). The structure of the precursor and precursor adsorption are essential elements of ALD; hence, the optimal design of novel precursor materials is at the center of this study. In the present work, we generate novel precursors with enhanced properties for the ALD process with the aid of computer- aided molecular design (CAMD).
+
+There are limited theoretical models and not any classical thermodynamic model available to describe ALD. Puurunen (Puurunen, 2003a) has derived a model to describe the growth per cycle in ALD as a function of the chemistry of the growth and relates the growth per cycle to the size of the reactant and the chemisorption process involved. Elliot (Elliott, 2005) presented a theoretical model for the atomic- scale mechanism of a single ALD process and explained how the process conditions might affect the growth rate. Gordon et al. (Gordon et al., 2003) developed a theory to deposit uniform coatings in narrow holes of the arbitrary cross- section. Moreover, Kinetra Monte Carlo (KMC) which is a stochastic based model along with Density Functional Theory (DFT) have been applied several times to study the mechanism of ALD or design precursors (Huang et al., 2014; Park et al., 2016; Xu and Musgrave, 2004). However, there exists no model to predict the growth rate versus precursor pulse time in order to develop novel precursors for ALD from molecular structures.
+
+In the present work, a theoretical framework has been developed to model the growth rate of ALD as a function of precursor pulse time by applying the Adsorbate Solid Solution Theory (ASST) (Berti et al., 1999). ASST incorporates the influence of the functional groups through the Group Contribution Method (GCM) methodology (Benavides and Diwekar, 2014). In GCM, the thermodynamic properties of a compound are predicted from its molecular structure. The molecule is split up into structural and functional groups that can be composed of individual atoms or small groups of atoms. The GCM parameter of a functional group is estimated by the number of times a particular group appears in the adsorbent (solid substrate in ALD) multiplied by its contribution. The parameterized GCMs are used for the estimation of binary interaction parameters between different groups, where there is no available experimental data and can avoid the need for expensive experimentation for that purpose (Khalifa and Lue, 2017). Estimation of binary interaction parameter for calculation of activity coefficients for separation process like distillation requires the use of the Universal Quasi- chemical Functional- group Activity Coefficient (UNIFAC) model for GCM to predict the vapor- liquid equilibrium (Fredenslund, 2012). In ASST, a modified version of the UNIFAC model is presented that uses the model to compute the activity coefficient in the adsorbate solid solution. ASST has been used effectively for the prediction of adsorption of radioactive elements as well as arsenic in clay- based adsorbents (Benavides et al., 2015; Benavides and Diwekar, 2014; Doshi et al., 2018) and metal ions in polymer resin (Mukherjee et al., 2017). In the present work, an extended version of ASST is used to predict the chemisorption on a silicon substrate in ALD. An optimization framework based on efficient ant colony optimization (EACO) (Diwekar and Gebreslassie, 2016; Gebreslassie and Diwekar, 2015) is used to minimize the difference between predicted and experimental data in order to obtain the optimal value of the interaction parameter.
+
+CAMD generates molecules with desired properties from functional groups using a technique that is reverse to that of GCM. While GCM estimates the properties of the molecule based on the functional groups comprising the molecule, CAMD, on the other hand combines different functional groups to generate molecules having desired properties (Kim and Diwekar, 2002). CAMD methods have been applied extensively in various areas such as extraction solvents (Cheng and Wang, 2008; Gebreslassie and Diwekar, 2015; Giovanoglou et al., 2003; Kim et al., 2004; Marcoulaki and Kokossis, 2000; Samudra and Sahinidis, 2013), polymer designs (Hostrup et al., 1998; Mukherjee et al., 2017), degreasing solvents (Trevizo et al., 2000), blanket wash solvents (Chemmangattuvalappil et al., 2009; Sinha and Achenie, 2001), absorption solvents (Eden et al., 2004; Eljack and Eden, 2008; Odele and Macchietto, 1993; Pistilopoulos and Stefanis, 1998; Salazar et al., 2013), refrigerant design (Churi and Achenie, 1996; Duvedi and Achenie, 1996), distillation solvents (Kim et al., 2004; Kim and Diwekar, 2002; Xu and Diwekar, 2007, 2005), reaction solvents (Folic et al., 2008; Lin et al., 2005), catalysts (Lin et al., 2005), value added products (Camarda and Sunderesan, 2005), crystallization solvent (Karunanithi et al., 2006), and foaming agents (Yamamoto and Tochigi, 2008). CAMD has been used effectively for the design of novel clay- based adsorbents to adsorb radioactive elements from flowback/produced water (Benavides et al., 2015) and remove arsenic from water (Doshi et al., 2018). Mukherjee et al. (Mukherjee et al., 2017) have used CAMD for the design of novel polymer resin for metal ion removal from water. However, this is the first time such an approach is going to be applied to optimally design new precursor materials with enhanced properties for ALD.
+
+In the first part of this work, we have used experimental saturation curves from four different ALD systems (Deshpande et al., 2004; Liu et al., 2005; Selvaraj et al., 2013; Xie et al., 2007) to model the chemisorption process during ALD using a modified version of ASST. The thermodynamic properties (i.e., binary interaction parameters between precursor functional groups with each other and with the substrate) are estimated with UNIFAC GCM. Then the growth rates were computed using a model equation derived from ASST, which is, in turn, compared to the experimental growth rates. It has been shown that one can predict the growth rate of an ALD system theoretically with this new method, without requiring expensive experiments. In the second part of this work, these estimated properties of the functional groups are used to generate new precursor molecules using CAMD. Gebreslassie and Diwekar (Gebreslassie and Diwekar, 2015) have used EACO algorithm for CAMD of environmentally benign solvents. Comparison of their results with different optimization techniques showed improved solution using EACO that has prompted us to use the same optimization algorithm. It is practically impossible to synthesize numerous precursors and carry out a large number of ALD experiments with varied deposition conditions in order to find the optimum one with improved properties. CAMD framework is used to overcome those issues of design and development of precursor materials without performing expensive and time- consuming experiments. Based on the properties of the functional groups that have already been estimated by GCM, CAMD explores all combinations and generates possible molecules. From the generated ones, improved molecules are selected based on the predicted properties by UNIFAC GCM. Since CAMD uses optimization to enhance the properties, the generated precursor molecules are the better ones that maximize the growth rate of ALD.
+
+The paper is organized as follows: the next section (Section 2) gives the problem formulation followed by a theoretical
+
+background that includes model equations and description of the optimization problem as used in this work. Section 3 gives details about the case studies used to prove the developed theory followed by results and discussions from the case studies in Section 4. The conclusions are given in Section 5.
+
+# 2. Problem formulation and methodology
+
+# 2.1. ALD as a chemisorption process
+
+Adsorption is a process in which an atom, ion, or molecule (adsorbate) is separated from a fluid or dissolved solid to adhere to a surface, called the adsorbent. Adsorption can be physical or chemical, also known as physisorption and chemisorption, respectively. In each adsorption process, there are two major phases: the bulk phase and the adsorbed or surface phase. In ALD, the precursor molecules from the bulk phase are chemisorbed on the substrate (Puurunen, 2003b), which is the solid phase, and this continues until the adsorbent reaches its maximum capacity when the system reaches adsorption equilibrium. During equilibrium, the adsorption rate equals the desorption rate, and no more adsorbate can be adsorbed. An isotherm can describe the adsorption equilibrium by plotting the amount of adsorbate adsorbed (q) versus the concentration of adsorbate in the bulk phase (C). In an isotherm where the graph begins to show a plateau is the maximum adsorption capacity. Similarly, in an ALD process, the growth rate forms a plateau as we increase the precursor pulse time. In this case, after saturation, further increasing the amount of precursor by increasing the pulse time does not increase the growth rate as the maximum capacity has been achieved. In the present work, we have related the growth rate and precursor pulse time to the adsorption capacity and concentration of the chemisorption process that occurs in ALD through the enhanced ASST model.
+
+A typical example indicating the effect of precursor pulse time on growth rate in the ALD process is demonstrated in Fig. 1. Fig. 1 shows the growth rate versus pulse time of  $\mathrm{TiO_2}$  on Si (100) substrate using tetrakis (diethylamino) titanium (TDEAT) as the precursor (Selvaraj et al., 2013). The effect of the precursor pulse time on the growth rate of films indicates that there is no significant change in growth rate for precursor pulse times beyond  $2s$  That confirms ALD is a self- limiting process. Details about the experiment are given in the case studies (Section 3).
+
+Fig. 2 shows a schematic representation of the adsorption process in an ALD reactor. The precursor comprises functional groups and the metal to be deposited. The precursor compound, along with inert gas, comprises the initial solution that is pulsed into the ALD reactor. The substrate acts as an adsorbent. During the deposition, the functional groups of the precursor and the metal interact with the substrate. In ASST, contrary to the classical formulation of adsorption equilibrium, the adsorbate phase is considered as a mixture containing the adsorbate and the adsorbent (substrate). The Gibbs free energy  $\left(G^{E*}\right)$  of adsorption for the adsorbate solid solution (ASS) is related to the activity coefficient of the involved components. The unreacted precursors, along with the inert gas, comprise the bulk phase. The deposition of Ti using tetrakis(dimethylamido)titanium (TDMAT) as a precursor is shown in Fig. 2. In this system, the functional groups of TDMAT and nitrogen gas  $(N_{2})$  are shown as an example of the components present in the initial solution. The bulk phase comprises the unreacted precursors as well as the purged functional groups of TDMAT from the substrate along with the  $N_{2}$  gas. The mixture of titanium (Ti) and silicon (Si) are examples of components in the ASS phase.
+
+# TDEAT-Growth Rate versus Pulse Time
+
+![](images/b0029428e7c4dd5c1a112ca54a1e1218390547482c5b07e432104cafa191be9d.jpg)  
+Fig. 1. Effect of precursor pulse time on  $\mathrm{TiO_2}$  ALD growth rate. The vertical error bars indicate film uniformity across the sample (Selvaraj et al., 2013).
+
+![](images/cada849fc616aed62954b0493ddbc0791aebbe4f39d55ab2fc533446c527b83b.jpg)  
+Fig. 2. An example of ALD as an adsorption process. "1" represents the initial solution, which includes the precursor and inert gas, "0" represents the substrate, which is the adsorbent, "ll" is the bulk phase and "ll" is the ASS phase.
+
+# Mole balance in ALD
+
+The mole balance equations are used to calculate the number of moles and mole fractions of each component in different phases, as mentioned above. Eq. (1) displays the mole balance for each component  $i$  in an ALD process.
+
+$$
+n_i^1 = n_i^* +n_i^b\quad \forall i \tag{1}
+$$
+
+where  $n_i^l$ ,  $n_i^*$ , and  $n_i^b$  are the moles of component  $i$  in the initial solution entering the reactor, in the ASS phase, and in the bulk phase, respectively. In Eq. (1),  $i \in [1, \dots , 4]$  for the initial composition and bulk phase (i.e., functional groups of TDMAT comprising the metal Ti (1), N (2) and CH₃ (3), and inert N₂ (4)), and  $i \in [0, 1]$  for the ASS phase, (i.e., Si (0) and Ti (1)).
+
+To calculate the total moles and mole fractions of each component in the initial solution, Eqs. (2) and (3) are used:
+
+$$
+n_i^1 = \sum_{i = 1}^{4}n_i^1 \tag{2}
+$$
+
+$$
+x_{i}^{1} = \frac{n_{i}^{1}}{n_{T}^{1}}\quad \forall i \tag{3}
+$$
+
+where  $x_{i}^{l}$  is the mole fraction of component  $i$  in the initial solution, similarly, Eqs. (4) and (5) are used to find the total moles and mole fractions in the bulk phase.
+
+$$
+n_{T}^{b} = \sum_{i = 1}^{4}n_{i}^{b} \tag{4}
+$$
+
+$$
+x_{i}^{b} = \frac{n_{i}^{b}}{n_{T}^{b}}\quad \forall i \tag{5}
+$$
+
+And finally, Eqs. (6) and (7) are used to calculate the total moles and mole fractions in the ASS phase:
+
+$$
+n_{T}^{*} = \sum_{i = 0}^{1}n_{i}^{*} \tag{6}
+$$
+
+$$
+x_{i}^{*} = \frac{n_{i}^{*}}{n_{T}^{*}}\quad \forall i \tag{7}
+$$
+
+# Group contribution method for ALD:
+
+To derive the GCM for ALD, we need to have mole fractions of the adsorbate in the surface phase and bulk phase, and the adsorption capacity  $(\mathrm{mole} / \mathrm{g})$  .We start with experimental growth rate,  $GR_{exp}(\frac{nm}{cycle})$  as illustrated in Fig. 1. Fig. 1 was generated by Selvaraj et al. (Selvaraj et al., 2013) by depositing  $\mathrm{TiO_2}$  using TDEAT where Si (100) was used as the substrate, and nitrogen as the carrier gas. It shows the effect of precursor pulse time on  $\mathrm{TiO_2}$  ALD growth rate at  $200^{\circ}C$  substrate temperature. The bubbler temperature was at  $65^{\circ}C$  and the system pressure was 0.5 Torr. To find the number of moles of titanium  $(n_{Ti})$  deposited on the substrate in each cycle, Eqs. (8)- (13) are used:
+
+$$
+h_{film} = GR_{exp}*c_{cyc} \tag{8}
+$$
+
+$$
+c_{ml}^{film} = \frac{h_{film}}{h_{TiO_2}} \tag{9}
+$$
+
+In Eqs. (8) and (9),  $h_{film},c_{cyc},c_{ml}^{film}$  and  $h_{TiO2}$  are referring to the thickness of the film  $(\mathrm{nm})$  , number of cycles, number of monolay- . ers in film, and thickness of each  $\mathrm{TiO_2}$  monolayer (nm), respectively.  $h_{TiO2}$  is calculated based on literature (Puurunen, 2003b, 2003a). For the temperatures we worked on,  $\mathrm{TiO_2}$  has been considered amorphous (Deshpande et al., 2004; Liu et al., 2005; Xie et al., 2007), and its density is  $4.23~\mathrm{g / cm^3}$  . According to this information,  $h_{TiO2}$  is estimated to be  $0.3\mathrm{nm}$  Assuming each  $\mathrm{TiO_2}$  unit as a cube, and full monolayer growth, the area each unit would cover  $(A_{TiO2})$  is  $0.3\times 0.3\mathrm{nm}^2$  . This is a simplified assumption which is also consistent with other equations found in the literature (Puurunen, 2003b, 2003a). Therefore, the number of  $\mathrm{TiO_2}$  units in one monolayer  $(c_{TiO2}^{film})$  and in the film  $(c_{TiO2}^{film})$  can be found by Eqs. (10) and (11):
+
+$$
+c_{TiO_2}^{ml} = \frac{A_{Si}}{A_{TiO_2}} \tag{10}
+$$
+
+$$
+c_{TiO_2}^{film} = c_{ml}^{film}*c_{TiO_2}^{ml} \tag{11}
+$$
+
+As each  $\mathrm{TiO_2}$  unit contains one titanium,  $c_{TiO2}^{film}$  is equal to  $c_{\mathrm{fl}}^{film}$  Thus, the number of moles of titanium (mole) deposited in film,  $(n_{Ti}^{film})$  , and in each cycle,  $(n_{Ti}^{cy})$  , can be calculated by:
+
+$$
+n_{Ti}^{film} = \frac{c_{Ti}^{film}}{N_A} \tag{12}
+$$
+
+$$
+n_{Ti}^{cyc} = \frac{n_{Ti}^{film}}{c_{cyc}} \tag{13}
+$$
+
+$N_A$  in Eq. (12) is Avogadro's number. The adsorption capacity,  $q_{exp}$ $(\mathrm{mol} / \mathrm{g})$  and the mole fractions of titanium in the ASS phase,  $x_{Ti}^{*}$  can be found by Eqs. 14 and 15, respectively. In these equations, as the area, thickness, and density of the silicon is known, its mass  $(\mathrm{g}),(m_{si})$  , can be calculated. Similarly, multiplying the molecular weight  $(\mathrm{g / mol})$  of titanium by  $n_{Ti}^{film}$  results in its mass  $(\mathrm{g})$  in the film,  $(m_{Ti}^{film})$
+
+$$
+q_{exp} = \frac{n_{Ti}^{cyc}}{m_{Si} + m_{Ti}^{film}} \tag{14}
+$$
+
+$$
+x_{Ti}^{*} = \frac{n_{Ti}^{cyc}}{n_{Si} + n_{Ti}^{film}} \tag{15}
+$$
+
+In Eqs. (14) and (15),  $n_{Ti}^{cyc}$  is the number of moles of titanium, which is deposited in one cycle.
+
+The corresponding mole fractions in the bulk phase (precursor),  $x_{i}^{b}$  can be calculated from the number of moles of Ti remaining in the bulk phase. The pulse time (s), t and molar flow of gas (mole/ s),  $Q$  are used to calculate  $n_{Ti}^{b}$  from which the mole fraction in the bulk,  $x_{i}^{b}$  can be calculated as:
+
+$$
+n_{Ti}^b = x_{Ti}^b *Q*t - n_{Ti}^{cyc} \tag{16}
+$$
+
+where  $x_{Ti}^{b}$  is the mole fraction of Ti in the gas flow. The amount of precursor increases linearly with pulse time. Therefore, the mole fractions in the bulk phase for the precursor molecule (and not the inert gas) is multiplied by the pulse time as shown in Eq. (16) above.
+
+To derive the GCM, we apply the ASST for the adsorption for this problem. The ASST is a thermodynamic framework that describes the adsorption behavior of a fluid on a solid's surface. This theory incorporates the influence that functional groups in the adsorbent have on the adsorption process. Using the activity coefficients in the surface phase (Si surface) and the bulk phase, one may find the relationship between the phase equilibriums of each adsorbed component in the surface phase and the bulk phase. However, since we are considering chemisorption, we consider mole fractions of groups instead of components used in traditional UNIFAC based GCMs. The relation of this phase equilibrium for each component (group) is described in Eq. (17), as given in Berti et al. (Berti et al., 1999). It should be noted that we are presenting the ASST equation in terms of components as per the original reference. However, as stated earlier, in our case, we have used groups in the same way as components.
+
+# 2.2. Adsorbate-solid solution theory
+
+ASST is a thermodynamic framework introduced by Berti et al. (Berti et al., 1999). In ASST, the adsorbed phase is considered as a solution of solid (a mixture) containing the adsorbed species and the adsorbent as the additional component. The idea behind this theory is that the adsorbed phase is a hypothetical mixture of the adsorbate and the adsorbent (Fig. 3).
+
+In this theory, the activity coefficients of the adsorbed phase can be calculated using Excess Gibbs free energy models  $(G^{E}$  models), as shown in Eq. (17). Eq. (17) shows the relationship between the phase equilibrium of component  $i$  in surface and bulk phases in which the activity coefficient of that component in both phases has been used:
+
+$$
+x_{i}^{b}\gamma_{i}^{b} = x_{i}^{s}\gamma_{i}^{s}\exp \left(\frac{g^{ad} - g_{0i}^{ad}}{RTT_{mi}^{-s}}\right) \tag{12}
+$$
+
+![](images/7239ac64361f29523f4c078904f304789dcd36b468ad2e8ff048604bb16fb15e.jpg)  
+Fig. 3. (a) The total amount of fluid molecules is divided into two independent phases that are assumed to be homogeneous: the adsorbed or surface phase and the bulk phase. (b) The adsorbate solid solution is defined as the reference system, and the bulk phase is considered to be uninfluenced by the solid.
+
+where  $x_{i}^{b}$  and  $x_{i}^{s}$  are the mole fractions and  $\gamma_{i}^{b}$  and  $\gamma_{i}^{s}$  are the activity coefficient of component  $i$ , in the bulk and surface phase, respectively.  $g^{ad}$  and  $g_{0i}^{ad}$  are the free energy of immersion in the adsorbed solution and in the pure adsorbed species, respectively.  $R$  is the ideal gas constant,  $T$  is the absolute temperature, and  $\Gamma_{mi}^{s}$  is the surface phase capacity of component  $i$ .  $\Gamma_{mi}^{s}$  is calculated by Eq.18:
+
+$$
+\Gamma_{mi}^{s} = \frac{\nu_{p}}{\nu_{0i}} \tag{18}
+$$
+
+In which,  $\nu_{p}$  is the pore volume of the adsorbent and  $\nu_{0i}$  is the molar volume of the fluid.
+
+In the ASST system, we consider the effect of different structural and functional groups of the adsorbent on the adsorption behavior. Eq. (19) shows the relation of the phase equilibrium of group component  $i$  between bulk and Adsorbate Solid Solution (ASS) phases based on chemical potentials.
+
+$$
+x_{i}^{b}\gamma_{i}^{b} = x_{i}^{*}\gamma_{i}^{*}\exp (\frac{\phi^{*} - \phi_{0i}^{*}}{RT\Gamma_{mi}^{s}}) \tag{19}
+$$
+
+In this equation,  $x_{i}^{*}$  and  $\gamma_{i}^{*}$  are the mole fraction and the activity coefficient of component  $i$  in the ASS phase. The term  $(\phi^{*} - \phi_{0i}^{*})$  is the difference between the chemical potential of the adsorbent before and after adsorption happens. It can be calculated in term of Excess Gibbs energy, as well.
+
+$$
+\phi^{*} - \phi_{0i}^{*} = \frac{1}{M_{0}} (G^{E^{*}} - G^{Es} - G_{0i}^{E^{*}}) \tag{20}
+$$
+
+In Eq. (20),  $M_{0}$  is the molar mass of the adsorbent,  $G^{E^{*}},G^{Es}$  and  $G_{0i}^{E^{*}}$  are the excess Gibbs free energy of ASS phase, surface phase, and component  $i$ 's adsorption, respectively. All excess Gibbs free energies are estimated in Joules. To compute excess Gibbs free energy, it is more convenient to use the activity coefficient as in Eq. (21):
+
+$$
+\frac{G^{E^{*}}}{RT} = \sum_{i = 0}^{k}n_{i}^{*}\ln \gamma_{i}^{*} \tag{21}
+$$
+
+In the last equation,  $n_{i}^{*}$  is the molar quantity in the ASS phase, and index 0 refers to the adsorbent, and the activity coefficient can be computed using a UNIFAC model. The same method was also applied to solve for the activity coefficient in the surface phase  $(x_{i}^{s})$
+
+$$
+\frac{G^{Es}}{RT} = \sum_{i = 1}^{k}n_{i}^{s}\ln \gamma_{i}(x_{i}^{s}) \tag{22}
+$$
+
+where  $n_{i}^{s}$  is the number of moles of component  $i$  in the surface phase that is obtained by the following equation:
+
+$$
+n_i^s = x_i^s n_T^* (1 - x_0^*) \tag{23}
+$$
+
+In Eq. (23),  $x_{i}^{s}$  is the fraction of component  $i$  in the surface phase that is calculated using Eq. (24):
+
+$$
+x_{i}^{s} = \frac{x_{i}^{*}}{(1 - x_{0}^{*})} \tag{24}
+$$
+
+For the pure component adsorption, the excess Gibbs free energy  $G_{0i}^{E^{*}}$  is calculated using the activity coefficient for the adsorption of a pure component  $(\gamma_{0i}^{*})$  computed via Eq. (25):
+
+$$
+\gamma_{0i}^{*} = 1 + \frac{1}{\Gamma_{mi}^{s}M_{0}} \tag{25}
+$$
+
+# Modified UNIFAC model:
+
+This modified version of the UNIFAC model is used to compute the activity coefficient  $(\gamma_{i}^{*})$  as (Berti et al. (Berti et al., 1999)):
+
+$$
+\ln \gamma_{i}^{*} = \ln \gamma_{0i}^{*} + \ln \gamma_{GE,i}^{*} \tag{26}
+$$
+
+In Eq. (26),  $\gamma_{GE,i}^{*}$  is the part of the activity coefficient which depends on concentration and is divided into combinatorial  $(\gamma_{i}^{*})$  and residual  $(\gamma_{i}^{R^{*}})$  parts:
+
+$$
+\ln \gamma_{GE,i}^{*} = \ln \gamma_{i}^{C^{*}} + \ln \gamma_{i}^{R^{*}} \tag{27}
+$$
+
+Each of the combinatorial and residual parts is calculated by Eqs. (28) and (29), respectively:
+
+$$
+\ln \gamma_{i}^{C^{*}} = \ln \gamma_{GE,i}^{C^{*}}(x_{i}^{*}) - \ln \gamma_{GE,i}^{C^{*}}(x_{0i}^{*}) \tag{28}
+$$
+
+$$
+\ln \gamma_{i}^{R^{*}} = \ln \gamma_{GE,i}^{R^{*}}(x_{i}^{*}) - \ln \gamma_{GE,j}^{R^{*}}(x_{0i}^{*}) \tag{29}
+$$
+
+$\gamma_{GE,i}^{*}(x_{0i}^{*})$  is the activity coefficient of pure adsorbate and the adsorbent.
+
+# Activity coefficient for bulk phase and adsorbate solid solution phase:
+
+In order to estimate the activity coefficients in the bulk phase, the UNIFAC model has been applied. The UNIFAC model is divided into two parts: the combinatorial and the residual parts, which is shown in Eq. (30):
+
+$$
+\ln \gamma_{i}^{b} = \ln \gamma_{i}^{Cb} + \ln \gamma_{i}^{Rb} \tag{30}
+$$
+
+where  $\gamma_{i}^{Cb}$  and  $\gamma_{i}^{Rb}$  are the activity coefficients for the combinatorial part and residual part of the bulk phase, respectively. The combinatorial part can be calculated by:
+
+$$
+\ln \gamma_{i}^{Cb} = \ln \left(\frac{\phi_{i}}{x_{i}^{b}}\right) + 5q_{i}\ln \left(\frac{\theta_{i}}{\phi_{i}}\right) + l_{i} - \frac{\phi_{i}}{x_{i}^{b}}\sum_{j}x_{j}^{b}l_{j}\mathrm{i}\neq \mathrm{j} \tag{31}
+$$
+
+where
+
+$$
+\begin{array}{l}{l_i = 5(r_i - q_i) - (r_i - 1)}\\ {\theta_i = \frac{q_ix_i^b}{\sum_j^Mq_jx_j^b}}\\ {\phi_i = \frac{r_ix_i^b}{\sum_j^Mr_jx_j^b}} \end{array} \tag{32}
+$$
+
+In the latest equations,  $q_{i}$  and  $r_i$  are the parameters for van der Waals surface area and van der Waals radius of the component  $i$  and are calculated by Eqs. (35) and (36).  $\theta_{i}$  and  $\phi_{i}$  are the molecular surface area and volume fraction of component  $i$ , respectively, and  $j:1,2,..M$  represents the number of components.
+
+$$
+r_i = \sum_{g}^{N_{gt}}\theta^{\mathrm{i}}(i)R_g \tag{22}
+$$
+
+$$
+q_{i} = \sum_{g}^{N_{gt}}\theta_{g}^{(i)}Q_{g} \tag{23}
+$$
+
+Here,  $g$  is the group index, and it is from 1 to  $N_{gt}$ , which is the total functional groups of the molecule.  $R_{g}$  and  $Q_{g}$  are the constants representing van der Waals volume, and surface area and they are obtained from atomic and molecular structure data.
+
+For the residual part,
+
+$$
+\ln \Gamma_{g} = Q_{g}[1 - \ln \left(\sum_{1}^{m}\theta_{m}\Psi_{mg}\right) - \sum_{1}^{m}\frac{\theta_{m}\Psi_{gm}}{\sum_{1}^{n}\theta_{n}\Psi_{nm}} ] \tag{25}
+$$
+
+where  $m$  and  $n$  are representative of all functional groups.
+
+The group fraction  $(X_{m})$  and the surface area fraction  $(\theta_{m})$  are calculated using Eqs. (38) and (39), respectively:
+
+$$
+X_{m} = \frac{\sum_{i}^{j}\theta_{m}^{(i)}x_{j}^{b}}{\sum_{1}^{j}\sum_{i}^{n}\theta_{m}^{(i)}\lambda_{j}^{b}} \tag{26}
+$$
+
+$$
+\theta_{m} = \frac{Q_{m}X_{m}}{\sum_{1}^{n}Q_{n}X_{m}} \tag{39}
+$$
+
+The parameter  $\Psi_{nm}$  which is appeared in Eq. (37), is given by:
+
+$$
+\Psi_{nm} = \exp (-a_{nm} / T) \tag{40}
+$$
+
+where,  $a_{nm}$  is the group interaction parameters for the UNIFAC model, and  $T$  is the temperature in Kelvin. At the deposition temperature,  $T$ , the parameter  $\Psi_{nm}$  is estimated using the group interaction parameters and  $T$  to estimate the activity coefficient.
+
+# 2.3. CAMD for ALD precursor design
+
+The primary objective of this study is to design novel precursor materials for ALD, which results in enhanced deposition growth rate, shortening the overall deposition time. The growth rate  $(GR)$  (nm/cyc) is defined as the thickness of deposited thin film per cycle of deposition. It depends on the incident flux of the precursor and the sticking probability of the molecules. The property depends on adsorption temperature as well (Johnson et al., 2014). The growth rate can also be estimated from:
+
+$$
+\begin{array}{r}maxGR = \frac{n_i^*N_Ah_i}{c_i^{ml}}\\ k_g,T = \frac{c_i^{ml}}{c_i^{ml}} \end{array} \tag{41}
+$$
+
+where  $n_i^*$  is the moles of adsorbate (titanium) which are adsorbed on silicon in each cycle (moles/cyc),  $N_A$  is Avogadro's number (number of constituent particles/mole),  $h_i$  is the thickness of each adsorbate (nm), and  $c_i^{ml}$  is the number of adsorbates in monolayer. A large value of  $GR$  will be due to a large value for  $n_i^*$ , indicating a higher amount of adsorbate has been adsorbed on the substrate. Thus, maximizing the growth rate will result in reducing the deposition time when the specific film thickness is desired. The objective function in Eq. (41) is subject to a set of linear and nonlinear equality and inequality constraints, including material balance, bounds for the decision variables, structural feasibility, and thermodynamic equilibrium (as described above). Here, the decision variables, represented by  $k_g$ , are the number of times each functional group  $(g)$  appears in the precursor molecule, and the process temperature,  $T$ . In this work, we are using three functional groups (N,  $\mathrm{CH}_2$  and  $\mathrm{CH}_3$ ) obtained from two different precursors, TDMAT and TDEAT, the interaction parameters of which are obtained in the first part of this paper.
+
+Eqs. (42) and (43) represent the constraints for mole fractions in bulk and ASS phases, respectively.
+
+$$
+0\leq x_i^b\leq 1\quad \forall i\in [1\ldots 4] \tag{42}
+$$
+
+$$
+0\leq x_i^* \leq 1\quad \forall i\in [0\text{and} 1] \tag{43}
+$$
+
+Eq. (44) corresponds to the non- negativity of the growth rate  $(D_I^*)$ . The deposition rate parameter itself can be computed by Eq. (45).
+
+$$
+\begin{array}{l}{D_1^*\geq 0}\\ {}\\ {D_1^* = \frac{n_1^*}{m_T^*}} \end{array} \tag{44}
+$$
+
+In which,  $m_{T}^{*}(g)$  is the total mass, including the mass of silicon substrate and the mass of adsorbed titanium.
+
+Eq. (46) displays the molar balance constraints in which the entering moles have to be equal or greater than the sum of the moles depositing on the substrate and the moles staying in the bulk phase after equilibrium.
+
+$$
+n_{T}^{1} - (n_{T}^{*} + n_{T}^{b})\geq 0 \tag{46}
+$$
+
+And Eq. (47) represents the constraints for the total number of moles in the bulk phase that lies between no adsorption to total adsorption of all moles entering the ALD chamber:
+
+$$
+0\leq n_T^b\leq n_T^1 \tag{40}
+$$
+
+To make sure the thermodynamic equilibrium is satisfied, Eq. (48) is applied in which tol stands for tolerance and is set to  $10^{- 8}$ . The calculation of each term in Eq. (48) are described in detail in the first part of this paper (Eq. (19)). It is worth mentioning that  $T_{mi}$  is the surface phase capacity of the substrate (silicon).
+
+$$
+\left|x_i^b\gamma_i^b -x_i^*\gamma_i^*\exp \left(\frac{\phi^* - \phi_{0i}^*}{RT\Gamma_{mi}^s}\right)\right|\leq tol \tag{48}
+$$
+
+Eq. (49) represents the structural feasibility constraint which determines the structure of the molecule.
+
+$$
+\sum_{g = 1}^{N_{gt}}Val(k_g)*k_g = 0 \tag{49}
+$$
+
+$$
+0\leq k_g\leq 20\quad \forall g\in integer[1\dots 3] \tag{50}
+$$
+
+In Eq. (49), Val  $(k_g)$  is the valence of each group while  $k_g$  is the number of times each group appears in the newly designed molecule of the precursor, and  $N_{gt}$  is the total number of functional groups used. Table 1 shows the valence of each group used to predict new precursors. Since  $\mathrm{CH}_2$  always appears with  $\mathrm{CH}_3$ , the valence of  $\mathrm{CH}_2$  is not considered independently in this work. Eq. (50) shows the boundaries for  $k_g$  as a discrete variable which may vary between 0 and 20, i.e., each functional group can appear a maximum of twenty times or it may not appear at all. The index  $g$  represents the functional groups, which are between 1 and 3, according to the three groups: N,  $\mathrm{CH}_2$ , and  $\mathrm{CH}_3$ . Therefore, the three functional groups, each of them may appear up to a maximum of 20 times with different combinations to produce novel precursor molecules. The general structure of the candidate molecule will be according to:
+
+$$
+(N)_{k_1}(CH_2)_{k_2}(CH_3)_{k_3}
+$$
+
+Each of these candidate structures is screened for structural feasibility as in Eq. (49).
+
+# 2.4. Solution method for ALD precursor design
+
+The precursor design problem is formulated as a mixed integer nonlinear programming (MINLP) problem seeking to maximize the growth rate in ALD subject to the constraints mentioned in Section 2.3. The MINLP problem is solved by a novel metaheuristic optimization algorithm called Efficient Ant Colony Optimization (EACO). The solution strategy which combines the EACO algorithm and CAMD is presented in this section. Fig. 4 shows the solution strategy in which the EACO algorithm generates new precursor molecules from the functional groups, while CAMD predicts the properties of the molecules.
+
+# EACO for precursor molecule generation
+
+The precursor design is an MINLP problem that is a non- convex in nature which challenges the derivative- based methods. However, a metaheuristic optimization strategy such as genetic algorithm, simulated annealing, or ant colony optimization is
+
+Table 1 Valences of each group.  
+
+<table><tr><td>Group</td><td>Ti</td><td>N</td><td>CH2</td><td>CH3</td></tr><tr><td>Valence</td><td>+4</td><td>-3</td><td>0</td><td>+1</td></tr></table>
+
+![](images/1fb79c6a2f37cf08cf0929c320370b51e60df7834e7ced87ed2e513355b3b71c.jpg)  
+Fig. 4. The solution strategy for the ALD precursor design problem.
+
+found to be appropriate for the problem (Dorigo, 1992; Holland, 1992; Kirkpatrick et al., 1983). The ant colony optimization (ACO) algorithm is a probabilistic technique initially proposed by Dorigo (Dorigo, 1992; Dorigo and Di Caro, 1999). The inspiration for this metaheuristic optimization method was the foraging behavior of the real ants where the cooperation of some simple, independent, and asynchronous agents results in finding a good solution to a problem at hand. Real ants randomly look for food in the vicinity of their nests, and if one of them locates a food source, on the way back to the nest, it releases a chemical substance named pheromone. The pheromone will act as an indirect way of communication between ants since it attracts the other members of the colony to follow the same path. As the pheromone will evaporate over time, only the routes that were used more frequently will remain attractive due to a higher concentration of pheromone. Pheromone evaporation has an advantage that the unfavorable routes will be forgotten over time, and this reduces the chance of finding a locally optimal solution. Therefore, the shorter the routes, the more attractive they are for the ants, and these routes will have higher concentrations of pheromone than longer paths. Consequently, more ants will be attracted to the shorter routes in the future, and the ant colony will hopefully discover the shortest path.
+
+A similar mechanism is implied by the ACO algorithm to solve optimization problems. In ACO algorithms, artificial ants as the stochastic candidate for solution construction procedures utilize a pheromone model and possibly available heuristic information of the mathematical model. The only way of communication among the artificial ants is the artificial pheromone trails (i.e., numeric values). A similar mechanism to the evaporation of the pheromone trail of the real ants would be pheromone decay, which allows the artificial ants to forget the past history and focus on new promising search directions. According to the information learned in the preceding iteration, the pheromone values are updated and leads to very good and, hopefully, a globally optimal solution. Diwekar and Gebreslassie (Diwekar and Gebreslassie, 2016; Gebreslassie and Diwekar, 2015) derived a new variant of ant colony optimization called EACO, which is used in this work to solve the combinatorial problem of designing novel precursors for ALD. In EACO, a better  $n$ - dimensional uniformity property of Hammersley Sequence Sampling (HSS) is used to generate the random numbers, which improves the performance of the conventional ACO algorithm for combinatorial, continuous, and mixed variable optimization problems (Diwekar and Ules, 2000). The major steps in EACO algorithm, used to solve the ALD precursor design problem, is shown in Table 1 and the algorithm proposed in this work that combines CAMD and EACO algorithm is shown in Fig. 4.
+
+As displayed in Fig. 4, the algorithm parameters, the functional groups as building blocks, and their properties such as volume and surface area parameters, and the UNIFAC interaction parameters between the components (functional groups) as obtained in the first part of this paper series are first introduced. The problem of CAMD involves finding an optimal combination of numbers for each group combined to form a precursor molecule and temperature of the process to enhance the growth rate. The step involves selecting the number for each group and the temperature to generate the precursor molecules. Once the precursor molecule is generated, the CAMD predicts the precursor properties, such as the activity coefficients and the growth rate. Then, the predicted properties are examined by molar balance equations, constraints, and thermodynamic conditions. If the optimal criterion is satisfied, the generated precursor molecule is a candidate precursor; otherwise, another molecule is generated by another possible combination of the functional groups.
+
+The EACO solver used to optimize the precursor design problem is shown in Table 2. The program needs an initial set of parameters as following: number of Ants (nAnts), size of the solution archive (ks), number of continuous (NC), and discrete decision variables (ND), the pheromone evaporation factor  $(\rho)$ , an ACO algorithm parameter  $(q)$ , and the termination criteria. The termination criteria are the maximum number of iterations (MAXITER), the maximum number of consecutive iterations with no improvement of the objective function (CONITER), and tolerance (EPS). The solution archive (SArc) is initiated using the HSS technique, which has a dimension of  $ks$  by the number of decision variables (NDIM). The objective function is evaluated with the solution archive. The quality of the objective, as obtained from each solution in the archive, is used to rank them. A Gaussian function is used to determine the weight of each solution according to their rank in the solution archive. The termination criteria are tested in the second part of the algorithm. If the termination criteria are not satisfied, an ant selects one of the solutions in the solution archive probabilistically as a solution construction guide. The solution guide is selected by comparing the probability value of the selected solution and a random number. If the probability value of the selected solution is greater or equal to the random number, the solution is selected as the solution guide to generate a new solution. All ants generate new solutions using this solution guide. The solution construction is accomplished in an incremental manner, variable by variable. For each decision variable, a new solution is generated by sampling a Gaussian Kernel generated from the mean and standard deviation of the selected solution guide. The objective function is evaluated from the new solution. In the next step, the new solutions are
+
+Table 2 Summary of EACO algorithm (Diwekar and Gebreslassie, 2016; Gebreslassie and Diwekar, 2015).
+
+a.Start program Set initial parameters (i.e., ks, nAnts, NC, ND, p, q) and termination criteria Initialize solution archive (SArc (ks, NDIM)) using HSS Combine and evaluate the objective function of the k solutions Rank solutions based on the quality of the objective function  $\mathrm{(SArc = Rank(S_1,\ldots,S_{ks}))}$  Evaluate the weight of each solution based on rank b.While the termination criterion is not satisfied Generate solutions equivalent to the number of ants For all # nAnts Incremental solution construction For all # NDIM  $\bigcirc$  Probabilistically construct discrete decision variables  $\bigcirc$  Probabilistically construct continuous decision variables End for # NDIM Store and evaluate the objective function value of the newly generated solutions End for # nAnts Combine, rank and select the best k solutions, SArc  $=$  Best (rank  $(S_{1}\dots S_{\mathrm{k}s + \mathrm{nAnt}}),\mathrm{ks})$  Update nAnts) End while End program
+
+stored along with the solution archive from the previous steps. The new combined solution is sorted by the quality of objective values, and the best ks solutions are selected. This updating is similar to the pheromone value update where the artificial ants are moving towards the best solution possible. Finally, the solution is updated by comparing the best solution so far, and the best solution from the updated solution archive. The second part (b in Table 2) continues until one of the stopping criteria is satisfied.
+
+The precursor design problem includes equality and inequality constraints, as shown in the problem formulation. The EACO algorithm used in this work implements these constraints through an oracle penalty method introduced by Schluter et al. (Schluter et al., 2009). Oracle penalty method is a generalized technique that can handle formidable constrained optimization problem that can be difficult to implement otherwise. In this method, the objective function is first transformed into an equality constraint and making the original objective function inessential. In this way, minimizing the original equality and inequality constraints and that of the new constraint from the objective become comparable. A penalty function is created by using the comparable property of the two. In some cases, the penalty function is created by a weighted sum of original objective function and constraints. In this way, the penalty function balances its penalty weight between the transformed objective function and constraint violation. This penalty function becomes the new objective function. Because of its simplicity, the oracle penalty function is used extensively. An example of the implementation of the oracle penalty function can be found in a study by Schluter and Gerdts (Schluter and Gerdts, 2010).
+
+# Optimization for interaction parameters
+
+CAMD is used to design new materials having specific properties. In CAMD, new molecules are developed by selecting a combination of functional groups (Gani et al., 1991). In the present work, our goal is to develop novel precursors for ALD. However, CAMD requires the properties of the functional groups. Based on experimental data from four different ALD systems (Section 3), the UNIFAC interaction parameters of the functional groups  $(ab_{nm}$  and  $aa_{nm})$ , which are not found in literature, are obtained using EACO algorithm. The values of interaction parameters are estimated by minimizing the objective function, which is an error function $(Err)$  that estimates the difference between experimental and theoretical values.
+
+In the present problem, the Err is estimated by finding the difference between  $GR_{exp}$  and  $GR_{calc}$ . For each ALD system, the error function is minimized, separately. Since the interaction parameters are determined to be the decision variables in the model, their accuracy is proved by the agreement of  $GR_{exp}$  and  $GR_{calc}$ .
+
+As displayed in Fig. 5, we use EACO algorithm to minimize the sum of the errors between the  $GR_{exp}$  and  $GR_{calc}$ . The expression is shown by Eq. (51):
+
+$$
+minErr = min\sum_{\mathrm{I}}^{Eq}\left[\left(GR_{calc} - GR_{exp}\right)^2\right] \tag{51}
+$$
+
+where Eq is the number of data points used to solve the problem. In the present work, around 8- 15 data points are used for each ALD problem depending on the saturation curve. In Eq. (51),  $GR_{calc}$  is the calculated growth that can be estimated by Eq. (41).
+
+The group interaction parameters measure the difference between the energy of interaction of two groups, here, m and n or two same groups, m and m (Fredenslund, 2012; Fredenslund et al., 1977). If two groups are the same, this difference would be zero. Moreover, the interaction parameters between the functional groups on the adsorbent is equal to zero (Berti et al., 1999). Thus, the interaction parameters in the ASS phase have only been considered between the adsorbate and the adsorbent. Also, the interaction parameters between each group with inert gas have been assumed to be zero as inert gas acts as the carrier gas, and it does not react with the functional groups.
+
+# 2.5. Validation of results
+
+From the optimal values of the interaction parameters, the growth rates have been computed theoretically  $(GR_{calc})$  as given in Eq. (41) and compared to the experimental growth rates  $(GR_{exp})$  for all the four materials used in this work. The  $\mathbb{R}^2$  values have been calculated by Eq. (52) to further compare the calculated growth rates to the experimental growth rates.
+
+$$
+R^2 = 1 - \frac{\sum Err^2}{\sum_{i = 1}^{n}\left(GR_{exp}^{(i)} - GR_{exp}^{ave}\right)^2} \tag{52}
+$$
+
+where  $n$  is the number of data points and  $GR_{exp}^{ave}$  is the average of experimental growth rates.
+
+# 3. Case studies
+
+As mentioned before, the case studies are conducted with four ALD experiments that have used TDMAT, TDEAT, tetrakis (diethylamino) hafnium (TDEAH), and tetrakis (ethylmethylamino) hafnium (TEMAH) as precursor materials. Each precursor material is divided into functional groups and their interaction parameters with the substrate and with each other are obtained using optimization theory. Details about the experiments and the functional groups are given below.
+
+# 3.1. TDMAT
+
+The first experimental data used in the present work, has been obtained from a paper by Xie et al. (Xie et al., 2007). They used tetrakis (dimethylamido) titanium (TDMAT) as the precursor and water vapor as the co- reactant to deposit  $\mathrm{TiO_2}$  on silicon and argon as the carrier gas. The TDMAT bubbler was heated to  $30^{\circ}\mathrm{C}$ , and the temperature of the reactor was  $50^{\circ}\mathrm{C}$ . They provided thickness versus precursor pulse time, and the thickness can be related to the growth rate by dividing thickness by the number of cycles. To
+
+![](images/998f250242048bb58bf7c1bf8be567a047c467a05a441025968868f5a2d5aeb6.jpg)  
+Fig. 5. Solution strategy applied for optimal interaction parameter selection using the EACO algorithm.
+
+apply the GCM, each TDMAT molecule  $\mathrm{(Ti(N(CH_3)_2)_4)}$  was divided into three functional groups: titanium, nitrogen, and methyl groups. The number of times the functional groups appear in a precursor molecule are: 1, 4, and 8 for titanium, nitrogen, and methyl, respectively. Along with the precursor, argon as the carrier gas also appears in the bulk phase. The UNIFAC interaction parameters in the bulk and the ASS phases have been shown in Tables 3 and 4 and, respectively.
+
+# 3.2. TDEAT
+
+Selvaraj et al. (Selvaraj et al., 2013) deposited  $\mathrm{TiO_2}$  using TDEAT as a precursor and provided the change of growth rate by changing precursor pulse time. Si (100), used as the substrate, was cut into  $2\mathrm{cm}\times 2\mathrm{cm}$  pieces. They used nitrogen as the carrier gas and water vapor as the co- reactant. The pressure and temperature of the reactor were 0.5 Torr and  $200^{\circ}C$ , respectively. The TDEAT bubbler temperature was kept at  $65^{\circ}C$ , and the bubbler pressure was 10 Torr (Xu, 2013). The molecular structure of TDEAT  $\mathrm{(Ti(N(CH_2 - CH_3)_2)_4)}$  is similar to TDMAT, and the only difference between them is that TDEAT has eight methylene groups. Therefore, the interaction parameters for titanium, nitrogen, and methyl group predicted from TDMAT may be used for TDEAT as well (Gonzalez et al., 2007). Table 5 shows the interaction parameters of the functional groups of TDEAT. As seen in Table 5, some of the required interaction parameters have been calculated in the case study (1) since some of the groups are similar to those of TDMAT (i.e.,  $\mathrm{ab_{12}}$ ,  $\mathrm{ab_{13}}$ ,  $\mathrm{ab_{21}}$ ,  $\mathrm{ab_{23}}$ ,  $\mathrm{ab_{31}}$ ,  $\mathrm{ab_{32}}$ ). The indexes have not been changed since the interaction parameters found for TDMAT can be used here. Table 4 shows the interaction parameters between titanium and silicon, which is applicable for this case study, as well.
+
+Table 3 UNIFAC interaction parameters  $(\mathrm{ab}_{\mathrm{nm}})$  for the bulk phase, TDMAT.  
+
+<table><tr><td>Groups</td><td>Ti</td><td>N</td><td>CH3</td><td>Ar</td></tr><tr><td>Ti</td><td>0</td><td>ab12</td><td>ab13</td><td>0</td></tr><tr><td>N</td><td>ab21</td><td>0</td><td>ab23</td><td>0</td></tr><tr><td>CH3</td><td>ab31</td><td>ab32</td><td>0</td><td>0</td></tr><tr><td>Ar</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>
+
+Table 4 UNIFAC interaction parameters  $(\mathrm{aann})$  for the ASS phase, TDEAT.  
+
+<table><tr><td>Groups</td><td>Ti</td><td>Si</td></tr><tr><td>Ti</td><td>0</td><td>aa12</td></tr><tr><td>Si</td><td>aa21</td><td>0</td></tr></table>
+
+# 3.3. TDEAH
+
+The third precursor studied in this work is TDEAH. The growth rate vs. precursor pulse time was provided by Deshpande et al. (Deshpande et al., 2004) that deposited  $\mathrm{HfO_2}$  on silicon using TDEAH precursor and water vapor as the co- reactant. Their carrier gas was argon, and the substrates were cut into  $2.5\mathrm{cm}\times 2.5\mathrm{cm}$ . The reactor temperature and pressure have been reported as  $300^{\circ}C$ , and 0.5 Torr, respectively, and the bubbler temperature was  $70^{\circ}C$  (Kragh et al., 2008). If the molecular structure of TDEAH  $\mathrm{(Hf(N(CH_2CH_3)_2)_4)}$  is compared with TDEAT, it can be easily seen that the only atom, which is different, is haftnium. Most of the
+
+Table 5 UNIFAC interaction parameters  $(\mathsf{ab}_{\mathsf{nm}})$  for the bulk phase, TDEAT.  
+
+<table><tr><td>Groups</td><td>Ti</td><td>N</td><td>CH3</td><td>CH2</td><td>N2</td></tr><tr><td>Ti</td><td>0</td><td>aa12</td><td>ab13</td><td>ab14</td><td>0</td></tr><tr><td>N</td><td>ab21</td><td>0</td><td>ab23</td><td>ab24</td><td>0</td></tr><tr><td>CH3</td><td>ab31</td><td>aa32</td><td>0</td><td>ab34</td><td>0</td></tr><tr><td>CH2</td><td>ab41</td><td>aa42</td><td>ab43</td><td>0</td><td>0</td></tr><tr><td>N2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>
+
+interaction parameters are common with the ones that were computed for TDEAT and are used here.
+
+The interaction parameters for TDEAH are shown in Tables 6 and 7 for the bulk and the ASS phases, respectively. The indexes contain zero to be differentiated from the ones for previous precursors. There is a total of six unknown values in the bulk phase (i.e.,  $\mathsf{ab}_{02}$ $\mathsf{ab}_{03}$ $\mathsf{ab}_{04}$ $\mathsf{ab}_{20}$ $\mathsf{ab}_{30}$ $\mathsf{ab}_{40}$  ) and two in the ASS phase (i.e.,  $\mathsf{aa}_{02}$ $\mathsf{aa}_{20}$  ) that are unique in TDEAH and are necessary to be found using optimization.
+
+# 3.4.TEMAH
+
+3.4. TEMAHThe last precursor studied here is TEMAH. Liu et al. (Liu et al., 2005) used TEMAH as the precursor to deposit  $\mathrm{HfO_2}$  on silicon, and the saturation curve of growth rate versus precursor pulse time has been provided in their paper. The bubbler and reactor temperature were  $80^{\circ}C$  and  $250^{\circ}C$  respectively, and the reactor pressure was 0.5 Torr. Using the Antoine constants, one is able to find the vapor pressure of TEMAH (Rushworth et al., 2005). The functional groups of TEMAH are similar to TDEAH, and its molecular structure is  $\mathrm{Hf(N(CH_3(C_2H_5))_4}$  . The only difference between TEMAH and TDEAH are the number of methylene groups. To study this precursor, we were able to use the UNIFAC interaction parameters, which are found for TDEAH and the only change was the number of times the methylene groups are appearing in the precursor.
+
+# 4.Results and discussions
+
+# 4.1. Estimation of interaction parameters with GCM by minimizing the error
+
+The interaction parameter optimization problem is solved using the EACO algorithm as given in Gebreslassie and Diwekar (Gebreslassie and Diwekar, 2015). The algorithm terminates if it reaches the maximum number of iterations  $(MAXITER = 3000)$  or if the tolerance  $(EPS = 1E - 6)$  which is the relative difference between the solutions found in two consecutive iterations, is lower than or equal to the parameter EPS for a set of a consecutive number of iterations  $(CONITER = 200)$  . The parameters used in the EACO algorithm are the solution archive size  $K_{s} = 50$  number of ants nAnts  $= 10$ $\mathrm{q} = 1\mathrm{E} - 5$  and pheromone evaporation parameter  $\rho = 0.85$  . The main results are given below.
+
+Table 6 UNIFAC interaction parameters  $(\mathsf{ab}_{\mathsf{nm}})$  for the bulk phase, TDEAH.  
+
+<table><tr><td>Groups</td><td>Hf</td><td>N</td><td>CH3</td><td>CH2</td><td>Ar</td></tr><tr><td>Hf</td><td>0</td><td>aa02</td><td>ab03</td><td>ab04</td><td>0</td></tr><tr><td>N</td><td>ab20</td><td>0</td><td>ab23</td><td>ab24</td><td>0</td></tr><tr><td>CH3</td><td>ab30</td><td>aa32</td><td>0</td><td>ab34</td><td>0</td></tr><tr><td>CH2</td><td>ab40</td><td>aa42</td><td>ab43</td><td>0</td><td>0</td></tr><tr><td>Ar</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>
+
+Table 7 UNIFAC interaction parameters  $(\mathsf{a}\mathsf{a}\mathsf{n}_{\mathsf{m}})$  for the ASS phase, TDEAH.  
+
+<table><tr><td>Groups</td><td>Hf</td><td>Si</td></tr><tr><td>Hf</td><td>0</td><td>aa02</td></tr><tr><td>Si</td><td>aa20</td><td>0</td></tr></table>
+
+The different structural and functional groups from TDEAT, TDMAT, TDEAH, and TEMAH have been identified. Table 8 gives the functional groups and their van der Waals volume  $(\mathbf{m}^3)$ $(Rg)$  and surface area  $(\mathbf{m}^2)$ $(Qg)$  values. Appendix A in Supplementary Information shows how these values are calculated.
+
+The resulting optimal interaction parameters for each precursor and between all the functional groups in the bulk phase and the ASS phase are shown in Tables 9 and 10. As mentioned before, the interaction parameters have been computed using the GCM for four different precursors: TDEAT, TDMAT, TDEAH, and TEMAH. The objective function value ranges from  $10^{- 6} - 10^{- 3}$
+
+The isotherms of theoretical and experimental growth rates versus precursor pulse times are shown in Figs. 6- 9 for TDMAT, TDEAT, TDEAH, and TEMAH, respectively. For TDMAT and TDEAT, since there were not enough data points before saturation, we interpolated the experimental points. The  $\mathbb{R}^2$  values for each material are also presented. It has been found that the  $\mathbb{R}^2$  value for TDMAT, the first compound, is 0.85. The quality of fit increased for the rest of the compounds, where the interaction parameters for some of the groups obtained from other precursor materials are used. For example, the functional groups of precursors TDMAT are Ti, N and  $\mathbb{C}\mathbb{H}_3$  whereas that of TDEAT is Ti, N,  $\mathbb{C}\mathbb{H}_2$  and  $\mathbb{C}\mathbb{H}_3$  Thus, the interaction parameters of Ti, N, and  $\mathbb{C}\mathbb{H}_3$  with each other obtained from the simulation of growth rate from TDMAT is used for TDEAT. The  $\mathbb{R}^2$  value for TDEAT is 0.99, suggesting the usefulness of using properties of the functional group estimated from one system to another.
+
+The  $\mathbb{R}^2$  value for TDEAH and TEMAH is 0.93. TDEAH uses interaction parameters between N,  $\mathbb{C}\mathbb{H}_2$  and  $\mathbb{C}\mathbb{H}_3$  estimated from simulating growth rate from both TDMAT and TDEAT. In fact, all the interaction parameters used for the growth rates for TEMAH are calculated using the interaction parameters obtained from TDMAT, TDEAT, and TDEAH without conducting any simulation. Low error functions and  $\mathbb{R}^2$  values close to one indicate that the values of  $GR_{calc}$  are close to  $GR_{exp}$  which displays a good agreement between estimated values of growth rates and experimental data. The use of group interaction parameters calculated from one precursor for other precursors for predicting thermodynamically complex phenomena like growth rate shows that the group contribution method is useful for property estimation of any material having the same functional group.
+
+# 4.2. Results from the design of ALD titanium precursors using CAMD
+
+The new precursors are created with three functional groups (N,  $\mathrm{CH}_2$ $\mathrm{CH}_3$  coming from two different precursors, TDMAT and TDEAT. As mentioned in Section 2, the goal was to find the optimal combination of the functional groups that will maximize the
+
+Table 8 Van der Waals volume  $(\mathbb{R}\mathbb{g})$  and surface area  $(Qg)$  of each functional group.  
+
+<table><tr><td>Group</td><td>Rg (m3)</td><td>Qg (m2)</td></tr><tr><td>Si</td><td>1.1622</td><td>0.3351</td></tr><tr><td>Ti</td><td>1.6528</td><td>0.3498</td></tr><tr><td>Hf</td><td>1.496</td><td>0.3274</td></tr><tr><td>N</td><td>0.6193</td><td>0.1818</td></tr><tr><td>CH3</td><td>0.9011</td><td>0.848</td></tr><tr><td>CH2</td><td>0.6744</td><td>0.54</td></tr><tr><td>N2</td><td>0.6812</td><td>0.1936</td></tr><tr><td>Ar</td><td>1.105</td><td>0.2675</td></tr></table>
+
+Table 9 Calculated UNIFAC interaction parameters in the bulk phase.  
+
+<table><tr><td>Groups</td><td>Ti</td><td>Hf</td><td>N</td><td>CH3</td><td>CH2</td><td>N2</td><td>Ar</td></tr><tr><td>Ti</td><td>0</td><td>N/A</td><td>-613.9</td><td>2030.8</td><td>-968.9</td><td>0</td><td>0</td></tr><tr><td>Hf</td><td>N/A</td><td>0</td><td>6239.30</td><td>3859.6</td><td>-1177.39</td><td>0</td><td>0</td></tr><tr><td>N</td><td>-3181.5</td><td>4308.12</td><td>0</td><td>-1.96e05</td><td>15169.17</td><td>0</td><td>0</td></tr><tr><td>CH3</td><td>-5772.7</td><td>3307.80</td><td>3562.9</td><td>0</td><td>16648.73</td><td>0</td><td>0</td></tr><tr><td>CH2</td><td>-10044.1</td><td>-9864.72</td><td>18222.55</td><td>4884.35</td><td>0</td><td>0</td><td>0</td></tr><tr><td>N2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Ar</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>
+
+Table 10 Calculated UNIFAC interaction parameters in the ASS phase.  
+
+<table><tr><td>Groups</td><td>Ti</td><td>Hf</td><td>Si</td></tr><tr><td>Ti</td><td>0</td><td>N/A</td><td>-178.61</td></tr><tr><td>Hf</td><td>N/A</td><td>0</td><td>10757.12</td></tr><tr><td>Si</td><td>6428.9</td><td>11276.49</td><td>0</td></tr></table>
+
+growth rate given in Eq. (41). There were three discrete and two continuous variables used in EACO of the precursor design problem. The discrete variables are the number of times each functional group (i.e., N,  $\mathrm{CH}_2$ ,  $\mathrm{CH}_3$ ) may appear in the newly designed precursor, and the continuous variables refer to the moles of titanium that will be retained in the bulk phase after equilibrium as well as deposition temperature. Since the configuration of the designed molecule that dictates the amount adsorbed is not known a priori, we have used the number of moles remained in the bulk phase after ALD as a decision variable instead of the initial number of moles. For the initial number of moles, a fixed value of precursor per liter of the inlet feed (0.00039 mol of precursor\*pulse time/ Liter) is used for our analysis. All calculations are performed on a substrate weight of  $0.65\mathrm{g}$ . At each iteration, we started with the given number of initial moles. From the number of moles adsorbed at equilibrium, we select a subset of functional groups and temperature and ensure that the thermodynamic equilibrium of adsorption process (Eq. (48)) is satisfied within a tolerance. Each of the three functional groups is allowed to appear up to a maximum of 20 times. The search space is composed of 8000 (i.e.,  $20^{3}$  possible combinations. With temperature as a continuous decision variable, the search space increases exponentially. The algorithm is shown in Table 2. It terminates if it reaches the maximum number of iterations  $(MAXITER = 3000)$  , or if the tolerance  $(EPS = 1\mathrm{E - 10})$  , that is, the difference between solutions in two consecutive iterations is less than or equals to EPS or equals to EPS for a consecutive number of iterations  $(CONITER = 50)$  .The parameters used for the EACO algorithm are solution archive size  $(Ks = 50)$  number of ants  $(nAnts = 200)$  pheromone evaporation  $(\rho = 0.85)$  algorithm parameter  $(q = 1\mathrm{e} - 3)$  and Oracle  $(\Omega = 1\mathrm{e} - 2)$
+
+Through CAMD, the algorithm generated 41 unique optimal combinations. The structural integrity of the designed precursor is confirmed by controlling the net valency in the molecule. The parameters used for this simulation are the maximum number of times each functional group can be present in the optimally designed precursor, as well as the deposition temperature. From the Forty- one unique molecules, we present the top 10 here (Table 11), and they are ranked based on the maximum growth rate. Besides the growth rate, the penalty function, the optimized deposition temperature corresponding to each molecule, molecular formula, and a suggested structure of the designed precursors are shown in Table 11. The highest growth rate (1.65 Å/cycle) is obtained for a molecule with 1 Ti atom, 8 N, 20 CH2, and 20 CH3 groups at a deposition temperature of  $327^{\circ}\mathrm{C}$ . Since the precursors are in the gas phase, the predicted structures can be the combination of molecules. For instance, in the case of
+
+# TDMAT
+
+![](images/ba3e1c95d0716c3342ec87a2f663f73181f30a7a058049bfd128cb0866a714c2.jpg)  
+Fig.6. the experimental growth rate in which deposition was carried out at  $50^{\circ}C$  substrate temperature using  $3s$  water vapor pulse (Xie et al., 2007). (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of the article.)
+
+![](images/3fd29ffa57d9d8932f23467b160eae0ebde636e856365b6cfdee4b4dfca23267.jpg)  
+Fig.7. t t t references to colour in this figure legend, the reader is referred to the web version of this article.)
+
+![](images/9403d195b11275eca0b98aa01da719f9a79f29cc1b4d2bd8446ddf166260e4d8.jpg)  
+Fig.8. of the references to colour in this figure legend, the reader is referred to the web version of this article.)
+
+$\mathrm{TiN_8(CH_2)_{20}(CH_3)_{20}}$  the combination of TDEAT and  $[\mathrm{N}(\mathrm{Et})_3]_4$  would be the proposed structure, which results in higher growth rate than TDEAT.
+
+The designed precursor molecules are compared to some of the existing precursors. Some of the commonly used precursors to deposit  $\mathrm{TiO_2}$  by ALD are as following:
+
+- TDMAT;- TDEAT;- Tetrakis(ethylmethylamino)titanium(IV) (TEMAT);- Titanium(IV) isopropoxide (TTIP);- Titanium tetrachloride (TiCl4).
+
+The properties of the above- mentioned precursors, along with some examples of less common titanium precursors, are summarized in Table 12, and some example references have been cited. Some precursors can be used along with both  $\mathrm{O_3}$  and water vapor as the oxygen source (Katamreddy et al., 2008). The precursor saturation dose is different depending on which oxygen source is used, and it may result in different growth rates as well (Kim and Kim, 2012). The precursor saturation dose and the growth rate for both oxygen sources are included in Table 12, where the first number in each column is related to the first oxygen source, and the second number separated by a comma is related to the second oxygen source. Katamreddy et al. (Katamreddy et al., 2009) have
+
+![](images/fe23bdb134525d5e7b2062e332a28ef8f316b12c99391a2108107583090dcdba.jpg)  
+Fig.9. t t references to colour in this figure legend, the reader is referred to the web version of this article.)
+
+Table 11 The properties of optimal precursor materials designed for ALD.  
+
+<table><tr><td>Rank</td><td>Growth rate (Å/cycle)</td><td>Penalty function</td><td>Deposition temperature (°C)</td><td>Molecular formula</td><td>Suggested structure</td></tr><tr><td>1</td><td>1.6532</td><td>-0.175</td><td>327</td><td>TiN4(CH2)2(CH3)20</td><td>TDEAT + [N(Et3)4]</td></tr><tr><td>2</td><td>1.6395</td><td>-0.174</td><td>327</td><td>TiN8(CH2)16(CH3)20</td><td>TDEAT + [NMe(Et)2]4</td></tr><tr><td>3</td><td>1.6244</td><td>-0.172</td><td>327</td><td>TiN6(CH2)20(CH3)14</td><td>TDEAT + [N(Pr)3]2</td></tr><tr><td>4</td><td>1.6090</td><td>-0.171</td><td>327</td><td>TiN5(CH2)20(CH3)11</td><td>TDEAT + N(Pr)3</td></tr><tr><td>5</td><td>1.5922</td><td>-0.169</td><td>327</td><td>TiN4(CH2)20(CH3)8</td><td>[(PrBu)N4Ti]</td></tr><tr><td>6</td><td>1.5880</td><td>-0.169</td><td>327</td><td>TiN4(CH2)19(CH3)8</td><td>[(PrBu)N3Ti]((Pr)2N]</td></tr><tr><td>7</td><td>1.5314</td><td>-0.163</td><td>327</td><td>TiN2(CH2)16(CH3)2</td><td>[N(CH2)2]2TiBu2</td></tr><tr><td>8</td><td>1.3932</td><td>-0.149</td><td>27</td><td>TiN8(CH2)20(CH3)20</td><td>TDEAT + [N(Et3)4]</td></tr><tr><td>9</td><td>1.3900</td><td>-0.149</td><td>27</td><td>TiN8(CH2)19(CH3)20</td><td>TDEAT + NMe(Et)2 + [N(Et3)3]</td></tr><tr><td>10</td><td>1.3893</td><td>-0.149</td><td>37</td><td>TiN8(CH2)20(CH3)20</td><td>TDEAT + [N(Et3)4]</td></tr></table>
+
+Table 12 Properties of existing precursor molecules for  $\mathrm{TiO_2}$  ALD/atomic layer epitaxy.  
+
+<table><tr><td>Precursor</td><td>Common oxygen source</td><td>Precursor saturation dose (s)</td><td>Temperature window (°C)</td><td>Growth rate (A/cycle)</td><td>Reference</td></tr><tr><td>TDMAT</td><td>H2O, O3</td><td>0.15–10, 0.5–5</td><td>50–330</td><td>0.33–1.20, 0.40–0.65</td><td>(Abendroth et al., 2013; Jin et al., 2015; Kathamoddy et al., 2008; Kim Kim, 2012; Katamreddy et al., 2020a; Xie et al., 2007)</td></tr><tr><td>TDEAT</td><td>H2O, O3</td><td>5, 5</td><td>125–250</td><td>0.25, 0.40</td><td>(Katamreddy et al., 2008)</td></tr><tr><td>TEMAT</td><td>H2O, O3</td><td>5, 10</td><td>125–225</td><td>0.40, 0.55</td><td>(Katamreddy et al., 2008)</td></tr><tr><td>TTIP</td><td>H2O</td><td>0.04/ 0.6*</td><td>280–290</td><td>0.02/ 0.30*</td><td>(Aarik et al., 2000; Avril et al., 2014; Mikko Ritala et al., 1994)</td></tr><tr><td>TiCl4</td><td>H2O, O3</td><td>0.5, 5</td><td>Up to 600</td><td>0.40–0.75</td><td>(Aarik et al., 2013; Hwang, 2014; Leem et al., 2014; Ritala et al., 1993)</td></tr><tr><td>Ti(OiPr)2(tmhd**)2</td><td>O3, H2O</td><td>2, 2</td><td>370–400</td><td>0.20, 0.43</td><td>(Hwang, 2014; Lee et al., 2011)</td></tr><tr><td>Ti(OEt)4</td><td>H2O</td><td>1.5</td><td>250–325</td><td>0.40</td><td>(Mikko Ritala et al., 1994)</td></tr><tr><td>Ti(OMe)4</td><td>H2O</td><td>0.6</td><td>250–300</td><td>0.50</td><td>(Pore et al., 2004)</td></tr><tr><td>Ti(OBu)4</td><td>H2O</td><td>2</td><td>150–200</td><td>0.25</td><td>(Weon Hwang et al., 2007)</td></tr><tr><td>PrimeTi</td><td>O3</td><td>4</td><td>250–325</td><td>0.27</td><td>(Katamreddy et al., 2009)</td></tr><tr><td>StarTi</td><td>O3</td><td>5</td><td>150–400</td><td>0.30</td><td>(Katamreddy et al., 2009)</td></tr><tr><td>TyALD</td><td>O3</td><td>7</td><td>225–275</td><td>0.40</td><td>(Katamreddy et al., 2009)</td></tr><tr><td>StarTyALD</td><td>O3</td><td>7</td><td>250–350</td><td>0.30</td><td>(Katamreddy et al., 2009)</td></tr></table>
+
+The saturation dose and growth rate for this precursor was different in two different references mentioned. tmhd  $= 2,2,6,6$  -tetramethyl-3,5-heptanedione.
+
+studied the properties of some non- common Ti precursors for ALD, which are included in Table 12 (i.e., PrimeTi, StarTi, TyALD, and StarTyALD).
+
+As can be seen in Table 12, the existing precursors have some limitations. For instance, some of them result in a low growth rate, need a rather high pulse time to saturate the surface, have a limited temperature window, or are only functional at high temperatures. The only precursors that result in rather high growth rates in some ALD conditions are TDMAT (Xie et al., 2007),  $\mathrm{TiCl_4}$  (Leem et al., 2014), TEMAT (Katamreddy et al., 2008), and  $\mathrm{Ti(OMe)_4}$  (Pore et al., 2004). The reported growth rate from these precursors are higher than  $0.50\mathrm{\AA / cycle}$  in some conditions but still much lower than the predicted growth rates from the newly designed precursors in this work.
+
+Among the precursors with growth rates higher than  $0.50\mathrm{\AA / cy - }$  cle, although TDMAT would result in a high growth rate in some deposition conditions (Xie et al., 2007), the growth rate from this precursor strongly depends on the deposition temperature. The highest growth rate from TDMAT (i.e.,1.20  $\mathrm{\AA / cycle}$ ) has been reported in the deposition temperature of  $50^{\circ}\mathrm{C}$ , where the coreactant was water (Xie et al., 2007). Besides,  $\mathrm{TiCl_4}$  results in a rather high growth rate  $(0.75\mathrm{\AA / cycle})$  at  $300^{\circ}\mathrm{C}$  when it reacts with water (Leem et al., 2014). However, the byproducts of  $\mathrm{TiCl_4}$  are corrosive (Hwang, 2014), which is not desirable, and it is better to be substituted. TEMAT is reported to have a growth rate of  $0.55\mathrm{\AA / cy - }$  cle in reaction with  $\mathrm{O_3}$ , but it needs a high saturation pulse time (10 s) (Katamreddy et al., 2008), which leads to long process time. The growth rate from  $\mathrm{Ti(OMe)_4}$ $(0.50\mathrm{\AA / cycle})$  is comparable with that of TEMAT with a much lower saturation time (0.6 s). However,  $\mathrm{Ti(OMe)_4}$  is only functional in high temperatures  $(250 - 300^{\circ}\mathrm{C})$  (Pore et al., 2004). The high temperatures are not desired in many cases such as when the substrate is organic (Shahmohammadi et al., 2020b, 2020a). Hence, there is still the need for a precursor, which would result in a high growth rate at low temperatures with not so long saturation dose. As can be seen in Table 11, three of the designed precursors result in high growth rates  $(1.39\mathrm{\AA / cycle})$  at temperatures as low as room temperature (Ranks 8- 10). It is worth mentioning that the lowest predicted growth rate from theoretically designed precursors in this work is  $1.23\mathrm{\AA / cycle}$  at  $67^{\circ}\mathrm{C}$  (rank 41), which is still higher than, although close to, the highest reported value from the existing precursors (i.e.,  $1.20\mathrm{\AA / cycle}$ ). In the future, these precursors will be synthesized and tested experimentally, and a more detailed property study will be performed.
+
+# 5\. Conclusion
+
+In this study, we have developed a technology for the design of novel precursor materials with enhanced properties for ALD. An ALD precursor material comprises functional groups and the structural and functional properties of the precursor depend on those groups. In the first part of this paper, four precursors, i.e., TDMAT, TDEAT, TDEAH, and TDMAH, which are commonly used in ALD, are divided into functional groups, and the proposed GCM is applied to obtain their interaction parameters with the substrate and with each other. Using experimental data of the ALD growth rate and the EACO technique, the UNIFAC interaction parameters for the groups are computed. The interaction parameters are used for the theoretical estimation of the growth rate at different precursor pulse times. The estimated values are found to be in good agreement with experimental results. Group interaction parameters calculated from one precursor used for predicting accurate growth rate from other precursors shows the usefulness of the proposed theory. In the second part of this paper, the CAMD framework was used to design ALD precursors that predicted an improved growth rate of ALD using the properties of the functional groups that have been developed by the GCM. The optimal design of novel precursors has been achieved by solving an MINLP problem. The MINLP problem was successfully solved using EACO algorithm. The CAMD algorithm for precursor design maximized the growth rate of the deposited material subjected to structural feasibility, thermodynamic correlation, as well as process conditions and other constraints. The proposed methodology was tested successfully for the design of precursors for ALD of titanium on a silicon substrate. Forty- one unique precursors were designed, and ten precursor molecules were selected based on the predicted growth rate values. These molecules are possibly the best candidates that can be used in an ALD process. All of the designed molecules result in a higher growth rate compared to existing precursors, while satisfying the operating conditions, with the best possible designed precursor predicted a  $40\%$  higher growth rate than the known one. This method can be applied for the design of ALD precursors of any metals and metal oxides. Once a comprehensive database of UNIFAC interaction parameters in bulk and the ASS phases is obtained, the optimal design of novel precursor materials will become possible on a large scale. A cost analysis is beyond the scope of this paper.
+
+# CRediT authorship contribution statement
+
+Mina Shahmohammadi: Validation, Investigation, Writing - original draft. Rajib Mukherjee: Software, Validation, Investigation, Writing - original draft. Christos G. Takoudis: Methodology, Investigation, Writing - review & editing, Supervision, Project administration, Funding acquisition. Urmila M. Diwekar: Conceptualization, Methodology, Software, Investigation, Writing - review & editing, Supervision, Project administration, Funding acquisition.
+
+# Declaration of Competing Interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+# Appendix A\. Van der Waals volume  $(\mathrm{Rg})$  and surface area  $(\mathrm{Qg})$
+
+To represent the group size and surface areas,  $Rg$  and  $Qg$  can be calculated using van der Waals group volume,  $Vg$ , and surface areas  $Ag$  as it can be seen in Eqs. (A1) and (A2):
+
+$$
+Rg = Vg / 15.17 \tag{A1}
+$$
+
+$$
+Qg = Ag / 2.5e9 \tag{A2}
+$$
+
+where  $Vg$  and  $Ag$  are calculated using experimental van der Waals radius  $(r_w)$  of each atom (Bondi, 1964; Vogt and Alvarez, 2014) (Eq. (A3)).
+
+$$
+Vg = \frac{4}{3}\pi r_w^3 N_A \tag{A3}
+$$
+
+For the surface area value, Eq. (A4) is used:
+
+$$
+Ag = \pi r_w^2 N_A \tag{A4}
+$$
+
+Titanium (Ti). In case of Titanium,  $r_w = 2.15\mathrm{\AA}$  which is equivalent to  $2.15\mathrm{e} - 8\mathrm{cm}$ , and  $N_A$ , the Avogadro number, equals to  $6.022\mathrm{e}23$  moles/molecule. Then,  $Vg = 25.06cm^3 /\mathrm{mole}$  and  $Ag = 8.7e8cm^2 /\mathrm{mole}$ . Substituting the values of  $Vg$  and  $Ag$  into Eqs. (A1) and (A2), respectively,  $Rg = 1.652$  and  $Qg = 0.349$  are obtained.
+
+Hafnium (Hf). For Hafnium,  $r_w = 2.1\mathrm{\AA}$  which is equivalent to  $1\mathrm{e} - 8\mathrm{cm}$ . That results in  $Vg = 23.36cm^3 /\mathrm{mole}$  and
+
+$Ag = 8.34e8cm^2 /mole$ $Rg = 1.496$  and  $Qg = 0.327$  .Table 8 shows the  $Rg$  and  $Qg$  values of all the groups used in this work.
+
+# References
+
+Aaltonen, T., Ritala, M., Sajavaara, T., Keinonen, J., Leskelä, M., 2003. Atomic layer deposition of platinum thin films. Chem. Mater. 9, 1924- 1928. https://doi.org/ 10.1021/cm021333t. Aarik, J., Aidla, A., Uustare, T., Ritala, M., Leskelä, M., 2000. Titanium isopropoxide as a precursor for atomic layer deposition: Characterization of titanium dioxide growth process. Appl. Surf. Sci. 161, 385- 395. https://doi.org/10.1016/S0169- 4332(00)00274- 9. Aarik, L., Arroval, T., Rammula, R., Mandar, H., Sammelselg, V., Aarik, J., 2013. Atomic layer deposition of  $\mathrm{TiO_2}$  from  $\mathrm{TiCl_4}$  and  $\mathrm{O_3}$  Thin Solid Films 542, 100- 107. https://doi.org/10.1016/j.tsf.2013.06.074. Abendroth, B., Moebus, T., Rentrop, S., Strohmeyer, R., Vinnichenko, M., Weling, T., Stocker, H., Meyer, D.C., 2013. Atomic layer deposition of  $\mathrm{TiO_2}$  from tetrakis (dimethylamino)titanium and  $\mathrm{H_2O}$  Thin Solid Films 545, 176- 182. https://doi. org/10.1016/j.tsf.2013.07.076. Avril, L., Reymond- Laruinaz, S., Decams, J.M., Bruyere, S., Potin, V., De Lucas, M.C.M., Imhoff, L., 2014.  $\mathrm{TiO_2}$  anatase films obtained by direct liquid injection atomic layer deposition at low temperature. Appl. Surf. Sci. 288, 201- 207. https://doi. org/10.1016/j.apsusc.2013.10.007. Benavides, P.T., Diwekar, U., 2014. Optimal design of adsorbents for NORM removal from produced water in natural gas fracking. Part 1: Group contribution method for adsorption. Chem. Eng. Sci. 137, 964- 976. https://doi.org/10.1016/j. ces.2015.07.012. Benavides, P.T., Gebreslassie, B.H., Diwekar, U.M., 2015. Optimal design of adsorbents for NORM removal from produced water in natural gas fracking. Part 2: CAMD for adsorption of radium and barium. Chem. Eng. Sci. 137, 977- 985. Berti, C., Ulbig, P., Burdorf, A., Seipper, J., Schulz, S., 1999. Correlation and prediction of liquid- phase adsorption on zeolites using group contributions based on adsorbate- solid solution theory. Langmuir 15, 6035- 6042. https://doi.org/ 10.1021/la981415p. Bishal, A.K., Butt, A., Selvaraj, S.K., Joshi, B., Patel, S.B., Yang, B., Shukohfar, T., Sukotjo, C., Takoudis, C.G., 2015. Atomic layer deposition in biotinonotechnology: a brief overview. Crit. Rev. Biomed. Eng. 43, 255- 276. Bishal, A.K., Sukotjo, C., Jokisarai, J.R., Klie, R.F., Takoudis, C.G., 2018. Enhanced bioactivity of collagen fiber functionalized with room temperature atomic layer deposited titania. ACS Appl. Mater. Interfaces 10, 34443- 34454. https://doi.org/ 10.1021/acsami.8b05857. Bishal, A.K., Sukotjo, C., Takoudis, C., 2017. Room temperature  $\mathrm{TiO_2}$  atomic layer deposition on collagen membrane from a titanium alkylamide precursor. J. Vac. Sci. Technol. A: Vac., Surf. Films. https://doi.org/10.1116/1.4972245. Bondi, A., 1964. Van der waals volumes and radii. J. Phys. Chem. 68, 441- 451. https://doi.org/10.1021/j1007850001. Camarda, K.V., Sunderesen, P., 2005. An optimization approach to the design of value- added soybean oil products. Ind. Eng. Chem. Res. 44, 4361- 4367. https:// doi.org/10.1021/ie049400b. Chang, S., Selvaraj, S.K., Choi, Y.- Y., Hong, S., Nakhmanson, S.M., Takoudis, C.G., 2016. Atomic layer deposition of environmentally benign  $\mathrm{SrTiO_4}$  as a potential ferroelectric material. J. Vac. Sci. Technol. A Vac., Surf., Film. 34, 01A119. https:// doi.org/10.1116/1.4935650. Chemmangattuvalappil, N.G., Eljack, F.T., Solvason, C.C., Eden, M.R., 2009. A novel algorithm for molecular synthesis using enhanced property operators. Comput. Chem. Eng. 33, 636- 643. Cheng, H.- C., Wang, F.- S., 2008. Optimal biocompatible solvent design for a two- stage extractive fermentation process with cell recycling. Comput. Chem. Eng. 32, 1385- 1396. Churi, N., Achenie, L.E.K., 1996. Novel mathematical programming model for computer aided molecular design. Ind. Eng. Chem. Res. 35, 3788- 3794. Deshpande, A., Inman, R., Jursich, G., Takoudis, C., 2004. Atomic layer deposition and characterization of hafnium oxide grown on silicon from tetrakis(diethylamino) hafnium and water vapor. J. Vac. Sci. Technol. A Vac., Surfaces. Film. 22, 2025- 2040. https://doi.org/10.1116/1.21781183. Diwekar, U.M., Gebreslassie, B.H., 2016. Efficient ant colony optimization (EACO) algorithm for deterministic optimization. Int. J. Swarm Intell. Evol. Comput. 05. https://doi.org/10.4172/2090- 4508.1000131. Diwekar, U.M., Ulas, S., 2000. Sampling techniques. Kirk- Othmer Encycl. Chem. Technol. Dorigo, M., 1992. Optimization, learning and natural algorithms Ph.D. dissertation. Politecnico di Milano, 1. Dorigo, M., Di Caro, G., 1999. Ant colony optimization: A new metaheuristic, evolutionary computation, in Proceedings of the 1999 Congress on Evolutionary Computation- CECS9 (Cat. No. 99TH8406). IEEE, Washington, DC, USA, pp. 1470- 1477. Doshi, R.K., Mukherjee, R., Diwekar, U.M., 2018. Application of adsorbate solid solution theory to design novel adsorbents for arsenic removal using CAMD. ACS Sustain. Chem. Eng. 6, 2603- 2611. Duvedi, A.P., Achenie, L.E.K., 1996. Designing environmentally safe refrigerants using mathematical programming. Chem. Eng. Sci. 51, 3727- 3739. Eden, M.R., Jørgensen, S.B., Gani, R., El- Halwagi, M.M., 2004. A novel framework for simultaneous separation process and product design. Chem. Eng. Process. Process Intensif. 43, 595- 608.
+
+Eljack, F.T., Eden, M.R., 2008. A systematic visual approach to molecular design via property clusters and group contribution methods. Comput. Chem. Eng. 32, 3002- 3010. Elliott, S.D., 2005. Predictive process design: A theoretical model of atomic layer deposition. Comput. Mater. Sci. 33, 20- 25. https://doi.org/10.1016/j.commatsci.2004.12.032. Folic, M., Adjiman, C.S., Pistikopoulos, E.N., 2008. Computer- aided solvent design for reactions: maximizing product formation. Ind. Eng. Chem. Res. 47, 5190- 5202. Fredenslund, A., 2012. Vapor- liquid equilibria using UNIFAC: a group- contribution method. Elsevier. Fredenslund, A., Gmehling, J., Rasmussen, P., 1974. Vapor- liquid Equilibria Using UNIFAC: A Group- contribution Methods. Elsevier Scientific. Gani, R., Nielsen, B., Fredenslund, A., 1991. A group contribution approach to computer- aided molecular design. AIChE J. 37, 1318- 1332. Gebreslassie, B.H., Diwekar, U.M., 2015. Efficient ant colony optimization for computer aided molecular design: Case study solvent selection problem. Comput. Chem. Eng. 78, 1- 3. https://doi.org/10.1016/j.comchemeng.2015.04.004. George, S.M., 2010. Atomic layer deposition: An overview. Chem. Rev. 110, 111- 131. https://doi.org/10.1021/cr900056b. Giovanoglou, A., Barlatier, J., Adjiman, C.S., Pistikopoulos, E.N., Cordiner, J.L., 2003. Optimal solvent design for batch separation based on economic performance. AIChE J. 49, 3095- 3109. Gonzalez, H.E., Abildskov, J., Gani, R., Rousseaux, P., Le Bert, B., 2007. A method for prediction of UNIFAC group interaction parameters. AIChE J. 53, 1620- 1632. Gordon, R.G., Hausmann, D., Kim, E., Shepard, J., 2003. A kinetic model for step coverage by atomic layer deposition in narrow holes or trenches. Chem. Vap. Depos. 9, 73- 78. https://doi.org/10.1002/cvde.200390005. Holland, J.H., 1992. Adaptation in Natural and Artificial Systems: an Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence. MIT Press. Hostrup, M., Harper, P.M., Gani, R., 1999. Design of environmentally benign processes: integration of solvent design and separation process synthesis. Comput. Chem. Eng. 23, 1395- 1414. Huang, L., Han, Bo, Han, Bing, Derecksei- Kovacs, A., Xiao, M., Lei, X., O'Neill, M.L., Pearlstein, R.M., Chandra, H., Cheng, H., 2014. Density functional theory study on the full ALD process of silicon nitride thin film deposition via BDEAS or BTBAS and  $\mathrm{NH_3}$ . Phys. Chem. Chem. Phys. 16, 18501- 18512. https://doi.org/10.1039/c4cp02741h. Huang, S., 2017. Improving Polymethyl Methacrylate Resin Using Novel Nanoceramic Coating. Master dissertation, University of Illinois at Chicago. Hwang, C.S., 2014. Atomic layer deposition for semiconductors. Atomic Layer Deposition for Semiconductors. https://doi.org/10.1007/978- 1- 4614- 8054- 9. Jin, C., Liu, B., Lei, Z., Sun, J., 2015. Structure and photoluminescence of the  $\mathrm{TiO_2}$  films grown by atomic layer deposition using tetrakis- dimethylamino titanium and ozone. Nanoscale Res. Lett. 10, 1- 9. https://doi.org/10.1186/s11671- 015- 0790- x. Johnson, R.W., Hultqvist, A., Bent, S.F., 2014. A brief review of atomic layer deposition: from fundamentals to applications. Mater. Today 17, 236- 246. Karunanithi, A.T., Achenie, L.E.K., Gani, R., 2006. A computer- aided molecular design framework for crystallization solvent design. Chem. Eng. Sci. 61, 1247- 1260. Katamreddy, R., Omarjee, V., Feist, B., Dussarrat, C., 2008. Ti source precursors for atomic layer deposition of  $\mathrm{TiO_2}$ , STO and EST. ECS J. Solid State Sci. Technol. 16, 113- 122. https://doi.org/10.1149/1.2979986. Katamreddy, R., Wang, Z., Omarjee, V., Rao, P.V., Dussarrat, C., Blasco, N., 2009. Advanced precursor development for Sr and Ti based oxide thin film applications. ECS J. Solid State Sci. Technol. 25, 217- 230. https://doi.org/10.1149/1.3205057. Khalifa, M., Lue, L., 2017. Fluid phase equilibria a group contribution method for predicting the solubility of mercury. Fluid Phase Equilib. 432, 76- 84. https://doi.org/10.1016/j.fluid.2016.10.025. Kim, H., 2003. Atomic layer deposition of metal and nitride thin films: Current research efforts and applications for semiconductor device processing. J. Vac. Sci. Technol. B Microelectron. Nanom. Struct. Process. Meas. Phenom. 21, 2231- 2261. Kim, K- J., Diwekar, U.M., 2002. Efficient combinatorial optimization under uncertainty. 2. Application to stochastic solvent selection. Ind. Eng. Chem. Res. 41, 1285- 1296. Kim, K- J., Diwekar, U.M., Tomazi, K.G., 2004. Entrainner selection and solvent recycling in complex batch distillation. Chem. Eng. Commun. 191, 1606- 1633. Kim, Y., Hlamido, D., 2012. Atomic layer deposition of  $\mathrm{TiO_2}$  from tetrakis- dimethylamido- titanium and ozone. Korean J. Chem. Eng. 29, 969- 973. https://doi.org/10.1007/s11814- 012- 0072- 6. Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P., 1983. Optimization by simulated annealing. Science (80- ) 220, 671- 680. Kragh, K.C., Kueltzo, A., Jursich, G., Singh, M., Tao, Q., Takoudis, C.G., 2008. Atomic layer deposition of hafnium oxide on silicon and polymer fibers at temperatures below  $100^{\circ}\mathrm{C}$ . J. Undergrad. Res. Sch. Exact. 1, 2- 5. Lee, S.W., Han, J.H., Kim, S.K., Han, S., Lee, W., Hwang, C.S., 2011. Role of interfacial reaction in atomic layer deposition of  $\mathrm{TiO_2}$  thin films using  $\mathrm{Ti(OiPr)_2(tmhd)_2}$  on Ru or  $\mathrm{RuO_2}$  substrates. Chem. Mater. 23, 976- 983. https://doi.org/10.1021/cm11026128. Leem, J., Park, I., Li, Y., Zhou, W., Jin, Z., Shin, S., Min, Y.S., 2014. Role of HCl in atomic layer deposition of  $\mathrm{TiO_2}$  thin films from titanium tetrachloride and water. Bull. Korean Chem. Soc. 35, 1195- 1201. https://doi.org/10.5012/bkcs.2014.35.4.1195.
+
+Leskelä, M., Ritala, M., 2002. Atomic layer deposition (ALD): from precursors to thin film structures. Thin Solid Films 409, 138–146. https://doi.org/10.1016/S0040- 6090(02)00117- 7. Lin, B., Chavali, S., Camarda, K., Miller, D.C., 2005. Computer- aided molecular design using Tabu search. Comput. Chem. Eng. 29, 337–347. Liu, X., Ramanathan, S., Longdergan, A., Srivastava, A., Lee, E., Seidel, T.E., Barton, J.T., Pang, D., Gordon, R.G., 2005. ALD of Hafnium Oxide Thin Films from Tetrakis (ethyl)methylamino)hafnium and Ozone. J. Electrochem. Soc. 152, G213. https://doi.org/10.1159/1.1.1859631. Majumder, P., Katamreddy, R., Takoudis, C., 2007. Effect of film thickness on the breakdown temperature of atomic layer deposited ultrathin  $\mathrm{HfO_2}$  and  $\mathrm{Al_2O_3}$  diffusion barriers in copper metalluration. J. Cryst. Growth 309, 12–17. Marcoulaki, E.C., Kokossis, A.C., 2000. On the development of novel chemicals using a systematic optimisation approach. Part II. Solvent design. Chem. Eng. Sci. 55, 2547–2561. Matzdorf, C., Kane, M., Green, J., 2002. Corrosion resistant coatings for aluminum and aluminum alloys. Mukherjee, R., Gebreslassie, B., Diwekar, U.M., 2017. Design of novel polymeric adsorbents for metal ion removal from water using computer- aided molecular design. Clean Technol. Environ. Policy 19, 483–499. https://doi.org/10.1007/s10098- 016- 1236- 6. Odele, O., Macchietto, S., 1993. Computer aided molecular design: a novel method for optimal solvent selection. Fluid Phase Equilib. 22, 47–54. Park, H., Kim, B., Lee, S.H., Kim, H., 2016. Study of a vanadium precursor for  $\mathrm{VO_2}$  thin- film growth in the atomic layer deposition process by multiscale simulations. J. Phys. Chem. C 120, 28193–28203. https://doi.org/10.1021/acs.jpcc.6b06347. Pistikopoulos, E.N., Stefanis, S.K., 1998. Optimal solvent design for environmental impact minimization. Comput. Chem. Eng. 22, 717–733. Pore, V., Rahtu, A., Leskelä, M., Ritala, M., Sajavarra, T., Keinonen, J., 2004. Atomic layer deposition of photocatalytic  $\mathrm{TiO_2}$  thin films from titanium tetramethoxide and water. Chem. Vap. Depos. 10, 143–148. https://doi.org/10.1002/cvde.200306289. Puurunen, R.L., 2003a. Growth per cycle in atomic layer deposition: Real application examples of a theoretical model. Chem. Vap. Depos. 9, 327–332. https://doi.org/10.1002/cvde.200306266. Puurunen, R.L., 2003b. Growth per cycle in atomic layer deposition: A theoretical model. Chem. Vap. Depos. 9, 249–257. https://doi.org/10.1002/cvde.200306265. Ritala, M., Leskelä, M., Niinistö, L., Prohaska, T., Friedbacher, G., Grasserbauer, M., 1994a. Surface roughness reduction in atomic layer epitaxy growth of titanium dioxide thin films. Thin Solid Films 249, 153–162. https://doi.org/10.1016/0040- 6090(94)90754- 4. Ritala, M., Leskelä, M., Nykanen, E., Soininen, P., Niinistö, L., 1993. Growth of titanium dioxide thin films by atomic layer epitaxy. Thin Solid Films 225, 288–295. Ritala, Mikko, Leskelä, M., Rauhala, E., 1994b. Atomic layer epitaxy growth of titanium dioxide thin films from titanium ethoxide. Chem. Mater. 6, 556–561. https://doi.org/10.1021/cm0004a035. Rushworth, S.A., Nickson, R., Hughes, P., 2005. Vapour pressure measurement of low volatility precursors 45, 1000–1002. 10.1016/j.microrel.2004.11.007
+
+Salazar, J., Diwekar, U.M., Joback, K., Berger, A.H., Blown, A.S., 2013. Solvent selection for post- combustion CO2 capture. Energy Procedia 37, 257–264. Samudra, A.P., Sahinidis, N.V., 2013. Optimization- based framework for computer- aided molecular design. AIChE J. 59, 3680–3701. Schlüter, M., Egea, J.A., Banga, J.R., 2009. Extended ant colony optimization for non- convex mixed integer nonlinear programming. Comput. Oper. Res. 36, 2217–2229. Schlüter, M., Gerdts, M., 2010. The oracle penalty method. J. Glob. Optim. 47, 293–235. Selvaraj, S.K., Jursich, G., Takoudis, C.G., 2013. Design and implementation of a novel portable atomic layer deposition/chemical vapor deposition hybrid reactor. Rev. Sci. Instrum. 84, 95109. Shahmohammadi, M., Pensa, E., Bhatia, H., Yang, B., Jursich, G., Takoudis, C.G., 2020a. Enhancing the surface properties and functionalization of polymethyl methacrylate with atomic layer- deposited titanium(IV) oxide. J. Mater. Sci. 55, 17151–17169. https://doi.org/10.1007/s100853- 020- 05274- 2. Shahmohammadi, M., Yang, B., Takoudis, C.G., 2020b. Applications of titania- atomic layer deposition in the biomedical field and recent updates. Am. J. Biomed. Sci. Res. 8, 465–468. https://doi.org/10.3439/ajbsr.2020.08.001321. Sinha, M., Achenie, L.E.K., 2001. Systematic design of blanket wash solvents with recovery considerations. Adv. Environ. Res. 5, 239–249. Trevizo, C., Daniel, D., Nirmalakhandan, N., 2000. Screening alternative degreasing solvents using multivariate analysis. Environ. Sci. Technol. 34, 2587–2595. Vogt, J., Alvarez, S., 2014. Van der Waals Radii of noble gases. Inorg. Chem. 53, 9260–9266. https://doi.org/10.1021/ic501364h. Weon Hwang, G., Ju Lee, H., Lee, K., Seong Hwang, C., 2007. Atomic layer deposition and electrical properties of  $\mathrm{PbTiO_3}$  thin films using metalorganic precursors and  $\mathrm{H_2O}$ . J. Electrochem. Soc. 154, G69–G76. https://doi.org/10.1149/1.2431317. Xie, Q., Jiang, Y. c., Detavernier, C., Deduytsche, D., Van Meirhaegte, R.L., Ru, G.- P., Li, B.- Z., Qu, X.- P., 2007. Atomic layer deposition of  $\mathrm{TiO_2}$  from tetrahil- riakis- dimethylamido titanium or Ti isopropoxide precursors and  $\mathrm{H_2O}$ . J. Appl. Phys. 102. https://doi.org/10.1063/1.2798384 083521. Xu, R., 2013. Atomic Layer Deposited Thin Films for Dielectrics, Semiconductor Passivation, and Solid Oxide Fuel Cells Ph.D. dissertation. University of Illinois at Chicago. Xu, R., Tao, Q., Yang, Y., Takoudis, C.G., 2012. Atomic layer deposition and characterization of stoichiometric erbium oxide thin dielectrics on Si (100) using  $(\mathrm{CpMe}_3)_3\mathrm{Er}$  precursor and ozone. Appl. Surf. Sci. 258, 8514–8520. Xu, W., Diwekar, U.M., 2007. Multi- objective integrated solvent selection and solvent recycling under uncertainty using a new genetic algorithm. Int. J. Environ. Pollut. 29, 70–89. Xu, W., Diwekar, U.M., 2005. Environmentally friendly heterogeneous azeotropic distillation system design: Integration of EBS selection and IPS recycling. Ind. Eng. Chem. Res. 44, 4061–4067. Xu, Y., Musgrave, C.B., 2004. A DFT study of the  $\mathrm{Al_2O_3}$  atomic layer deposition on SAMs: Effect of SAM termination. Chem. Mater. 16, 646–653. https://doi.org/10.1021/cm035009p. Yamamoto, H., Tochigi, K., 2008. Computer- aided molecular design to select foaming agents using a neural network method. Ind. Eng. Chem. Res. 47, 5152–5156.

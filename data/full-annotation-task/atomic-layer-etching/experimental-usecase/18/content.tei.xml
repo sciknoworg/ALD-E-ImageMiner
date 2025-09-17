@@ -1,0 +1,2315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Thermal atomic layer etching: A review</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2021-03-12">12 March 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Andreas</forename><surname>Fischer</surname></persName>
+							<email>andreas.fischer@lamresearch.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Lam Research Corporation</orgName>
+								<address>
+									<postCode>4400 94538</postCode>
+									<settlement>Cushing Parkway Fremont</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aaron</forename><surname>Routzahn</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Lam Research Corporation</orgName>
+								<address>
+									<postCode>4400 94538</postCode>
+									<settlement>Cushing Parkway Fremont</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Steven</forename><forename type="middle">M</forename><surname>George</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Colorado at Boulder</orgName>
+								<address>
+									<postCode>80309</postCode>
+									<settlement>Boulder</settlement>
+									<region>Colorado</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thorsten</forename><surname>Lill</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Lam Research Corporation</orgName>
+								<address>
+									<postCode>4400 94538</postCode>
+									<settlement>Cushing Parkway Fremont</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Thermal atomic layer etching: A review</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2021-03-12">12 March 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B76316663D92EE27031EE864B3B3D182</idno>
+					<idno type="DOI">10.1116/6.0000894</idno>
+					<note type="submission">Submitted: 24 December 2020 • Accepted: 25 February 2021 •</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This article reviews the state-of-the art status of thermal atomic layer etching of various materials such as metals, metal oxides, metal nitrides, semiconductors, and their oxides. We outline basic thermodynamic principles and reaction kinetics as they apply to these reactions and draw parallels to thermal etching. Furthermore, a list of all known publications is given organized by the material etched and correlated with the required reactant for each etch process. A model is introduced that describes why in the nonsaturation mode etch anisotropies may occur that can lead to unwanted performance variations in high aspect ratio semiconductor devices due to topological constraints imposed on the delivery of reactants and removal of reactant by-products.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>As semiconductor devices are shrinking to the sub-10 nm dimension, etching technologies with atomic scale fidelity are required. <ref type="bibr" target="#b0">1</ref> Atomic layer etching (ALE), which has been studied in laboratories for 30 years, promises to deliver this level of performance. The first report on ALE was published in Yoder's U.S. patent 4,756,794A entitled "Atomic layer etching." <ref type="bibr" target="#b1">2</ref> After a first wave of research during the 1990s, a second wave of interest and development started in the mid-2010s driven by the need for etching technologies with infinite selectivity and the ability to remove controlled amounts of material down to a submonolayer resolution.</p><p>A definition of ALE as an etching process comprised of at least two self-limited steps was adopted during a Sematech workshop on ALE in April 2014. This definition was implemented in analogy to its counterpart of Atomic layer deposition (ALD). <ref type="bibr" target="#b2">3</ref> Many of the established concepts in ALD were adopted in ALE. Correlations and similarities between ALD and ALE have been outlined as early as 2015 by Faraz et al. <ref type="bibr" target="#b3">4</ref> The separation of the etching process into separate self-limiting steps reduces the complexity in reactive ion etching (RIE) that is caused by the simultaneous fluxes of many different types of reactive species. The results are improved uniformity across the wafer, across the features with different critical dimensions, and reduced aspect ratio dependent etching (ARDE). <ref type="bibr" target="#b0">1</ref> In addition, there is higher surface smoothness after the completion of the etch. The first industrial implementation of ALE used ions in the second, so-called removal step. This type of ALE is called directional ALE because ions are accelerated toward the wafer surface, which results in a preferred direction of the etching process allowing the formation of devices from primarily horizontally oriented films.</p><p>Thermal ALE does not possess intrinsic directionality; it etches with the same rate in all directions. It is an isotropic etching technology. The fact that thermal ALE etches in the lateral direction with atomic scale precision enables the formation of electric devices with their active channels oriented vertically on the sidewalls of the corresponding support structures. It turns out that this is a key in the formation of integrated 3D devices, which will be at the center of the next wave of miniaturization of microchips along the path of Moore's law.</p><p>Flash memory was the first device that was produced in a 3D architecture. It has found application in a large number of mobile devices as well as in datacenters where it has replaced a meaningful percentage of hard disk drives. Emerging memories are expected to follow suit in this decade. These new devices will contribute to the proliferation of the Internet of things and artificial intelligence. The ever-increasing amount of data generated by humans needs ever more computing power and memory space and 3D integration is one of the solutions. Thermal isotropic ALE is deemed to be one of the enabling processing technologies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. THERMAL ETCHING</head><p>Thermal etching is a process that uses neutral gases and thermal energy or heat for activation. It is also referred to as gas phase or vapor etching. Thermal isotropic ALE can then be defined as a thermal process that requires a preceding modification step to enable thermal etching.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Adsorption/desorption-Kinetics</head><p>The elementary steps of a thermal etching process are physisorption and chemisorption of the vapor-phase reactants to the surface, as well as their chemical reaction and desorption of by-products from the surface. The processes are temperature sensitive and typically follow exponential laws with respect to temperature. For thermal etching to occur, all steps must have nonzero rates at a given wafer temperature. Not many vapor-phase reactants meet this requirement for a given set of surface materials and, therefore, relatively few thermal etching processes are known and used in the semiconductor industry. The process window for thermal etching is defined by the area of overlap of the rate curves for adsorption of the vapor molecules and desorption of the reaction products as shown in Fig. <ref type="figure" target="#fig_0">1</ref>. <ref type="bibr" target="#b4">5</ref> For dissociative chemisorption of a molecule to occur, the molecule must first physisorb onto the surface and then overcome the activation barrier for chemisorption. At higher temperatures, physisorbed molecules may desorb at the same rate as they adsorb and, hence, may not take the next step to chemisorb. Therefore, initial sticking coefficients or chemisorption rates that decrease as a function of temperature are a fairly common observation. <ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref> Such a behavior is consistent with a precursor-mediated adsorption model. <ref type="bibr" target="#b9">10</ref> Therefore, we represent the chemisorption rate of the etching species as a falling curve in Fig. <ref type="figure" target="#fig_0">1</ref>. The desorption rate of the reaction products increases generally with temperature. For thermal etching to occur, chemisorption of the etching species and desorption of the reaction curves must have appreciable rates or probabilities as the same temperature. The region of overlapping rate curves represents the process window of a thermal etch process. Compared to ion driven etching processes, there are only a few thermal etch processes used in the semiconductor industry due to small or absent process windows.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Thermodynamics</head><p>Thermodynamics imposes another constraint for thermal etching. The removal step in thermal isotopic ALE is also a chemical reaction with the solid surface, which forms volatile products. For a chemical reaction to proceed, it must be thermodynamically favorable. The Gibbs free energy must be negative. The Gibbs free energy can be calculated using commercial programs with databases of relevant thermodynamic data. The standard Gibbs free energy has enthalpic and entropic components,</p><formula xml:id="formula_0">ΔG o ¼ ΔH o À TΔS o : (1)</formula><p>Here, ΔH°is the change in enthalpy. ΔS°is the change in entropy for the reaction and reflects the change in order of the system. The superscripts denote standard conditions. For specific reactions, it must be calculated for the given conditions. For example, etching of TiO 2 with HF is a good system to illustrate thermodynamical constraints. The reaction products are water (partially as a vapor, and partially as an adsorbed multilayer liquid film, depending on p and T) plus volatile titanium tetrafluoride, TiF 4 , 11</p><formula xml:id="formula_1">TiO 2 (s) þ 4 HF (g) ! TiF 4 (g) þ 2 H 2 O (g,l) :<label>(2)</label></formula><p>The thermodynamics of this reaction has been discussed by Lee and George. <ref type="bibr" target="#b11">12</ref> According to them, the Gibbs free energy at standard conditions is -6.1 kcal/mol at 25 °C, which means that the reaction is favorable. The standard reaction enthalpy ΔH°is -22.7 kcal/mol at 25 °C. This negative enthalpy value is maintained at high temperatures with ΔH°= -21.9 kcal/mol at 250 °C. However, the free energy change becomes unfavorable at temperatures &gt;150 °C because of the change to the entropy term at higher temperatures (TΔS dominates due to T becoming large). The ΔG°value at 250 °C is +6.3 kcal/mol. Nevertheless, etching of TiO 2 with HF has been observed at temperatures of 250 °C. To explain this discrepancy between the theory and experiment, the authors evoke nonequilibrium conditions such as excess HF concentrations at the surface due to fast removal of TiF 4 by purge gases.</p><p>This example illustrates that thermodynamics is a reasonably good first order predictor for etching, but experimental verification is needed. Besides nonequilibrium effects, reaction kinetics may alter thermodynamics predictions. Even if the Gibbs free energy is negative, a given reaction may not proceed due to reaction kinetics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Application examples</head><p>Typical examples of thermal etching are the reaction of silicon with fluorine or of SiO 2 with HF/H 2 O. <ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b13">14</ref> Both applications are </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>REVIEW</head><p>avs.scitation.org/journal/jva used in the manufacturing of MEMS devices where high etch rates are needed for etching processes to produce an undercut. Molecular fluorine (F 2 ) as well as fluorine radicals react with silicon spontaneously or thermally. To address the safety concerns that would arise from its handling, XeF 2 is frequently used in thermal etching of silicon instead of F 2 . <ref type="bibr" target="#b12">13</ref> XeF 2 molecules undergo dissociative chemisorption to produce fluorine atoms in a similar way as F 2 molecules do. These fluorine atoms react with the fluorinated silicon surface to form SiF 4 . The reaction paths and corresponding activation energies must be very different for the two reactants because an etching rate difference of 4 orders of magnitude has been reported. <ref type="bibr" target="#b12">13</ref> The etching rate of silicon with XeF 2 can reach several micrometers per minute, which is much higher than typical RIE processes. Detailed information about this process can be found in a review article by Donnelly. <ref type="bibr" target="#b14">15</ref> Besides F 2 and XeF 2 , other fluorine containing interhalogen compounds can be used to etch silicon. A list of them is provided in Table <ref type="table">I</ref>. <ref type="bibr" target="#b15">16</ref> SiO 2 , on the other hand, does not spontaneously etch with F 2 or with XeF 2 . This makes it a great stopping or masking material for silicon etching with these gases. To etch SiO 2 thermally, HF gas can be used. Early studies reported that both HF and H 2 O were needed to achieve meaningful etch rates even though H 2 O is the reaction product. <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b16">17</ref> The reaction can be described using the following chemical equation:</p><formula xml:id="formula_2">SiO 2 (s) þ 4 HF (g) ! SiF 4 (g) þ H 2 O (l) :<label>(3)</label></formula><p>One of the mechanisms that was invoked to explain the need for H 2 O is that it forms a multilayer physisorbed film on the surface, which acts as a solvent medium for HF <ref type="bibr" target="#b13">14</ref> and as an initiator of the reaction. As etching proceeds, the original layer is replenished by H 2 O stemming from the reaction according to Eq. (3). More specifically, H 2 O is adsorbed at the SiO 2 surface to form silanol groups, 11</p><formula xml:id="formula_3">SiO 2 þ H 2 O ! Si(OH) 4 ,<label>(4)</label></formula><p>which can then react with the silanol groups to form SiF 4 and H 2 O according to</p><formula xml:id="formula_4">Si(OH) 4 þ 4 HF ! SiF 4 þ 4 H 2 O:<label>(5)</label></formula><p>Under these conditions, etching rates of 1000 to 2000 Å/min have been measured. <ref type="bibr" target="#b16">17</ref> The challenge of this process is precipitation of fluorosilicic acid, H 2 SiF 6 , on the surface, which slows down the etching rate over time and needs to be rinsed after the process is finished. When the temperature is increased to values where multilayer H 2 O adsorption is suppressed, etching of silicon oxide also slows down significantly.</p><p>Overall, this process is difficult to control because of the challenge in controlling the formation of the initial multilayer of H 2 O as the latter is not repeatable and reaction products negatively interfere with the ongoing SiO 2 etching process. Alcohols such as CH 3 OH can be used to hydrate the SiO 2 surface at elevated temperatures where H 2 O does not accumulate. Etching rates of 200 Å/min at 25 °C and 10 Å/min at 95 °C have been reported for a methanol vapor pressure of 100 Torr for thermal oxide. <ref type="bibr" target="#b17">18</ref> The etching rate repeatability was greatly improved at higher temperatures and lower pressures in the absence of a physisorbed H 2 O layer at the surface with alcohol replacing H 2 O.</p><p>The examples for thermal etching of silicon and SiO 2, which have been discussed so far, leverage the reactivity of halogens and volatility of halides for etching. When the surface halogens and oxides do not desorb at thermal energies, secondary reactions must be deployed to complete the etching process. These reactions have much more complicated chemical pathways.</p><p>An archetypical example is the etching of Fe 2 O 3 with hexafluoroacetylacetone (Hhfac) via a chelation reaction at temperatures between 140 and 400 °C, <ref type="bibr" target="#b18">19</ref> 6 Hhfac</p><formula xml:id="formula_5">(g) þ Fe 2 O 3(S) ! 2 Fe(hfac) 3(g) þ 3 H 2 O (g) :<label>(6)</label></formula><p>Chelation is the formation of chemical bonds between a single central metal atom and organic molecules, which each form multiple bonds with the central atom to become ligands. In this specific reaction, the ligands are called chelants. Figure <ref type="figure">2</ref> shows the structural formulas for the keto tautomer of Hhfac. It also shows the related molecule acetyl-acetone Hacac. which can be used to thermally etch ZnO. <ref type="bibr" target="#b19">20</ref> Hhfac does not react with metallic iron. <ref type="bibr" target="#b18">19</ref> Reaction (4) requires iron to be in the fully oxidized 3 + state. Chelating reactants such as Hhfac and Hacac are not reactive enough to bond to most metal surfaces. This property can be used to design thermal isotropic ALE processes as we will discuss later in this article.</p><p>TABLE I. Silicon etching rates and reaction probabilities of interhalogens and fluorine. n-type (100) silicon wafers were used in the experiments. Reprinted with permission from Ibbotson et al., J. Appl. Phys. 56, 2939 (1984). Copyright 1984, AIP Publishing LLC. Reactant Pressure (Torr) Etching rate (Å/min) Reaction probability ClF 3 4.7 5 500 4.5 × 10 -5 BrF 3 1.0 50 000 2.4 × 10 -3 BrF 5 8.1 11 800 7.8 × 10 -5 IF 5 4.6 9 900 1.3 × 10 -4 ClF 5.0 &lt;10 &lt;6 × 10 -8 XeF 2 0.2 45 300 1.2 × 10 -2 F 2 10 3 9 × 10 -9 F 0.2 4 600 4.1 × 10 -4 FIG. 2. Structural formulas of the keto tautomers of Hhfac (a) and Hacac (b). REVIEW avs.scitation.org/journal/jva III. THERMAL ISOTROPIC ALE-FUNDAMENTALS A. Mechanism and temperature process window</p><p>After discussing the fundamental steps and application examples for thermal etching, let us now turn to the process of thermal isotropic ALE. ALE processes are comprised of two steps with selflimiting reactions. <ref type="bibr" target="#b0">1</ref> A two-step reaction becomes necessary for those materials that do not form volatile compounds in a single step reaction with gases. For instance, many metals can react with oxidizing gases, but the melting points of the oxides and halides are too high for practical etching applications. <ref type="bibr" target="#b20">21</ref> In these cases, a second step is needed to remove the oxidized metal. This second step is called the removal step while the initial oxidation is called the modification step. In the case of metal oxides, the modification step involves exchanging oxygen with a halogen. The resulting halide at the surface can then be converted into a volatile product in the removal step. These are just two examples for two-step ALE processes; many others are possible and will be discussed later.</p><p>Recalling the elementary steps of a thermal etching process of physisorption, chemisorption, chemical reaction, and desorption, many materials engage in chemical reactions and desorption at temperatures so high that a preceding precursor-mediated chemisorption process can no longer proceed with the sufficient rate. This is schematically illustrated in Fig. <ref type="figure" target="#fig_1">3</ref>(a). To enable etching, one must cycle the temperature between a low temperature for chemisorption of the reactants and a high temperature to desorb the products. If the surface modification is self-limited, this is a viable way to implement thermal ALE. <ref type="bibr" target="#b21">22</ref> However, this approach faces formidable engineering challenges. While heating the wafer in a short period of time is straightforward, cooling it with similar rates is challenging. The most common implementation of thermal isotropic ALE by far is in an isothermal process regime. For the thermal isotropic ALE process to proceed at constant surface temperatures, a second, so-called removal step must be introduced. The removal step initiates a surface reaction with products that desorb at lower temperatures. This is illustrated in Fig. <ref type="figure" target="#fig_1">3(b)</ref>. Now, adsorption of the gases in the modification step and desorption of the final reaction species is possible as the removal gas adsorbs and reacts at the same temperature.</p><p>One of the widely studied implementations of thermal isotropic ALE at constant wafer temperature is etching of Al 2 O 3 with alternating HF (for instance in the form of HF-pyridine) and Sn (acac) 2 gases. <ref type="bibr" target="#b21">22</ref> The metal oxide surface is converted into metal fluoride by HF in the modification step. The removal of aluminum atoms via a ligand-exchange reaction is illustrated in Fig. <ref type="figure" target="#fig_2">4</ref>.  Sn(acac) 2 exchanges its acac ligands with the fluorine at the AlF 3 surface. This results in the formation of volatile SnF(acac) and Al (acac) 3 reaction products. The term "ligand-exchange" comes from this reaction mechanism. Modification and removal steps require two sequential or parallel surface reactions to convert Al 2 O 3 first into AlF 3 and then into Al(acac) 3 .</p><p>A successful modification step works by adding reactive sites to the surface in form of additional atoms to which the reactants can easily bond to in the removal step. In the modification step, a reactive species must adsorb to the surface first at sufficient dosage to guarantee high enough removal rates for the full ALE process. The adsorption is established by forming either a physical or chemical bond, or both, between the incoming reactant molecules and the surface species. The ratio between physical and chemical bonds depends on the specific nature of interaction between the reactants in the vapor phase with the material on the surface, as well as on the surface temperature. It has been reported that in the case of a surface modification with HF, molecularly or dissociatively adsorbed fluorine may exist on the surface of materials such as HfO 2 , ZrO 2 , or Al 2 O 3 . <ref type="bibr" target="#b23">24</ref> Fischer et al. reported that the ratio between physically and chemically adsorbed fluorine on the surface shifts in favor of a chemical bond as the surface temperature rises since physically (weakly) bonded fluorine will "boil off" with temperature. <ref type="bibr" target="#b24">25</ref> If physically adsorbed reactants do not convert to a chemically bonded form, it is conceivable that they will impede the surface reactions in the following removal step by preventing access to the surface. This type of "surface poisoning" has been reported by Lee et al. for etching of AlF 3 with HF/Sn(acac) 2 . <ref type="bibr" target="#b25">26</ref> The authors reported that incomplete removal of SnF(acac) is the main reason for submonolayer etch per cycle (EPC) for AlF 3 ALE with HF/Sn(acac) 2 . This layer is removed by HF in the modification step, which allows the ALE reaction to proceed. FTIR measurements revealed a reduced surface coverage of SnF(acac) at higher temperatures. <ref type="bibr" target="#b25">26</ref> Such a poisoning effect was not found for etching of Al 2 O 3 with HF/dimethylaluminum chloride (DMAC) <ref type="bibr" target="#b24">25</ref> where DMAC is dimethylaluminum chloride.</p><p>In the removal step, new molecular species are formed at the surface via a number of reactions we will discuss below. These reaction products have the bond strength to their neighbors weakened such that the temperature window in which desorption can occur is greatly shifted to a lower value. Figure <ref type="figure" target="#fig_1">3</ref> depicts a scenario in which both windows overlap by a sufficiently large amount. <ref type="bibr" target="#b4">5</ref> To put it in a different way, the two-step reaction approach that is exploited in thermal ALE is a method that closes the gap between the high temperature needed by certain materials, such as metal oxides, to undergo a chemical reaction and the relatively low temperature at which physisorption is still possible. Closing the gap is possible using an intermediate step, the modification step. The purpose of the removal step is to shift the temperature range in which desorption of the reaction products can occur to lower values.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Diffusion into solids relevant to surface modification</head><p>In general, if there is a concentration gradient of foreign atoms in a solid such as a surface layer on top of a solid, a flux of these atoms attempting to null out this gradient will commence until, in equilibrium, the foreign atoms are distributed uniformly throughout the host material. This concept of diffusion works well for the oxidation of metals or silicon because there is no volatile product and it can therefore be treated by the Deal-Grove model <ref type="bibr" target="#b26">27</ref> with a diffusion barrier that restricts the diffusion into the bulk. Modifications relevant to ALE processes, however, are conversion reactions that are limited to the surface, which undergo very limited diffusion into the bulk. During fluorination and ligand-exchange, the modification involves a conversion of oxide to fluoride. This conversion is an exchange reaction where oxygen is displaced during the exchange process. For example, during the Al 2 O 3 + 6 HF → 2 AlF 3 + 3 H 2 O reaction, the oxygen is exchanged with fluorine on the surface. Although there could be some diffusion of fluorine into the Al 2 O 3 bulk, the amount would be minimal and not necessary for a sustained ALE process.</p><p>Cano et al. <ref type="bibr" target="#b27">28</ref> suggested a mechanism for Al 2 O 3 fluorination based on rapid fluorination of the Al 2 O 3 surface and then slower fluorination of the near-surface region. The fluorination into the near-surface region followed a parabolic law behavior described by Deal and Grove. <ref type="bibr" target="#b26">27</ref> Cano et al. state that in metal oxides, fluorination of the near-surface region is expected to produce a fluoride thickness that grows inversely with fluoride thickness according to</p><formula xml:id="formula_6">dx dt ¼ k/x:<label>(7)</label></formula><p>In this equation, k is a constant that is dependent on the HF pressure, k = k 0 p. The inverse dependence of dx/dt, the growth rate of the fluorinated layer, on x is consistent with a fluorinated layer that acts as a diffusion barrier for subsequent fluorination. <ref type="bibr" target="#b27">28</ref> Keeping the fluorination time fixed to 30 s, Cano et al. reported that diffusion into the host oxide is pressure dependent and reaches values on the order of 0.5 nm at an HF pressure of 8 Torr as determined with XPS. The distance of 0.5 nm is the approximate length of the a-lattice constant of Al 2 O 3 . <ref type="bibr" target="#b28">29</ref> In other words, a fluorination time of 30 s at a substrate temperature of 300 °C is still insufficient for bulk diffusion and is keeping fluorine in a layer limited to the very surface of the host material. This is the basis for self-limitation in the modification step of the ALE process, which we will discuss in the following paragraph.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Self-limitation and saturation mechanisms</head><p>Step saturation is achieved by having a limitation of the advancement of reactive species into deeper layers of the material either during the modification or the removal step. It is a defining quality of ALE. In most known cases of thermal isotropic ALE, the modification step is saturated by adsorption and diffusion. In contrast, the removal step etches just the modified layer but not the bulk material. Cases have been reported where the removal step is the limiting step for EPC. Mameli et al. studied ALE of ZnO with Hacac/O 2 . <ref type="bibr" target="#b19">20</ref> During the Hacac etching reaction that is assumed to produce Zn(acac) 2 , carbonaceous species adsorbed on the ZnO surface are suggested as the cause of the self-limiting behavior. The subsequent O 2 plasma step removes these carbonaceous species and resets the surface for the next ALE cycle. <ref type="bibr" target="#b19">20</ref> Self-limitation allows for the removal of material from a surface with atomic scale precision. This characteristic of ALE has a profound impact on the etch rate uniformity in modern wafer processing. As was pointed out in the previous paragraph, even at temperatures of 300 °C and pressures of up to 8 Torr, the diffusion of fluorine into a film of Al 2 O 3 is limited to one unit-cell of the host material. As HF exposure continues, fluorine atoms will not migrate into the host lattice but will rather saturate the surface of the film. For fluorine to diffuse deeper, a fluorine atom would have to overcome the potential barrier that exists for hopping past the next-nearest neighbor. That barrier is generated by the "deformation potential" caused by the displacement of host atoms in the lattice due to added space required by the diffuser. As the barrier is significantly higher <ref type="bibr" target="#b29">30</ref> than the 50 meV thermal energy associated with a substrate temperature of 300 °C, diffusion deeper into the bulk is unlikely.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Isotropic etching of 3D features</head><p>In general, isotropy means "uniform" in all directions. The term derives from the Greek "isos" for "equal" and "tropos" meaning "way." In material science of solids, the term "isotropic" is used to describe a parameter that is equal when measured in any direction. In the description of vapors or gases, the term is used if there is no directional preference in the gas or vapor phase for a parameter that is under consideration. For example, the gas pressure acting on the walls of a closed container at a given temperature is isotropic as it is equal on all container walls regardless of their orientation and regardless of the specific shape of the container.</p><p>Vapor-based etch processes that do not involve the use of any direction-imposing plasma steps should show a fundamental isotropy in etch rates. As molecules can move freely in vertical as well as in horizontal directions, interaction rates with surfaces in their paths should be the same regardless of the orientation of such surface. Extending this principle to surfaces inside nanostructures, reaction rates there should also etch at the same rate regardless of the structure's wall orientations with respect to the incoming flux of reactants or outgoing flux of by-products, respectively. In particular, this should be true if both modification and removal steps are conducted in their corresponding saturation regimes.</p><p>Furthermore, the etch rate should not slow down with structural depth. In other words, there should not be an aspect ratio dependence of etch rate assuming that each ALE step is set up to operate in saturation. This is different from thermal etching where the etching rate can be limited by the transport of gas molecules inside high aspect ratio features. Transport limitation can cause ARDE. We note that complete isotropy can be expected for any vapor-based process, which is running in a fully saturated regime for both the modification as well as the removal step. However, inside intricate structures with high aspect ratios or in operation regimes requiring high substrate throughput to meet commercial targets, saturation may be very difficult to reach. The execution of an ALE process would, therefore, be performed in a partially saturated regime for at least one of the ALE process steps and in many cases for both. This modus operandi has implications on the uniformity of the etch process and may introduce an etch rate anisotropy or directionality of the etch front or to the aspect ratio dependence of the etch rate. The consequence is that the etch front progresses slower in a structure with a high ratio of structural depth to width than it does in those with a low ratio under otherwise identical process conditions.</p><p>In general, anisotropy can be understood as the opposite of "isotropy." If a parameter differs in magnitude when measured in different directions, that parameter is said to be anisotropic. For example, in an etch process, the anisotropy can be determined by measuring the EPC in horizontal and vertical directions separately. In classical RIE of high aspect ratio structures, it is a requirement to obtain very high anisotropy (or directionality) of the etch process. This is typically achieved by utilizing a radio frequencypowered plasma, which provides an accelerating electric field normal to the substrate surface for ions from the bulk plasma.</p><p>One can define etch anisotropy of an ALE process by the expression</p><formula xml:id="formula_7">A ¼ (EPC v À EPC h )/EPC v ,<label>(8)</label></formula><p>in which EPC h and EPC v are the etch rates in horizontal and vertical directions, respectively. The quantity A is getting smaller when etching in vertical and horizontal directions commence at comparable rates and is equal to zero if both rates are exactly the same. The latter case corresponds to a perfectly isotropic etch process. Quantity A approaches one, its highest value, when horizontal etching can be suppressed in favor of vertical etching as is the case in plasma-based processing. In leading-edge plasma-based high-aspect-ratio processes, the target aspect ratio of the features can reach values close to 100. This high aspect ratio requires the etch process to be run with an anisotropy factor very close to unity, which is achieved with ultrahigh ion energies and by controlling the etch chemistry very carefully.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Modification due to topological constraints</head><p>Operating an ALE process in commercial applications will most likely result in both ALE steps (modification and removal) to be reduced in process time or process pressure to achieve a high wafer throughput. In this regime, complete surface saturation of a film or a structure surface will have to be compromised in favor of processing speed. As a result, undesirable side effects may occur with regard to the etch performance.</p><p>Fischer et al. reported the existence of an etch rate anisotropy when structures with an overhanging mask were etched in a purely vapor-based ALE process at pressures of 30 mTorr. In that paper, a model considering two specific aspects of the etch process was proposed to explain this phenomenon. <ref type="bibr" target="#b30">31</ref> The first aspect targeted the HF adsorption process during the fluorination step. Based on previous fluorination experiments on blanket Al 2 O 3 films, the XPS-measured fluorine contents decreased with substrate temperature but etch rates increased indicating that weakly bonded fluorine will desorb from a surface. <ref type="bibr" target="#b24">25</ref> Observation of two fluorine states was also reported in studies by Mullins et al., applying the Natarajan-Elliott numerical analysis on materials of HfO 2 , ZrO 2 , and Al 2 O 3 . <ref type="bibr" target="#b23">24</ref> The second aspect of the anisotropy model considered the etched structure itself together with its topological constraints. Considering a topology as indicated in Fig. <ref type="figure" target="#fig_3">5</ref>, it is clear that fluorine in the form of HF traveling in a straight path through the mask opening can reach the unshaded horizontal Al 2 O 3 surface directly. Surface elements in the shaded areas under the mask, however, require fluorine in the form of HF to be desorbed from the open area first and then to travel into the shade. Thus, the flux to the shaded region under the mask is affected by the topological hindrance imposed on the reactants and reaction by-products. The term "hindrance" refers to the lack of accessibility for a reactant or by-product molecule, respectively, to arrive at a given surface inside a physical arrangement and is sometimes quantified with the parameter of "tortuosity."</p><p>Surfaces in the shade can only be fluorinated indirectly by an adsorption-redesorption step originating from the open area. The weakly bonded fluorine will also desorb from the shaded area at the reaction temperature. Consequently, the nonsaturated maximum fluorine surface concentration in the shaded area will be less than the concentration in the open area. <ref type="bibr" target="#b30">31</ref> In other words, at process pressures and times relevant to achieving high substrate throughput, a reactant molecule may only reach a surface outside the straight line-of-sight path via a scattering event from a nearby surface resulting in a reduced influx there. A similar line of reasoning can be applied for the delivery of metal precursors during the ligand-exchange step. Therefore, the hindered delivery of reactants to the shaded parts of the surface beneath the mask and the continued desorption of reactants from these surfaces will result in lowered etch rates in the shade until reaching saturation.</p><p>This type of diffusion during the etching of high aspect ratio features, which involves adsorption and desorption, has been described as Knudsen diffusion or transport. <ref type="bibr" target="#b31">32</ref> Knudsen diffusion occurs when the characteristic diffusion length of a system is similar to or less than the mean free path of the particles that are diffusing. An elongated pore with a narrow diameter (2-50 nm) can be viewed as an example since molecules moving through the pore frequently collide with its wall. <ref type="bibr" target="#b32">33</ref> The process of Knudsen diffusion or flow and can be parameterized in terms of the Knudsen number Kn, which is defined as</p><formula xml:id="formula_8">Kn ¼ λ/L:<label>(9)</label></formula><p>In this equation, λ is the pressure-dependent mean free path of the molecules and L is the representative physical length scale of the structure. The Knudsen number is a good representation of the degree to which a diffusion process is Knudsen-like. A Kn number much greater than one indicates that Knudsen diffusion is important.</p><p>ALE processes operating at pressures between 30 (Ref. 25) and 8 Torr 28 yield Knudson numbers between 2.9 × 10 5 and 1087 for HF molecules based on a 100 nm structure. These Knudsen numbers indicate that the transport regime of HF molecules is strongly Knudsen-like requiring many scattering events with preceding surfaces until the target location can be reached. Considering DMAC, the Knudsen numbers are reduced by an estimated factor of nine assuming a DMAC molecule size of 0.3 vs 0.1 nm for HF.</p><p>We expect that Knudsen diffusion will play a particularly important role when etching nanostructures with high aspect ratios such as 3D NAND stacks. In these intricate structures, dozens of sequential overhangs and recesses will make the paths of reactants and reaction by-products particularly Knudsen-like. Because of that, accessibility and, thereby, surface concentration in deeper parts of such structures are greatly impeded and etch rates will be reduced as a consequence if process steps must be run in a nonsaturated regime to meet throughput targets. Depth dependence in the etch rate is an undesirable outcome as it introduces unwanted top-to-bottom performance variabilities in devices within one stack. When designing thermal ALE processes, care needs to be taken to dose surfaces deep down in holes or beneath overhangs in shelves at the same level as at the entrance of the structure. This requirement can be achieved by increasing the process time to operate all reactions closer to saturation or by introducing compensation steps in a similar fashion as is used in ALD to obtain conformality in the deposited film thickness. <ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b33">34</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. THERMAL ISOTROPIC ALE-IMPLEMENTATION A. Thermal isotropic ALE versus directional ALE</head><p>The field of thermal isotropic ALE is a relatively new implementation of ALE. While directional ALE, which uses ion in the removal step, has first been described in 1988, 1,2 thermal isotropic ALE of metal oxides came to the scene through a series of papers published by Lee et al. around 2015. <ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b35">36</ref> The need for such an etching process has been highlighted at the first ALE workshop at the 2015 ALE workshop by Carver et al. from Intel Corporation. <ref type="bibr" target="#b36">37</ref> This specific direction was stipulated by the advent of the design of 3D devices such as FinFET gates and 3D NAND flash in the semiconductor industry. Due to their complexity, 3D devices require the combination of sophisticated vertical and horizontal etch and deposition steps in sequence of each other. This situation is comparable with the complex design of elevator shafts and hallways in tall skyscrapers in New York City during the 20th century and today. <ref type="bibr" target="#b37">38</ref> Thermal ALE is a chemistry-based procedure of removing material from the surface of a substrate at an atomic layer scale with thermal energy only. For the initiation and continuation of all chemical reactions, no energy form is used other than thermal energy. In particular, due to the absence of any high-frequency plasma, no kinetic energy of ions as employed in anisotropic ALE is used in thermal ALE. As activation energies to initiate thermal ALE are typically higher than the 26 meV provided by room temperature, thermal ALE will necessitate higher substrate temperatures of several hundred degrees Celsius.</p><p>The species used in thermal isotropic etching are neutrals with isotropic distribution of the direction of their motion. Therefore, the resulting etching profile is also isotropic. Figure <ref type="figure" target="#fig_4">6</ref> shows some different cases of ALE based on the modification and removal steps.</p><p>Because only thermal energies are involved, thermal isotropic ALE chemistry is characterized by high etch selectivities between materials if the right precursors are chosen. For example, metal oxides such as alumina or hafnia may be etched with selectivities greater than 1000 with respect to other materials used in chip design such as silicon, silicon oxide, or nitride. This ability allows for a residue-less removal of certain materials, even in hard-to-reach places inside high-aspect-ratio structures without any erosion of the surfaces or even sharp corners and edges of these materials.</p><p>In comparison to thermal isotropic ALE, directional ALE uses ions to remove the modified layer. This etching process operates very close to the sputtering thresholds of the modified and bulk materials. The ion energy is adjusted to allow sputtering of the modified layer but not the bulk material. In that way, self-limitation of the removal step is achieved. In reality, the sputtering threshold of the two materials may be too close together to achieve perfect self-limitation. <ref type="bibr" target="#b38">39</ref> A defining feature of both directional and thermal isotropic ALE lies in the self-limiting character of at least one of its constituting process steps. The EPC of ALE is defined by the material itself that is being etched and not by the reactor design. It can be controlled by the choice of process conditions such as substrate temperature (setting the reaction rates) and the process pressure (defining the modification depth in the substrate surface). An etch per cycle that is self-limited means that the added reaction time will not result in added etching as is the case in thermal etching. This feature allows for a great simplification in reactor design in semiconductor device manufacturing. Expensive etch uniformity knobs, which would control the across-wafer etch rate uniformity, are no longer needed or can be greatly simplified. In thermal ALE, etch progress will solely be controlled by the number of cycles when the amount of material etched in each cycle is constant. Reactor design comes into play when using the process in high volume production where the time per ALE cycle must be reduced to reduce the cost.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Classification of thermal ALE processes</head><p>There is a variety of ways to categorize thermal ALE. For example, ALE processes may be categorized by the precursors used or the number of steps required to ensure etching of the substrate </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>REVIEW</head><p>avs.scitation.org/journal/jva material. A key method, however, is the classification of ALE processes based on the specifics of the reaction mechanism. This approach has been outlined by George who has identified ten mechanisms of thermal ALE, which are summarized here: <ref type="bibr" target="#b37">38</ref> (1) Fluorination and ligand-exchange. The first example was published by Lee and George on Al 2 O 3 ALE using HF and Sn (acac) 2 to facilitate a ligand-exchange. <ref type="bibr" target="#b22">23</ref> (2) Conversion. This mechanism uses a metal precursor to convert the surface of the original metal oxide to another metal oxide. Examples are the conversion of ZnO to Al 2 O 3 using HF and trimethylaluminum (TMA) or SiO 2 using the same reactants. <ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41</ref> (3) Conversion to another metal oxide that etches spontaneously.</p><p>Another mechanism has been established by conversion of a metal oxide into another metal oxide that etches spontaneously for example via exposure to HF. Johnson and George <ref type="bibr" target="#b41">42</ref> and Fischer et al. <ref type="bibr" target="#b42">43</ref> have reported about this approach for the oxides of tungsten and molybdenum, respectively. (4) Oxidation to raise the oxidation state. This approach has been used if a lower oxidation state of a metal is not reactive with a compound that volatilizes it, but the higher oxidation state is. In TiN, for example, the oxidation state of the metal can be increased from 3+ when it is bonded to nitrogen to 4+ via oxidation with ozone to TiO 2 . This mechanism has been reported by Lee and George. 12 (5) Oxidation, conversion, fluorination, and ligand-exchange. This is an ALE mechanism that is particularly relevant for silicon ALE. Elemental silicon is oxidized either at high temperature with O 2 or with O 3 . Its oxide is then converted into aluminum oxide via TMA and the latter volatilized using ligand-exchange with TMA. This process has been described by Abdulagatov and George. 44 (6) Oxidation, conversion, and fluorination to volatile fluoride.</p><p>This class is very similar to 3, except that the conversion to another metal oxide such as B 2 O 3 is preceded by a primary oxidation of the metal via O 3 or an O 2 plasma. <ref type="bibr">42,43 (7)</ref> Oxidation and ligand volatilization. Mohimi et al. have provided evidence for an ALE process for metallic copper in which the surface is first converted to an oxide via the application of O 3 and then volatilized by using hexafluoroacetylacetone. 45 (8) Halogenation followed by ligand volatilization. Similar to copper, a cobalt ALE process exists that uses chlorine to modify the surface and hexafluoroacetylacetone or acetylacetone in the removal step. 46 (9) Chlorine-fluorine ligand-exchange. For example, TiO 2 can be fluorinated via WF 6 at lower temperatures (&lt;170 °C) and its fluorine ligands replaced by chlorine via application of BCl 3 resulting in a volatilization of titanium. 47 (10) Temperature modulation mechanism. Finally, Ikeda et al. proposed an ALE mechanism for elemental germanium during which its surface is modulated with chlorine at lower temperatures and then volatilized at a higher temperature. <ref type="bibr" target="#b21">22</ref> An alternative approach to categorizing thermal ALE processes is a classification based on the material that is being etched. The most common materials, based on the number of publications, are metal oxides followed by metals in their elemental form and semiconductors with their corresponding oxides. Another class particularly relevant for the semiconductor industry is nitrides consisting of silicon nitride or various metal nitrides.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Classification of thermal ALE processes by material</head><p>To classify materials relevant for ALE based by type, we propose five distinct classes. The distinction is based on basic material qualities such that the five classes are "metals," "metal oxides," "nitrides," "semiconductors," and "semiconductor oxides." In most cases, the class of material will determine the precursors that can etch them after a conversion of the top surface has taken place.</p><p>The thermal ALE of metals in their elemental form typically involves raising the oxidation state of the metal from zero to a higher value. The surface modification to obtain the higher oxidation states involves reacting the elemental metal with a halogen or oxygen reactant. The higher oxidation states are necessary because the volatile complexes of metals usually have the metal in these higher oxidation states. The precursors for volatile release of the modified surface layer cannot easily both change the oxidation state and complex with the metal. One example of precursors for the removal step are diketones for Co, Cu, and Fe ALE, where the oxidation state of the volatile metal complex can be +2 or +3. Another example of a precursor for the removal step is BCl 3 for W and Mo ALE, where the oxidation state of the volatile metal complex can be +6.</p><p>Metal oxides that include the oxides of Ga, V, Zn, and InGaZn together with high-k oxides such as Al 2 O 3 , HfO 2 , and ZrO 2 are characterized by the common fluorination and ligand-exchange theme. In the conversion step, ligand-exchange reactants such as TMA, DMAC, or Sn(acac) 2 can be used with a few exceptions (for example, fluorinated ZrO 2 will not etch with TMA).</p><p>Heterogeneous semiconductors such as InAlAs or InGaAs follow the same trend as high-k oxides in that their fluorides can react directly with DMAC, whereas Si requires a conversion to Al 2 O 3 via exposure to TMA first before the latter can be etched.</p><p>Silicon nitride requires an oxidation first to its oxide before the conversion to Al 2 O 3 , whereas TiN must be converted to a fourvalent oxide (via ozone) before it can be etched spontaneously with HF. A summary of these five classes of materials together with their precursors and modification pathways is given in Table <ref type="table">II</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Classification of modification steps</head><p>Modification steps by themselves can be categorized into "oxidation" steps where oxidation refers to an increase in the oxidation state of the cation in the material that is to be etched. This generalized oxidation can either be administered in the form of molecular oxygen or ozone or in the form of a halogen such as molecular chlorine, HF, XeF 2 , SF 4 , or NF 3 . Metal oxides are typically modified using fluorine in the form of HF as the oxidation agent, whereas metals require molecular chlorine or ozone to increase the oxidation state.</p><p>Materials such as Mo and W, some nitrides, and silicon need an oxidation to their corresponding oxides first which is followed by a conversion step to another oxide, for example, B 2 O 3 . In the case of Si or Si 3 N 4 ALE, the conversion step replaces silicon oxide with aluminum oxide. The resulting "secondary" oxide may then be removed via an HF clean step in the W and Mo cases, as HF etches B 2 O 3 spontaneously or via ligand-exchange after HF/TMA exposure (in the cases of Si or Si 3 N 4 ). <ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref><ref type="bibr" target="#b43">[44]</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Classification of removal steps</head><p>A removal step can come in a variety of types and needs to be tailored exactly to suit the intermediate products that exist after modification or conversion. The most common removal step is ligand-exchange in which ligand groups in the modified layer on the substrate are being exchanged with ligands of the incoming metal precursor from the vapor phase. An example of this is the "classical" reaction of fluorinated aluminum oxide with TMA. Clancey et al. provided detailed measurements of the reaction by-products coming off the surface of Al 2 O 3 after a ligand step with TMA or DMAC, respectively, using quadrupole mass spectroscopy. <ref type="bibr" target="#b47">48</ref> They found that products are leaving the modified surface in the form of dimers or trimers of dimethylaluminum fluoride (DMAF) with itself (DMAF-DMAF) or with TMA (DMAF-TMA).</p><p>Another type of removal step involves the spontaneous etching of an oxide that exists due to a previous conversion step. An example of this is the volatilization of B 2 O 3 upon exposure to HF (melting point of BF 3 is -126.8 °C) as is applied in W or Mo ALE. <ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43</ref> A third category of removal step involves the application of diketones, either Hacac or Hhfac, after an oxidation or chlorination step. This third class is commonly applied in ALE of metals such as for copper, cobalt, nickel, or iron.</p><p>A fourth category is tied to temperature cycling in which a modification was formed on the surface material at lower temperatures at which the modified layer does not volatilize. This modified surface can be removed by cycling the substrate to a temperature where the modified layer begins to volatilize. This process type has been explored by Ikeda et al. for germanium <ref type="bibr" target="#b21">22</ref> and by Miyoshi et al. for Si 3 N 4 . The latter describes the conversion of Si 3 N 4 into an (NH 4 )2SiF 6 layer through exposure to a hydrofluorocarbon plasma at 20 °C and a subsequent thermal anneal at 150 °C to desorb the (NH 4 )2SiF 6 layer. <ref type="bibr" target="#b48">49</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Classification by the nature of self-limitation</head><p>A third way to classify thermal isotropic ALE is to ask a more fundamental question of these atomic layer etch processes that helps identify what imposes the etch depth limitation. The ten classes of separate chemical reactions listed above do, while they may appear very different, ultimately serve the same purpose. These processes have one individual reaction that fundamentally defines the potential maximum etch amount per cycle and sets the self-limiting nature of the etch. The rest of the steps in the ALE process can occur spontaneously. ALE processes are made up of steps that may be divided into three classes of reactions based on their role in etching.</p><p>(1) Modification reactions that affect (or create) the anionic portion of the surface material. Ultimately, these reactions will be limited by two factors: total flux exposed to the surface and diffusion kinetics of the anion. The first factor will be limited by the process pressure and reactant exposure time in the modification step. The second factor, diffusion kinetics, can be much more involved. The rate of diffusion is the fundamental speed with which a foreign atom migrates through a given solid. The simplest way to affect diffusion is with temperature.</p><p>In addition, the conversion does in fact change the solid as it proceeds, as has been observed in solution-phase cation exchange reactions. The conversion may (1) make a change in the crystal morphology of the host material thereby limiting the availability of vacancies or (2) induce stress or strain in the host crystal, which would make the conversion of the host not thermodynamically favorable. <ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b50">51</ref> A consequence of (2) has been reported by Murdzek and George in which a reduction in etch per cycle was observed when going from amorphous to crystalline Hf, Zr, and Hf-Zr oxides. <ref type="bibr" target="#b51">52</ref> (2) A volatilization reaction focuses on removing the native cationic (or metal) species. These reactions are often thermal spontaneous etching and may leave behind a new species on the surface of the native material. These are cases where the reaction is purely thermal and well understood such as Al 2 O 3 thermal ALE with HF/DMAC. The same cannot be said for conversion reactions that lead to a newly deposited surface layer. In many examples, this newly deposited surface layer has been depicted as a conformal layer. <ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41</ref> Further experiments should verify this assumption. For example, studies are needed to confirm that a complete layer of Al 2 O 3 is formed on top of ZnO after the complete removal of ZnF 2 during ZnO ALE. If the ZnO layer is only partially covered, this could lead to</p><p>TABLE II. Summary of material classes in ALE. Material class Conversion into Precursors Metals Co Cu, Ni Fe Ge Mo, W Chloride oxide chloride chloride oxide, then B 2 O 3 Hhfac, Hacac Hhfac Hacac thermal cycling BCl 3 Metal oxides Ga 2 O 3 , VO 2 , ZnO, InGaZnO 4 , Al 2 O 3 , HfSiO 2, HfO 2 , HfZrO 2 , ZrO 2 Fluoride for all TMA, DMAC, Sn(acac) 2 Nitrides AlN GaN Si 3 N 4 TiN Fluoride fluoride oxide, then Al 2 O 3 oxide Sn(acac) 2 BCl 3 TMA HF Semiconductors InAlAs, InGaAs Si Fluoride Al 2 O 3 DMAC TMA Semiconductor oxides SiO 2 InGaZnO 4</p><p>Fluoride fluoride TMA DMAC patches of Al 2 O 3 that may have separate etch rates and lead to an increase in surface roughness.</p><p>(3) Cleanup reactions focus on removing any species left behind on the surface of the native material. This non-native material can either be removed concomitantly within the first two steps or a third, highly selective removal or cleanup step. This cleanup step may also provide the reversal to the self-limiting behavior, as the cleanup eliminates intermediate surface species from interfering with the main ALE reactivity as was shown by Lee et al. <ref type="bibr" target="#b35">36</ref> These three reaction building blocks can ultimately be used to discuss any given current ALE process. This classification would lead to three different ALE schemes: 1-2, 2-3, and 1-2-3. The numbering refers to the reaction types indicated above.</p><p>The model and most studied thermal ALE process is the etching of alumina. The underlying chemistry appears to involve reactions that are rich in chemistry and showcase a majority of possible ALE schemes. <ref type="bibr" target="#b47">48</ref> The typical reaction of this system involves the fluorination (modification) of alumina with anhydrous hydrogen fluoride and the volatilization of the aluminum fluoride with an organo-aluminum reagent. Mass spectroscopy studies of the TMA and DMAC based processes display a complex product stream consisting of multimeric methyl-aluminum halides. <ref type="bibr" target="#b47">48</ref> Experiments utilizing AlF 3 films performed with DMAC showed that a continuous etch is possible via spontaneous etching. <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b52">53</ref> The material amount removed directly scaled with exposure time to DMAC, but no such removal was observed when alumina was exposed to DMAC. This behavior indicates that the conversion of a thin layer of alumina to aluminum fluoride, which was observed by XPS, defines the etch per cycle in the HF-DMAC process. Experiments of the HF-converted alumina films indicated that not all AlF 3 is removed, potentially implying that a minimum fluorine atomic-percentage is necessary for the reaction to proceed. <ref type="bibr" target="#b51">52</ref> Since the fluorine concentration is expected to decrease parabolically with increasing diffusion depth, a remanent fluoridecontaining skin is left behind.</p><p>Such reactions of fluorination and removal have been shown to occur for a variety of additional oxides such as SiO 2 , VO 2 , HfO 2 , ZrO 2 , InGaZnO 4 , HfSiO 4 , HfZrO 2 , and Ga 2 O 3 . All utilize a similar reaction sequence: exposure to a fluorine source and then to specific organo-metallic reagents. The specific choice in chemistry appears to be most significant in determining the etch selectivity to other materials. Selectivity can be derived from the many reactions in Table <ref type="table">I</ref>. For example, ZrO 2 is only able to be etched with DMAC and not TMA. The addition of the chlorine into the volatilizing reagent enables the reaction although the exact mechanism has not been confirmed by mass spectrometry studies.</p><p>A more complicated example develops when Sn(acac) 2 is used as the volatilization chemistry. A continuous etch of aluminum fluoride with Sn(acac) 2 has not been observed and instead requires repeated exposure to HF or H 2 plasma to ensure the reaction can continue. <ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b53">54</ref> When exposed to Sn(acac) 2 , AlF 3 is hypothesized to give Sn(acac)F and Al(acac) 2 F, both of which are volatile. The selflimiting nature must then originate from the Sn(acac) 2 and has been shown (with IR spectroscopic support) <ref type="bibr" target="#b35">36</ref> to be due to the accumulation of acac ligands on the surface of the AlF 3 . It may be accumulation of these ligands on the surface that ultimately blocks the chemistry and prevents further etch. These ligands can be removed with the HF treatment restoring reactivity. The ultimate cause of this accumulation is not known. Possibly, there is a more fundamental change to the surface chemistry that is responsible for stopping the etch. In addition, preventing this self-limiting nature may be possible at sufficiently high temperatures if the ligands desorb.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Grand summary of all known ALE processes versus temperature and precursor</head><p>In Table <ref type="table">III</ref>, all known ALE publications are arranged by the material that is being etched. This table includes the number of ALE steps and reactants used in each etch process. Different materials covered in one paper are indicated by the same table background color.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Applications</head><p>Thermal isotropic ALE is a new etching technology and applications in the semiconductor industry are still emerging. <ref type="bibr" target="#b55">56</ref> The characteristic performance attributes such as selectivity, isotropic etching, low ARDE, and their ability to etch metals and metal oxides are very attractive for patterning of advanced semiconductor devices. Many metals and metal oxides, which are challenging to etch with RIE, can be etched isotropically and selectively by thermal isotropic ALE. These materials include Al 2 O 3 , HfO 2 , ZrO 2 , cobalt, copper, iron, and others. Coincidentally, these are materials that are also considered for emerging memory devices.</p><p>Vertical device integration is one of the responses of the semiconductor industry to the performance and cost challenges in traditional scaling. FinFET logic devices and 3D NAND flash memory are good examples. Vertical integration can, in principle, also be applied to emerging memory devices such as resistive randomaccess memory (RERAM) and phase change memory devices. This is a field of active development.</p><p>Figure <ref type="figure" target="#fig_5">7</ref> shows a hypothetical, simplified integration flow for a RERAM memory. A stack of alternating dielectric and metal layers is etched using reactive ion etching to form holes. Figure <ref type="figure" target="#fig_5">7</ref> shows the cross section through these holes. The dielectric materials can, for instance, be SiO 2 with TiN being the metal. The TiN layer can be recessed with thermal ALE selectively and with excellent control of the recess depth. The memory material, for instance, TiO x or TaO x , is deposited into the vertical hole and the recessed areas using ALD. The thickness of the ALD layer must be at least twice the thickness of the recessed dielectric film to ensure that the recesses are completely filled.</p><p>The memory layer is then etched back with thermal ALE to form a vertical layer, which is tens of nanometers thick depending on the device. Some of these devices require a second vertical layer, which is called a selector. The material can be NbO x . If a selector layer is needed, the combination of ALD and ALE must be repeated using the selector material and the recess must be deeper to accommodate the memory cell and the selector.</p><p>The next step is the formation of a second TiN electrode by ALD. The resulting memory cell is located at the cross sections of the horizontal TiN plates and the vertical TiN columns. They form</p><p>TABLE III. Summary of all known ALE publications arranged by the material that is being etched. Material etched Reactant 1 Reactant 2 Reactant 3 Lead author Reference Al 2 O 3 HF TMA Cano 28 J. Phys. Chem. 123, 10346 (2019)</p><p>TABLE III. (Continued.) Material etched Reactant 1 Reactant 2 Reactant 3 Lead author Reference Ge Cl 2 Thermal cycling Ikeda 22 Appl. Surf. Sci. 112, 87 (1997) HfO 2 HF Sn(acac) 2 Lee 35 ECS J. Solid State Sci. Technol. 4, N5013 (2015) HfO 2 HF Sn(acac) 2 , TMA, DMAC, SiCl 4 Lee 59 Chem. Mater. 28, 7657 (2016) HfO 2 HF TiCl4 Lee 70 J. Vac. Sci. Technol., A 36, 061504 (2018) HfO 2 HF DMAC Lee 61 J. Phys. Chem. C 123, 18455 (2019) HfO 2 HF, DFT study of fluorination reaction Mullins 24 Chem. Mater. 32, 3414 (2020) HfO 2 HF DMAC, TiCl 4 Murdzek 71 2019 International Symposium on VLSI, TSA (2019), p. 18970301. HfO 2 HF, XeF 2 , SF 4 DMAC, TiCl 4 Murdzek 52 J. Vac. Sci. Technol., A 38, 022608 (2020) HfZrO 2 HF DMAC, TiCl 4 Murdzek 71 2019 International Symposium on VLSI, TSA (2019), p. 18970301. HfZrO 2 HF, XeF 2 , SF 4 DMAC, TiCl 4 Murdzek 52 J. Vac. Sci. Technol., A 38, 022608 (2020) InGaAs HF DMAC Lu 72 IEDM (2018), 895. InAlAs HF DMAC Lu 73 Nano Lett. 19, 5159 (2019). InGaAs HF DMAC Lu 73 Nano Lett. 19, 5159 (2019). InGaZnO 4 HF DMAC Routzahn 74 U.S. patent pending Mo O 3 BCl 3 HF Fischer 43 U.S. patent pending Ni O 2 H + hfac Basher 75 J. Vac. Sci. Technol. A 38, 052602 (2020) Si O 2 HF TMA Abdulagatov 44 Chem. Mater. 30, 8465 (2018). Si ClF 3 , BrF 3 , BrF 5 , IF 5 Ibbotson 16 J. Appl. Phys. 56, 2939 (1984). Si Cl 2 Thermal cycling Imai 76 Jpn. J. Appl. Phys. 34, 9A (1995) Si 3 N 4 O 2 , O 3 HF TMA Abdulagatov 77 J. Vac. Sci. Technol., A 38, 022607 (2020) SiO 2 TMA HF DuMont 41 ACS Appl. Mater. Interfaces 9, 10296 (2017) SiO 2, CHF 3 TMA Rahman 62 ACS Appl. Mater. Interfaces 10, 31784 (2018) TiN O 3 HF Lee 12 Chem. Mater. 29, 8202 (2017) TiN CHF 3 /O 2 downstream plasma Thermal cycling Shinoda 78 J. Phys. D: Appl. Phys. 52, 475106</p><p>so-called memory arrays, which are connected to control circuits next to or under the memory array via metal connections. Other implementations have the memory device at the crossing of metal lines rather than at the intersections of plates and columns. This requires a few more etching and deposition steps, but the use of ALE is very similar.</p><p>In another example, gate-all-around InGaAs fins and nanowires have been fabricated using thermal isotropic ALE. <ref type="bibr" target="#b72">72,</ref><ref type="bibr" target="#b73">73</ref> The process utilized HF/DMAC at 300 °C, which gave an EPC of 0.24 and 0.62 nm for In 0.53 Ga 0.47 As on In 0.52 Al 0.48 As. In a first step, fins comprised of In 0.53 Ga 0.47 As on In 0.52 Al 0.48 As with a width of 28 nm were etched with RIE. Then, thermal isotropic ALE was used to reduce the width of the In 0.53 Ga 0.47 As to 4 nm while the In 0.52 Al 0.48 As layer underneath was completely removed. Thus, a suspended In 0.53 Ga 0.47 As horizontal nanowire was formed and subsequently encapsulated with dielectric Al 2 O 3 . The TEM of the final structure is shown in Fig. <ref type="figure">8</ref>. The resulting FET device was fully functional. <ref type="bibr" target="#b72">72,</ref><ref type="bibr" target="#b73">73</ref> The reasons why thermal isotropic ALE is used in these applications can be found in the unique properties of this etching technology:</p><p>(1) Isotropic etching: This capability allows etching in a horizontal direction to trim or separate vertical devices. (2) High selectivity: Because this process uses thermal energy, chemical reaction pathways can be utilized to achieve infinite selectivity. (3) Because the process uses separate processing steps where at least one is self-limiting, flux dependence and transport limited effects causing ARDE are greatly reduced as long as the precursor dose is large enough. (4) Thermal isotropic ALE has been shown to etch many metals and metal compounds. Many of these materials are difficult to etch with RIE or radicals, which are based on the formation of volatile halides and hydrides, which do not exist for many metals. Thermal isotropic ALE introduces a very wide range of chemistry options.</p><p>Another potential field of use of thermal isotropic ALE is to enhance area selective ALD as shown by Song et al. <ref type="bibr" target="#b81">81</ref> Patterning by means of etching requires deposition of the material, the deposition of a mask film, lithography, and etching. Selective depositing on</p><p>TABLE III. (Continued.) Material etched Reactant 1 Reactant 2 Reactant 3 Lead author Reference TiO 2 WF 6 BCl 3 Lemaire 47 Chem. Mater. 29, 6653 (2017) TiO 2 WF 6 BCl 3 Song 78 Chem. Mater. 31, 4793 (2019) VO 2 HF, SF 4 Sn(acac) 2 Gertsch 57 Chem. Mater. 31, 3624 (2019) W O 2 , O 3 BCl 3 HF Johnson 42 ACS Appl. Mater. Interfaces 9, 34435 (2017) W O 2 , O 3 WF 6 Xie 79 ACS Appl. Mater. Interfaces 10, 9147 (2018) W O 2 , O 3 WCl 6 Xie 80 J. Vac. Sci. Technol., A 38, 022605 (2020) WO 3 O 2 , O 3 BCl 3 HF Johnson 42 ACS Appl. Mater. Interfaces 9, 34435 (2017). ZnO Hacac O 2 plasma Mameli 20 ACS Appl. Mater. Interfaces 10, 38588 (2018) ZnO HF TMA Zywotko 40 Chem. Mater 29, 1183 (2017) ZrO 2 HF Sn(acac) 2 , TMA, DMAC, SiCl 4 Lee 59 Chem. Mater. 28, 7657 (2016) ZrO 2 HF DMAC Lee 61 J. Phys. Chem. C 123, 18455 (2019) ZrO 2 HF, DFT study of fluorination reaction Mullins 24 Chem. Mater. 32, 3414 (2020) ZrO 2 HF DMAC, TiCl 4 Murdzek 71 2019 International Symposium on VLSI, TSA (2019), p. 18970301 certain areas of the wafer is one potential approach to reduce cost.</p><p>Another advantage of area selective deposition is perfect alignment with the underlying features. One of the techniques to achieve area selective deposition is the combination of selective ALD and selective ALE. The ALE process can be used to remove grown material in the nongrowth area selectively. Thermal isotropic ALE is well suited to be such a "repair" step because of its high intrinsic selectivity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Plasma assisted isotropic ALE</head><p>Plasma can be utilized to generate radicals that may enhance thermal isotropic ALE processes. This situation is similar to ALD, where plasma generated ions and radicals are applied in the reaction steps. In ALE, radicals can effectively be used in the modification step to eliminate temperature effects of the adsorption steps. For instance, a remote inductively coupled plasma (ICP) was delivered to generate ozone, which enhanced the oxidation of tungsten in a conversion ALE process. <ref type="bibr" target="#b41">42</ref> An ICP plasma in direct contact with the wafer was applied to fluorinate Al 2 O 3 for subsequent removal with Sn(acac) 2 . <ref type="bibr" target="#b53">54</ref> After a few cycles, thin film growth due to Sn accumulation was observed and an H 2 plasma step had to be implemented to remove the tin residues. Apparently, plasma exposure led to the dissociation of residual SnF(acac) on the surface. These residues have been reported for Al 2 O 3 ALE with HF/Sn (acac) 2 . <ref type="bibr" target="#b35">36</ref> In this case, however, HF was effective to remove SnF (acac) without leaving dissociation products behind.</p><p>In AlN ALE with HF/Sn(acac) 2 , the EPC increased from 0.36 to 1.96 Å when a hydrogen plasma step was inserted after the Sn (acac) 2 removal step. <ref type="bibr" target="#b65">65</ref> This increase in EPC was attributed to the removal of acac residues. When an argon plasma was used instead of hydrogen, the EPC was 0.66 Å. This leads to the speculation that plasma exposure may create adsorption sites via formation of surface defects.</p><p>Another interesting plasma case was reported for ZnO ALE with acac and an O 2 plasma. <ref type="bibr" target="#b19">20</ref> In this case, plasma was used to remove acac residues. The process relies completely on the selflimiting behavior of the acac reaction with ZnO, which is a spontaneous thermal etching process leaving carbonaceous residues at the surface. When all adsorption sites were blocked by the carbonaceous residues, the etching stopped, and self-limitation took place. With an oxygen plasma, the surface could be reset and the process continued. This ALE process is unique because this process is lacking a modification step and uses plasma to reset the surface.</p><p>These examples illustrate that plasma can be a powerful tool to remove residues from the surface, which can form as by-products of the removal step. This can be important for the implementation of a wider range of precursors for thermal ALE. Some organic molecules undergo catalytic dissociation on metallic surfaces, which are an important class of materials to be etched. An example is the ALE process of Co using Cl 2 gas and Hhfac as the organic precursor. <ref type="bibr" target="#b82">82</ref> Catalytic dissociation on metallic surfaces may not only limit the choice of precursors due to their stability, but the stability of reaction products may also be affected as they may be even more complex than the precursor molecules.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSIONS AND FUTURE DIRECTION</head><p>Isotropic ALE is a highly relevant field of work. Thermal ALE is enabling the sub-10 nm technology nodes in the semiconductor industry that require lateral etches in 3D chip design. Other applications extend to processes that exhibit a low tolerance for plasma-induced damage or to those requiring a high surface smoothness after the completion of an etch step.</p><p>Over the last 20 years, but particularly in the past 5, a tremendous amount of research has been completed in many parts of the world exploring this exciting field of study. At the time of writing this review, nearly 70 papers were published covering almost 30 different chemical compounds or materials. Innovation in this area is ongoing with high intensity with the discovery of ever more sophisticated chemistries almost becoming a new art form.</p><p>The new challenges that have arisen in this field are from the need of running these processes in a high throughput mode in commercial applications. These requirements force process steps to FIG. 8. TEM cross sections of a 4 × 50 nm InGaAs nanowire covered by 4.7 nm ALD-grown Al 2 O 3 and 20 nm of ALD tungsten. Reprinted with permission from Lu et al., in International Electron Devices Meeting, San Francisco, 1-5 December 2018 (IEDM, Montgomery Village, 2018), p. 895. Copyright 2018, IEEE.</p><p>be operated far away from the saturated regime. As was pointed out, this may lead to unwanted device performance variations across the wafer or between the top and bottom of a 3D device stack. Future directions will need to address the trade-offs between processing speed and aspect ratio or device topology-induced accessibility constraints for reactants and by-products. These challenges can be overcome through multiple routes. For example, possible solutions include process regimes such as ultrahigh pressure, utilizing a certain degree of plasma assistance at least during the modification step, or by introducing additional process steps that counteract the topology challenges.</p><p>Additional work is needed in the near future by academia and the industry to make thermal isotropic ALE an integrated part of future semiconductor device manufacturing. We have started to understand many of the future requirements in shaping vertically integrated devices and to see an important role for thermal isotropic ALE. As one artist pointed out a long time ago on the challenges in his line of work, "The sculpture is already complete within the marble block, before I start my work. I just have to chisel away the superfluous material." <ref type="bibr" target="#b83">83</ref> </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. Schematic illustration of the temperature process window for thermal etching. From Lill et al., "Etching of semiconductor devices," in Materials Science and Technology. Copyright 2019 by Wiley. Adapted with permission from Wiley.</figDesc><graphic coords="3,61.00,473.22,227.96,169.17" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 3 .</head><label>3</label><figDesc>FIG. 3. Schematic illustration of the temperature process window for thermal isotropic ALE at constant temperature. Panel (a) shows the chemisorption of a reactant 1 without initiating etching representing a modification step in thermal ALE. In panel (b), this modified surface is exposed to a reactant 2, which results in a surface layer that desorbs at the given wafer temperature resulting in etching of the modified layer. From Lill et al., "Etching of semiconductor devices," in Materials Science and Technology. Copyright 2019 by Wiley. Adapted with permission from Wiley.</figDesc><graphic coords="5,54.43,282.28,241.17,324.11" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 4 .</head><label>4</label><figDesc>FIG. 4. Schematic of proposed reaction mechanism for Al 2 O 3 ALE showing (a) Sn(acac) 2 reaction and (b) HF reaction. Reprinted with permission from Lee and George, ACS Nano 9, 2061 (2015). Copyright 2015, American Chemical Society.</figDesc><graphic coords="5,316.40,450.99,241.17,191.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIG. 5 .</head><label>5</label><figDesc>FIG. 5. HF molecules reaching open areas directly, establishing flux F o and a surface concentration σ o . Shaded areas beneath the mask are only fluorinated indirectly at flux F s by desorbed fluorine originating from the open area. σ s , the surface concentration in the shade, will be lower than σ o if reactant dosing is not allowed to reach saturation resulting in a lower EPC beneath the mask. Reprinted with permission from Fischer et al., J. Vac. Sci. Technol., A 38, 042601 (2020). Copyright 2020, American Vacuum Society.</figDesc><graphic coords="8,55.05,101.99,239.99,168.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIG. 6 .</head><label>6</label><figDesc>FIG. 6. Classification of ALE by directionality. Because thermal ALE uses nondirectional species both in the modification and removal step, the result is an isotropic etching profile. Data reproduced from Ref. 5.</figDesc><graphic coords="9,114.07,423.50,383.99,236.86" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 7 .</head><label>7</label><figDesc>FIG.7. Schematic illustration of the formation of horizontal devices using a 3D Vertical integration scheme.</figDesc><graphic coords="16,54.43,101.99,241.17,122.74" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-1 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-4 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-5 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_4"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-6 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_5"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-7Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_6"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-9Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_7"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-10 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_8"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-11 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_9"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-12 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_10"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-13 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_11"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-14 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_12"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-15 Published under license by AVS.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_13"><p>J. Vac. Sci. Technol. A 39(3) May/Jun 2021; doi: 10.1116/6.0000894 39, 030801-17 Published under license by AVS.</p></note>
+		</body>
+		<back>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DATA AVAILABILITY</head><p>The data that support the findings of this study are available within the article and the articles listed in the Reference section.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0" />			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yoder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">S</forename></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988-07-12">12 July 1988</date>
+		</imprint>
+	</monogr>
+	<note>patent 4,756,794A</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page">111</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Faraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0051506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5023</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Etching of semiconductor devices</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gottscho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Materials Science and Technology</title>
+		<meeting><address><addrLine>Weinheim</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Mak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Coon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.40.7739</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page">7739</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Coon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Koehler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.458868</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page">2827</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Coon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Wise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Dillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.586305</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">221</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Coon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Wise</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.578052</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">324</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Wells</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rspa.1974.0120</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. R. Soc. London</title>
+		<imprint>
+			<biblScope unit="volume">339</biblScope>
+			<biblScope unit="page">245</biblScope>
+			<date type="published" when="1974">1974</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Controlled pulse-etching with xenon difluoride</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">B</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C P</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Warneke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Pister</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/sensor.1997.613739</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of IEEE International Solid State Sensors and Actuators Conference (Transducers &apos;97)</title>
+		<meeting>IEEE International Solid State Sensors and Actuators Conference (Transducers &apos;97)<address><addrLine>Chicago, IL; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="1997-06-19">19 June 1997. 1997</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="665" to="668" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b02286</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">8202</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Winters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.90562</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">70</biblScope>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Helms</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Deal</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.577676</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">806</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4983922</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="05C" to="202" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Ibbotson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Mucha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Flamm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Cook</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.333834</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page">2939</biblScope>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Holmes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Snell</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0026-2714(66)90162-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron. Reliab</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">337</biblScope>
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ruzyllo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Torek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Daffron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Grant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Novak</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2056249</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note>L</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Hess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Beck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Bohling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Voloshin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Lane</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1837194</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page">3257</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mameli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Verheijen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b12767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">38588</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">CRC Handbook of Chemistry and Physics</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Lide</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<publisher>CRC</publisher>
+			<biblScope unit="volume">85</biblScope>
+			<pubPlace>Boca Raton</pubPlace>
+		</imprint>
+	</monogr>
+	<note>th ed.</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ikeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Imai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Matsumuraf</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0169-4332(96)00995-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page">87</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nn507277f</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">2061</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mullins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">3414</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Routzahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5135911</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">22603</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.5b07236</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page">25385</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">E</forename><surname>Deal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Grove</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1713945</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">3770</biblScope>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b00124</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page">10346</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lucht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lerche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-C</forename><surname>Wille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><forename type="middle">V</forename><surname>Shvyd'ko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Rüter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gerdau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Becker</surname></persName>
+		</author>
+		<idno type="DOI">10.1107/S0021889803011051</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Crystallogr</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">1075</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Atomistic Simulation of the Passivation of Iron-Chromium Alloys Using Calculated Local Diffusion Activation Barriers</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Diawara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Beh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Marcus</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<publisher>Elsevier</publisher>
+			<biblScope unit="page">651</biblScope>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Routzahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000261</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">42601</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Winters</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.101937</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page">2730</biblScope>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Malek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-O</forename><surname>Coppens</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1584652</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page">2801</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Abel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lavoie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Purushottam</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">10727046. 28 July 2020</date>
+			<pubPlace>U.S.</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0041506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5013</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b00300</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">3648</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Plombon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Tronic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Turkot</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0021506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5005</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.accounts.0c00084</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page">1151</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4979019</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="05C" to="302" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">1183</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Marquardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b01259</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">10296</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b09161</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">34435</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Routzahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Varadarajan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>U.S. patent pending</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Abdulagatov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b02745</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">8465</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mohimi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">I</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Trinh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Babar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Girolami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Abelson</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0211809jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">491</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Konh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pallem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Opila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Teplyakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5082187</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">21004</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.7b00985</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">6653</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Clancey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E T</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b06104</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page">287</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kurihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kouzuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yokogawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<idno type="DOI">10.7567/JJAP.56.06HB01</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="06H" to="B7" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sadtler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">O</forename><surname>Demchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Erdonmez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Alivisatos</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1142593</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">317</biblScope>
+			<biblScope unit="page">355</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zanella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Genovese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Povia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Falqui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Giannini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Manna</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/nl202927a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Lett</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">4964</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5135317</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">22608</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Routzahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<title level="m">66th AVS Symposium</title>
+		<meeting><address><addrLine>Columbus, OH; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>AVS</publisher>
+			<date type="published" when="2019-10">October 2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Janek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Boniface</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1117/12.2258129</idno>
+		<title level="m">Proc. SPIE 10149</title>
+		<meeting>SPIE 10149</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4973310</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<biblScope unit="page">52819</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsnano.6b02991</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">4889</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Bright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b05294</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">3624</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hennessy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Jewell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>France</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nikzad</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4986945</idno>
+		<ptr target="REVIEWavs.scitation.org/journal/jva" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">41512</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title/>
+		<idno type="DOI">10.1116/6.0000894</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="30801" to="30816" />
+			<date type="published" when="2021-06">May/Jun 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b02543</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">7657</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b00111</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">2994</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b04767</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page">18455</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Mattson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Klesko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dangerfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rivillon-Amy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.8b10899</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">31784</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Zywotko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Faguet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5043488</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">61508</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b01930</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page">5912</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4959779</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">50603</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Konh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Teplyakov</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apsusc.2018.05.182</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">455</biblScope>
+			<biblScope unit="page">438</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Janotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Opila</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5039517</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">51401</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c00131</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">5937</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Hite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Mastro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><forename type="middle">R</forename><surname>Eddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5095938</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">243103</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5045130</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">61504</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<author>
+			<persName><forename type="first">J</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2019 International Symposium on VLSI</title>
+		<meeting><address><addrLine>Hsinchu, Taiwan; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2019-04-25">22-25 April 2019. 2019</date>
+			<biblScope unit="page">18970301</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<monogr>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Del Alamo</surname></persName>
+		</author>
+		<title level="m">International Electron Devices Meeting</title>
+		<meeting><address><addrLine>San Francisco; Montgomery Village</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEDM</publisher>
+			<date type="published" when="2018-12-05">1-5 December 2018. 2018</date>
+			<biblScope unit="page">895</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Gertsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Murdzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Cavanagh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Del Alamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.nanolett.9b01525</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Lett</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">5159</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Routzahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<publisher>U.S. patent pending</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Basher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Krstić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Fink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Karahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wenzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hamaguchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000293</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">52602</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Imai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Haga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Matsuzaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hattori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Matsumura</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.34.5049</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">5049</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Abdulagatov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5140481</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">22607</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shinoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Miyoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Izawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-6463/ab3cf3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page">475106</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b19024</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">9147</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5134430</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">22605</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Saare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Parsons</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b01143</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page">4793</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Opila</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5138989</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">22611</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Michelangelo</forename><surname>Di</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lodovico Buonarroti</forename><surname>Simoni</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="1475" to="1564" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

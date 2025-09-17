@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Atomic Layer Deposition of HfO 2 Using Alkoxides as Precursors</title>
+				<funder>
+					<orgName type="full">MARCO Materials Structures and Devices Center</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Office of Naval Research MURI</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">National Center for Supercomputing Applications</orgName>
+					<orgName type="abbreviated">NCSA</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Collin</forename><surname>Mui</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Charles</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemical Engineering</orgName>
+								<orgName type="institution">Stanford UniVersity</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Departments of Chemical Engineering and Materials Science and Engineering</orgName>
+								<orgName type="institution">Stanford UniVersity</orgName>
+								<address>
+									<postCode>94305</postCode>
+									<settlement>Stanford</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Novellus Systems, Inc</orgName>
+								<address>
+									<addrLine>4000 North First Street</addrLine>
+									<postCode>95134</postCode>
+									<settlement>San Jose</settlement>
+									<region>California</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Atomic Layer Deposition of HfO 2 Using Alkoxides as Precursors</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2992F20B62DE78E4E198F6D08A12CE0F</idno>
+					<idno type="DOI">10.1021/jp037507r</idno>
+					<note type="submission">ReceiVed: NoVember 17, 2003; In Final Form: March 2, 2004</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We have used density functional theory to investigate the atomic layer deposition (ALD) of hafnium oxide (HfO 2 ) thin films using metal alkoxides as both metal and oxygen precursors. In particular, we have predicted chemical mechanisms for the ALD of HfO 2 using tetraethoxyl hafnium [Hf(OEt) 4 ] and water. We find that the ALD half-reactions involve the formation of stable adsorbed complexes and precursor-mediated ligandexchange mechanisms. When Hf(OEt) 4 is used as the metal precursor and water is used as the oxygen source, both the metal and oxygen ligand-exchange reactions are unactivated with respect to the reactants. However, the reactions have moderate barriers relative to the adsorbed complexes, and the removal of the ethanol byproducts requires substantial desorption energies. However, when HfCl 4 is used as the metal precursor and Hf(OEt) 4 is used as the oxygen source, both the metal and oxygen half-reactions possess high activation barriers (∼30-40 kcal/mol). Our results imply that although Hf(OEt) 4 may be a suitable metal precursor it has relatively slow kinetics when used as an ALD oxygen source. We have also investigated several alternative reaction pathways that may affect the overall growth rate, including incomplete elimination surface reactions and nongrowth ligand exchange reactions. Finally, we discuss the self-limiting nature of the half-reactions and chemical strategies for adjusting the reactivity of alkoxide ALD precursors.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Moore's law, which states that the number of electronic devices in integrated circuits increases exponentially over time, has driven the microelectronics industry for the past several decades. However, continued scaling of semiconductor devices requires the integration of novel fabrication processes and new materials into future semiconductor technology. For example, as the thickness of the SiO 2 gate dielectric in silicon-metal oxide-semiconductor field effect transistor (MOSFET) devices approaches atomic dimensions, the tunneling current through the gate dielectric increases exponentially, and serious performance and reliability issues arise. Hence, there is an urgent need for an alternative higher-permittivity gate dielectric to replace SiO 2 . In addition, the deposition process must result in uniform and conformal thin films of the high-κ dielectric material with atomic-level control over large areas.</p><p>Although many materials have been proposed to replace SiO 2 in MOSFET devices, oxides of zirconium and hafnium, which possess good dielectric properties, are currently the leading candidates for future generation semiconductor devices. <ref type="bibr" target="#b1">[1]</ref><ref type="bibr" target="#b2">[2]</ref><ref type="bibr" target="#b3">[3]</ref><ref type="bibr" target="#b4">[4]</ref><ref type="bibr" target="#b5">[5]</ref><ref type="bibr" target="#b6">[6]</ref> The deposition of zirconium oxide and hafnium oxide ultrathin films can be achieved by a process called atomic-layer deposition (ALD), which is a vapor deposition process based on sequential self-terminating surface reactions. <ref type="bibr" target="#b7">7,</ref><ref type="bibr" target="#b8">8</ref> Because the precursors are introduced into the reactor separately, ALD does not involve gas-phase reactions, ideally meaning that it is a completely surface-reaction-limited process. Not only can ALD be used for a variety of different materials, but it is also capable of depositing highly conformal and uniform thin films with atomiclevel thickness control. Thus, ALD is particularly suitable for the deposition of high-κ ZrO 2 and HfO 2 gate dielectrics for future MOSFET devices.</p><p>ALD of ZrO 2 and HfO 2 is commonly performed using the respective metal chloride and water as precursors. <ref type="bibr" target="#b5">5,</ref><ref type="bibr" target="#b6">6,</ref><ref type="bibr" target="#b9">[9]</ref><ref type="bibr" target="#b10">[10]</ref><ref type="bibr" target="#b11">[11]</ref><ref type="bibr" target="#b12">[12]</ref> However, the metal chloride-water ALD process suffers from several disadvantages, such as chlorine contamination and slow growth rates due to submonolayer growth per cycle. As a result, high deposition temperatures are required to minimize Cl contamination. Unfortunately, for ALD of ZrO 2 and HfO 2 , the film quality degrades at high temperatures. To deposit very pure and uniform thin films at lower temperatures by ALD efficiently, alternative precursors that are reactive on the growing film surface but thermally stable in the liquid phase are preferred. Organometallic compounds, such as metal amides and metal alkoxides, have been proposed as ALD precursors for ZrO 2 and HfO 2 , and high-quality thin films have been obtained at temperatures as low as 150 °C. <ref type="bibr" target="#b3">3,</ref><ref type="bibr" target="#b4">4,</ref><ref type="bibr" target="#b13">[13]</ref><ref type="bibr" target="#b14">[14]</ref><ref type="bibr" target="#b15">[15]</ref><ref type="bibr" target="#b16">[16]</ref><ref type="bibr" target="#b17">[17]</ref> Metal alkoxides possess many desirable advantages as ALD precursors compared to metal chlorides. First, the high reactivity of metal alkoxides may result in lower deposition temperatures. Also, the use of metal alkoxides in ZrO 2 and HfO 2 ALD eliminates the possibility of chlorine contamination in the thin film, which is detrimental to device reliability. Moreover, because metal alkoxides contain both metal and oxygen, not only can they be used as both metal and oxygen precursors, but it is also possible to use them to deposit mixed metal thin films by ALD. <ref type="bibr" target="#b3">3,</ref><ref type="bibr" target="#b15">15</ref> Finally, the chemical properties of metal alkoxide precursors can be changed using principles of organic and organometallic chemistry. For example, because tert-butyl groups donate electrons more readily than methyl groups as a result of inductive effects, the reactivities of tetra-tert-butoxyl hafnium and tetramethoxyl hafnium are expected to be influenced by the ligands.</p><p>In this paper, we present a DFT study of the surface reactions of a proposed HfO 2 ALD mechanism using hafnium alkoxides as precursors. On the basis of our previous work, we expect the chemisty of ZrO 2 deposition to be similar to that of HfO 2 deposition; <ref type="bibr" target="#b5">5,</ref><ref type="bibr" target="#b6">6</ref> therefore, we focus on the surface reactions of tetraethoxyl hafnium [Hf(OEt) 4 ] during ALD of HfO 2 . In particular, we have determined atomistic mechanisms of two chemical systems for HfO 2 ALD involving Hf(OEt) 4 . First, we have calculated the surface reactions of HfO 2 ALD with Hf(OEt) 4 as the metal precursor and water as the oxygen source. Second, we have investigated ALD of HfO 2 with HfCl 4 as the metal precursor and Hf(OEt) 4 as the oxygen source. We focus on the chemical mechanisms of the ALD ligand-exchange halfreactions and alternative pathways for competing reactions. Although there is currently no experimental data for HfO 2 ALD using Hf(OEt) 4 , our calculations on this relatively simple model system explain the surface chemistry and reactivity trends of HfO 2 ALD using alkoxide precursors. In particular, we expect more complicated alkoxide precursors to behave similarly to Hf(OEt) 4 , and we will discuss precursor design using principles of organic chemistry to adjust the reactivity of the metallorganic precursor.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational Details</head><p>Our approach involves the application of quantum chemistry to the calculation of energies and other properties of reacting chemical systems from first principles. In particular, density functional theory (DFT) employing the B3LYP hybrid functional was used to determine the energies of the reactants, products, intermediates, and transition states of the surface reactions possibly involved in HfO 2 ALD. <ref type="bibr" target="#b18">18</ref> To model the active surface sites on the HfO 2 surface during ALD, we employed a cluster approximation. Specifically, the Hf(OH) 3 -OH, Hf(OH) 3 -OEt, and Hf(OH) 3 -Cl clusters were used to model the hydroxyl, ethoxyl, and chloride sites, respectively, on the as-grown HfO 2 thin-film surface (Figure <ref type="figure" target="#fig_0">1</ref>). It has been shown that ALD surface reactions on ZrO 2 and HfO 2 are localized in nature. <ref type="bibr" target="#b5">5,</ref><ref type="bibr" target="#b6">6</ref> However, the reaction energies are affected by the surrounding material if the precursor interacts directly with neighboring surface atoms, such as when the precursor adsorbs to two reactive sites or when the ligand bonds to neighboring surface atoms. In the cases that we have investigated, the additional interactions shift the PES by an amount equal to the energy of the additional interaction but generally do not affect the energetics of the elementary steps. <ref type="bibr" target="#b19">19</ref> In this paper, we have not included reactions involving multiple surface ligands.</p><p>The electronic structure was expanded using atomic basis functions. Energy minima and transition states on the potential energy surface (PES) for the reactions are obtained by performing unconstrained geometry optimization calculations. In the geometry optimization calculations, Hf atoms are described by the LANL2DZ effective core potential (ECP) basis set, <ref type="bibr" target="#b20">[20]</ref><ref type="bibr" target="#b21">[21]</ref><ref type="bibr" target="#b22">[22]</ref> whereas the 6-31G(d) basis set <ref type="bibr" target="#b23">[23]</ref><ref type="bibr" target="#b24">[24]</ref><ref type="bibr" target="#b25">[25]</ref><ref type="bibr">[26]</ref><ref type="bibr" target="#b26">[27]</ref> is used to describe nonmetal atoms such as C, Cl, H, and O. To improve the accuracy of the calculated reaction energies, we performed single-point energy calculations on the optimized structures with an enhanced mixed basis set scheme in which Hf and nonmetal atoms are described by the LANL2DZ and 6-31++G(d,p) basis sets, respectively. We have also performed full geometry optimizations with the enhanced mixed basis set for the reaction between water and the ethoxyl surface group and find that the relative energies from single-point calculations are accurate to within 1.2 kcal/ mol compared to those calculated using full geometry optimizations. All energy minima and transition states are verified by frequency calculations to have zero and one imaginary frequency, respectively. The energies reported are zero-point corrected. All calculations were performed using the Gaussian 98 program. <ref type="bibr" target="#b27">28</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p>Tetraethoxyl Hafnium as a Metal Precursor. The ligandexchange half-reactions of HfO 2 ALD using Hf(OEt) 4 and water as precursors involve ethanol (EtOH) elimination. In the metalligand exchange reaction, Hf(OEt) 4 reacts with a surface hydroxyl group [Hf-OH*] to form a new Hf-O bond on the surface and three surface ethoxyl groups [Hf-O-Hf(OEt) 3 *] (reaction 1). We have calculated three pathways for the metalligand exchange reaction. Ethanol (EtOH) is eliminated in the hydrogen-transfer and ethyl group-transfer pathways (reaction 1a), whereas the β-hydride-elimination pathway results in ethylene (C 2 H 4 ) and water (H 2 O) as byproducts (reaction 1b).</p><p>The oxygen-ligand exchange reaction (reaction 2) involves the reaction of water with a surface ethoxyl group produced by the metal-ligand exchange reaction. Although the oxygen-ligand exchange reaction also results in ethanol elimination, it does not lead to the formation of new Hf-O bonds. Instead, the reaction converts the surface ethoxyl groups to surface hydroxyl groups to prepare the surface for the subsequent metal halfreaction. This reaction is isodesmic (the reaction conserves the number of each type of bond) and should thus be approximately thermoneutral.</p><p>Metal-Ligand Exchange Half-Reactions. We have calculated several pathways that may occur during the Hf(OEt) 4 metalligand exchange cycle. Optimized structures of the hydrogentransfer pathway and the ethyl-transfer pathway (reaction 1a) are shown in Figures <ref type="figure" target="#fig_2">2</ref> and <ref type="figure">3</ref>, respectively. The calculated energies of the products, transition states, and intermediates at different temperatures are shown in Table <ref type="table">1</ref> for both pathways. Hf-OH* + Hf(OEt) 4 f Hf-O-Hf(OEt) 3 * + EtOH (reaction 1a) Hf-OH* + Hf(OEt) 4 f Hf-O-Hf(OEt) 3 * + C 2 H 4 + H 2 O (reaction 1b) Hf-OEt* + H 2 O f Hf-OH* + EtOH (reaction 2)</p><p>The hydrogen-transfer pathway begins with the adsorption of Hf(OEt) 4 onto the surface hydroxyl group to form a fourmembered-ring complex in which each Hf atom of the complex is 5-fold coordinated [Ads-Hf-OH-Hf(OEt) 4 ]. We find that the adsorbed Hf(OEt) 4 surface complex is very stable because it involves the formation of two dative bonds. The binding energy of the adsorbed complex is -27.2 kcal/mol with respect to the energy of the reactants. The hydroxyl group in the complex then transfers its hydrogen atom to one of the ethoxyl ligands of Ads-Hf-OH-Hf(OEt) 4 through a hydrogen-transfer transition state [TS1-Hf-OH-EtOH] to form a bound ethanol molecule. We find that the transition state is located at 15.5 kcal/mol with respect to the adsorbed complex. The rate-limiting step of the ethyl group-transfer pathway is the ethyl group-transfer step, which involves an overall activation barrier of 60.8 kcal/mol relative to the adsorbed complex at 0 K. The products, which include EtOH and Hf-O-Hf(OEt) 3 *, are located at -5.6 kcal/mol with respect to the reactants (Table <ref type="table">1</ref>).</p><p>Optimized structures of the β-hydride-elimination pathway (reaction 1b) are shown in Figure <ref type="figure" target="#fig_4">4</ref>. The pathway proceeds via an adsorbed surface complex [Ads-Hf-OH-Hf(OEt) 4 ], a β-hydride-elimination transition state [TS3-Hf-OH-C 2 H 4 -H 2 O], a water-bound intermediate [Int-Hf-OEt-H 2 O], a fourmembered-ring intermediate [Hf-Ring-OEt], and a ringopening transition state [TS-Hf-Ring-OEt] to form the ethoxyl-terminated surface [Hf-O-Hf(OEt) 3 *].</p><p>The rate-limiting step of the β-hydride-elimination pathway is the elimination of a β hydrogen from the ethoxyl group of the adsorbed complex to form water bound to the four-membered-ring intermediate. The overall activation barrier of the β-hydride-elimination pathway is calculated to be 44.5 kcal/mol with respect to the reactants, and the products of the reaction, which consist of C 2 H 4 , H 2 O, and Hf-O-Hf(OEt) 3 *, are located 4.9 kcal/mol above the energy of the reactants (Table <ref type="table">1</ref>).</p><p>Our calculations show that the hydrogen-transfer pathway is kinetically the most favorable for the conversion of surface TABLE 1: Temperature-Dependent Energetics for the Metal Half-Reaction of HfO 2 ALD with Hf(OCH 2 CH 3 ) 4 and H 2 O as Precursors a metal half-reaction ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Ads-Hf-OH-Hf(OEt)4 -27.2 -10.3 -1.5 7.3 15.9 TS1-Hf-OH-EtOH -11.7 6.0 15.5 25.0 34.5 TS2-Hf-OH-EtOH 33.6 52.2 62.1 71.8 81.5 Int-Hf-OEt-EtOH -15.3 2.6 12.1 21.5 30.9 Hf-Ring-OEt + EtOH 1.0 6.9 10.4 14.0 17.7 TS-Hf-Ring-OEt + EtOH 0.7 7.4 11.6 16.0 20.5 Hf-O-Hf(OEt)3* + EtOH -5.6 -3.2 -1.8 -0.4 1.1 Ads-Hf-OH-Hf(OEt)4 -27.2 -10.3 -1.5 7.3 15.9 TS3-Hf-OH-C2H4-H2O 17.3 35.9 45.9 55.7 65.3 Int-Hf-OEt-H2O + C2H4 -2.2 5.0 8.7 12.4 16.0 Hf-Ring-OEt + C2H4 + H2O 11.5 9.0 7.5 6.0 4.6 TS-Hf-Ring-OEt + C2H4 + H2O 11.2 9.5 8.7 8.0 7.4 Hf-O-Hf(OEt)3* + C2H4 + H2O 4.9 -1.0 -4.7 -8.4 -12.0 a Energies are relative to the reactants in kcal/mol and are zero-point corrected.</p><p>hydroxyl termination on the HfO 2 surface to an ethoxylterminated surface. In particular, the rate-limiting step of the hydrogen-transfer pathway is ethanol desorption, and the activation barrier for the elementary process is 16.3 kcal/mol. Although the same adsorbed complex [Ads-Hf-OH-Hf-(OEt) 4 ] is involved in the three pathways, the activation barriers for the ethyl group-transfer and the β-hydride-elimination elementary steps are 60.8 and 44.5 kcal/mol, respectively. In addition, the β-hydride-elimination pathway is thermodynamically unfavorable. Therefore, the ethyl group-transfer and the β-hydride-elimination pathways are not likely to compete with the hydrogen-transfer mechanism of the metal-ligand exchange cycle of HfO 2 ALD using Hf(OEt) 4 as the metal precursor.</p><p>A major difference between the ethyl group-transfer and the β-hydride-elimination pathways is that whereas the ethyl grouptransfer pathway involves ethanol as the only gas phase byproduct the β-hydride-elimination pathway results in two gasphase products, ethylene and water. Therefore, for the β-hydrideelimination pathway, the free energy of the products has a larger entropic contribution from the two gas-phase products at high temperature. As a result, the reaction free energy of the β-hydride-elimination pathway decreases more quickly than the reaction free energy of the ethyl group-transfer pathway as the temperature is raised, leading to the intersecting Gibbs free energy curves seen in Figure <ref type="figure" target="#fig_4">4</ref>.</p><p>Oxygen-Ligand Exchange Half-Reaction. The reaction pathway for the oxygen-ligand exchange half-reaction (reaction 2), which involves the reaction of water with surface ethoxyl groups, is shown in Figure <ref type="figure" target="#fig_5">5</ref>. In addition, the energetics for this half-reaction at different temperatures are summarized in Table <ref type="table">2</ref>. The first step of the oxygen-ligand exchange halfreaction involves the adsorption of water onto the Hf atom of the ethoxyl-terminated surface site (Hf-OEt*) to form a dativebonded water complex (Ads-Hf-OEt-H 2 O). Our calculations show that the adsorption energy is 10.6 kcal/mol. A hydrogen atom then transfers from the adsorbed water complex to the surface ethoxyl group to form an adsorbed ethanol complex via a transition state (TS-Hf-OEt-EtOH) located at 10.8 kcal/ mol with respect to the adsorbed complex. The energy of the dative-bonded ethanol complex is -9.3 kcal/mol with respect to the reactants (Int-Hf-OH-EtOH). Finally, ethanol desorbs to complete the conversion of the surface ethoxyl group to a surface hydroxyl group (Hf-OH*). The overall reaction is endothermic by 2.5 kcal/mol. These results show that the activation barrier of the oxygen-ligand exchange reaction is lower than that of the metal-ligand exchange reaction.</p><p>Tetraethoxyl Hafnium as an Oxygen Precursor. Tetraethoxyl hafnium can also be used as the oxygen precursor for ALD of HfO 2 . In particular, we have investigated surface reactions that are likely involved in ALD of HfO 2 with HfCl 4 as the metal precursor and Hf(OEt) 4 as the oxygen precursor. The metal half-reaction involves the surface reaction of HfCl 4 with surface ethoxyl sites, which results in the formation of a chlorine-terminated surface (reaction 3). We have studied two different reaction pathways for the reaction of HfCl 4 on the ethoxyl surface site, namely, the ethyl group transfer (reaction 3a) and the β-hydride elimination (reaction 3b).</p><p>The reaction of Hf(OEt) 4 with surface chloride groups constitutes the oxygen half-reaction, which leads to the restoration of the surface ethoxyl termination layer and the elimination of gas-phase products (reaction 4). Similar to the metal-ligand exchange reaction, the ethyl group-transfer (reaction 4a) and the β-hydride-elimination (reaction 4a) pathways are investigated.</p><p>Metal Half-Reaction. The metal half-reaction involves the reaction of HfCl 4 with the ethoxyl surface site. We have calculated two pathways for the reaction, with their energies summarized in Table <ref type="table">3</ref>. The ethyl group-transfer pathway (reaction 3a) involves an initial adsorption of HfCl 4 onto the ethoxyl surface site to form a dative-bonded complex with an adsorption energy of 20.9 kcal/mol (Ads-Hf-OEt-HfCl 4 ). The complex then undergoes ethyl group transfer via a transition state (TS1-Hf-Cl-EtCl) to form the chlorine-terminated surface site (Hf-O-HfCl 3 *) via elimination of ethyl chloride. We find that the activation barrier for this ethyl group-transfer process is 21.4 kcal/mol with respect to the reactants and 42.3 kcal/mol relative to the adsorbed complex. The products are located at -13.4 kcal/mol with respect to the reactants. Although the overall reaction is thermodynamically favorable, the calculated activation barrier for the ethyl group-transfer pathway of the metal half-reaction is relatively high.</p><p>The β-hydride-elimination pathway (reaction 3b) begins with the adsorption of HfCl 4 to form an adsorbed complex dative TABLE 2: Temperature-Dependent Energetics for the Oxygen Half-Reaction of HfO 2 ALD with Hf(OCH 2 CH 3 ) 4 and H 2 O as Precursors oxygen half-reaction ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Ads-Hf-OEt-H2O -10.6 2.1 8.8 15.5 22.1 TS-Hf-OEt-EtOH 0.2 13.0 20.5 27.9 35.3 Int-Hf-OH-EtOH -9.3 4.1 11.2 18.2 25.1 Hf-OH* + EtOH 2.5 3.0 3.7 4.4 5.2 a Energies are relative to the reactants in kcal/mol and are zeropoint corrected. bonded to the surface ethoxyl group (Ads-Hf-OEt-HfCl 4 ). This pathway then proceeds via a β-hydride-elimination transition state (TS2-Hf-OEt-C 2 H 4 -HCl) to form a weakly bound hydrogen chloride complex (Int-Hf-Cl-HCl), releasing an ethylene molecule to the gas phase. Finally, HCl desorbs to form the ethoxyl-terminated surface site (Hf-O-HfCl 3 *). The β-hydride-elimination transition state is located at 15.6 kcal/mol with respect to the reactants and 36.5 kcal/mol above the adsorbed state. The final products are 2.3 kcal/mol less stable than the reactants at 0 K (Table <ref type="table">3</ref>).</p><p>Oxygen Half-Reaction. The oxygen half-reaction for ALD of HfO 2 with HfCl 4 and Hf(OEt) 4 as precursors involves the reaction of Hf(OEt) 4 on a chlorine-terminated surface site (Hf-Cl*). Similar to the metal half-reaction, we find two reaction pathways for the oxygen half-reaction with the calculated energies summarized in Table <ref type="table">4</ref>. The reaction path for the ethyl group-transfer pathway involves an initial adsorption of Hf-(OEt) 4 onto the chloride surface site to form a dative-bonded complex [Ads-Hf-Cl-Hf(OEt) 4 ]. The complex then reacts to form the final ethoxyl-terminated surface site [Hf-O-Hf-(OEt) 3 *] via an ethyl group transition state [TS1-Hf-OEt-EtCl]. The adsorbed complex, transition state, and final products are located at -17.0, 27.9, and -4.5 kcal/mol with respect to the reactants, respectively (Table <ref type="table">4</ref>). Therefore, the activation barrier of the reaction is 44.9 kcal/mol with respect to the adsorbed complex. We find that the mechanisms for the ethyl group-transfer pathways of the metal and oxygen half-reactions are similar; both involve an initial adsorption and ethyl group transfer to form the products in a single step.</p><p>The β-hydride-elimination mechanism for the oxygen halfreaction involves the adsorption of Hf(OEt) 4 onto the chlorineterminated surface site to form a dative-bonded complex [Ads-Hf-Cl-Hf(OEt) 4 ]. The complex then undergoes β-hydride elimination [TS2-Hf-Cl-C 2 H 4 -HCl] to form an HCl molecule bound to the ethoxyl-terminated surface site [Int-Hf-OEt-HCl]. Finally, the desorption of HCl occurs to regenerate the ethoxyl-terminated surface site [Hf-O-Hf(OEt) 3 *] for the next metal half-reaction. We find that the adsorbed complex, β-hydride transition state, bound HCl, and final products have energies of -17.0, 19.8, 7.5, and 11.3 kcal/mol relative to the reactants, respectively (Table <ref type="table">4</ref>). Thus, the activation barrier of the oxygen half-reaction is 36.8 kcal/mol with respect to the adsorbed complex.</p><p>When the energies of the ethyl group-transfer and the β-hydride-elimination pathways for both the metal and oxygen half-reactions are compared, the calculations show that whereas the ethyl group-transfer pathway involves a higher activation barrier the products are thermodynamically more stable at 0 K. However, the reaction free energy for the ethyl group-transfer pathway increases as the temperature is increased. On the other hand, the β-hydride-elimination pathway results in two gasphase products, and the reaction free energy decreases when the temperature is increased because entropic driving forces dominate at high temperatures. In particular, the products of the β-hydride-elimination pathway have lower free energy than those of the ethyl group-transfer pathway at 750 K.</p><p>Incomplete Elimination Surface Reactions. Tetraethoxyl Hafnium as a Metal Precursor. Competing reactions may lead to the incomplete removal of surface termination groups or submonolayer growth; therefore, we have investigated the possibility of alternative reactions that may compete kinetically with the ligand-exchange half-reactions described above. In particular, we have studied two reaction pathways leading to the incomplete elimination of surface ethoxyl terminating groups during ALD of HfO 2 with Hf(OEt) 4 as the metal precursor.</p><p>Figure <ref type="figure" target="#fig_8">6</ref> shows the ethyl group-transfer pathway for a competing reaction to the metal half-reaction of HfO 2 ALD with Hf(OEt) 4 as the metal precursor. Temperature-dependent energetics for the incomplete-elimination pathway are summarized in Table <ref type="table">5</ref>  <ref type="figure">3</ref>) results in the formation of three ethoxyl groups, the alternative reaction pathway in Figure <ref type="figure" target="#fig_8">6</ref> results in two ethoxyl groups and one residual hydroxyl group on the surface Hf. Therefore, although this alternative surface-reaction pathway leads to HfO 2 deposition, it results in the incomplete elimination of surface hydroxyl groups; therefore, the reaction is not self-limiting. However, the activation barrier of this incomplete-elimination surface reaction is 31.5 kcal/mol relative to the entrance channel and 58.7 kcal/mol relative to the adsorbed complex (Table <ref type="table">5</ref>) and is therefore not expected to compete with the hydrogen-</p><p>TABLE 3: Temperature-Dependent Energetics for the Metal Half-Reaction of HfO 2 ALD with HfCl 4 and Hf(OCH 2 CH 3 ) 4 as Precursors a metal half-reaction ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Ads-Hf-OEt-HfCl4 -20.9 -5.8 1.8 9.2 16.5 TS1-Hf-Cl-EtCl 21.4 35.4 42.3 49.0 55.5 Hf-O-HfCl3* + EtCl -13.4 -13.3 -13.2 -13.1 -13.0 Ads-Hf-OEt-HfCl4 -20.9 -5.8 1.8 9.2 16.5 TS2-Hf-OEt-C2H4-HCl 15.6 30.4 37.8 45.1 52.2 Int-Hf-Cl-HCl + C2H4 2.1 2.2 1.4 0.5 -0.6 Hf-O-HfCl3* + C2H4 + HCl 2.3 -5.5 -10.1 -14.9 -19.6 a Energies are relative to the reactants in kcal/mol and are zeropoint corrected. TABLE 4: Temperature-Dependent Energetics for the Oxygen Half-Reaction of HfO 2 ALD with HfCl 4 and Hf(OCH 2 CH 3 ) 4 as Precursors a metal half-reaction ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Ads-Hf-Cl-Hf(OEt)4 -17.0 -0.5 7.9 16.2 24.3 TS1-Hf-OEt-EtCl 27.9 44.5 52.9 61.2 69.3 Hf-O-Hf(OEt)3* + EtCl -4.5 -3.5 -3.2 -2.9 -2.6 Ads-Hf-Cl-Hf(OEt)4 -17.0 -0.5 7.9 16.2 24.3 TS2-Hf-Cl-C2H4-HCl 19.8 36.1 44.2 52.1 59.8 Int-Hf-OEt-HCl + C2H4 7.5 9.5 9.9 10.1 10.2 Hf-O-Hf(OEt)3* + C2H4 + HCl 11.3 4.3 -0.2 -4.7 -9.2 a Energies are relative to the reactants in kcal/mol and are zero-point corrected.</p><p>transfer pathway, the rate-limiting step of which involves an activation barrier of 16.3 kcal/mol. (Figure <ref type="figure" target="#fig_2">2</ref>). Figure <ref type="figure" target="#fig_10">7</ref> shows another reaction pathway that leads to the incomplete elimination of surface ethoxyl groups of the metal half-reaction of HfO 2 ALD with Hf(OEt) 4 as the metal precursor. The species of the incomplete-elimination surface reaction pathway are the initial adsorbed complex [Ads-Hf-OH-Hf-</p><formula xml:id="formula_0">(OEt) 4 ], β-hydride-elimination transition state [TS2-Hf-OH- C 2 H 4 -EtOH], ethanol-bound complex [Int-Hf-OEt-OH- EtOH], four-membered-ring intermediate [Hf-Ring-OEt-OH],</formula><p>ring-opening transition state [TS-Hf-Ring-OEt-OH], and residual hydroxyl group [Hf-OH-(OEt) 2 *]. The activation barrier for the β-hydride-elimination pathway is calculated to be 15.6 kcal/mol relative to the reactants and 42.8 kcal/mol relative to the adsorbed complex (Table <ref type="table">5</ref>), which is significantly higher than the hydrogen-transfer barrier of the metal halfreaction. Therefore, we do not expect incomplete elimination via either ethyl group transfer or β-hydride elimination to compete with the hydrogen-transfer pathway of the metal halfreaction for HfO 2 ALD. In other words, the incomplete TABLE 5: Temperature-Dependent Energetics for Incomplete Elimination Reactions of Hf(OCH 2 CH 3 ) 4 with Surface Hf-OH* Groups a incomplete elimination ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Ads-Hf-OH-Hf(OEt)4 -27.2 -10.3 -1.5 7.3 15.9 TS1-Hf-OH-EtOEt 31.5 50.5 60.6 70.6 80.4 Int-Hf-OEt-OH-EtOEt -15.5 2.6 12.2 21.7 31.1 Hf-Ring-OEt-OH + EtOEt -2.4 4.0 8.0 12.1 16.3 TS-Hf-Ring-OEt-OH + EtOEt -2.6 4.3 8.8 13.5 18.3 Hf-OH-(OEt) 2* + EtOEt -7.6 -4.3 -2.5 -0.7 1.1 Ads-Hf-OH-Hf(OEt)4 -27.2 -10.3 -1.5 7.3 15.9 TS2-Hf-OH-C2H4-EtOH 15.6 34.2 44.2 54.1 63.8 Int-Hf-OEt-OH-EtOH + C2H4 -3.2 3.4 6.8 10.2 13.5 Hf-Ring-OEt-OH + C2H4 + EtOH 12.5 8.2 6.5 4.8 3.3 TS-Hf-Ring-OEt-OH + C2H4 + EtOH 12.2 8.5 7.2 6.2 5.2 Hf-OH-(OEt)2* + C2H4 + EtOH 7.3 0.0 -4.1 -8.0 -12.0 a Energies are relative to the reactants in kcal/mol and are zero-point corrected.</p><p>elimination of surface hydroxyl groups is not likely to occur during HfO 2 ALD via these two pathways when Hf(OEt) 4 is used as the metal precursor.</p><p>Tetraethoxyl Hafnium as an Oxygen Precursor. When Hf(OEt) 4 is used as the oxygen precursor, we find two incomplete-elimination reaction pathways that may compete kinetically with the oxygen half-reaction. Free energies at several temperatures for the incomplete-elimination reactions are summarized in Table <ref type="table">6</ref>. The ethyl group-transfer reaction proceeds by the adsorption of Hf(OEt) 4 onto the chlorine-terminated surface site [Ads-Hf-Cl-Hf(OEt) 4 ], followed by ethyl group transfer [TS1-Hf-Cl-EtOEt] to form a bound diethyl ether [Int-Hf-OEt-Cl-EtOEt]. Finally, diethyl ether desorbs from the complex to form a Hf surface site terminated with two ethoxyl ligands and one chlorine atom [Hf-Cl-(OEt) 2 ]. The ethyl group-transfer pathway for incomplete elimination has an activation barrier of 47.6 kcal/mol with respect to the adsorbed complex, and the overall reaction is exothermic by 8.8 kcal/ mol (Table <ref type="table">6</ref>).</p><p>An alternative reaction pathway for the incomplete elimination of surface chlorines involves the β-hydride elimination of an ethoxyl group. Similar to the ethyl group-transfer pathway, the β-hydride-elimination pathway proceeds by an initial adsorption of Hf(OEt) 4  Finally, ethanol desorbs from the complex to form a Hf surface TABLE 6: Temperature-Dependent Energetics for Incomplete Elimination Reactions of Hf(OCH 2 CH 3 ) 4 with Surface Hf-Cl* Groups a Incomplete elimination ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Ads-Hf-Cl-Hf(OEt)4 -17.0 -0.5 7.9 16.2 24.3 TS1-Hf-Cl-EtOEt 30.6 50.1 60.3 70.3 80.2 Int-Hf-OEt-Cl-EtOEt -15.4 3.2 12.9 22.5 31.9 Hf-Cl-(OEt)2 + EtOEt -8.8 -5.9 -4.3 -2.7 -1.1 Ads-Hf-Cl-Hf(OEt)4 -17.0 -0.5 7.9 16.2 24.3 TS2-Hf-Cl-C2H4-EtOH 14.3 33.5 43.7 53.7 63.5 Int-Hf-OEt-EtOH + C2H4 -5.4 1.8 5.4 8.9 12.2 Hf-Cl-(OEt)2 + C2H4 + EtOH 6.0 -1.6 -5.8 -10.0 -14.1 a Energies are relative to the reactants in kcal/mol and are zero-point corrected.  <ref type="table">6</ref>).</p><p>When the energetics of incomplete elimination and the oxygen half-reaction of HfO 2 ALD with Hf(OEt) 4 as the oxygen source are compared, our calculations show that incomplete elimination through β-hydride elimination is likely to compete kinetically with the oxygen half-reaction. This is because incomplete elimination through β-hydride elimination involves an activation barrier of 31.3 kcal/mol (Table <ref type="table">6</ref>), which is lower than the activation barriers of either the ethyl group-transfer pathway (44.9 kcal/mol) or the β-hydride-elimination pathway (36.8 kcal/ mol) of the oxygen half-reaction (Table <ref type="table">4</ref>). Furthermore, the incomplete-elimination reaction results in a residual chlorine atom on the surface. Consequently, chlorine incorporation into the HfO 2 film is facilitated by the incomplete-elimination pathway, and because this reaction competes kinetically with the ligand-exchange half-reactions, it is a likely mechanism for Cl contamination of ALD-grown HfO 2 using HfCl 4 as the metal source and Hf(OEt) 4 as the oxygen source.</p><p>Nongrowth Ligand-Exchange Reactions. Although incomplete-elimination reactions result in residual surface termination groups, they deposit a metal atom as do the ligand-exchange half-reactions. However, nongrowth ligand-exchange reactions do not result in material deposition and therefore may affect the overall ALD growth rate. Figure <ref type="figure">8</ref> shows a nongrowth ligand-exchange reaction between Hf(OEt) 4 and a surface hydroxyl group, the energies of which are summarized in Table <ref type="table">7</ref>. The nongrowth ligand-exchange reaction involves the adsorption of Hf(OEt) 4 onto the surface hydroxyl group [Hf-OH*] to form a dative-bonded complex [Ads-Hf-OH-Hf(OEt) 4 ], followed by the desorption of triethoxylhydroxyl hafnium [HfOH(OEt) 3 ] to form an ethoxyl-terminated surface site [Hf-OEt*]. In this reaction, the hydroxyl ligand is converted to the ethoxyl ligand through a ligand-exchange process with gas-phase ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Hf(OEt)4 + Hf-OH* 0.0 0.0 0.0 0.0 0.0 Ads-Hf-OH-Hf(OEt)4 -27.2 -10.3 -1.5 7.3 15.9 Hf-OEt* + Hf(OEt)3-OH 0.1 -0.6 -0.9 -1.3 -1.6 HfCl4 + Hf-OEt* 0.0 0.0 0.0 0.0 0.0 Ads-Hf-OEt-HfCl4 -20.9 -5.8 1.8 9.2 16.5 Hf-Cl* + HfCl3-OEt -9.6 -8.4 -7.6 -6.8 -6.0 Hf(OEt)4 + Hf-Cl* 0.0 0.0 0.0 0.0 0.0 Ads-Hf-Cl-Hf(OEt)4 -17.0 -0.5 7.9 16.2 24.3 Hf-OEt* + Hf(OEt)3-Cl -1.7 -2.6 -3.2 -3.8 -4.3 a Energies are relative to the reactants in kcal/mol and are zeropoint corrected.</p><p>Hf(OEt) 4 . This reaction has no transition state, and the products are located 0.1 kcal/mol above the reactants at 0 K (Table <ref type="table">7</ref>).</p><p>Nongrowth ligand-exchange reactions can also compete with the ALD half-reactions when Hf(OEt) 4 is used as the oxygen precursor. For example, nongrowth ligand exchange between HfCl 4 and an ethoxyl surface site involves the adsorption of HfCl 4 onto the ethoxyl surface termination group (Hf-OEt*) to form an adsorbed complex (Ads-Hf-OEt-HfCl 4 ), followed by the desorption of gas-phase trichloroethoxyl hafnium (HfCl 3 -OEt) to form an Hf-Cl* site on the surface. This reaction has no overall activation barrier at 0 K and is exothermic by 9.6 kcal/mol at 0 K (Table <ref type="table">7</ref>).</p><p>We have also calculated the reaction path for a nongrowth ligand-exchange reaction between Hf(OEt) 4 and a chlorineterminated surface site. Similar to the nongrowth ligandexchange reactions described above, the pathway proceeds by the initial adsorption of Hf(OEt) 4 onto the surface, in this case, the chlorine-terminated surface site [Hf-Cl*], to form a dativebonded complex [Ads-Hf-Cl-Hf(OEt) 4 ]. This step is followed by the desorption of chlorotriethoxyl hafnium [HfCl-(OEt) 3 ], which results in an ethoxyl ligand on the surface [Hf-OEt*]. The reaction is exothermic by 1.7 kcal/mol and has no transition state (Table <ref type="table">7</ref>).</p><p>Unlike incomplete-elimination reactions, which possess relatively high activation barriers, nongrowth exchange reactions have no transition states, and thus their activation energies relative to the reactants are equal to their reaction energy. Therefore, whereas the incomplete-elimination reactions are unlikely to compete with the ligand-exchange half-reactions for HfO 2 ALD using Hf(OEt) 4 , nongrowth ligand-exchange reactions can compete kinetically with the half-reactions. For example, when Hf(OEt) 4 is used as the oxygen source, the β-hydride-elimination pathway of the oxygen half-reaction and incomplete elimination have calculated activation barriers of 36.8 and 31.3 kcal/mol, respectively, whereas nongrowth ligand exchange between Hf(OEt) 4 and Hf-Cl* has an effective activation barrier of 15.3 kcal/mol. In addition to kinetic competition, nongrowth ligand-exchange reactions merely involve the exchange of surface termination groups and do not deposit material. Therefore, they decrease the overall ALD growth rate to the degree that these pathways are active. This is especially true when Hf(OEt) 4 is used as the oxygen precursor because the ligand-exchange half-reactions leading to growth possess relatively high activation barriers.</p><p>Self-Terminating Nature of the Half-Reactions. Whereas nongrowth ligand-exchange reactions decrease the overall growth rates, the reaction of gas phase precursors with the surface termination layer beyond the self-terminating limit increases the overall deposition rate. However, these reactions are undesirable in ALD because its self-limiting nature and associated desirable properties are negatively affected. To investigate the self-limiting nature of HfO 2 ALD using Hf(OEt) 4 , we have calculated two pathways for the reaction of Hf(OEt) 4 with surface ethoxyl termination groups.</p><p>Figure <ref type="figure" target="#fig_13">9</ref> shows the ethyl group-transfer pathway for the nonself-limiting reaction of Hf(OEt) 4 with a surface ethoxyl termination group. The energetics of the self-limiting surface reactions are summarized in Table <ref type="table" target="#tab_5">8</ref>. The reaction proceeds by an initial Hf(OEt) 4 adsorption, which results in the formation of a dative-bonded adsorbed complex consisting of five ethoxyl groups [Ads-Hf-OEt-Hf(OEt) 4 ]. The complex then undergoes an ethyl group-transfer transition state [TS1-Hf-OEt-EtOEt] to form a bound diethyl ether intermediate [Int-Hf-OEt-EtOEt]. Diethyl ether then desorbs to form a second complex with three ethoxyl groups attached to it [Hf-Ring-OEt]. The final product of the surface reaction, which is a surface Hf with three ethoxyl ligands [Hf-O-Hf(OEt) 3 *], is formed via a ringopening transition state [TS-Hf-Ring-OEt]. The activation barrier for this pathway is 60.8 kcal/mol with respect to the adsorbed complex, and the products are located 7.5 kcal/mol below the reactants at 0 K (Table <ref type="table" target="#tab_5">8</ref>).</p><p>The nonself-limiting β-hydride-elimination pathway for the reaction of Hf(OEt) 4 with a surface ethoxyl termination group (Figure <ref type="figure" target="#fig_14">10</ref>) proceeds by the initial adsorption of Hf(OEt) 4 onto the ethoxyl surface site to form an adsorbed complex [Ads-Hf-OEt-Hf(OEt) 4 ], similar to the ethyl group-transfer reaction. One of the ethoxyl groups in the complex then undergoes β-hydride elimination [TS2-Hf-OEt-C 2 H 4 -EtOH] to eliminate ethylene, which results in an ethanol molecule bound to the complex [Int-Hf-OEt-EtOH]. Finally, the four-membered ring complex [Hf-ring-OEt] is transformed into the ethoxylterminated surface product [Hf-O-Hf(OEt) 3 *] via a ringopening transition state [TS-Hf-ring-OEt]. The activation barrier of this surface reaction is 42.3 kcal/mol with respect to the adsorbed complex, and the products are 7.4 kcal/mol less stable than the reactants at 0 K (Table <ref type="table" target="#tab_5">8</ref>).</p><p>In addition to the nonself-limiting reaction of gas-phase Hf(OEt) 4 with surface ethoxyl groups, the continuous growth of HfO 2 can occur through the self-elimination of surface ethoxyl groups. In particular, Table <ref type="table">9</ref> shows the free energies for the β-hydride elimination of an ethoxyl termination group. Here, the surface ethoxyl group (Hf-OEt*) undergoes β-hydride elimination (TS-Hf-C 2 H 4 -OH) to eliminate ethylene and form a surface hydroxyl group (Hf-OH*). Subsequent reaction of the surface hydroxyl group with gas-phase Hf(OEt) 4 can lead to multilayer growth. The activation barrier of the selfelimination process is 62.7 kcal/mol, and the products are 12.9 kcal/mol less stable than the reactants. Because the activation barrier for this reaction is much higher than those of the ligandexchange half-reactions, it is not likely to compete kinetically with the ALD half-reactions.</p><p>Alkoxides can be used as a single source precursor for the metal-organic chemical deposition (MOCVD) of ZrO 2 and HfO 2 thin films. <ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b29">30</ref> The difference between MOCVD and ALD is that whereas ALD surface reactions are self-limiting MOCVD results in continuous film growth. Therefore, MOCVD surface reactions are undesirable in an ALD process. Although MOCVD of HfO 2 can occur via either the surface reaction of Hf(OEt) 4 with ethoxyl surface sites or the self-elimination of ethoxyl groups on the surface, our results show that the surface reaction of Hf(OEt) 4 with ethoxyl groups is kinetically and thermodynamically more favorable. When Hf(OEt) 4 is used as the metal precursor, MOCVD surface reactions are not likely to affect the self-limiting nature of HfO 2 ALD. This is because the lowest-energy pathway for the metal half-reaction of HfO 2 ALD is hydrogen transfer, which has an activation barrier of 16.3 kcal/mol with respect to the adsorbed complex, whereas the β-hydride-elimination pathway that is active in MOCVD for the reaction between Hf(OEt) 4 and the surface ethoxyl termination group has an activation barrier of 42.3 kcal/mol. However, when Hf(OEt) 4 is used as the oxygen precursor, the β-hydrideelimination pathway for the oxygen half-reaction has an activation barrier of 36.8 kcal/mol relative to the adsorbed state, which is close to that of the reaction of Hf(OEt) 4 with surface ethoxyl groups. Because a high deposition temperature is required to overcome the high activation barriers of the halfreactions for ALD with the alkoxide used as an oxygen source, the rate of MOCVD surface reactions may be substantial at ALD temperatures, and self-termination ALD may not occur.</p><p>ALD Precursor Design. Our results indicate that when combined with HfCl 4 , Hf(OEt) 4 is not a good oxygen precursor for HfO 2 ALD because the half-reactions have high activation barriers. However, because alkoxide precursors are organometallic compounds, it is possible to "tune" the reactivity of alkoxide precursor using principles of organic chemistry. We use a simple example to demonstrate the design of alkoxide precursors.</p><p>Here, we consider the self-β-hydride elimination of different surface alkoxide groups. Elimination reactions are classical organic reactions, and it is well known that the activation barrier of elimination decreases with electron-donating substituent groups. To demonstrate the application of this classic organic chemistry principle to the molecular engineering of alkoxide precursors, we have calculated the reaction energies and activation barriers for the β-hydride elimination of different alkoxide ligands. We find that the activation barrier for selfelimination decreases with methyl substitution in the alkoxide  termination group. In particular, the calculated activation barriers for the self-elimination of ethoxyl, isopropoxyl, and tert-butoxyl termination groups are 62.7, 58.6, and 55.2 kcal/mol, respectively (Table <ref type="table">9</ref>). Because methyl groups are electron donating, our results show that modifying the metal precursor ligands to increase their basicity can be used to adjust the kinetics of the self-elimination of surface alkoxide groups. In other words, the surface reaction kinetics can be tuned through precursor ligand selection using simple organic chemistry principles.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>Our results predict that when Hf(OEt) 4 is used as a metal precursor the activation barriers of the half-reactions are relatively low. In particular, the rate-limiting step of the hydrogen-transfer pathway of the metal half-reaction has an activation barrier of 16.3 kcal/mol, and the transition state of the oxygen half-reaction is located 10.8 kcal/mol above the adsorbed complex. In addition, alkoxides are organic and do not contain halogens. Therefore, the use of alkoxides as ALD precursors eliminates the issue of Cl contamination, which is detrimental to device performance.</p><p>However, when Hf(OEt) 4 is used as an oxygen precursor, the calculated activation barriers for the half-reactions are relatively high. Specifically, the activation barriers for the β-hydride pathway of the metal and oxygen half-reactions are 36.5 and 36.8 kcal/mol, respectively. However, we also find that incomplete-elimination surface reactions are likely to compete kinetically with the ALD ligand-exchange halfreactions, possibly leading to carbon contamination of the film. In addition, the reaction of gas-phase Hf(OEt) 4 with surface ethoxyl groups can also compete with the oxygen half-reaction, violating the self-limiting characteristic of ALD. Therefore, our results suggest that using Hf(OEt) 4 as an oxygen source combined with HfCl 4 as the metal precursor has several disadvantages.</p><p>Most of the calculated reaction pathways involve one or more adsorbed complexes. Moreover, because of the stability of the Hf-O dative bond, the adsorbed complexes are often more stable than the final products of the half-reactions. For example, in the hydrogen-transfer pathway for the surface reaction of ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Hf-OEt* 0.0 0.0 0.0 0.0 0.0 TS-Hf-C2H4-OH 62.</p><p>7 65.0 66.3 67.5 68.7 Hf-OH* + C2H4 12.9 5.1 0.8 -3.6 -7.9 Hf-O i Pr* 0.0 0.0 0.0 0.0 0.0 TS-Hf-C3H6-OH 58.6 60.2 61.1 62.0 62.9 Hf-OH* + C3H6 13.1 2.9 -2.5 -7.9 -13.2 Hf-O t Bu* 0.0 0.0 0.0 0.0 0.0 TS-Hf-C4H8-OH 55.2 57.1 58.3 59.5 60.8 Hf-OH* + C4H8 12.9 3.0 -2.1 -7.2 -12.2 a Energies are relative to the reactants in kcal/mol and are zeropoint corrected.</p><p>Hf(OEt) 4 with surface hydroxyl groups (Figure <ref type="figure" target="#fig_2">2</ref>), the initial adsorbed complex and the ethanol-bound complex are located at -27.2 kcal/mol (two dative bonds) and -15.3 kcal/mol (one dative bond), respectively, relative to the reactants, whereas the overall energy of the reaction is only -5.6 kcal/mol (Table <ref type="table">1</ref>). In the oxygen half-reaction (Figure <ref type="figure" target="#fig_5">5</ref>), the initial adsorbed complex, the ethanol-bound complex, and the final products are located at -10.6, -9.9, and 2.5 kcal/mol, respectively, relative to the energy of the reactants (Table <ref type="table">2</ref>). This means that both the metal and oxygen half-reactions are likely to be trapped in one of the adsorbed states, and the net rate of product formation is determined by the barriers relative to these intermediates and is thus slow, even under the nonequilibrium conditions at which ALD processes operate unless rather high temperatures are used. This effect increases the exposure pulse time required to complete each half-cycle.</p><p>According to the calculated free energies, the stability of the adsorbed complexes decreases relative to the reactants as the temperature is increased. Furthermore, temperature only slightly affects the free energy of the products relative to the reactants, except when two gas-phase byproduct molecules are produced. At high temperatures, the free energies of the products become lower than the free energies of the adsorbed complexes. However, the activation free energies relative to the reactants increase with temperature. Therefore, although raising the temperature decreases the population of the trapped intermediates, the net reaction rates are reduced, and higher exposures are required in each half-cycle to saturate the surface.</p><p>There are three pathways for the reaction of Hf(OEt) 4 with surface hydroxyl sites. We find that the hydrogen-transfer pathway (Figure <ref type="figure" target="#fig_2">2</ref>) is kinetically the most favorable because its rate-limiting step has the lowest activation barrier. In particular, although the hydrogen-transfer and the ethyl grouptransfer pathways result in exactly the same products, the activation barrier of the hydrogen-transfer pathway is much lower. The difference in activation barriers can be explained by classic organic chemistry principles. <ref type="bibr" target="#b30">31</ref> The hydrogen-transfer reaction can be considered to be a proton-transfer reaction between two ethoxyl groups, and the ethyl group-transfer reaction is analogous to a nucleophilic substitution reaction. In both cases, the ethoxyl group of the complex acts as a nucleophile. In the transition state for hydrogen transfer, the ethoxyl group attacks the proton of the hydroxyl group from its back side, and the interaction is symmetry-allowed. Therefore, the hydrogen-transfer pathway has a low activation barrier. However, back-side attack is not favorable in the ethyl grouptransfer process because of the close proximity of the two ethoxyl groups in the adsorbed complex. As a result, the transition state for ethyl group transfer involves a front-side attack of the ethyl group by the ethoxyl nucleophile, which is symmetry-forbidden; consequently, the ethyl group-transfer pathway involves a high activation barrier. This orbital symmetry argument has been used to explain the difference between proton transfer and nucleophilic substitution reactions of methylamines on the Si(100)-2 × 1 surface. <ref type="bibr" target="#b31">32</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions</head><p>We have performed a quantum chemical study of the surface chemistry of HfO 2 ALD with Hf(OEt) 4 as the metal and oxygen precursors. Specifically, we have calculated the energetics of the half-reactions for HfO 2 ALD. Our results show that when Hf(OEt) 4 is used as the metal precursor the ligand-exchange half-reactions are unactivated relative to the reactants but possess activation barriers of 15.5 and 10.8 kcal/mol relative to the adsorbed complexes for the metal and oxygen half-reactions, respectively. However, when Hf(OEt) 4 is used as the oxygen precursor, the ligand-exchange barriers are generally high, 36.5 and 36.8 kcal/mol for metal and oxygen half-reactions, respectively. In addition, we find that undesirable surface reactions, such as incomplete elimination, reaction of Hf(OEt) 4 on the ethoxyl-terminated surface, and nongrowth ligand-exchange reactions, can compete kinetically with the ALD half-reactions. Therefore, our results indicate that Hf(OEt) 4 has several disadvantages as an oxygen precursor. Finally, we have discussed the relationship between general chemical principles and the surface reaction energetics, as well as the use of organic chemistry principles to select ALD precursors with different reactivities.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Cluster models to mimic the active sites on the HfO2 surface during HfO2 ALD. (a) Hf(OH)3-OH, (b) Hf(OH)3-OEt, and (c) Hf(OH)3-Cl.</figDesc><graphic coords="2,54.56,48.07,240.00,108.72" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><figDesc>The hydrogentransfer process results in an ethanol molecule bound to a fourmembered-ring intermediate through a dative bond [Int-Hf-OEt-EtOH], which has an overall energy of -15.3 kcal/mol with respect to the reactants. The bound ethanol molecule then desorbs directly from the four-membered-ring intermediate without a transition state, and the resulting four-membered-ring intermediate is located 16.3 kcal/mol above the bound ethanol state [Hf-Ring-OEt]. Finally, the four-membered-ring intermediate undergoes a ring-opening transition state [TS-Hf-Ring-OEt], which is located 16.0 kcal/mol above the fourmembered-ring intermediate, to form the ethoxyl-terminated surface [Hf-O-Hf(OEt) 3 *]. The hydrogen-transfer pathway for the metal-ligand exchange cycle of HfO 2 ALD is 5.6 kcal/mol exothermic relative to the gas-phase Hf(OEt) 4 and surface hydroxyl group reactants.In addition to the hydrogen-transfer pathway, we have calculated two additional reaction pathways, namely, ethyl group transfer and β-hydride elimination, for the reaction of Hf(OEt) 4 with a surface hydroxyl group. Optimized structures for the ethyl group-transfer pathway (reaction 1a) are shown in Figure3. Similar to the hydrogen-transfer pathway, the ethyl grouptransfer pathway involves the formation of a dative-bonded complex upon the adsorption of Hf(OEt) 4 onto a surface hydroxyl group [Ads-Hf-OH-Hf(OEt) 4 ]. Next, the pathway proceeds through an ethyl group-transfer transition state [TS2-Hf-OH-EtOH] and an ethanol-bound four-membered-ring intermediate [Int-Hf-OEt-EtOH]. Following ethanol desorption, the resulting four-membered-ring intermediate [Hf-Ring-OEt] is transformed to the ethoxyl-terminated surface [Hf-O-Hf(OEt) 3 *] through a ring-opening transition state [TS-Hf-Ring-OEt].</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Energetics of the hydrogen-transfer pathway for the metal half-reaction with Hf(OEt)4 as the metal precursor. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).</figDesc><graphic coords="3,96.01,48.07,420.00,377.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 . 4 -a</head><label>34</label><figDesc>Figure 3. Energetics of the ethyl group-transfer pathway for the metal half-reaction with Hf(OEt)4 as the metal precursor. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).</figDesc><graphic coords="4,97.69,48.07,416.64,380.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Energetics of the β-hydride-elimination pathway for the metal half-reaction with Hf(OEt)4 as the metal precursor. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).</figDesc><graphic coords="5,97.69,48.07,416.64,373.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Energetics of the hydrogen-transfer pathway for the oxygen half-reaction with Hf(OEt)4 as the metal precursor. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).</figDesc><graphic coords="6,115.69,48.07,380.64,362.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><figDesc>Hf-OEt* + HfCl 4 f Hf-O-HfCl 3 * + EtCl (reaction 3a) Hf-OEt* + HfCl 4 f Hf-O-HfCl 3 * + C 2 H 4 + HCl (reaction 3b) Hf-Cl* + Hf(OEt) 4 f Hf-O-Hf(OEt) 3 * + EtCl (reaction 4a) Hf-Cl* + Hf(OEt) 4 f Hf-O-Hf(OEt) 3 * + C 2 H 4 + HCl (reaction 4b)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><figDesc>. The pathway involves an initial adsorption of Hf-(OEt) 4 onto a hydroxyl surface site [Ads-Hf-OH-Hf(OEt) 4 ], followed by an ethyl group-transfer transition state [TS1-Hf-OH-EtOEt] to form a four-membered-ring intermediate with a bound diethyl ether molecule [Int-Hf-OEt-OH-EtOEt]. Then, diethyl ether desorption occurs, and a four-memberedring intermediate is formed [Hf-Ring-OEt-OH]. Finally, the four-membered-ring intermediate undergoes ring opening [TS-Hf-Ring-OEt-OH] to form an ethoxyl-hydroxyl termination layer [Hf-OH-(OEt) 2 *]. Whereas the metal half-reaction between Hf(OEt) 4 and the hydroxyl surface site (Figure</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Energetics of the ethyl group-transfer pathway for the incomplete metal half-reaction with Hf(OEt)4 as the metal precursor. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).</figDesc><graphic coords="8,100.69,48.07,410.88,373.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><figDesc>onto the chlorine-terminated surface site [Ads-Hf-Cl-Hf(OEt) 4 ]. Then, β-hydride elimination [TS2-Hf-Cl-C 2 H 4 -EtOH] results in the removal of ethylene and the formation of a bound ethanol species [Int-Hf-OEt-EtOH].</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Energetics of the β-hydride-elimination pathway for the incomplete metal half-reaction with Hf(OEt)4 as the metal precursor. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).</figDesc><graphic coords="9,99.85,48.07,412.32,381.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><figDesc>site terminated with two ethoxyl groups and one chlorine atom [Hf-Cl-(OEt) 2 ]. This β-hydride-elimination pathway for incomplete elimination has an activation barrier of 31.3 kcal/mol and an enthalpy change of 6.0 kcal/mol at 0 K (Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>Figure 8 . 3 a</head><label>83</label><figDesc>Figure 8. Energetics of the nongrowth ligand-exchange surface reaction between Hf(OEt)4 and the Hf-OEt* surface site. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).TABLE 7: Temperature-Dependent Energetics for Nongrowth Exchange Reactions a nongrowth ligand exchange</figDesc><graphic coords="10,120.37,48.07,371.52,387.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. Energetics of the ethyl group-transfer pathway of the self-limiting surface reaction between Hf(OEt)4 and the Hf-OEt* surface termination group. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).</figDesc><graphic coords="12,97.57,48.07,417.12,381.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Figure 10 .</head><label>10</label><figDesc>Figure 10. Energetics of the β-hydride-elimination pathway of the self-limiting surface reaction between Hf(OEt)4 and the Hf-OEt surface termination group. (a) ∆G (750 K), (b) ∆G (600 K), (c) ∆G (450 K), (d) ∆G (300 K), and (e) ∆E (0 K).TABLE 9: Temperature-Dependent Energetics for the Self-Elimination of Alkoxide Surface Groups a nongrowth ligand exchange</figDesc><graphic coords="13,97.57,48.07,417.12,378.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>TABLE 8 : Temperature-Dependent Energetics for the Reaction of Hf(OCH 2 CH 3 ) 4 with Hf-OEt* Surface Termination Groups a self</head><label>8</label><figDesc>Energies are relative to the reactants in kcal/mol and are zero-point corrected.</figDesc><table><row><cell></cell><cell>-25.2</cell><cell>-5.5</cell><cell>4.7</cell><cell>14.7</cell><cell>24.6</cell></row><row><cell>TS1-Hf-OEt-EtOEt</cell><cell>35.6</cell><cell>57.9</cell><cell>69.7</cell><cell>81.4</cell><cell>93.0</cell></row><row><cell>Int-Hf-OEt-EtOEt</cell><cell>-13.6</cell><cell>8.2</cell><cell>19.7</cell><cell>31.0</cell><cell>42.2</cell></row><row><cell>Hf-Ring-OEt + EtOEt</cell><cell>-0.9</cell><cell>7.7</cell><cell>12.7</cell><cell>17.8</cell><cell>22.8</cell></row><row><cell>TS-Hf-Ring-OEt + EtOEt</cell><cell>-1.2</cell><cell>8.3</cell><cell>13.9</cell><cell>19.7</cell><cell>25.6</cell></row><row><cell>Hf-(OEt) 3* + EtOEt</cell><cell>-7.5</cell><cell>-2.3</cell><cell>0.5</cell><cell>3.3</cell><cell>6.2</cell></row><row><cell>Ads-Hf-OEt-Hf(OEt)4</cell><cell>-25.2</cell><cell>-5.5</cell><cell>4.7</cell><cell>14.7</cell><cell>24.6</cell></row><row><cell>TS2-Hf-OEt-C2H4-EtOH</cell><cell>17.1</cell><cell>37.3</cell><cell>48.0</cell><cell>58.4</cell><cell>68.7</cell></row><row><cell>Int-Hf-OEt-EtOH + C2H4</cell><cell>-2.3</cell><cell>7.7</cell><cell>12.9</cell><cell>18.0</cell><cell>23.0</cell></row><row><cell>Hf-Ring-OEt + C2H4 + EtOH</cell><cell>14.0</cell><cell>11.9</cell><cell>11.2</cell><cell>10.4</cell><cell>9.8</cell></row><row><cell>TS-Hf-Ring-OEt + C2H4 + EtOH</cell><cell>13.7</cell><cell>12.5</cell><cell>12.4</cell><cell>12.4</cell><cell>12.6</cell></row><row><cell>Hf-(OEt)3* + C2H4 + EtOH</cell><cell>7.4</cell><cell>1.9</cell><cell>-1.0</cell><cell>-4.0</cell><cell>-6.9</cell></row></table><note><p>-limiting nature of ALD ∆E (0 K) ∆G (300 K) ∆G (450 K) ∆G (600 K) ∆G (750 K) Ads-Hf-OEt-Hf(OEt)4 a</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>J. Phys. Chem. B 2004, 108, 15150-15164 10.1021/jp037507r CCC: $27.50 © 2004 American Chemical Society Published on Web 08/04/2004 Downloaded via LEIBNIZ UNIVERSITAET HANNOVER on December 6, 2024 at 13:00:34 (UTC). See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="15154" xml:id="foot_1"><p>J. Phys. Chem. B, Vol. 108, No. 39,2004   Mui and Musgrave</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="15158" xml:id="foot_2"><p>J. Phys. Chem. B, Vol. 108, No. 39,2004   Mui and Musgrave</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="15160" xml:id="foot_3"><p>J.Phys. Chem. B, Vol. 108, No. 39, 2004   Mui and Musgrave</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="15162" xml:id="foot_4"><p>J. Phys. Chem. B, Vol. 108, No. 39,2004   Mui and Musgrave</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="15164" xml:id="foot_5"><p>J.Phys. Chem. B, Vol. 108, No. 39, 2004   Mui and Musgrave</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgment. We thank <rs type="person">Joseph Han</rs>, <rs type="person">Yuniarto Widjaja</rs>, and <rs type="person">Ye Xu</rs> for their help and insightful discussions. Support of this work by an <rs type="funder">Office of Naval Research MURI</rs>, the <rs type="funder">MARCO Materials Structures and Devices Center</rs>, the <rs type="institution">Stanford Initiative for Nanoscale Materials Processing</rs>, and the <rs type="institution">Stanford Center for Integrated Systems</rs> is gratefully acknowledged. This research is also supported through computing resources provided by the <rs type="funder">National Center for Supercomputing Applications (NCSA)</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">References and Notes</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Wilk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Anthony</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page">5243</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Thin Solid Films</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page">138</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">2463</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">4350</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Widjaja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="page">304</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Widjaja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">117</biblScope>
+			<date type="published" when="1931">2002. 1931</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Klaus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="page">13121</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Leskela</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Handbook of Thin Film Materials</title>
+		<editor>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Nalwa</surname></persName>
+		</editor>
+		<meeting><address><addrLine>San Diego, CA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Academic Press</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page">333</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mater</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chem</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page">1484</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Keinonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page">72</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Uustare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Forsgren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Harsta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">410</biblScope>
+			<biblScope unit="page">53</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Keinonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<date type="published" when="2002">2002, 8, 199</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruhela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Matero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jokinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haussalo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<date type="published" when="1996">1996, 2, 277</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">I</forename><surname>Raisanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Keinonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Science</title>
+		<imprint>
+			<biblScope unit="volume">288</biblScope>
+			<biblScope unit="page">319</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Matero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Bickley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Leedham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Davies</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Non-Cryst. Solids</title>
+		<imprint>
+			<biblScope unit="page">24</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sajavaara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Keinonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Roberts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">1722</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Becke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Parr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="page">12974</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Widjaja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Garfunkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">550</biblScope>
+			<biblScope unit="page">199</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Hay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Wadt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">270</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Wadt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Hay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">284</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Hay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Wadt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">299</biblScope>
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Binkley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Hehre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page">939</biblScope>
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Binkley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Pietro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Hehre</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page">2797</biblScope>
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Francl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Pietro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Hehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Binkley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Defrees</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pople</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Pietro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Francl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Hehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Defrees</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Binkley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. S. J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page">5039</biblScope>
+			<date type="published" when="1982">1982. 1982</date>
+		</imprint>
+	</monogr>
+	<note>J. Chem. Phys.</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Binkley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">3265</biblScope>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Trucks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Robb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Cheeseman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">G</forename><surname>Zakrzewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Montgomery</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Stratmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Burant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dapprich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Millam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Daniels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Kudin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Strain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Farkas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tomasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cammi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mennucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pomelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Adamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Clifford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ochterski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">Y</forename><surname>Ayala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Morokuma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Malick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Rabuck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Foresman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cioslowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Ortiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Stefanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Liashenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Piskorz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Komaromi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gomperts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Keith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Al-Laham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nanayakkara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Challacombe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M W</forename><surname>Gill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Andres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Head-Gordon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<pubPlace>Pittsburgh, PA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Replogle, E. S.; Pople, J. A. Gaussian 98, revision A.11.2; Gaussian</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Cameron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">348</biblScope>
+			<biblScope unit="page">90</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Aravamudhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Busch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Schulte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cosandey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Wilk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gustafsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Garfunkel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">507</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Mechanism and Theory in Organic Chemistry</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Lowry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Richardson</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+	<note>rd ed.; Harper Collins: New York</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">10170</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
