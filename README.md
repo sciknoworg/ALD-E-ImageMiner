@@ -52,6 +52,15 @@ data
         └── simulation-usecase
 ```
 
+## 🛠️ Tools Used
+
+- **[GROBID (GeneRation Of BIbliographic Data)](https://github.com/kermitt2/grobid)** → scholarly PDF parsing into TEI XML.
+- **[GROBID Python Client](https://github.com/kermitt2/grobid_client_python)** → Python interface to GROBID.
+- **[MinerU](https://github.com/opendatalab/MinerU)** → structured text, figures, formulas, and tables from PDFs. It is created by OpenDataLab as an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
+- **[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)** → multimodal LLM applied for classification, extraction, and summarization. Specifically, we used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).  
+  The [Prompts.md](Prompts.md) file documents the prompts used for information extraction (figure type, data, summary, and figure labels).  
+
+
 ### 📊 Statistics
 
 #### Overall Statistics
@@ -102,27 +111,6 @@ We have defined a taxonomy of 40 figure types including "unknown". The full taxo
 ## Question–Answer Categories for Materials Science Figures
 
 [Q&A examples](QA_Examples.md) for **10 categories**, each containing **at least 5 Q\&A examples**, suitable for figures in **materials science literature**.
-
-
-## Prompts for Information Extraction
-
-The [Prompts.md](Prompts.md) contains prompts for information extraction (figure type, data, summary, figure labels) which were used via [Qwen 2.5 VL](https://github.com/QwenLM/Qwen2.5-VL)
-
-
-
-## 🛠️ Automated PDF Mining and Annotation Tools Used
-
-### 1. GROBID
-[GROBID (GeneRation Of BIbliographic Data)](https://github.com/kermitt2/grobid) is an open-source, machine-learning-based tool designed to parse and extract structured information from scholarly documents, primarily in PDF format. It takes raw, unstructured documents—such as research papers and identifies, tags, and extracts their constituent parts into a standardized TEI XML format. This includes precisely parsing the document's header (title, authors, affiliations, abstract), body text (sections, paragraphs), and, most notably, its citations and bibliography.
-
-### 2. GROBID Python Client
-The [GROBID Python Client](https://github.com/kermitt2/grobid_client_python) is a software library that provides a convenient Pythonic interface to interact with a GROBID service from within a Python application.
-
-### 3. MinerU
-[MinerU](https://github.com/opendatalab/MinerU), created by OpenDataLab, is an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
-
-### 4. Qwen 2.5 VL
-[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) is the open=source multimodal (Vision-Language) version of the Qwen 2.5 series of large language models, also developed by Alibaba. This state-of-the-art model is designed to understand and converse about both text and images simultaneously. It can accept image inputs alongside text prompts and perform a wide range of tasks, including generating detailed descriptions of images, answering questions about visual content (Visual Question Answering), interpreting complex charts and graphs, and engaging in open-ended dialogue about a picture. Specifically, for the classification, data extraction and summarization we've used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).
 
 
 ## 📖 Citation  
