@@ -173,3 +173,28 @@ The [GROBID Python Client](https://github.com/kermitt2/grobid_client_python) is 
 [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) is the open=source multimodal (Vision-Language) version of the Qwen 2.5 series of large language models, also developed by Alibaba. This state-of-the-art model is designed to understand and converse about both text and images simultaneously. It can accept image inputs alongside text prompts and perform a wide range of tasks, including generating detailed descriptions of images, answering questions about visual content (Visual Question Answering), interpreting complex charts and graphs, and engaging in open-ended dialogue about a picture. Specifically, for the classification, data extraction and summarization we've used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).
 
 
+## 📖 Citation  
+
+The **ALD/E-ImageMiner project vision** is described in the following working paper, pre-released on Zenodo.  
+Please cite this paper if you find this work useful:  
+
+```bibtex
+@misc{d_souza_2025_17130928,
+  author       = {D'Souza, Jennifer},
+  title        = {A Pathway to General-Purpose Scientific AI:
+                   Multimodal Comprehension of Scientific Images},
+  month        = sep,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17130928},
+  url          = {https://doi.org/10.5281/zenodo.17130928},
+}
+```
+
+## 🙏 Acknowledgements  
+
+The **ALD/E-ImageMiner** project is supported by:  
+
+- The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative, funded by the **German Research Foundation (DFG, Grant ID: 460234259)**, under the *Speedboat Annotation Project* funding scheme.  
+
+- The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover’s L3S Research Centre (co-led by applicants)**, and **University of Warwick**. AWASES hosts three fully funded PhD positions and supports advances in **generative AI, multimodal models, and FAIR scientific knowledge graph construction**.  
