@@ -59,9 +59,9 @@ data
   The [Prompts.md](Prompts.md) file documents the prompts used for information extraction (figure type, data, summary, and figure labels).  
 
 
-### 📊 Statistics
+### 📊 Dataset Statistics
 
-#### Overall Statistics
+#### Overall
 
 | Category | Sub-category | PDFs | Figures | Formulas | Tables |
 | --- | --- | --- | --- | --- | --- |
