@@ -18,68 +18,87 @@
 ### 🗂️ Directory Structure
 ```text
 data
-├── atomic-layer-deposition
-│   ├── experimental-usecase
-│   │   ├── 1
-│   │   │   ├── images
-│   │   │   │   ├── figures
-│   │   │   │   │   ├── filename.jpg
-│   │   │   │   │   ├── filename.class.txt
-│   │   │   │   │   ├── filename.data.txt 
-│   │   │   │   │   └── filename.summary.txt
-│   │   │   │   ├── formulas
-│   │   │   │   │   ├── filename.jpg
-│   │   │   │   │   ├── filename.class.txt
-│   │   │   │   │   ├── filename.data.txt 
-│   │   │   │   │   └── filename.summary.txt
-│   │   │   │   └── tables
-│   │   │   │       ├── filename.jpg
-│   │   │   │       ├── filename.class.txt
-│   │   │   │       ├── filename.data.txt 
-│   │   │   │       └── filename.summary.txt
-│   │   │   ├── Author et al.pdf
-│   │   │   ├── content.json
-│   │   │   ├── content.md
-│   │   │   ├── content.tei.xml
-│   │   │   ├── content.txt
-│   │   │   └── layout.json
-...
-│   │   └── N
-│   │       ├── image
-│   │       │   ├── figures
-│   │       │   ├── formulas
-│   │       │   └── tables
-│   │       ├── Author et al.pdf
-│   │       ├── content.json
-│   │       ├── content.md
-│   │       ├── content.tei.xml
-│   │       ├── content.txt
-│   │       └── layout.json
-│   └── simulation-usecase
-└── atomic-layer-etching
-    ├── experimental-usecase
-    └── simulation-usecase
+├── pilot-annotation-task
+│   ├── atomic-layer-deposition
+│   │   ├── experimental-usecase
+│   │   │   ├── paper #
+│   │   │   │   ├── images
+│   │   │   │   │   ├── figures
+│   │   │   │   │   │   ├── filename 1.jpg          # (JPEG) actual figure image extracted using MinerU
+│   │   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
+│   │   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
+│   │   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
+│   │   │   │   │   │   ├── ...
+│   │   │   │   │   │   ├── filename B.jpg
+│   │   │   │   │   │   ├── filename.class.txt
+│   │   │   │   │   │   ├── filename.data.txt
+│   │   │   │   │   │   └── filename.summary.txt
+│   │   │   │   │   ├── formulas
+│   │   │   │   │   │   ├── filename.jpg            # (JPEG) actual formula image extracted using MinerU
+│   │   │   │   │   └── tables
+│   │   │   │   │       ├── filename.jpg            # (JPEG) actual table image extracted using MinerU
+│   │   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
+│   │   │   │   ├── content.json                    # (JSON) structured content extracted using MinerU
+│   │   │   │   ├── content.md                      # (Markdown) structured content extracted using MinerU
+│   │   │   │   ├── content.tei.xml                 # (TEI-XML) structured content extracted using GROBID
+│   │   │   │   ├── content.txt                     # (Text) unstructured content extracted using MinerU
+│   │   │   │   └── layout.json                     # (JSON) bounding box and segmentation data from MinerU
+│   │   │   ├── paper #
+│   │   │   └── ...
+│   │   └── simulation-usecase
+│   │       ├── paper #
+│   │       │   ├── images
+│   │       │   │   ├── figures | formulas | tables
+│   │       │   ├── Author et al.pdf
+│   │       │   ├── content.json
+│   │       │   ├── content.md
+│   │       │   ├── content.tei.xml
+│   │       │   ├── content.txt
+│   │       │   └── layout.json
+│   │       └── ...
+│   └── atomic-layer-etching
+│       ├── experimental-usecase
+│       │   ├── paper #
+│       │   │   ├── images
+│       │   │   │   ├── figures | formulas | tables
+│       │   │   ├── Author et al.pdf
+│       │   │   ├── content.json
+│       │   │   ├── content.md
+│       │   │   ├── content.tei.xml
+│       │   │   ├── content.txt
+│       │   │   └── layout.json
+│       │   └── ... 
+│       └── simulation-usecase
+│           ├── paper #
+│           │   ├── images
+│           │   │   ├── figures | formulas | tables
+│           │   ├── Author et al.pdf
+│           │   ├── content.json
+│           │   ├── content.md
+│           │   ├── content.tei.xml
+│           │   ├── content.txt
+│           │   └── layout.json
+│           └── ...
+└── full-annotation-task
+    ├── atomic-layer-deposition
+    │   ├── experimental-usecase
+    │   │   ├── paper #
+    │   │   ├── ...
+    │   │   └── N
+    │   └── simulation-usecase
+    │       ├── paper #
+    │       ├── ...
+    │       └── N
+    └── atomic-layer-etching
+        ├── experimental-usecase
+        │   ├── paper #
+        │   ├── ...
+        │   └── N
+        └── simulation-usecase
+            ├── paper #
+            ├── ...
+            └── N
 ```
-
-### File Descriptions
-#### 1. PDF
-- Author et al.pdf - (PDF) actual PDF document
-
-#### 2. Text
-- content.json - (JSON) structured content extracted using MinerU
-- content.md - (Markdown) structured content extracted using MinerU
-- content.tei.xml - (TEI-XML) structured content extracted using GROBID
-- content.txt - (Text) unstructured content extracted using MinerU
-
-#### 3. Image
-- filename.jpg - (JPEG) actual figure image extracted using MinerU
-- filename.class.txt - (Text) chart visualization class/category extracted using Qwen 2.5 VL
-- filename.data.txt  - (Text) data extracted as a markdown table extracted using instruction tuned Qwen 2.5 VL
-- filename.summary.txt - (Text) summarization of chart visualization extracted using Qwen 2.5 VL
-
-#### 4. Others
-- layout.json - (JSON) bounding box and segmentation data containing the PDF layout information extracted using MinerU
-
 
 ### 📊 Statistics
 
