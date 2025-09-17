@@ -133,7 +133,7 @@ Please cite this paper if you find this work useful:
 
 The **ALD/E-ImageMiner** project is supported by:  
 
-- <img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="100" align="middle"/>  
+- <img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="200" align="middle"/>  
 
   The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative, funded by the **German Research Foundation (DFG, Grant ID: 460234259)** under the *Speedboat Annotation Project* funding scheme.  
 
