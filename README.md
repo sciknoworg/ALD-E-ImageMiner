@@ -2,7 +2,7 @@
   <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="300"/>
 </div>
 
-## 📋 ALD-E-ImageMiner Overview
+## Project Overview
 
 
 ### Organization
