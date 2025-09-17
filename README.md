@@ -1,22 +1,19 @@
-![ALD/E-ImageMiner Logo](assets/logo.png)
+<div align="center">
+  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="400"/>
+</div>
 
-## 📋 ALD-E-ImageMiner Overview
+## Project Overview  
 
-## Dataset
+**ALD/E-ImageMiner** is an annotation project on figures from **atomic layer deposition (ALD)** and **atomic layer etching (ALE)**, situated within the broader field of materials science and engineering. Within each of these categories, the data is further organized into the sub-categories **experimental-usecase** and **simulation-usecase**.  
 
-### Organization
+It aims to host gold-standard annotations for chart classification, data extraction, summarization, and question answering—providing both pilot and full-phase data to support multimodal AI research in scientific image understanding.   
 
-#### Categories
+### 🗂️ Directory Structure  
 
-- atomic-layer-deposition
-- atomic-layer-etching
+We have compiled the dataset for annotation in this repository, structured into clearly defined categories and sub-categories.  
+The layout reflects the distinction between ALD and ALE literature, as well as between experimental and simulation studies, making it easier to navigate both the pilot and full annotation phases.  
 
-#### Sub-categories
 
-- experimental-usecase
-- simulation-usecase
-
-### 🗂️ Directory Structure
 ```text
 data
 ├── pilot-annotation-task
@@ -29,11 +26,6 @@ data
 │   │   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
 │   │   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
 │   │   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
-│   │   │   │   │   │   ├── ...
-│   │   │   │   │   │   ├── filename B.jpg
-│   │   │   │   │   │   ├── filename.class.txt
-│   │   │   │   │   │   ├── filename.data.txt
-│   │   │   │   │   │   └── filename.summary.txt
 │   │   │   │   │   ├── formulas
 │   │   │   │   │   │   ├── filename.jpg            # (JPEG) actual formula image extracted using MinerU
 │   │   │   │   │   └── tables
@@ -44,66 +36,32 @@ data
 │   │   │   │   ├── content.tei.xml                 # (TEI-XML) structured content extracted using GROBID
 │   │   │   │   ├── content.txt                     # (Text) unstructured content extracted using MinerU
 │   │   │   │   └── layout.json                     # (JSON) bounding box and segmentation data from MinerU
-│   │   │   ├── paper #
 │   │   │   └── ...
 │   │   └── simulation-usecase
-│   │       ├── paper #
-│   │       │   ├── images
-│   │       │   │   ├── figures | formulas | tables
-│   │       │   ├── Author et al.pdf
-│   │       │   ├── content.json
-│   │       │   ├── content.md
-│   │       │   ├── content.tei.xml
-│   │       │   ├── content.txt
-│   │       │   └── layout.json
 │   │       └── ...
 │   └── atomic-layer-etching
-│       ├── experimental-usecase
-│       │   ├── paper #
-│       │   │   ├── images
-│       │   │   │   ├── figures | formulas | tables
-│       │   │   ├── Author et al.pdf
-│       │   │   ├── content.json
-│       │   │   ├── content.md
-│       │   │   ├── content.tei.xml
-│       │   │   ├── content.txt
-│       │   │   └── layout.json
-│       │   └── ... 
-│       └── simulation-usecase
-│           ├── paper #
-│           │   ├── images
-│           │   │   ├── figures | formulas | tables
-│           │   ├── Author et al.pdf
-│           │   ├── content.json
-│           │   ├── content.md
-│           │   ├── content.tei.xml
-│           │   ├── content.txt
-│           │   └── layout.json
-│           └── ...
+│       └── ...
 └── full-annotation-task
     ├── atomic-layer-deposition
     │   ├── experimental-usecase
-    │   │   ├── paper #
-    │   │   ├── ...
-    │   │   └── N
     │   └── simulation-usecase
-    │       ├── paper #
-    │       ├── ...
-    │       └── N
     └── atomic-layer-etching
         ├── experimental-usecase
-        │   ├── paper #
-        │   ├── ...
-        │   └── N
         └── simulation-usecase
-            ├── paper #
-            ├── ...
-            └── N
 ```
 
-### 📊 Statistics
+## 🛠️ Tools Used
 
-#### Overall Statistics
+- **[GROBID (GeneRation Of BIbliographic Data)](https://github.com/kermitt2/grobid)** → scholarly PDF parsing into TEI XML.
+- **[GROBID Python Client](https://github.com/kermitt2/grobid_client_python)** → Python interface to GROBID.
+- **[MinerU](https://github.com/opendatalab/MinerU)** → structured text, figures, formulas, and tables from PDFs. It is created by OpenDataLab as an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
+- **[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)** → multimodal LLM applied for classification, extraction, and summarization. Specifically, we used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).  
+  The [Prompts.md](Prompts.md) file documents the prompts used for information extraction (figure type, data, summary, and figure labels).  
+
+
+### 📊 Dataset Statistics
+
+#### Overall
 
 | Category | Sub-category | PDFs | Figures | Formulas | Tables |
 | --- | --- | --- | --- | --- | --- |
@@ -153,32 +111,6 @@ We have defined a taxonomy of 40 figure types including "unknown". The full taxo
 | unknown | 12 | 0 |
 | **Total** | **4150** | **0** |
 
-## Question–Answer Categories for Materials Science Figures
-
-[Q&A examples](QA_Examples.md) for **10 categories**, each containing **at least 5 Q\&A examples**, suitable for figures in **materials science literature**.
-
-
-## Prompts for Information Extraction
-
-The [Prompts.md](Prompts.md) contains prompts for information extraction (figure type, data, summary, figure labels) which were used via [Qwen 2.5 VL](https://github.com/QwenLM/Qwen2.5-VL)
-
-
-
-## 🛠️ Automated PDF Mining and Annotation Tools Used
-
-### 1. GROBID
-[GROBID (GeneRation Of BIbliographic Data)](https://github.com/kermitt2/grobid) is an open-source, machine-learning-based tool designed to parse and extract structured information from scholarly documents, primarily in PDF format. It takes raw, unstructured documents—such as research papers and identifies, tags, and extracts their constituent parts into a standardized TEI XML format. This includes precisely parsing the document's header (title, authors, affiliations, abstract), body text (sections, paragraphs), and, most notably, its citations and bibliography.
-
-### 2. GROBID Python Client
-The [GROBID Python Client](https://github.com/kermitt2/grobid_client_python) is a software library that provides a convenient Pythonic interface to interact with a GROBID service from within a Python application.
-
-### 3. MinerU
-[MinerU](https://github.com/opendatalab/MinerU), created by OpenDataLab, is an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
-
-### 4. Qwen 2.5 VL
-[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) is the open=source multimodal (Vision-Language) version of the Qwen 2.5 series of large language models, also developed by Alibaba. This state-of-the-art model is designed to understand and converse about both text and images simultaneously. It can accept image inputs alongside text prompts and perform a wide range of tasks, including generating detailed descriptions of images, answering questions about visual content (Visual Question Answering), interpreting complex charts and graphs, and engaging in open-ended dialogue about a picture. Specifically, for the classification, data extraction and summarization we've used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).
-
-
 ## 📖 Citation  
 
 The **ALD/E-ImageMiner project vision** is described in the following working paper, pre-released on Zenodo.  
@@ -197,10 +129,11 @@ Please cite this paper if you find this work useful:
 }
 ```
 
-## 🙏 Acknowledgements  
+## ⭐ Acknowledgements  
 
 The **ALD/E-ImageMiner** project is supported by:  
 
 - The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative, funded by the **German Research Foundation (DFG, Grant ID: 460234259)**, under the *Speedboat Annotation Project* funding scheme.  
 
 - The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover’s L3S Research Centre (co-led by applicants)**, and **University of Warwick**. AWASES hosts three fully funded PhD positions and supports advances in **generative AI, multimodal models, and FAIR scientific knowledge graph construction**.  
+
