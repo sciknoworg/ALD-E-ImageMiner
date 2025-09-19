@@ -130,7 +130,7 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
 
 - **Design / synthesis planning — Q:** Outline a minimal ALD/MLD recipe to form the Eu‑HQA hybrid layer suitable for the optical tests.  
 **A (ordered list):**  
-1. **ALD/MLD cycle:** Eu(thd)₃ pulse → N₂ purge → HQA pulse → N₂ purge (repeat to target thickness).  
-2. **Substrate option:** deposit on **plasmonic nanostructure** (for enhancement) or **flat Si** (for baseline).  
-3. **Assay prep:** introduce **AF647** (acceptor) to the film under conditions that control donor–acceptor spacing for measurable FRET.
+  1. **ALD/MLD cycle:** Eu(thd)₃ pulse → N₂ purge → HQA pulse → N₂ purge (repeat to target thickness).  
+  2. **Substrate option:** deposit on **plasmonic nanostructure** (for enhancement) or **flat Si** (for baseline).  
+  3. **Assay prep:** introduce **AF647** (acceptor) to the film under conditions that control donor–acceptor spacing for measurable FRET.
 
