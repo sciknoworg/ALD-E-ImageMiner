@@ -31,19 +31,19 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
   **A (paragraph):** Purging removes excess precursor and by-products, preventing gas-phase reactions that would cause CVD-like, non-self-limiting growth. It restores a clean carrier gas so the next half-reaction proceeds surface-limited and conformal. Insufficient purging raises impurity levels, roughness, and undermines thickness control.
 
 - **Design / synthesis planning — Q:** Specify one complete hybrid cycle that switches from ALD to ALD/MLD as depicted.
-**A (ordered list):** 1) Metal precursor pulse → 2) Purge → 3) Organic precursor pulse → 4) Purge (repeat to build an inorganic–organic hybrid stack).
+  **A (ordered list):** 1) Metal precursor pulse → 2) Purge → 3) Organic precursor pulse → 4) Purge (repeat to build an inorganic–organic hybrid stack).
 
 - **Parameter sensitivity / what-if — Q:** If the purge after the metal pulse is shortened, what outcome is most likely during the next exposure?
-**A (factoid/paragraph):** Parasitic gas-phase reaction (CVD) and loss of self-limitation, yielding non-uniform growth and increased impurities.
+  **A (factoid/paragraph):** Parasitic gas-phase reaction (CVD) and loss of self-limitation, yielding non-uniform growth and increased impurities.
 
 - **Structure–composition–property (SCP) mapping (local to process) — Q:** In the ALD/MLD path, what change in film structure is expected when replacing the O₃ step with an organic pulse?
-**A (paragraph):** The film transitions from purely inorganic (e.g., oxide) to an inorganic–organic hybrid, where the organic linker inserts between metal-terminated surfaces, altering density, mechanical response, and potentially optical properties relative to the ALD-only path.
+  **A (paragraph):** The film transitions from purely inorganic (e.g., oxide) to an inorganic–organic hybrid, where the organic linker inserts between metal-terminated surfaces, altering density, mechanical response, and potentially optical properties relative to the ALD-only path.
 
 - **Taxonomy & chemical-space coverage (lightweight here) — Q:** Classify the figure type and name the two process classes illustrated.
-**A (factoid):** Process flow diagram showing ALD and ALD/MLD cycles.
+  **A (factoid):** Process flow diagram showing ALD and ALD/MLD cycles.
 
 - **Application / performance inference (near-term implication) — Q:** Given the right-hand ALD/MLD cycle, name one plausible reason to choose it over pure ALD for a device stack.
-**A (list/paragraph):** To introduce organic linkers for flexibility/tunability (e.g., lower modulus, modified refractive index, tailored barrier properties) while retaining layer-by-layer thickness control.
+  **A (list/paragraph):** To introduce organic linkers for flexibility/tunability (e.g., lower modulus, modified refractive index, tailored barrier properties) while retaining layer-by-layer thickness control.
 
 
 ---
@@ -81,7 +81,7 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
   **A (paragraph):** Start with **X ≈ 4:1** (between the 3:1 and 5:1 examples), which nominally yields ~20% under saturated growth. Verify with metrology and fine-tune by adjusting X or inserting/removing dopant sub-cycles if incorporation is off target.
 
 - **Parameter sensitivity / what-if — Q:** If pulses are saturated but you increase X from 1 to 5, what happens to composition and likely properties?
-**A (paragraph):** The **dopant fraction decreases** from ~½ to ~1/6 per supercycle, so properties tied to dopant content (e.g., carrier concentration, refractive index, bandgap, catalytic activity) shift toward the host’s values. Film uniformity remains controlled because the half-reactions stay surface-limited.
+  **A (paragraph):** The **dopant fraction decreases** from ~½ to ~1/6 per supercycle, so properties tied to dopant content (e.g., carrier concentration, refractive index, bandgap, catalytic activity) shift toward the host’s values. Film uniformity remains controlled because the half-reactions stay surface-limited.
 
 ---
 
@@ -95,16 +95,16 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
   **A (factoid):** **Nanolaminates** — they intentionally create many A|B interfaces per thickness.
 
 - **Design / synthesis planning — Q:** *You want **continuous band‑gap tuning** without periodic interfaces. Which route and cycle strategy should you choose?*  
-**A (paragraph):** Choose **homogeneous mixing**. Use short alternating A/B sub‑cycles (e.g., A–purge–co‑reactant–purge // B–purge–co‑reactant–purge) with a chosen A:B cycle ratio (e.g., 1:1 or 3:2) until the target thickness is reached. This keeps the film as a **single mixed phase** rather than a layered stack.
+  **A (paragraph):** Choose **homogeneous mixing**. Use short alternating A/B sub‑cycles (e.g., A–purge–co‑reactant–purge // B–purge–co‑reactant–purge) with a chosen A:B cycle ratio (e.g., 1:1 or 3:2) until the target thickness is reached. This keeps the film as a **single mixed phase** rather than a layered stack.
 
 - **Process sequencing & control — Q:** Provide a minimal ALD pulse plan to make a nanolaminate period **[A/B]** with ~1 nm per sublayer assuming ~1 Å growth per cycle for both A and B.  
-**A (ordered list):**  
-1. Repeat **10 cycles of A**: (A precursor → purge → co‑reactant → purge) × 10  
-2. Repeat **10 cycles of B**: (B precursor → purge → co‑reactant → purge) × 10  
-3. Repeat steps 1–2 for the required number of periods.
+  **A (ordered list):**  
+  1. Repeat **10 cycles of A**: (A precursor → purge → co‑reactant → purge) × 10  
+  2. Repeat **10 cycles of B**: (B precursor → purge → co‑reactant → purge) × 10  
+  3. Repeat steps 1–2 for the required number of periods.
 
 - **Parameter sensitivity / what‑if — Q:** *After high‑temperature annealing, which route is most likely to **lose its layered character** through interdiffusion, and what happens to the other two?*  
-**A (paragraph):** **Nanolaminates** are **most susceptible**—interfaces may blur and the stack can relax toward a mixed alloy. **Homogeneous mixing** is already intermixed, so its phase remains largely unchanged (apart from possible phase segregation if unstable). **Doped** films stay mostly single‑phase with dilute dopant distribution, though dopant diffusion profiles may broaden.
+  **A (paragraph):** **Nanolaminates** are **most susceptible**—interfaces may blur and the stack can relax toward a mixed alloy. **Homogeneous mixing** is already intermixed, so its phase remains largely unchanged (apart from possible phase segregation if unstable). **Doped** films stay mostly single‑phase with dilute dopant distribution, though dopant diffusion profiles may broaden.
 
 
 ---
@@ -121,15 +121,15 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
   **A (paragraph):** The nanostructured **plasmonic substrate** concentrates the local electromagnetic field near the film, increasing the **excitation rate** of HQA/Eu³⁺ and enhancing **radiative outcoupling**. This yields a higher peak intensity in the spectrum. If the emitters are placed too close to metal, **quenching** can occur, so spacing and resonance tuning are critical to maintain enhancement.
 
 - **Comparative route / trade-off analysis — Q:** What practical trade‑offs distinguish deposition on flat Si versus a plasmonic surface for this emitter?
-**A (list):**  
-- **Si (flat):** lower background, simpler processing, baseline emission (lower intensity).  
-- **Plasmonic:** higher emission via field enhancement but requires **precise spacing** to avoid quenching; adds fabrication complexity and potential spectral reshaping.
+  **A (list):**  
+  - **Si (flat):** lower background, simpler processing, baseline emission (lower intensity).  
+  - **Plasmonic:** higher emission via field enhancement but requires **precise spacing** to avoid quenching; adds fabrication complexity and potential spectral reshaping.
 
 - **Application / performance inference — Q:** How can this scheme be used for bio‑detection with AF647? What would be the signal?  
   **A (paragraph):** The Eu‑HQA film acts as an **energy donor**. When **AF647‑tagged analytes** are brought into proximity, **FRET** transfers energy from Eu³⁺ to AF647, producing an **increase at ~660 nm** (and often a corresponding decrease at 615 nm). The presence and magnitude of the 660 nm band thus report **binding/proximity**, enabling surface‑based bio‑detection.
 
 - **Design / synthesis planning — Q:** Outline a minimal ALD/MLD recipe to form the Eu‑HQA hybrid layer suitable for the optical tests.  
-**A (ordered list):**  
+  **A (ordered list):**  
   1. **ALD/MLD cycle:** Eu(thd)₃ pulse → N₂ purge → HQA pulse → N₂ purge (repeat to target thickness).  
   2. **Substrate option:** deposit on **plasmonic nanostructure** (for enhancement) or **flat Si** (for baseline).  
   3. **Assay prep:** introduce **AF647** (acceptor) to the film under conditions that control donor–acceptor spacing for measurable FRET.
