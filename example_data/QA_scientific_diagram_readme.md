@@ -54,10 +54,12 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
 - **Taxonomy & coverage — Q:** Name two N-donor ligand families shown and two O-donor families.  
   **A (list):** N-donors: *silylamides, acetamidinates, formamidinates, guanidinates* (any two). O-donors: *diketonates, alkoxides*.
 
-- **Taxonomy & coverage — Q:** Which ligand families display the broadest element coverage across the lanthanides in the panel??  
+- **Taxonomy & coverage — Q:** Which ligand families display the broadest element coverage across the lanthanides in the panel?
+
   **A (factoid):** Diketonates and alkoxides (long coverage bars), whereas guanidinates and formamidinates appear sparse.
 
 - **Comparative route / trade-off — Q:** If you must start screening precursors for Ce and Eu, which ligand classes would you try first based on the figure? 
+  
   **A (factoid/list):** Diketonates and alkoxides, as they show broad reported coverage for multiple lanthanides; silylamides may be considered next if available.
 
 - **SCP mapping — Q:** What practical implication follows from choosing an N-donor family (e.g., silylamides/acamid(in)ates) instead of an O-donor family (diketonates/alkoxides) for ALD?  
@@ -81,6 +83,7 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
   **A (paragraph):** Start with **X ≈ 4:1** (between the 3:1 and 5:1 examples), which nominally yields ~20% under saturated growth. Verify with metrology and fine-tune by adjusting X or inserting/removing dopant sub-cycles if incorporation is off target.
 
 - **Parameter sensitivity / what-if — Q:** If pulses are saturated but you increase X from 1 to 5, what happens to composition and likely properties?
+
   **A (paragraph):** The **dopant fraction decreases** from ~½ to ~1/6 per supercycle, so properties tied to dopant content (e.g., carrier concentration, refractive index, bandgap, catalytic activity) shift toward the host’s values. Film uniformity remains controlled because the half-reactions stay surface-limited.
 
 ---
