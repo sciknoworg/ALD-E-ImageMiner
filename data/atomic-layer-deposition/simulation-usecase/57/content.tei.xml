@@ -1,0 +1,1936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Chemical Processes Involved in Atomic Layer Deposition of Gallium Sulfide: Insights from Theory</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2017-02-28">February 28, 2017</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">C</forename><surname>Goehry</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institut Photovoltaïque</orgName>
+								<orgName type="institution">Ile-de-France (IPVF)</orgName>
+								<address>
+									<addrLine>8, Rue de la Renaissance</addrLine>
+									<postCode>92160</postCode>
+									<settlement>Antony</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">N</forename><surname>Schneider</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institut Photovoltaïque</orgName>
+								<orgName type="institution">Ile-de-France (IPVF)</orgName>
+								<address>
+									<addrLine>8, Rue de la Renaissance</addrLine>
+									<postCode>92160</postCode>
+									<settlement>Antony</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory" key="lab1">Institut de Recherche et Developpement sur l&apos;Energie Photovoltaïque (IRDEP)</orgName>
+								<orgName type="laboratory" key="lab2">UMR 7174</orgName>
+								<orgName type="institution" key="instit1">CNRS</orgName>
+								<orgName type="institution" key="instit2">EDF</orgName>
+								<address>
+									<addrLine>Chimie ParisTech 6 Quai Watier</addrLine>
+									<postCode>78401</postCode>
+									<settlement>Chatou</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Supporting Information</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Chemical Processes Involved in Atomic Layer Deposition of Gallium Sulfide: Insights from Theory</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2017-02-28">February 28, 2017</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">553089D759500DE890BF43DF5F84032B</idno>
+					<idno type="DOI">10.1021/acs.jpcc.6b12242</idno>
+					<note type="submission">Received: December 5, 2016 Revised: February 19, 2017</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T16:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Growth characteristics of atomic layer deposition (ALD) of gallium sulfide (Ga x S) from tris(dimethylamino)gallium (Ga(NMe 2 ) 3 ) and hydrogen sulfide (H 2 S) have been investigated by density functional theory. The steady-state film growth during one ALD cycle was modeled by studying the energetics of a large set of reactions taking place on a surface described as a SH-terminated gallium sulfide (Ga 2 S 3 ) cluster. The opportunity of using gas-phase cluster calculations to compute entropic contributions is discussed. Detailed reaction mechanisms are provided, along with free energy profiles and a large reaction network emerges. It confirms a ligand loss/exchange mechanism, and various aspects of the growth are explored (fate of the precursor and co-reactant, self-saturation of the surface, crawling and cooperative effects, role of the amido ligand, of the impurities, etc.) and confronted to experimental observations. All the key reaction steps are facile and thermodynamically favorable, while undesired side reactions are more demanding energetically.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>Atomic layer deposition (ALD) is a thin film deposition technique based on surface self-limited chemical reactions, where the substrate is exposed separately to each gas-phase reagent (precursor and co-reactant). It leads to ultrathin and conformal films with a fine control of composition and thickness, and ALD has therefore been widely applied to microelectronics but also to emerging applications such as photovoltaics, batteries, coatings, etc. <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> ALD chemistry is often considered in the absolute terms of the overall reaction. In reality, a large set of reactions are in competition during each phase of the cyclic growth, and their outcome is determined by kinetics. An ALD process is successful when the desired growth reactions are faster than the undesired ones. Most ALD gas-surface reactions can be described as dissociative chemisorption, where precursors react in multiple steps with functionalized surfaces and byproducts desorb. <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5</ref> The precursors have fundamental role as the inertness of their ligands ensure saturation of the surface in each precursor pulse (i.e., the self-limiting growth reaction), as well as thermal stability of the precursor (to avoid uncontrolled gas-phase reactions). Ex situ and in situ characterizations (quadrupole mass spectrometry, quartz crystal microbalance, infrared spectrometry, etc.) can explain many experimental observations (film composition, growth rate, etc.), but achieving a full understanding of an ALD process is rather difficult. <ref type="bibr" target="#b5">6</ref> Atomic-scale modeling using density functional theory (DFT) can provide a complementary view. Computational atomistic studies describing ALD processes have been reported since the early days of so-called at that time "atomic layer epitaxy" (ALE), and the reader can refer to recent reviews. <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> A variety of surface models are used: periodic slab, <ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref> cluster, <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref> a combination of both, <ref type="bibr" target="#b23">24</ref> or molecule models. <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref> Also, studies specifically focused on the ALD precursors have been carried out and explored for their stability, <ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b28">29</ref> reactivity, <ref type="bibr" target="#b29">30</ref> and fast screening for the identification of best candidates. <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b28">29,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b31">32</ref> Reaction data obtained from atomistic DFT calculations lead to reaction rates that can be used to set up a kinetic simulation, where all the relevant simulated steps, reaction barriers, and energies are taken into account in order to model the complete growth (multiple ALD cycles). <ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b33">34</ref> While there are now plenty of materials deposited by ALD (mostly oxides and metals), relatively few sulfide materials have been studied, though this class of materials is attracting more and more attention. <ref type="bibr" target="#b34">35</ref> Quantum-chemical calculations have been applied on an even more limited number of them, i.e., on the growth of PbS from Pb(thmd) 2 /H 2 S (thmd = 2,2,6,6tetramethyl-3,5-heptandionato), <ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b36">37</ref> CdS from CdMe 2 /H 2 S by hybrid DFT and MP2 calculations, <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39</ref> ZnS from ZnEt 2 /H 2 S and ZnMe 2 /H 2 S, <ref type="bibr" target="#b39">40</ref> and Cd x Zn 1-x S from ZnEt 2 /CdMe 2 /H 2 S. <ref type="bibr" target="#b40">41</ref> Our group has been involved with the ALD of several sulfides, such as In 2 S 3 , 42 Zn x In y S z , <ref type="bibr" target="#b42">43</ref> Cu x S, <ref type="bibr" target="#b43">44</ref> and CuInS 2 . <ref type="bibr" target="#b44">45</ref> Recently, Meng et al. reported the ALD of Ga x S thin films from [Ga(NMe 2 ) 3 ] 2 and H 2 S and applied them as anode material for Li-ion batteries. <ref type="bibr" target="#b45">46,</ref><ref type="bibr" target="#b46">47</ref> The use of a dialkylamido precursor, a class of complexes widely used in group IV oxide/nitride ALD chemistry, <ref type="bibr" target="#b47">48</ref> was reported to be an important parameter for the success of the synthesis, as no film growth was observed when the common gallium precursor GaMe 3 was used. <ref type="bibr" target="#b45">46</ref>   <ref type="bibr" target="#b50">51</ref> In the process reported by Meng et al., gallium sulfide films are obtained as amorphous and have a relatively high content of O, as well as a certain amount of N and C. Various in situ characterization studies performed (FT-IR, QCM, QMS) gave important mechanistic insights, but the ALD process, notably the oxygen content, could not be fully understood.</p><p>Herein is reported the results of our ab initio studies of that process. Density functional theory (DFT) is used to shed a light on a network of reactions taking place on a thiolfunctionalized Ga 2 S 3 surface, exposed to the precursor/coreactant couple: Ga(NMe 2 ) 3 /H 2 S. <ref type="bibr" target="#b45">46</ref> To describe at the atomic scale the mechanisms at play during the growth, a cluster model <ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b52">53</ref> is proposed and the energetics of a large set of reactions organized in networks in terms of ΔE and ΔG are reported. The opportunity to include entropy contributions is also discussed. To the best of our knowledge, this is the first time ALD growth of a gallium sulfide material is described using computational methods. Also, this study is performed on a much broader spectrum than any computational insights provided so far for sulfide-based materials. <ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref><ref type="bibr" target="#b40">[41]</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ COMPUTATIONAL DETAILS</head><p>The suite of programs TURBOMOLE 7.0 54 was used. Generalized gradient approximation (GGA) Becke-Perdew density functional BP86 is used for all the calculations presented in this work, as its computational efficiency and reasonable accuracy compared to hybrid functionals have been previously reported. <ref type="bibr" target="#b16">17</ref> Guess geometries are optimized with allelectron basis set and valence double-ζ polarization at the SV(P) level, and the energy of each final structure obtained is evaluated with a larger triple-ζ basis set, namely, TZVPP. Empirical dispersion correction is used as proposed by Grimme, D3 version, <ref type="bibr" target="#b54">55</ref> with Becke-Johnson damping. <ref type="bibr" target="#b55">56</ref> The convergence criteria on total energies (and for the frequencies determinations), atomic displacements and forces are 1 × 10 -8 (1 × 10 -12 ), 1 × 10 -3 , and 1 × 10 -5 au, respectively. With these computational conditions, the obtained data can be considered as fully converged. All species considered in this work are closed-shell, and the RI approximation <ref type="bibr" target="#b56">57</ref> was used to accelerate the calculations. Transition states were optimized by following a transition eigenvector obtained by an initial frequency calculation. Entropy is calculated as proposed by the Turbomole package to take into account ubiquitous adsorption/desorption phenomena in surface reactions. All the free energies reported here include the zero-point energy correction. Finally, a force constant calculation is performed to give access to Gibbs free energies, and thermodynamic data are extracted at P = 1.5 mbar and T = 150 °C to simulate experimental conditions. <ref type="bibr" target="#b45">46</ref> The Ga 2 S 3 surface is represented with a cluster model in vacuum.</p><p>The free energy is represented as a sum of terms, according to the following formulas:</p><formula xml:id="formula_0">= - G H TS (1) = + + H E kT ZPE b (2)</formula><p>where G is the free energy (J mol -1 ), H is the enthalpy (J mol -1 ), T is the temperature (K), and S is the entropy (J.K -1 ). E is the total electronic energy of the system (J mol -1 ), ZPE is the zero-point vibrational energy (J mol -1 ), and k b is the Boltzmann constant (J•K -1 ). G is herein referred to as "free energy", E as "energy", and all the other terms (ZPE + k b T -TS) as "entropy". In this paper, energy differences ΔE are given along with free energy differences ΔG. For instance, adsorption ΔE and ΔG are calculated relative to free surface and separated precursor. ■ RESULTS AND DISCUSSIONS Description of the Surface. Usually, mechanistic studies on surface reactions using clusters are performed only by looking at energy profiles and neglecting the contribution of entropy, <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b57">58</ref> use small molecule-like cluster models to represent the surface, <ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b24">25</ref> or sometimes have frozen atoms. The contribution of the entropy may modify the free energy profile and should not be neglected, particularly when molecules are adsorbed on a surface and see their degrees of freedom constrained, <ref type="bibr" target="#b58">59</ref> as will be discussed later in this paper. To validate our approach, test calculations have been carried    </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The Journal of Physical Chemistry C</head><p>Article out to estimate the cluster size convergence in thermodynamical terms. A conceptual difficulty arises with the computation of thermodynamical quantities: if any set of coordinates (here, Z H coordinates) is frozen, it may result in a nonoptimal geometry and as a consequence in a set of imaginary frequencies. Those particular modes are not taken into account in the computation of vibrational contribution to the entropy. Gallium sulfide exhibits two stoichiometries GaS and Ga 2 S 3 . <ref type="bibr" target="#b59">60</ref> Experimentally, the films are obtained by ALD as amorphous films and have a Ga 2 (O,S) 3 stoichiometry. <ref type="bibr" target="#b45">46</ref> Thus, crystal data of monoclinic α-Ga 2 S 3 , 61 a phase of gallium sulfide commonly found at room temperature that displays ordered vacancies, are used to generate three-dimensional structure. The top surface corresponds to the (001) plane of the monoclinic α-Ga 2 S 3 crystal, and the directions parallel to the surface correspond to [100] and [010]. A series of clusters of increasing sizes was constructed, where the crystal is accordingly cut and covered with thiol groups. Hydrogen atoms (referred to as Z H atoms) saturate the dangling bonds on the sides and bottom of the clusters extracted from the threedimensional crystal. Two test-series of clusters were constructed to probe both the effect of the cluster size and the freezing of Z H atoms on the entropy terms.</p><p>A sample reaction corresponding to the chemisorption of the Ga(NMe 2 ) 3 precursor and the release of a HNMe 2 molecule that includes the reactant A01, adsorbate A02, transition state A03TS, and product A04 is tested on each cluster (see Supporting Information, Figure <ref type="figure" target="#fig_2">S2</ref>). The proposed test series is performed on clusters of increasing sizes (N1/Nf1, N2/Nf2, N3/Nf3, N4/Nf4 and N5/Nf5), where Z H atoms are respectively not frozen and frozen (Figure <ref type="figure" target="#fig_1">1</ref>). The "nonfrozen" clusters N1, N2, N3, N4, and N5 have the same starting geometries as their "frozen" counterparts but are deformed during optimization as Z H atoms are free to move. Additionally in the cluster Nf2, the bottom Ga/S layer is also frozen to prevent further deformation from lattice positions. The results of this test series are shown in Table <ref type="table" target="#tab_0">1</ref>, Figure <ref type="figure" target="#fig_2">2</ref> and in Supporting Information Table <ref type="table" target="#tab_0">S1</ref>, Figure <ref type="figure" target="#fig_1">S1</ref>. In the first series, Z H coordinates are not frozen, the shape of such clusters is strongly impacted, particularly at the edges of the smallest clusters and for the thinnest cluster containing only two Ga-S layers. The cluster N2 even spontaneously expels (Z H ) 2 and is therefore discarded. In the second series, the shape of clusters is more tightly kept due to frozen atoms with the exception of Nf1, for which a thiol group orientation is bent toward the center of the cluster. Also, some hydrogen atoms on the surface are transferred to thiol neighbors, creating H 2 S groups and S-S bridges. A wrong balance of local charges may be at the origin of this effect, which could not be prevented. An artifact seems to appear with N1 for the transition state energy of A03TS (ΔG ⧧ = -26.3 kJ mol -1 ), see Supporting Information Table <ref type="table" target="#tab_0">S1</ref> and Figure <ref type="figure" target="#fig_1">S1</ref>, as it is found to have a lower energy than separated species (A01, E reference, ΔG = 0.0 kJ mol -1 ) or the chemisorbed precursor (A02, ΔG = -8.3 kJ mol -1 ). For the rest of the set of clusters, the energy of the transition state is rather constant: ΔG ⧧ = +38.0 kJ mol -1 and ΔG ⧧ = +45.2 kJ.mol -1 for, respectively, N3 and N4. The energies of the product seem however to slowly converge as the cluster size increases, no matter whether Z H coordinates are frozen or not.  Regarding the entropy (see Table <ref type="table" target="#tab_0">1</ref> and Figure <ref type="figure" target="#fig_2">2</ref>), this term seems to be stable along the test series. The entropy change for A01 → A02 ranges from ΔS = +88. Overall the results show that the variation of entropy calculated along the selected reaction is similar whether Z H coordinates are frozen or not, except for the smallest cluster (N1). These tests validate our approach of a cluster with frozen Z H saturators. The amount and quality of negative frequencies are required to be constant except for transition states, which always display one single extra negative mode. As a compromise between precision and computational cost, the cluster model Nf2 was selected and used in the rest of the work presented in this paper and implies an underestimation of energies of approximately 15 kJ mol -1 .</p><p>Reactivity on the Surface. In order to provide a model that represents accurately the chemical reactions taking place in  the ALD chamber, one has to ensure that the surface is properly described, and all reactions are thoroughly investigated, particularly the most likely ones, i.e., energetically accessible. In this effort, the energetics of a large number of reactions are explored and split in several categories: (i) "precursor pulse", where the gas-phase precursor Ga(NMe 2 ) 3 adsorbs on the surface (see Figure <ref type="figure" target="#fig_2">S2</ref>); (ii) self-saturation behavior, key characteristic of ALD (see Figure <ref type="figure" target="#fig_4">4</ref>); (iii) investigation of some representative reactions of so-called "cooperative effects", when two precursors are chemisorbed in close vicinity (see Figure <ref type="figure" target="#fig_3">S3</ref>); (iv) reaction mechanisms between H 2 S and the chemisorbed species (see Figure <ref type="figure" target="#fig_4">S4</ref>), as after the chemisorption of Ga(NMe 2 ) 3 , the reaction chamber is purged with inert gases and the co-reactant H 2 S is injected in the chamber. The four sets of reactions (Figure <ref type="figure" target="#fig_4">4</ref>, Figures <ref type="figure" target="#fig_2">S2</ref>, <ref type="figure" target="#fig_3">S3</ref>, S4 in Supporting Information) show elementary reactions that may be involved in a full ALD cycle. The purges are not explicitly modeled but can be seen as preventing the reversibility of reactions involving production of gas-phase species. Finally, (v) an exploration of air or water contamination that may result in impurity incorporation is proposed by replacing a thiol group by a hydroxy group on the surface of our cluster model (see Figure <ref type="figure" target="#fig_9">8</ref>).</p><p>Reaction of the Precursor with the Functionalized Surface. As the functionalized surface (A01) is exposed to the Ga(NMe 2 ) 3 precursor (see Figure <ref type="figure" target="#fig_3">3</ref>, Table <ref type="table" target="#tab_1">2</ref> and Supporting Information Figure <ref type="figure" target="#fig_2">S2</ref>), their interaction (A02) is slightly disfavored under ALD conditions (ΔG = +14.7 kJ mol -1 ), despite a consequent stabilization in potential energy (ΔE = -73.6 kJ mol -1 ). The chemisorption (A02 → A03TS → A04) occurs while a hydrogen from a nearby thiol group is transferred to a dimethylamine ligand. As shown in Figure <ref type="figure" target="#fig_3">3</ref>, the chemisorbing fragment approaches the surface by a N atom of an amido ligand (distance SH•••N = 2.054 Å), leading to transition state A03TS with elongated S-H bond (distance S••• H surface = 1.411 Å) and Ga-N bonds (distance Ga•••N = 1.880 Å vs 1.848 and 1.852 Å) and chemisorbing Ga atom in trigonal geometry (angle sum = 360°). This reaction involves a low free energy barrier of ΔG ⧧ = +42.2 kJ mol -1 , comprising antagonist potential energy (ΔE ⧧ = -70.9 kJ mol -1 ) and entropy contributions (ΔS ⧧ = +113.1 kJ mol -1 ). The intermediate A04 is largely stabilized with ΔG = -106.0 kJ mol -1 , driven by enthalpy stabilization, which highlights the importance of considering entropy and thermal contributions. <ref type="bibr" target="#b6">7</ref> The formed Ga-S bond remains weaker than in cluster (distance Ga-S = 2.271 Å). The intermediate A04 is stabilized by a weak interaction between the chemisorbed Ga atom and a neighboring thiol group (distance Ga•••S = 2.591 Å), leading to Ga atom in distorted tetragonal geometry. The second ligand release step A04 → A05TS → A06 follows a similar trend comprising low free energy barrier stabilization upon ligand release by proton transfer. The N atom approaches the thiol H atom (distance N•••H = 2.666 Å), leading to elongation of the N-Ga bond (distance = 1.901 vs 1.857 Å) of the other group, and finally intermediate A06, where the Ga-S bonds have respective 2.246 and 2.217 Å length values, the Ga-N is slightly shorter than planar (angle sum = 357.41°). The last step A06 → A07TS → A08 is different from the first two steps as a larger deformation is required to eliminate the third ligand. Indeed, the adsorbed gallium atom connects three distant sulfur atoms. The stabilization for A06 → A08 is therefore diminished to only ΔG = -7.4 kJ mol -1 (versus ΔG = -117.9 kJ mol -1 for A04 → A06).</p><p>So-called "crawling" effect corresponds to the motion of precursor fragments over the surface and allows the saturation of the surface, which is essential for a successful ALD process. <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b3">4</ref> This phenomenon is represented by the reaction A04 → A19TS → A20 (Figure <ref type="figure" target="#fig_4">4a</ref>, Table <ref type="table" target="#tab_2">3</ref>). The activation free energy required (ΔG ⧧ = +37.1 kJ mol -1 ) is characteristic of a very fast mechanism in ALD conditions. The intermediate has a structure similar to A04, i.e., a chemisorbed Ga atom in tetrahedral geometry, a formed Ga-S bond (distance Ga-S = 2.295 Å), and a weak stabilizing interaction with neighboring thiol group (distance Ga•••SH = 2.510 Å). In this case, the product A20 is more stable than the reactants (ΔG = -18.5 kJ mol -1 ), an artifact due to the rearrangement of H-bonds among thiol groups, which are only available in limited amounts with a finite cluster model. Other routes have been explored and are displayed in Supporting Information, Figure <ref type="figure" target="#fig_2">S2</ref>. With methane elimination from the ligands A02 →A13TS → A14 and A04 → A15TS → A16 showing very high reaction barriers of, respectively, ΔG ⧧ = +298.0 and +347.3 kJ mol -1 , no other methane eliminations occurring were calculated. Another mechanistic route to generate A06 was investigated, which corresponds to H transfer from a thiol group to adsorbed Ga (A21TS), leading to a Ga-H complex (A22) and followed by elimination of HNMe 2 via A23TS to finally recover intermediate A06. As the first barrier A04 → A21TS is very high (ΔG ⧧ = +215.9 kJ mol -1 ), the first intermediate A22 lies  ΔG = +100.9 kJ mol -1 above A04, and the second barrier A22 → A23TS is not negligible (ΔG ⧧ = +126.6 kJ mol -1 ), this route appears unlikely. A hydrogen atom might be transferred from a methyl group to the gallium: A04 → A17TS → A18, resulting in the release of imide molecule N(CH 3 )CH 2 . This process involves a high barrier (ΔG ⧧ = +189.0 kJ mol -1 ), no stabilization of the product A18 with respect to A04 (ΔG = +17.2 kJ mol -1 ) and is therefore unlikely. The reactivity of the released dimethylamine HNMe 2 was also explored. Reaction A01 → A09 that corresponds to the spontaneous transfer of a thiol hydrogen to the dimethylamine leading to an ionic interaction S-...H 2 N + Me 2 was computed,and as the overall stabilization only reaches ΔG = -3.7 kJ mol -1 , this interaction is too weak to be significant especially in ALD conditions (reaction chamber under vacuum and constant flow of inert gas). For this reason, it is assumed that any reaction that produces a release of gas molecule will be irreversible. The spontaneous release of H 2 S with the reaction A01 → A10TS → A11 → A12 was also tested and displays a reaction barrier of ΔG ⧧ = +146.7 kJ mol -1 , and the product A12 lies ΔG = +21.7 kJ mol -1 above A01 in free energy. While the barrier remains high, the surface might gradually loose H 2 S units, which could be slowly regenerated with H 2 S pulses. It would be interesting to test further such reaction with a larger cluster for a better precision and understanding. Indeed, the loss of a reactive surface groups has already been assumed in the growth of Al 2 O 3 from TMA and H 2 O to explain the noncomplete independence of growth rate with temperature. <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b61">62</ref> Self-Saturation Behavior. During the pulse of the precursor, the whole surface is expected to be gradually filled by chemisorbed precursors, which is possible due to crawling effects (as described earlier), but also to nonreversible or, if present, reversible oligomerization of the precursor. A simple way to represent this is to check the energetics of an additional precursor adsorbing on the first chemisorbed one (paths A04 → B01TS → B02 and A06 → B03TS → B04, Figure <ref type="figure" target="#fig_4">4b</ref>). Both processes lead to stabilization of, respectively, ΔG = -68.1 kJ mol -1 and ΔG = -110.7 kJ mol -1 . No transition state could be found, perhaps because this reaction is only diffusion-limited. This is not surprising as Ga(NMe 2 ) 3 is known to crystallize as a dimer. <ref type="bibr" target="#b62">63</ref> Similar geometries, bond lengths, and angle values are observed in the experimental structure. The bridging N atom leads to longer Ga-N bonds (distance Ga-N bridging = 2.032-2.067 Å) than the terminal ones (distance Ga-N terminal = 1.857-1.883 Å). The Ga center adopts a tetragonal coordination. Bond lengths and angle values of the fourmembered Ga-N-Ga-N ring are similar to the ones observed in B04 and in the crystal structure of [Ga(NMe 2 ) 3 ] 2 . 63  The Journal of Physical Chemistry C Cooperative Effects. When two precursors are chemisorbed in close vicinity, it modifies the local chemistry and may influence the relative reactivities. These effects, reported as "cooperative effects" (Table <ref type="table" target="#tab_3">4</ref>), were explored with the set of reactions proposed in Supporting Information Figure <ref type="figure" target="#fig_3">S3</ref>, and a sample pathway is presented Figure <ref type="figure" target="#fig_6">5</ref>. If the chemisorption of a second precursor occurs on the first neighboring thiol group (reaction A04 → C01 → C02TS → C03), the intermediate C01 is stabilized by ΔG = -22.1 kJ mol -1 while the first precursor adsorption A01 → A02 is slightly disfavored (ΔG = +14.7 kJ mol -1 ), as described earlier. The stabilization difference is due to the "sharing" of one ligand of the second precursor with the first chemisorbed gallium atom and a stabilized interaction between the Ga center and the thiol group (distance Ga-SH = 2.489 Å). The reaction C01 → C02TS costs ΔG ⧧ = +23.3 kJ mol -1 , which is similar to the one observed for A02 → A03TS (ΔG ⧧ = +27.5 kJ mol -1 ). The transition state C02TS corresponds to the insertion of the H atom of the thiol group on the amido ligand, leading to a deformation of the trigonal planar geometry of the N atom. The following intermediate C03 is stabilized by ΔG = -180.5 kJ mol -1 with respect to C01, as a second ligand is shared between chemisorbed gallium centers. A second ligand elimination C03 → C04TS → C05 is facile (ΔG ⧧ = +6.0 kJ mol -1 ). The resulting stabilization following the elimination of a ligand is limited (ΔG = -56.2 kJ mol -1 ), as the constraints are increasing, three surface sulfur atoms being now connected from the upper side. If the precursor is adsorbed on the second neighboring thiol group available, the adsorption becomes slightly disfavored (A04 → C08: ΔG ⧧ = +18.3 kJ mol -1 ) which is similar to the scenario when surface was free. Our cluster may be too small to properly render this example, as part of the precursors is dangling out and cannot benefit from favorable van der Waals interactions, albeit the surface of contact is increased by the presence of the first chemisorbed precursor. A more consequent stabilization can be expected with a larger cluster. Regardless, C09TS and C11TS could not be identified at this time despite our efforts. Intermediate C10 displays a large stabilization compared to C08 as two ligands become shared. Additional possible conformations may exist. Evacuation of an additional ligand leads to C05 and a stabilization of ΔG ⧧ = -130.8 kJ mol -1 in free energy. The neighboring fragment stabilizes every transition state and intermediate by sharing one of its ligands leading to bridging amido groups. In summary, cooperative effects may play a significant role in the overall growth mechanism.</p><p>H 2 S Pulse. The next step corresponds to the H 2 S pulse, and elementary reactions calculated are presented in Supporting Information Figure <ref type="figure" target="#fig_4">S4</ref> and selected pathways are shown in Figure <ref type="figure" target="#fig_7">6</ref> (see also Table 5). The H 2 S pulse has two purposes: it eliminates the remaining ligand fragments, and it regenerates the -SH functions of the surface for the next ALD cycle (A04 → D01TS → D02). This reaction displays a low barrier of ΔG ⧧ = +51.0 kJ mol -1 and a stabilization of ΔG = -61.5 kJ mol -1 with respect to A04. In transition state D01TS, the H 2 S molecule approaches the chemisorbed fragment by one of its hydrogen atom that arrives in close vicinity to N atom of an amido ligand. The N atom trigonal planar geometry is distorted; the corresponding Ga-N bond is elongated (distance = 1.939 Å vs 1.874 Å for the other Ga-N bond). It leads to the intermediate D02, where Ga has a distorted tetragonal geometry and is bound to three S atoms and one amido group. A second H 2 S molecule can eliminate the last ligand (reaction D02 → D03TS → D04), following a similar favorable trend (ΔG ⧧ = +70.8 kJ mol -1 , ΔG = -87.4 kJ mol -1 ). From this point, an H 2 S molecule can be eliminated through D05TS to form species D06. Again, low energy barrier (ΔG ⧧ = +61.3 kJ mol -1 ) and stabilization of the product D06 (ΔG = -47.4 kJ mol -1 ) relative to D04 are obtained. Intermediate D06 displays a remarkably low free energy (ΔG = -270.0 kJ mol -1 ), which is coupled to a series of low barrier steps that make the whole process accessible. However, the thiol ligand attached to the gallium center does not point perpendicularly to the surface and fits in a free space available between the other thiol groups (see Figure <ref type="figure" target="#fig_8">7</ref>). The intermediate A08, already observed in the precursor pulse, can be reached via D07TS. The free energy required for this reaction is large (ΔG ⧧ = +157.6 kJ mol -1 ) and leads to destabilization (ΔG = +71.1 kJ mol -1 ). Another possible route to D06 goes more directly through D08TS, which involves a smaller barrier (ΔG ⧧ = +6.6 kJ mol -1 ) and is much more favored. The route D02 → D09TS → A06 costs only ΔG ⧧ = +59.2 kJ mol -1 , as a H 2 S molecule is expelled and falls back to the known intermediate A06 which is -56.4 kJ mol -1 below D02. This latter is an undesired reaction pathway that corresponds to layer etching <ref type="bibr" target="#b63">64</ref> that can limit the growth rate. Another undesired reaction A04 → D10TS → D11 is explored in which H 2 S participates in expelling the gallium from A04 as organometallic complex Ga(NMe 2 ) 2 SH, which in turn regenerates an empty surface D11. While this reaction is mildly energetic with ΔG ⧧ = +106.1 kJ mol -1 , the products are destabilized by ΔG = +42.6 kJ mol -1 compared to the reactants.</p><p>Cooperation effects similar to the ones described in the previous section are also explored. The reaction of H 2 S on C03 displays an activation energy of ΔG ⧧ = +74.9 kJ mol -1 and results in the release of a ligand, and the product C07 lies ΔG = -78.4 kJ mol -1 below C03 (Supporting Information, Figure <ref type="figure" target="#fig_3">S3</ref>).</p><p>Role of Potential Impurities. Meng et al. have observed a high O content in their films that can originate from an air contamination of the reactor (P ≈ 1 mbar, low vacuum level). <ref type="bibr" target="#b45">46</ref> As a first approach to test these conditions, a reduced set of reactions where one of the thiol groups is replaced by a hydroxy group was tested (see Figure <ref type="figure" target="#fig_9">8</ref> and Table <ref type="table" target="#tab_5">6</ref>). The new surface is labeled E01, and exposure to a Ga(NMe 2 ) 3 precursor leads to chemisorption E01 → E02TS → E03. This reaction is likely to display a low free energy barrier; the product E03 is stabilized by ΔG = -82.9 kJ mol -1 . Further ligand elimination, leading to E07 via the transition state E06TS, has a very low reaction barrier of ΔG ⧧ = +3.7 kJ mol -1 in free energy, and the product E07 is stabilized by ΔG ⧧ = -112.4 kJ mol -1 . Alternatively, E03 can react with H 2 S (E04TS) and expels HNMe 2 . This reaction requires ΔG ⧧ = +61.2 kJ mol -1 and the product E05 is ΔG = -65.7 kJ mol -1 more stable. Overall, the energetics of those reactions based on the modified surface E01 are similar to what is observed for the nonmodified surface A01, and such in situ O insertion is energetically possible.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSION</head><p>The surface chemistry of ALD of gallium sulfide from Ga(NMe 2 ) 3 and H 2 S has been described with DFT through a cluster model. This method gives access to information on the surface chemistry at the atomic scale and is a valuable complement to in situ characterization methods. Structures, pathways, and energetics for a large network of reactions are provided. The computational method used is this paper allows</p><p>The Journal of Physical Chemistry C incorporation of entropy, which strongly impacts the energy profiles, as adsorption and desorption are ubiquitous in ALD processes. Most intermediates and transition states were found, and key reaction routes were identified. It confirmed a ligand exchange/loss mechanism, with typical chemical reaction ∥-SH surface + Ga(NMe 2 ) 3 (g) → ∥-S-Ga(NMe 2 ) 3-x surface + xHNMe 2 (g). The low energy barriers involved account for the experimental relatively low deposition temperature (150 °C). <ref type="bibr" target="#b45">46</ref> Cooperative effects involving bridging amido ligands can lower further the energy barriers. Once released, the amine molecule was found unlikely to react with the surface. Side reactions such as methane (CH 4 )-or imide (CH 2 NMe)elimination have high activation energy barrier and may not occur in this process. This confirms the experimental observation that no (or below the quadrupole mass spectrometry detection limit) CH 4 was produced during the ALD process. <ref type="bibr" target="#b45">46</ref> However, undesired layer etching is energetically accessible and should be considered. This DFT study also confirmed the feasibility of the self-saturation of the surface by low energy rearrangement of the adsorbed fragments on the surface (crawling effect) and reversible oligomerization of the Ga precursor, a molecule known to crystallize as dimer. In most structures, the gallium atom adopts a tetrahedral geometry by stabilizing effect of a neighboring thiol surface group. Some experimental observations such as the incorporation of O could also be explained. Finally, the complete data set on the growth of the material may be incorporated in the future into a kinetic model that spans multiple ALD cycles to model the time evolution real system. Also, the incorporation of a second precursor would allow the modeling of a ternary material and the explanation of relative atomic ratios by exploring the energetics of exchange.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>* S Supporting Information</head><p>The Supporting Information is available free of charge on the ACS Publications website at DOI: 10.1021/acs.jpcc.6b12242.</p><p>Free energies for test reaction A01 → A02 → A03TS → A04, extended reaction mechanisms, and detailed views of selected structures and structural descriptions (PDF)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ AUTHOR INFORMATION</head><p>Corresponding Author *E-mail: n.schneider@chimie-paristech.fr.</p><p>ORCID N. Schneider: 0000-0001-7749-2400</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notes</head><p>The authors declare no competing financial interest.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ACKNOWLEDGMENTS</head><p>This work was carried out in the framework of a project of IPVF (Institut Photovoltai ̈que d'Ile-de-France). This project has been supported by the French Government in the frame of the program of investment for the future (Programme d'Investissement d'Avenir ANR-IEED-002-01). The authors thank EDF R&amp;D for providing the computing resources used in this work, and Dr. Philippe Baranek for fruitful discussions.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><figDesc>Notably, hafniumalkylamido precursors have been used for the synthesis of HfO 2 and the processes Hf(NEtMe) 4 /H 2 O 49 and Hf-(NMe 2 ) 4 /H 2 O 50 have been studied by DFT. TiO 2 deposition from Ti(NMe 2 ) 4 /H 2 O has been studied by DFT by Detavernier et al.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Top and side view representations of the clusters: black, gallium; orange, sulfur; gray, carbon; blue, nitrogen; white, hydrogen; green, hydrogen atom saturators (Z H ).</figDesc><graphic coords="2,60.49,69.17,504.00,191.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Variation of contribution of entropy relative to the empty surface. Values are in kJ mol -1 over the selected reaction A01 → A02 → A03TS → A04. See Figures 3 and S2 for details.</figDesc><graphic coords="3,84.70,224.22,191.51,143.26" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Reaction pathway for the chemisorption of Ga(NMe 2 ) 3 precursor on the functionalized surface. Free energies G are in kJ mol -1 .</figDesc><graphic coords="3,89.52,474.69,445.83,262.49" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Reaction pathways allowing self-saturation: (a) surface rearrangement (so-called "crawling effects"; (b) extra addition of [Ga(NMe 2 ) 3 ] precursor.</figDesc><graphic coords="4,61.06,69.17,502.75,164.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><figDesc>3 kJ mol -1 to ΔS = +118.6 kJ mol -1 for, respectively, Nf2 and N5. The activation entropy for A01 → A03TS is in a tighter range: from ΔS ⧧ = +113.1 kJ mol -1 to ΔS ⧧ = +125.2 kJ mol -1 for, respectively, Nf2 and Nf3. Finally, for the overall entropy change during A01 → A04, the computed values range from ΔS = +22.8 kJ mol -1 to ΔS = +33.1 kJ mol -1 for, respectively, Nf4 and Nf3.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Reaction pathways involving cooperation of two Ga(NMe 2 ) 3 precursors. Free energies are in kJ mol -1 .</figDesc><graphic coords="5,99.10,69.17,426.73,283.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Reaction pathways involving the coreactant H 2 S regenerating the thiol end groups of the surface. Free energies are in kJ mol -1 .</figDesc><graphic coords="5,60.49,384.21,504.00,224.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Detail of the D06 intermediate. Atoms are represented in black (gallium), orange (sulfur), and white (hydrogen). The thiol group bound to adsorbed Ga center is oriented toward other surface thiol groups and not perpendicular to the surface.</figDesc><graphic coords="6,122.97,342.20,114.92,70.30" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Mechanisms explored for the key steps of the chemisorption of Ga(NMe 2 ) 3 precursor on the functionalized surface which contains an oxygen (hydroxy) impurity on the absorption site, followed by H 2 S injection. Free energies are in kJ mol -1 .</figDesc><graphic coords="7,96.04,69.17,432.79,305.86" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Entropy Profile Calculated for the Sample Reactions A01 → A04 a</figDesc><table><row><cell></cell><cell></cell><cell>entropy profile</cell><cell></cell></row><row><cell>cluster</cell><cell>A02</cell><cell>A03TS</cell><cell>A04</cell></row><row><cell>N1</cell><cell>+106.2</cell><cell>+155.6</cell><cell>+17.6</cell></row><row><cell>N3</cell><cell>+109.9</cell><cell>+121.6</cell><cell>+30.2</cell></row><row><cell>N4</cell><cell>+109.6</cell><cell>+122.0</cell><cell>+23.4</cell></row><row><cell>N5</cell><cell>+118.6</cell><cell>N/A</cell><cell>+32.3</cell></row><row><cell>Nf2</cell><cell>+88.3</cell><cell>+113.1</cell><cell>+36.1</cell></row><row><cell>Nf3</cell><cell>N/A</cell><cell>+125.2</cell><cell>+33.1</cell></row><row><cell>Nf4</cell><cell>+110.7</cell><cell>N/A</cell><cell>+22.8</cell></row></table><note><p>a Values in kJ mol -1 with respect to A01.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Reaction Energetics for the First Set of Reactions a</figDesc><table><row><cell></cell><cell>ΔE</cell><cell>ΔG</cell></row><row><cell>A01 (ref)</cell><cell>+0.0</cell><cell>+0.0</cell></row><row><cell>A02</cell><cell>-73.6</cell><cell>+14.7</cell></row><row><cell>A03TS</cell><cell>-70.9</cell><cell>+42.2</cell></row><row><cell>A04</cell><cell>-142.1</cell><cell>-106.0</cell></row><row><cell>A05TS</cell><cell>-138.4</cell><cell>-104.1</cell></row><row><cell>A06</cell><cell>-169.4</cell><cell>-223.9</cell></row><row><cell>A07TS</cell><cell>-157.3</cell><cell>-201.7</cell></row><row><cell>A08</cell><cell>-80.2</cell><cell>-231.3</cell></row><row><cell>A09</cell><cell>-125.6</cell><cell>-3.7</cell></row><row><cell>A10TS</cell><cell>+140.0</cell><cell>+146.7</cell></row><row><cell>A11</cell><cell>+118.7</cell><cell>+126.9</cell></row><row><cell>A12</cell><cell>+117.0</cell><cell>+21.7</cell></row><row><cell>A13TS</cell><cell>+189.1</cell><cell>+298.0</cell></row><row><cell>A14</cell><cell>-100.6</cell><cell>-61.4</cell></row><row><cell>A15TS</cell><cell>+223.9</cell><cell>+241.3</cell></row><row><cell>A16</cell><cell>-54.0</cell><cell>-119.7</cell></row><row><cell>A17TS</cell><cell>+58.0</cell><cell>+83.0</cell></row><row><cell>A18</cell><cell>-13.2</cell><cell>-88.8</cell></row><row><cell>A19TS</cell><cell>-94.3</cell><cell>-69.0</cell></row><row><cell>A20</cell><cell>-157.7</cell><cell>-124.5</cell></row><row><cell>A21TS</cell><cell>+95.2</cell><cell>+109.9</cell></row><row><cell>A22</cell><cell>-45.6</cell><cell>-5.2</cell></row><row><cell>A23TS</cell><cell>+98.0</cell><cell>+121.5</cell></row></table><note><p>a Values in kJ mol -1 .</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Reaction Energetics Accounting for the Self-Saturation Behavior (Figure4) a</figDesc><table><row><cell></cell><cell>ΔE</cell><cell>ΔG</cell></row><row><cell>A04</cell><cell>-142.1</cell><cell>-106.0</cell></row><row><cell>B01TS</cell><cell>N/A</cell><cell>N/A</cell></row><row><cell>B02</cell><cell>-339.1</cell><cell>-174.1</cell></row><row><cell>A06</cell><cell>-169.4</cell><cell>-223.9</cell></row><row><cell>B03TS</cell><cell>N/A</cell><cell>N/A</cell></row><row><cell>B04</cell><cell>-411.6</cell><cell>-334.6</cell></row></table><note><p>a Values in kJ mol -1 .</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 .</head><label>4</label><figDesc>Reaction Energetics Accounting for the Cooperative Effects (More Details, Figures5 and S3) a</figDesc><table><row><cell></cell><cell>ΔE</cell><cell>ΔG</cell></row><row><cell>A04</cell><cell>-142.1</cell><cell>-106.0</cell></row><row><cell>C01</cell><cell>-298.1</cell><cell>-128.1</cell></row><row><cell>C02TS</cell><cell>-286.1</cell><cell>-104.8</cell></row><row><cell>C03</cell><cell>-399.5</cell><cell>-308.6</cell></row><row><cell>C04TS</cell><cell>-390.1</cell><cell>-302.6</cell></row><row><cell>C05</cell><cell>-358.0</cell><cell>-364.8</cell></row><row><cell>C08</cell><cell>-221.3</cell><cell>-87.7</cell></row><row><cell>C09</cell><cell>N/A</cell><cell>N/A</cell></row><row><cell>C10</cell><cell>-322.1</cell><cell>-234.0</cell></row><row><cell>C11TS</cell><cell>N/A</cell><cell>N/A</cell></row><row><cell>C05</cell><cell>-358.0</cell><cell>-364.8</cell></row></table><note><p>a Values in kJ mol -1 .</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 5 .</head><label>5</label><figDesc>Reaction Energetics for the Second Set of Reactions ("H 2 S Pulse") (Figures6 and S4) a</figDesc><table><row><cell></cell><cell>ΔE</cell><cell>ΔG</cell></row><row><cell>A01 (ref)</cell><cell>+0.0</cell><cell>+0.0</cell></row><row><cell>A04</cell><cell>-142.1</cell><cell>-106.0</cell></row><row><cell>D01TS</cell><cell>-182.8</cell><cell>-55.0</cell></row><row><cell>D02</cell><cell>-208.9</cell><cell>-167.5</cell></row><row><cell>D03TS</cell><cell>-226.9</cell><cell>-96.6</cell></row><row><cell>D04</cell><cell>-284.8</cell><cell>-254.9</cell></row><row><cell>D05TS</cell><cell>-234.5</cell><cell>-193.6</cell></row><row><cell>D06</cell><cell>-258.8</cell><cell>-270.0</cell></row><row><cell>D07TS</cell><cell>-83.3</cell><cell>-144.8</cell></row><row><cell>D08TS</cell><cell>-204.4</cell><cell>-160.9</cell></row><row><cell>D09TS</cell><cell>-146.6</cell><cell>-108.3</cell></row><row><cell>A06</cell><cell>-169.4</cell><cell>-223.9</cell></row><row><cell>A07TS</cell><cell>-157.1</cell><cell>-200.7</cell></row><row><cell>A08</cell><cell>-80.2</cell><cell>-231.3</cell></row><row><cell>D10TS</cell><cell>-121.2</cell><cell>+0.1</cell></row><row><cell>D11</cell><cell>-69.6</cell><cell>-63.4</cell></row><row><cell>C03</cell><cell>-399.5</cell><cell>-308.6</cell></row><row><cell>C06TS</cell><cell>-425.9</cell><cell>-233.7</cell></row><row><cell>C07</cell><cell>-486.1</cell><cell>-387.1</cell></row></table><note><p>a Values in kJ mol -1 .</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 6 .</head><label>6</label><figDesc>Exploration of the Role of Impurities (Figure8) a</figDesc><table><row><cell></cell><cell>ΔE</cell><cell>ΔG</cell></row><row><cell>E01</cell><cell>0.0</cell><cell>0.0</cell></row><row><cell>E02TS</cell><cell>N/A</cell><cell>N/A</cell></row><row><cell>E03</cell><cell>-122.6</cell><cell>-82.9</cell></row><row><cell>E06TS</cell><cell>-121.8</cell><cell>-79.3</cell></row><row><cell>E07</cell><cell>-142.4</cell><cell>-195.4</cell></row><row><cell>E04TS</cell><cell>-151.8</cell><cell>-21.8</cell></row><row><cell>E05</cell><cell>-191.7</cell><cell>-148.6</cell></row></table><note><p>a Values in kJ mol -1 .</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>DOI: 10.1021/acs.jpcc.6b12242 J. Phys. Chem. C 2017, 121, 5871-5881</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>J. Phys. Chem. C 2017, 121, 5871-5881</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition: An Overview</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="111" to="131" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Crystallinity of Inorganic Films Grown by Atomic Layer Deposition: Overview and General Trends</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Miikkulainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2013</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">21301</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A Brief Review of Atomic Layer Deposition: From Fundamentals to Applications</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hultqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater. Today</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="236" to="246" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Mechanisms of Surface Reactions in Thin Solid Film Chemical Deposition Processes</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zaera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Coord. Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">257</biblScope>
+			<biblScope unit="page" from="3177" to="3191" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The Surface Chemistry of Atomic Layer Depositions of Solid Thin Films</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zaera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">2012</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1301" to="1309" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Situ Studies on Reaction Mechanisms in Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Knapas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Crit. Rev. Solid State Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="167" to="202" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Atomic-Scale Simulation of ALD Chemistry</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">74008</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Modeling Mechanism and Growth Reactions for New Nanofabrication Processes by Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Maimaiti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ablat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Filatova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Fomengia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">27</biblScope>
+			<biblScope unit="page" from="5367" to="5380" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">First-Principles Modeling of the &quot;Clean-Up&quot; of Native Oxides during Atomic Layer Deposition onto III-V Substrates</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Klejna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="643" to="654" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">On the Mechanisms of SiO 2 Thin-Film Growth by the Full Atomic Layer Deposition Process Using Bis(t-Butylamino) Silane on the Hydroxylated SiO 2 (001) Surface</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Karwacki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Derecskei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>O'neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="947" to="952" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Simulation of ALD Chemistry of (nBu3P)2Cu(acac) and Cu(acac)2 Precursors on Ta(110) Surface</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gessner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron. Eng</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="23" to="31" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Ab Initio Investigation of Surface Chemistry of Alumina ALD on Hydroxylated γ-Alumina Surface</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Sandupatla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Alexopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-F</forename><surname>Reyniers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Marin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page" from="13050" to="13061" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">DFT Investigation into Alumina ALD Growth Inhibition on Hydroxylated Amorphous Silica Surface</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Sandupatla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Alexopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-F</forename><surname>Reyniers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Marin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">32</biblScope>
+			<biblScope unit="page" from="18380" to="18388" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Toward Atomic-Scale Patterned Atomic Layer Deposition: Reactions of Al 2 O 3 Precursors on a Si(001) Surface with Mixed Functionalizations</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Longo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H G</forename><surname>Owen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mcdonnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Ballard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Randall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2628" to="2641" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Density Functional Theory Study on the Full ALD Process of Silicon Nitride Thin Film Deposition via BDEAS or BTBAS and NH 3</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Derecskei-Kovacs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>O'neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Pearlstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2014</biblScope>
+			<biblScope unit="issue">34</biblScope>
+			<biblScope unit="page" from="18501" to="18512" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">First-Principles Analyses and Predictions on the Reactivity of Barrier Layers of Ta and TaN toward Organometallic Precursors for Deposition of Copper Films</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Machado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaczmarski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ordejoń</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Norman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="7608" to="7614" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The Effect of Reaction Mechanism on Precursor Exposure Time in Atomic Layer Deposition of Silicon Oxide and Silicon Nitride</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hausmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Henri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lavoie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="10534" to="10541" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Deposition of Copper by Plasma-Enhanced Atomic Layer Deposition Using a Novel N-Heterocyclic Carbene Precursor</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Coyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Sirianni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Kemell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P A</forename><surname>Yap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Barry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1132" to="1138" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Introducing Densification Mechanisms into the Modelling of HfO 2 Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mastail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lanthony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Olivier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Duceŕe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Landa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Djafari Rouhani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Richard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dkhissi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">520</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="4559" to="4563" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Stepwise Mechanism and H 2 O-Assisted Hydrolysis in Atomic Layer Deposition of SiO 2 without a Catalyst</title>
+		<author>
+			<persName><forename type="first">G.-Y</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-N</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-G</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-Q</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A.-D</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nanoscale Res. Lett</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">68</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Initial Reaction Mechanism of Nitrogen-Doped Zinc Oxide with Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q.-Q</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-W</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">517</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page" from="4355" to="4359" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Quantum Mechanical Simulation for the Analysis, Optimization and Accelerated Development of Precursors and Processes for Atomic Layer Deposition (ALD). Han&apos;guk Seramik Hakhoechi</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J L</forename><surname>Mustard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Kwak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Goldberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gavartin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Morisato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yoshidome</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Halls</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="317" to="324" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Competing Reactions during Metalorganic Deposition: Ligand-Exchange versus Direct Reaction with the Substrate Surface</title>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Teplyakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C F</forename><surname>Rodríguez-Reyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">21401</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Insights into the Surface Chemistry of Tin Oxide Atomic Layer Deposition from Quantum Chemical Calculations</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Tanskanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="19056" to="19062" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Mechanism for the Atomic Layer Deposition of Copper Using Diethylzinc as the Reducing Agent: A Density Functional Theory Study Using Gas-Phase Molecules as a Model</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">35</biblScope>
+			<biblScope unit="page" from="8893" to="8901" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Modeling of Precursors for Atomic Layer Deposition of Magnesium and Calcium Oxide</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kazadojev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Otway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Vap. Deposition</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">4-6</biblScope>
+			<biblScope unit="page" from="117" to="124" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Density Functional Theory Predictions of the Composition of Atomic Layer Deposition-Grown Ternary Oxides</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3704" to="3715" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Thermal Stability of Precursors for Atomic Layer Deposition of TiO2, ZrO2, and HfO2: An Ab Initio Study of α-Hydrogen Abstraction in Bis-Cyclopentadienyl Dimethyl Complexes</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zydor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1879" to="1886" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition and Chemical Vapor Deposition Precursor Selection Method Application to Strontium and Barium Precursors</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Holme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Prinz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="issue">33</biblScope>
+			<biblScope unit="page" from="8147" to="8151" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Improving ALD Growth Rate via Ligand Basicity: Quantum Chemical Calculations on Lanthanum Precursors</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Coat. Technol</title>
+		<imprint>
+			<biblScope unit="volume">201</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="9076" to="9081" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Computational Method for Efficient Screening of Metal Precursors for Nanomaterial Syntheses</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Orimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Toyota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Furuya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Uehara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yamashita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Maeda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ind. Eng. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="3389" to="3397" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Theoretical Design and Computational Screening of Precursors for Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Coord. Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">322</biblScope>
+			<biblScope unit="page" from="94" to="103" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">A Methodology for the Kinetic Monte Carlo Simulation of Alumina Atomic Layer Deposition onto Silicon</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mazaleyrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jeloaica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Djafari-Rouhani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">1-3</biblScope>
+			<biblScope unit="page" from="74" to="82" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Atomistic Kinetic Monte Carlo Study of Atomic Layer Deposition Derived from Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="244" to="259" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of Metal Sulfide Materials</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Dasgupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Elam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B F</forename><surname>Martinson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="341" to="348" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Fabrication and Characterization of Lead Sulfide Thin Films by Atomic Layer Deposition</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Dasgupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Walch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Prinz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Proceedings</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="29" to="36" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Area-Selective Atomic Layer Deposition of Lead Sulfide: Nanoscale Patterning and DFT Simulations</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Dasgupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Trejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-R</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Usui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Prinz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="6845" to="6852" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of CdS Films</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Bakke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Tanskanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sinclair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="4669" to="4678" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Molecular Level Insights into Atomic Layer Deposition of CdS by Quantum Chemical Calculations</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Tanskanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Bakke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Pakkanen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">39</biblScope>
+			<biblScope unit="page" from="16618" to="16624" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">ALD Growth Characteristics of ZnS Films Deposited from Organozinc and Hydrogen Sulfide Precursors</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Tanskanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Bakke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Pakkanen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="11899" to="11906" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of CdxZn1-xS Films</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Bakke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Tanskanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sinclair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Bent</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="743" to="751" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Growth Studies and Characterisation of In2S3 Thin Films Deposited by Atomic Layer Deposition (ALD)</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Naghavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Henriquez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Laptev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lincot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">222</biblScope>
+			<biblScope unit="issue">1-4</biblScope>
+			<biblScope unit="page" from="65" to="73" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Study of Growth Mechanism and Properties of Zinc Indium Sulfide Thin Films Deposited by Atomic Layer Chemical Vapor Deposition over the Entire Range of Composition</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Geneveé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Donsanti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Renou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lincot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="17197" to="17205" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of Copper Sulfide Thin Films</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lincot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Donsanti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">600</biblScope>
+			<biblScope unit="page" from="103" to="108" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Deposition of Ultra Thin CuInS2 Absorber Layers by ALD for Thin Film Solar Cells at Low Temperature (down to 150 °C)</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bouttemy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Geneveé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lincot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Donsanti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nanotechnology</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">54001</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of Gallium Sulfide Films Using Hexakis(dimethylamido)digallium and Hydrogen Sulfide</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Libera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Fister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Hedlund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fenter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Elam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1029" to="1039" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Gallium Sulfide-Single-Walled Carbon Nanotube Composites: High-Performance Anodes for Lithium-Ion Batteries</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Weng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Trahey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Canlas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Funct. Mater</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">34</biblScope>
+			<biblScope unit="page" from="5435" to="5442" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition by Reaction of Molecular Oxygen with Tetrakisdimethylamido-Metal Precursors</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Provine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Schindler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Torgersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-P</forename><surname>Karnthaler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Prinz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="01A" to="138" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition of Hafnium Oxide from Tetrakis (Ethylmethylamino) Hafnium and Water Precursors</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q.-Q</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-K</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page" from="6495" to="6499" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Multiple Proton Diffusion and Film Densification in Atomic Layer Deposition Modeled by Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shirazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="878" to="889" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Synchrotron Radiation Photoemission Study of Interfacial Electronic Structure of HfO</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Pi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Wertheim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kwo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hong</surname></persName>
+		</author>
+		<idno>0.53Ga0.47As(001)-4 × 2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">42904</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>from Atomic Layer Deposition</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Density Functional Theory Predictions of the Composition of Atomic Layer Deposition-Grown Ternary Oxides</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="3704" to="3715" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Simulating the Atomic Layer Deposition of Alumina from First Principles</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Greer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="3246" to="3250" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><surname>Furche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Haẗtig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Klopper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sierka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Weigend</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Turbomole</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wiley Interdiscip</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev. Comput. Mol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">2014</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="91" to="100" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">A Consistent and Accurate Ab Initio Parametrization of Density Functional Dispersion Correction (DFT-D) for the 94 Elements H-Pu</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Antony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Krieg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2010</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page">154104</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Effect of the Damping Function in Dispersion Corrected Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Goerigk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1456" to="1465" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Auxiliary Basis Sets to Approximate Coulomb Potentials</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Eichkorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Treutler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Haser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ahlrichs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">240</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="283" to="290" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Deposition of Copper by Plasma-Enhanced Atomic Layer Deposition Using a Novel N-Heterocyclic Carbene Precursor</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Coyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Sirianni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Kemell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P A</forename><surname>Yap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Barry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1132" to="1138" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Calculating the Entropy Loss on Adsorption of Organic Molecules at Insulating Surfaces</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gaberle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Z</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Watkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Shluger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="3913" to="3921" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">The P-T-X Phase Diagram of the System Ga-S</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M A</forename><surname>Lieth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J M</forename><surname>Heijligers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W M</forename><surname>Heijden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="798" to="801" />
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Refinement of the Crystal Structure of Digallium Trisulfide, Ga 2 S 3</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Bryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kirschbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Edwards</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Kristallogr. -New Cryst. Struct</title>
+		<imprint>
+			<biblScope unit="volume">216</biblScope>
+			<biblScope unit="issue">1-4</biblScope>
+			<biblScope unit="page" from="349" to="350" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Surface Chemistry of Atomic Layer Deposition: A Case Study for the Trimethylaluminum/Water Process</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="121301" to="121301" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Structural and Spectroscopic Characterization of the Compounds</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Waggoner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Olmstead</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Power</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Polyhedron</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="257" to="263" />
+			<date type="published" when="1990">1990</date>
+			<pubPlace>Me2N)2Al{μ-N(H)</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Al(NMe2)3]2, [Ga(NMe2)3]2 1-Ad}]2 (1-Ad = 1-Adamantanyl) and [{Me(μ-NPh2)Al}2NPh(μ-C6H4)</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Overview of Atomic Layer Etching in the Semiconductor Industry</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

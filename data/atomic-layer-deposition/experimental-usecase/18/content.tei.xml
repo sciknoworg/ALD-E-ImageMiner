@@ -1,0 +1,1968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Low temperature plasma enhanced atomic layer deposition of conducting zirconium nitride films using tetrakis (dimethylamido) zirconium and forming gas (5% H 2 1 95% N 2 ) plasma</title>
+				<funder ref="#_7dSmsX5">
+					<orgName type="full">NSERC Discovery Grant</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2015-03-17">17 March 2015</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Triratna</forename><surname>Muneshwar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemical and Materials Engineering</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+								<address>
+									<postCode>T6G 2V4</postCode>
+									<settlement>Edmonton Alberta</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ken</forename><surname>Cadien</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Chemical and Materials Engineering</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+								<address>
+									<postCode>T6G 2V4</postCode>
+									<settlement>Edmonton Alberta</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Low temperature plasma enhanced atomic layer deposition of conducting zirconium nitride films using tetrakis (dimethylamido) zirconium and forming gas (5% H 2 1 95% N 2 ) plasma</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2015-03-17">17 March 2015</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5390707F48D31198D05BFAEE1A2D8C08</idno>
+					<idno type="DOI">10.1116/1.4915122</idno>
+					<note type="submission">Received 21 December 2014; accepted 2 March 2015;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-08-13T11:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Zirconium nitride (ZrN) has the lowest bulk electrical resistivity and high thermal stability among group IV and V transition metal nitrides, which makes it a promising material for ULSI applications such as a diffusion barrier for Cu interconnects, contact metal in III-V semiconductor devices, and in high density memory structures. Plasma enhanced atomic layer deposition (PEALD) of conducting ZrN thin films using Zr[N(CH 3 ) 2 ] 4 and forming gas (5% H 2 þ 95% N 2 ) plasma is reported in this article. The growth per cycle (GPC) for every deposition was determined from analysis of dynamic in-situ spectroscopic ellipsometry (d-iSE) measurements. An experimental design is proposed for faster determination of ALD growth saturation curves. At substrate temperature of 150 C, a GPC of 0.10 nm/cycle was observed for self-limiting ZrN PEALD growth. The electrical resistivity of ZrN films deposited on SiO 2 substrate was found to be 559.5 6 18.5 lX cm with negligible change in resistivity even after $1000 h exposure to air. The metallic behavior of our ZrN films was evident from the free electron dispersion component in dielectric response, the broad band of photoelectron emission across Fermi level and the positive temperature coefficient for resistivity of 0.0088/ C. V</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Zirconium nitride, a group-IV transition metal nitride, is an interesting material because of its exceptional mechanical, chemical, and electrical properties. <ref type="bibr" target="#b0">1</ref> The metallic mononitride (ZrN) with bulk resistivity $13.6 lX cm is the most stable phase; however, a metastable nitrogen-rich (Zr 3 N 4 ) phase with bandgap of $2.2 eV have also been reported. <ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr">[7]</ref> Conventionally, ZrN films have been investigated as wear resistant coatings, <ref type="bibr" target="#b7">8</ref> optical coatings, <ref type="bibr" target="#b8">9</ref> functional multilayers, <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref> high-temperature superconductors, <ref type="bibr" target="#b12">13</ref> thermoelectrics, <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b14">15</ref> etc. The lowest bulk electrical resistivity and high thermal stability among group IV and V transition metal nitrides <ref type="bibr" target="#b0">1</ref> makes ZrN a promising material for ULSI applications like diffusion barrier for Cu interconnects, <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> as contact metal in III-V semiconductor devices, <ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b19">20</ref> and in high density memory structures. <ref type="bibr" target="#b20">21</ref> These modern applications require deposition of only few nanometers thick ZrN films over nonplanar high-aspect ratio features spread over large substrate area. With atomic layer deposition (ALD) <ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref> technique, uniform thin films deposition with excellent stepcoverage could be realized over large area substrates. Also, as the ALD growth occurs from the repetition of alternating complementary surface reactions, the film thickness could be precisely controlled within a fraction of a nanometer. In comparison with physical vapor <ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref> and chemical vapor <ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref> techniques for ZrN deposition, very limited data are available on ZrN growth by ALD. <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b34">35</ref> Amine based metal-organic precursors are extensively applied in ALD because of their higher reactivity <ref type="bibr" target="#b30">31</ref> and noncorrosive by-products from their surface reactions. Moreover, for deposition of conducting ZrN films, reduction of the zirconium atom is required from Zr 4þ state in Zr[N(CH 3 ) 2 ] 4 (TDMAZr) precursor to Zr 3þ in ALD grown films. Use of ammonia <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b35">36</ref> or N 2 plasma <ref type="bibr" target="#b36">37</ref> in ALD of similar metal nitrides was found to be less effective in the reduction of metal atom, resulting in growth of N-rich high resistivity phase. Deposition of conducting nitride phase using Hcontaining reactant plasma has been reported. <ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref><ref type="bibr" target="#b40">[41]</ref> Hence, the application of 5% H 2 containing forming gas plasma was expected to enable deposition of conducting ZrN PEALD films at low temperatures and also suppress carbide phase formation. <ref type="bibr" target="#b36">37</ref> Thin film growth in ALD is characterized by growth per cycle (GPC), typically of the order 0.01-0.10 nm/cycle, is determined from a linear fit between ALD grown film thickness and the number of deposition cycles. In-situ characterization techniques have been shown to be beneficial in the study of ALD reaction mechanism <ref type="bibr" target="#b41">42</ref> and rapid process development. <ref type="bibr" target="#b42">43,</ref><ref type="bibr" target="#b43">44</ref> Determination of ALD cycle parameters for self-limiting growth is crucial in the development of new deposition recipes. A grid-search approach, considering all possible combinations of deposition cycle parameters would be a strenuous task. Moreover, these parameters exhibit interdependence in the nonsaturated surface reaction regime and at temperatures where the surface reactions are not the primary mechanism for film growth. Hence, a systematic scheme of experiments is desired for simultaneous determination of growth saturation conditions with respect to precursor/reactant doses, inert gas purges, and ALD temperature window from reduced number of experiments for faster ALD process development.</p><p>In this article, we present recipe development and material characterization of plasma-enhanced ALD (PEALD) ZrN films using TDMAZr precursor and forming gas a) Electronic mail: muneshwa@ualberta.ca</p><p>031502-1 J. Vac. Sci. Technol. A 33(3), May/Jun 2015 0734-2101/2015/33(3)/031502/7/$30.00 V C 2015 American Vacuum Society 031502-1</p><p>(5% H 2 þ 95% N 2 ) reactant plasma. GPC for every deposition was determined from the analysis of dynamic in-situ SE data. Based on the fundamental self-limiting nature of ALD reactions at sufficiently long precursor/reactant exposures and inert gas purges, an experimental design is presented for rapid process development. The ZrN PEALD films deposited with growth saturation conditions were characterized using in-situ SE, x-ray reflectivity (XRR), valence band x-ray photoelectron spectroscopy (VB-XPS), and van der Pauw sheet resistance measurements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. EXPERIMENTAL SETUP AND CHARACTERIZATION</head><p>ZrN films were grown in continuous flow ALD reactor as shown in Fig. <ref type="figure" target="#fig_0">1</ref>(a) (Kurt J. Lesker, ALD150LX), using TDMAZr (Sigma Aldrich) and forming gas (5% H 2 -95% N 2 gas, Praxair) reactant plasma. During deposition, a continuous $1000 sccm flow of Ar (99.999% purity, Praxair) was maintained through the reactor using mass flow controllers (MKS Instrument), leading to a total pressure of 1.04 Torr, to facilitate and confine transport of TDMAZr molecules and plasma radicals at the substrate. For in-situ growth characterization, the reactor chamber is provided with optical ports that are maintained clean by continuous Ar purging. The precursor pulse and plasma exposure sequence used for ZrN PEALD growth is schematically represented in Fig. <ref type="figure" target="#fig_0">1(b)</ref>.</p><p>For the precursor half-reaction, a precise dose (pulse length ¼ t 1 ) of TDMAZr molecules from stainless steel ampoule (75 C) was introduced into the reactor through delivery line (110 C) under continuous carrier gas flow (40 sccm Ar) using an electronically controlled three-port ALD diaphragm valve at 75 C (Swagelok). In the plasma half-reaction step, 60 sccm flow of forming gas was released into the reactor under continuous carrier gas flow (100 sccm Ar) through the quartz tube as shown in Fig. <ref type="figure" target="#fig_0">1(a)</ref>. On reactor pressure stabilization, the remote inductively coupled plasma (ICP) was ignited (exposure length ¼ t 3 ) using 13.56 MHz RF power source in combination with a matching network. After every precursor and plasma half-reactions, the reactor was purged with continuous Ar flow for duration t 2 and t 4 , respectively, thus preventing undesired gas-phase reactions because of the residual reactive species. The possibility of secondary precursor source resulting from condensed TDMAZr molecules within the reactor was eliminated by maintaining delivery lines and reactor walls at higher temperatures.</p><p>The ZrN films were deposited on p-type Si (111) and thermally grown $500 nm thick SiO 2 substrates. The diced substrates were cleaned in a Piranha solution, a mixture of concentrated H 2 SO 4 and H 2 O 2 in 2:1 volume ratio and securely stored in air-tight containers until deposition. Since HF treatment was not performed, presence of a native SiO 2 layer over Si (111) substrates was accounted for in the growth characterization. For deposition these substrates were placed on substrate holder (4-in. dia.) and transferred into the ALD reactor through a load-lock evacuated down to 5 Â 10 À5 Torr. Prior to ZrN deposition, the substrate surface was treated with 30 s reactant gas plasma.</p><p>The ALD growth was monitored in real-time with dynamic in-situ spectroscopic ellipsometry (d-iSE) measurements at fixed angle of 70 using a rotating-compensator ellipsometer (J. A. Woollam, M2000DI) in the spectral range of 0.73-6.4 eV. Accounting for the substrate temperature effects in the d-iSE data analysis, the determined film thickness against the number of deposition cycle was used in GPC calculation and applied for process development.</p><p>At a constant 600 W plasma, the ZrN PEALD process was studied for growth saturation with respect to substrate temperature (T sub ), TDMAZr pulse (t 1 ), plasma exposure (t 3 ), and inert gas purges (t 2 and t 4 ). With the process parameters for self-limiting growth, thicker ZrN films (!30 nm) were characterized for their material properties. The complex dielectric function (e) and thickness (d) of PEALD grown ZrN film was determined from the iSE measurement. The Fermi level electronic structure of ZrN films was analyzed from VB-XPS spectrum measured using Axis Ultra Spectrometer (140 W, 1486.6 eV Al Ka source) from Kratos Analytical. To corroborate iSE data analysis, thickness of ZrN films was also determined from XRR measurements on Rigaku Ultima IV (Ref. 45) using Cu Ka x-rays (k ¼ 0.1542 nm) and analyzed with the GenX software. <ref type="bibr" target="#b45">46</ref> The electrical sheet resistance (R S ) for ZrN PEALD films grown on thermal SiO 2 substrate was determined from van der Pauw measurements using Keithley 4200 SCS parameter 031502-2 T. Muneshwar and K. Cadien: Low temperature PEALD conducting ZrN films 031502-2</p><p>analyzer. Electrical resistivity of ZrN films was obtained from the product of sheet resistance (R S ) and film thickness (d). The temperature coefficient of resistivity (TCR) was also determined to investigate electrical conduction in PEALD grown ZrN films.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS AND DISCUSSION</head><p>A. Dynamic in-situ se data and analysis Spectroscopic ellipsometry is a powerful surface sensitive characterization technique <ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b47">48</ref> widely applied for simultaneous determination of film thickness and its dielectric constants. <ref type="bibr" target="#b48">49,</ref><ref type="bibr" target="#b49">50</ref> As the surface chemistry changes with every precursor and plasma half-reactions during ALD, it was essential to use short acquisition times for dynamic iSE (d-iSE) measurements. The d-iSE parameters (W, D) were acquired at 712 wavelengths over entire spectral range of M2000DI using two-zone measurements <ref type="bibr" target="#b50">51</ref> with total acquisition time of 3 s per SE spectrum. The SE parameter (W, D) spectrum measured on blank Si substrate and after 10 cycles of sample ZrN deposition (t 1 ¼ 0.12 s, t 2 ¼ 15 s, t 3 ¼ 15 s, and t 4 ¼ 15 s) on Si substrate at 150 C is shown in Fig. <ref type="figure">2(a)</ref>. The measured iSE parameter D at single wavelength corresponding to 4.0 eV, as a function of deposition time is illustrated in Fig. <ref type="figure">2</ref>(b) for the first ten deposition cycles. As D is more sensitive to surface conditions than W, <ref type="bibr" target="#b51">52</ref> with every TDMAZr pulse and plasma exposure, systematic variations in D were observed as emphasized in Fig. <ref type="figure">2(b</ref>). Since the steady d-iSE parameters measured during postplasma Ar purge (t 4 ) strictly represent the SE response from ALD grown material, only these spectra were analyzed for growth characterization.</p><p>The thin film dielectric constants differ from the bulk values because of finite size effects. <ref type="bibr" target="#b52">53,</ref><ref type="bibr" target="#b53">54</ref> Hence, a parameterized dielectric function <ref type="bibr" target="#b54">[55]</ref><ref type="bibr" target="#b55">[56]</ref><ref type="bibr" target="#b56">[57]</ref> expressed as</p><formula xml:id="formula_0">e ¼ e 1 À E 2 p E 2 À i Á C r E þ X 2 n¼1 f n E 2 n E 2 n þ i Á C n E À E 2 (1)</formula><p>was used for ZrN PEALD films, where free electron absorption is expressed by Drude dispersion (plasma energy E p and relaxation energy C r ) and the interband optical transitions are represented by the Lorentz oscillators (oscillator strength f, dampening coefficient C, and center energy E o ). A constant e 1 is used to account for other optical transitions not included in Eq. ( <ref type="formula">1</ref>). Although the term ALD suggests a complete monolayer formation with every deposition cycle, in reality only a partial monolayer forms at the surface. <ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b57">58</ref> Analysis of SE data considering submonolayer ALD growth is beyond scope of this article and was reported in our recent publication. <ref type="bibr" target="#b58">59</ref> However, following <ref type="bibr" target="#b46">47,</ref><ref type="bibr" target="#b47">48</ref> the partial surface monolayer was approximated as a continuous film with coverage dependent average thickness in the analysis. The ZrN PEALD film/substrate was modeled as a three-layered stack consisting of ZrN films (e ZrN , d ZrN ), native SiO 2 layer (e ox , d ox ) and semiinfinite Si substrate (e Si ), with their respective dielectric function e and thickness d. Native SiO 2 (d ox ) layer thickness was determined from the iSE measurement prior to deposition. Applying model based iSE data analysis, <ref type="bibr" target="#b48">49,</ref><ref type="bibr" target="#b49">50</ref> the dielectric function (e) and thickness (d) of ZrN film was determined using CompleteEASE software package (ver. 4.48, J. A. Woollam). Thickness of ZrN PEALD film determined from the d-iSE data analysis against the number of deposition cycles is shown in Fig. <ref type="figure" target="#fig_2">3(a)</ref>. When incorporated within iSE data analysis, the surface roughness was found to be $0.01 nm without significant improvement in data fitting, and hence was neglected from the analysis.</p><p>In the early stages of ZrN film growth, the ALD surface reactions takes place on the native SiO 2 surface layer of Si substrate initiated by the adsorption of TDMAZr molecules at the surface -OH sites, a heterogeneous or substratedependent ALD. Since HF treatment was not performed on the Si substrates, ample surface -OH active sites are readily available for ZrN PEALD growth initiation, hence nucleation delay was not observed in Fig. <ref type="figure" target="#fig_2">3(a)</ref>. Whereas in the later stages of ZrN PEALD, the film growth is sustained by the surface reactions on underlying ALD grown film, a homogeneous or substrate-independent ALD. This transition from substrate-dependent growth to substrate-independent growth is observed as a nonlinear growth over first 25 deposition cycles in agreement with the other reported ALD studies. <ref type="bibr" target="#b59">[60]</ref><ref type="bibr" target="#b60">[61]</ref><ref type="bibr" target="#b61">[62]</ref> Figure <ref type="figure" target="#fig_2">3</ref> 031502-3 T. Muneshwar and K. Cadien: Low temperature PEALD conducting ZrN films 031502-3 JVST A -Vacuum, Surfaces, and Films</p><p>performed on identical samples. Both SE and measurements showed that the film thickness was found to linearly increase with the number of deposition cycles. However, the difference in their respective thicknesses is attributed to the thermal expansion induced change in film thickness at different measurement temperatures as demonstrated in Ref. 63.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. ZrN peald growth saturation</head><p>An ideal ALD film growth occurs from repetition of complementary surface reaction sequence alone with each reaction allowed to attain surface saturation. Hence, for ALD, the substrate temperature should be such that it overcomes the activation barrier for surface reaction and also prevents condensation, desorption, or thermal decomposition of the reacting molecules at the substrate surface. A sufficiently large dose of precursor and reactant molecules in the respective reactions ensures that self-limiting surface saturation is achieved. Purging of ALD reactor following every surface reaction assures that excess unreacted molecules and the reaction by-products are successfully driven out of the reactor and prevents gas phase reactions during the next reaction step. Under self-limiting growth conditions, the substrate temperature (T sub ) and deposition cycle parameters (t 1 -t 4 ) are such that the material growth is preferential because of ALD surface reactions; using the shortest precursor and reactant pulses (t 1 and t 3 ) for surface saturation; and with minimum inert gas purges (t 2 and t 4 ) to prevent gas phase reactions.</p><p>While determining the temperature window for ZrN PELALD growth, it is required to ensure that the surface reaction is neither affected by the limited dose of TDMAZr or plasma exposure nor by the insufficient inert gas purging. Also, to determine the effect of a single parameter (t 1 , t 2 , t 3 , or t 4 ) on ALD growth saturation requires that the ALD growth is in steady-state with respect to other parameters. In the absence of a priori knowledge about the ALD surface reaction kinetics and/or molecular transport within the reactor, an initial "guess cycle" consisting of an arbitrarily high dose of TDMAZr (t 1 ¼ 0.2 s), long plasma exposure (t 3 ¼ 15 s), and exceedingly long inert gas purges (t 2 ¼ 15 s and t 4 ¼ 15 s) is selected such that surface saturation conditions and adequate reactor purging could be reasonably assumed. The deposition experiments were designed (see Table <ref type="table">I</ref>) starting with the "guess cycle" and varying single test parameter in every set of experiments. Application of this "top-down" approach eliminates interdependence between cycle parameters caused by limited TDMAZr', short plasma exposure or insufficient purging, thus enabling rapid ALD process development from lesser number of experiments. The assumed saturation growth condition with selected guess cycle was later verified.</p><p>In first set of experiments (set 1 in Table <ref type="table">I</ref>) using the guess cycle, ZrN PEALD films were deposited at substrate temperatures varied between 100 and 350 C. A steady GPC of 0.11 nm/cycle in Fig. <ref type="figure">4</ref>(a) at substrate temperatures below 200 C shows that the ZrN growth is primarily driven by surface reaction alone. The observed increase in GPC at temperatures above 200 C indicates the onset of thermal self-deposition for TDMAZr molecules. <ref type="bibr" target="#b63">64</ref> The optimal temperature window of 100-200 C determined for ZrN PEALD growth is consistent with the similar reported studies. <ref type="bibr" target="#b33">34,</ref><ref type="bibr" target="#b38">39</ref> In the following experiments, the substrate temperature was fixed at 150 C.</p><p>In the next set of experiments (set 2 in Table <ref type="table">I</ref>), the minimum precursor dose for surface saturation was determined from ZrN deposition with T sub ¼ 150 C and TDMAZr pulse (t 1 ) varied between 0.02 and 0.20 s. As shown in Fig. <ref type="figure">4(b)</ref>, the GPC was found to increase with TDMAZr dose until a TABLE I. ALD process development for self-limiting ZrN growth with respect to, substrate temperature (T sub ), TDMAZr pulse (t 1 ), Ar purge (t 2 ), plasma exposure (t 3 ), and Ar purge (t 4 ). From the characteristic ALD growth curves with single variable parameter (*), its optimum range for self-limiting growth is determined and used in following experiments. # Set Test parameter Test range ALD cycle a t 1 -t 2 -t 3 -t 4 (s) T sub ( C) Parameter range b 1 T sub 100-350 C 0.20 -15 -15 -15 (T sub )* 100 C T sub 200 C 2 t 1 0.02-0.20 s (t 1 )* -15 -15 -15 150 t 1 ! 0.10 s 3 t 3 1-8 s 0.10 -15 -(t 3 )* -15 150 t 3 ! 4 s 4 t 2 3-18 s 0.10 -(t 2 )* -9 -15 150 t 2 ! 9 s 5 t 4 3-18 s 0.10 -12 -9 -(t 4 )* 150 t 4 ! 3 s a In each set of experiment, the test parameter (marked with *) was varied within the test range. b ALD cycle with t 1 ¼ 0.10 s, t 2 ¼ 12 s, t 3 ¼ 9 s, and t 4 ¼ 9 s, was chosen for self-limiting ZrN PEALD growth.  <ref type="table">I</ref>), a minimum plasma exposure necessary for this reaction was determined from ZrN depositions with T sub ¼ 150 C; t 1 ¼ 0.10 s varying the plasma exposure between 1 and 18 s. As seen in Fig. <ref type="figure">4</ref>(c), the GPC value was higher at plasma exposures below 4 s, but attained a steady value of 0.10 nm/cycle at longer exposures. Higher GPC at short plasma exposures are attributed to the inclusion of partially removed organic ligands within growing film. <ref type="bibr" target="#b64">65,</ref><ref type="bibr" target="#b65">66</ref> Although 4 s plasma exposure was sufficient for plasma reaction, plasma exposure of 9 s was used in the following experiments.</p><p>In the fourth set of experiments (set 4 in Table <ref type="table">I</ref>), a minimum of Ar purge following a TDMAZr pulse necessary for preventing gas-phase reaction was determined from ZrN deposition with T sub ¼ 150 C; t 1 ¼ 0.10 s, t 3 ¼ 9 s; varying the postprecursor Ar purge between 3 and 18 s. As shown in Fig. <ref type="figure">4(d)</ref>, the GPC was found to decrease with the purge duration but attained a steady value of 0.10 nm/cycle at longer purges. Higher GPC at shorter purge lengths are attributed to the inclusion of products from gas-phase reaction into growing film. Although a 9 s Ar purge was found to be sufficient for effective removal of excess unreacted TDMAZr molecules from reactor along with their reaction by-products, post-TDMAZr purge of 12 s was used in the following experiments.</p><p>In the following set of experiments (set 5 in Table <ref type="table">I</ref>), the effect of postplasma purge on the GPC was studied for ZrN depositions with T sub ¼ 150 C; t 1 ¼ 0.10 s, t 2 ¼ 12 s, t 3 ¼ 9 s, varying the postplasma Ar purge between 3 and 18 s. Negligible effect of postplasma Ar purge duration was observed on ZrN PEALD growth with GPC of 0.10 nm/cycle, which is attributed to the short life-time of plasma radicals and efficient removal of their reaction by-products. <ref type="bibr" target="#b66">67</ref> However, a 9 s long postplasma Ar purge was used to allow multiple d-iSE measurements at the end of every ALD cycle.</p><p>Comparing the initial guess cycle (t 1 ¼ 0.20 s; t 2 ¼ 15 s; t 3 ¼ 15 s; and t 4 ¼ 15 s) with experimentally determined deposition cycle (t 1 ¼ 0.10 s, t 2 ¼ 12 s, t 3 ¼ 9 s, and t 4 ¼ 9 s) for self-limiting growth, the guess cycle was found to be a reasonably good assumption for ZrN PEALD process development. Also, in the selected PEALD cycle, the respective TDMAZr pulse, plasma exposure and Ar purges are kept longer than necessary to account for any run-to-run variations in the deposition conditions. 031502-5 T. Muneshwar and K. Cadien: Low temperature PEALD conducting ZrN films 031502-5 JVST A -Vacuum, Surfaces, and Films</p><p>to be centered at E 1 ¼ 6 0.02 eV and E 2 ¼ 6.89 6 0.05 eV with f 1 ¼ 0.66 6 0.07, C 1 ¼ 1.77 6 0.09 eV, f 2 ¼ 2.17 6 0.14, and C 2 ¼ 3.92 6 0.25 eV, respectively. The Drude-Lorentz parameters determined at 150 C for 35.5 nm thick ZrN PEALD films are in good agreement with the reported room-temperature dielectric function for $500 nm thick sputtered ZrN films 56 with difference attributed to different sample preparation technique as described in Ref. 53.</p><p>The broad band of photoelectron emissions across Fermi level in the VB-XPS spectrum as shown in Fig. <ref type="figure">6</ref> represents the metallic behavior of ZrN PEALD films and is in agreement with the VB spectrum reported for sputtered ZrN films. <ref type="bibr" target="#b67">68</ref> Earlier reported studies <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b68">69,</ref><ref type="bibr" target="#b69">70</ref> states that the emission at Fermi level results from the pure metallic Zr 4d states, while the emission peaks at binding energy of 4 and 15 eV were assigned to hybridized Zr 4d-N 2p and N 2s states, respectively. The O 2p states in VB spectrum are associated with the surface oxidation of ZrN PEALD films as were reported in Ref. 71. An emission peak at 10 eV binding energy, also observed in Ref. 68, coincides with the C 2s states and shows presence of either carbide phase <ref type="bibr" target="#b71">72,</ref><ref type="bibr" target="#b72">73</ref> or interstitial C. Discussion and analysis of core-level XPS emission features from ZrN PEALD film is beyond the scope of this paper and would be covered in later publications.</p><p>The electrical resistivity measurements of ZrN PEALD films deposited on thermal SiO 2 substrates at 150 C was found to be 559.5 6 18.5 lX cm at ambience. The electrical resistivity showed negligible change even after $1000 h exposure to air, similar to other PEALD studies. <ref type="bibr" target="#b73">74</ref> The measured resistivity for our films is comparable with the lowest reported resistivity $400 lX cm for ZrN PEALD on Si at 300 C using TDEAZr and N 2 plasma. <ref type="bibr" target="#b34">35</ref> The electrical resistivity of ZrN films determined at different measurement temperatures are plotted in Fig. <ref type="figure" target="#fig_7">7</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSION</head><p>Self-limiting ZrN PEALD growth with TDMAZr precursor and forming gas reactant plasma using dynamic in-situ SE measurements has been reported. A scheme for rapid ALD process development from a reduced number of depositions is proposed. In the temperature range of 100-200 C, the ZrN growth was found to be primarily driven by surface reactions. At 600 W plasma and deposition temperature of 150 C, a ZrN PEALD growth saturation at GPC of 0.10 nm/cycle was observed for deposition cycle: t 1 ¼ 0.10 s, t 2 ¼ 12 s, t 3 ¼ 9 s, and t 4 ¼ 9 s. The metallic behavior of grown ZrN films was evident from the dielectric constants, the valence-band XPS spectrum, and positive temperature coefficient of electrical resistivity. For ZrN PEALD films grown on SiO 2 substrates at 150 C, electrical resistivity was found to be 559.5 6 18.5 lX cm with negligible change even after $1000 h exposure to air. The 5% H 2 containing forming gas reactant plasma was found to be effective in the reduction of Zr 4þ in TDMAZr to Zr 3þ in FIG. 6. Valence Band photoelectron emission spectrum measured for 35.3 nm thick ZrN PEALD film grown at 150 C. Before XPS measurement ZrN film surface was sputter cleaned for 180 s with 4.0 keV Ar þ ions. 031502-6 T. Muneshwar and K. Cadien: Low temperature PEALD conducting ZrN films 031502-6</p><p>ZrN films. Process optimization using variables such as plasma power and substrate temperature is to significantly improve electrical conduction in ZrN PEALD films.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. (Color online) (a) ALD150LX reactor design schematic highlighting TDMAZr and forming gas delivery lines and the M2000DI spectroscopic ellipsometer for in-situ ALD growth characterization. (b) Precursor and plasma pulsing sequence for a ZrN PEALD cycle.</figDesc><graphic coords="3,52.27,388.63,244.02,315.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><figDesc>FIG. 2. (a) SE parameters (W, D) measured on blank Si substrate (solid line) and after 10 cycles ZrN deposition (dotted line). (b) The dynamic SE parameter D measured at 4.0 eV for 10 cycles ZrN deposition. Systematic variation in D with precursor pulse (t 1 ), plasma exposure (t 3 ), and inert gas purges (t 2 and t 4 ) are highlighted.</figDesc><graphic coords="4,128.81,583.48,354.40,129.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 3 .</head><label>3</label><figDesc>FIG. 3. (a) Film thickness vs number of PEALD cycles as determined from d-iSE data analysis for ZrN deposition on Si substrate at T sub ¼ 150 C; t 1 ¼ 0.12 s, t 2 ¼ 15 s, t 3 ¼ 15 s, and t 4 ¼ 15 s. In a steady growth regime, GPC of 0.10 nm/cycle was determined from the linear fit (dashed lines). (b) Comparison between the film thicknesses determined from iSE at 150 C and ex-situ XRR at room temperature on identical samples.</figDesc><graphic coords="5,66.10,58.96,216.46,161.01" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>031502- 4 T 4 J</head><label>44</label><figDesc>.Muneshwar and K. Cadien: Low temperature PEALD conducting ZrN films 031502-. Vac. Sci. Technol. A, Vol. 33, No. 3, May/Jun 2015 steady value of 0.10 nm/cycle and showed a minimum TDMAZr pulse of 0.10 s is required to attain growth saturation with respect to TDMAZr surface reaction. The active plasma species (H*, N*, NH*, etc.) in the forming gas ICP glow reacts with the surface chemisorbed TDMAZr molecules removing organic ligands with formation of ZrN film. In the third set of experiments (set 3 in Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>C.</head><figDesc>FIG. 4. ZrN PEALD growth saturation curves with respect to (a) substrate temperature; (b) TDMAZr pulse; (c) forming gas plasma exposure; and (d) postprecursor Ar purge. The process parameters for these depositions are stated in TableI.</figDesc><graphic coords="6,128.75,58.96,354.69,266.46" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><figDesc>(a). The temperature dependent change in electrical resistivity, Dq ¼ qðTÞ À qðT o Þ, is expressed as qðTÞ ¼ qðT o Þð1 þ aðT-T o ÞÞ, where a is the TCR and T o is the reference temperature. The relative change in the resistivity for ZrN PEALD films with respect to resistivity measured at 25 C is plotted in Fig. 7(b). The positive TCR of 0.0088/ C indicates metallic conduction in ZrN PEALD films.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>FIG. 5 .</head><label>5</label><figDesc>FIG. 5. Imaginary part of the complex dielectric function (e 2 ) for 35.3 nm thick ZrN PEALD film at 150 C determined from in-situ SE measurements. The free electron and bound electron contributions to the dielectric function of ZrN film are represented by Drude (D) and Lorentz oscillators (L1 and L2), respectively.</figDesc><graphic coords="7,66.10,58.96,216.46,159.93" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>FIG. 7 .</head><label>7</label><figDesc>FIG. 7. (a) Electrical resistivity of ZrN PEALD films deposited on thermal SiO 2 substrate at 150 C, as a function of measurement temperature. (b) Plot of Dq/q o vs measurement temperature showing TCR of 0.0088/ C for ZrN films.</figDesc><graphic coords="7,329.56,547.31,216.46,156.59" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The authors would like to thank <rs type="institution">Alberta Innovates Technology</rs> <rs type="grantName">Futures Scholar Award</rs> and <rs type="funder">NSERC Discovery Grant</rs> for funding this research.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_7dSmsX5">
+					<orgName type="grant-name">Futures Scholar Award</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">O</forename><surname>Pierson</surname></persName>
+		</author>
+		<title level="m">Handbook of Refractory Carbides and Nitrides: Properties, Characteristics, Processing, and Applications</title>
+		<meeting><address><addrLine>Park Ridge, NJ</addrLine></address></meeting>
+		<imprint>
+			<publisher>Noyes Publications</publisher>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gribaudo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Arias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Abriata</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF02647575</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phase Equilib</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">441</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chihi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fatmi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ghebouli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guemmaz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.solidstatesciences.2011.04.014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Sci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1414</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">I</forename><surname>Bazhanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Knizhnik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Safonov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Bagatur'yants</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Stoker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Korkin</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1851000</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">44108</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Porte</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0038-1098(84)90373-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Commun</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page">303</biblScope>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Prieto</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.580210</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">3181</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sanz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Soriano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Prieto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Tyuliev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Morant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Elizalde</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0040-6090(98)01058-X</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Thin Solid Films</title>
+		<imprint>
+			<biblScope unit="volume">332</biblScope>
+			<biblScope unit="page">209</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fragiel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Staia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Muñoz-Saldaña</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Puchi-Cabrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cortes-Escobedo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cota</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.surfcoat.2008.01.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Coat. Technol</title>
+		<imprint>
+			<biblScope unit="volume">202</biblScope>
+			<biblScope unit="page">3653</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<author>
+			<persName><forename type="first">V</forename><surname>Braic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Balaceanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Braic</surname></persName>
+		</author>
+		<title level="m">International Semiconductor Conference</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="267" to="270" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Eesley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svinarich</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.42.4881</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">4881</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Morelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Roessler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Heremans</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.347320</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">846</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Meng</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.578031</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">1610</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hase</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Nishihara</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.60.1573</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">1573</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Adachi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kurosaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Uno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yamanaka</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jallcom.2005.03.005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Alloys Compd</title>
+		<imprint>
+			<biblScope unit="volume">399</biblScope>
+			<biblScope unit="page">242</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Saha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Acharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Sands</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">V</forename><surname>Waghmare</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3291117</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page">33715</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Takeyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Noya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sakanishi</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.591382</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page">1333</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C.-S</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-P</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-G</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y A</forename><surname>Tsao</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1738669</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page">1075</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Leu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sadik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Norton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mcelwee-White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Anderson</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.2976571</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page">1723</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Mohney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Luther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Wolter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Jackson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Karlicek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Kern</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Fourth International High Temperature Electronics Conference</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="page" from="134" to="137" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Westlinder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Malmstr€ Om</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sj€</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Olsson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.sse.2005.06.021</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid-State Electron</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page">1410</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Horita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Toda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kasagawa</surname></persName>
+		</author>
+		<idno type="DOI">10.3938/jkps.42.1142</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Korean Phys. Soc</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">1142</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Miikkulainen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskel€ A</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4757907</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page">21301</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page">111</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1940727</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Farkas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Ramsier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Evans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Dagata</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.2839856</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page">297</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dongho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chulmin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Eunhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Youngchul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Taegeun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cheonghyun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheol-Koo</surname></persName>
+		</author>
+		<idno type="DOI">10.3938/jkps.55.1149</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Korean Phys. Soc</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page">1149</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">O</forename><surname>Johansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">T G</forename><surname>Hentzell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M E</forename><surname>Harper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Cuomo</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/JMR.1986.0442</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Res</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">442</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Netterfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Mckenzie</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF00722192</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Sci. Lett</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">972</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Straboni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pichon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Girardeau</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0257-8972(99)00607-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Coat. Technol</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page">100</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sugiyama</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2134060</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page">1545</biblScope>
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Hoffman</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0277-5387(00)80253-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Polyhedron</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1169</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Hoffman</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm00018a034</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">1138</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wendel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Suhr</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF00324208</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page">389</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Becker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm049516y</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">3497</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.46.4085</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys., Part</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">4085</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kalsi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Riihel€ A</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kukli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskel€</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jokinen</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm980760x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">1712</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Detavenier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Van Der Straten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Rossnagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Kellock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-G</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1935761</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page">14308</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Caubet</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2940306</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">155</biblScope>
+			<biblScope unit="page">625</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E.-J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-H</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.2206884</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid-State Lett</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>C</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Langereis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2798598</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page">83517</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-W</forename><surname>Kang</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1353160</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochem. Solid-State Lett</title>
+		<imprint>
+			<biblScope unit="page">17</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Knapas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10408436.2012.693460</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Crit. Rev. Solid State Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">167</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Niinist€</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahtu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Putkonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ritala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Leskel€</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Niinist€</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/la0500732</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">7321</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Langereis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B S</forename><surname>Heil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Keuning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C M</forename><surname>Van De Sanden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0022-3727/42/7/073001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">73001</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yasaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rigaku</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bj€</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Andersson</surname></persName>
+		</author>
+		<idno type="DOI">10.1107/S0021889807045086</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Crystallogr</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page">1174</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Bootsma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Meyer</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0039-6028(69)90045-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">52</biblScope>
+			<date type="published" when="1969">1969</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">H P M</forename><surname>Habraken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">L J</forename><surname>Gijzeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Bootsma</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0039-6028(80)90322-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page">482</biblScope>
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fujiwara</surname></persName>
+		</author>
+		<title level="m">Spectroscopic Ellipsometry: Principles and Applications</title>
+		<meeting><address><addrLine>West Sussex, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Wiley</publisher>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Tompkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Irene</surname></persName>
+		</author>
+		<title level="m">Handbook of Ellipsometry</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>William Andrew</publisher>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kleim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kuntzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Ghemmaz</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/JOSAA.11.002550</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Am. A</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">2550</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Tikhonravov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Trubetskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Masetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Krasilnikova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">V</forename><surname>Kochikov</surname></persName>
+		</author>
+		<title level="m">Advances in Optical Interference Coating</title>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Amra</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Macleod</surname></persName>
+		</editor>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<biblScope unit="page" from="173" to="182" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lehmuskero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kuittinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Vahimaa</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/OE.15.010744</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Opt. Express</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">10744</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Kovalenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Lisitsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Semicond</forename><surname>Phys</surname></persName>
+		</author>
+		<ptr target="http://journal-spqeo.org.ua/n4_2001/352_401.htm" />
+	</analytic>
+	<monogr>
+		<title level="j">Quantum Electron. Optoelectron</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title level="m" type="main">Handbook of Optical Constants of Solids</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Ribbing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Roos</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+			<publisher>Academic Press</publisher>
+			<biblScope unit="page" from="351" to="369" />
+			<pubPlace>Burlington</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Valerini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Signore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rizzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tapfer</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3493267</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page">83536</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Signore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Valerini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tapfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Caretto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rizzo</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3646147</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">61507</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1787624</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page">4878</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Muneshwar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cadien</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apsusc.2014.12.044</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">328</biblScope>
+			<biblScope unit="page">344</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Alam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Green</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1599978</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page">3403</biblScope>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Vandervorst</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1810193</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page">7686</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J.-W</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-W</forename><surname>Kang</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1368102</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">148</biblScope>
+			<biblScope unit="page">403</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Bouldin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Lynn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.373722</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page">691</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I.-W</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D.-H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Woo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-Y</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-W</forename><surname>Rhee</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF02719504</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Korean J. Chem. Eng</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">1256</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Odedra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Potter</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcrysgro.2011.10.049</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cryst. Growth</title>
+		<imprint>
+			<biblScope unit="volume">338</biblScope>
+			<biblScope unit="page">111</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Kellock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Rossnagel</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1519949</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page">7080</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Swerts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Delabie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Salimullah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Popovici</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schaekers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Elshocht</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.003202ssl</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Solid State Lett</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">19</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Milo</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1247861</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci. Spectra</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">152</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Prieto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sanz</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.47.1613</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">1613</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Ivanovskii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">I</forename><surname>Medvedeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Okatov</surname></persName>
+		</author>
+		<idno type="DOI">10.1023/A:1017568515295</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Inorg. Mater</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">459</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Prieto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Sanz</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/sia.740210612</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Interface Anal</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">395</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ha ˚kansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Johansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Johansson</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.48.2623</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page">2623</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hirabayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakagawa</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.14.1707</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">1707</biblScope>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J.-S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-W</forename><surname>Kang</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1.1423642</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">149</biblScope>
+			<biblScope unit="page">28</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><surname>Muneshwar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cadien</surname></persName>
+		</author>
+		<title level="m">Low temperature PEALD conducting ZrN films</title>
+		<imprint>
+			<biblScope unit="page" from="31502" to="31507" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title/>
+		<author>
+			<persName><surname>Jvst A -Vacuum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Surfaces, and Films</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dynamics of plasma atomic layer etching: Molecular dynamics simulations and optical emission spectroscopy  Special Collection: Atomic Layer Etching (ALE)</title>
+				<funder ref="#_6QqMxTA">
+					<orgName type="full">US Department of Energy OFES</orgName>
+				</funder>
+				<funder ref="#_WcAnvnv">
+					<orgName type="full">Samsung Electronics</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-11-13">13 November 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Joseph</forename><forename type="middle">R</forename><surname>Vella</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Princeton Plasma Physics Laboratory</orgName>
+								<address>
+									<postCode>08540</postCode>
+									<settlement>Princeton</settlement>
+									<country>New Jersey</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qinzhen</forename><surname>Hao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">William A. Brookshire Department of Chemical and Biomolecular Engineering</orgName>
+								<orgName type="institution">University of Houston</orgName>
+								<address>
+									<postCode>77204</postCode>
+									<settlement>Houston</settlement>
+									<region>Texas</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vincent</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">William A. Brookshire Department of Chemical and Biomolecular Engineering</orgName>
+								<orgName type="institution">University of Houston</orgName>
+								<address>
+									<postCode>77204</postCode>
+									<settlement>Houston</settlement>
+									<region>Texas</region>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">David</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+							<email>dgraves@pppl.gov</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Princeton Plasma Physics Laboratory</orgName>
+								<address>
+									<postCode>08540</postCode>
+									<settlement>Princeton</settlement>
+									<country>New Jersey</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Chemical and Biological Engineering</orgName>
+								<orgName type="institution">Princeton University</orgName>
+								<address>
+									<postCode>08540</postCode>
+									<settlement>Princeton</settlement>
+									<country>New Jersey</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dynamics of plasma atomic layer etching: Molecular dynamics simulations and optical emission spectroscopy  Special Collection: Atomic Layer Etching (ALE)</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2023-11-13">13 November 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">30E93D204024216E0BF9F47A92DB1C6B</idno>
+					<idno type="DOI">10.1116/6.0003011</idno>
+					<note type="submission">Export Citation RESEARCH ARTICLE | NOVEMBER 13 2023 Submitted: 27 July 2023 • Accepted: 9 October 2023 •</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Atomic layer etching is intrinsically dynamic as it involves sequential and repeated exposures of a surface to be etched with different species at different energies. The composition and structure of the near surface region change in both time and depth. Full understanding of this process requires resolving both temporal and spatial variations. In this work, we consider silicon (Si) atomic layer etching (ALE) by alternating exposure to chlorine gas (Cl 2 ) and argon ions (Ar þ ). Molecular dynamics (MD) simulations are compared to experimental measurements with the aim of better understanding the dynamics of ALE and to test the simulation procedure. The simulations help to more fully interpret the experimental measurements. Optical emission measured just above the surface being etched can be related to etch products and can, therefore, be directly compared to simulation predictions. The simulations capture the measured initial product distribution leaving the surface and match the measured etch per cycle reasonably well. While simulations demonstrate the importance of ion-induced surface damage and mixing into a layer below the surface, the depth of which depends mainly on ion energy, the experiments suggest there is more Cl mixed into the layer than the MD procedure predicts.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Plasma-assisted atomic layer etching (ALE) processes are designed (at least in principle) for etching with atomic-scale precision. <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref> These techniques involve the sequential and pulsed application of different gases and plasma protocols and have had significant success industrially, even in cases for which true ALE is not achieved. The technique involves complex pulsing strategies with gas composition and plasma powers being altered sequentially. We focus here on ALE of silicon (Si) using chlorine chemistry (Cl) to modify the surface layer of atoms and argon ions (Ar þ ) to remove the chlorinated layer. <ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> This system has also been studied using molecular dynamics simulations. <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref> However, there have been few direct comparisons between experimental and MD studies. It is common for these thrusts to be performed separately, or for MD studies to refer to previous experimental results to validate simulation predictions. In this work, we aim to combine MD ALE simulations, similar to our previously published work, <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> with recent ALE and optical emission spectroscopy (OES) experiments <ref type="bibr" target="#b17">18</ref> in order to better understand Si-Cl 2 -Ar ALE. Direct comparison of simulation with measurements can both help test the assumptions used in the simulation and can also help interpret experimental measurements. In Si ALE with chlorine, the chlorination step can be performed using a chlorine plasma or with chlorine gas (Cl 2 ). We have chosen to focus on using chlorine gas (Cl 2 ) to keep the system as simple as possible for this comparison of MD simulation with the experiment.</p><p>The paper is organized as follows. Section II will provide details on the experimental setup and the MD simulations will be described in Sec. III. Results focusing on the comparison between MD and experiments will be given in Sec. IV. Section V will discuss the comparison of simulations and experimental observations. Finally, Sec. VI will give concluding remarks and comments on future work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. EXPERIMENTAL METHODS</head><p>The apparatus used in this study has been described in greater detail in previous publications. <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref> It consisted of an inductively coupled plasma (ICP) source and substrate stage, powered at 13.56 and 18 MHz, respectively. Figure <ref type="figure" target="#fig_0">1</ref> presents a schematic of the side view of the apparatus.</p><p>The plasma was confined by a water-cooled, yttria-coated aluminum liner, inside a cylindrical stainless steel chamber. Gas was injected radially symmetrically at the top and pumped radially at the bottom. The 6 in. diameter flat ICP coil was adjacent to a quartz window. Si (100) wafers (3 in. diameter) were mounded with double-sided carbon tape on a 3 in. diameter stainless steel holder. In some cases, SiO 2 -masked Si coupon pieces were taped to the Si wafer, and 405 nm laser interferometry was used to measure real-time etching rates. The sample stage was surrounded by an alumina ring, so that when the sample holder was placed on the stage, no stainless steel was exposed. The sample holders were moved in and out of the chamber through a vacuum load-lock.</p><p>The DC self-bias potential with respect to ground potential was measured through rf-chokes. Cl 2 gas flow, and powers to the ICP and substrate stage, applied through impedance-matching networks, were turned on and off under computer control. Using a continuous Ar carrier gas flow of 80 standard cubic centimeters per minute (SCCM), one 7 s ALE cycle consisted of a 2 s, 20 SCCM Cl 2 flow with no ICP power (250 W) at 300 K and 20 mTorr, followed by 3 s of both ICP and bias power, an additional 1 s of ICP power only, and then a 1 s period with ICP power turned off. DC self-bias voltage, Cl 2 flow rate, and total pressure were measured continuously during multiple ALE cycles. An example of these measurements for one ALE cycle is given in Fig. <ref type="figure" target="#fig_1">2</ref>.</p><p>In pure Ar plasmas, positive ion saturation current was measured by applying negative DC bias voltage to the substrate. From these measurements, a positive ion flux of 3:7 Â 10 16 Ar þ /cm 2 s was measured for 250 W ICP power. This corresponds to a positive ion density of about 2:3 Â 10 11 Ar þ /cm 3 above the Si surface. The measured Ar þ flux is used as input to the MD simulations, as described in Sec. III.</p><p>Optical emission along a line approximately 1 cm above the substrate surface was collected with lenses and optical fibers and dispersed with spectrometers (Ocean Optics HR4000, Ocean Insights May 2000 Pro, and McPherson model 218 with an RCA C31034 GaAs photomultiplier tube), with full width at half maximum resolutions of 0.17, 0.4 nm and variable, respectively. Spectra were recorded continuously every 0.05 s. In a previous study, using modulated bias power, it was shown that the emission is largely representative of products sputtered from the surface early in the bias period. <ref type="bibr" target="#b17">18</ref> Later in the bias period, slowly evolving etch product residues on the chamber walls may contribute to weaker emission intensities detected from Si-containing products. The significance of this observation is discussed in greater detail later on.</p><p>The ion energy distribution impacting the Si surface during the exposure to Ar þ will depend on the difference between the plasma potential and the surface potential and will likely be nonmonotonic. The MD simulations assume a single ion energy impacting the surface for a given RF bias, and so we require an estimate of the average ion energy. With rf bias power applied to the substrate, as noted above, the DC self-bias potential with respect to ground potential was measured through rf-chokes. Since no Faraday shield was used between the inductive coil source and the quartz window, some degree of capacitive coupling from the coil to  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE</head><p>pubs.aip.org/avs/jva the plasma will generate an additional RF and DC component of the plasma potential. The average ion energy will be close to the difference in DC plasma potential, V p , and the measured DC selfbias voltage, V DC . Assuming a plasma potential of approximately 4.8 T e above a 3 V floating potential and an (estimated) electron temperature, T e ¼ 3 eV, the average ion energy is approximately 17 À V DC eV. This is the value used in the MD simulations reported in Sec. III.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. MD SIMULATIONS</head><p>We model Si-Cl 2 -Ar ALE using classical MD simulations. Interactions for Si-Si, Si-Cl, and Cl-Cl are modeled using the reactive empirical bond order (REBO) potential <ref type="bibr" target="#b24">25</ref> that was originally parameterized by Humbird and Graves. <ref type="bibr" target="#b25">26</ref> As noted in another publication, <ref type="bibr" target="#b26">27</ref> some of the Si-Cl parameters were altered to better approximate spontaneous etching of Si by Cl atoms; however, we do not expect this to be significant for Si-Cl 2 -Ar ALE simulations. The Molière potential <ref type="bibr" target="#b27">28</ref> is used for all interactions with Ar þ .</p><p>As described in previous works, <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> we model ALE as a series of independent "impact simulations" of species originating from the gas or plasma. An impact simulation is a MD trajectory that is run for approximately 2 ps under the microcanonical ensemble (constant number of particles, volume, and energy). In these simulations, a semi-infinite slab of initially diamond-cubic Si is created with periodic boundaries imposed in the lateral x and y directions. The lattice spacing of the crystal corresponds to Si at 300 K. The volume of the cell is 32.60Â 32.60Â54.34 Å 3 . In this work, we will refer to one monolayer (ML) of fluence for a given species as 1 Â 10 15 impacts of said species per cm 2 to or from the surface. The (100) surface of the Si crystal is exposed to a vacuum space in the z direction. During the impact simulations, we place a Cl 2 molecule or an Ar þ (depending on whether we are in the process of modeling the chemical modification step or the ion bombardment step) at a random (x,y) position in the vacuum space above the cell. The molecule or ion is allowed to impact the surface of the cell. The velocities of the incoming species are assigned depending on whether they are described as "thermal" or "energetic." Cl 2 molecules are "thermal" and their velocity components are assigned according to the Maxwell-Boltzmann distribution at 300 K. Only Cl 2 molecules with a negative z velocity component are considered in order to ensure they hit the surface of the simulation cell. Ar þ ions are "energetic" and only have a negative z velocity assigned based on the ion energy being simulated. Ions are assumed to neutralize before impact. Energetic Ar þ is assumed to impact at purely normal incidence. Following the initiation of the particle trajectory toward the surface, the simulation runs for about 2 ps after the impact. The bottom two layers of the Si slab are fixed so that the cell does not drift in the negative z direction. The depth of the cell is maintained such that incoming species do not interact with the fixed atoms at the bottom of the cell. After each impact simulation, a Beredensen thermostat <ref type="bibr" target="#b28">29</ref> is applied to bring the simulation cell back to a set temperature. In this work, the set temperature is 300 K. Also, etch products leaving the surface are identified at the end of each impact simulation. Previous reports <ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b29">30</ref> give details on the etch product identification routine. After two layers of Si atoms are etched, two more layers are added to the bottom of the cell.</p><p>It is important to emphasize the differences between the ALE experiments and MD simulations. A single ALE cycle consists of a chemical modification step followed by an ion bombardment step.</p><p>In the experiments that we are attempting to model with the MD simulations, the chlorination step is done by exposure to Cl 2 gas for 2 s, as noted above. If we refer to the specification given in Sec. II (2 s of 20 SCCM Cl 2 flow at 300 K and 20 mTorr using a continuous Ar carrier gas flow of 80 SCCM), we can estimate the flux of Cl 2 impacting the surface. The mean velocity, v m , of the Cl 2 molecules are estimated to be 3 Â 10 4 cm/s. From the ideal gas law, the number density of Cl 2 , n Cl2 , is 1:3 Â 10 14 Cl 2 /cm 3 . From the kinetic gas theory, the Cl 2 flux to the Si substrate is given by 1 4 v m n Cl2 ¼ 9:8 Â 10 17 Cl 2 /cm 2 s. With the 2 s exposure time, this corresponds to a fluence of 2:94 Â 10 18 Cl 2 /cm 2 (or 2940 ML of Cl 2 ). In the MD simulations, we model the chlorination step as 3000 thermal Cl 2 molecules impacts on a 32.60Â32.60 Å 2 surface. This corresponds to a fluence of 2:82 Â 10 16 Cl 2 molecules/cm 2 or roughly 28.2 ML of Cl 2 molecules. The simulated Cl 2 fluence is, therefore, much lower than experimental Cl 2 fluence; however, as will be shown in the supplementary material, <ref type="bibr" target="#b30">31</ref> the simulated Cl surface coverage saturates by approximately 30 ML of Cl 2 fluence. See the supplementary material <ref type="bibr" target="#b30">31</ref> for surface flux and fluence calculations and explicit evidence that a larger Cl 2 fluence will not result in more Cl uptake into the Si slab in the MD simulations. Therefore, to speed up computations, we use 28.2 ML of Cl 2 molecules for the chlorination step. However, it is important to note that the simulation time for the chlorination step is much shorter than the experimental chlorination step. As mentioned in the second paragraph of this section, each impact simulations lasts approximately 2 ps. Therefore, the simulated time for the chlorination step is only about 3 ns, orders of magnitude below the 2 s experimental time. Due to the timestep of the MD simulations being on the order of 1 fs, it is computationally intractable to directly simulate the experimental timescales. We address the question of whether the simulation procedure properly models surface chlorination in Sec. V.</p><p>For the experimental ion bombardment step, a flux of 3:7 Â 10 16 Ar þ /cm 2 s with an exposure time of 3 s corresponds to a fluence of 1:11 Â 10 17 Ar þ /cm 2 or 111 ML of Ar þ . In the MD simulations, we model the ion bombardment step as 3000 energetic Ar þ impacts on a 32.60Â32.60 Å 2 surface. The corresponding fluence is 2:82 Â 10 16 Ar þ /cm 2 or 28.2 ML of Ar þ . At Ar þ energies that are higher than the physical sputtering threshold for Si, we need to account for physical sputtering when comparing experimental results to MD results. This is particularly important when comparing etch per cycles (EPCs). We will give details on how we handle this comparison in Sec. IV. It is also important to point out that, similar to the simulation of the chlorination step, the simulated time for the ion bombardment step is only about 3 ns, once again orders of magnitude below the 3 s experimental time. It should also be noted that in the MD code, Ar þ are deleted at the end of each impact simulation. Finally, there is a 1 s period in the experimental section with no Cl 2 flow and with the ICP power turned off. This period is also not modeled in the MD simulations.</p><p>The major differences between the experiments and MD simulations can be summarized as follows. First, for both the chlorination and ion bombardment steps, the MD simulations use a lower fluence of the relevant species to the surface than the experiments. Simulated surface chlorination of silicon by Cl 2 via dissociative adsorption appears to match published results as summarized previously. <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> The MD simulations predict self-limiting nearsaturation of Cl on the surface. The ion bombardment step, however, is not self-limiting as there will be some physical sputtering. We discuss the implications of this mismatch in simulated and experimental fluence in the following sections.</p><p>We simulated ion impact energies ranging from 15 to 215 eV. In all cases, multiple independent cycles are simulated in order to reach cyclic steady state. Once this has been achieved, we calculate the etch per cycle (EPC) and analyze the etch products that leave the surface during the ion bombardment step. The EPC and relative SiCl x (for x ¼ 0 À 2) and Cl yields can be directly compared to experimental results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. RESULTS</head><p>In a recent publication, <ref type="bibr" target="#b16">17</ref> we used MD simulations to study the near-surface etching behavior during Si-Cl 2 -Ar ALE. Here, we compare MD simulations to experiments. Figures <ref type="figure" target="#fig_2">3</ref> and <ref type="figure" target="#fig_3">4</ref> show snapshots of the simulation cell during various points of the final ion bombardment step using 80 eV Ar þ . Figure <ref type="figure" target="#fig_2">3</ref> show the side views of the simulation cell, while Fig. <ref type="figure" target="#fig_3">4</ref> shows the top views.</p><p>The first snapshot (upper-left) in Fig. <ref type="figure" target="#fig_2">3</ref> shows the simulation cell immediately after the final chlorination step, before ion bombardment has begun. It can be seen that there is a heavily chlorinated region at the very top of the simulation cell. Underneath this region is a damaged amorphous mixed region with Cl atoms throughout and, finally, the crystalline silicon region. As ion bombardment progresses, the heavily chlorinated region begins to be depleted either by atomic Cl sputtering, SiCl  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE</head><p>pubs.aip.org/avs/jva increases as seen in Fig. <ref type="figure" target="#fig_3">4</ref>. It is important to note that the amorphous region remains (Fig. <ref type="figure" target="#fig_2">3</ref>). Figure <ref type="figure" target="#fig_4">5</ref> depicts the major events during the ion bombardment step of Si-Cl 2 -Ar ALE. <ref type="bibr" target="#b16">17</ref> The Si slab is separated into three regions, the Cl layer, the amorphous mixed layer, and the crystalline Si region. The major etch products we observe are atomic Cl, SiCl, SiCl 2 , and atomic Si. As shown below, atomic Cl is the major etch product at the beginning of the ion bombardment step. As the ion bombardment step continues, the silicon chlorides dominate the etch product distributions and Cl from the top layer will be mixed into the underlying amorphous region. At higher Ar þ fluences atomic Si is the main etch product observed. In this static image, Si from the underlying crystalline region replaces Si that is etched from the amorphous region.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Comparison of etch per cycle (EPC)</head><p>The first comparison between the MD simulations and ALE experiments is the amount of Si etched per cycle (EPC) as a function of þ energy. As stated in Sec. III, we simulate several ALE cycles to reach a cyclic steady state before an EPC value is calculated. Figure <ref type="figure" target="#fig_5">6</ref> shows the amount of Si etched and Cl uptake as a function of cycle number, for one such simulation. The amount of Si etched in units of Å is calculated by counting the number of Si atoms that are removed from the surface and using the density of crystalline Si at 300 K to calculate the etch depth. Note that these results are for 100 eV Ar þ and are representative of the other energies simulated. By tracking the Cl uptake, it appears that the cyclic steady state is reached after about three or four cycles. This is consistent with results obtained previously. <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> It is also apparent that during the chlorination step, the cell is close to reaching complete saturation of Cl, thus more Cl 2 will not significantly alter the results.</p><p>As discussed in Sec. III, the Ar þ simulated ion fluence during the ion bombardment step is smaller than the experiments. Therefore, to do a proper comparison between the MD predicted and experimental EPCs, the MD results are extrapolated to the experimental ion fluence. An example of this extrapolation is shown in Fig. <ref type="figure">7</ref> for the final cycle of the 100 eV Ar þ case. The value of the Ar þ fluence we extrapolate to is approximately 111 ML of Ar þ (Note this corresponds to a value of about 139 ML on the x axis of Fig. <ref type="figure">7</ref> due to the fact that Cl 2 impacts are also included.). This experimental ion fluence is estimated from the experimental flux <ref type="bibr" target="#b17">18</ref> as detailed in Sec. III.</p><p>A comparison between simulated and experimental EPC values is shown in Fig. <ref type="figure">8</ref>. Multiple cycles were used to determine etching rates presented in Fig. <ref type="figure">8</ref> (typically, 50-300). In this plot, we employ the estimated experimental ion energies as described above. There is good agreement between the experiments and simulations up to ion energies of about 125 eV. At higher energies, MD simulations underestimate the EPC relative to the experiments. The reason(s) behind this underestimation are under investigation. One possibility is the assumed monoenergetic ion energy distribution function neglects higher energy ions in the RF-biased sheath. In    (3s 2 3p4s 1 P°! 3s 2 3p 2 1 D), SiCl at 280.6 and 282.2 nm</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Comparison of etch products</head><formula xml:id="formula_0">(B 0 2 Δ !X 2 Π r , ν 0 ¼ 0 ! ν 00 ¼ 0), SiCl 2 at 325-326 nm (Ã 1 B 1 ! X1 A 1 )</formula><p>, and Cl at 837.6 nm [3s 2 3p 4 ( 3 P)4p 4 D°! 3s 2 3p 4 ( 3 P)4s <ref type="bibr" target="#b3">4</ref> P]. The intensities for each species are arbitrary and depend on the energy dependent cross section for electron impact excitation of the emitting levels, and spectroscopic factors such as rotational and vibrational partitioning of the intensities and branching ratios. The intensities for SiCl 2 and SiCl were argued previously to be closely related to the relative yields of these species desorbing the surface. <ref type="bibr" target="#b17">18</ref> Si emission, late in the ALE cycle, is FIG. 8. Etch per cycle (EPC) in units of nm/cycle for experiments (black squares) and MD simulations (red triangles) as a function of Ar þ energy. Error bars represent 95% confidence intervals. As will be seen below, the observed peak in the atomic Si OES signal at the beginning of the ion bombardment period (cf. Fig. <ref type="figure" target="#fig_7">9</ref>) does not match simulation results, which show a nearly flat Si desorption profile over this step. It is likely that Si emission is significantly affected by dissociative excitation of SiCl. We tested this possibility by subtracting from the measured Si emission a term that is a factor (in this case, we use a factor of 5) of the SiCl OES intensity. Figure <ref type="figure" target="#fig_0">10</ref> replots the results of Fig. <ref type="figure" target="#fig_7">9</ref> for 80 eV ions with the corrected atomic Si signal. The peak in the atomic Si signal has been eliminated and the profile appears nearly flat over the ion bombardment period, in general agreement with the MD simulation predictions.</p><p>We applied the same correction to atomic Si OES signals for each of the ion energies, as seen in Fig. <ref type="figure" target="#fig_10">11</ref>. We see flat profiles for all atomic Si signals for various Ar þ energies following this correction. Although this consistency between MD results and corrected measured Si OES signals is not proof, it is strong evidence that SiCl dissociative excitation is contributing to the Si emission measurements.</p><p>SiCl and SiCl 2 emission profiles during ion bombardment show a peak corresponding to the onset of ICP power and RF bias in the (nominally) pure Ar plasma, following exposure to Cl 2 gas. The emission signals decay at various rates. At the 5 s and 12 s points in Fig. <ref type="figure" target="#fig_7">9</ref>, the RF bias is turned off but the ICP power continues for 1 s. There is an initial sharp drop in all OES signals, followed by a post-RF bias rise of emission. The source of this rise in OES during the bias-off period is not fully understood. It is possible that Cl or chlorine-containing products desorb from reactor walls and return to the substrate surface to rechlorinate it, but this question will require additional study.</p><p>We now turn to a direct comparison between measured (and corrected) OES signals and the MD predictions of species desorption during the ICP and RF bias on period of the ALE cycle. For all etch products examined in this work, the results from the MD simulations and the corresponding error bars (representing 95% confidence intervals), are calculated from 15 independent simulations of the Ar þ on bombardment step. These simulations are performed after a cyclic steady state is reached.</p><p>Figure <ref type="figure" target="#fig_12">12</ref> plots normalized Si emission intensity and predicted desorption numbers as a function of Ar þ fluence for both OES experiments and MD simulations, respectively. Results are shown for Ar þ energies of 45, 80, and 215 eV. We normalized the OES and MD simulation results to their respective values of the plateau for the 80 eV results. This allows a clearer comparison between the OES and MD results. Neither set of data involve absolute values, but the relative intensity of each set of data is maintained. Both results show the plateau-behavior for Si for all ion energies are considered. Note that the measured (corrected) OES signal for Si at 215 eV ions is about a factor of 5 above the value for 80 eV ions. Similarly, the MD results predict Si desorption rate at 215 eV to be about six to seven times larger than the value observed at for 80 eV ions.</p><p>In Fig. <ref type="figure" target="#fig_11">13</ref>, SiCl counts from OES experiments and MD simulations are shown. A similar normalization is used for SiCl as was used for Si: the first value for the 80 eV case is taken as unity. There appears to be good agreement between the two sets of results. Both show a peak in the SiCl signal at low Ar þ fluence with a subsequent decay. Moreover, the value of the peak appears to increase with ion energy in both sets of data. However, there are significant differences as well. The MD results decay faster than the OES results. We believe this may be an indication that the MD simulations predict less Cl mixed into the layer relative to experiments. This is discussed in greater detail below.</p><p>The results for SiCl 2 are shown in Fig. <ref type="figure" target="#fig_3">14</ref>. Again, we normalize based on the peak for the 80 eV ion case. Qualitative agreement is observed, similar to the SiCl case. Interestingly, the differences in the values of peaks are almost indistinguishable across ion energies, for both OES and MD simulations. However, the decay in SiCl 2 observed in MD simulations is once again more rapid relative to the OES experiments.</p><p>Finally, the atomic Cl signal from OES experiments and MD simulations are shown in Fig. <ref type="figure" target="#fig_13">15</ref>. Each set of data is normalized using their respective peaks. Once again, the same qualitative behavior between OES and MD simulations is observed, but the decay in the atomic Cl count as a function of ion fluence is faster for the MD simulations when compared to the OES signal, consistent with the other Cl-containing species.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. COMPARISON OF SIMULATIONS AND EXPERIMENTAL OBSERVATIONS</head><p>In general, the experimental observations reported here support most of the key elements revealed in the MD simulations of ALE for this system (Si/Cl 2 /Ar). The reasonable agreement between the predicted and measured etch per cycle up to about 100 eV (cf. Fig. <ref type="figure">8</ref>) as a function of ion energy and fluence suggests the model is capturing some of the important elements of the process. MD simulations increasingly underpredict measured EPC values at ion energies above about 125 eV. Further, OES measured from desorbing etch products during the cycle (cf. Figs. 12-15) are also in reasonable agreement, at least early in the Ar þ bombardment step. Measured OES signals from all three of the Cl-containing etch products (SiCl 2 , SiCl, and Cl) show the MD-predicted peaks immediately after the start of ion bombardment and the energy dependencies are also in agreement. However, the measured OES signals do not decay as rapidly as is predicted by the MD simulations. Both sets of disagreements-in the magnitude of the EPC at higher ion energies as well as the lack of a long "tail" in Cl-containing species OES during ion bombardment-are consistent with MD simulations underpredicting the degree of Cl mixing into the layer.</p><p>Another potentially important complicating factor in the experiments is the possibility that Cl-containing products might desorb from chamber walls during the ion bombardment phase of the cycle. The OES measurements made after RF bias is turned off but ICP power remains on (step 3 in Figs. <ref type="figure" target="#fig_1">2</ref> and <ref type="figure" target="#fig_7">9</ref>) are difficult to interpret in the absence of additional Cl reaching the surface during this phase. If present, this additional Cl reaching the surface in the experiments would need to be included in the MD  simulation protocol. Additional experimental measurements would be needed to address this issue.</p><p>It is also possible that the MD simulations underpredict Cl in the layer because we neglect processes (e.g., thermal diffusion) that take place over long-time scales. The procedure used in the MD simulations, as detailed by Humbird, <ref type="bibr" target="#b29">30</ref> only explicitly simulates the roughly 2 ps impact when a species hits the surface. We then search for and delete etch products and thermostat the cell to 300 K. The next impact is then simulated with only about a few picoseconds (including the thermostat procedure) having been simulated since the previous impact. This procedure is adequate for simulating "prompt" processes like energetic ion impact, sputtering and dissociative adsorption of Cl 2 . However, for the surface area we consider in the simulations, the time between Cl 2 impacts with the surface is on the order of tens to hundreds of microseconds. It is possible that adsorbed Cl could be diffusing deeper into the Si substrate during these relatively long time scales. Unlike continuous plasma processes, the surfaces in ALE are not subject to ion bombardment for relatively long periods of time. It is also known, for example, that fluorine atoms often penetrate deeply into Si. <ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref> Other studies show how adsorbed sulfur suppresses this penetration by enhancing etching. <ref type="bibr" target="#b37">38</ref> Furthermore, relatively recent work reported high Si etch yields using Cl 2 pulsed plasmas that result in unusually large neutral Cl to ion bombardment flux ratios. <ref type="bibr" target="#b38">39</ref> These FIG. 14. Normalized SiCl 2 counts as a function of Ar þ fluence for various Ar þ energies. Subfigure (a) shows the results for OES experiments and subfigure (b) shows results from MD ALE simulations. For both the OES and MD results, the counts are normalized using the value at the peak observed at 80 eV.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ARTICLE</head><p>pubs.aip.org/avs/jva authors suggest the cause of the unusually high etch yields is a correspondingly high Cl content in the Si near surface region due to subsurface Cl diffusion. If this is indeed the case, a better simulation strategy would include enhanced sampling techniques for incorporation of longer timescale phenomena, such as the parallel replica dynamics method, among others. <ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41</ref> VI. CONCLUDING REMARKS Plasma-assisted ALE is a complex process that induces changes in the near-surface region that vary in both depth and time during the cycle. With the goal of better understanding plasma ALE, we have compared molecular dynamics simulation predictions of Si-Cl 2 -Ar ALE to experimental measurements of the Si etch per cycle (EPC) and etch products leaving the surface. In general, the simulations reproduce the major features of the measurements. EPC predictions as a function of ion energy are in reasonable agreement with measurements, especially at lower ion energies. Measured etch product distributions as a function of time in the cycle and ion energy are also in good agreement with predictions, especially early in the ion bombardment step. This set of agreements supports the basic picture that emerges from MD simulations of plasma-assisted ALE for this system, as summarized in the illustration in Fig. <ref type="figure" target="#fig_4">5</ref>.</p><p>However, simulations underpredict EPC values at ion energies above about 125 eV. Moreover, although simulations capture well the initial peak and decline of Cl-containing etch products (SiCl, SiCl 2 , and atomic Cl) leaving the surface, experiments show a considerably longer tail in OES than simulations predict. There are multiple possible explanations for these disagreements. One possibility is Cl desorption from chamber walls followed by substrate incorporation during the ion bombardment step, an effect not included in the simulations. It is certainly possible that Cl subsurface diffusion is taking place in the experiments, leading to a more chlorinated layer than the simulations predict.</p><p>Plasma ALE-even imperfectly understood-is a powerful tool for near-atomic scale manipulation of surfaces. However, considerable additional study, both experimental and computational, is needed to systematically address the many unknown or poorly characterized processes that affect atomic-scale surface control.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIG. 1 .</head><label>1</label><figDesc>FIG. 1. Schematic of the experimental apparatus. The plasma is powered by an inductively coupled coil at the top and by a RF biased substrate stage. The major measurements are of the etch rate (via laser interferometry) and optical emission spectroscopy of species near the silicon substrate being etched during the Ar þ bombardment stage of ALE.</figDesc><graphic coords="3,54.99,458.08,239.98,175.29" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIG. 2 .</head><label>2</label><figDesc>FIG. 2. Cl 2 mass flow, pressure, and DC bias during one 7 s ALE cycle. The applied DC bias is À65 V for this case. The Ar flow (80 SCCM) is on continuously throughout the cycle. ICP power is 250 W.</figDesc><graphic coords="3,317.03,483.87,239.98,167.47" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIG. 3 .</head><label>3</label><figDesc>FIG. 3. Side views of the simulations cell at various values of Ar þ fluences during the ion bombardment step. The snapshot with the label of 0 ML of Ar þ refers to the simulation cell immediately after the chlorination step, before ion bombardment has begun. Translucent yellow spheres are Si atoms, and solid cyan spheres are Cl atoms. The Ar þ energy is 80 eV. The key results are that ion bombardment rapidly mixes Cl into an amorphous layer about 1 nm deep and that the Cl is nearly uniform throughout the layer after a few ML of fluence. The Cl content in the layer slowly decreases with ion fluence. The snapshots were rendered in Ovito (Ref. 32).</figDesc><graphic coords="5,79.37,268.73,191.23,328.65" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIG. 4 .</head><label>4</label><figDesc>FIG. 4. Top views of the simulations cell at various values of Ar þ fluences during the ion bombardment step corresponding to Fig. 3 (80 eV ion energy).The surface of the cell can be seen to be nearly saturated with Cl before ion bombardment has begun (i.e., 0 ML fluence). After 50 ML of ion fluence, Cl is nearly but not completely removed from the surface. The snapshots were rendered in Ovito (Ref. 32).</figDesc><graphic coords="5,341.35,345.54,191.23,278.87" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>FIG. 5 .</head><label>5</label><figDesc>FIG. 5. Depiction of the near-surface phenomena during Ar þ bombardment in Si-Cl 2 -Ar ALE as observed in MD simulations. The regions labeled by red brackets and separated by red dashed lines are the Cl layer, amorphous mixed layer, and crystalline Si region. The green arrows indicate the major products leaving the surface (atomic Cl, SiCl, SiCl 2 , and atomic Si). The black arrows indicate two major events occurring near the surface. These events are Cl mixing from the Cl layer into the mixed layer and Si replenishment from the crystalline Si region into the mixed layer.</figDesc><graphic coords="6,54.99,343.33,239.98,263.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>FIG. 6 .</head><label>6</label><figDesc>FIG. 6. Amount of Si etched (in units of Å) (blue lines) and Cl uptake (red lines) as a function of cycle number for Si-Cl 2 -Ar ALE simulation using 100 eV Ar þ . One cycle consists of 28.2 ML of Cl 2 molecule impacts and 28.2 ML of Ar þ impacts. The surface is nearly saturated with Cl before ion bombardment starts each cycle. Ion bombardment reduces the Cl content of the layer (shown as an equivalent surface coverage of Cl/cm 2 ).</figDesc><graphic coords="6,317.03,472.82,239.98,151.54" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><figDesc>ARTICLEpubs.aip.org/avs/jva addition, inaccuracies in the interatomic potentials or other details of the simulation procedure we use underestimates the true amount of Cl in the Si substrate. More details on this possible effect are described below.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figures 9 -</head><label>9</label><figDesc>Figures 9-11 present typical optical emission intensities recorded as a function of time during two consecutive ALE cycles, long after steady state, which is achieved in the first few cycles and emission intensities for single, steady-state cycles are shown in Figs. 12-15. The energy of Ar þ in Figs. 9-11 is estimated to be 80 eV. As discussed in more detail in a previous publication, 18 optical emission intensities were recorded for Si at 288.16 nm</figDesc><graphic coords="7,317.03,477.30,239.98,165.09" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>FIG. 7 .FIG. 8 .</head><label>78</label><figDesc>FIG. 7. Amount of Si etched (in units of Å) (blue lines) and Cl uptake (red lines) during the final cycle for the Si-Cl 2 -Ar ALE simulation using 100 eV Ar þ . The final portion of the ion bombardment step (purple dashed-dotted line) is used to calculate the etch yield shown as the purple dashed-dotted line. The purple dashed-dotted line is extrapolated to the estimated experimental Ar þ fluence.</figDesc><graphic coords="7,54.99,101.99,239.98,150.69" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>FIG. 9 .</head><label>9</label><figDesc>FIG. 9. OES signals for atomic Si (middle line), SiCl (top line), and SiCl 2 (bottom line) for 80 eV Ar þ . Results are shown for two ALE cycles. The relative intensities of the emission intensity have been adjusted for clarity and do not correspond to densities, in general. The signal for SiCl is multiplied by 10 and the signal for SiCl 2 is multiplied by 100. The steps shown correspond to Fig. 2.</figDesc><graphic coords="7,317.03,101.99,239.98,165.32" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>FIG. 11 .</head><label>11</label><figDesc>FIG. 11. Si OES modified to account for dissociative excitation of SiCl as a function of time for various Ar þ energies. Results are shown for two ALE cycles. The top line corresponds to results for 215 eV, the middle line for 80 eV, and the bottom line for 45 eV.</figDesc><graphic coords="8,54.99,101.99,239.98,162.82" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>FIG. 13 .</head><label>13</label><figDesc>FIG. 13. Normalized SiCl counts as a function of Ar þ fluence for various Ar þ energies. Subfigure (a) shows the results for OES experiments and subfigure (b) shows results from MD ALE simulations. For both the OES and MD results, the counts are normalized using the value at the peak observed at 80 eV.</figDesc><graphic coords="9,53.97,498.39,504.00,161.97" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>FIG. 12 .</head><label>12</label><figDesc>FIG. 12. Normalized atomic Si counts as a function of Ar þ fluence for various Ar þ energies. Subfigure (a) shows the results for OES experiments (using the modified OES Si signals) and subfigure (b) shows results from MD ALE simulations. For both the OES and MD results, the counts are normalized using the value at the plateau observed at 80 eV.</figDesc><graphic coords="9,53.97,101.99,504.00,163.90" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>FIG. 15 .</head><label>15</label><figDesc>FIG. 15. Normalized atomic Cl counts as a function of Ar þ fluence. Subfigure (a) shows the results for OES experiments (where the ion energy is estimated to be about 85 eV) and subfigure (b) shows results from MD ALE simulations where the ion energy is 80 eV. In both cases, the results are normalized using the value observed at the peak.</figDesc><graphic coords="10,53.97,478.94,504.00,172.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,0.00,-0.00,116.21,852.41" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><graphic coords="1,130.00,645.29,435.00,116.71" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>J. Vac. Sci. Technol. A 41(6) Nov/Dec 2023; doi: 10.1116/6.0003011</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>This work was partially supported by the <rs type="funder">US Department of Energy OFES</rs> (Contract No. <rs type="grantNumber">DE-AC02-09CH11466</rs>) and <rs type="funder">Samsung Electronics</rs> (Project Code No. <rs type="grantNumber">IO 210224-08446-01</rs>). The authors gratefully acknowledge discussions with <rs type="person">Keren Kanarik</rs> (<rs type="affiliation">Lam Research Corporation</rs>) and <rs type="person">David Humbird</rs> (<rs type="grantName">DWH Process Consulting</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_6QqMxTA">
+					<idno type="grant-number">DE-AC02-09CH11466</idno>
+				</org>
+				<org type="funding" xml:id="_WcAnvnv">
+					<idno type="grant-number">IO 210224-08446-01</idno>
+					<orgName type="grant-name">DWH Process Consulting</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DATA AVAILABILITY</head><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AUTHOR DECLARATIONS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflict of Interest</head><p>The authors have no conflicts to disclose. </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Plombon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Tronic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Turkot</surname><genName>Jr</genName></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0021506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5005</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Faraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0051506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5023</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0061506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">5041</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="20802" to="20803" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-6463/aa71c7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="253001" to="253001" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpclett.8b00997</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">4814</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hamaguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Karahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J M</forename><surname>Mackus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M E</forename><surname>Kessels</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-6595/ac95bc</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plasma Sources Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="103002" to="103003" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Choe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pyo</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s13391-023-00409-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electron. Mater. Lett</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">424</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsuura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Murota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sawada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.110340</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page">2803</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Suzue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Matsuura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Murota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sawada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohmi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0169-4332(94)90252-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page">422</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Athavale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Economou</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.588651</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">3702</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Cho</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0169-4332(01)00826-1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Surf. Sci</title>
+		<imprint>
+			<biblScope unit="volume">187</biblScope>
+			<biblScope unit="page">124</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yeom</surname></persName>
+		</author>
+		<idno type="DOI">10.1143/JJAP.44.389</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page">389</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Athavale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Economou</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.579659</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">966</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J C</forename><surname>Tinacba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Isobe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hamaguchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0001117</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="42603" to="42604" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Vella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Humbird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0001681</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. B</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="23205" to="23206" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Vella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0002719</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page">42601</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0002482</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="32605" to="32606" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>List</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4978552</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">31303</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>List</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5026777</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page">31305</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>List</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shannon</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-6595/ab000c</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Plasma Sources Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">25005</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chawla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5125266</idno>
+		<ptr target="ARTICLEpubs.aip.org/avs/jva" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">61303</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>List</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5045483</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page">23301</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cervantes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0000373</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">63004</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Brenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Shenderova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Stuart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Sinnott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">783</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Humbird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1636722</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page">2405</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Vella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/6.0002027</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="63203" to="63204" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Moliére</surname></persName>
+		</author>
+		<idno type="DOI">10.1515/zna-1947-0302</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Naturforschung A</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">133</biblScope>
+			<date type="published" when="1947">1947</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J C</forename><surname>Berendsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P M</forename><surname>Postma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Van Gunsteren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dinola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Haak</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.448118</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">3684</biblScope>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Computational studies of plasma-surface interactions</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Humbird</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+		<respStmt>
+			<orgName>University of California, Berkeley</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Ph.D. thesis</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">See supplementary material online for surface flux and fluence calculations and explicit evidence that a larger Cl 2 fluence will not result in more Cl uptake into the Si slab in the MD simulations</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stukowski</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0965-0393/18/1/015012</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Modelling Simul. Mater. Sci. Eng</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="15012" to="15013" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ranson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Estrade-Szwarckopf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Rousseau</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.346625</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">1702</biblScope>
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Brault</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0953-8984/3/36/014</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">7073</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Winters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0167-5729(92)90009-Z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Surf. Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">161</biblScope>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF00348262</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. A</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page">451</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Kaler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Lou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Econmou</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4949261</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="41301" to="41301" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chawla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.5125266</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="61303" to="61304" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><surname>Mourey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Petit-Etienne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cunge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Darnon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Despiau-Pujo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Birchon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lattu-Romain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Joubert</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4951694</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol. A</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="41306" to="41307" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Voter</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.57.R13985</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page">13985</biblScope>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Abrams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bussi</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/e16010163</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Entropy</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">163</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

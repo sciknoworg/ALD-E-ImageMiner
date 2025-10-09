@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Modeling the Chemical Mechanism of the Thermal Atomic Layer Etch of Aluminum Oxide: A Density Functional Theory Study of Reactions during HF Exposure</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2018-08-09">August 9, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Suresh</forename><surname>Kondati</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Simon</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+							<email>simon.elliott@schrodinger.com.orcid</email>
+							<affiliation key="aff1">
+								<orgName type="department">S Supporting Information</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tyndall National Institute</orgName>
+								<orgName type="institution" key="instit2">University College Cork</orgName>
+								<address>
+									<addrLine>Lee Maltings Dyke Parade</addrLine>
+									<postCode>T12 R5CP</postCode>
+									<settlement>Cork</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Modeling the Chemical Mechanism of the Thermal Atomic Layer Etch of Aluminum Oxide: A Density Functional Theory Study of Reactions during HF Exposure</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-08-09">August 9, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9F74B1D319BEC062D3B519AB3931A080</idno>
+					<idno type="DOI">10.1021/acs.chemmater.8b01930</idno>
+					<note type="submission">Received: May 9, 2018 Revised: August 8, 2018</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-07-04T09:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Thermal atomic layer etch, the reverse of atomic layer deposition, uses a cyclic sequence of plasma-free and solvent-free gas surface reactions to remove ultrathin layers of material with a high degree of control. A theoretical investigation of the hydrogen fluoride pulse in the thermal atomic layer etch of monoclinic alumina has been performed using density functional theory calculations. From experiments, it has been suggested that the HF pulse forms a stable and nonvolatile layer of AlF 3 on an alumina surface. Consistent with this, the desorption of an AlF 3 molecule from an HF-saturated surface was computed to be energetically unfavorable. HF molecules adsorbed on the alumina surface by forming hydrogen bonds and either remained intact or dissociated to form Al-F and O-H species. At higher coverages, a mixture of molecularly and dissociatively adsorbed HF molecules in a hydrogen-bonded network was observed. Binding energies converged as the coverage of dissociated F became saturated, consistent with a self-limiting reaction. The formation of H 2 O molecules in the HF pulse was found to be endoergic with an energy barrier of at least +0.9 eV, but their subsequent desorption was computed to cost as little as +0.2 eV. On the basis of a model of the saturated Al-F surface, the theoretical maximum of the etch rate was estimated to be -0.57 ± 0.02 Å/ cycle (-20.0 ± 0.8 ng cm -2 cycle -1 ), which matches the range of maximum experimental values. The actual etch rate will, however, be dependent on the specific reagent used in the subsequent step of the atomic layer etch cycle.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>With Moore's law driving semiconductor devices to eversmaller dimensions, atomic scale precision in device fabrication has become imperative. While atomic layer deposition (ALD) has already been established as a key enabler in cutting-edge semiconductor device manufacturing, <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> it still has to be augmented with robust atomically controlled selective etching to fabricate next-generation devices. <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5</ref> Historically, etching of materials has been performed using plasma in the process known as "dry etching". <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b6">7</ref> The plasma, an energized gas containing ions and radicals, continuously etches the material as long as it is switched on or until stops or masks are reached, making it a relatively uncontrolled process. Because the critical dimensions of semiconductor devices have shrunk tremendously, etch accuracy down to a single atomic layer has become necessary.</p><p>Atomic layer etch (ALE) opens up a new degree of control in material processing and lowers the cost by removing the need for etch stops. <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref> In ALE, the substrate is sequentially exposed to self-limiting etch reactions that affect the substrate material just one atomic layer at a time. This can also be understood in terms of the synergy concept published by Kanarik et al. <ref type="bibr" target="#b10">11</ref> Currently, there are two different approaches to ALE. <ref type="bibr" target="#b3">4</ref> In the first approach, the surface is modified by halogenation and high-energy ion bombardment is then used to remove the modified layer. <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> This method is anisotropic in nature because the energized ions travel toward the surface in one direction only. To keep this step as self-limiting as possible, accurate control of the ion energies and process conditions is required. An alternative approach to the use of high-energy ions is termed "thermal" ALE, as it uses thermally activated reactions to remove the modified layer. Because only un-ionized gas phase precursors are used, this method allows for isotropic etching of materials even at high aspect ratios. Typically, the thermal energy used in such etch processes is much lower than the ion bombardment energy, and therefore, this method could be used when materials are sensitive to the high-energy techniques. For particular applications, a combination of directional plasma ALE and thermal ALE can also be considered.</p><p>Thermal ALE can also be viewed as the reverse of ALD in which the target material is grown a fraction of an atomic layer in each cycle. In ALD, the success of the technique depends on the ability to create a stable and nonvolatile layer at the surface of the substrate. Conversely, the focus in thermal ALE is in the formation of a layer of volatile species via surface reactions.</p><p>Combining ALD and thermal ALE could allow the manufacture of an ultrasmooth thin film in which ALD grows the film and thermal ALE smooths it. <ref type="bibr" target="#b8">9</ref> Thermal ALE is thus likely to be essential for the sub-10 nm critical dimensions in semiconductor technology, e.g., for processing nanowires and nanosheets for gate-all-around transistors <ref type="bibr" target="#b4">5</ref> and vertical NAND flash memories.</p><p>A thermal ALE cycle typically consists of two precursor pulses and two purges as shown in Figure <ref type="figure" target="#fig_0">1a</ref>. In the first pulse, precursor 1 is allowed to interact with the clean substrate that must be etched and chemically "modifies" the exposed surface atomic layer. This surface modification has to be self-limiting in nature; i.e., the intermediates produced in the reaction must not be volatile species that would continuously desorb and lead to uncontrolled etching of the substrate. Any additional precursor molecules that do not participate in the surface modification and other byproducts are purged away efficiently. In the second pulse, precursor 2 (for example, a ligand exchanging agent) is introduced into the ALE chamber to interact with the modified layer of the substrate and produce stable and volatile byproducts. It is important once again that this step is also self-limiting in nature and that the precursor 2 molecules do not interact with the "unmodified" substrate atoms. The volatile byproducts and unreacted precursor molecules are then safely removed in the second purge event, which leaves a clean substrate layer. This completes one ALE cycle. In some cases, the second precursor pulse may leave nonvolatile species at the surface that may block surface sites for the first precursor in the next cycle.</p><p>The thermal ALE cycle of Al 2 O 3 with alternating fluorination (using HF) and ligand exchange reactions [using Sn(acac) 2 ] was developed by George and co-workers, <ref type="bibr" target="#b14">15</ref> and the proposed mechanism is given in Figure <ref type="figure" target="#fig_0">1b</ref>. In the first pulse, HF gas is introduced on a clean Al 2 O 3 surface. The HF molecules adsorb to the surface and form a stable and nonvolatile "AlF 3 " layer, releasing H 2 O as a byproduct, which is purged away along with unreacted HF. The spectral signature of an AlF 3 layer on alumina has also been identified using FTIR experiments. <ref type="bibr" target="#b15">16</ref> Subsequently, a second precursor Sn(acac) 2 is introduced that exchanges its ligands with the AlF 3 layer and is proposed to produce volatile Sn(acac)F and Al(acac) 3 , which are flushed away in the subsequent purge step. One ALE cycle is thus completed and has achieved etching of the Al 2 O 3 surface. These two precursors are also effective in the etching of other compounds such as hafnium oxide <ref type="bibr" target="#b16">17</ref> and aluminum nitride. <ref type="bibr" target="#b17">18</ref> Trimethylaluminum (TMA) has also been found to be an effective precursor for the ligand exchange pulse of Al 2 O 3 ALE. <ref type="bibr" target="#b18">19</ref> Because TMA and HF are also used as precursors for the ALD of AlF 3 films, there will be competition between AlF 3 ALD and Al 2 O 3 ALE in this case. <ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b20">21</ref> In this paper, we use density functional theory (DFT) calculations to probe the HF pulse in detail to understand the mechanism of fluorination of a bare θ-alumina surface. Our main goal is to identify the key step that converts the Al-O bonds in the clean alumina surface to Al-F bonds during the HF pulse. On that basis, a HF-saturated surface model of ALDdeposited alumina will be constructed and a theoretical maximum of the etch rate will be deduced.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ METHOD AND COMPUTATIONAL DETAILS</head><p>In this paper, bulk as well as slab (surface) calculations have been performed within DFT using the Vienna ab initio simulation package (VASP), <ref type="bibr" target="#b25">26</ref> which uses plane wave basis sets to describe valence electrons, here with an energy cutoff of 400 eV. The calculations are performed within spin-polarized generalized gradient approximation (GGA) using the Perdew-Burke-Ernzerhof (PBE) exchangecorrelation (XC) functional, <ref type="bibr" target="#b26">27</ref> and the behavior of the core electrons is described by projector-augmented wave (PAW) potentials. <ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b28">29</ref> To compute the energy of possible reactions, gas phase calculations of reagent molecules and byproducts have also been performed in a large periodic box with dimensions of 15.0 Å × 16.0 Å × 15.5 Å with an energy cutoff of 400 eV.</p><p>As-deposited alumina films from ALD are in general amorphous. However, the majority of theoretical studies of alumina ALD in the literature use the α phase in periodic models because it is the most stable crystalline phase. For example, a first-principles simulation of ALD of alumina on the α-Al 2 O 3 (0 0 0 1) surface has been published. <ref type="bibr" target="#b29">30</ref> The mechanism of HF adsorption on the α-Al 2 O 3 (0 0 0 1) surface has been studied in detail by Quan et al. <ref type="bibr" target="#b23">24</ref> However, ALDdeposited alumina is found to transform under annealing into θ- <ref type="bibr" target="#b30">31</ref> which is the most stable transition phase of alumina. We therefore use θ-Al 2 O 3 as a periodic model for ALD-grown alumina in this study. The first reported ab initio investigation of the properties of bulk and surface θ-Al 2 O 3 used Hartree-Fock theory. <ref type="bibr" target="#b31">32</ref> In 2002, Cai et al. <ref type="bibr" target="#b32">33</ref> studied the transformation of γ-Al 2 O 3 to θ-Al 2 O 3 using DFT calculations. Nørskov and co-workers <ref type="bibr" target="#b33">34</ref> investigated the change in surface energy with an increasing thickness of θ-Al 2 O 3 surface slabs using DFT calculations and reported that hydroxylated θ-Al 2 O 3 surfaces may be more stable than those of α-alumina. However, we did not find any published literature about the mechanism of HF adsorption on θ-Al 2 O 3 surfaces.</p><formula xml:id="formula_0">Al 2 O 3 ,</formula><p>The unit cell of monoclinic θ-Al 2 O 3 consists of 8 Al atoms and 12 O atoms with lattice parameters a ≠ b ≠ c and (α = β) ≠ γ. To compute these parameters, we have simultaneously relaxed the atomic positions, cell shape, and cell volume with a higher energy cutoff (550 eV) and a 2 × 4 × 4 Monkhorst-Pack K-point sampling mesh. A convergence test for the choice of K-point mesh is also performed,  <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16</ref> and the results can be seen in the section S1 of the Supporting Information. The computed lattice parameters are compared with the experimental values <ref type="bibr" target="#b34">35</ref> in Table <ref type="table" target="#tab_0">1</ref>, and it can be seen that there is a good agreement between them within an error of only 2%. The band gap of bulk θ-Al 2 O 3 is computed to be 5 eV. The overall band structure and the contributions of Al and O to the total density of states are given in the section S2 of the Supporting Information. An illustration of the equilibrium bulk geometry of θ-Al 2 O 3 along the "ac" plane is given in Figure <ref type="figure" target="#fig_1">2a</ref>. Of the 8 Al atoms per cell, 4 are located in tetrahedral coordination sites (labeled in the figure) and the other 4 in octahedral coordination sites relative to the oxygen lattice. In the equilibrium geometry, the valence electrons are found to be localized mainly around the O atoms reflecting the predominantly ionic character of the Al-O bond. We also performed Bader analysis <ref type="bibr" target="#b35">36</ref> on the charge density to find the valence charges on individual atoms, which revealed that only 4.6% of total valence electrons are around Al atoms (average charge of +2.43) and 95.4% are around O atoms (average charge of -1.62). We have also included the lattice constants obtained by adding dispersion corrections to the energy based on the Tkatchenko-Scheffler method, <ref type="bibr" target="#b36">37</ref> and from Table <ref type="table" target="#tab_0">1</ref>, it is evident that this additional description of dispersion does not have a substantial effect on the structure of bulk alumina.</p><p>The surface of monoclinic θ-Al 2 O 3 oriented at the (2̅ 0 1) plane is considered for the slab calculations. Even though this is not the most stable surface of θ-Al 2 O 3 , <ref type="bibr" target="#b33">34</ref> it is considered in this study mainly because the ALD-deposited alumina has been found to grow along the (2̅ 0 1) surface orientation. <ref type="bibr" target="#b30">31</ref> A (1 × 4) supercell of a 13 Å thick (2̅ 0 1) slab of θ-Al 2 O 3 with fixed atoms at the bottom face and 16 Å of vacuum separating the slabs is used as the surface model (Al 96 O 144 per cell). Calculations for obtaining converged values of the K-point mesh, the plane wave energy cutoff, and the vacuum thickness between slabs have been performed, and the results are tabulated in the section S1 of the Supporting Information. Figure . 2b shows the optimized geometry of the Al 2 O 3 (2̅ 0 1) slab along with the electronic valence charge density. Similar to the bulk case, it can be seen that the valence electrons are concentrated mostly around the oxygen atoms. The surface energy of the fully relaxed surface slab is found to be 7.25 eV/nm <ref type="bibr" target="#b1">2</ref> .</p><p>The first step of the alumina ALE process is the introduction of a fluorinating agent, in this case the HF molecule. At the optimized surface slab, HF molecules are introduced at various surface sites and at various coverages. The resulting geometries of slab and adsorbate atoms are further relaxed to obtain energetic minima. This is done to find the maximum possible coverage of F atoms on the alumina surface, from which we can then estimate the maximum possible etch rate. For the geometry relaxation problem, we have adopted a twostep approach in which an estimated local minimum is first obtained from the conjugate gradient (CG) method, which is known to be efficient when the starting geometry is far from a local minimum, and the resulting geometry is reoptimized with a RMM-DIIS algorithm, which is known to be efficient close to the minimum, as implemented in VASP. The methodology of computing adsorption/binding energies and charge density difference is provided in section S3 of the Supporting Information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ RESULTS</head><p>In the first part of this section, we evaluate the energetics of several postulated reactions to obtain a qualitative idea of the nature of the HF pulse, whether it etches or self-limits. Following that, the mechanism of molecular HF adsorption on a bare alumina surface is reported. This includes the estimation of minimum energy pathways for the migration of a H atom on the surface along with corresponding energetic barriers. In the next part, multiple HF adsorption and the resulting minimum energy geometries are investigated to understand the saturation of the alumina surface with HF. Toward the end of this section, a possible hydrogen transport mechanism and pathways leading to the formation and desorption of water molecules are reported.</p><p>Energetics of Overall Reactions. In this section, model reactions representing the HF pulse will be postulated and their energetics will be evaluated. The reaction energies (ΔE) of the balanced reactions are listed in Table <ref type="table" target="#tab_1">2</ref>. Two types of reactions are considered, bulk → gas and surface → surface. In the case of bulk → gas reactions, we assume bulk θ-Al 2 O 3 and gaseous HF as the reactants that produce gaseous byproducts. These represent continuous etch reactions that produce volatile gaseous species, restore the initial surface, and thus etch away units of bulk alumina. For this computation, the equilibrium energy of bulk θ-Al 2 O 3 and optimized gas phase energies of molecules are used. For the surface → surface reactions, we assume a clean Al 2 O 3 (2̅ 0 1) slab and gaseous HF as reactants and the corresponding F-covered alumina surface and H 2 O as products. This represents a self-limiting reaction that saturates the surface with a stable and nonvolatile  fluorinated layer AlF x (not necessarily a layer of AlF 3 ). To model an F-covered alumina surface, we have introduced 18 F atoms as HF and removed 9 O atoms as H 2 O from the bare alumina surface model described in Method and Computational Details.</p><p>We consider three bulk → gas reactions, namely, R 1 -R 3 , where AlF 3 , Al 2 F 6 , and AlOF, respectively, are the gas phase reaction byproducts along with H 2 O.</p><formula xml:id="formula_1">R : Al O 6HF 2AlF 3H O 1 2 3(b) (g) 3(g) 2 (g) + → + (1) R : Al O 6HF Al F 3H O 2 2 3(b) (g) 2 6(g) 2 (g) + → +<label>(2)</label></formula><formula xml:id="formula_2">R : Al O 2HF 2AlOF H O 3 2 3(b) (g) (g) 2 (g) + → +<label>(3)</label></formula><p>These reactions are nonredox type as Al, O, H, and F atoms retain their formal oxidation states of +3, -2, +1, and -1, respectively. According to the ΔE values in Table <ref type="table" target="#tab_1">2</ref>, R 1 and R 3 were found to be endoergic, whereas R 2 is exoergic. Moreover, the surface → surface reaction</p><formula xml:id="formula_3">R : 3Al O 18HF 6AlF 9H O 4 2 3(surf) (g) 3(surf) 2 (g) + → +<label>(4)</label></formula><p>is found to be exoergic with a ΔE value of -3.6 eV/Al 2 O 3 , which is much lower than that of R 2 . We have also computed the ΔE values of the bulk → gas reactions using the much more computationally expensive PBE0 hybrid functional and compared them to the PBE values in Table <ref type="table" target="#tab_1">2</ref>. It can be seen that the values obtained with the two functionals agree within 0.04 eV/HF for R 1 and R 2 , suggesting that the PBE functional is reliable enough for these calculations. From these simplified models, it appears that HF will saturate to form an AlF x layer and not etch away θ-Al 2 O 3 by itself under reactor conditions. Therefore, the next step is to find the key mechanism that is responsible for this AlF x layer formation on the alumina surface.</p><p>Adsorption of One HF to a Bare Alumina Surface. We initiated DFT-based adsorption calculations by introducing one HF molecule to the optimized (1 × 4) supercell of the θ-Al 2 O 3 (2̅ 0 1) surface. The detailed geometry of this supercell is provided in section S4 of the Supporting Information. Depending on the binding site of the HF molecule, it could either adsorb molecularly or dissociatively as shown in Figure <ref type="figure" target="#fig_3">3</ref>. Molecular adsorption of the HF molecule to the surface via hydrogen bonding resulted in a binding energy of -0.44 eV in geometry M A <ref type="bibr" target="#b0">1</ref> . Here, M Y X refers to a minimum geometry where X is the number of HF molecules adsorbed on the (1 × 4) supercell of the θ-Al 2 O 3 (2̅ 0 1) surface and the alphabetical index Y refers to a specific minimum of that configuration. For example, M 1 refers to all the possible minimum geometries of the studied alumina surface with one adsorbed HF molecule.</p><p>When more than one minimum is considered for discussion, we refer to them as M A 1 , M B 1 , etc. (see section S5 of the Supporting Information). We find that molecular adsorption results when the F atom in HF is not close enough to a surface Al atom for binding, which could drive HF dissociation. This shows that Al-F bonding is crucial for the HF splitting reaction to take place. In geometry M B 1 , the HF adsorbs dissociatively with a binding energy of -1.74 eV and forms -Al-F and -O-H species on the surface. A detailed analysis of the nature of the HF splitting reaction for the formation of M B 1 is discussed further below. With M B 1 as a starting point, two other minima are possible depending on where the H atom hops and binds. A further low-energy minimum M D 1 with a binding energy of -2.11 eV is possible when the H atom hops to the adjacent row of O atoms. Alternatively when the H atom is displaced in the same row of O atoms (M C 1 ), binding becomes weaker and the binding energy increases to -1.31 eV. M D 1 and M C 1 did not result directly from our geometry relaxation calculations, so there must be energetic barriers separating them from M B 1 . Using the climbing image nudged elastic band (CI-NEB) approach <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b22">23</ref> with three images between the minima, we computed minimum energy pathways (MEPs) connecting them and the activation energies, as shown in Figure <ref type="figure" target="#fig_4">4</ref>   also calculated. The H transport MEPs M B 1 -M D 1 and M D 1 -M C 1 are shown in panels a and b of Figure 4, respectively, with a series of superimposed H atoms representing the images connecting them. The plot in Figure 4c shows the relative energy difference of the images with respect to M B 1 , from which the forward and reverse barriers connecting M B 1 and M D 1 are found to be +0.83 and +1.20 eV, respectively. Similarly, the forward and reverse barriers connecting M D 1 and M C 1 are computed as +1.40 and +0.63 eV, respectively. Therefore, the most probable pathways for H transport are from M B 1 and M C 1 to M D 1 . Figure 5 describes in detail the mechanisms involved in the dissociative adsorption of a HF molecule on an Al 2 O 3 (2̅ 0 1) surface corresponding to geometry M B 1 . This figure also includes a complementary graph showing the energy change relative to the initial geometry as well as the change in interatomic distance among H-F, Al-F, and O-H (d H-F , d Al-F , and d O-H , respectively) during geometry optimization. The labeled vertical dashed lines in the graph correspond to the geometries shown in the figure. Geometry a refers to the initial state in which the HF molecule is introduced ∼3 Å from the surface. During optimization, the HF molecule approaches the surface until a hydrogen bond (d O-H &lt; 2.5 Å) is made with a surface oxygen atom as shown in geometry b. In the graph, this can be observed from the correlated decrease in d Al-F and d O-H that ends at geometry b, beyond which the hydrogen bond continues to strengthen as indicated by the continued decrease in d O-H . Moreover, a surface Al atom is attracted by the F atom, which is evident from its out-of-lattice position and decreasing d Al-F . The strengthening of the hydrogen bond and the Al-F bond leads to cleavage of the HF bond as seen in geometry c (d H-F &gt; 1.2 Å), which marks the crossover point of d O-H and d H-F . The favorable nature of HF bond dissociation in these circumstances is also indicated by a sharp decrease in the relative energy difference and an increase in d H-F beyond geometry c in the graph. The splitting of HF results in the formation of isolated -Al-F and -O-H species on the surface as seen in geometry d, which further decreases the energy difference. Beyond this point, d Al-F , d H-F , d O-H , and the relative energy difference converge to stable values, indicating the formation of stable -Al-F and -O-H species resulting in minimum geometry e (M B</p><p>1 in Figure <ref type="figure" target="#fig_3">3</ref>). The final Al-F and O-H bond lengths are 1.67 and 0.99 Å, respectively, and the F-bound Al atom is displaced ∼1 Å upward from its lattice position along the surface normal direction. The mechanism described above drives the conversion of Al-O bonds into Al-F bonds by means of the HF splitting reaction, which results in the formation of an AlF x layer at the end of the HF pulse. We find that the inclusion of dispersion corrections based on the TS scheme did not result in a significant difference in the geometry or in the binding energy values.</p><p>To identify the nature of the surface-HF bonding in M B 1 , a charge density difference plot is constructed as shown in Figure  6 in which electrons accumulate in the yellow region and are depleted in the cyan region. The charge density difference is obtained by subtracting the individual charge densities of the substrate [ρ(Al 2 O 3 )] and adsorbate molecule [ρ(HF)] from the charge density of the combined geometry [ρ(Al 2 O 3 + HF)]. From the figure, it can be seen that the electronegative F atom gains electrons that are polarized toward the bound Al atom at the surface and that the H atom forms a covalent bond with a surface oxygen atom (d O-H = 0.99 Å). The optimized geometry and charge density difference plots are similar to those of one HF adsorbed on the α-Al 2 O 3 (0 0 0 1) surface reported by Quan et al. <ref type="bibr" target="#b23">24</ref> We also performed Bader charge analysis and found that the surface O-H and Al-F have  X denotes a minimum with X HF molecules, and in case there are several minima, they are indexed with a label Y. In some cases, multiple minima are shown to convey the fact that very different stable configurations are possible. In most of the minimum geometries shown above, a mixed dissociative and molecular adsorption of HF molecules can be seen. charges of -0.85 and +1.62, respectively. More information about this is given in section S6 of the Supporting Information.</p><p>Adsorption of Multiple HFs to Bare Alumina. In subsequent simulations, we introduced multiple HF molecules onto the bare Al 2 O 3 (2̅ 0 1) surface with coverages ranging from 1.2 to 15.4 HF/nm 2 . From the previous section, we know that Al-F bond formation drives the HF splitting reaction. There are 8 topmost Al atoms on the surface of the (1 × 4) supercell (geometry in Figure <ref type="figure" target="#fig_1">2</ref> and also in section S4 of the Supporting Information) that can potentially form Al-F bonds readily. It should be noted that for ≤16 HF molecules, there is a possibility that all the adsorbed HF molecules will dissociate provided they adsorb in a certain fashion (see M A 2 , M A 8 , and M 16 in Figure <ref type="figure" target="#fig_7">7</ref>). Therefore, we introduced the HF molecules by hand in such a way that not all of the HF would bind to those 8 Al atoms and then optimized the resulting geometries. A mixture of molecular and dissociative adsorption of HF molecules is observed in the optimized geometries shown in Figure <ref type="figure" target="#fig_7">7</ref>. A list of these minima along with the HF coverage, Al-F coverage, and corresponding binding energies is given in Table <ref type="table" target="#tab_2">3</ref>. The least binding per HF is observed in the geometry with 5 HF molecules where only one HF molecule dissociated. Also, via comparison of the binding energies of M A 2 and M B 2 geometries, it may appear that the dissociation of HF molecules would lead to lower binding energies. However, from M A 8 and M B 8 geometries, it seems that the dissociation of all HF molecules is less favorable than that of a mixture of dissociative and molecular adsorption. In fact, the greatest binding energy per HF molecule is observed in the case of M B 8 where only 4 of the adsorbed HF molecules dissociated while the others formed hydrogen bonds with the remaining HF molecules and dissociated F atoms. Therefore, as the HF coverage increases, we can expect more formation of a hydrogen-bonded HF network. The transport of H atoms within this network would likely play a major role in facilitating diffusion of H to reactive O and thus the formation of a stable AlF x layer on the alumina surface.</p><p>Scatter plots of HF coverage versus Al-F coverage, HF coverage versus binding energy, and Al-F coverage versus binding energy of the minima are shown in panels a-c of Figure <ref type="figure" target="#fig_8">8</ref>, respectively. The data points with square markers along the regression line in panel a correspond to minima M A 2 , M A 8 , M <ref type="bibr" target="#b15">16</ref> , and M B</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>24</head><p>, where nearly all of the adsorbed HF molecules are dissociated to form Al-F bonds. The rest of the data points are below the regression line, indicating that some HF molecules remain undissociated. It is evident from panel b that binding to the surface becomes stronger as the surface is exposed to more HF, though some leveling off is evident at high coverages. However, in panel c, we observe that complete dissociation of HF into Al-F is not necessary to attain the greatest binding energies. The saturating coverage of dissociated F atoms is obtained when there is a convergence in the values of binding energy in electronvolts per square nanometer. The circular markers show dissociated Al-F coverage saturating at 5-7 F/nm 2 , with further energetic stabilization to at most -16 eV/nm 2 coming from additional molecular HF at a constant Al-F coverage. Comparing squares and circles shows that negligible energy is gained through further dissociation.</p><p>These data suggest that a coverage of 7.1 ± 0.3 F/nm 2 of dissociated F can be readily achieved. Further molecular HF can bind and dissociate, but without lowering the surface energy appreciably. This value for the saturating F coverage will therefore be used further below to derive the etch rate. Moreover, in this (1 × 4) supercell of θ-alumina with a surface area of 1.68 nm 2 , there are 8 topmost Al atoms at the surface (see section S5 of the Supporting Information) that could readily form Al-F bonds, which corresponds to a coverage of 4.8 Al/nm 2 . Therefore, for a coverage of 7.1 ± 0.3 F/nm 2 , there will be ∼1.5 F atoms per surface Al atom on average.</p><p>Hydrogen Transport Mechanism. We now describe in detail the hydrogen transport mechanism observed in the adsorption of two HFs per cell on the (2̅ 0 1) surface of alumina, corresponding to minimum M C 2 in Figure <ref type="figure" target="#fig_7">7</ref>. The initial geometry considered for this optimization problem is shown in Figure <ref type="figure" target="#fig_9">9a</ref>, where the two HF molecules are hydrogen bonded to surface oxygen atoms. Upon optimization, we have observed dissociative adsorption of only one HF molecule while the other is intact and forms hydrogen bonds with the surface -Al-F and -O-H species as shown in geometry e (M C 2 in Figure <ref type="figure" target="#fig_7">7</ref>). The binding at this geometry shows an energy of -1.4 eV per HF, which is just 0.1 eV weaker than that of geometry M A 2 , where both HF molecules are dissociated.</p><p>The mechanism of HF dissociation observed here is different from that of the one-HF case detailed earlier (see Figure <ref type="figure" target="#fig_5">5</ref>), as here the dissociated H atom did not covalently bind to the surface O atom to which it was initially hydrogen bonded but rather to the O atom in the adjacent row. We have already seen in the case of one-HF adsorption that displacement of H to the adjacent row of O atoms is energetically favorable. Figure <ref type="figure" target="#fig_9">9</ref> also includes a reference graph showing the change in energy (relative to the initial geometry) and important bond distances as a function of the optimization steps. Going from a to b, we find the initial hydrogen bond between molecule H1F1 and the surface is broken and a new hydrogen bond is beginning to form between H1F1 and H2F2. At the same time, the strengthening of the bond between Al′ Here, M Y X denotes a minimum with X HF molecules, and in case there are several minima, they are indexed with a label Y. HF coverage denotes the coverage of the total number of HF molecules introduced into the supercell, whereas Al-F coverage refers to the coverage of dissociated F atoms that form Al-F bonds. and F1 is evident from the out-of-lattice position of Al′ and the decrease in d Al′-F1 . These events lead to a decrease in the relative energy of approximately -0.6 eV. In the next segment, between b and c, the hydrogen bond between H1F1 and H2F2 becomes stronger, which is evident from the considerable decrease in d H1-F2 . Moreover, the H2F2 molecule switches its surface hydrogen bond acceptor (to O′) as it is displaced closer to the H1F1 molecule due to stronger Al′-F1 binding. Toward the end of the region between c and d, four simultaneous events that lead to the transfer of H atoms take place: dissociation of H1F1, dissociation of H2F2, formation of H1F2, and formation of surface O′H2 species. From c to d, the energy decreases gradually but decreases steeply after the crossover point at d as the newly formed surface O′H2 and H1F2 molecules stabilize. These events could be more pronounced at higher coverages where a network of hydrogen-bonded HF molecules, which transfers H atoms in this fashion, could affect surface fluorination and thus influence etch rates.</p><p>H 2 O Formation and Desorption. In the postulated reactions given above, we have assumed the release of volatile H 2 O in the HF pulse. However, we did not observe any spontaneous formation and desorption of water molecules in our geometry relaxation calculations. Therefore, it will be interesting to estimate the energetic barriers involved. In Figure <ref type="figure" target="#fig_10">10</ref>, two pathways leading to the formation and desorption of H 2 O molecules are identified using minimum geometry G1 (M A 2 in Figure <ref type="figure" target="#fig_7">7</ref>) as the starting point. In the H 2 O formation process, the first step is the hop transfer of one H atom to the adjacent row of O atoms (G1 → G2). This is an exoergic event because the resulting minimum G2 is 0.14 eV lower in energy than G1. However, there is an energetic barrier of +0.92 eV to go from G1 to G2. The activation barriers discussed here are computed using the CI-NEB method, and the results are listed in Table <ref type="table" target="#tab_5">4</ref>. Because the minimum G2 is lower in energy than G1, the reverse hop of the H atom will have a slightly larger barrier of +1.06 eV.</p><p>From this point, there are two possibilities for H 2 O formation. The first possibility (G2 → G3) is when the displaced H atom hops back to the OH in the initial row,   crossing an energy barrier of +1.63 eV, resulting in H 2 O formation. The second possibility (G2 → G4) is when the undisplaced H atom in minimum G2 also hops to the OH in the adjacent row and forms H 2 O after crossing an energy barrier of +1.79 eV. In both cases, the resulting geometries G3 and G4 are higher in energy than G2 by 1.21 and 1.44 eV, respectively. Therefore, the formation of H 2 O is endoergic at 0 K and is dependent on the ALE operating conditions (T and p). The reverse pathways G3 → G2 and G4 → G2 have relatively lower barriers of +0.19 and +0.58 eV, respectively. Therefore, the water molecules must desorb before they disintegrate and re-form minimum G2 once again. The energies of desorption of H 2 O from geometries G3 and G4 are computed to be +0.26 and +1.17 eV, respectively (corresponding to minima G5 and G6, respectively). On the basis of the results for the two pathways presented above, G1-G2-G3-G5 and G1-G2-G4-G6, the former seems to be more preferable because of the relatively lower activation energies for H</p><p>2 O formation and desorption. If H 2 O molecules are not formed and OH persists at the alumina surface, this is likely to lead to TMA adsorption via the competing surface reaction OH Al(CH ) O Al(CH ) CH (surf) 3 3(gas) 3 2(surf) 4(gas)</p><formula xml:id="formula_4">+ → - +<label>(5)</label></formula><p>Moreover, as mentioned above, the same precursors HF and TMA are used in the ALD of AlF 3 , <ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b20">21</ref> which might lead to a competition between the ALE of Al 2 O 3 and the ALD of AlF 3 . On the other hand, if Sn(acac) 2 is used as the second precursor, the persistent surface OH species might also lead to Sn(acac) 2 adsorption via the following reaction</p><p>OH Sn(acac) O Sn(acac) acacH (surf) 2(gas) (surf) (gas)</p><formula xml:id="formula_5">+ → - +<label>(6)</label></formula><p>■ DISCUSSION</p><p>We started our investigation of the HF pulse on alumina by comparing the reaction energies of continuous bulk etching and those of surface saturation. In both cases, it is assumed that the surface oxygen atoms are removed as H 2 O molecules. We found that the saturating surface reaction was energetically more favorable than the continuous etching reactions by at least 2 eV/Al 2 O 3 . This suggested that the HF pulse is selflimiting in nature, forming a stable and nonvolatile AlF x layer on the alumina surface.</p><p>As the next step, we studied the adsorption mechanism of one HF molecule per cell on the model θ-Al 2 O 3 surface to identify the key reaction step that is responsible for the conversion of Al-O bonds on the surface to Al-F bonds. With a computed dipole moment of 1.8 D, the HF molecule initially physisorbed to the bare alumina surface by means of strong dipole interactions. We observed that the HF molecule can next chemisorb either molecularly or dissociatively. In either case, the HF molecule initially formed a hydrogen bond with a surface O atom. On the basis of whether the F atom was oriented to find an Al partner on the surface, the HF molecule either remained intact or dissociated to form surface-bound Al-F and O-H species. The H-F bond is strong with a bond dissociation energy of 6 eV. Upon adsorption to the alumina surface, the H-F bond did not begin to dissociate until the O-H and Al-F bonds were almost formed (evident from the bond distances in Figure <ref type="figure" target="#fig_5">5</ref>). The splitting of the H-F bond correlates closely with the reduction of the total energy of the system. In the case of dissociative adsorption, we found that the adsorbed H atom could hop to other atop O sites on the surface subject to energetic barriers. The hop of H to an adjacent row of O atoms away from the Al-F bond was energetically preferred, albeit impeded by a barrier of +0.83 eV. There was an energy cost for H to hop to an adjacent O atom in the same row.</p><p>As the coverage of HF was increased in our simulations, we observed a mixture of intact and dissociated HF molecules that formed a hydrogen-bonded network on the surface. In fact, such a mixed adsorption state was found to be similar in energy to the state in which almost all HF molecules were dissociated. This indicates that after the initial surface coating of AlF x , there is little energetic driving force for further dissociation of HF molecules, potentially therefore achieving the self-limiting condition. No spontaneous formation of the discrete AlF 3 molecule is observed at the surface in our calculations even at high HF coverages. Moreover, at the saturating dissociated F coverage of 7.1 ± 0.3 F/nm 2 , we find that on average only 1.5 F atoms are bound to each surface Al atom. Our investigations further indicate that such a molecule (AlF 3 ) would be involatile, as evidenced by a very high computed energy of +2.75 eV at 0 K for desorption from HF-saturated surface M B 24 in Figure <ref type="figure" target="#fig_7">7</ref>. Similarly, the desorption energy of the Al 2 F 6 molecule is found to be +3.17 eV. Exposing the surface to various coverages of HF, we observe saturation in the coverage of dissociated F (at 5-7 F/nm 2 ) and eventually also saturation in the binding energy (at -16 eV/nm 2 ) even when additional HF molecules are present. Taken together, these findings strongly suggest that the HF reaction is self-limiting, which is a key requirement for thermal ALE. To confirm this will require detailed study of pathways of diffusion of F into Al 2 O 3 sublayers, including relaxation of associated stress in large simulation cells.</p><p>The unreacted HF molecules as well as any H 2 O formed should be removed in the purge step, leaving an AlF x -covered alumina surface. The desorption energies of AlF 3 and Al 2 F 6 relative to the AlF x layer on the alumina surface obtained after the purge are computed to be as high as +5.08 and +5.24 eV, respectively, substantially higher than the desorption energies quoted above. Evidently, the molecules bind more strongly to the surface when some surface O atoms have been removed as H 2 O. The geometries used for the calculations presented above are shown in section S7 of the Supporting Information.</p><p>Because the HF reaction self-limits, a co-reagent is needed to chemically remove residual F and Al atoms from the surface and complete the ALE cycle. In the literature, Sn(acac) 2 <ref type="bibr" target="#b14">15</ref> and Al(CH 3 ) 3 <ref type="bibr" target="#b9">10</ref> have been demonstrated to be successful coreagents. Analysis of the ligand exchange mechanisms between the AlF x layer and the co-reagents mentioned above is beyond the scope of this paper.</p><p>Having established the chemical nature of the saturating surface in one of the ALE pulses, we are now able to estimate the maximum etch rate that is theoretically possible. Of all the AlF x -covered surface models that we computed, it can be seen from the Al-F coverage and surface energy values in Table <ref type="table" target="#tab_2">3</ref> that M 26 (Figure <ref type="figure" target="#fig_7">7</ref>) is the most probable representative geometry of the saturated surface. Although M B <ref type="bibr" target="#b23">24</ref> is slightly more stable at 0 K, M 26 has a similar binding energy per unit area at a considerably lower Al-F coverage. The coverage of dissociated F in M 26 is 7.1 ± 0.3 F/nm 2 . The maximum etch rate can clearly be achieved when all of this dissociated F leads to etching of Al 2 O 3 in each ALE cycle. According to the etch reactions proposed by George and co-workers, <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b18">19</ref> three F atoms lead to the etching of one Al atom, so the coverage of Al that can be etched is one-third of the F coverage, 2.4 ± 0.1 Al nm -2 cycle -1 . Because the surface layer of θ-Al 2 O 3 (2̅ 0 1) shows an Al coverage of 4.8 ± 0.3 Al/nm 2 , this maximum etch rate corresponds to 0.5 monolayer/cycle. Upon conversion to other units, this etch rate is -20.0 ± 0.8 ng cm -2 cycle -1 and, via the mass density of bulk θ-alumina (3.5 g/cm 3 ), -0.57 ± 0.02 Å/cycle. (For the sake of comparison, the removal of a complete monolayer of Al 2 O 3 would require a dissociated F coverage of 14.2 ± 0.3 F/nm 2 and the corresponding etch rate would be -1.14 ± 0.02 Å/cycle or -40.0 ± 0.8 ng cm -2 cycle -1 .) Clearly, the magnitude of the etch rate will be lower than the theoretical maximum of 0.57 ± 0.02 Å/cycle if reaction kinetics do not allow the etch reaction to proceed to completion. This could happen if residual F remains adsorbed at the surface after the ligand exchange pulse or if the desorption of H 2 O is incomplete. Indeed, residual OH at the surface could allow competing ALD growth reactions to take place when TMA is used as the ligand exchange reagent. <ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b20">21</ref> Using HF and Sn(acac) 2 as precursors, George and coworkers <ref type="bibr" target="#b14">15</ref> report etch rates ranging from -4.1 ng cm -2 cycle -1 at 150 °C to -18.3 ng cm -2 cycle -1 at 250 °C from quartz crystal microbalance measurements, albeit hindered by residual acac impurities. The higher-temperature value is very close to our predicted maximum of -20.0 ± 0.8 ng cm -2 cycle -1 . An additional H 2 plasma pulse after the Sn(acac) 2 pulse has been reported to increase the etch rates from 0.36 to 1.96 Å/cycle in the case of aluminum nitride using the same precursors. <ref type="bibr" target="#b17">18</ref> This additional plasma pulse seems to remove the acac residual impurities on the surface after the ligand exchange pulse. Therefore, the etch rates of alumina can perhaps also be improved by similar means. Alternatively, when trimethylaluminum (TMA) is used for the ligand exchange pulse, the experimental etch rate varies from -4.2 ng cm -2 cycle -1 at 250 °C to -23.3 ng cm -2 cycle -1 at 325 °C. <ref type="bibr" target="#b18">19</ref> The upper value is slightly higher than the maximum rate that we predict. It appears therefore that the ligand exchange precursor also has an effect on the actual etch rate and temperature behavior.</p><p>We can speculate that the hydrogen-bonded network of HF molecules formed at high coverages can efficiently transport H atoms across the surface of alumina, which would affect flourination of the surface and thus influence the etch rate. We studied in detail the mechanism of hydrogen transport for the case of two adsorbed HF molecules, which indicated Grotthuss-like transport of a proton, <ref type="bibr" target="#b24">25</ref> i.e., the net migration of charge in a hydrogen-bonded liquid where individual protons switch positions but do not physically migrate.</p><p>Using geometry M A 2 in Figure <ref type="figure" target="#fig_7">7</ref> as the starting point, we studied two pathways leading to the formation and desorption of H 2 O molecules. We found that there are high energetic barriers ranging from +0.9 to +1.8 eV that inhibit the association of hydroxyl groups with adsorbed water. By contrast, the desorption energies of the thus-formed water molecules were found to range from +0.2 to +1.2 eV, which can be overcome under actual experimental conditions, leading to the formation of gaseous H 2 O as the etch byproduct. Any OH that persists on the surface at the end of the HF pulse, due to the high energetic barrier for H 2 O formation and desorption, is likely to lead to the competing growth reaction (i.e., ALD) in the ligand exchange pulse, which is undesirable.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSION</head><p>Theoretical insights into the HF pulse in the thermal ALE of monoclinic alumina were gained using DFT calculations. On the basis of the reaction energetics of the postulated reactions, qualitative evidence suggesting the self-limiting nature of the HF pulse was found. Following that, explicit slab calculations were conducted to study the adsorption of 1-26 HF molecules per cell on a monoclinic alumina surface. While a single HF molecule readily dissociated upon adsorbing to the alumina surface, a hydrogen-bonded network of mixed dissociated and intact HF molecules was observed at higher coverages. Evidence from surface binding energies and dissociated HF coverages indicated that the dissociative chemisorption of HF is self-limiting, as required for ALE, rather than etching away the oxide continuously. On the basis of a saturated surface model, a theoretical maximum etch rate was computed to be -0.57 ± 0.02 Å/cycle (-20.0 ± 0.8 ng cm -2 cycle -1 ), which amounted to the removal of 0.5 monolayer of material per cycle. Mechanisms for various surface chemical reactions such as hydrogen transport and formation of the etch byproduct H 2 O were studied, and their activation barriers were computed. Hydrogen transport was identified as a favorable event, whereas the formation and desorption of H 2 O molecules were hindered by substantial energetic barriers of at least 0.9 and 0.2 eV, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head><p>* S Supporting Information</p><p>The following files are available free of charge. The Supporting Information is available free of charge on the ACS Publications website at DOI: 10.1021/acs.chemmater.8b01930.</p><p>Convergence test results, density of states and band structure of bulk θ-alumina, equations of the computed properties, detailed (2̅ 0 1) surface geometries, description of the M Y X notation, Bader charge analysis of dissociated HF on the alumina surface, and desorption of AlF 3 and Al 2 F 6 (PDF)</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. (a) Schematic representation of an ideal ALE cycle. (b) Schematic representation of a proposed Al 2 O 3 ALE cycle.<ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16</ref> </figDesc><graphic coords="2,80.50,179.72,199.90,283.92" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. (a and a′) Equilibrium geometry of bulk θ-Al 2 O 3 along the a-c lattice plane in panel a along with the valence charge density as yellow spheres in panel a′. The Al atoms marked with labels (Al1-Al4) are found in tetrahedral coordination sites of the oxygen lattice, while those that are not marked are in octahedral coordination sites. The isosurface value is set to 0.2 e/Å 3 . (b and b′) Optimized geometry of the Al 2 O 3 (2̅ 0 1) surface slab in panel b along with the valence charge density in panel b′. The isosurface value is set to 0.25 e/Å 3 . It can be seen that the electrons are localized around the O atoms, which is an indication of predominantly ionic bonding between Al and O.</figDesc><graphic coords="3,60.49,354.05,239.98,179.49" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><figDesc>3Al 2 O 3(surf) + 18HF (g) → 6AlF 3(surf) + 9H 2 O (g) -3.60 -0.60 a The energy values are normalized per unit of Al 2 O 3 and per HF molecule for the purpose of comparison. The ΔE values within parentheses refer to the PBE0 hybrid functional. (b) refers to the bulk, (g) to the gas phase, and (surf) to the surface.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Chart showing the geometries and binding energies of identified minima with respect to one HF adsorption at the θ-Al 2 O 3 (2̅ 0 1) surface. Here, M 0 corresponds to the clean alumina surface. M A 1 and M B 1 denote molecularly and dissociatively adsorbed HF, respectively. M C 1 and M D 1 refer to the geometries in which the dissociated H atom hopped to an adjacent O atom in the same row and to an oxygen atom in the adjacent row, respectively. Activation energies where computed are shown in Figure 4.</figDesc><graphic coords="4,354.44,223.20,180.00,140.37" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Pictorial representation of the pathway between minima M B 1 and M D 1 that shows an aggregate of all H atom positions as the H atom hops from one surface O atom to another O atom in the adjacent row. (b) Similarly, for the pathway between minima M D 1 and M C 1 . Three images are chosen between the two minima and are optimized within the CI-NEB approach. (c) The graph shows the energy difference of the images with respect to M B 1 and the energy barriers with respect to panels a and b. Here, TS BD 1 and TS DC 1 represent the transition states connecting M B 1 -M D 1 and M D 1 -M C 1 , respectively.</figDesc><graphic coords="5,147.46,69.17,329.95,176.83" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Spontaneous dissociative adsorption of a HF molecule on the θ-Al 2 O 3 (2̅ 0 1) surface. Snapshots taken from geometry optimization run where geometry a is the chosen starting geometry with the HF molecule at least 3.0 Å from the surface. The HF molecule hydrogen bonds to a surface O atom in geometry b. The onset of the HF dissociation is given in geometry c. The completely dissociated HF forming -Al-F and -O-H species at the surface can be seen in geometry d. Final optimized geometry M B 1 is shown in geometry e. Panel f shows the total energy of the system relative to the starting geometry (a) for the optimization steps along with the changes in Al-F, H-F, and O-H bond distances.</figDesc><graphic coords="5,324.45,317.20,239.98,172.06" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Analysis of the charge density difference in geometry M B 1 . Here, the combined electronic charge density of the noninteracting systems [ρ(Al 2 O 3 ) and ρ(HF)] is subtracted from that of the interacting system [ρ(Al 2 O 3 + HF)] to give the density difference plot at the right. The isosurface value for ρ(Al 2 O 3 + HF), ρ(Al 2 O 3 ), and ρ(HF) is 0.1 e/Å 3 . The isosurface value for the difference plot at the right is 0.02 e/Å 3 .</figDesc><graphic coords="6,120.81,69.17,383.24,122.63" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Optimized geometries of 2-26 HF molecules adsorbed on the bare Al 2 O 3 (2̅ 0 1) surface. Here, M YX denotes a minimum with X HF molecules, and in case there are several minima, they are indexed with a label Y. In some cases, multiple minima are shown to convey the fact that very different stable configurations are possible. In most of the minimum geometries shown above, a mixed dissociative and molecular adsorption of HF molecules can be seen.</figDesc><graphic coords="6,162.48,243.21,299.96,375.82" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. (a) Scatter plot showing the coverage of total HF adsorbed vs the Al-F coverage in the minima shown in Figure 7. The data points are colored according to the corresponding total binding energy per square nanometer (color plot online). The square markers along the diagonal dashed line indicate geometries where the HF coverage is equal to the Al-F coverage. Panels b and c show the change in binding energy per square nanometer with an increase in HF and Al-F coverage, respectively.</figDesc><graphic coords="8,60.49,69.17,504.00,146.61" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 9 .</head><label>9</label><figDesc>Figure 9. (a-e) Snapshots representing the hydrogen transport mechanism observed in the optimization of two HF molecules adsorbed on the alumina surface to form M C 2 . (f) Complementary graph showing the trends of important interatomic distances and relative energy with respect to the initial geometry.</figDesc><graphic coords="8,60.49,277.23,239.98,171.33" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 10 .</head><label>10</label><figDesc>Figure 10. Pictorial representation of possible pathways in H 2 O formation and desorption. The horizontal dotted line connecting each minimum corresponds to the energy change relative to geometry G1, which is also M A 2 in Figure 7.</figDesc><graphic coords="8,324.45,332.33,239.98,217.42" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Lattice Parameters of Monoclinic θ-Al 2 O 3 Computed with the PBE XC Functional with and without Dispersion Correction (TS, Tkatchenko-Scheffler method<ref type="bibr" target="#b36">37</ref> ) Compared with Experimental Results35 , a    </figDesc><table><row><cell>lattice parameter</cell><cell>DFT (PBE)</cell><cell>DFT (PBE+TS)</cell><cell>experiment 35</cell></row><row><cell>a (Å)</cell><cell>11.94</cell><cell>11.85</cell><cell>11.85</cell></row><row><cell>b (Å)</cell><cell>2.94</cell><cell>2.92</cell><cell>2.90</cell></row><row><cell>c (Å)</cell><cell>5.67</cell><cell>5.63</cell><cell>5.62</cell></row><row><cell>α (deg)</cell><cell>90.00</cell><cell>90.00</cell><cell>90.00</cell></row><row><cell>β (deg)</cell><cell>103.99</cell><cell>104.01</cell><cell>103.83</cell></row><row><cell>γ (deg)</cell><cell>90.00</cell><cell>90.00</cell><cell>90.00</cell></row></table><note><p>a</p><p>A close agreement between the calculated and experimental values is observed, with a slight improvement due to inclusion of dispersion correction.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Reaction Energies (ΔE) of Postulated Reactions of the HF Pulse Compared for Two Scenarios, Bulk → Gas (continuous etching) and Surface → Surface (self-limiting) Reactions a</figDesc><table><row><cell>. The</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Adsorbate Coverages and Binding Energies for the Minimum Geometries M YX given in Figure7 a</figDesc><table><row><cell>E bind</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 4 .</head><label>4</label><figDesc>Activation Energies for the Barriers between Minima Involved in the H 2 O Formation Pathways Shown in Figure10 a</figDesc><table><row><cell>barrier</cell><cell>activation energy (eV)</cell><cell>ΔE (eV)</cell></row><row><cell>G1 → G2</cell><cell>0.92</cell><cell>-0.14</cell></row><row><cell>G2 → G1</cell><cell>1.06</cell><cell>0.14</cell></row><row><cell>G2 → G3</cell><cell>1.63</cell><cell>1.21</cell></row><row><cell>G3 → G2</cell><cell>0.19</cell><cell>-1.21</cell></row><row><cell>G2 → G4</cell><cell>1.79</cell><cell>1.44</cell></row><row><cell>G4 → G2</cell><cell>0.58</cell><cell>-1.44</cell></row><row><cell cols="3">a ΔE is the energy difference between the product (minimum) state</cell></row><row><cell cols="2">and reactant (minimum) state.</cell><cell></cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>DOI: 10.1021/acs.chemmater.8b01930 Chem. Mater. 2018, 30, 5912-5922</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notes</head><p>The authors declare no competing financial interest.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ACKNOWLEDGMENTS</head><p>The authors thank Lam Research Corp. for funding and acknowledge access to the Science Foundation Ireland-funded computing cluster at Tyndall.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Surface Chemistry of Atomic Layer Deposition: A Case Study for the Trimethylaluminum/Water Process</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Puurunen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">121301</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition: An Overview</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="111" to="113" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Atomic-Scale Simulation of ALD Chemistry</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Semicond. Sci. Technol</title>
+		<imprint>
+			<date type="published" when="2012">2012, 27, 074008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching: An Industry Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Plombon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Tronic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Turkot</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5005" to="N5009" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><surname>Loubet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Montanini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Yeung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kanakasabapathy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guillom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yamashita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Miao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<title level="m">Stacked Nanosheet Gate-All-Around Transistor to Enable Scaling Beyond FinFET. 2017 Symposia on VLSI Technology and Circuits</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="230" to="T231" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Plasma Etching: Yesterday, Today, and Tomorrow</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kornblit</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">50825</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">The Grand Challenges of Plasma Etching: A Manufacturing Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G N</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">273001</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching: What Can We Learn from Atomic Layer Deposition?</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Faraz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Roozeboom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C M</forename><surname>Knoops</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M M</forename><surname>Kessels</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5023" to="N5032" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Prospects for Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="4889" to="4894" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Selectivity in Thermal Atomic Layer Etching Using Sequential, Self Limiting Fluorination and Ligand-Exchange Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Huffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="7657" to="7665" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Predicting Synergy in Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kabansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ohba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nojiri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="05C" to="302" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Molecular-Dynamics Simulation of Atomic layer Etching of Silicon</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Athavale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Economou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="966" to="971" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Overview of Atomic Layer Etching in the Semiconductor Industry</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching at the Tipping Point: An Overview</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5041" to="N5053" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of Al2O3 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="2061" to="2070" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Mechanism of Thermal Al 2 O 3 Atomic Layer Etching Using Sequential Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="3648" to="3657" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching of HfO 2 Using Sequential, Self-Limiting Thermal Reactions with Sn(acac) 2 and HF</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5013" to="N5022" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Thermal Atomic Layer Etching of Crystalline Aluminum Nitride Using Sequential, Self-Limiting Hydrogen Fluoride and Sn(acac) 2 Reactions and Enhancement by H 2 and Ar Plasmas</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">R</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">50603</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Trimethylaluminum as the Metal Precursor for the Atomic Layer Etching of Al 2 O 3 Using Sequential, Self-Limiting Thermal Reactions</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2994" to="3003" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Enhanced Atomic Layer Etching of Native Aluminum Oxide for Ultraviolet Optical Applications</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hennessy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Balasubramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Jewell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>France</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nikzad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">41512</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Competition Between Al 2 O 3 Atomic Layer Etching and AlF 3 Atomic Layer Deposition Using Sequential Exposures of Trimethylaluminum and Hydrogen Fluoride</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Dumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">52819</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A Climbing Image Nudged Elastic Band Method for Finding Saddle Points and Minimum Energy Paths</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Uberuaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jonsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9901" to="9904" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Improved Tangent Estimate in the Nudged Elastic Band Method for Finding Minimum Energy Paths and Saddle Points</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jonsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9978" to="9985" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Hydrogen Fluoride Adsorption and Reaction on the Alpha-Al 2 O 3 (0001) Surface: A Density Functional Theory Study</title>
+		<author>
+			<persName><forename type="first">J.-L</forename><surname>Quan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B.-T</forename><surname>Teng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X.-D</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-F</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page">114701</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The Grotthuss Mechanism</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Agmon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="page">456</biblScope>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Efficient Iterative Schemes for Ab Initio Total-Energy Calculations Using a Plane-Wave Basis Set</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmuller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="page">11169</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Generalized Gradient Approximation Made Simple</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">3865</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Projector Augmented-Wave Method</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Blochl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="page">17953</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">From Ultrasoft Pseudopotentials to the Projector Augmented-Wave Method</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Joubert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="page">1758</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Simulating the Atomic Layer Deposition of Alumina from First Principles</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Greer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="3246" to="3250" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Chemically Stable Atomic-Layer-Deposited Al 2 O 3 Films for Processability</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Broas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kanninen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vuorinen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tilli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Paulasto-Krockel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS omega</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="3390" to="3398" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Structure and Bonding of Bulk and Surface Theta-Alumina from Periodic Hartree-Fock Calculations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borosy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Silvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Allavena</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Nortier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="13189" to="13194" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Atomic Scale Mechanism of the Transformation of Gamma-Alumina to Theta-Alumina</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Rashkeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Pantelides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sohlberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">235501</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">A Negative Surface Energy for Alumina</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Łodziana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">Y</forename><surname>Topsøe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Nørskov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Mater</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="289" to="293" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Structures and Transformation Mechanisms of the Eta, Gamma and Theta Transition Aluminas</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Snyder</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Crystallogr., Sect. B: Struct. Sci</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="617" to="630" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">A fast and Robust Algorithm for Bader Decomposition of Charge Density</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arnaldsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jonsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="354" to="360" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Accurate Molecular Van Der Waals Interactions from Ground-State Electron Density and Free-Atom Reference Data</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tkatchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scheffler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">73005</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
