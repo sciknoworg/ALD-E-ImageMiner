@@ -66,11 +66,11 @@ data
 
 | Category | Sub-category | PDFs | Figures | Formulas | Tables |
 | --- | --- | --- | --- | --- | --- |
-| atomic-layer-deposition | experimental-usecase | 66 | 552 | 102 | 76 |  796 |
-| atomic-layer-deposition | simulation-usecase | 58 | 579 | 413 | 131 | 1181 |
-| atomic-layer-etching | experimental-usecase | 47 | 461 | 116 | 28 |  652 |
-| atomic-layer-etching | simulation-usecase | 32 | 346 | 165 | 55 |  598 |
-| **Total** | - | **203** | **1938** | **796** | **290** |
+| atomic-layer-deposition | experimental-usecase | 66 | 552 | 102 | 76 |
+| atomic-layer-deposition | simulation-usecase | 58 | 579 | 413 | 131 |
+| atomic-layer-etching | experimental-usecase | 47 | 461 | 116 | 28 |
+| atomic-layer-etching | simulation-usecase | 34 | 400 | 226 | 60 |
+| **Total** | - | **205** | **1,992** | **857** | **295** |
 
 #### Figure type classification
 
