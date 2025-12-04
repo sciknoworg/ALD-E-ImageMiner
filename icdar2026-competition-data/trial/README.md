@@ -1,0 +1,3 @@
+# ICDAR 2026 Competition Data
+
+## Trial Data
