@@ -59,6 +59,10 @@ data
 - **[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)** → multimodal LLM applied for classification, extraction, and summarization. Specifically, we used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).  
   The [Prompts.md](Prompts.md) file documents the prompts used for information extraction (figure type, data, summary, and figure labels).  
 
+## Figure Taxonomy
+
+![A visualization of scientific figure taxonomy](figure_taxonomy.png)
+
 
 ### 📊 Dataset Statistics
 
@@ -71,6 +75,7 @@ data
 | atomic-layer-etching | experimental-usecase | 47 | 461 | 116 | 28 |
 | atomic-layer-etching | simulation-usecase | 34 | 400 | 226 | 60 |
 | **Total** | - | **205** | **1,992** | **857** | **295** |
+
 
 #### Figure type classification
 
