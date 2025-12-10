@@ -1,5 +1,3 @@
-# ICDAR 2026 Competition Data
-
 ## Trial Data
 
 The trial data consist of only one paper.
