@@ -16,39 +16,32 @@ The layout reflects the distinction between ALD and ALE literature, as well as b
 
 ```text
 data
-├── pilot-annotation-task
-│   ├── atomic-layer-deposition
-│   │   ├── experimental-usecase
-│   │   │   ├── paper #
-│   │   │   │   ├── images
-│   │   │   │   │   ├── figures
-│   │   │   │   │   │   ├── filename 1.jpg          # (JPEG) actual figure image extracted using MinerU
-│   │   │   │   │   │   ├── filename.caption.txt    # (Text) figure caption extracted from the paper.
-│   │   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
-│   │   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
-│   │   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
-│   │   │   │   │   ├── formulas
-│   │   │   │   │   │   ├── filename.jpg            # (JPEG) actual formula image extracted using MinerU
-│   │   │   │   │   └── tables
-│   │   │   │   │       ├── filename.jpg            # (JPEG) actual table image extracted using MinerU
-│   │   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
-│   │   │   │   ├── content.json                    # (JSON) structured content extracted using MinerU
-│   │   │   │   ├── content.md                      # (Markdown) structured content extracted using MinerU
-│   │   │   │   ├── content.tei.xml                 # (TEI-XML) structured content extracted using GROBID
-│   │   │   │   ├── content.txt                     # (Text) unstructured content extracted using MinerU
-│   │   │   │   └── layout.json                     # (JSON) bounding box and segmentation data from MinerU
-│   │   │   └── ...
-│   │   └── simulation-usecase
-│   │       └── ...
-│   └── atomic-layer-etching
+├── atomic-layer-deposition
+│   ├── experimental-usecase
+│   │   ├── paper #
+│   │   │   ├── images
+│   │   │   │   ├── figures
+│   │   │   │   ├── filename 1.jpg          # (JPEG) actual figure image extracted using MinerU
+│   │   │   │   │   ├── filename.caption.txt    # (Text) figure caption extracted from the paper.
+│   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
+│   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
+│   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
+│   │   │   │   ├── formulas
+│   │   │   │   │   ├── filename.jpg            # (JPEG) actual formula image extracted using MinerU
+│   │   │   │   └── tables
+│   │   │   │       ├── filename.jpg            # (JPEG) actual table image extracted using MinerU
+│   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
+│   │   │   ├── content.json                    # (JSON) structured content extracted using MinerU
+│   │   │   ├── content.md                      # (Markdown) structured content extracted using MinerU
+│   │   │   ├── content.tei.xml                 # (TEI-XML) structured content extracted using GROBID
+│   │   │   ├── content.txt                     # (Text) unstructured content extracted using MinerU
+│   │   │   └── layout.json                     # (JSON) bounding box and segmentation data from MinerU
+│   │   └── ...
+│   └── simulation-usecase
 │       └── ...
-└── full-annotation-task
-    ├── atomic-layer-deposition
-    │   ├── experimental-usecase
-    │   └── simulation-usecase
-    └── atomic-layer-etching
-        ├── experimental-usecase
-        └── simulation-usecase
+└── atomic-layer-etching
+    ├── experimental-usecase
+    └── simulation-usecase
 ```
 
 ## 🛠️ Tools Used
