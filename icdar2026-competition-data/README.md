@@ -7,12 +7,12 @@
 
 📄🔬📊🧪
 
-Welcome to the official GitHub repository for the ICDAR 2026 Competition on Information Extraction from ALD/E Scientific Figures (Sci-ImageMiner).
+Welcome to the official GitHub repository for the **ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching (ALD/E) Scientific Figures (Sci-ImageMiner)**.
 
 This repository provides data formats, datasets and instructions for using the dataset and preparing submissions.
 
 ### 🌍 Competition Website
-https://sites.google.com/view/sci-imageminer/home?authuser=0
+https://sites.google.com/view/sci-imageminer
 
 ### 💡 About
 
@@ -46,78 +46,17 @@ icdar2026-competition-data
 │   │   │   └── ...
 ```
 
-### 📝 Annotation Formats
-#### 1️⃣ Train / Dev (Val) / Trial Annotation Format
-
-The figure annotations are distributed and stored alongside each figure in the "images" folder for each paper.
-Following is the general hierarchy for the annotation JSON format:
-
-
-```text
-root
-├── figure_path: Relative path to the figure JPG
-├── file_name: Filename of the figure JPG
-├── figure_label: Figure label as mentioned in the paper
-├── figure_caption: Figure caption as mentioned in the paper
-├── class: Figure class label (alphabetically labeled for each sub-figure)
-├── datatable: Markdown data table (alphabetically labeled for each sub-figure)
-├── summary: Figure summary (alphabetically labeled for each sub-figure)
-├── q1_type: Either of 4 question types: Process-Oriented, Comparative/Trend, Structure-Property, Application/Performance (alphabetically labeled for each sub-figure)
-├── q1: Question text
-├── a1_type: Either of 4 answer types: Paragraph, Factoid, List, Yes/No
-├── a1: Answer text
-├── q2_type: Either of 4 question types: Process-Oriented, Comparative/Trend, Structure-Property, Application/Performance (alphabetically labeled for each sub-figure)
-├── q2: Question text
-├── a2_type: Either of 4 answer types: Paragraph, Factoid, List, Yes/No
-├── a2: Answer text
-├── q3_type: Either of 4 question types: Process-Oriented, Comparative/Trend, Structure-Property, Application/Performance (alphabetically labeled for each sub-figure)
-├── q3: Question text
-├── a3_type: Either of 4 answer types: Paragraph, Factoid, List, Yes/No
-├── a3: Answer text
-├── q4_type: Either of 4 question types: Process-Oriented, Comparative/Trend, Structure-Property, Application/Performance (alphabetically labeled for each sub-figure)
-├── q4: Question text
-├── a4_type: Either of 4 answer types: Paragraph, Factoid, List, Yes/No
-├── a4: Answer text
-└── boundingBoxes: bounding box coordinates to extract each sub-figure
-    └── [0]
-        ├── label: (alphabetically labeled for each sub-figure)
-        ├── x: x-coordinate
-        ├── y: y-coordinate
-        ├── width: width of sub-figure
-        └── height: height of sub-figure
-    ...
-```
-
-#### 2️⃣ Test Set Annotation Format
-
-```text
-root
-├── figure_path: Relative path to the figure JPG
-├── file_name: Filename of the figure JPG
-├── figure_label: Figure label as mentioned in the paper
-├── figure_caption: Figure caption as mentioned in the paper
-└── boundingBoxes: bounding box coordinates to extract each sub-figure
-    └── [0]
-        ├── label: (alphabetically labeled for each sub-figure)
-        ├── x: x-coordinate
-        ├── y: y-coordinate
-        ├── width: width of sub-figure
-        └── height: height of sub-figure
-    ...
-```
-
-
 ## 🗂️ Datasets
 
 The information for the ICDAR 2026 competition for each dataset split is following:
 
 1. [Trial Dataset](trial/)
 
-2. Training Dataset (Coming soon)
+2. [Training Dataset](train/)
 
-3. Development/validation Dataset (Coming soon)
+3. [Development/validation Dataset](dev/)
 
-4. Test Dataset (Coming soon)
+4. [Test Dataset](test/)
 
 ## 📧 Contact & Support
 
