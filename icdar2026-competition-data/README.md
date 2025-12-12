@@ -1,16 +1,18 @@
-# ICDAR 2026 Competition Data
+<div align="center">
+  <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="400"/>
+</div>
 
-The information for the ICDAR 2025 competition for each dataset split is following:
+# ICDAR 2026 Competition: Sci-ImageMiner
+## Information Extraction from ALD/E Scientific Figures
 
-1. [Trial Dataset](trial/)
+📄🔬📊🧪
 
-2. Training Dataset (Coming soon)
+Welcome to the official GitHub repository for the ICDAR 2026 Competition on Information Extraction from ALD/E Scientific Figures (Sci-ImageMiner).
 
-3. Development/validation Dataset (Coming soon)
+This repo provides data formats, datasets and instructions for using the dataset and preparing submissions.
 
-4. Test Dataset (Coming soon)
-
-
+### Competition Website
+https://sites.google.com/view/sci-imageminer/home?authuser=0
 
 ### 🗂️ Directory Structure
 
@@ -33,10 +35,12 @@ icdar2026-competition-data
 │   │   │   └── ...
 ```
 
-### 📝 Annotations
+### 📝 Annotation Formats
+#### 1️⃣ Train / Dev (Val) / Trial Annotation Format
 
-The figure annotations are distributed and stored alongside each figure in the "images" folder.
-Following is the general annotation as JSON format:
+The figure annotations are distributed and stored alongside each figure in the "images" folder for each paper.
+Following is the general hierarchy for the annotation JSON format:
+
 
 ```text
 root
@@ -73,4 +77,50 @@ root
         └── height: height of sub-figure
     ...
 ```
+
+#### 2️⃣ Test Set Annotation Format
+
+```text
+root
+├── 
+├── figure_path: Relative path to the figure JPG
+├── file_name: Filename of the figure JPG
+├── figure_label: Figure label as mentioned in the paper
+├── figure_caption: Figure caption as mentioned in the paper
+└── boundingBoxes: bounding box coordinates to extract each sub-figure
+    └── [0]
+        ├── label: (alphabetically labeled for each sub-figure)
+        ├── x: x-coordinate
+        ├── y: y-coordinate
+        ├── width: width of sub-figure
+        └── height: height of sub-figure
+    ...
+```
+
+
+## 🗂️ Datasets
+
+The information for the ICDAR 2026 competition for each dataset split is following:
+
+1. [Trial Dataset](trial/)
+
+2. Training Dataset (Coming soon)
+
+3. Development/validation Dataset (Coming soon)
+
+4. Test Dataset (Coming soon)
+
+## 📧 Contact & Support
+
+Email: sciknoworg [at] gmail.com
+
+**Discussions / issues:**
+Google Groups: https://groups.google.com/u/4/g/sci-imageminer/
+Email: sci-imageminer [at] googlegroups.com
+
+
+
+
+
+
 
