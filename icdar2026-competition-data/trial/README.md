@@ -1,6 +1,8 @@
 ## Trial Data
 
-The trial data consist of only one paper.
+A **trial dataset** is currently available to help participants familiarize themselves with the data format, annotation structure, and figure types used in the competition.
+
+The trial release includes: **one ALD/E research paper**, and its associated **annotated scientific figures**, with a focus on quantitative plots.
 
 ### 🗂️ Directory Structure
 
