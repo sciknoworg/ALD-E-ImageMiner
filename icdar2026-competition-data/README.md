@@ -9,7 +9,7 @@
 
 Welcome to the official GitHub repository for the ICDAR 2026 Competition on Information Extraction from ALD/E Scientific Figures (Sci-ImageMiner).
 
-This repo provides data formats, datasets and instructions for using the dataset and preparing submissions.
+This repository provides data formats, datasets and instructions for using the dataset and preparing submissions.
 
 ### 🌍 Competition Website
 https://sites.google.com/view/sci-imageminer/home?authuser=0
@@ -25,7 +25,7 @@ The Sci-ImageMiner competition defines four complementary tasks that evaluate mu
 
 Together, these tasks provide a comprehensive benchmark for visual scientific reasoning in a specialized domain. 
 
-### 🗂️ Directory Structure
+### 📂 Directory Structure
 
 In general, all the dataset splits follow the same directory structure as shown below:
 
