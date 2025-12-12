@@ -11,7 +11,7 @@ Welcome to the official GitHub repository for the ICDAR 2026 Competition on Info
 
 This repo provides data formats, datasets and instructions for using the dataset and preparing submissions.
 
-### Competition Website
+### 🌍 Competition Website
 https://sites.google.com/view/sci-imageminer/home?authuser=0
 
 ### 💡 About
@@ -55,7 +55,6 @@ Following is the general hierarchy for the annotation JSON format:
 
 ```text
 root
-├── 
 ├── figure_path: Relative path to the figure JPG
 ├── file_name: Filename of the figure JPG
 ├── figure_label: Figure label as mentioned in the paper
@@ -93,7 +92,6 @@ root
 
 ```text
 root
-├── 
 ├── figure_path: Relative path to the figure JPG
 ├── file_name: Filename of the figure JPG
 ├── figure_label: Figure label as mentioned in the paper

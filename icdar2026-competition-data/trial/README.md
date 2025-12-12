@@ -28,7 +28,6 @@ Following is the general annotation as JSON format:
 
 ```text
 root
-├── 
 ├── figure_path: Relative path to the figure JPG
 ├── file_name: Filename of the figure JPG
 ├── figure_label: Figure label as mentioned in the paper
