@@ -112,11 +112,11 @@ The information for the ICDAR 2026 competition for each dataset split is followi
 
 ## 📧 Contact & Support
 
-Email: sciknoworg [at] gmail.com
+**Email:** sciknoworg [at] gmail.com
 
-**Discussions / issues:**
-Google Groups: https://groups.google.com/u/4/g/sci-imageminer/
-Email: sci-imageminer [at] googlegroups.com
+#### Discussions / issues:
+**Google Groups:** https://groups.google.com/u/4/g/sci-imageminer/
+**Email:** sci-imageminer [at] googlegroups.com
 
 
 
