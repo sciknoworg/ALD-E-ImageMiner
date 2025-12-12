@@ -2,8 +2,8 @@
   <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="400"/>
 </div>
 
-# ICDAR 2026 Competition: Sci-ImageMiner
-## Information Extraction from ALD/E Scientific Figures
+# ICDAR 2026 Competition
+## Sci-ImageMiner - Information Extraction from Atomic Layer Deposition/Etching (ALD/E) Scientific Figures
 
 📄🔬📊🧪
 
