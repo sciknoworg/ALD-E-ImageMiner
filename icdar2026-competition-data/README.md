@@ -16,14 +16,14 @@ https://sites.google.com/view/sci-imageminer
 
 ### 💡 About
 
-The Sci-ImageMiner competition defines four complementary tasks that evaluate multimodal understanding of scientific figures in Atomic Layer Deposition and Etching (ALD/E) research.
+The **Sci-ImageMiner** competition defines four complementary tasks that evaluate multimodal understanding of scientific figures in Atomic Layer Deposition and Etching (ALD/E) research.
 
-- Task 1 - targets chart-type Classification
-- Task 2 - focuses on Data Table Extraction from plots
-- Task 3 - assesses Summarization of key scientific insights conveyed by figures.
-- Task 4 - introduces Visual Question Answering across four scientific reasoning categories, requiring systems to interpret complex visual and textual elements.
+- **Task 1** - targets chart-type **classification**
+- **Task 2** - focuses on **data table extraction** from plots
+- **Task 3** - assesses **summarization** of key scientific insights conveyed by figures.
+- **Task 4** - introduces **visual question-answering** across four scientific reasoning sub-tasks, requiring systems to interpret complex visual and textual elements.
 
-Together, these tasks provide a comprehensive benchmark for visual scientific reasoning in a specialized domain. 
+Together, these tasks provide a comprehensive benchmark for visual scientific reasoning in a highly specialized domain. 
 
 ### 📂 Directory Structure
 
