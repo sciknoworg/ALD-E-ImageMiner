@@ -1,14 +1,16 @@
-## Trial Data
+## Development/Validation Data
 
-A **trial dataset** is currently available to help participants familiarize themselves with the data format, annotation structure, and figure types used in the competition.
+The full competition dataset will be released **in batches according to the competition timeline**, including: training & development data, and a final blind test set.
 
-The trial release includes: **one ALD/E research paper**, and its associated **annotated scientific figures**, with a focus on quantitative plots.
+Each release will be announced via the Sci-ImageMiner [Google Group](https://groups.google.com/u/4/g/sci-imageminer/) and reflected on the [Important Dates page](https://sites.google.com/view/sci-imageminer/important-dates).
+
+For task definitions and evaluation details, please refer to the [Task Description](https://sites.google.com/view/sci-imageminer/task-description) and [Task Evaluation Metrics](https://sites.google.com/view/sci-imageminer/task-evaluation-metrics) pages.
 
 ### 🗂️ Directory Structure
 
 ```text
 icdar2026-competition-data
-├── trial
+├── dev
 │   ├── main-category
 │   │   ├── sub-category
 │   │   │   ├── paper #
