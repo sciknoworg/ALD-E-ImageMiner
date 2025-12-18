@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Density Functional Theory Study of Oxygen Adsorption on Polymer Surfaces for Atomic-Layer Etching: Implications for Semiconductor Device Fabrication</title>
+				<funder ref="#_CqcGnmG">
+					<orgName type="full">National Science Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Extreme Science and Engineering Discovery Environment</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2020-05-04">May 4, 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Roberto</forename><forename type="middle">C</forename><surname>Longo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Alok</forename><surname>Ranjan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Peter</forename><forename type="middle">L G</forename><surname>Ventzek</surname></persName>
+						</author>
+						<title level="a" type="main">Density Functional Theory Study of Oxygen Adsorption on Polymer Surfaces for Atomic-Layer Etching: Implications for Semiconductor Device Fabrication</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-05-04">May 4, 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0B2D8B9C174CDD448AE80BB8109520D1</idno>
+					<idno type="DOI">10.1021/acsanm.0c00618</idno>
+					<note type="submission">Received: March 3, 2020 Accepted: May 4, 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-12-17T15:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-11-gf6b522b3f</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>atomic-layer etching</term>
+					<term>density functional theory</term>
+					<term>polymer surfaces</term>
+					<term>organic masks</term>
+					<term>semiconductor devices</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Atomic-layer etching (ALE) is a technique that removes thin layers of material using sequential self-limiting reactions and is considered to be one of the most promising techniques for achieving the low-process variability necessary in the imminent atomic-scale era of semiconductor device fabrication. Here, a theoretical investigation of the ALE of organic polymer surfaces using oxygen pulses has been performed, by means of density functional theory calculations. Experimental evidence shows that ion bombardment of polymer surfaces results in carbon-abundant layers, which are formed as a competition between two opposite effects, the breaking of C-H and C-C bonds, which leads to either structural evolution or sputtering of the polymer surface. Cognizant of that, we develop appropriate polymer surface models, first, to investigate whether the adsorption of oxygen on organic surfaces can be rendered self-limiting, as required in ALE and, second, to establish the conditions for obtaining controlled, self-limiting etching of surface carbon atoms. Our results show that, indeed, for large oxygen flux densities, atomically controlled etching can be obtained in the form of desorption of different carbonate species. We quantify the etching process through both the oxygen flux density and the initial kinetic energy of the impacting oxygen atoms. On the basis of a saturated carbon surface model, the theoretical maximum etch rate was estimated to be 0.51 ± 0.05 Å/cycle (4.94 ± 0.1 ng/cm 2 •cycle), which matches the range of maximum experimental values.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>While Moore's law continues to drive the manufacturing of semiconductor devices to ever-smaller dimensions, atomicscale precision in device fabrication becomes key for the advance in shrinking of the device dimensions. Although it has been studied in the laboratory for more than 25 years, the concept of atomic-layer etching (ALE) has recently gained considerable attention for future technology patterning applications as an essential counterpart to atomic-layer deposition (ALD) and as an alternative to continuous etching because of its potential for unrivaled control over the vertical dimensions of subtractive etching, as well as minimal damage through a set of self-limiting reactions. <ref type="bibr" target="#b0">1</ref> Indeed, while ALD is already well established as a key part of semiconductor device manufacturing, <ref type="bibr" target="#b1">2</ref> it still has to be complemented with robust atomically controlled selective etching, in order to enable the fabrication of next-generation devices. <ref type="bibr" target="#b2">3</ref> Typically, etching of materials is performed using plasma, which is an energized gas containing ions and excited atoms in a process called "dryetching". <ref type="bibr" target="#b3">4</ref> Plasmas etch the material continuously until they are switched off, or masks are reached, thus making it a difficult-tocontrol process. Therefore, the need to achieve etch accuracy down to single atomic layers opens the door to the practical implementation of ALE.</p><p>In an ALE process, the substrate is sequentially exposed to self-limiting etch reactions that affect the material just one atomic layer at a time. So far, ALE has been reported in the literature in two major forms: as a reverse analogy of ALD and a flux-controlled quasi-ALE in which a plasma is present during the entire duration of the etch process but the chemical reactant species are introduced separately, with a purge between etch step. <ref type="bibr" target="#b4">5</ref> First, the surface is modified, mainly by halogens. Then, the first approach, known as "thermal" ALE, uses thermally activated reactions to remove the modified layer. In the second approach, high-energy ion bombardment is used to remove the modified layer. <ref type="bibr" target="#b5">6</ref> In order to keep it as self-limiting as possible, accurate control of the ion energies and process conditions is required. Although the energy required by thermal ALE is much lower than the ion-bombardment energy, the latter allows some advantages such as wider process temperature ranges, faster throughout, and compatibility with already-existing etch tools. <ref type="bibr" target="#b6">7</ref> However, a combination of plasma and thermal ALE is commonly used in some of the most important applications.</p><p>The work presented here focuses on a much less explored part of the ALE process. Organic masks are ubiquitous in semiconductor device manufacturing. Such organic films are used to pattern the underlying substrate, thus allowing subsequent selective etching or ALD of any other material of interest. <ref type="bibr" target="#b7">8</ref> A schematic view of both processes is shown in Figure <ref type="figure" target="#fig_0">1</ref>. Thus, organic film etching becomes crucial in subnanometer-scale patterning, requiring atomic-scale precision. However, the lack of computational reports has motivated a renewed interest in the fundamental interactions between plasma-etching species (namely, oxygen or argon atoms) and organic films. As described previously, such interactions should be rendered self-limiting in order to be useful in ALE.</p><p>Historically, the interaction of plasma-etching species with organic surfaces has been studied using mostly empirical or phenomenological models. <ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref> For instance, classical molecular dynamics (MD) simulations of Ar + bombardment of polystyrene (PS) surfaces revealed initially high sputter yields, which drastically dropped after the formation of heavily dehydrogenated layers. Such a result was confirmed by ionbeam and X-ray photoelectron spectroscopy (XPS) experiments. <ref type="bibr" target="#b8">9</ref> The carbon-abundant, dehydrogenated layers are formed as a competition between two opposite effects, the breaking of C-H bonds (which leads to dehydrogenation and subsequent cross-linking) and the breaking of C-C bonds (which leads to sputtering of polymer fragments). <ref type="bibr" target="#b9">10</ref> Our own first-principles-based density functional theory (DFT) simulations <ref type="bibr" target="#b11">12</ref> have shown that incoming oxygen atoms can easily abstract hydroxyl (OH) groups from polyethylene chains, ultimately resulting in chain scission and etching for larger oxygen fluxes. Experimentally, the gradual introduction of carbon-rich, densified surface layers has been linked to the formation of nanoscale roughening. <ref type="bibr" target="#b12">13</ref> Despite the previous and abundant literature, including other DFT studies such as oxygen adsorption on Al 2 O 3 for ALD or HF decomposition on Al 2 O 3 for ALE, <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b14">15</ref> the true nature of the interactions between plasma species and polymer organic films at the atomic scale is completely unknown. More specifically and because of its importance in practical etching processes for semiconductor device fabrication, here we address this issue by testing the role of oxygen atoms as the primary plasma species using DFT simulations and investigating the oxidation mechanisms, ultimately leading to etching of the polymer surface. We used fully hydrogenated and partially dehydrogenated PS as organic surface models because of its extensive prior use in both plasma-etching experiment and MD simulation publications. <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b12">13</ref> PS is also widely used as a passivating blocking layer in patterns for ALD of complex oxides such as BaTiO 3 . <ref type="bibr" target="#b7">8</ref> Although reactive plasmas contain many different species, such as energetic ions or excited atoms, in this work we focus only on atomic and molecular oxygen, given that a proper description of excited-state species would require the use of computationally more demanding first-principles methods beyond standard DFT.</p><p>The main goal of this work is to identify the newly formed surface species as well as the necessary conditions for selflimiting oxygen adsorption and surface etching. On that basis, an etched surface model is developed, and maximum etch rates as a function of the incoming oxygen kinetic energy will be deduced. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ACS Applied Nano Materials</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">METHODS AND COMPUTATIONAL DETAILS</head><p>Calculations of the optimized geometries, relative energies, and orbital occupancies were performed using DFT within the generalized gradient approximation (GGA), as implemented in QUANTUM ESPRESSO. <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> The electron-ion interaction was described by means of ultrasoft pseudopotentials, 18 and the electronic wave functions were expanded into plane waves up to a kinetic energy of 450 eV. In order to model real PS surfaces, a ribbon was detached from the PS polymer structure, thus creating a surface model composed of 48 carbon atoms and 49 hydrogen atoms (Figure <ref type="figure" target="#fig_1">2</ref>), for a supercell size of 18 × 14 × 45 Å 3 . One of the carbon atoms from the PS ribbon corner was kept fixed during the simulations, in order to maintain to a certain extent the structural integrity, and periodic boundary conditions were used in the in-plane directions. Also, a vacuum region of approximately 30 Å was included in the supercell, large enough to avoid interactions between the system and its replica images. Then, subsequent fluxes of impinging molecular oxygen and oxygen atoms were included in the calculations, in some cases with specific initial kinetic energies, as described in the Results and Discussion. All of the atoms and degrees of freedom (except the aforementioned carbon corner atom) were allowed to relax using a conjugate gradient procedure until the forces on the atoms were below 1 meV/Å. The Brillouin zone integration was performed using a 2 × 2 × 1 mesh within the Monkhorst-Pack scheme, <ref type="bibr" target="#b17">19</ref> and the Perdew-Burke-Ernzerhof (PBE) functional was used to describe the electron exchange and correlation energies within the GGA. <ref type="bibr" target="#b18">20</ref> In addition to PBE, Grimme's empirical dispersion correction with DFT-D3 parametrization was used to account for weak van der Waals molecular interactions, <ref type="bibr" target="#b19">21,</ref><ref type="bibr" target="#b20">22</ref> because such a combination of functionals is well-known to produce excellent results in the description of organic molecular structures and dynamic interaction mechanisms. <ref type="bibr" target="#b21">23</ref> Ab initio molecular dynamics (AIMD) simulations were also performed using the same energy grid cutoff as that for the relaxation, ground-state calculations. Using a sample time of 1 fs, simulations of up to 5 ps (including equilibration and production runs) were performed within the canonical NVT ensemble using the velocity Verlet algorithm at 300 K (or higher temperatures when explicitly stated) with the Nose-Hoover thermostat. The eigenmodes and vibrational frequencies of the IR spectra were calculated using the force-constant approach, diagonalizing the mass-weighted secondderivative matrix (Hessian) in the case of adsorbed species and the surrounding benzene ring or polymer backbone. <ref type="bibr" target="#b22">24</ref> This restriction is legitimate because the eigenmodes of such regions do not overlap with those of the noninteracting, bulklike polymer. Also, kinetic barriers were calculated for some selected desorption processes, using the climbing-image nudge elastic band (CI-NEB) method. <ref type="bibr">[25]</ref><ref type="bibr" target="#b23">[26]</ref><ref type="bibr" target="#b24">[27]</ref> The CI-NEB uses a string of geometric configurations to describe the corresponding desorption process, with a string interaction between every configuration to ensure continuity of the reaction pathway.</p><p>Finally, free adsorption energies are typically obtained using the following equation:</p><formula xml:id="formula_0">G n E E n ( ) (O @PS) (PS) (O) n μ Δ = - -<label>(1)</label></formula><p>where μ(O) represents the chemical potential of the oxygen atoms.</p><p>Given that the specific energy of atomic oxygen is pseudopotentialdependent, the use of molecular oxygen as the initial reference state is the most logical choice. Then, we define the chemical potential of oxygen as</p><formula xml:id="formula_1">E T S (O) 1 2 (O ) 2 μ = -Δ<label>(2)</label></formula><p>Here we assume T = 300 K. Variation of the oxygen entropy with the temperature can be obtained from the data in the JANAF thermochemical tables. <ref type="bibr" target="#b25">28</ref> Also, a correction term for the O 2 binding energy must be included in the calculation of the formation free energies because of DFT overestimation of the oxygen binding energy. <ref type="bibr" target="#b26">29</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">RESULTS AND DISCUSSION</head><p>Oxygen Adsorption on Fully Hydrogenated PS. Our recent XPS measurements of oxygen adsorption on PS polymer surfaces have shown the rapid formation of C-O structures, as well as their quick saturation. <ref type="bibr" target="#b11">12</ref> More specifically, the following surface species were identified, in increasing order of energy: graphitic carbon (C-C), phenolic, alcohol, or ether groups (C-O), carbonyl or quinone groups (CO), carboxyl or ester groups (OCO), carbonate groups (O COO), and finally benzene-ring-related groups (π-π* shakeup peak). Perhaps the most important feature noted is that there is no need for previously formed dangling bonds to achieve fast oxidation of the PS surface. With that consideration in mind, we began calculations by obtaining the adsorption energies of both molecular and atomic oxygen on the fully hydrogenated PS surface. The reactivity of the O 2 molecule on PS is much lower than that of atomic oxygen, as is already well-known. According to our calculations, only O 2 physisorption or weak direct bonding with one of the carbon atoms of a benzene ring is possible, with adsorption energies ranging from -0.29 to -0.40 eV per O 2 molecule, obtained using the gas phase as the reference state. Given the large entropy of molecular oxygen, at room temperature, O 2 adsorption would not even be possible, and O 2 molecules would just float over the PS surface. Therefore, in this subsection, we will focus our interest on just the interaction of atomic oxygen with the PS surface.</p><p>As can be seen in Figure <ref type="figure" target="#fig_1">2</ref>, the PS surface is primarily composed of two different, alternating molecular arrangements: (i) C 6 H 6 benzene rings and (ii) C 3 H 3 polyethylenetype strands, which form the main body of PS, also known as the backbone. The reactivity of the benzene rings is substantially larger than that of the backbone, not only because of its chemical nature but also because of the structural arrangement of the PS surface. Indeed, Figure <ref type="figure" target="#fig_1">2</ref> shows that, after relaxation, some of the C 6 H 6 rings are tilted over the PS backbone, with a maximum slope of 70°, therefore practically concealing most of the backbone surface sites to any incoming oxygen atom. The bottom line is that any adsorbing species will likely react first with the benzene rings because of their chemical nature and the morphology of the PS surface. For that reason, here we have adopted a slightly different strategy. Rather than calculating the oxygen adsorption energies on the different surface sites, which are in practice only three (over the C-H bond of the backbone, the C-H bond of one of the C 6 H 6 rings, or direct bonding to one of the carbon atoms of a benzene ring), in order to develop a complete picture of oxidation of the PS surface, we obtained an oxygen adsorption profile by gradually increasing the number of oxygen atoms over the PS surface and calculating the corresponding free adsorption energies. Oxygen atoms are then successively adsorbed on the thermodynamically preferred surface sites until saturation is achieved. As described above, the interaction of plasma species with organic surfaces should be rendered self-limiting, in order to be used in practical ALE processes.</p><p>After having made the necessary preliminary considerations, in the first part of this section, we evaluate the energetics of oxygen adsorption on the PS surface in order to obtain a qualitative idea of the nature of the oxygen plasma pulse interactions with PS, whether it etches or self-limits. Following that, the oxide formation mechanisms, as well as the vibrational spectra characteristics and electronic signature of the different adsorbed species, are reported. As communicated before, we introduced multiple oxygen atoms on the bare PS surface with coverages ranging from 0.03 to 0.66 oxygen/carbon atom (corresponding to 20 incoming oxygen atoms per 30 uncovered surface carbon atoms, or from 0.62 to 12.42 oxygen/nm 2 ). Each surface carbon atom is passivated by a hydrogen atom that can potentially help with adsorption of the impinging oxygen readily. However, depending on the oxygen coverage, there is also a possibility that not all of the oxygen atoms end up forming adsorbed species, provided they adsorb in a certain fashion and there is an etch reaction product thermodynamically accessible. Therefore, in order to minimize possible initial etching, thus maximizing oxygen adsorption, we introduced the atoms in such a way that the oxygen atoms are as far as possible from each other (for low coverages) or uniformly distributed over the PS surface (for high coverages) and then optimized the resulting geometries. A mixture of newly formed surface species and etched reaction products is observed in the optimized configurations, as shown in Figure <ref type="figure" target="#fig_2">3</ref>. The picture shows graphically the sequence of oxygen adsorption on PS and the different reaction products formed. A list of these minima, along with the oxygen coverage, corresponding free adsorption energies, and reaction products formed at the PS surface, is given in Table <ref type="table" target="#tab_0">1</ref>, whereas Figure <ref type="figure" target="#fig_0">S1</ref> shows the complete set of reaction products for each oxygen concentration. We must emphasize again that all of the surface species obtained correspond to kinetically barrierless, spontaneous thermodynamic oxygen adsorption reactions.</p><p>In view of the results displayed in Figure <ref type="figure" target="#fig_2">3</ref>, oxidation of the PS surface can be described as follows. First, the incoming oxygen atom exchanges its position with one of the hydrogen atoms of a benzene ring, creating a hydroxyl group. Those are the most reactive PS surface sites and show the most binding per oxygen atom obtained. Overall, it might appear that continuous oxygen adsorption would lead to lower binding energies until saturation is achieved, but this trend is not supported by our results. Indeed, a mixture of adsorbed surface species and detached molecular oxides seems to be more favorable than the continuous formation of hydroxyl groups, nonetheless showing a slight increase in the free adsorption energies until the oxygen saturation limit. Such an increase is not monotonous because it greatly depends on the specific surface species formed, as will be shown below. Second, a C-O-C bridge bond is formed on the side of other benzene ring, as shown in Figure <ref type="figure" target="#fig_2">3</ref>. Such a bond can be ascribed to the formation of a phenolic or alcohol group, the bonding strength of which is substantially weaker than that of hydroxyl groups. This can be easily noticed in the scatter plot of the free formation energies versus oxygen coverage shown in Figure <ref type="figure" target="#fig_3">4</ref>.</p><p>It is evident from the figure that oxygen binding to the PS surface does not become stronger as the surface is exposed to more oxygen, although some leveling off is obvious at larger coverages. The ultimate reason can be understood as a balance between surface deformation, which at some steps entails the detachment of oxide species and the progressive increase in the number of adsorbed oxygen atoms. Third, if the oxygen flux is doubled (see configuration O 4 in Figure <ref type="figure" target="#fig_2">3</ref>), hydroxyl and carbonyl (CO) formation in the PS backbone can be observed. Such a configuration is thermodynamically preferred over the formation of two hydroxyl groups in neighboring backbone carbon atoms because of the overall charge balance in the carbon chain that connects two benzene rings.</p><p>There is a major change when five oxygen atoms are adsorbed on the PS surface. The proximity of the incoming atoms leads to the formation of two H 2 O molecules. The formation mechanism is a relatively simple collective process. Indeed, oxygen atoms can abstract hydrogen atoms from the PS backbone and one of the neighboring benzene rings, In the last column, only the new reactions per oxygen adsorption step are given, with each step including all of the previous reactions listed. For a complete sequence, see the Supporting Information. whereas a carbonyl group is formed by another incoming oxygen atom in the newly created benzene dangling bond. The PS backbone results then in a hydrogen-poor chain structure, but that is energetically balanced by the large formation energy of the H 2 O molecules. Therefore, as the oxygen coverage increases, we can expect more formation of a hydrogen-bonded H 2 O network. Indeed, Figure <ref type="figure" target="#fig_3">4</ref> and Table <ref type="table" target="#tab_0">1</ref> show that the first observed H 2 O formation (O 5 adsorption) entails a larger binding energy per oxygen atom than that of the neighboring adsorption steps (O 4 and O 6 ). The following steps of oxygen adsorption consist of the formation of alcohol groups on the benzene rings (C-O) and hydroxyl bonds on the PS backbone. Therefore, we can state that the first stage of PS oxidation (O 1 -O 9 ) is composed of a mixture of surface species of different reactivities and bond strengths (hydroxyl groups on the benzene rings and backbone and alcohol groups on the benzene rings) in equilibrium with a hydrogen-bonded H 2 O network. During this stage, there is no convergence in the values of the free adsorption energies (Figure <ref type="figure" target="#fig_3">4</ref>), which slightly increase after the highly reactive first step hydroxyl formation. The second stage of oxidation (O 10 -O 14 ) is primarily characterized by the formation and desorption of oxide species. Indeed, with increasing oxygen coverage, two of the incoming oxygen atoms can bond to form an O 2 molecule (see configuration O 12 in Figure <ref type="figure" target="#fig_2">3</ref>). Also, besides single O 2 formation, oxygen can abstract a hydrogen atom from a neighboring carbon atom to form HO 2 * species (see configuration O 11 in Figure <ref type="figure" target="#fig_2">3</ref>). This radical, known as hydroperoxyl, is formed from the reaction between H 2 O and O 2 , producing OH -and HO 2 *. However, the reactants are thermodynamically more favorable; thus, H 2 O and O 2 are mostly obtained as oxidation products of the PS surface. The detailed mechanisms of oxide formation and desorption are explained below. Also, during this stage, carbonyl bonds (C O) are formed in the benzene rings. Although their signal on the XPS spectra is energetically stronger, <ref type="bibr" target="#b11">12</ref> such surface bonds are not as thermodynamically stable as the alcohol groups, which actually consist of oxygen bridge bonds of the form C-O-C; thus, carbonyls always tend to form weak van der Waals bonds with the H 2 O network. In other words, the number of carbonyl bonds is then limited by the number of H 2 O molecules formed. Finally, a carboxyl group (COOH) is observed on other benzene ring, formed when two impacting oxygen atoms combine to abstract a hydrogen atom, which can also be seen as a nondesorbed hydroperoxyl group. The last stage of oxidation of the PS surface (O 15 -O 20 ) corresponds to the saturating coverage. The increase in the free adsorption energy resulting from the larger oxygen flux is, to a great extent, balanced off by the structural distortion undergone by the PS surface, which ultimately leads to its breakage. At this point, we must recall that ALE relies on the self-limiting character of the process as well as on the controlled nature of the detachment of the different surface constituents.</p><p>A few mechanisms are observed to lead to structural distortion of the PS surface: (i) Two carbonyl (CO) bonds are formed in the same benzene ring (see configuration O 14 in Figures <ref type="figure" target="#fig_2">3</ref> and <ref type="figure" target="#fig_0">S1</ref>). As described earlier, this is an energetically strong bonding, and its formation on two neighboring carbon atoms leads to rupture of the benzene-ring-shaped structure. (ii) An alcohol bridge bond (C-OH-C) is formed between a benzene ring and the PS backbone. This morphology change gradually transforms the PS surface into a hexagonal, graphenelike structure. Finally, some minority oxide species such as ozone are also observed, which agrees well with our previous work that showed that O 3 is present as plasma discharge species but in a very low concentration. <ref type="bibr" target="#b11">12</ref> Overall, Figure <ref type="figure" target="#fig_3">4</ref> and Table <ref type="table" target="#tab_0">1</ref> show that oxygen binding to the PS surface does not strengthen as the surface is exposed to more oxygen atoms and that, in the third and last oxidation stages, oxygen saturation leads to a convergence of the values of the free adsorption energies. This saturation limit corresponds to a C-O ratio of ∼0.7 or, equivalently, to -0.56 eV/nm 2 . Although the PS surface keeps, to a certain extent, its structural integrity (with the exceptions noted above), it does not absorb more oxygen atoms. Therefore, we can conclude by saying that oxygen adsorption on fully hydrogen passivated PS layers is a selflimiting and controlled process. Although spontaneous etching was not observed, the modified polymer layer could be successively etched in a second plasma pulse step, for instance, with Ar + bombardment.</p><p>Oxide Formation and Desorption. In the postulated reactions discussed in the previous subsection, we showed the spontaneous formation and release of volatile oxide species, mostly H 2 O, during the oxygen pulse. Therefore, we can assert that there is no kinetic barrier involved in the formation of such oxide species, provided the oxygen flux is dense enough, as shown above. Although other closed-shell species such as alcohol, carbonyl, carboxyl, or carbonate groups are formed on the surface of the PS layer, they do not spontaneously desorb. Moreover, our calculations show that the kinetic desorption barriers for those four molecules are relatively large (more than 2.5 eV) and therefore were not included as reaction products. Figures <ref type="figure" target="#fig_4">5</ref> and <ref type="figure" target="#fig_1">S2</ref> show the different pathways leading to the formation of each oxide byproduct, using the relaxed PS surface and the corresponding incoming oxygen flux as the starting points. The other desorbed oxygen species (molecular oxygen and ozone) are formed just as a consequence of atomic oxygen interactions at high-density fluxes and do not represent valid examples of interaction with the PS surface first and subsequent desorption of the thus-formed reaction product. Therefore, here we focus our attention on the main oxide reaction byproduct, H 2 O, and also briefly on formation of the hydroperoxyl radical HO 2 *. In the H 2 O formation process, the first step is simply physisorption of the incoming oxygen atom on the nearest species that it encounters, that is, a hydrogen atom of one of the benzene rings (Figure <ref type="figure" target="#fig_4">5</ref>). As communicated before, all of these reaction steps correspond to kinetically barrierless, exoergic processes. Both Figures <ref type="figure" target="#fig_4">5</ref> and <ref type="figure" target="#fig_1">S2</ref> depict the relative energy along the optimization steps, from which the energy of the previous oxygen adsorption process has been subtracted (that is, O 5 -O 4 in Figure <ref type="figure" target="#fig_4">5</ref> and O 11 -O 10 in Figure <ref type="figure" target="#fig_1">S2</ref>), in an attempt to "isolate" the trend of the process of interest, here oxide formation and desorption. Obviously, there are always collective, adjacent reactions that may lead to an overestimation of those relative energies, but at least the figures represent an accurate picture of the energy pathways of H 2 O and HO 2 * formation and desorption. From the initial physisorption, the second step of H 2 O formation is the transfer of a hydrogen atom from the PS surface backbone to the oxygen atom, therefore creating an OH -ion. This step leads to region c, as shown in Figure <ref type="figure" target="#fig_4">5</ref>, lowering the energy by approximately 1.2 eV. Two important remarks need to be highlighted. First, hydrogen atoms of the PS backbone are more weakly bound to the carbon atoms than those of the benzene rings, as discussed previously (although they show larger reactivity, the benzene rings are thermodynamically more stable than the polyethylene chains); second, the hydrogen bond formed between the OH -ion and the neighboring benzene ring is the key that prevents the formation of a surface OH passivating bond on the PS backbone, as can be seen in Figure <ref type="figure" target="#fig_4">5</ref>. From this point, there are two different pathways for H 2 O formation. The first way is when the OH -ion abstracts the hydrogen atom from the benzene ring it is bound to, thus forming H 2 O. This step must cross a moderate kinetic energy barrier of 0.8 eV, according to our calculations, although it would still be possible at standard ALE conditions of temperature and pressure. However, there is a second pathway, thermodynamically more favorable in the sense that it does not entail the crossing of any energetic barrier. As can be noted in regions c and d of Figure <ref type="figure" target="#fig_4">5</ref>, it consists of two different steps and is a collective process involving an OH-passivated neighboring benzene ring. Indeed, first the OH -ion breaks the previously formed hydrogen bond to create another link with the OH termination of the benzene ring tilted over the previous structure, as detailed in Figure <ref type="figure" target="#fig_4">5</ref>. Finally, the larger reactivity of the OH -ion leads to extraction of the hydrogen atom from the passivating OH, resulting in H 2 O formation and leaving a bare C-O bond (or alcohol group) on the benzene ring. The last step (region d) lowers the energy by 0.6 eV, resulting in an overall kinetically barrierless, exoergic process. There are other different pathways for H 2 O formation, such as the direct extraction of two hydrogen atoms from the PS backbone and/or benzene rings to form the H 2 O molecule directly, but they are more unlikely. The reason is the covalent character of the C-H bond compared to the high degree of ionicity of the passivating OH, which makes hydrogen extraction by the OH -ion a spontaneous, barrierless process, as shown before. In order to make this possible, the formation of passivating OH groups on the benzene rings must have a larger rate than that of H 2 O formation, which is supported by our calculations, which show rapid formation of passivating hydroxyl structures on the outer benzene rings of the PS surface. On the contrary, if H 2 O molecules are not formed and OH ions persist on the PS surface (either the benzene rings or the backbone), this is likely to lead to the adsorption of whichever precursor is used in the first step of the ALE cycle because of the high reactivity of the hydroxyl groups. Overall, H 2 O formation leads to dehydrogenation of the PS surface. Given that the large formation energy of H 2 O molecules largely compensates for the weakened structural stability of the PS surface, we can conclude by saying that H 2 O formation and desorption accelerates etching without the need to resort to thermodynamic reactions that must overcome high energy barriers.</p><p>Although the formation of HO 2 * hydroperoxyl radicals is less likely and given the endoergic character of their formation reaction, Figure <ref type="figure" target="#fig_1">S2</ref> shows the corresponding reaction steps. In general, the process is relatively similar to H 2 O formation, but once a hydrogen atom has been desorbed from the PS backbone to form the OH -ion, the proximity of another incoming oxygen atom leads to formation of the hydroperoxyl group. Therefore, a denser oxygen flux is a necessary but not sufficient condition for HO 2 * formation. The other requirement is the presence of a neighboring hydroxyl group passivating a benzene ring. Indeed, as can be seen in regions c and d of Figure <ref type="figure" target="#fig_1">S2</ref>, the last two steps correspond to the formation of a weak hydrogen bond between the hydrogen atom of the hydroperoxyl group and the oxygen atom of the hydroxyl group passivating a neighboring benzene ring. This bond is highly directional, and its formation results in a smooth decay of the relative energy curve, although insufficient to turn the process into an exoergic reaction. The HO 2 * group is not as reactive as the OH -ion because of the strong covalent bond between the oxygen atoms. Thus, abstracting the hydrogen atom from the neighboring OH to form H 2 O 2 would be necessary to cross an energy barrier (1.2 eV, according to our calculations). Moreover, our calculations show that the resulting reaction will also not be an exoergic process, with a slighlty positive reaction energy (0.6 eV).</p><p>Finally, we must remark that the oxide formation processes described here correspond to incoming oxygen fluxes over a fully hydrogen-passivated PS surface. More complex oxides and etching mechanisms can exist on partially depassivated surfaces, which will be analyzed in detail later in this work.</p><p>IR Spectra and Electronic Charge-Transfer Signature. We have shown in the previous subsections structural evolution of the PS surface upon oxygen adsorption. Here we report an extensive study of the vibrational properties of the PS surface following oxidation. Taking one of the most stable structures shown in Figure <ref type="figure" target="#fig_2">3</ref> as a representative example, namely, O 7 , we obtained the IR spectra of all of the phonon modes, including oxygen atoms. Molecules and surfaces absorb photons when the energy of those photons matches the difference between two vibrational states. Most vibrational states show a tight separation between each other, on the order of a few millielectronvolts, which mainly corresponds to the IR wavelength. This holds especially for hydrogen-terminated structures. Therefore, IR spectra recorded as a function of the temperature is a valuable tool to examine the behavior, structure, and evolution of hydrogen-containing molecules and surfaces. The amount of literature devoted to analysis of the IR spectra, both experimental and theoretical, is immeasurable. See as an example some of our previous works and all of the references cited therein. <ref type="bibr" target="#b27">[30]</ref><ref type="bibr" target="#b28">[31]</ref><ref type="bibr" target="#b29">[32]</ref> For a specific bond to be IRactive, the vibration of such a bond must alter the permanent dipole or surrounding charge distribution in order to display a nonzero absorbance. Also, different bond strengths or, equivalently, differences in the slope of the intramolecular potential considerably modify the separation between vibrational levels. Thus, the frequencies of double bonds should be higher than those of single bonds and so on. The IR spectra and corresponding vibrational frequencies of the different graphitic, alcohol, carbonyl, carboxyl or carbonate groups obtained in this work following oxygen adsorption on the PS surface are well documented. <ref type="bibr" target="#b30">33</ref> Although the atomic environments cannot be directly extrapolated, such reported frequencies can still be used as a support of the trends obtained in our calculations.</p><p>Our main results are summarized in Table <ref type="table" target="#tab_0">S1</ref>. Vibrational frequencies obtained at 500 K are shown along with those obtained at room temperature. To do that, AIMD was performed on the O 7 structure at 500 K for 1 ps, followed by a single self-consistent relaxation step, in order to obtain the second-derivative Hessian matrix. The table also shows the intensities of the modes obtained at room temperature. Typically, the intensity associated with a specific vibrational mode is obtained as</p><formula xml:id="formula_2">I Z u ( ) ( ) I I I IR 2 ∑ ∑ ν ν = | * | α β αβ β (3)</formula><p>which is the square of the dipole induced by the phonon that is excited by IR radiation, which is obtained as the product of the effective charges (Z*) and the corresponding eigenvector (u) of the Hessian matrix. Given the highly oxidizing character of the adsorbed oxygen atoms, in this work, we approach the effective charges by the corresponding ionic ones. The last column of the table displays charge variation of the carbon and oxygen atoms involved in each vibrational mode. Finally, Figure <ref type="figure" target="#fig_2">S3</ref> shows the charge-density difference associated with every new bond formed by the adsorbed oxygen atoms, obtained by subtracting the charge density of the pristine PS surface from that of the PS surface after oxygen adsorption. Low-frequency modes were not included in Table <ref type="table" target="#tab_0">S1</ref> because most of them represent collective vibrations of the carbon atoms of the benzene rings or the PS backbone and, hence, they are not representative if one intends to characterize the bonding features of the adsorbed oxygen atoms. Longitudinal optical-transverse optical splitting is also observed at such low frequencies because, although the PS surface is obviously not polar, oxygen adsorption introduces electrons in previously empty gap states, thus conferring the overall system an ionic, p-like character. The first relevant mode obtained in our calculations is OH-C-H stretching in a benzene ring, at ν = 984 cm -1 , although this is a low-intensity mode. More intense scissoring deformation bands are observed at ν = 1002 and 1042 cm -1 , corresponding to the vibration of two C-H pairs of benzene rings with double bonds formed with an adsorbed oxygen atom. Medium-intensity, out-of-plane vibrational modes (twisting and wagging) are observed between ν = 1081 and 1215 cm -1 . This last mode displays relatively high intensity and corresponds to the OH-C-H twisting vibration on the PS backbone. Then, several scissoring and rocking vibrational modes are observed between ν = 1274 and 1344 cm -1 . Such modes correspond to both OH vibrations on the benzene ring and backbone and, on the other hand, to C-O double bonds formed on the benzene rings. Especially noticeable are the strong adsorption bands obtained at ν = 1274 and 1286 cm -1 , which correspond to the OH-C-H scissoring vibration on the PS backbone and a benzene ring, respectively. Finally, weak C-H stretching modes appear at high frequencies (between ν = 2860 and 3076 cm -1 ) to conclude the spectral features with strong O-H stretching bands at ν = 3719 and 3728 cm -1 .</p><p>After the temperature is increased to 500 K, most of the adsorption bands are blue-shifted, including the high-intensity OH-C-H stretching modes. A clear exception is given by the high-frequency stretching vibrations, which are red-shifted up to 200 cm -1 (see the O-H stretching mode in Table <ref type="table" target="#tab_0">S1</ref>). The O-H stretching modes with the highest frequencies correspond to the OH hydroxyl groups adsorbed on a benzene ring and the PS backbone, respectively. Upon annealing at high temperature, the hydrogen bonds are slightly stretched, ∼2%, and therefore weakened, resulting in lower frequency adsorption bands. The IR spectra reported in Table <ref type="table" target="#tab_0">S1</ref> reproduce reliably the main features observed experimentally for similar systems. <ref type="bibr" target="#b30">33</ref> For instance, strong O-H stretching modes are typically observed at frequencies between 3500 and 3700 cm -1 , in excellent agreement with our results. Mediumweak aromatic C-H stretching modes show adsorption bands at 3000-3100 cm -1 , which also match the computational spectra reported in Table <ref type="table" target="#tab_0">S1</ref>. Stronger bonds such as carbonyl stretching adsorption bands are commonly reported at 1600 cm -1 , whereas our results slightly underestimate the corresponding vibrational mode, obtained at 1502 cm -1 . Despite such small discrepancies, mostly attributed to the DFT exchange-correlation potentials and the precision of the obtained Hessian matrix, computationally obtained IR spectra can be said to represent a valuable tool to infer the bonding characteristics of oxygen-adsorbed polymer surfaces, which in real experiments can exhibit extraordinarily complex features.</p><p>The nature of the PS surface-oxygen bonding can also be characterized by atomic charge-transfer calculations. Table <ref type="table" target="#tab_0">S1</ref> and Figure <ref type="figure" target="#fig_2">S3</ref> display the main results regarding charge transfer and the corresponding charge-density differences, which are described in detail in the Supporting Information. Briefly, there are a limited number of bonding arrangements for oxygen atoms adsorbed on PS. For instance, four different types of bonds exist for the O 7 configuration (see the detailed description in the Supporting Information). Each one of them possesses a unique charge-transfer signature, which produces a different degree of covalency and/or ionicity. Therefore, charge-transfer calculations represent a valid alternative to characterizing the obtained adsorbed structures. Together, both the IR spectral features and oxygen charge states provide unique evidence of the bonding characteristics observed following oxygen adsorption on complex organic polymer surfaces.</p><p>Oxygen Adsorption on Partially Dehydrogenated PS. So far, we have shown the effects of oxygen interaction with fully hydrogenated PS surfaces, which can be regarded as chemically intact hard polymer systems. However, it is wellknown that typical plasmas combine different atomic species in an effort to optimize the etching process. The most obvious example is given by argon and oxygen plasmas, either combined or successively. Indeed, the erosion and etching of hard hydrocarbon films by bombardment with Ar + and simultaneous or alternative exposure to thermal molecular or atomic oxygen have been widely studied.</p><p>Consequently, the amount of literature published is considerably vast. As an example, we include a few references that allow the interested reader to delve into the field. <ref type="bibr" target="#b31">[34]</ref><ref type="bibr" target="#b32">[35]</ref><ref type="bibr" target="#b33">[36]</ref> Among other complex effects such as the formation of dense graphitic layers at the polymer surface or deeper-lying modifications of the polymer structure due to ion bombardment at high energies, the first tangible outcome of Ar + bombardment of polymers is partial dehydrogenation of the exposed surface.</p><p>Furthermore, such an effect has been confirmed by classical MD simulations 10 and our previous work. <ref type="bibr" target="#b11">12</ref> As discussed in the Introduction, those MD calculations show that the steady-state dehydrogenated PS surface layer formed under Ar + bombardment results from a competition between the breaking of C-H bonds, which leads to further dehydrogenation and subsequent cross-linking, and the breaking of C-C bonds, which leads to the etching of polymer fragments. <ref type="bibr" target="#b9">10</ref> From the competition between both effects arise the final etch rates obtained in the experiments. Thus, to complete our study, in this last subsection, we investigate the interaction of oxygen atoms with partially dehydrogenated PS surfaces. The corresponding charge variation of the oxygen atoms is also shown. Given the impossibility of developing a consistent analysis of the interaction of highly energetic Ar + ions with the PS surface using a ground-state methodology such as DFT, we turn to a slightly different strategy. Taking the PS surface model used in the previous subsections, we randomly and gradually removed hydrogen atoms from the system in a stepwise manner, in order to mimic their progressive desorption as a result of Ar + bombardment. The process was carried out as follows: First, hydrogen atoms were removed from the upper part of the PS surface. Given that there are only two different sites, benzene rings and the backbone, configurations with hydrogen-empty carbon sites as dispersed as possible were preferentially selected. Second, the system was heated to 300 K, and AIMD simulations were performed for about 1 ps. Finally, the surface was cooled and relaxed using DFT in order to perform the oxygen adsorption calculations described in detail below. Although this approach might a priori seem slightly speculative, hydrogen is the real effect of Ar + bombardment of PS surfaces, as demonstrated in our previous work. <ref type="bibr" target="#b11">12</ref> Therefore, the goal of this subsection is 2-fold: (i) complement the study of the previous subsection, performed for fully hydrogenated PS surfaces, and (ii) open a new avenue for the study of nonequilibrium processes such as spontaneous, self-limiting etching.</p><p>We began the analysis by evaluating the energetics of adsorbed oxygen atoms and oxygen molecules to obtain a qualitative idea of the nature of the oxide structures formed on the now partially dehydrogenated PS surface. Table <ref type="table" target="#tab_1">2</ref> lists the most relevant information, whereas Figure <ref type="figure" target="#fig_5">6</ref> and the Supporting Information show the final geometries of the adsorbed oxygen atoms on the PS surface, as a function of the hydrogen removal coverage. We limit at this moment the results to one and two oxygen atoms or molecules, which provide enough structural information to acquire an overall picture of the respective adsorption patterns and PS structural deformation effects. Indeed, as can be seen in Figure <ref type="figure" target="#fig_5">6</ref>, the removal of surface hydrogen atoms was performed in four different steps, ranging from θ = 0.12 to 0.48 surface coverage. The last step corresponds to almost complete dehydrogenation of the upper PS surface. As can be seen in the picture, successive dehydrogenation results (for θ = 0.48) in crosslinking, as suggested by the experimental evidence, <ref type="bibr" target="#b33">36</ref> and the formation of an incipient hexagonal, graphene-like substructure. For low coverages of hydrogen removal, little is observed as to changes in the structure of the PS surface after hydrogen desorption. Basically, new carbon dangling bonds are created (preferentially in the benzene rings), but the geometry of the PS strip remains, to a large extent, unaltered. After adsorption of the atomic oxygen atoms, the main features observed are as follows: (i) The oxygen breaks a C-C bond of the benzene ring, creating a carbonyl (CO) group covalently bound to the newly formed carbon pentagon (Figure <ref type="figure" target="#fig_5">6</ref>); this structural change is also thermodynamically stable because it allows one to maintain sp 2 hybridization of the planar ring. From an energetic standpoint, carbonyl groups binding to partially dehydrogenated carbon pentagon structures are more favorable than the formation of hydroxyl groups on the still hydrogenated regions of the PS surface (cf. Tables <ref type="table" target="#tab_0">1</ref> and <ref type="table" target="#tab_1">2</ref>); therefore, that will be the preferential outcome of oxygen adsorption, at least for low hydrogen removal coverages. (ii) Increasing the coverage of hydrogen removal leads to further C-C bond breaking, resulting in the formation of carbon chains, passivated at the end by an oxygen atom and, ultimately, upon further hydrogen removal, to the aforementioned cross-linking (Figure <ref type="figure" target="#fig_5">6</ref>). In that case, the adsorbed oxygen atoms replace the hydrogen atoms as passivating agents of the newly formed carbon rings.</p><p>The adsorption of O 2 molecules on the partially dehydrogenated PS surface results in different features. As shown in Figure <ref type="figure" target="#fig_1">S2</ref>, dehydrogenation and thermal energy (AIMD simulations were performed at 300 K) do not suffice to dissociate the impinging O 2 molecules, and they either weakly chemisorb in one of the depassivated carbon sites of a benzene ring or just physisorb in a nondepassivated C-H bond (see the corresponding formation energies in Table <ref type="table" target="#tab_1">2</ref>). The only exception seen in our calculations corresponds (see Figure <ref type="figure" target="#fig_1">S2</ref> for θ = 0.18) to the partial reconstruction of a hexagonal lattice by means of the oxygen atoms of a dissociated O 2 molecule, which can be considered an "oxygen-induced cross-linking", but given that this phenomenon has been observed only once in our simulations, we should consider it to be the most probable result of incoming but highly thermal O 2 molecules.</p><p>As noted before, carbonyl groups formed in partially depassivated carbon ring structures are thermodynamically very stable, with formation energies ranging between ∼3.5 and 4.5 eV/oxygen (Table <ref type="table" target="#tab_1">2</ref>), compared to the formation energy of an OH hydroxyl group, ∼1.5 eV (the energies shown in Table <ref type="table" target="#tab_1">2</ref> have also been obtained through eqs 1 and 2 by simply replacing the energy of the PS surface by that of the corresponding partially hydrogen-depassivated system). The reason must be found not only in the structural rearrangement experienced by the benzene rings in order to optimize passivation of the newly formed dangling bonds but also in the fact that the partially dehydrogenated PS surfaces themselves lie less high up in the potential energy surface than the fully hydrogenated structure. Finally, the electronic charge transfer from the carbon atoms to the oxygen atoms (∼0.3 e -; Table <ref type="table" target="#tab_1">2</ref>) is relatively similar to the results shown in Table <ref type="table" target="#tab_0">S1</ref> for similar carbonyl structures, which can be easily understood in view of the fact that the structural change of the carbon rings does not modify their sp 2 hybridization, and thus the charge transfer of the CO bonding can be considered a local effect.</p><p>After considering the structural effects of oxygen adsorption on partially dehydrogenated PS surfaces, the question now turns to whether hydrogen depassivation can promote selflimited etching of the polymer surface. In order to obtain a reliable answer, we adopt two different strategies. Starting from the PS surface with the largest degree of hydrogen removal coverage studied (θ = 0.48), we first increase the oxygen adsorption coverage gradually until a saturation limit of ∼100% of the upper surface carbon atoms, performing at each step standard DFT relaxations. Furthermore, the incoming of oxygen plasma species was modeled with AIMD simulations, by setting up specific initial forces to both oxygen atoms and O 2 molecules. Obviously, only the component of the force perpendicular to the PS surface was considered. Then, the whole system was allowed to evolve at 300 K for 2 ps, large enough to reach equilibrium. In our calculations, we considered several oxygen coverages and six different initial forces, ranging from as low as 0.12 eV/Å to as high as 22.5 eV/ Å, which represent adequate limit cases for the electronic temperatures obtained in real plasma experiments. <ref type="bibr" target="#b34">37</ref> Although this last case might represent unrealistically large initial forces, it will let us develop a complete picture of the PS surface interaction with plasma species to be able to choose the appropriate initial conditions in order to obtain meaningful results. Before going into the details, it is worth mentioning that both strategies led to similar conclusions. More specifically, the rupture of both C-C and C-H bonds was observed, as was previously reported, <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b33">36</ref> accompanied by the structural loss of benzene C 6 rings, to finally obtain etching of the PS surface in the form of several carbonate species.</p><p>The first of the strategies described above results in the following structural evolution (see Figure <ref type="figure" target="#fig_2">S3</ref> for the details and the entire sequence of structural changes): (i) first, the incoming oxygen atoms passivate the dangling bonds created in the benzene rings, as was previously described, (ii) then, increasing the oxygen flux to approximately 42% of the upper surface carbon atoms results in the structural loss of one of the two remaining benzene rings (upon hydrogen removal, the other C 6 rings experience a cross-linking transformation into a hexagonal structure, as previously described), through the rupture of C-C bonds and the formation of a linear chain (a polyethylene-like structure), (iii) a further increase of the oxygen flux results in saturation of the PS surface, with some of the oxygen atoms forming bridge bonds and thus reconstructing the underlying, newly formed hexagonal structure, and (iv) finally, when the flux approaches the saturation limit (∼83% of the upper surface carbon atoms), the polyethylene linear carbon chain is devoid of hydrogen atoms, which either form OH hydroxyl groups or form etched complex carbonate species, namely, carbonic acid. Presumably, if one were to increase the oxygen flux further, that would result in etching of the hydrogen-free polyethylene chain, passivated at bond ends by oxygen atoms (see the Supporting Information). Therefore, we can conclude by saying that the etching mechanism of partially depassivated PS surfaces under high-density oxygen fluxes results in the etching of complex carbonate species from the upper benzene rings, mainly carbonic acid and hydrogenfree, oxygen-containing polyethylene carbon chains. Finally, it is worth mentioning that the adsorption of molecular oxygen does not result in etching, even at high-density fluxes (Figure <ref type="figure" target="#fig_3">S4</ref>), for the same reasons discussed in the previous paragraphs.</p><p>More interesting and detailed information can be obtained from the second strategy adopted, that is, using incoming oxygen fluxes with nonzero initial forces along the direction perpendicular to the surface, in an attempt to use AIMD and a ground-state theory such as DFT to mimic the interaction of plasma species with organic surfaces. As communicated before, we use fluxes of different densities and initial forces for both atomic and molecular oxygen to examine the effects on the partially dehydrogenated (θ = 0.48) PS surface. In order to graphically display the results in a meaningful way, Figure <ref type="figure" target="#fig_6">7</ref> shows the depth reached by the incoming oxygen atoms versus the flux density, expressed as a function of the percentage of oxygen atoms with respect to the total number of carbon atoms and not only those of the upper surface. This can be viewed as the etch yield versus the ion/atom flux ratio, which is the standard way to represent the impact count in the experiments (see first, for instance, ref 34). Given the large amount of data obtained, for the sake of clarity, Figure <ref type="figure" target="#fig_6">7</ref> displays only the results for the lowest flux densities of atomic oxygen and some representative snapshots of the final configurations obtained, whereas Figures <ref type="figure" target="#fig_6">S7-S10</ref> show the results obtained for all of the atomic and molecular oxygen fluxes studied, as well as snapshots of most of the final geometries obtained. Although oxygen penetration depths are obviously reported for one polymer layer, the results are still meaningful given the main goals of this work, which is the study of self-limiting adsorption of surface oxygen atoms and whether spontaneous etching is obtained. The main conclusions that can be extracted from the results are as follows: (i) The most obvious remark is that, in spite of the widespread range of depths achieved for each force, the larger the initial force, the deeper the oxygen atoms reach through the PS surface. Our results show that initial forces in the range of a few units to tenths of electronvolts per angstrom result in ballistic trajectories, with the oxygen ions passing through the PS surface without interaction and directly reaching into deeper layers. These highly energetic ions are responsible for subsurface layer damage, as reported experimentally. <ref type="bibr" target="#b33">36</ref> On the contrary, for low flux densities, O 2 molecules with large initial forces break the hexagonal structure of nonpassivated benzene rings, thus promoting linear-chain formation and, ultimately, the etching of carbonate species (Figure <ref type="figure" target="#fig_6">S7</ref>). This is due to the weak interaction of O 2 with the PS surface, as shown in the previous sections, but for low flux densities and large initial forces, O 2 molecules dissociate immediately after reaching the PS surface, resulting in atomic-like behavior. Thus, highly energetic molecular oxygen constitutes a more effective etching tool. (ii) For low-to-medium initial forces (0.12-1.25 eV/Å), benzene ring rupture and polyethylene formation can be seen for atomic fluxes with densities as low as 11%, as shown in snapshot a (with F z = 0.12 eV/Å) in Figure <ref type="figure" target="#fig_6">7</ref>. Slight increases in the flux density lead directly to C-C bond breaking and the etching of simple carbonate species, such as CO molecules; see snapshot b (with F z = 0.12 eV/Å and a flux density of ∼13%) in Figures <ref type="figure" target="#fig_6">7</ref> and <ref type="figure" target="#fig_6">S7</ref>. (iii) Large flux densities (&gt;20%) and lowto-medium initial forces (0.12-1.25 eV/Å) entail a loss of the entire surface integrity, promoting cross-linking, rupture of the C 6 rings, and the formation of a variety of oxygen-included byproducts, not only carbonates but also H 2 O molecules, molecular oxygen, and hydroxyl groups. As an example, one can see in snapshot d (with F z = 0.12 eV/Å and a flux density of ∼33%) in Figures <ref type="figure" target="#fig_6">7</ref> and <ref type="figure" target="#fig_4">S5</ref> that, for the largest oxygen flux density considered and low-to-medium initial forces, oxygen impact results in the formation of C 2 O 3 H 2 , CO 2 , H 2 O, OH, O 2 , and OH-passivated, hydrogen-free polyethylene carbon chain reaction products. (iv) Finally, as said above, large initial forces and atomic oxygen fluxes result in little interaction with the PS upper surface. However, such forces suffice to dissociate the incoming molecular oxygen, leading to more effective interaction with the PS upper surface. The negative side is that the thus-obtained oxygen atoms do not etch the polymer as effectively and self-limiting as atomic oxygen with low-tomedium initial forces.</p><p>As concluding remarks, we must stress again that the etching mechanisms described so far by means of AIMD simulations of incoming oxygen species with nonzero initial forces rely on the key assumption that the polymer surface has been partially dehydrogenated through, for instance, exposure to Ar + pulses. In order to show clear evidence of such a statement, we performed AIMD simulations at high temperature (500 K) for 2 ps of two different systems: fully hydrogenated and partially dehydrogenated (θ = 0.48) PS surfaces, both subject to a 50% density incoming atomic oxygen flux. The results can be seen in Figure <ref type="figure" target="#fig_0">S11</ref> and reflect the expected outcome: oxygen adsorption on fully hydrogenated PS leads to hydrogen depassivation and the formation of noncarbon byproducts, mainly H 2 O, O 2 , and even O 3 . On the contrary, partially dehydrogenated PS produces the aforementioned species: C 2 O 3 H 2 , CO 2 , and CO. Finally, as mentioned before, the loss of hydrogen results in cross-linking between PS units, which leads to the formation of dense graphitic layers at the surface. <ref type="bibr" target="#b9">10</ref> In order to show evidence of such a phenomenon, we performed additional calculations with further dehydrogenation (θ = 0.61 and 0.71) and subsequent gradual oxygen adsorption (until a surface coverage of O c = 83%). The results are shown in Figure <ref type="figure" target="#fig_1">S12</ref>. They reveal that graphitization of the PS surface can be observed even within the same PS unit, with the formation of intertwined graphene layers. Furthermore, gradual adsorption of oxygen atoms results in oxidation of (in)complete graphene layers, with the oxygen atoms passivating the carbon dangling bonds and being assimilated into the graphene network. If larger supercells were considered with more PS ribbon units, graphitization would just spread all over the surface layer.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">CONCLUSIONS</head><p>In this work, theoretical insights into oxygen pulses impacting PS surfaces for self-limiting etching in thermal ALE for semiconductor device fabrication were gained using DFT calculations. On the basis of the energy trends of the postulated adsorption reactions, qualitative evidence suggesting the self-limiting nature of oxygen adsorption on fully hydrogenated PS surfaces was found. Explicit surface calculations, including the adsorption of 1-20 oxygen atoms on the polymer surface, were conducted. While single oxygen atoms readily adsorb to form hydroxyl groups, oxygen saturation leads to a myriad of reaction products, including a hydrogen-bonded network of H 2 O molecules, alcohol or carbonyl groups, hydroperoxyl radicals, or even ozone molecules. However, it is the formation of C-O-C bridge bonds that ultimately results in structural changes, leading to rupture of the benzene rings or polyethylene chain formation.</p><p>Nonetheless, even though the evidence from surface binding energies indicates that the chemisorption of oxygen atoms is self-limiting in nature, no carbon etching was spontaneously observed for fully hydrogenated PS surfaces. The modified polymer layer can then be successively etched in a second plasma pulse step. Alternatively, this finding allowed us to speculate that a previous pulse of inert species such as Ar + ions would lead to self-limiting etching through partial hydrogen depassivation. Indeed, our AIMD simulations confirm that oxygen pulses impacting PS surfaces partially devoid of hydrogen atoms result in self-limiting etching of carbon atoms through the formation and desorption of several carbonate species, namely, C 2 O 3 H 2 , CO 2 , and CO.</p><p>Moreover, saturated oxygen pulses show that, rather than etching away the polymer continuously, the PS surface structure evolves into a mixture of graphitic and polyethylene carbon chains, thus resulting in hard polymer configurations, more difficult to etch. On the basis of a carbon-saturated surface model, a theoretical maximum etch rate was computed to be 2.48 ± 0.2 C/nm 2 •cycle or, via the mass density of bulk PS (0.96 g/cm 3 ), 0.51 ± 0.05 Å/cycle, which amounts to the removal of ∼0.2 monolayers of material per cycle. Finally, oxide formation mechanisms, as well as the IR spectra, were studied in detail as a useful means to experimentally characterize surface reactions and evolution processes. The formation of H 2 O molecules was identified as a favorable event for the self-limiting adsorption of oxygen atoms on fully hydrogenated PS surfaces, whereas they are a major reaction product of the etching of partially dehydrogenated PS, along with the corresponding carbonate species.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>* sı Supporting Information</head><p>The Supporting Information is available free of charge at <ref type="url" target="https://pubs.acs.org/doi/10.1021/acsanm.0c00618?goto=supporting-info">https://pubs.acs.org/doi/10.1021/acsanm.0c00618</ref>.</p><p>Additional figures showing all of the reaction products obtained for oxygen adsorption on fully and partially dehydrogenated PS surfaces, scatter plots with the complete set of data obtained for incoming oxygen plasma species with nonzero initial kinetic energy, a ACS Applied Nano Materials table with all of the IR data, and results of electronic charge-transfer calculations (PDF)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ AUTHOR INFORMATION Corresponding Author</head><p>Peter L. G. Ventzek -Tokyo Electron America, Inc., Austin, Texas 78741, United States; Email: peter.ventzek@us.tel.com</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Schematic representation of the use of organic masks in ideal ALE (a) and ALD (b) cycles.</figDesc><graphic coords="2,61.46,69.17,502.07,269.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Lateral and front views of the PS surface model used in the calculations. Brown spheres represent carbon atoms, and white spheres represent hydrogen atoms.</figDesc><graphic coords="3,150.12,69.17,324.68,186.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Optimized geometries of 1-20 oxygen atoms adsorbed on the bare PS surface. Here O x denotes the minimum-energy configuration obtained with x atoms of oxygen. Brown, white, and red spheres represent carbon, hydrogen, and oxygen atoms, respectively.</figDesc><graphic coords="4,74.61,69.17,475.65,415.39" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Scatter plot showing the adsorption energy versus oxygen coverage of the minima shown in Figure 3. All of the points were fit to a parabola for eye-guiding purposes. The highlighted points are crossreferenced to the configurations shown in Figure 3. Brown, white, and red spheres represent carbon, hydrogen, and oxygen atoms, respectively.</figDesc><graphic coords="5,324.45,333.70,239.98,140.83" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. (a-d) Snapshots representing the H 2 O formation mechanism obtained in optimization of the O 5 configuration, as shown in Figure 3 (the color code is the same). The left panel shows a complementary graph with relative energy along the formation pathway with respect to the initial geometry (desorbed oxygen atoms).</figDesc><graphic coords="6,135.72,69.17,353.48,290.61" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Optimized geometries of one and two oxygen atoms adsorbed on partially dehydrogenated PS surfaces, expressed as a function of the hydrogen removal coverage θ. Brown, white, and red spheres represent carbon, hydrogen, and oxygen atoms, respectively.</figDesc><graphic coords="9,162.48,235.22,299.96,183.35" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. (a-d) Snapshots representing the final configurations of oxygen adsorption on partially dehydrogenated PS, for a hydrogen removal coverage of θ = 0.48. The oxygen flux density and corresponding initial forces are listed below each picture. The graph shows the depth reached by the incoming oxygen atoms, expressed as a function of the flux density, as obtained at room temperature and for the set of initial forces considered. The data shown in the graph include only the lowest flux densities. For the complete set of results, see Figure S8. The color code is the same as that in the previous figures.</figDesc><graphic coords="11,106.92,69.17,411.08,202.79" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Adsorbate Coverages and Free AdsorptionEnergies for the Minimum Geometries O x (x = 1-20) Given in Figure3 a</figDesc><table><row><cell></cell><cell>O</cell><cell></cell><cell></cell><cell></cell></row><row><cell>minimum</cell><cell>coverage (nm -2 )</cell><cell>G (eV/ oxygen)</cell><cell>G (eV/nm 2 )</cell><cell>reactions at the PS surface</cell></row><row><cell>O 1</cell><cell>0.62</cell><cell>-1.24</cell><cell>-2.02</cell><cell>OH formation on a benzene ring</cell></row><row><cell>O 2</cell><cell>1.24</cell><cell>-0.33</cell><cell>-0.53</cell><cell>C-O-C bond formation on a benzene ring</cell></row><row><cell>O 3</cell><cell>1.86</cell><cell>-0.31</cell><cell>-0.51</cell><cell></cell></row><row><cell>O 4</cell><cell>2.48</cell><cell>-0.16</cell><cell>-0.26</cell><cell>OH and C-O bond formation on the PS</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>backbone</cell></row><row><cell>O 5</cell><cell>3.10</cell><cell>-0.60</cell><cell>-0.97</cell><cell>H 2 O formation; C-O bond formation on a benzene</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>ring</cell></row><row><cell>O 6</cell><cell>3.72</cell><cell>-0.45</cell><cell>-0.72</cell><cell></cell></row><row><cell>O 7</cell><cell>4.34</cell><cell>-0.54</cell><cell>-0.87</cell><cell></cell></row><row><cell>O 8</cell><cell>4.96</cell><cell>-0.38</cell><cell>-0.61</cell><cell></cell></row><row><cell>O 9</cell><cell>5.59</cell><cell>-0.31</cell><cell>-0.50</cell><cell></cell></row><row><cell>O 10</cell><cell>6.21</cell><cell>-0.30</cell><cell>-0.49</cell><cell></cell></row><row><cell>O 11</cell><cell>6.83</cell><cell>0.06</cell><cell>0.10</cell><cell>HO 2 * formation</cell></row><row><cell>O 12</cell><cell>7.45</cell><cell>-0.14</cell><cell>-0.23</cell><cell>O 2 formation</cell></row><row><cell>O 13</cell><cell>8.07</cell><cell>0.06</cell><cell>0.10</cell><cell>C-O-OH formation on a benzene ring</cell></row><row><cell>O 14</cell><cell>8.69</cell><cell>-0.01</cell><cell>-0.02</cell><cell>rupture of a benzene ring</cell></row><row><cell>O 15</cell><cell>9.31</cell><cell>-0.13</cell><cell>-0.20</cell><cell></cell></row><row><cell>O 16</cell><cell>9.93</cell><cell>-0.09</cell><cell>-0.15</cell><cell>C-O-C bridge bond formation</cell></row><row><cell>O 17</cell><cell>10.55</cell><cell>-0.08</cell><cell>-0.13</cell><cell>OH loss</cell></row><row><cell>O 18</cell><cell>11.18</cell><cell>-0.15</cell><cell>-0.24</cell><cell></cell></row><row><cell>O 19</cell><cell>11.80</cell><cell>-0.10</cell><cell>-0.16</cell><cell>O 3 formation</cell></row><row><cell>O</cell><cell></cell><cell></cell><cell></cell><cell></cell></row></table><note><p>20  </p><p>12.42 -0.35 -0.56 C-O bond formed in the backbone a</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Free Energies of the Adsorption Configurations of O, 2O, O 2 , and 2O 2 , as Given in Figures6 and S2, Expressed as a Function of the Hydrogen Removal Coverage a</figDesc><table><row><cell>θ(H)</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://dx.doi.org/10.1021/acsanm.0c00618 ACS Appl. Nano Mater. 2020, 3, 5189-5202</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>■ ACKNOWLEDGMENTS</head><p>This work used the <rs type="funder">Extreme Science and Engineering Discovery Environment</rs>, which is supported by <rs type="funder">National Science Foundation</rs> Grant <rs type="grantNumber">ACI-1548562</rs>. The authors acknowledge the <rs type="institution">Texas Advanced Computing Center</rs> for providing computational resources.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_CqcGnmG">
+					<idno type="grant-number">ACI-1548562</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Authors</head><p>Roberto C. Longo  </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Overview of Atomic Layer Etching in the Semiconductor Industry</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sriraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vahedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4913379</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="page">20802</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Deposition: An Overview</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>George</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr900056b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="111" to="113" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching: An Industry Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Carver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Plombom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Tronic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Turkot</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0021506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5005" to="N5009" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The Grand Challenges of Plasma Etching: A Manufacturing Perspective</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G N</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Kanarik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Gottscho</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0022-3727/47/27/273001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. D: Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">273001</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Challenges of Tailoring Surface Chemistry abd Plasma/Surface Interactions to Advance Atomic Layer Etching</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">U</forename><surname>Engelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Bruce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nakamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Walton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Joseph</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0101506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5054" to="N5060" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Atomic Layer Etching at the Tipping Point: An Overview</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Metzler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.0061506jss</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ECS J. Solid State Sci. Technol</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5041" to="N5053" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Cyclic Cl 2 /H 2 Quasi-Atomic Layer Etching Approach for TiN and TaN Patterning Using Organic Masks</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marchack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Papalia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Engelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Joseph</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.4995413</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., A</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="05C" to="314" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Area-Selective Atomic Layer Deposition of Crystalline BaTiO 3</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">N</forename><surname>Coffey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Ekerdt</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b01271</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="5558" to="5565" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Near-Surface Modification of Polystyrene by Ar + : Molecular Dynamics Simulations and Experimental Validation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Veǵh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bruce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Engelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Phaneuf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Long</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Willson</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2821226</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="page">233113</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Molecular Dynamics Simulations of Near-Surface Modification of Polystyrene: Bombardment with Ar + and Ar + /Radical Chemistries</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Veǵh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bruce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Engelmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Phaneuf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Long</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Willson</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2963708</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page">34308</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Molecular Dynamics Simulations of the Chemical Modification of Polystyrene through C x F y + Beam Deposition</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Sinnott</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp049283y</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="18993" to="19001" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Interaction of Oxygen with Polystyrene and Polyethylene Polymer Films: A Mechanistic Study</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Fukunaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Longo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L G</forename><surname>Ventzek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ranjan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hartmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tsutsumi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishikawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sekine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5127863</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">23303</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Relationship between Nanoscale Roughness and Ion-Damaged Layer in Argon Plasma Exposed Polystyrene Films</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Bruce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Weilnboeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Phaneuf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Long</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Willson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Veǵh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3373587</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="page">84310</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">First Principles Mechanistic Study of Self-Limiting Oxidative Adsorption of Remote Oxygen Plasma During the Atomic Layer Deposition of Alumina</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">N</forename><surname>Fomengia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C8CP03495H</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="22783" to="22795" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Modeling the Chemical Mechanism of the Thermal Atomic Layer Etch of Aluminum Oxide: A Density Functional Theory Study of Reactions During HF Exposure</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kondati Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Elliott</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b01930</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="5912" to="5922" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Advanced Capabilities for Materials Modelling with QUANTUM ESPRESSO</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Andreussi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Brumme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Bunau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Buongiorno Nardelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Calandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Car</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cavazzoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ceresoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cococcioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Colonna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Carnimeo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dal Corso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>De Gironcoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Delugas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Distasio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jr; Ferretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Floris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fratesi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fugallo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gebauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Gerstmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Giustino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gorni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kawamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-Y</forename><surname>Ko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kokalj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kucukbenli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lazzeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Marsili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marzari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mauri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-V</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Otero De La Roza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paulatto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ponce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rocca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sabatini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Santra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schlipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Seitsonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Smogunov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Timrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Thonhauser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Umari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Vast</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baroni</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1361-648X/aa8f79</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">465901</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">QUANTUM ESPRESSO: A Modular and Open-Source Software Project for Quantum Simulations of Materials</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bonini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Calandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Car</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cavazzoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ceresoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Chiarotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cococcioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Dabo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dal Corso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>De Gironcoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Fabris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fratesi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gebauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Gerstmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gougoussis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kokalj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lazzeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Martin-Samos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Marzari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mauri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mazzarello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Paolini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pasquarello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paulatto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sbraccia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Scandolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sclauzero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Seitsonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Smogunov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Umari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Wentzcovitch</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0953-8984/21/39/395502</idno>
+		<ptr target="http://www.quantum-espresso.org" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">395502</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Special Points for Brillouin-Zone Integrations</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Monkhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Pack</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.13.5188</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys.Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="5188" to="5192" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Generalized Gradient Approximation Made Simple</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ernzerhof</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.77.3865</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="3865" to="3868" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A Consistent and Accurate Ab Initio Parameterization of Density Functional Dispersion Correction of the 94 Elements H-Pu</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Antony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Krieg</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3382344</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">154104</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Role and Effective Treatment of Dispersive Forces in Materials: Polyethylene and Graphite Crystals as Test Cases</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Casarin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Forrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pavone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sambi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vittadini</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.21112</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="934" to="939" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Monolayer Doping via Phosphonic Acid Grafting on Silicon: Microscopic Insight from Infrared Spectroscopy and Density-Functional Theory</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Longo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Thissen</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adfm.201202808</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Funct. Mater</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="3471" to="3477" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Green&apos;s Function Approach to Linear Response in Solids</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Giannozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Testa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jońsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mills</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Jacobsen</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.58.1861</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Classical and Quantum Dynamics in Condensed Phase Simulations</title>
+		<editor>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Berne</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">G</forename><surname>Ciccotti</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Coker</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Singapore</addrLine></address></meeting>
+		<imprint>
+			<publisher>World Scientific</publisher>
+			<date type="published" when="1987">1987. 1998</date>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="1861" to="1864" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Improved Tangent Estimate in the Nudged Elastic Band Method for Finding Minimum Energy Paths and Saddle Points</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jońsson</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1323224</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9978" to="9985" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Climbing Image Nudged Elastic Band Method for Finding Saddle Points and Minimum Energy Paths</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Uberuaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jońsson</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1329672</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9901" to="9904" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chase</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tables</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<publisher>American Chemical Society</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Phase Stability of Li-Mn-O Oxides as Cathode Materials for Li-Ion Batteries: Insights from Ab Initio Calculations</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Longo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">T</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Yeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Doo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C4CP00937A</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="11233" to="11242" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Ethylenediamine Grafting on Oxide-Free H-, 1/3 ML F-, and Cl-Terminated Si(111) Surfaces</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Chopra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Longo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Halls</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Thissen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b03156</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="6268" to="6281" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Mechanism of Arsenic Monolayer Doping of Oxide-Free Si(111)</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Longo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Mattson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Cabrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Thissen</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b04394</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1975" to="1979" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Surfaces as a Selective Surface Chemistry Route</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Michalak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Amy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Aureau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esteve</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Chabal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Si</forename><surname>Nanopatterning</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmat2611</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Mater</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">111</biblScope>
+			<biblScope unit="page" from="266" to="271" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Spectrometric Identification of Organic Compounds</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Silverstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Bassler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Morrill</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1991">1991</date>
+			<publisher>John Wiley and Sons</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Argon and Oxygen Ion Chemistry Effects in Photoresist Etching</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Greer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fraser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coburn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.1501578</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B: Microelectron. Process. Phenom</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1901" to="1906" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Chemical Sputtering of Carbon Films by Simultaneous Irradiation with Argon Ions and Molecular Oxygen</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hopf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schluẗer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schwarz-Selinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Von Toussaint</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Jacob</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/1367-2630/10/9/093022</idno>
+	</analytic>
+	<monogr>
+		<title level="j">New J. Phys</title>
+		<imprint>
+			<biblScope unit="page">93022</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Plasma-Polymer Interactions: A Review of Progress in Understanding Polymer Resist Mask Durability During Plasma Etching for Nanoscale Fabrication</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Oehrlein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Phaneuf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Graves</surname></persName>
+		</author>
+		<idno type="DOI">10.1116/1.3532949</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Vac. Sci. Technol., B: Nanotechnol. Microelectron.: Mater., Process., Meas., Phenom</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">10801</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Inductively Coupled Pulsed Plasmas in the Presence of Synchronous Pulsed Substrate Bias for Robust, Reliable, and Fine Conductor Etching</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Banna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tokashiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rauf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Todorow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ramaswamy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Stout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lymberopoulos</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/TPS.2009.2028071</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Plasma Sci</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="1730" to="1746" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
