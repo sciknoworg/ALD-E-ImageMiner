@@ -65,8 +65,8 @@ data
 | --- | --- | --- | --- | --- | --- |
 | atomic-layer-deposition | experimental-usecase | 66 | 552 | 102 | 76 |
 | atomic-layer-deposition | simulation-usecase | 58 | 579 | 413 | 131 |
-| atomic-layer-etching | experimental-usecase | 47 | 461 | 116 | 28 |
-| atomic-layer-etching | simulation-usecase | 34 | 400 | 226 | 60 |
+| atomic-layer-etching | experimental-usecase | 46 | 461 | 116 | 28 |
+| atomic-layer-etching | simulation-usecase | 35 | 400 | 226 | 60 |
 | **Total** | - | **205** | **1,992** | **857** | **295** |
 
 

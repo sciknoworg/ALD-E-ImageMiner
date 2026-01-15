@@ -1,6 +1,6 @@
 ## Test Data
 
-The test data consist of 21 papers.
+The full competition dataset will be released **in batches according to the competition timeline**.
 
 ### 🗂️ Directory Structure
 
@@ -11,10 +11,9 @@ icdar2026-competition-data
 │   │   ├── sub-category
 │   │   │   ├── paper #
 │   │   │   │   ├── images
-│   │   │   │   │   └── figures
-│   │   │   │   │      ├── filename.jpg            # (JPEG) actual figure image
-│   │   │   │   │      ├── filename.json           # (JSON) figure annotations
-│   │   │   │   │      └── ...
+│   │   │   │   │   ├── filename.jpg            # (JPEG) actual figure image
+│   │   │   │   │   ├── filename.json           # (JSON) figure annotations
+│   │   │   │   │   └── ...
 │   │   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
 │   │   │   │   ├── content.json                    # (JSON) structured content
 │   │   │   │   └── ...
@@ -23,21 +22,41 @@ icdar2026-competition-data
 
 ### 📝 Annotations
 
-The figure annotations are distributed and stored alongside each figure in the "images" folder.
-Following is the test annotation as JSON format:
+#### Schema
 
-```text
-root
-├── figure_path: Relative path to the figure JPG
-├── file_name: Filename of the figure JPG
-├── figure_label: Figure label as mentioned in the paper
-├── figure_caption: Figure caption as mentioned in the paper
-└── boundingBoxes: bounding box coordinates to extract each sub-figure
-    └── [0]
-        ├── label: (alphabetically labeled for each sub-figure)
-        ├── x: x-coordinate
-        ├── y: y-coordinate
-        ├── width: width of sub-figure
-        └── height: height of sub-figure
-    ...
+Following is the general top-level schema of each JSON file:
+
+```json
+{
+    "sample_id": str,
+    "bbox": dict
+}
 ```
+
+Each "dict" contains alphabetical keys-values pairs to represent each sub-figure task-specific data as shown below:
+
+```json
+{
+    "sample_id": str,
+    "bbox": {
+        "a": {
+            "x": int,
+            "y": int,
+            "width": int,
+            "height": int
+        },
+        "b": {
+            "x": int,
+            "y": int,
+            "width": int,
+            "height": int
+        },
+        ...
+    },
+}
+```
+
+#### Description
+
+- **sample_id**: Unique sample id, represents actual path to the figure
+- **bbox**: Bounding box coordinates to extract each sub-figure

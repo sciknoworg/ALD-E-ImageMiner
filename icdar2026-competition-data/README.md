@@ -36,10 +36,9 @@ icdar2026-competition-data
 │   │   ├── sub-category
 │   │   │   ├── paper #
 │   │   │   │   ├── images
-│   │   │   │   │   └── figures
-│   │   │   │   │      ├── filename.jpg            # (JPEG) actual figure image
-│   │   │   │   │      ├── filename.json           # (JSON) figure annotations
-│   │   │   │   │      └── ...
+│   │   │   │   │   ├── filename.jpg            # (JPEG) actual figure image
+│   │   │   │   │   ├── filename.json           # (JSON) figure annotations
+│   │   │   │   │   └── ...
 │   │   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
 │   │   │   │   ├── content.json                    # (JSON) structured content
 │   │   │   │   └── ...
@@ -47,6 +46,8 @@ icdar2026-competition-data
 ```
 
 ## 🗂️ Datasets
+
+The full competition dataset will be released **in batches according to the competition timeline**, including: training & development data, and a final blind test set.
 
 The information for the ICDAR 2026 competition for each dataset split is following:
 
