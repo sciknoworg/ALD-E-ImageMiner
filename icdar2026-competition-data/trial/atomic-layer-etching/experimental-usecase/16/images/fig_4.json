@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/16/fig_4",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the etch rate (nm/cyc) against modification step duration (s). For most materials, the etch rate increases and then remains constant throughout the duration of the modification step, unless SiO2, which exhibits a higher etching ratio.",
+        "b": "The etch rate initially increases for all components, but then decreases at around 12s."
+    },
+    "data_extraction": {
+        "a": "| modification step duration, s | Al2O3 | HfO2 | AlNx | TiN | SiO2 |\n|---|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 | 0.05 |\n| 5 | 0.15 | 0.05 | 0.15 | 0 | - | \n| 7 | 0.17| 0.10 | 0.16 | 0 | 0.45 |\n| 10 | 0.16 | 0.11 | 0.16 | 0 | 0.63 |\n| 12 | 0.15 | 0.11 | 0.15 | 0 | 0.65 |\n| 15 | 0.10 | 0.10 | 0.10 | 0 | 0.85 |",
+        "b": "| modification step duration, s | etch rate, nm/cyc |\n|---|---|\n| 0 | 0.02 |\n| 5 | 0.17 |\n| 7 | 0.18 |\n| 10 | 0.17 |\n| 12 | 0.17 |\n| 15 | 0.09 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "Which aspect are being evaluated in the process shown in the figure?",
+                "answer_type": "Factoid",
+                "answer": "The etch ratio of different materials such as Al2O3, HfO2, AlNx, TiN, SiO2, is analyzed as a function of modification step duration."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "How does the etch rate change over the time?",
+                "answer_type": "Factoid",
+                "answer": "The etch rate increases for all materials except for SiO2 up to approximately 5s, after which remains constant until 12s before finally decreasing. In contrast, the etch ratio of SiO2 depend on the duration of the modification step."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "Which material have the highest and lowest etch rates, respectively?",
+                "answer_type": "Factoid",
+                "answer": "SiO2, and TiN"
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "What performance advantage is shown when SiO2 is used as material?",
+                "answer_type": "Factoid",
+                "answer": "Using SiO2 enables higher etch ratios to be achieved in a shorter amount of tiem."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 28,
+            "width": 517,
+            "height": 355
+        },
+        "b": {
+            "x": 538,
+            "y": 28,
+            "width": 414,
+            "height": 355
+        }
+    }
+}

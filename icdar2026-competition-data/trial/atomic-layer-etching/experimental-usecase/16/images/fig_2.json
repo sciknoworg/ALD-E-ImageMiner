@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/16/fig_2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the deposition rates of various materials (Si, Al2O3, HfO2, AlN, TiN, SiO2) against the percentage of CF4 in the process. The chart illustrates the etching of TiN at concentrations of 10% and 13% of CF4, and of SiO2, at 6%, 10% and 13%.",
+        "b": "The figure illustrates the concentrations of F, CF2, and CF species relative to the percentage of CF4 in the process. The concentration of all of increases as the concentration of CF4 increases."
+    },
+    "data_extraction": {
+        "a": "| v_{CF4} % | Si | Al2O3 | HfO2 | AlN | TiN | SiO2 |\n|---|---|---|---|---|---|---|\n| 0 | - | - | - | - | - | - |\n| 3 | 2 | 3 | 2 | 3 | 2 | 1 |\n| 5 | 4 | 6 | 6 | 6 | 3 | 1 |\n| 10 | 4 | 5 | 4 | 5 | -1 | -5 |\n| 13 | 2 | 4 | 3 | 4 | 0 | -4 |\n| 15 | - | - | - | - | - | - |",
+        "b": "| v_{CF4} % | F | CF2 | CF |\n|---|---|---|---|\n| 0 | - | - | - |\n| 5 | 10^13 | 10^11 | 10^10 |\n| 10 | 10^14 | 10^11 | 10^11 |\n| 15 | - | - | - |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "Why are there negative values?",
+                "answer_type": "Factoid",
+                "answer": "Although the process involves depositing materials onto a film, come materials, such as TiN and SiO2, etch. Therefore, the deposition rate decreases as the CF4 concentration increases."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What material has the lowest and highest deposition rates during the process?",
+                "answer_type": "Factoid",
+                "answer": "The deposition rate is lowest for SiO1 and highest for ALNx"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "How does an increase in CF4 concentration affect the deposition of each material as well as the concentration of radicals?",
+                "answer_type": "Factoid",
+                "answer": "The deposition ratio increases up to around 5% and 6% of CF4, then decreases as the concentration increases. In contrast, the concentration of CF4 and radicals is proportional, and the relationship is stronger in the case of F."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "How does the difference in concentration between F and CF change as the concentration of CF4 increases?",
+                "answer_type": "Factoid",
+                "answer": "Both increase in value as the concentration of CH4 increases. However, F reaches a maximum value close to 10^14, while CF reaches 10^11"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 20,
+            "y": 41,
+            "width": 480,
+            "height": 314
+        },
+        "b": {
+            "x": 532,
+            "y": 41,
+            "width": 431,
+            "height": 314
+        }
+    }
+}
