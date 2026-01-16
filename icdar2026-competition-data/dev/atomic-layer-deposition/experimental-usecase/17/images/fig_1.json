@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/17/fig_1",
+    "classification": {
+        "a": "process timing diagram"
+    },
+    "summarization": {
+        "a": "The schematic represents the thin film deposition process over time. One deposition cycle consisted of four pulses [(CH3)2GaNH2]3 vapor pulse with 100-SCCM Ar carrier gas for 0.1 s, an Ar purge gas pulse for 2 s, an O2 plasma gas pulse for 1 s, and an Ar purge gas pulse for 0.4 s."
+    },
+    "data_extraction": {
+        "a": "| Time segment | Ga source | Ar purge (1) | O\u2082 plasma | Ar purge (2) |\n|-------------|-----------|--------------|-----------|--------------|\n| t\u2081          | ON        | OFF          | OFF       | OFF          |\n| t\u2082          | OFF       | ON           | OFF       | OFF          |\n| t\u2083          | OFF       | OFF          | ON        | OFF          |\n| t\u2084          | OFF       | ON           | OFF       | OFF          |\n| t\u2085          | ON        | OFF          | OFF       | OFF          |\n| t\u2086          | OFF       | ON           | OFF       | OFF          |\n| t\u2087          | OFF       | OFF          | ON        | OFF          |\n| t\u2088          | OFF       | ON           | OFF       | OFF          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "List the correct step order for the Ga\u2082O\u2083 PE-ALD sub-cycle (reactant = O\u2082 plasma).",
+                "answer_type": "List",
+                "answer": "1) Metal precursor pulse 0.1 s - [(CH\u2083)\u2082GaNH\u2082]\u2083 vapor in Ar. \u2192 2) Purge 2.0 s - Ar purge.\u2192 3) 1.0 s - O\u2082 plasma pulse \u2192 4) 0.4 s - Ar purge."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "What is the key difference between a standard thermal ALD cycle (using O\u2083) and the PE-ALD cycle described for Ga\u2082O\u2083 ?",
+                "answer_type": "Factoid",
+                "answer": "Thermal ALD: Uses a thermal oxidant (O\u2083) in step 3 to form the metal-oxide layer. PE-ALD: Uses a plasma oxidant (O\u2082 plasma) in step 3 to form the metal-oxide layer. Both cycles retain the same fundamental sequence of precursor pulse, purge, reactant pulse, and purge."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "In the Ga\u2082O\u2083 PE-ALD process, what change in the film's chemical composition and bonding is expected when replacing the thermal O\u2083 step with an O\u2082 plasma step?",
+                "answer_type": "Paragraph",
+                "answer": "The film shifts from being formed via a slower, thermally activated oxidation reaction to a more energetic, plasma-activated process. This introduces highly reactive oxygen radicals (O\u207a) that create a denser Ga\u2013O network with fewer carbon/hydrogen impurities from incomplete ligand removal. The result is a film with superior stoichiometry, higher density, and potentially a different defect profile compared to thermal ALD."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "Given the described PE-ALD cycle with an O\u2082 plasma step, name one possible reason to choose it over thermal ALD with O\u2083 for power electronics.",
+                "answer_type": "List",
+                "answer": "To achieve a higher-quality, denser Ga\u2082O\u2083 dielectric at a lower substrate temperature. The O\u2082 plasma provides more aggressive oxidation, leading to films with:\nLower impurity content (reduced C/H).\n\nHigher dielectric breakdown strength.\n\nBetter performance in high-field, high-temperature device operation."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 3,
+            "width": 471,
+            "height": 313
+        }
+    }
+}

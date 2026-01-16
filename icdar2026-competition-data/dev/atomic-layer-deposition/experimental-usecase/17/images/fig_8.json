@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/17/fig_8",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The main figure displays the optical transmission spectra of Ga2O3 thin films as a function of wavelength for various annealing temperatures (As-deposited, 500\u00b0C, 700\u00b0C, and 900\u00b0C). The data reveals a noticeable \"blue shift\" of the absorption edge toward shorter wavelengths as the temperature increases, indicating an increase in transparency at the UV edge.",
+        "b": "The inset figure plots the extracted optical band gap energy (Eg) against the annealing temperature. The trend confirms a significant widening of the band gap, increasing from approximately 5.00 eV for the as-deposited sample to nearly 5.25 eV for the sample annealed at 900\u00b0C, likely due to improved crystallinity."
+    },
+    "data_extraction": {
+        "a": "| Wavelength (nm) | Transmission (%) | Condition      |\n|------------------|-------------------|----------------|\n| 200              | 20                | As-deposited   |\n| 200              | 20                | 500\u00b0C          |\n| 200              | 20                | 700\u00b0C          |\n| 200              | 20                | 900\u00b0C          |\n| 250              | 40                | As-deposited   |\n| 250              | 40                | 500\u00b0C          |\n| 250              | 40                | 700\u00b0C          |\n| 250              | 40                | 900\u00b0C          |\n| 300              | 60                | As-deposited   |\n| 300              | 60                | 500\u00b0C          |\n| 300              | 60                | 700\u00b0C          |\n| 300              | 60                | 900\u00b0C          |\n| 350              | 80                | As-deposited   |\n| 350              | 80                | 500\u00b0C          |\n| 350              | 80                | 700\u00b0C          |\n| 350              | 80                | 900\u00b0C          |\n| 400              | 100               | As-deposited   |\n| 400              | 100               | 500\u00b0C          |\n| 400              | 100               | 700\u00b0C          |\n| 400              | 100               | 900\u00b0C          |\n| 450              | 100               | As-deposited   |\n| 450              | 100               | 500\u00b0C          |\n| 450              | 100               | 700\u00b0C          |\n| 450              | 100               | 900\u00b0C          |\n| 500              | 100               | As-deposited   |\n| 500              | 100               | 500\u00b0C          |\n| 500              | 100               | 700\u00b0C          |\n| 500              | 100               | 900\u00b0C          |\n| 550              | 100               | As-deposited   |\n| 550              | 100               | 500\u00b0C          |\n| 550              | 100               | 700\u00b0C          |\n| 550              | 100               | 900\u00b0C          |\n| 600              | 100               | As-deposited   |\n| 600              | 100               | 500\u00b0C          |\n| 600              | 100               | 700\u00b0C          |\n| 600              | 100               | 900\u00b0C          |\n| 650              | 100               | As-deposited   |\n| 650              | 100               | 500\u00b0C          |\n| 650              | 100               | 700\u00b0C          |\n| 650              | 100               | 900\u00b0C          |\n| 700              | 100               | As-deposited   |\n| 700              | 100               | 500\u00b0C          |\n| 700              | 100               | 700\u00b0C          |\n| 700              | 100               | 900\u00b0C          |",
+        "b": "| Temperature (\u00b0C) | Band Gap Energy (eV) |\n|------------------|----------------------|\n| 200              | 5.0                  |\n| 400              | 5.1                  |\n| 600              | 5.2                  |\n|800               | 5.26               |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "Based on the inset graph, describe the trend of the optical band gap with respect to annealing temperature. At which temperature interval does the most significant change in electronic structure occur",
+                "answer_type": "Factoid",
+                "answer": "The most significant change occurs between 500\u00b0C and 700\u00b0C."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "Based on the inset plot, what is the relationship between temperature and the optical band gap? State the primary physical cause for this trend?",
+                "answer_type": "Paragraph",
+                "answer": "The band gap decreases as temperature increases. This is primarily caused by thermal lattice expansion, which increases the interatomic spacing and reduces the potential felt by electrons, lowering the energy required for electronic transitions. Additionally, increased electron-phonon interactions at higher temperatures contribute to this band gap narrowing."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Compare using variable-temperature transmission spectroscopy  with variable-temperature photoreflectance spectroscopy to measure band gap shifts. Under a constraint of needing high-throughput screening of many materials, which method is more practical and why?",
+                "answer_type": "Paragraph",
+                "answer": "Transmission spectroscopy is more practical for high-throughput screening. While photoreflectance can offer more precise determination of critical points in the dielectric function, transmission measurement is experimentally simpler, faster, and requires less complex sample preparation (e.g., no need for a Schottky contact), allowing for rapid collection of data across many samples and temperatures."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "Given the observed decrease in band gap with increasing temperature, is this material suitable for the active layer in a temperature-stable ultraviolet (UV) light-emitting diode (LED) designed to operate in varying ambient conditions?",
+                "answer_type": "Yes/No",
+                "answer": "No.\n\nThe strong temperature-dependent band gap shift means the LED's emitted UV wavelength would change significantly with operating temperature, leading to unstable output color and intensity. For a temperature-stable device, a material with a smaller temperature coefficient of the band gap (dEg/dT) is required to minimize this performance drift."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 240,
+            "y": 101,
+            "width": 230,
+            "height": 185
+        },
+        "a": {
+            "x": 3,
+            "y": 9,
+            "width": 476,
+            "height": 340
+        }
+    }
+}

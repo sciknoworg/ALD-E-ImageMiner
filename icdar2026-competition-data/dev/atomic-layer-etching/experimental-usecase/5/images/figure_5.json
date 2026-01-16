@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/5/figure_5",
+    "classification": {
+        "a": "line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The etch depth increases significantly with increasing acceleration grid voltage.",
+        "b": "The etch depth increases with higher..., with a steeper increase at 30V compared to 10V."
+    },
+    "data_extraction": {
+        "a": "| Acceleration Grid Voltage (V) | Etch Depth (\u00c5) |\n|---|---|\n| 0 | 0 |\n| 10 | 0 |\n| 30 | 10 |\n| 50 | 60 |",
+        "b": "| ? | Etch Depth (\u00c5) 10 V |Etch Depth (\u00c5) 30 V |\n|---|---|---|\n| 0 | 0 | 0 |\n| 50 | 0 | 25 | \n| 100 | 0 | 100 |\n| 150 | 75 | 200 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "Which acceleration voltage is leads to the highest etch rate and what is that EPC?",
+                "answer_type": "Paragraph",
+                "answer": "b\t30V, 2 angstrom per cycle"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "Is there a threshold ... and what is it?",
+                "answer_type": "Factoid",
+                "answer": "b\tYes, there is, 100 ..."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "Is there a threshold voltage to etch with argon, and why?",
+                "answer_type": "Paragraph",
+                "answer": "a\tyes there is a threshold, 10 V. Below this voltage the ions do not have enough energy to kick out surface atoms."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What is the maximum achieved etch depth?",
+                "answer_type": "Factoid",
+                "answer": "a\t60 angstrom"
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 0,
+            "y": 529,
+            "width": 656,
+            "height": 464
+        },
+        "a": {
+            "x": 5,
+            "y": 0,
+            "width": 653,
+            "height": 519
+        }
+    }
+}

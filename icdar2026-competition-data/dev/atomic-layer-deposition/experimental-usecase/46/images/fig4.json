@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/46/fig4",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the capacitance (C) as a function of gate bias (V<sub>g</sub>) for different film thicknesses of HfO2 gate dielectric layer (3nm, 9.4nm, 16.8nm). The channel layer is passivated in situ at 50\u00b0C. The inset shows the current density (J) as a function of gate bias.",
+        "b": "The figure shows the capacitance (C) as a function of gate bias (V<sub>g</sub>) for two different passivations, ex-situ ((NH<sub>4</sub>)<sub>2</sub>S and  in situ  H<sub>2</sub>S) at 50\u00b0C. The inset shows the current density (J) as a function of gate bias."
+    },
+    "data_extraction": {
+        "a": "| Gate Bias V<sub>g</sub> (V) | 3 nm   | 9.4 nm | 16.8 nm |\n|-----------------------------|--------|--------|---------|\n| -2                          | 0.003  | 0.0025 | 0.002  |\n| -1                          | 0.004  | 0.003  | 0.0022 |\n| -0.5                        | 0.005  | 0.004  | 0.0025 |\n| 0                           | 0.006  | 0.005  | 0.003  |\n| 0.5                         | 0.008  | 0.0065 | 0.004  |\n| 1                           | 0.010  | 0.008  | 0.005  |\n| 1.5                         | 0.0115 | 0.0095 | 0.006  |\n| 2                           | 0.0125 | 0.0105 | 0.007  |\n| 2.5                         | 0.013  | 0.0115 | 0.0078 |\n| 3                           | 0.0135 | 0.012  | 0.0085 |",
+        "b": "| Gate Bias V<sub>g</sub> (V) | (NH<sub>4</sub>)<sub>2</sub>S | 50\u00b0C H<sub>2</sub>S |\n|-----------------------------|-------------------------------|----------------------|\n| -2                          | 0.003                        | 0.0028              |\n| -1                          | 0.004                        | 0.0035              |\n| -0.5                        | 0.005                        | 0.0045              |\n| 0                           | 0.006                        | 0.0055              |\n| 0.5                         | 0.0075                       | 0.0068              |\n| 1                           | 0.0085                       | 0.0078              |\n| 1.5                         | 0.009                        | 0.0085              |\n| 2                           | 0.0095                       | 0.009               |\n| 2.5                         | 0.0098                       | 0.0095              |\n| 3                           | 0.010                        | 0.0098              |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What is Vfb?",
+                "answer_type": "Factoid",
+                "answer": "VFB (Flat-Band Voltage) is the applied gate voltage where the semiconductor's energy bands are flat (no bending), indicating zero net charge in the semiconductor. In figure b, flat band voltages would be approximately -2 to -1"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Does in-situ passivation work?",
+                "answer_type": "Paragraph",
+                "answer": "Although a slight Vfb shift is apparent, a similar profile is observed in the CV curves of both devices. Both devices have a similar Cmax in accumulation while the in situ passivated device appears to have slightly higher interface state density. The JV plot in the inset of (b) shows similar leakage current density at 1 V with a higher electric breakdown field for the in situ passivated device. This demonstrates that the in situ passivation approach employed in this work can achieve results comparable to those obtained using ex situ aqueous (NH4)2S passivation."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "questions": "Does repeated CV measurement of the MOS structures cause  degradation of the bulk and interface properties of the MOS structures?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "From the inset plot in figure a, determine the leakage current density at 1 V.",
+                "answer_type": "List",
+                "answer": "The leakage current densities at 1 V are\n1. For the 3 nm device, ~2x10^\u22126 A/cm2\n2. For the 9.4 nm device, ~3x10^\u22128 A/cm2 \n3. For the 16.8nm device, ~2x10^\u22128 A/cm2"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 8,
+            "y": 0,
+            "width": 470,
+            "height": 280
+        },
+        "b": {
+            "x": 8,
+            "y": 304,
+            "width": 470,
+            "height": 315
+        }
+    }
+}
