@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/2/figure_3",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "b": "Figure shows film thickness profiles for platinum ALD using short (0.2 s) and long (1.5 s) MeCpPtMe\u2083 precursor pulses as a function of substrate position along the gas-flow direction. Long precursor pulses yield consistently thicker films, reflecting greater precursor availability across the surface. Both profiles show a mild decrease in thickness with distance from the leading edge, indicating precursor depletion during transport. The small error bars suggest good reproducibility for both pulse conditions."
+    },
+    "data_extraction": {
+        "a": "| Distance from leading edge (cm) | Long-pulse thickness (nm) | Short-pulse thickness (nm) |\n|---------------------------------|---------------------------|----------------------------|\n| 1                               | ~78 \u00b1 5                   | ~66 \u00b1 5                    |\n| 2                               | ~76 \u00b1 5                   | ~64 \u00b1 5                    |\n| 3                               | ~72 \u00b1 5                   | ~63 \u00b1 5                    |\n| 4                               | ~68 \u00b1 5                   | ~60 \u00b1 5                    |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "How does the MeCpPtMe\u2083 pulse duration influence precursor transport and surface saturation along the gas-flow direction in figure?",
+                "answer_type": "Paragraph",
+                "answer": "Longer MeCpPtMe\u2083 pulses increase the total precursor dose delivered to the substrate, allowing surface saturation to be reached over a larger downstream distance before precursor depletion occurs. This leads to higher and more uniform film thickness along the gas-flow direction. Shorter pulses provide insufficient precursor flux, causing earlier depletion and reduced surface coverage downstream, which manifests as thinner films and a stronger spatial gradient."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Comparing the two datasets in figure (a), which pulse condition shows a stronger thickness decay with distance from the leading edge?",
+                "answer_type": "Factoid",
+                "answer": "The short-pulse condition shows a stronger thickness decay."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "What film-growth property is implied by the consistently thicker films obtained using long precursor pulses across all measured positions?",
+                "answer_type": "Paragraph",
+                "answer": "The consistently greater thickness implies more complete surface saturation during each ALD cycle when long pulses are used. This suggests that the process is less transport-limited and that adsorption kinetics dominate over precursor delivery limitations, resulting in a higher effective growth per cycle across the substrate."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "How can the trends in figure (a) inform the design of ALD processes for large-area or high-aspect-ratio substrates?",
+                "answer_type": "Paragraph",
+                "answer": "The figure demonstrates that longer precursor pulses improve thickness uniformity by overcoming transport limitations. For large-area wafers or high-aspect-ratio features, pulse durations must be sufficiently long to ensure uniform precursor delivery throughout the structure. These insights guide pulse-time optimization to balance throughput against uniformity requirements in industrial ALD reactors."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 535,
+            "height": 371
+        }
+    }
+}

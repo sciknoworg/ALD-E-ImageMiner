@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/8/figure_3",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "line chart"
+    },
+    "summarization": {
+        "a": "The graph shows the relationship between deposition temperature (T<sub>dep</sub>) and GPC (\u00c5/cycle). As the temperature increases, GPC decreases.",
+        "b": "The graph illustrates the impact of pulse length on GPC. Longer pulse lengths result in higher GPC values.",
+        "c": "The line chart demonstrates the increase in thickness with the number of cycles. There's a linear relationship indicating that more cycles lead to thicker layers."
+    },
+    "data_extraction": {
+        "a": "| T<sub>dep</sub> (\u00b0C) | GPC (\u00c5/cycle) |\n|---|---|\n| 210 | 6.8 |\n| 220 | 6.5 |\n| 230 | 6.0 |\n| 240 | 5.5 |",
+        "b": "| Pulse length (s) | GPC (\u00c5/cycle) |\n|---|---|\n| 1 | 5.7 |\n| 2 | 6.5 |\n| 3 | 7.0 |\n| 4 | 7.2 |\n| 5 | 7.3 |",
+        "c": "| Cycles | Thickness (nm) |\n|---|---|\n| 50 | 50 |\n| 100 | 75 |\n| 150 | 100 |"
+    },
+    "vqa": {
+        "c": [
+            {
+                "question_type": "Application/Performance",
+                "questions": "Does panel (c) confirm that the Eu-HQA process exhibits true ALD/MLD-type growth behavior?",
+                "answer_type": "Yes/No",
+                "answer": "Yes. The linear relationship between thickness and cycle number, passing through the origin, confirms self-limiting, layer-by-layer growth characteristic of ideal ALD/MLD processes."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "At what pulse length do both precursors reach saturation in panel (b)?",
+                "answer_type": "Factoid",
+                "answer": "Both Eu-thd and HQA precursors reach saturation at approximately 3 seconds pulse length."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "What do the blue and green data points represent in panel (b)?",
+                "answer_type": "Factoid",
+                "answer": "Blue points represent Eu-thd (europium tris-tetramethylheptanedionate) precursor saturation, and green points represent HQA (2-hydroxyquinoline-4-carboxylic acid) organic precursor saturation."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Why does GPC decrease with increasing deposition temperature in panel (a)?",
+                "answer_type": "Paragraph",
+                "answer": "This decreasing GPC trend is typical for ALD/MLD processes involving organic precursors. At higher temperatures, organic molecules may partially desorb from the surface before reacting, or undergo thermal decomposition. Additionally, increased thermal energy can enhance desorption of physisorbed species, reducing the effective surface coverage per cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "c": {
+            "x": 658,
+            "y": 0,
+            "width": 341,
+            "height": 688
+        },
+        "b": {
+            "x": 332,
+            "y": 0,
+            "width": 326,
+            "height": 688
+        },
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 331,
+            "height": 694
+        }
+    }
+}

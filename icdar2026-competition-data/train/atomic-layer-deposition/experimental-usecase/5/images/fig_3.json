@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/5/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This figure tracks surface functional group evolution during an ABAB\u2026 ALD sequence using integrated IR absorbances of C\u2013H and N\u2013H stretching modes at 152 \u00b0C. In panel (a), increasing TDMAT exposure causes the N\u2013H signal to rapidly decrease toward zero while the C\u2013H signal rises and approaches saturation, indicating that TDMAT consumption of NHx*-terminated sites is accompanied by accumulation of methyl-containing ligands on the surface.",
+        "b": "In this figure, increasing NH\u2083 exposure produces the opposite behavior: N\u2013H absorbance increases and saturates while C\u2013H absorbance decreases and levels off, consistent with NH\u2083-driven ligand removal and surface re-termination by NHx* species. Together, the two panels demonstrate complementary half-reactions and self-limiting surface chemistry characteristic of ALD cycling."
+    },
+    "data_extraction": {
+        "a": "| TDMAT Exposure (Torr\u00b7min) | C\u2013H (integrated absorbance) | N\u2013H (integrated absorbance) |\n|---|---|---|\n| 0   | ~0.23 | ~1.00 |\n| 3   | ~0.78 | ~0.25 |\n| 6   | ~0.88 | ~0.15 |\n| 10  | ~0.90 | ~0.10 |\n| 15  | ~0.94 | ~0.06 |\n| 20  | ~0.95 | ~0.04 |\n| 25  | ~0.98 | ~0.02 |\n| 35  | ~1.00 | ~0.01 |",
+        "b": "| NH\u2083 Exposure (Torr\u00b7min) | C\u2013H (integrated absorbance) | N\u2013H (integrated absorbance) |\n|---|---|---|\n| 0     | ~1.00 | ~0.00 |\n| 500   | ~0.45 | ~0.78 |\n| 1000  | ~0.38 | ~0.95 |\n| 1500  | ~0.36 | ~0.95 |\n| 2000  | ~0.34 | ~0.85 |\n| 3000  | ~0.34 | ~0.95 |\n| 3500  | ~0.33 | ~0.98 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What does the recovery of N\u2013H absorbance during NH\u2083 exposure imply about surface termination?",
+                "answer_type": "Paragraph",
+                "answer": "It implies that NH\u2083 effectively removes methyl-derived ligands and re-terminates the surface with NHx* species. This regeneration of reactive sites is essential for sustaining cyclic ALD growth."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "Why is minimizing residual C\u2013H after the NH\u2083 step important for TiN film quality?",
+                "answer_type": "Paragraph",
+                "answer": "Residual C\u2013H indicates carbon-containing fragments remain on the surface, which can incorporate into the growing film as impurities. Carbon contamination can increase resistivity and degrade barrier performance, so effective NH\u2083 exposure is critical for high-quality TiN films."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Which vibrational mode changes most rapidly during the initial TDMAT exposure?",
+                "answer_type": "Factoid",
+                "answer": "The N\u2013H absorbance decreases most rapidly during the initial TDMAT exposure."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "What does the saturation of C\u2013H absorbance at high TDMAT exposure in subfigure (a) imply about surface coverage?",
+                "answer_type": "Paragraph",
+                "answer": "Saturation of the C\u2013H signal implies that available reactive surface sites have been fully occupied by methyl-containing ligands. Additional precursor exposure does not increase adsorption, indicating complete surface coverage. This confirms self-limiting precursor chemisorption."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 3,
+            "y": 535,
+            "width": 505,
+            "height": 503
+        },
+        "a": {
+            "x": 3,
+            "y": 6,
+            "width": 505,
+            "height": 508
+        }
+    }
+}

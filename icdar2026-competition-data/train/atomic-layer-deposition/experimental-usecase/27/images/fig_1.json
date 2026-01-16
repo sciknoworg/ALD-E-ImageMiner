@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/27/fig_1",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the relationship between deposition temperature and thickness and resistivity of a material.",
+        "b": "The line chart displays the thickness of a material as a function of the number of cycles."
+    },
+    "data_extraction": {
+        "a": "| Deposition Temperature (\u00b0C) | Thickness (nm) | Resistivity (\u03a9\u00b7cm) |\n|---|---|---|\n| 175 | 15 | 500 |\n| 200 | 19 | 450 |\n| 250 | 19 | 350 |\n| 300 | 19 | 400 |\n| 350 | 25 | 500 |",
+        "b": "| Number of Cycles | Thickness (nm) |\n|---|---|\n| 20 | 8 |\n| 40 | 15 |\n| 60 | 22 |\n| 80 | 30 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "What is the GPC of the given process?",
+                "answer_type": "Factoid",
+                "answer": "b\tThe GPC is 20/50 = 0.4 nm/cycle."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What is a temperature window and is this present for the growth of TiN?",
+                "answer_type": "Paragraph",
+                "answer": "a\tA temperature window is a range of temperatures where the GPC is independent of temperature. The graph shows this between 200 and 300 degrees celcius."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "Does the temperature window also apply for the resistivity, as it does for the thickness?",
+                "answer_type": "Paragraph",
+                "answer": "a\tWithin the range of 200 to 300 degrees celcius there is a change in resistivity, indicating that the temperature window does not apply for the resistivity."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What could be a reason for the increasing GPC for increasing temperature?",
+                "answer_type": "Paragraph",
+                "answer": "a\tA possible explaination for more growth at higher temperatures is parasitic CVD due to decomposition of precursor molecules."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 182,
+            "y": 21,
+            "width": 257,
+            "height": 184
+        },
+        "a": {
+            "x": 3,
+            "y": 5,
+            "width": 659,
+            "height": 463
+        }
+    }
+}

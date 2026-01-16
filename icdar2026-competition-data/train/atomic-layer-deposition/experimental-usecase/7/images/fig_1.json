@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/7/fig_1",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Real-time mass sensor signal vs. time during a single ALD cycle at growth temperatures of 100C and 300C. The plot defines the specific mass changes: $\\Delta m_1$ (gain from TiCl_4 pulse), $\\Delta m_2$ (loss during purge/reaction), $\\Delta m_2'$ (initial desorption), and $\\Delta m_0$ (net mass increment per cycle)."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Event | Signal 300\u00b0C (Top) | Signal 100\u00b0C (Bottom) |\n|---|---|---|---|\n| 10 | Start TiCl4 Pulse | ~0 | ~0 |\n| 12 | End TiCl4 Rise (\u0394m1) | ~70 | ~60 |\n| 20 | End TiCl4 Pulse | ~70 | ~60 |\n| 25 | Start H2O Pulse | ~65 | ~55 |\n| 26 | Drop (\u0394m2') | ~35 | ~35 |\n| 30 | End H2O Pulse | ~35 | ~35 |\n| 40 | Final Level (\u0394m0) | ~35 | ~35 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What are the two specific growth temperatures (T_G) for which mass sensor signals are recorded in this figure?",
+                "answer_type": "List",
+                "answer": "1.300\u00b0C\n2. 100\u00b0C"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Does the initial mass gain (\u0394m1) during the TiCl4 pulse appear significantly larger at 300\u00b0C than at 100\u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, the vertical step height labeled \u0394m1 is clearly larger in the top trace (300\u00b0C)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "How does the 300 \u00b0C trace evolve across the TiCl\u2084 pulse and the H\u2082O pulse?",
+                "answer_type": "Paragraph",
+                "answer": "During the TiCl\u2084 pulse, the top trace shows a sharp step increase labeled \u0394m\u2081, followed by a plateau while the pulse continues. Around the H\u2082O pulse, the signal decreases, with the drop region annotated by \u0394m\u2082 and \u0394m\u2082\u2032. The trace then settles to a lower plateau and finishes the cycle at a baseline shifted upward from the start, labeled \u0394m\u2080. Overall, it\u2019s a step-up (TiCl\u2084) then step-down (H\u2082O-related) response with a nonzero net offset."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "According to the timing bars in figure , which reactant is pulsed first in the ALD cycle?",
+                "answer_type": "Factoid",
+                "answer": "TiCl4"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 441,
+            "height": 541
+        }
+    }
+}

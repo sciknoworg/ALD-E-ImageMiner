@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/12/fig_2",
+    "classification": {
+        "a": "spectra chart"
+    },
+    "summarization": {
+        "a": "The Fourier-Transform Infrared Spectroscopy(FTIR)  spectra chart spectrum shows how disilane (Si\u2082H\u2086)acts with hydroxylated silica at 650 K. The negative peak near 3750 cm\u207b\u00b9 indicates that surface Si\u2013OH groups are being consumed. The positive peaks\u2014around 2250 cm\u207b\u00b9 (Si\u2013H stretch) and 900 cm\u207b\u00b9 (Si\u2013H bending)\u2014show that silicon hydride species form and attach to the silica surface during the reaction."
+    },
+    "data_extraction": {
+        "a": "| Frequency (cm\u207b\u00b9) | Infrared Absorbance | Remark |\n|----------------|----------------------|---------|\n| 3750           | -0.15                | SiO-H Stretch |\n| 3000           | 0.004               | -|\n| 2250           | 0.06                 | - |\n| 2000           | 0.35                 | SiO-H Stretch |\n| 1500           | 0.004              |  -|\n| 1000           | 0.60                 | Si-H Scissors |\n| 950            | -0.17                 | SiO-H Stretch |\n| 750            | 0.004                |  - |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "List the sequence of chemical events occurring on the silica surface during the 30-minute exposure as revealed by the difference spectrum.",
+                "answer_type": "List",
+                "answer": "Introduction of Si\u2082H\u2086 into the reactor.\nReaction and loss of surface hydroxyl groups (Si-OH).\nChemisorption and deposition of silyl species (SiH\u2093)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "Based on the peaks at ~2250 cm\u207b\u00b9 and ~3750 cm\u207b\u00b9 how does the reaction alter the surface polarity and chemical composition? Explain the structural cause of this shift.",
+                "answer_type": "Paragraph",
+                "answer": "The surface transforms from a polar, hydroxyl-terminated state to a non-polar, hydrogen-terminated (silyl) state. The dominant negative peak shows the loss of polar O-H bonds, while the strong positive multiplet at 2250 cm\u207b\u00b9 indicates the formation of Si-H bonds. This substitution replaces reactive hydrophilic sites with stable hydrophobic hydride species, fundamentally altering the surface's adsorption properties."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "This process is run at 650 K. If the temperature were lowered to 300 K to reduce the thermal influence, how would the intensity of the 'Si-H Stretch' and 'SiO-H Stretch' peaks likely compare to this figure, and what is the performance trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "At 300 K, thermal energy would likely be insufficient to drive the reaction kinetics efficiently, resulting in significantly smaller peaks for both the Si-H stretch (deposition) and SiO-H stretch (consumption).\nTrade-off: While a lower thermal influence protects sensitive sub-layers, the trade-off is incomplete surface passivation and lower coverage, leaving unreacted hydroxyl defects that could degrade subsequent layer quality."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "Given the 'Si-H Scissors' and 'Si-H Stretch' data, what does this surface termination imply for the nucleation of a subsequent Silicon Atomic Layer Deposition (ALD) process compared to an untreated surface?",
+                "answer_type": "Paragraph",
+                "answer": "The strong positive absorbance for Si-H modes confirms a hydrogen-terminated surface, which is chemically distinct from the initial oxide. In Silicon ALD, this H-termination often facilitates cleaner nucleation by preventing immediate oxidation of the precursor, thereby promoting epitaxial alignment or higher quality poly-crystalline growth compared to an amorphous oxide surface."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 3,
+            "width": 633,
+            "height": 646
+        }
+    }
+}

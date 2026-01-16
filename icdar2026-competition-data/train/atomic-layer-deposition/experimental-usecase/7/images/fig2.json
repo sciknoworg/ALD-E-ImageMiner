@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/7/fig2",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Scatter plot comparing mass increments \u0394m\u2080 and \u0394m\u2081 vs. growth temperature for films grown on buffer layers deposited at 100 \u00b0C (circles) and 300 \u00b0C (squares). It shows that the 300 \u00b0C buffer layer generally results in higher or increasing \u0394m\u2081 values, particularly above 200 \u00b0C."
+    },
+    "data_extraction": {
+        "a": "| Growth Temp (\u00b0C) | Buffer 100\u00b0C: \u0394m0 (\u25cf) | Buffer 100\u00b0C: \u0394m1 (\u25cb) | Buffer 300\u00b0C: \u0394m0 (\u25a0) | Buffer 300\u00b0C: \u0394m1 (\u25a1) |\n|---|---|---|---|---|\n| 100 | ~50 | ~95 | ~45 | ~92 |\n| 150 | ~35 | ~75 | ~40 | ~85 |\n| 200 | ~30 | ~68 | ~38 | ~92 |\n| 250 | ~25 | ~60 | ~38 | ~105 |\n| 350 | ~28 | ~62 | ~40 | ~100 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "According to the figure caption, what were the specific durations used for the four steps of the reaction cycle (TiCl\u2084 pulse, first purge, H\u2082O pulse, second purge)?",
+                "answer_type": "List",
+                "answer": "1.  2 s (TiCl\u2084)\n2.  2 s (First purge)\n3.  2 s (H\u2082O pulse)\n4.  5 s (Second purge)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Is the mass increment \u0394m\u2081 (open symbols) consistently larger than \u0394m\u2080 (filled symbols) across the temperature range shown?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, the open symbols are consistently plotted higher on the y-axis than the corresponding filled symbols."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Compare the \u0394m\u2081 mass increment for the two buffer-layer temperatures in subfigure (a). How does the 300 \u00b0C buffer affect the result relative to the 100 \u00b0C buffer?",
+                "answer_type": "Paragraph",
+                "answer": "The buffer layer deposited at 300 \u00b0C  (open squares) generally results in significantly higher \u0394m\u2081 values compared to the buffer deposited at 100 \u00b0C (open circles). This difference is most notable at higher growth temperatures (above 200 \u00b0C), where the 300 \u00b0C buffer sample shows an increasing trend, reaching values over 100 units, while the 100 \u00b0C buffer sample decreases to around 60 units."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What experimental condition distinguishes the data points represented by squares from those represented by circles in subfigure (a)?",
+                "answer_type": "Factoid",
+                "answer": "The temperature at which the buffer layer was grown (300 \u00b0C for squares vs 100 \u00b0C for circles)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 5,
+            "width": 458,
+            "height": 547
+        }
+    }
+}

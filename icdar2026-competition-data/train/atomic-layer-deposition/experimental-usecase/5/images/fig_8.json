@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/5/fig_8",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This plot shows the QCM mass ratio as a function of deposition temperature for three reactant pulse sequences. The short-pulse sequence remains lowest across the full temperature range (\u22480.60 \u2192 0.93), indicating a smaller relative contribution from the NH\u2083 half-cycle. The medium-pulse sequence starts high at 50 \u00b0C, dips near 90 \u00b0C, and then increases steadily to ~1.16 at 240 \u00b0C. The long-pulse sequence stays near ~0.85\u20130.95 up to 150 \u00b0C and then rises above unity at higher temperatures, reflecting a growing contribution from the second half-reaction."
+    },
+    "data_extraction": {
+        "a": "| Pulse sequence | Deposition Temperature (\u00b0C) | QCM Mass Ratio R |\n|---|---|---|\n| Long (100-10-20-30) | 50  | ~0.88 |\n| Long (100-10-20-30) | 90  | ~0.84 |\n| Long (100-10-20-30) | 120 | ~0.84 |\n| Long (100-10-20-30) | 150 | ~0.92 |\n| Long (100-10-20-30) | 180 | ~1.02 |\n| Long (100-10-20-30) | 210 | ~1.07 |\n| Long (100-10-20-30) | 240 | ~1.11 |\n| Medium (20-10-6-10) | 50  | ~1.06 |\n| Medium (20-10-6-10) | 90  | ~0.86 |\n| Medium (20-10-6-10) | 120 | ~0.88 |\n| Medium (20-10-6-10) | 150 | ~0.98 |\n| Medium (20-10-6-10) | 180 | ~1.08 |\n| Medium (20-10-6-10) | 210 | ~1.14 |\n| Medium (20-10-6-10) | 240 | ~1.16 |\n| Short (1-0.5-1-5)   | 50  | ~0.60 |\n| Short (1-0.5-1-5)   | 90  | ~0.66 |\n| Short (1-0.5-1-5)   | 120 | ~0.67 |\n| Short (1-0.5-1-5)   | 150 | ~0.70 |\n| Short (1-0.5-1-5)   | 180 | ~0.78 |\n| Short (1-0.5-1-5)   | 210 | ~0.80 |\n| Short (1-0.5-1-5)   | 240 | ~0.93 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Which pulse sequence gives the highest QCM mass ratio at 240 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Medium (20-10-6-10), R \u2248 1.16."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "At what temperature does the long pulse sequence begin to exceed R = 1?",
+                "answer_type": "Factoid",
+                "answer": "180 \u00b0C (R \u2248 1.20)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What does an increase in R with temperature suggest about the ALD half-cycle mass balance?",
+                "answer_type": "Paragraph",
+                "answer": "An increasing R indicates that the net mass change after a full cycle grows relative to the precursor-only mass gain. This suggests that the NH\u2083 half-cycle contributes more strongly at higher temperatures, likely due to more complete ligand removal or enhanced reaction progress."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "Is the short pulse sequence always the lowest R curve across the full temperature range shown?",
+                "answer_type": "Yes/No",
+                "answer": "Yes."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 1,
+            "width": 663,
+            "height": 643
+        }
+    }
+}

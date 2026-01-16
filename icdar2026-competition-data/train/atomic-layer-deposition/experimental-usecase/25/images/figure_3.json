@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/25/figure_3",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure plots the mass per cycle (MPC) during 400 ALD cycles for ZnO and GeO\u2093 films. Each deposition was interrupted after 200 cycles by inserting a single cycle of the opposite material, creating ZnO/GeO\u2093/ZnO and GeO\u2093/ZnO/GeO\u2093 sequences"
+    },
+    "data_extraction": {
+        "a": "| Cycle Number | ZnO / 1 cycle GeO\u2093 / ZnO (ng/cm\u00b2) | GeO\u2093 / 1 cycle ZnO / GeO\u2093 (ng/cm\u00b2) |\n|--------------|------------------------------------|--------------------------------------|\n| 0            | 140                                | 20                                   |\n| 50           | 145                                | 22                                   |\n| 100          | 147                                | 23                                   |\n| 150          | 148                                | 24                                   |\n| 200 (Interruption) | 150            | 50                                   |\n| 250          | 152                                | 24                                   |\n| 300          | 153                                | 25                                   |\n| 350          | 155                                | 26                                   |\n| 400          | 158                                | 27                                   |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What is an interruption experiment?",
+                "answer_type": "Paragraph",
+                "answer": "The deposition of ZnO was interrupted after 200 cycles by performing a single GeOy cycle before depositing another 200 cycles of ZnO. Similarly, the deposition of GeOy was interrupted after 200 cycles by performing a single ZnO cycle before depositing another 200 cycles of GeOy. As one continuous process is interrupted, this is called an interruption experiment"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What is the use of interruption experiment?",
+                "answer_type": "Factoid",
+                "answer": "An interruption experiment was performed to further understand the dynamics of the inhibition seen when mixing ZnO and GeOy subcycles into ZGO supercycles"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "How did the MPC change during the two interruption experiments?",
+                "answer_type": "List",
+                "answer": "1. Only a minor transient in MPC was seen after the ZnO process was interrupted with a single GeOy cycle.\n 2. In contrast, when the GeOy process was interrupted by a single ZnO cycle, the MPC was lowered for more than 100 consecutive GeOy cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What is the implication of the trend observed in the interruption experiment over the supercycle?",
+                "answer_type": "Paragraph",
+                "answer": "The implication of this for the ZGO supercycle processes would be that the more the GeOy cycles used in a row, the more the Ge\u2212OH on the surface and the more the reaction sites end up being poisoned during the DEZ exposure. As a result, the GPC would decrease as the amount of GeOy cycles in the ZGO supercycle increases."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 501,
+            "height": 349
+        }
+    }
+}

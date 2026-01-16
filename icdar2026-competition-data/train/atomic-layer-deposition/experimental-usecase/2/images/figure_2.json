@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/2/figure_2",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The chart shows the evolution of film thickness as a function of the total number of ALD reaction cycles. The relationship is strongly linear, with thickness increasing from ~35 nm at 1000 cycles to ~105 nm at 3000 cycles. The linear fit and narrow error bars suggest a stable, fully saturated ALD process in which the growth per cycle (GPC) remains constant throughout the experiment."
+    },
+    "data_extraction": {
+        "a": "| Number of reaction cycles | Film thickness (nm) |\n|---------------------------|----------------------|\n| 1000                      | ~35                  |\n| 1500                      | ~50                  |\n| 2000                      | ~70                  |\n| 3000                      | ~105                 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "In figure (a), what sequential ALD process characteristics must remain stable for the film thickness to scale linearly with the number of reaction cycles?",
+                "answer_type": "List",
+                "answer": "- Constant surface saturation during each precursor exposure step\n- Efficient purging that prevents gas-phase or parasitic reactions\n- Stable substrate temperature across all cycles\n- Reproducible adsorption and ligand-removal reactions in every half-cycle"
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "What intrinsic film property is most directly implied by the constant slope of the thickness\u2013cycle relationship in figure?",
+                "answer_type": "Factoid",
+                "answer": "A constant and uniform growth per cycle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Why does the linear trend in figure (a) rule out significant CVD-like contributions during film growth?",
+                "answer_type": "Paragraph",
+                "answer": "CVD-like growth would introduce continuous deposition during reactant exposure, causing the growth rate to depend on time rather than discrete cycles. This typically results in super-linear thickness increases with cycle count. The strictly linear trend observed confirms that growth occurs only during surface-limited reactions, consistent with true ALD rather than CVD behavior."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "Why is the linear thickness\u2013cycle relationship in figure (a) particularly advantageous for precise thickness control in nanoscale device fabrication?",
+                "answer_type": "Paragraph",
+                "answer": "A linear relationship allows thickness to be defined solely by the number of ALD cycles, enabling deterministic control without reliance on in-situ end-point detection. This is critical for nanoscale devices where deviations of even a few nanometers can significantly alter electrical, optical, or mechanical performance. Linear scaling simplifies process integration and improves reproducibility across wafers and batches."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 529,
+            "height": 378
+        }
+    }
+}

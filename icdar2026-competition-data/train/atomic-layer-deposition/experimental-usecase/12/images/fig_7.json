@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/12/fig_7",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This mulitple line plot represents the normalized, integrated absorbance of key IR vibrations (W\u2013F stretch and Si\u2013H stretches) against the total Si\u2082H\u2086 exposure during the WF\u2086 half-reaction at 425 K. It shows the W\u2013F signal decaying and the Si\u2013H signal growing as exposure increases, both saturating at high exposure."
+    },
+    "data_extraction": {
+        "a": "| Si\u2082H\u2086 Exposure (Torr min) | Normalized Integrated Absorbance | Stretch |\n|---|---|-----|\n| 0.0 | 0.0 | W-F Stretch |\n| 0.0 | 0.0 | Si-H Stretch |\n| 0.1 | 0.04 | W-F Stretch |\n| 0.1 | 0.8 | Si-H Stretch |\n| 0.2 | 0.007 | W-F Stretch |\n| 0.2 | 0.9 | Si-H Stretch |\n| 0.3 | -0.01 | W-F Stretch |\n| 0.3 | 1 | Si-H Stretch |\n| 0.4 | -0.01 | W-F Stretch |\n| 0.4 | 1 | Si-H Stretch |\n| 0.5 | -0.02 | W-F Stretch |\n| 0.5 | 1 | Si-H Stretch |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What control mechanism does the plateau at exposures >0.3 Torr\u00b7min demonstrate?",
+                "answer_type": "Factoid",
+                "answer": "The plateau indicates a self-limiting control mechanism, a hallmark of ALD. Once the reactive Si-H surface sites are fully consumed (absorbance ~ 0) and replaced by W-F species, the reaction stops automatically, meaning extending the exposure time further yields no additional material growth."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "If I consider reducing the WF\u2086 exposure to 0.1 Torr\u00b7min to increase throughput. Compare the surface state at 0.1 Torr\u00b7min vs. 0.6 Torr\u00b7min and evaluate the trade-off between speed and film quality.",
+                "answer_type": "List",
+                "answer": "0.1 Torr\u00b7min (Speed): High throughput, but the Si-H signal is still ~0.3 (30% unreacted), and W-F coverage is only ~80%.\n\n0.6 Torr\u00b7min (Quality): Slower throughput, but Si-H is fully removed (~0.0) and W-F is saturated (1.0)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "Describe the surface composition at the 'crossover point' (~0.05 Torr\u00b7min) compared to the final state.",
+                "answer_type": "Paragraph",
+                "answer": "At the crossover point, the surface is a heterogeneous mixture of approximately 50% unreacted Si-H bonds and 50% newly formed W-F species."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "The Si-H absorbance drops to near zero at saturation. If this value remained at 0.2 (20%) instead, what would this imply for the resistivity of the final Tungsten interconnect?",
+                "answer_type": "Paragraph",
+                "answer": "The saturation value greater than 1.0 indicates a high density of reactive Si\u2013H sites, possibly including higher-order silane species (SiH\u2093). Such a hydrogen-rich surface is advantageous because Si\u2013H bonds serve as the reducing agent for WF\u2086. A larger population of these active sites promotes fast and uniform nucleation of tungsten in the following deposition step."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 1,
+            "width": 598,
+            "height": 580
+        }
+    }
+}

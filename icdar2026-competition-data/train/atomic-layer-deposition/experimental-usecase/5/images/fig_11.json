@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/5/fig_11",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "As deposition temperature increases, oxygen content decreases markedly while nitrogen content increases, whereas titanium remains nearly constant, indicating improved Ti\u2013N formation at higher temperatures. Carbon remains low and only weakly temperature dependent.",
+        "b": "Increasing TDMAT exposure at 180 \u00b0C raises oxygen content and reduces nitrogen content, while titanium stays stable, suggesting that excess precursor exposure promotes oxygen incorporation rather than additional nitridation. Overall, deposition temperature appears to be the dominant parameter governing TiN film stoichiometry."
+    },
+    "data_extraction": {
+        "a": "| Deposition Temperature (\u00b0C) | O (at.%) | Ti (at.%) | N (at.%) | C (at.%) |\n|---|---|---|---|---|\n| ~60 | ~56 | ~31 | ~9 | ~3 |\n| ~120 | ~44 | ~32 | ~19 | ~5 |\n| ~180 | ~39 | ~32 | ~23 | ~5 |\n| ~240 | ~37 | ~33 | ~28 | ~6 |",
+        "b": "| TDMAT Exposure (s) | O (at.%) | Ti (at.%) | N (at.%) | C (at.%) |\n|---|---|---|---|---|\n| 0 | ~40 | ~32 | ~23 | ~5 |\n| ~20 | ~45 | ~31 | ~18 | ~6 |\n| ~100  | ~46 | ~31 | ~17 | ~7 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "How does extended TDMAT exposure alter surface reactions during ALD growth?",
+                "answer_type": "Paragraph",
+                "answer": "Extended precursor exposure increases surface residence time of reactive species, which can promote unintended oxygen uptake. Rather than enhancing nitridation, excess exposure appears to favor impurity incorporation. This suggests saturation of Ti sites occurs early in the exposure window."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "At which exposure regime does oxygen content appear to saturate?",
+                "answer_type": "Factoid",
+                "answer": "Oxygen content saturates after short TDMAT exposures and remains high at longer exposure times."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "questions": "What does the inverse relationship between oxygen and nitrogen suggest about film chemistry?",
+                "answer_type": "Paragraph",
+                "answer": "The opposing oxygen and nitrogen trends indicate competitive incorporation during growth. As temperature increases, nitrogen more effectively replaces oxygen within the film, promoting Ti\u2013N bonding. This reflects a shift toward a more stoichiometric TiN phase."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "Which deposition condition is most favorable for producing device-quality TiN films?",
+                "answer_type": "Factoid",
+                "answer": "Higher deposition temperatures are most favorable due to lower oxygen and higher nitrogen content."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 1,
+            "y": 581,
+            "width": 541,
+            "height": 564
+        },
+        "a": {
+            "x": 1,
+            "y": 0,
+            "width": 541,
+            "height": 558
+        }
+    }
+}

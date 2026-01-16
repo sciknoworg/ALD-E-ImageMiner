@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/12/fig_9",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "This line  chart represents the tungsten(W) film thickness after 3 ALD- AB cycles as a function of the number of Si\u2082H\u2086 pulses per cycle (B-step), while the WF\u2086 exposure (A-step) is held constant at 9 pulses per cycle. It demonstrates that film growth requires a minimum number of Si\u2082H\u2086 pulses to complete the reaction cycle."
+    },
+    "data_extraction": {
+        "a": "| Number of Si\u2082H\u2086 Pulses | Tungsten Film Thickness (\u00c5) |\n|---|---|\n| 0 | 0 |\n| 4 | 5 |\n| 12 | 7.5 |\n| 24 | 8.1 |\n| 48 | 7.4 |\n| 60 | 8.1 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "For the data point at 30 Si\u2082H\u2086 pulses, describe the exact process sequence for one of the three AB cycles. What is the purpose of using 9 WF\u2086 pulses in the A-step?",
+                "answer_type": "List",
+                "answer": "WF\u2086 Pulse\n\nPurge\n\nRepeat steps 1-2 until 9 total WF\u2086 pulses are delivered.\n\nSi\u2082H\u2086 Pulse\n\nPurge\n\nRepeat steps 4-5 a total of 30 times.\nThe 9 WF\u2086 pulses ensure the surface is saturated, guaranteeing a complete and reproducible A-step half-reaction regardless of the subsequent B-step condition, isolating the effect of the Si\u2082H\u2086 dose."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "Compare using Si\u2082H\u2086 as the co-reducing agent versus using diborane (B\u2082H\u2086) for W ALD. For an application requiring the lowest possible oxygen contamination in the final tungsten film, which co-reactant is likely better and what is the trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "Diborane (B\u2082H\u2086) is likely better for minimizing oxygen. B\u2082H\u2086 is a stronger reducing agent that can getter trace oxygen and water more effectively than Si\u2082H\u2086. The trade-off is that boron itself can incorporate as an impurity in the W film, potentially altering its electrical resistivity and stability, whereas silicon incorporation from Si\u2082H\u2086 may form a more benign tungsten silicide."
+            },
+            {
+                "question_type": "Structure-Property",
+                "questions": "How does the film thickness correlate with the number of Si\u2082H\u2086 pulses? Describe the chemical cause for the trend observed from 0 to ~10 pulses.",
+                "answer_type": "Paragraph",
+                "answer": "Thickness increases with Si\u2082H\u2086 pulses, then saturates. From 0 to ~10 pulses, thickness rises sharply because each pulse provides more reductant to convert the W\u2013F surface layer into a metallic W film and regenerate the Si\u2013H sites needed for the next WF\u2086 pulse. Insufficient Si\u2082H\u2086 leaves the surface partially fluorinated, preventing full tungsten deposition in the next cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "questions": "The thickness saturates after about 20 Si\u2082H\u2086 pulses per cycle. What does this imply for the required process recipe to achieve a 100 \u00c5 thick, consistent tungsten film on high-aspect-ratio structures at 425 K?",
+                "answer_type": "Paragraph",
+                "answer": "This implies the process must use a saturating Si\u2082H\u2086 dose (>20 pulses/cycle) to ensure complete surface reaction. To grow 100 \u00c5, you would run the calculated number of full ALD cycles based on the saturated growth per cycle (~20 \u00c5/3 cycles = ~6.7 \u00c5/cycle). Consistency and conformality are achieved only when both half-reactions (9 WF\u2086 pulses, >20 Si\u2082H\u2086 pulses) are operated in their saturated regimes."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 599,
+            "height": 598
+        }
+    }
+}

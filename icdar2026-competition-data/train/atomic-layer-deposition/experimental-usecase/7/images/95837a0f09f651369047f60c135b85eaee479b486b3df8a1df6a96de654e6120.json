@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/7/95837a0f09f651369047f60c135b85eaee479b486b3df8a1df6a96de654e6120",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "\u0394m\u2081 (open markers) is consistently higher than \u0394m\u2080 (filled markers) across 100\u2013400 \u00b0C for all three cycle-time sequences. \u0394m\u2081 peaks around ~250\u2013300 \u00b0C (depending on marker set) and then trends downward toward 400 \u00b0C, while \u0394m\u2080 stays comparatively flat through ~350 \u00b0C. The 5\u20132\u20132\u20135 s condition shows a notable \u0394m\u2080 increase at ~400 \u00b0C relative to the other sequences. Overall, varying the first-step pulse time mainly impacts \u0394m\u2081 magnitude and its temperature dependence, more than \u0394m\u2080.",
+        "b": "Two cycle-time sequences are compared, and the separation between \u0394m\u2081 (open) and \u0394m\u2080 (filled) is maintained across the full temperature range. \u0394m\u2081 rises toward a maximum near ~300 \u00b0C and then decreases at higher temperature, whereas \u0394m\u2080 remains near ~35\u201340 with only modest changes. Differences between the two purge-time conditions are clearer in \u0394m\u2081 than in \u0394m\u2080. The data suggest temperature sensitivity is concentrated in the \u0394m\u2081 response rather than the baseline \u0394m\u2080 increment."
+    },
+    "data_extraction": {
+        "a": "| Growth temperature (\u00b0C) | \u0394m1 (0.5-2-2-5 s, open \u25cb) | \u0394m1 (2-2-2-5 s, open \u25a1) | \u0394m1 (5-2-2-5 s, open \u25b3) | \u0394m0 (0.5-2-2-5 s, filled \u25cf) | \u0394m0 (2-2-2-5 s, filled \u25a0) | \u0394m0 (5-2-2-5 s, filled \u25b2) |\n|---|---:|---:|---:|---:|---:|---:|\n| 100 | ~86 | ~92 | ~88 | ~44 | ~45 | ~47 |\n| 150 | ~75 | ~84 | ~85 | ~35 | ~39 | ~40 |\n| 200 | ~88 | ~90 | ~95 | ~33 | ~37 | ~37 |\n| 250 | ~88 | ~105 | ~102 | ~36 | ~37 | ~37 |\n| 300 | ~101 | ~100 | ~112 | ~37 | ~38 | ~44 |\n| 350 | ~96 | ~101 | ~100 | ~38 | ~39 | ~39 |\n| 400 | ~90 | ~85 | ~98 | ~45 | ~45 | ~64 |",
+        "b": "| Growth temperature (\u00b0C) | \u0394m1 (2-2-0.5-5 s, open \u25cb) | \u0394m1 (2-2-5-5 s, open \u25a1) | \u0394m0 (2-2-0.5-5 s, filled \u25cf) | \u0394m0 (2-2-5-5 s, filled \u25a0) |\n|---|---:|---:|---:|---:|\n| 100 | ~80 | ~99 | ~41 | ~52 |\n| 150 | ~75 | ~90 | ~36 | ~39 |\n| 200 | ~87 | ~98 | ~34 | ~38 |\n| 250 | ~89 | ~101 | ~35 | ~37 |\n| 300 | ~104 | ~110 | ~36 | ~37 |\n| 350 | ~98 | ~99 | ~38 | ~35 |\n| 400 | ~83 | ~87 | ~40 | ~40 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "In subfigure (b), which step of the cycle sequence was varied between the two experiments?",
+                "answer_type": "Factoid",
+                "answer": "The third step (purge time) was varied between 0.5 s and 5 s."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "questions": "What are the three cycle-time sequences compared in subfigure (a)?",
+                "answer_type": "List",
+                "answer": "1. 0.5 - 2 - 2 - 5 s\n2. 2 - 2 - 2 - 5 s\n3. 5 - 2 - 2 - 5 s"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "How strongly does \u0394m\u2080 (filled symbols) vary with growth temperature from 100 to 350 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "It varies only weakly, staying clustered near ~35\u201345 arbitrary units across most of 100\u2013350 \u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "questions": "How do \u0394m\u2081 (open symbols) and \u0394m\u2080 (filled symbols) differ in magnitude and temperature dependence in subfigure (a)?",
+                "answer_type": "Paragraph",
+                "answer": "\u0394m\u2081 is systematically larger than \u0394m\u2080 across the entire temperature range, typically ~80\u2013110 versus ~30\u201345 in arbitrary units. \u0394m\u2081 also shows a clearer temperature response, with a broad maximum around ~250\u2013300 \u00b0C before decreasing at higher temperature. By contrast, \u0394m\u2080 is comparatively flat through ~350 \u00b0C, with only small offsets between marker sets. The main temperature sensitivity therefore sits in \u0394m\u2081 rather than \u0394m\u2080."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 0,
+            "y": 581,
+            "width": 470,
+            "height": 556
+        },
+        "a": {
+            "x": 4,
+            "y": 1,
+            "width": 467,
+            "height": 554
+        }
+    }
+}
