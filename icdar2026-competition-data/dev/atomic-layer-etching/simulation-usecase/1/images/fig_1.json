@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/1/fig_1",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the fraction of fluorine (F) as a function of height (h) in angstroms (\u00c5). The chart includes three lines representing different impact scenarios: 100 impacts, 200 impacts, and 400 CF2+ impacts"
+    },
+    "data_extraction": {
+        "a": "| Height h (\u00c5) | 100 impacts (%) | 200 impacts (%) | 400 impacts (%) |\n|---|---|---|---|\n| 18 | 0 | 0 | 0 |\n| 20 | 0 | 0.5 | 2 |\n| 21 | 1 | 3 | 7 |\n| 22 | 3 | 7 | 12 |\n| 23 | 5 | 11 | 22 |\n| 24 | 8 | 15 | 32 |\n| 25 | 18 | 30 | 48 |\n| 26 | 35 | 52 | 60 |\n| 27 | 60 | 62 | 63 |\n| 28 | 78 | 58 | 65 |\n| 29 | - | 67 | 68 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the F concentration profile evolve from 100 to 400 impacts?",
+                "answer_type": "Paragraph",
+                "answer": "The F concentration increases and the profile broadens slightly as more ions impact the surface. However, the changes between 200 and 400 impacts are small, indicating the system approaches quasi-steady-state around 250 impacts. The passivation layer thickness remains approximately constant at ~8 \u00c5."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At what height does the fluorine concentration begin to rise significantly?",
+                "answer_type": "Factoid",
+                "answer": "Around h = 18\u201320 \u00c5."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the F concentration saturate rather than continue increasing indefinitely?",
+                "answer_type": "Paragraph",
+                "answer": "The fluorocarbon passivation process is self-limiting. As F accumulates at the surface, available bonding sites become saturated and incoming CF\u2082\u207a ions increasingly reflect or sputter existing material rather than adding new F. This leads to a dynamic equilibrium where deposition and removal balance."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the approximate thickness of the fluorocarbon passivation layer?",
+                "answer_type": "Factoid",
+                "answer": "About 8 \u00c5."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 3,
+            "width": 471,
+            "height": 364
+        }
+    }
+}

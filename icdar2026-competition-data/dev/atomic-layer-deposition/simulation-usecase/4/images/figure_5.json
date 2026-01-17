@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/4/figure_5",
+    "classification": {
+        "a": "stacked spectra chart",
+        "b": "stacked spectra chart"
+    },
+    "summarization": {
+        "a": "This spectral chart presents in-situ FTIR spectra showing the surface chemical species after key pulses in the ABC-type ALD process on Al\u2082O\u2083. It directly reveals the molecular mechanism behind the selective deposition observed earlier: Hacac (step A) strongly adsorbs on Al\u2082O\u2083, blocking BDEAS (step B).",
+        "b": "This figure presents in-situ FTIR spectra showing the surface chemical species after key pulses in the ABC-type ALD process on a different starting surface SiO\u2082. It directly reveals the molecular mechanism behind the selective deposition observed earlier: Hacac (step A) weakly adsorbs on SiO\u2082, allowing BDEAS to react."
+    },
+    "data_extraction": {
+        "a": "| Wavenumber (cm\u207b\u00b9) | Absorbance(BDEAS) | Absorbance(Hacac)  |\n|------------------|------------|-----------|\n| 4000             |            |          |\n| 3500             |            |          |\n| 3000             |   C-H |C-H |\n| 2500             |            |          |\n| 2000             |    Si-H  |       |\n| 1500             |   Hacac | Hacac |\n| 1000             |            |          |",
+        "b": "| Wavenumber (cm\u207b\u00b9) | Absorbance(BDEAS) | Absorbance(Hacac)  |\n|------------------|------------|-----------|\n| 4000             |                   |            |\n| 3500             |                   |            |\n| 3000             |   C-H        |C-H     |\n| 2500             |                  |             |\n| 2000             |    Si-H     |             |\n| 1500             |   Hacac | Hacac |\n| 1000             |                 |              |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What specific surface property of Al\u2082O\u2083, absent on SiO\u2082, allows for the strong chemisorption of Hacac molecules during Step A?",
+                "answer_type": "Factoid",
+                "answer": "The presence of reactive Lewis acid sites (Al\u00b3\u207a centers) on the Al\u2082O\u2083 surface, which readily coordinate with the oxygen atoms in the Hacac ligand."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The FTIR data shows Hacac blocks BDEAS on Al\u2082O\u2083 but not on SiO\u2082. For manufacturing nanoelectronics, what is one specific process step where this molecular-level understanding guarantees a successful outcome?",
+                "answer_type": "Paragraph",
+                "answer": "This makes area-selective SiO\u2082 deposition straightforward. In a structure with SiO\u2082 fins and Al\u2082O\u2083 spacers, the ABC cycles will coat only the SiO\u2082 fins. The FTIR results confirm that the blocking layer works reliably and gives clean selectivity needed for modern device fabrication."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the sequence of dominant surface chemical groups present on the Al\u2082O\u2083 surface after each step of the first ABC cycle, as shown in Figure.",
+                "answer_type": "List",
+                "answer": "After Hacac (A) Pulse: Surface covered with Hacac ligands (peaks ~1500-1600 & ~2900-3000 cm\u207b\u00b9).\n\nAfter BDEAS (B) Pulse: Surface still dominated by Hacac ligands; minimal new Si-H or C-H from BDEAS, indicating blocked adsorption."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the intensity of the Hacac-related absorbance peaks after Step A on Al\u2082O\u2083 versus on SiO\u2082. What does this dramatic difference imply about the balance in using Hacac as a selective inhibitor?",
+                "answer_type": "Paragraph",
+                "answer": "Hacac binds very strongly to Al\u2082O\u2083 but only weakly to SiO\u2082. This means it can block reactions on Al\u2082O\u2083 very effectively, giving good selectivity. However, because it sticks so strongly, it may be harder to remove, which can limit how many selective cycles you can run or require an extra cleaning step. A weaker inhibitor would be easier to remove but would not give as strong a selectivity."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 6,
+            "y": 30,
+            "width": 515,
+            "height": 394
+        },
+        "a": {
+            "x": 549,
+            "y": 34,
+            "width": 515,
+            "height": 391
+        }
+    }
+}

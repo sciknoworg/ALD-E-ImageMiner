@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/1/fig_11",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "F density versus height at 10 eV for 100, 300, and 600 CF\u2082\u207a impacts. The F layer is narrow (~5 \u00c5) and remains at a fixed position, indicating minimal substrate disturbance.",
+        "b": "F density at 30 eV. The profile is much broader, and the peak shifts to lower heights with increasing impacts, indicating that Si etching occurs simultaneously with passivation."
+    },
+    "data_extraction": {
+        "a": "| Height h (\u00c5) | 100 impacts (Atoms/\u00c5\u00b3) | 300 impacts (Atoms/\u00c5\u00b3) | 600 impacts (Atoms/\u00c5\u00b3) |\n|---|---|---|---|\n| 38 | 0.000 | 0.000 | 0.001 |\n| 39 | 0.000 | 0.001 | 0.005 |\n| 40 | 0.000 | 0.005 | 0.015 |\n| 41 | 0.001 | 0.018 | 0.030 |\n| 42 | 0.008 | 0.035 | 0.048 |\n| 43 | 0.020 | 0.055 | 0.060 |",
+        "b": "| Height h (\u00c5) | 100 impacts (Atoms/\u00c5\u00b3) | 300 impacts (Atoms/\u00c5\u00b3) | 600 impacts (Atoms/\u00c5\u00b3) |\n|---|---|---|---|\n| 28 | 0.000 | 0.000 | 0.000 |\n| 30 | 0.000 | 0.000 | 0.005 |\n| 31 | 0.000 | 0.002 | 0.025 |\n| 32 | 0.000 | 0.005 | 0.038 |\n| 33 | 0.000 | 0.015 | 0.025 |\n| 34 | 0.001 | 0.028 | 0.010 |\n| 35 | 0.003 | 0.033 | 0.002 |\n| 36 | 0.008 | 0.022 | 0.001 |\n| 37 | 0.018 | 0.010 | 0.000 |\n| 38 | 0.024 | 0.005 | 0.000 |\n| 39 | 0.018 | 0.002 | 0.000 |\n| 40 | 0.012 | 0.000 | 0.000 |\n| 42 | 0.005 | 0.000 | 0.000 |\n| 44 | 0.001 | 0.000 | 0.000 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the F density peak shift leftward (to lower h) at 30 eV but not at 10 eV?",
+                "answer_type": "Paragraph",
+                "answer": "At 30 eV, the CF\u2082\u207a ions have enough energy to etch the underlying Si while depositing the fluorocarbon layer. As Si is removed, the surface recedes and the F-containing layer moves downward. At 10 eV, the ion energy is too low for significant etching, so the passivation layer remains at a fixed position."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the y-axis unit \"Atoms/\u00c5\u00b3\" represent?",
+                "answer_type": "Factoid",
+                "answer": "The local atomic number density of fluorine at each height in the sample."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the approximate thickness of the F-containing layer at 10 eV?",
+                "answer_type": "Factoid",
+                "answer": "About 5 \u00c5."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on this figure, what is the maximum recommended CF\u2082\u207a energy for growing a passivation layer on Si without etching?",
+                "answer_type": "Factoid",
+                "answer": "Below 30 eV, ideally around 10\u201320 eV."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 1,
+            "y": 306,
+            "width": 463,
+            "height": 347
+        },
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 459,
+            "height": 307
+        }
+    }
+}

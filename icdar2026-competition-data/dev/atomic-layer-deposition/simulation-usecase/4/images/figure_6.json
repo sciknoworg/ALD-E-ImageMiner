@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/4/figure_6",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The diagram represent the Density Functional Theory (DFT)-calculated reaction energy values comparing the chemisorption of Hacac on Al\u2082O\u2083 surface. The diagrams show the activation energy (E\u2090) and reaction energy (\u0394E) for the ligand-exchange reaction where Hacac replaces a surface hydroxyl group.",
+        "b": "The diagram represent the Density Functional Theory (DFT)-calculated reaction energy values comparing the chemisorption of Hacac on SiO\u2082surfaces. The diagrams show the activation energy (E\u2090) and reaction energy (\u0394E) for the ligand-exchange reaction where Hacac replaces a surface hydroxyl group. The key difference is that the reaction is exothermic and low-barrier on Al\u2082O\u2083 (\u0394E = -0.49 eV, E\u2090 = 0.01/0.25 eV) but endothermic and high-barrier on SiO\u2082 (\u0394E = +0.98 eV, E\u2090 = 2.35 eV)."
+    },
+    "data_extraction": {
+        "a": "| Reaction step | Energy (eV) |\n| ------ | ------- |\n| Physisorbed state | 0.05  |\n| Transition State  | 0.25  |\n|  Chemisorbed Product State | -0.49 |",
+        "b": "| Reaction step | Energy (eV) |\n| ------ | ------- |\n| Physisorbed state | 0.05  |\n|  Transition State  | 2.25  |\n|  Chemisorbed Product State | 0.98 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "The reaction is exothermic (\u0394E = -0.49 eV) on Al\u2082O\u2083 but endothermic (\u0394E = +0.98 eV) on SiO\u2082. What does this thermodynamic difference imply about the relative strength of the newly formed Al\u2013O(acac) bond versus Si\u2013O(acac) bond?",
+                "answer_type": "Factoid",
+                "answer": "It implies the Al\u2013O(acac) bond is significantly stronger than the Si\u2013O(acac) bond relative to their respective starting surface OH bonds."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The DFT results explain the FTIR observations (Hacac blocks Al\u2082O\u2083 but not SiO\u2082). For designing a new selective ALD process for a different material pair (e.g., HfO\u2082 vs. SiO\u2082), what does this figure suggest is the first computational screening step?",
+                "answer_type": "Paragraph",
+                "answer": "It suggests performing DFT calculations of the inhibitor's adsorption reaction energy (\u0394E) and activation energy (E\u2090) on both target and non-target surfaces. A successful selective process will likely require a large thermodynamic and kinetic preference (exothermic/low-barrier on target, endothermic/high-barrier on non-target) similar to the Al\u2082O\u2083/SiO\u2082 case shown here. This computational screen can rapidly identify promising inhibitor candidates before costly experimentation."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "For the reaction on Al\u2082O\u2083 [Fig with label a], list the sequence of energy states along the minimum energy path from reactants to products.",
+                "answer_type": "List",
+                "answer": "Physisorbed State: Hacac near the surface (0 eV reference).\n\nTransition State: Peak at ~0.25 eV (E\u2090).\n\nChemisorbed Product State: Al(acac)\u207a + H\u2082O(g) at -0.49 eV (\u0394E)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the activation energies (E\u2090) for Hacac chemisorption on Al\u2082O\u2083 versus SiO\u2082. What does the >2 eV difference imply for thermal ALD processing?",
+                "answer_type": "Paragraph",
+                "answer": "The very low E\u2090 on Al\u2082O\u2083 (0.25 eV) means Hacac reacts easily at low temperature, while the much higher E\u2090 on SiO\u2082 (2.35 eV) means it barely reacts at all under the same conditions. This large gap ensures that at typical ALD temperatures (~250\u2013300 \u00b0C), Hacac will strongly chemisorb on Al\u2082O\u2083 but remain essentially inactive on SiO\u2082. As a result, the process naturally becomes highly selective without needing extreme temperatures or additional steps."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 8,
+            "y": 28,
+            "width": 530,
+            "height": 549
+        },
+        "b": {
+            "x": 619,
+            "y": 20,
+            "width": 536,
+            "height": 557
+        }
+    }
+}

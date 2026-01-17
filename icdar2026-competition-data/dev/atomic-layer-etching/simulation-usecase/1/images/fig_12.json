@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/1/fig_12",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Number of sputtered Si atoms versus Ar\u207a ion impacts at 20, 30, and 40 eV. At 20 eV, Si sputtering is self-limiting and virtually stops after ~500 impacts. At 40 eV, etching continues throughout.",
+        "b": "Fraction of initial F removed from the sample versus Ar\u207a impacts. F is consumed faster at higher energies, correlating with enhanced Si etching."
+    },
+    "data_extraction": {
+        "a": "| Ar+ Ion Impacts | 20 eV (Sputtered Si Atoms) | 30 eV (Sputtered Si Atoms) | 40 eV (Sputtered Si Atoms) |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 200 | 2 | 10 | 15 |\n| 400 | 7 | 15 | 18 |\n| 600 | 8 | 16 | 23 |\n| 800 | 11 | 17 | 26 |\n| 1000 | 11 | 19 | 28 |\n| 1200 | 11 | 20 | 29 |\n| 1400 | 12 | 21 | 30 |\n| 1600 | 13 | 22 | 32 |\n| 1800 | 13 | 22 | 33 |\n| 2000 | 14 | 23 | 35 |",
+        "b": "| Ar+ Ion Impacts | 20 eV (F Fraction Removed) | 30 eV (F Fraction Removed) | 40 eV (F Fraction Removed) |\n|---|---|---|---|\n| 0 | 0.00 | 0.00 | 0.00 |\n| 200 | 0.05 | 0.28 | 0.30 |\n| 400 | 0.20 | 0.33 | 0.37 |\n| 600 | 0.24 | 0.38 | 0.43 |\n| 800 | 0.24 | 0.44 | 0.48 |\n| 1000 | 0.24 | 0.45 | 0.50 |\n| 1200 | 0.27 | 0.47 | 0.50 |\n| 1400 | 0.27 | 0.48 | 0.51 |\n| 1600 | 0.30 | 0.48 | 0.51 |\n| 1800 | 0.30 | 0.48 | 0.51 |\n| 2000 | 0.30 | 0.48 | 0.51 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does Si etching stop at low Ar\u207a energy even though F remains in the sample?",
+                "answer_type": "Paragraph",
+                "answer": "At 20 eV, once the readily accessible surface F is consumed or reacted, the remaining F is either too deep in the substrate or bonded too strongly to participate in reactive ion etching. The Ar\u207a ions lack sufficient energy to access this buried F or to physically sputter Si without chemical assistance."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the relationship between F removal rate and Si sputtering rate?",
+                "answer_type": "Factoid",
+                "answer": "They are correlated: higher F removal corresponds to higher Si sputtering, since F enables reactive ion etching of Si."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which Ar\u207a energy does Si etching appear self-limiting?",
+                "answer_type": "Factoid",
+                "answer": "At 20 eV, where Si sputtering virtually stops after the initial etching phase."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What Ar\u207a ion energy range is suitable for self-limiting layer-by-layer etching of Si?",
+                "answer_type": "Factoid",
+                "answer": "Below 30 eV."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 0,
+            "y": 1,
+            "width": 457,
+            "height": 303
+        },
+        "a": {
+            "x": 0,
+            "y": 311,
+            "width": 467,
+            "height": 345
+        }
+    }
+}

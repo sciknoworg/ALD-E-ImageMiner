@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/1/fig_6",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the number of sputtered Si atoms as a function of the number of Ar\u207a ion impacts at different energies (50 eV, 40 eV, and 20 eV). The data points form step-like curves indicating cumulative counts.",
+        "b": "The chart shows the number of sputtered O atoms as a function of the number of Ar\u207a ion impacts at different energies (50 eV, 40 eV, and 20 eV). The data points form step-like curves indicating cumulative counts"
+    },
+    "data_extraction": {
+        "a": "| Number of Ar+ Ion Impacts | 20 eV (Sputtered Si Atoms) | 40 eV (Sputtered Si Atoms) | 50 eV (Sputtered Si Atoms) |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 50 | 2 | 4 | 7 |\n| 100 | 4 | 6 | 8 |\n| 200 | 5 | 7 | 12 |\n| 300 | 9 | 8 | 14 |\n| 400 | 9 | 13 | 16 |\n| 500 | 9 | 13 | 16 |\n| 600 | 9 | 13 | 16 |\n| 700 | 9 | 13 | 17 |\n| 800 | 9 | 13 | 18 |",
+        "b": "| Number of Ar+ Ion Impacts | 20 eV (Sputtered O Atoms) | 40 eV (Sputtered O Atoms) | 50 eV (Sputtered O Atoms) |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 100 | 2 | 15 | 25 |\n| 200 | 5 | 30 | 45 |\n| 300 | 8 | 42 | 60 |\n| 400 | 10 | 62 | 70 |\n| 500 | 11 | 63 | 78 |\n| 600 | 12 | 65 | 85 |\n| 700 | 13 | 72 | 100 |\n| 800 | 14 | 73 | 115 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does O sputtering continue while Si sputtering stops at low Ar\u207a energies?",
+                "answer_type": "Paragraph",
+                "answer": "In crystalline SiO\u2082, each Si atom is bonded to four O atoms (~16.8 eV total to liberate), while each O atom is bonded to only two Si atoms (~8.4 eV). This lower energy requirement allows O atoms to continue exiting the material even after Si sputtering has ceased."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What happens to the SiO\u2082 surface composition during prolonged Ar\u207a bombardment?",
+                "answer_type": "Factoid",
+                "answer": "The surface becomes oxygen-deficient due to preferential O sputtering."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what Ar\u207a energy does Si etching become non-self-limiting?",
+                "answer_type": "Factoid",
+                "answer": "At 50 eV, Si continues to etch even after F is depleted."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Is 40 eV Ar\u207a suitable for self-limiting Si etching in SiO\u2082?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, Si sputtering plateaus at 40 eV, indicating self-limiting behavior."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 3,
+            "y": 0,
+            "width": 458,
+            "height": 311
+        },
+        "a": {
+            "x": 0,
+            "y": 312,
+            "width": 460,
+            "height": 349
+        }
+    }
+}
