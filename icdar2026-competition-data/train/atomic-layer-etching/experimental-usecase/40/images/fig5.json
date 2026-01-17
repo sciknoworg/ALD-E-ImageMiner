@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/40/fig5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Depth-profiling XPS data for the original TiN film showing atomic concentrations versus Ar sputtering time and estimated depth. At the surface, oxygen (~16%) and carbon (~12%) are elevated due to native oxide and adventitious carbon. After ~60 s of sputtering (~2 nm depth), concentrations plateau to bulk values: Ti (~49%), N (~42%), O (~6%), C (~2%), and F (~1%).",
+        "b": "Depth-profiling XPS data for the ALE-treated TiN film. The surface shows significantly lower oxygen (~8%) compared to the original film, while fluorine is slightly elevated (~6.5%). Bulk composition remains essentially unchanged from the original film, confirming that ALE affects only the top few nanometers."
+    },
+    "data_extraction": {
+        "a": "| Sputtering time, s | Estimated depth, nm | Ti (%) | N (%) | F (%) | O (%) | C (%) |\n|---|---|---|---|---|---|---|\n| 0 | 0 | 32 | 38 | 3 | 15 | 12 |\n| 60 | 2 | 46 | 45 | 3 | 5 | 2 |\n| 120 | 3 | 48 | 43 | 2 | 6 | 2 |\n| 180 | 5 | 48 | 43 | 2 | 6 | 2 |\n| 240 | 7 | 48 | 42 | 2 | 6 | 2 |\n| 300 | 8 | 50 | 42 | 2 | 6 | 2 |\n| 360 | 10 | 48 | 41 | 2 | 6 | 2 |",
+        "b": "| Sputtering time, s | Estimated depth, nm | Ti (%) | N (%) | F (%) | O (%) | C (%) |\n|---|---|---|---|---|---|---|\n| 0 | 0 | 34 | 41 | 6 | 7 | 12 |\n| 60 | 2 | 47 | 46 | 2 | 5 | 2 |\n| 120 | 3 | 49 | 44 | 2 | 5 | 2 |\n| 180 | 5 | 49 | 43 | 2 | 5 | 2 |\n| 240 | 7 | 50 | 43 | 1 | 6 | 2 |\n| 300 | 8 | 50 | 43 | 1 | 6 | 2 |\n| 360 | 10 | 49 | 42 | 1 | 6 | 2 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Why do the atomic concentrations change significantly in the first 2 nm of depth but remain constant deeper into the film?",
+                "answer_type": "Paragraph",
+                "answer": "The compositional gradient in the first 2 nm reflects the presence of a modified surface layer on the TiN film. At the surface, native oxide formation from atmospheric exposure causes elevated oxygen content, while adventitious carbon contamination adds to the carbon signal. As the Ar ion beam sputters through this surface layer, it reaches the bulk TiN film where the composition stabilizes at the stoichiometric values determined by the ALD growth process. This depth-dependent behavior confirms that surface contamination and oxidation are confined to a thin surface region."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What elements are tracked in this depth-profiling XPS analysis?",
+                "answer_type": "List",
+                "answer": "Ti, N, F, O, and C."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the surface oxygen concentration compare between the original and ALE-treated TiN films?",
+                "answer_type": "Factoid",
+                "answer": "The surface oxygen decreases from approximately 16% in the original film to about 8% in the ALE-treated film, representing a 49% reduction."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the ALE process alter the bulk chemical composition of the TiN film?",
+                "answer_type": "Paragraph",
+                "answer": "No, the ALE process does not alter the bulk composition. Both the original and ALE-treated films show nearly identical bulk atomic concentrations after sputtering beyond 2 nm depth: approximately 49% Ti, 42% N, 6% O, 2% C, and 1% F. This indicates that the plasma-thermal ALE process selectively modifies only the surface region while preserving the intrinsic film properties. This characteristic is important for applications where maintaining bulk superconducting or electronic properties is essential."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 12,
+            "y": 13,
+            "width": 657,
+            "height": 488
+        },
+        "b": {
+            "x": 18,
+            "y": 528,
+            "width": 651,
+            "height": 480
+        }
+    }
+}

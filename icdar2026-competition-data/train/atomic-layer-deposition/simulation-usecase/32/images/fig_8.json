@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/32/fig_8",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The line chart shows the results from feeding system model of the flow rate of TMA and water over time, with both decreasing rapidly.",
+        "b": "The line chart displays the averaged molar fraction of TMA and water over time for feeding system outlet, with both fractions decreasing."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Flow Rate - Water (sccm) | Flow Rate - TMA (sccm) |\n|----------|---------------------------|-------------------------|\n| 0.00     | 700                       | 450                     |\n| 0.02     | 500                       | 300                     |\n| 0.05     | 200                       | 100                     |\n| 0.10     | 50                        | 20                      |\n| 0.15     | -                       | -        |",
+        "b": "| Time (s) | Molar Fraction - Water | Molar Fraction - TMA |\n|----------|-------------------------|-----------------------|\n| 0.00     | 0.95                    | 0.90                  |\n| 0.02     | 0.80                    | 0.60                  |\n| 0.05     | 0.40                    | 0.20                  |\n| 0.10     | 0.10                    | 0.05                  |\n| 0.15    | 0.06                     |0.05                   |\n| 0.2        | 0.03                  |0.02                   |\n| 0.25     |     0                        | 0                   |\n| 0.3       | 0                         |0                   |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do images a and b describe?",
+                "answer_type": "Factoid",
+                "answer": "The calculated TMA and H2O pulses as a function of time, in terms of flow rate  and averaged molar fraction at the feeding system outlet are shown in images a and b respectively"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What can be understood from TMA and H2O pulses variation as a function of time?",
+                "answer_type": "Paragraph",
+                "answer": "A higher flow rate for H2O than for TMA for the whole duration of the pulse, leading to an overall higher quantity of the delivered H2O. This is attributed to the higher vapor pressure of H2O inside the reactant bottles and to the longer opening time of the ALD valve above the H2O bottle(60 ms and 25 ms for H2O and TMA, respectively)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What can be inferred from the variation in mole fraction with time?",
+                "answer_type": "Yes/No",
+                "answer": "The reactant molar fraction is substantial during both pulses, whereas Ar represents only roughly10 wt% of the gas mixture. Notably, it is predicted that although the H2O valve opening time is longer and the quantity of H2O entering the feeding system is higher, the TMA molecules evacuate the feeding system slower, i.e the feeding system takes more time to purge. This is attributed to the slower diffusion rate in N2of TMA compared to H2O, since the molecules of the former are bigger and heavier than the latter"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the process conditions?",
+                "answer_type": "List",
+                "answer": "1. The feeding system is purged from both reactants in 0.3 s. \n2. The total calculated amounts entering the reactor are 0.63 mg for TMA and 0.408 mg for H2O.\n3. The flow rate of the feeding system after the reactant pulses are 30 sccm"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 508,
+            "height": 403
+        },
+        "b": {
+            "x": 514,
+            "y": 7,
+            "width": 492,
+            "height": 391
+        }
+    }
+}

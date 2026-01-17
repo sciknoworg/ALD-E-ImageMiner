@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/35/fig_3",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows \u0394c_Al (aluminum adsorbed per cycle) versus surface OH concentration c_(O)H, combining data from alumina (triangles, 80\u2013300\u00b0C) and silica (circles 150\u00b0C, squares 250\u00b0C). The solid line is a linear fit yielding a = 1.68 \u00b1 0.09 nm\u207b\u00b2 and b = 0.37 \u00b1 0.02. The dashed line represents the theoretical prediction assuming one OH binds one Al atom (Eq. 6), which clearly fails to describe the data.",
+        "b": "The scatter plot shows \u0394c_Me (methyl groups adsorbed) versus c_(O)H. The solid fit gives a = 4.9 \u00b1 0.2 nm\u207b\u00b2 and b = 0.14 \u00b1 0.06, indicating \u0394c_Me is nearly constant (~5 nm\u207b\u00b2) regardless of OH concentration. The dashed theoretical line again fails to match observations.",
+        "c": "The scatter plot shows the average Me/Al ratio (\u0394c_Me/\u0394c_Al) versus c_(O)H. The ratio decreases from ~3 at low c_(O)H toward ~2 at high c_(O)H. The solid curve fits the experimental trend while the dashed line shows the inadequate theoretical prediction."
+    },
+    "data_extraction": {
+        "a": "| c_(O)H, nm\u207b\u00b2 | \u0394c_Al 80-300\u00b0C alumina (nm\u207b\u00b2) | \u0394c_Al 150\u00b0C silica (nm\u207b\u00b2) | \u0394c_Al 250\u00b0C silica (nm\u207b\u00b2) |\n|---|---|---|---|\n| 1 | 2.1 | - | - |\n| 2 | 2.4 | 2.9 | - |\n| 3 | 2.8 | - | 2.7 |\n| 4 | 3.2 | - | 3.0 |\n| 5 | 3.5 | - | - |\n| 6 | 3.9 | - | - |\n| 8 | 4.6 | - | - |\n| 9 | 5.0 | - | - |",
+        "b": "| c_(O)H, nm\u207b\u00b2 | \u0394c_Me 80-300\u00b0C alumina (nm\u207b\u00b2) | \u0394c_Me 150\u00b0C silica (nm\u207b\u00b2) | \u0394c_Me 250\u00b0C silica (nm\u207b\u00b2) |\n|---|---|---|---|\n| 1 | 5.0 | 5.2 | - |\n| 2 | 5.2 | - | - |\n| 3 | 5.5 | - | 5.7 |\n| 4 | 5.6 | - | 5.5 |\n| 5 | 5.8 | - | - |\n| 6 | 5.9 | - | - |\n| 8 | 6.0 | - | - |\n| 9 | 6.1 | - | - |",
+        "c": "| c_(O)H, nm\u207b\u00b2 | \u0394c_Me/\u0394c_Al 80-300\u00b0C alumina | \u0394c_Me/\u0394c_Al 150\u00b0C silica | \u0394c_Me/\u0394c_Al 250\u00b0C silica |\n|---|---|---|---|\n| 1 | 2.4 | 1.8 | - |\n| 2 | 2.2 | - | - |\n| 3 | 2.0 | - | 2.1 |\n| 4 | 1.8 | - | 1.9 |\n| 5 | 1.7 | - | - |\n| 6 | 1.5 | - | - |\n| 8 | 1.4 | - | - |\n| 9 | 1.3 | - | - |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the physical meaning of the fitted intercept a = 1.68 \u00b1 0.09 nm\u207b\u00b2 in panel (a)?",
+                "answer_type": "Paragraph",
+                "answer": "The intercept represents the amount of aluminum that would adsorb on an oxide surface with zero OH groups. Since AlMe\u2083 retains all three methyl ligands when no OH groups are present (Me/Al = 3), this aluminum must chemisorb through dissociation or association reactions with oxygen bridges rather than ligand exchange. Multiplying a by 3 gives ~5.0 nm\u207b\u00b2, which matches the observed \u0394c_Me at low OH concentrations, confirming internal consistency of the model."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do the dashed lines in all three panels represent, and what conclusion can be drawn from their deviation from experimental data?",
+                "answer_type": "Factoid",
+                "answer": "The dashed lines represent predictions from a simplified model (Eq. 6) assuming each OH group binds exactly one aluminum atom via ligand exchange. The systematic deviation from experimental data proves this simple one-to-one correspondence is invalid for the AlMe\u2083/H\u2082O ALD process."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the Me/Al ratio decrease as the surface OH concentration increases?",
+                "answer_type": "Paragraph",
+                "answer": "At low c_(O)H, AlMe\u2083 adsorbs primarily through dissociation or association on oxygen bridges, retaining all three methyl groups (Me/Al \u2248 3). As c_(O)H increases, more aluminum atoms attach via ligand exchange reactions that release methyl groups as methane. Each OH group that reacts removes one methyl ligand, so the average number of methyl groups per adsorbed aluminum decreases. At high OH concentrations, the Me/Al ratio approaches 2, indicating that on average one methyl is released per adsorbed aluminum."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "According to panel (b), approximately how many methyl groups per nm\u00b2 are adsorbed at saturation, and why is this value nearly independent of OH concentration?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 5 to 6 methyl groups per nm\u00b2 are adsorbed at saturation. This value is nearly constant because steric hindrance by the bulky methyl groups, not OH availability, determines the saturation coverage."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 732,
+            "height": 256
+        },
+        "b": {
+            "x": 0,
+            "y": 288,
+            "width": 329,
+            "height": 243
+        },
+        "c": {
+            "x": 356,
+            "y": 288,
+            "width": 323,
+            "height": 243
+        }
+    }
+}

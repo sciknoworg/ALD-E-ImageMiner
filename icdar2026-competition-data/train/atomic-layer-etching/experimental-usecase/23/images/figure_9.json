@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_9",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "the multiple stacked line chart represents the time-resolved Quadrupole Mass Spectrometry (QMS) data collected over 5 full cycles of ZnS Atomic Layer Etching (ALE) at 275\u00b0C using HF and TMA , show clear, repeatable signals for each half-reaction. The first TMA pulse generates the 68Zn\u2013(CH\u2083)\u2082\u207a ion at m/z 98, while HF exposure produces the H\u2082S\u207a signal at m/z 34. Later TMA pulses also generate the Al\u2082(CH\u2083)\u2084F\u207a ion at m/z 133, confirming the expected reaction by-products."
+    },
+    "data_extraction": {
+        "a": "| Time (min) | Intensity (Arb. Units) | Species         |\n|-----------:|------------------------:|-----------------|\n| 0          | 0                       | TMA\u207a            |\n| 10         | 10                      | TMA\u207a            |\n| 20         | 10                      | TMA\u207a            |\n| 30         | 10                      | TMA\u207a            |\n| 40         | 10                      | TMA\u207a            |\n| 50         | 10                      | TMA\u207a            |\n| 60         | 0                       | TMA\u207a            |\n| 0          | 0                       | HF\u207a             |\n| 10         | 10                      | HF\u207a             |\n| 20         | 10                      | HF\u207a             |\n| 30         | 10                      | HF\u207a             |\n| 40         | 10                      | HF\u207a             |\n| 50         | 10                      | HF\u207a             |\n| 60         | 0                       | HF\u207a             |\n| 0          | 0                       | \u2076\u2078Zn(CH\u2083)\u2082\u207a     |\n| 10         | 10                      | \u2076\u2078Zn(CH\u2083)\u2082\u207a     |\n| 20         | 10                      | \u2076\u2078Zn(CH\u2083)\u2082\u207a     |\n| 30         | 10                      | \u2076\u2078Zn(CH\u2083)\u2082\u207a     |\n| 40         | 10                      | \u2076\u2078Zn(CH\u2083)\u2082\u207a     |\n| 50         | 10                      | \u2076\u2078Zn(CH\u2083)\u2082\u207a     |\n| 60         | 0                       | \u2076\u2078Zn(CH\u2083)\u2082\u207a     |\n| 0          | 0                       | \u2076\u2078Zn(CH\u2083)\u207a      |\n| 10         | 10                      | \u2076\u2078Zn(CH\u2083)\u207a      |\n| 20         | 10                      | \u2076\u2078Zn(CH\u2083)\u207a      |\n| 30         | 10                      | \u2076\u2078Zn(CH\u2083)\u207a      |\n| 40         | 10                      | \u2076\u2078Zn(CH\u2083)\u207a      |\n| 50         | 10                      | \u2076\u2078Zn(CH\u2083)\u207a      |\n| 60         | 0                       | \u2076\u2078Zn(CH\u2083)\u207a      |\n| 0          | 0                       | Al\u2082(CH\u2083)\u2084F\u207a     |\n| 10         | 10                      | Al\u2082(CH\u2083)\u2084F\u207a     |\n| 20         | 10                      | Al\u2082(CH\u2083)\u2084F\u207a     |\n| 30         | 10                      | Al\u2082(CH\u2083)\u2084F\u207a     |\n| 40         | 10                      | Al\u2082(CH\u2083)\u2084F\u207a     |\n| 50         | 10                      | Al\u2082(CH\u2083)\u2084F\u207a     |\n| 60         | 0                       | Al\u2082(CH\u2083)\u2084F\u207a     |\n| 0          | 0                       | H\u2082S\u207a            |\n| 10         | 10                      | H\u2082S\u207a            |\n| 20         | 10                      | H\u2082S\u207a            |\n| 30         | 10                      | H\u2082S\u207a            |\n| 40         | 10                      | H\u2082S\u207a            |\n| 50         | 10                      | H\u2082S\u207a            |\n| 60         | 0                       | H\u2082S\u207a            |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the correct two-step cycle sequence for this ZnS ALE process, based on the order of reactant exposures? What follows each reactant pulse?",
+                "answer_type": "Paragraph",
+                "answer": "The sequence is 1) TMA exposure \u2192 Purge \u2192 2) HF exposure \u2192 Purge. Each reactant pulse is followed by a purge to remove volatile products and prevent gas-phase reactions."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast this cyclic ALE method with continuous plasma etching for removing ZnS. Which method offers better thickness control for nanoscale features?",
+                "answer_type": "Paragraph",
+                "answer": "ALE offers superior, atomic-scale thickness control as it is self-limiting. Plasma etching is faster but less controlled, causing depth non-uniformity and damage."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The appearance of the Al\u2082(CH\u2083)\u2084F\u207a (m/z 133) signal during later TMA pulses indicates what change in the surface composition?",
+                "answer_type": "Factoid",
+                "answer": "It indicates that HF fluorinates the surface, forming Al\u2013F bonds from previous TMA cycles. The subsequent TMA then reacts with this fluorinated layer, releasing the Al\u2082(CH\u2083)\u2084F\u207a volatile etch byproduct."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "The cyclic production of H\u2082S\u207a and Zn(CH\u2083)\u2082\u207a signals confirms selective removal. Is this process suitable for etching a ZnS layer from an underlying InP layer without damaging it?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, the self-limiting surface reactions and low temperature minimize damage. The chemical selectivity between ZnS and InP towards HF/TMA can allow the ZnS to be etched while leaving the InP intact."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 662,
+            "height": 790
+        }
+    }
+}

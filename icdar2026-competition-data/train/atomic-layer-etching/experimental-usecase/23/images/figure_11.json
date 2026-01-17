@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_11",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multi-line chart shows how the etch rate (\u00c5/cycle) of ZnS ALD changes with temperature for depositions carried out at 100 \u00b0C, 200 \u00b0C, and 300 \u00b0C. As the temperature increases, the etch rate also increases.The film deposited at 100 \u00b0C etches the fastest, while the film deposited at 300 \u00b0C etches the slowest at any given temperature. This implies that films deposited at higher temperatures are denser or chemically more robust."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | Etch Rate (\u00c5/cycle) | Condition        |\n|------------------|----------------------|------------------|\n| 225              | 1.40                 | ZnS ALD 100\u00b0C    |\n| 225              | 1.02                 | ZnS ALD 200\u00b0C    |\n| 225              | 0.77                 | ZnS ALD 300\u00b0C    |\n| 250              | 1.80                 | ZnS ALD 100\u00b0C    |\n| 250              | 1.44                 | ZnS ALD 200\u00b0C    |\n| 250              | 1.33                 | ZnS ALD 300\u00b0C    |\n| 275              | 2.00                 | ZnS ALD 100\u00b0C    |\n| 275              | 1.75                 | ZnS ALD 200\u00b0C    |\n| 275              | 1.65                 | ZnS ALD 300\u00b0C    |\n| 300              | 2.11                 | ZnS ALD 100\u00b0C    |\n| 300              | 1.98                 | ZnS ALD 200\u00b0C    |\n| 300              | 1.85                 | ZnS ALD 300\u00b0C    |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the table, if a process requires an etch rate of approximately 1.8 \u00c5/cycle to match a specific timing window, what etch temperature setpoint should be chosen for a film originally deposited at 300 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "The setpoint should be 300 \u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the etch resistance of the film deposited at 100 \u00b0C vs. the one deposited at 300 \u00b0C. Why does the 100 \u00b0C film consistently etch faster across the entire temperature range?",
+                "answer_type": "Paragraph",
+                "answer": "The higher etch rate for the 100 \u00b0C film (black curve) indicates it is structurally weaker and less dense than the 300 \u00b0C film. The \"looser\" atomic network of the low-temperature film allows the etchant species to diffuse and react more readily, whereas the 300 \u00b0C film is more crystalline and compact, offering greater resistance to chemical attack."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "A manufacturing flow requires a highly selective etch where the ZnS film is removed quickly but the underlying substrate is spared. If selectivity depends on minimizing the thermal budget (keeping etch temp low), which starting film (100\u00b0C, 200\u00b0C, or 300\u00b0C) is the best candidate?",
+                "answer_type": "Factoid",
+                "answer": "Films deposited at lower temperatures (100 \u00b0C) typically have lower density and higher impurity content (e.g., unreacted ligands)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The etch rate for the 300 \u00b0C film approaches that of the 200 \u00b0C film at higher temperatures (narrowing gap at 300 \u00b0C etch). What does this convergence suggest about the reaction mechanism limiting the process at high temperatures?",
+                "answer_type": "Paragraph",
+                "answer": "At high etch temperatures (300 \u00b0C), the etch rates for all films begin to converge (gap narrows to ~0.2 \u00c5/cycle ). This suggests the process is transitioning from a surface-reaction-limited regime (where film density/quality dominates) to a mass-transport-limited regime (or saturation). In this regime, the supply of etchant or the desorption of byproducts becomes the bottleneck, making the intrinsic quality of the film less of a differentiator than it is at lower temperatures."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 647,
+            "height": 566
+        }
+    }
+}

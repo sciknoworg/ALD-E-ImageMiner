@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/40/fig_3",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "Multi-axis chart showing growth per cycle (left axis) and silicon atomic content (right axis) in plasma-enhanced ALD Ti\u2013Si\u2013N films deposited using a reversed reactant sequence (SiH\u2084 \u2192 TiCl\u2084 \u2192 N\u2082/H\u2082/Ar plasma). Both quantities increase with SiH\u2084 pulse time at short exposures and saturate at approximately 0.60\u20130.62 \u00c5/cycle and 11\u201312 at.% Si for pulse times of ~8\u201310 s, indicating self-limiting surface reactions under this sequence."
+    },
+    "data_extraction": {
+        "a": "|SiH4 Pulse Time (s) |Thickness (S-T-N) [\u00c5/cycle]|Si Content (S-T-N) [at.%]|\n|--------------------|-------------------------------|-------------------|\n| 0                   | ~0.46                         |    \u2013              |\n| 2                   | ~0.50                         | ~7.5              |\n| 4                   | ~0.55                         | ~8.0              |\n| 6                   | ~0.60                         | ~10.0             |\n| 8                   | ~0.60                         | ~11.0             |\n| 10                  | ~0.62                         | ~12.0             |\n| 12                  | ~0.60                         | ~12.0             |\n| 14                  | ~0.60                         | ~12.0             |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what SiH\u2084 pulse time does saturation of the growth per cycle occur when SiH\u2084 is pulsed before TiCl\u2084?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 8\u201310 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does silicon content evolve as the SiH\u2084 pulse time increases from 0 to 14 s in this reversed sequence?",
+                "answer_type": "Paragraph",
+                "answer": "The silicon content increases rapidly at short SiH\u2084 pulse times, rising from below 8 at.% at 2 s to about 10\u201311 at.% by 6\u20138 s. Beyond this range, the silicon content plateaus near 11\u201312 at.% despite further increases in pulse time, indicating saturation."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is the saturated silicon content lower than in sequences where TiCl\u2084 is pulsed before SiH\u2084?",
+                "answer_type": "Paragraph",
+                "answer": "When SiH\u2084 is pulsed first, its interaction with the surface is limited by the initial surface chemistry. The subsequent TiCl\u2084 pulse can occupy or replace reactive sites before nitrogen incorporation, reducing the number of sites available for silicon retention. This leads to lower final silicon incorporation compared with sequences where TiCl\u2084 primes the surface first."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Is increasing the SiH\u2084 pulse time beyond ~10 s effective for increasing the growth per cycle in this process?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 433,
+            "height": 382
+        }
+    }
+}

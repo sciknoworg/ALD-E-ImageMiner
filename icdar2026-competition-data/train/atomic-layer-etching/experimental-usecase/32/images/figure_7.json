@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/32/figure_7",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "Multi-axis chart comparing surface composition (atomic %) and RMS roughness for Reference (Ref.), ALE, and RIE treated InGaAs. The RIE sample shows a measurable chlorine signal (7.8%) and the highest roughness on the right axis, while both Ref. and ALE show no detectable chlorine and lower roughness levels. The composition of In, Ga, and As remains broadly comparable between Ref. and ALE, indicating limited surface modification under ALE conditions."
+    },
+    "data_extraction": {
+        "a": "|    Metric     | Ref. | ALE  |  RIE |\n|---------------|------|------|-------|\n| In (Atomic %) | 29.4 | 29.5 | 38.0  |\n| Ga (Atomic %) | 20.6 | 21.8 | 18.4  |\n| As (Atomic %) | 6.6  | 5.3  | 2.4   |\n| Cl (Atomic %) | ~0   | ~0   | 7.8   |\n| C (Atomic %)  | 43.4 | 43.4 | ~33.4 |\n| Rq (nm)       | ~60  | ~68  | ~78   |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which specific element appears as a contaminant (at 7.8%) in the RIE sample but is effectively absent in the Reference and ALE samples?",
+                "answer_type": "Factoid",
+                "answer": "Chlorine (Cl)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the ALE process result in a significantly higher surface roughness (RMS) compared to the un-etched Reference sample?",
+                "answer_type": "Yes/No",
+                "answer": "No, the roughness values are very similar (4.6 nm for ALE vs. 4.3 nm for Reference)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the surface quality results for the ALE and RIE treated samples. Which method produces a \"cleaner\" and smoother surface, and what evidence supports this?",
+                "answer_type": "Paragraph",
+                "answer": "The ALE sample exhibits lower roughness and no detectable chlorine signal compared with the RIE sample. In contrast, the RIE condition shows a clear chlorine residue (7.8%) and the highest roughness level on the right axis. This indicates that ALE produces a smoother and chemically cleaner surface than RIE under the conditions shown."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What conventional etching technique was used as a baseline comparison for the ALE results in this figure?",
+                "answer_type": "Factoid",
+                "answer": "Reactive Ion Etching (RIE)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 4,
+            "width": 670,
+            "height": 420
+        }
+    }
+}

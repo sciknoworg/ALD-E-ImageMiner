@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/46/figure_1",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This figure presents QCM data demonstrating material selectivity during WF\u2086 exposure at 220 \u00b0C. The TiO\u2082 film (red line) shows continuous mass loss, indicating etching, whereas the Al\u2082O\u2083 film (black line) exhibits an initial mass gain followed by saturation, indicating no etching.",
+        "b": "QCM data comparing WF\u2086 dosing strategies on TiO\u2082. Pulsed WF\u2086 dosing (red line) results in cumulative mass loss (etching), while the initial exposure (black line) is dominated by strong adsorption and fluorination, seen as a large mass gain before etching kinetics dominate."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Mass loading (ng/cm\u00b2) | Sample | Condition |\n|---------:|----------------------:|--------|-----------|\n| 8000  | 3713.81 | Al\u2082O\u2083 | Metal Oxide ALD |\n| 8000  | 2935.80 | TiO\u2082 | Metal Oxide ALD |\n| 8500  | 3920.90 | Al\u2082O\u2083 | Metal Oxide ALD |\n| 8500  | 3025.36 | TiO\u2082 | Metal Oxide ALD |\n| 9000  | 4130.79 | Al\u2082O\u2083 | Metal Oxide ALD |\n| 9000  | 3084.13 | TiO\u2082 | Metal Oxide ALD |\n| 9500  | 4729.68 | Al\u2082O\u2083 | WF\u2086 Doses |\n| 9500  | 3294.02 | TiO\u2082 | WF\u2086 Doses |\n| 10000 | 4788.45 | Al\u2082O\u2083 | WF\u2086 Doses |\n| 10000 | 3145.70 | TiO\u2082 | WF\u2086 Doses |\n| 10500 | 4819.24 | Al\u2082O\u2083 | WF\u2086 Doses |\n| 10500 | 3025.36 | TiO\u2082 | WF\u2086 Doses |\n| 11000 | 4788.45 | Al\u2082O\u2083 | WF\u2086 Doses |\n| 11000 | 2756.70 | TiO\u2082 | WF\u2086 Doses |\n| 11500 | 4757.67 | Al\u2082O\u2083 | WF\u2086 Doses |\n| 11500 | 2216.57 | TiO\u2082 | WF\u2086 Doses |\n| 12000 | 4757.67 | Al\u2082O\u2083 | WF\u2086 Doses |\n| 12000 | 1351.82 | TiO\u2082 | WF\u2086 Doses |",
+        "b": "| Time (s) | Mass loading (ng/cm\u00b2) | Condition |\n|---------:|----------------------:|-----------|\n| 18200 | 1546.58 | TiO\u2082 ALD |\n| 18200 | 816.87  | 220 \u00b0C, 1.75 Torr |\n| 18300 | 1566.23 | TiO\u2082 ALD |\n| 18300 | 857.10  | 220 \u00b0C, 1.75 Torr |\n| 18400 | 1566.23 | TiO\u2082 ALD |\n| 18400 | 887.04  | 220 \u00b0C, 1.75 Torr |\n| 18500 | 1806.66 | 50 WF\u2086 doses (1 s) |\n| 18500 | 1106.89 | 1 WF\u2086 dose (50 s) |\n| 18600 | 1796.37 | 50 WF\u2086 doses (1 s) |\n| 18600 | 1117.18 | 1 WF\u2086 dose (50 s) |\n| 18700 | 1776.72 | 50 WF\u2086 doses (1 s) |\n| 18700 | 1136.82 | 1 WF\u2086 dose (50 s) |\n| 18800 | 1726.21 | 50 WF\u2086 doses (1 s) |\n| 18800 | 1136.82 | 1 WF\u2086 dose (50 s) |\n| 18900 | 1706.56 | 50 WF\u2086 doses (1 s) |\n| 18900 | 1147.11 | 1 WF\u2086 dose (50 s) |\n| 19000 | 1676.72 | 50 WF\u2086 doses (1 s) |\n| 19000 | 1156.47 | 1 WF\u2086 dose (50 s) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "A process engineer uses an Al\u2082O\u2083 hard mask to pattern an underlying TiO\u2082 film using WF\u2086 gas at 220 \u00b0C. Based on the material responses in this chart, describe the final outcome of this process sequence.",
+                "answer_type": "Paragraph",
+                "answer": "Selective pattern transfer. The TiO\u2082 film will be etched away, as indicated by the continuous mass loss (negative slope) in the red curve. The Al\u2082O\u2083 mask will remain intact and essentially unetched, as indicated by the black curve, which shows only stable mass gain due to surface fluorination. This confirms that WF\u2086 provides excellent selectivity for removing TiO\u2082 relative to Al\u2082O\u2083."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the red line (TiO\u2082) and the black line (Al\u2082O\u2083) in this image. If you were designing a 'Gate Spacer' etch process that must stop on the silicon substrate, why would Al\u2082O\u2083 be a dangerous choice for the spacer material if the process temperature inadvertently spiked to 220\u202f\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "Etchability vs. inertness. TiO\u2082 (red line) is superior as a sacrificial spacer because it spontaneously etches in WF\u2086 at 220 \u00b0C, whereas Al\u2082O\u2083 (black line) is inert and resistant, meaning it would not be removed, failing the sacrificial requirement."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Immediately upon the first WF\u2086 dose, the mass signal (black line) jumps vertically from ~800 to ~1500\u202fng/cm\u00b2. Physically, what chemical transformation is happening to the TiO\u2082 surface to cause this rapid mass addition before any etching occurs?",
+                "answer_type": "Factoid",
+                "answer": "Surface fluorination/adsorption. The WF\u2086 molecules react with surface oxygen to form a heavy layer of non-volatile metal fluorides (TiF\u2093) or tungsten oxyfluorides (WO\u2093F\u1d67). This accumulation of heavy F and W atoms adds mass to the crystal before the slow volatilization step can remove any material."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The  process in panel (b) as \"50\u202fWF\u2086 exposures.\" Observe the slope of the red TiO\u2082 curve. Does this linear downward trend suggest an Atomic Layer Etching (ALE) mode or a Continuous Vapor Etching (CVE) mode at 220\u202f\u00b0C? Explain your reasoning.",
+                "answer_type": "Paragraph",
+                "answer": "Continuous vapor etching (CVE). True ALE requires a self-limiting mechanism where the etch stops after removing one layer. The red curve shows a steep, continuous linear drop in mass as long as WF\u2086 is pulsed, indicating that at 220\u202f\u00b0C, the thermal energy is sufficient to drive the reaction continuously without stopping. This is a CVE process, not a self-limiting ALE process."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 525,
+            "height": 416
+        },
+        "b": {
+            "x": 506,
+            "y": 2,
+            "width": 542,
+            "height": 414
+        }
+    }
+}

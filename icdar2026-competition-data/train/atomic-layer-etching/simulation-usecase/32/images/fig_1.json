@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/32/fig_1",
+    "classification": {
+        "a": "molecular structure diagram",
+        "b": "molecular structure diagram"
+    },
+    "summarization": {
+        "a": "Optimized geometries for four BCl3 adsorption starting configurations where the B atom is at hollow sites: Oh EC, Ah EC, Oh TR, and Ah TR. Each configuration is labeled with its adsorption energy in kcal/mol, all close to about minus 32 kcal/mol.",
+        "b": "Optimized geometries for four BCl3 adsorption starting configurations where the B atom is on top sites: At TR, Ot TR, At EC, and Ot EC. Adsorption energies span from about minus 15 to minus 59 kcal/mol, with Ot TR being the most stable (most negative) case."
+    },
+    "data_extraction": {
+        "a": "| Figure | Description |\n| --- | --- |\n| a | Left molecular structure diagram with labeled atoms and bonds. |\n| b | Right molecular structure diagram with labeled atoms and bonds. |",
+        "b": "| Figure | Description |\n| --- | --- |\n| a | Left molecular structure diagram with labeled atoms and bonds. |\n| b | Right molecular structure diagram with labeled atoms and bonds. |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "In these structures, what atoms correspond to the red, violet, bronze, and green spheres?",
+                "answer_type": "List",
+                "answer": "Red is oxygen. Violet is aluminum. Bronze is boron. Green is chlorine."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the authors generate the set of eight initial configurations shown here?",
+                "answer_type": "List",
+                "answer": "They combine two choices. First is the initial B position: on top of O (Ot), on top of Al (At), hollow site above second layer O (Oh), or hollow site above second layer Al (Ah). Second is the Cl arrangement in the top view: EC (eclipse) or TR (trans)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which adsorption configuration is the most stable in this figure, and what is its adsorption energy?",
+                "answer_type": "Paragraph",
+                "answer": "The most stable configuration is Ot TR, with an adsorption energy of minus 58.986 kcal/mol. In this paper\u2019s naming, Ot means the B atom of BCl3 starts on top of an oxygen atom in the uppermost Al2O3 layer, and TR means the trans arrangement in the top view definition used by the authors. The fact that this value is the most negative among the eight indicates the strongest adsorption among the tested starting geometries."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For the on top cases, how do the Ot energies compare with the At energies, and what does that suggest?",
+                "answer_type": "Factoid",
+                "answer": "Ot TR (minus 58.986) and Ot EC (minus 45.617) are much more negative than At TR (minus 17.574) and At EC (minus 15.347). This suggests that, among the tested on top starting sites, adsorption is far more favorable when B is on top of an oxygen site than on top of an aluminum site."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 17,
+            "width": 340,
+            "height": 588
+        },
+        "b": {
+            "x": 350,
+            "y": 5,
+            "width": 289,
+            "height": 581
+        }
+    }
+}

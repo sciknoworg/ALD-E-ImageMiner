@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/46/figure_12",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This figure uses Quartz Crystal Microbalance (QCM) data to demonstrate the selective etching of Titanium Dioxide (TiO\u2082) over Aluminum Oxide (Al\u2082O\u2083) at 170\u202f\u00b0C. The image shows the full process timeline. Both materials are first deposited via ALD (staircase growth). Upon switching to the ALE recipe (WF\u2086/BCl\u2083), TiO\u2082 (red line) immediately begins to lose mass linearly (etching), while Al\u2082O\u2083 (black line) gains a small amount of mass and then remains stable (resistant).",
+        "b": "A magnified view of the first few ALE cycles. TiO\u2082 loses mass in every cycle (sawtooth down), whereas Al\u2082O\u2083 gains mass during the WF\u2086 pulse and barely loses it during the BCl\u2083 pulse, confirming the formation of a stable, non-volatile fluoride layer on aluminum."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Mass loading (ng cm\u207b\u00b2) | Material | Process condition |\n|---------:|-----------------------:|----------|-------------------|\n| 8000  | 1500 | Al\u2082O\u2083 | Metal oxide ALD |\n| 8000  | 950  | TiO\u2082  | Metal oxide ALD |\n| 8500  | 1700 | Al\u2082O\u2083 | Metal oxide ALD |\n| 8500  | 1050 | TiO\u2082  | Metal oxide ALD |\n| 9000  | 2100 | Al\u2082O\u2083 | Metal oxide ALD |\n| 9000  | 1200 | TiO\u2082  | Metal oxide ALD |\n| 9500  | 2500 | Al\u2082O\u2083 | WF\u2086/BCl\u2083 ALE |\n| 9500  | 1100 | TiO\u2082  | WF\u2086/BCl\u2083 ALE |\n| 10000 | 2500 | Al\u2082O\u2083 | WF\u2086/BCl\u2083 ALE |\n| 10000 | 900  | TiO\u2082  | WF\u2086/BCl\u2083 ALE |\n| 10500 | 2500 | Al\u2082O\u2083 | WF\u2086/BCl\u2083 ALE |\n| 10500 | 750  | TiO\u2082  | WF\u2086/BCl\u2083 ALE |\n| 11000 | 2500 | Al\u2082O\u2083 | WF\u2086/BCl\u2083 ALE |\n| 11000 | 650  | TiO\u2082  | WF\u2086/BCl\u2083 ALE |\n| 11500 | 2500 | Al\u2082O\u2083 | WF\u2086/BCl\u2083 ALE |\n| 11500 | 500  | TiO\u2082  | WF\u2086/BCl\u2083 ALE |",
+        "b": "| Time (s) | Mass loading (ng cm\u207b\u00b2) | Material | Cyclic condition |\n|---------:|-----------------------:|----------|------------------|\n| 9000 | 1500 | Al\u2082O\u2083 | ALD  |\n| 9000 | 1200 | TiO\u2082  | ALD  |\n| 9100 | 1550 | Al\u2082O\u2083 | ALD |\n| 9100 | 1250 | TiO\u2082  | ALD |\n| 9200 | 1850 | Al\u2082O\u2083 | WF\u2086  |\n| 9200 | 1400 | TiO\u2082  | WF\u2086  |\n| 9250 | 1800 | Al\u2082O\u2083 | BCl\u2083 |\n| 9250 | 1250 | TiO\u2082  | BCl\u2083 |\n| 9300 | 1850 | Al\u2082O\u2083 | WF\u2086  |\n| 9300 | 1300 | TiO\u2082  | WF\u2086  |\n| 9350 | 1800 | Al\u2082O\u2083 | BCl\u2083  |\n| 9350 | 1200 | TiO\u2082  | BCl\u2083  |\n| 9400 | 1850 | Al\u2082O\u2083 | WF\u2086  |\n| 9400 | 1250 | TiO\u2082  | WF\u2086  |\n| 9450 | 1800 | Al\u2082O\u2083 | BCl\u2083 |\n| 9450 | 1150 | TiO\u2082  | BCl\u2083  |\n| 9500 | 1850 | Al\u2082O\u2083 | WF\u2086 |\n| 9500 | 1200 | TiO\u2082  | WF\u2086 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In this chart ,  looking at the transition point (vertical dotted line) where the process switches from ALD to ALE. Describe the immediate mass change behavior for the Aluminum Oxide (Al\u2082O\u2083) sample (black line) during the very first ALE cycle. Does it lose mass like the Titanium sample?",
+                "answer_type": "Factoid",
+                "answer": "Mass jump / no etch. No, it does not lose mass. Instead, it shows a distinct upward jump (mass gain) of ~300\u202fng/cm\u00b2 initially, followed by a stable plateau. This indicates surface fluorination (adsorption) rather than material removal."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare this thermal ALE process with a plasma-based etch for removing TiO\u2082. Under a constraint of etching a 3D nanostructure with extreme aspect ratios without causing ion bombardment damage, which method is superior?",
+                "answer_type": "Paragraph",
+                "answer": "The thermal WF\u2086/BCl\u2083 ALE process is superior. Its purely chemical, self-limiting nature ensures perfect conformality in high-aspect-ratio structures without the directional ion damage inherent to plasma etching, which can degrade sidewall quality and introduce defects in sensitive nanostructures."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "During the WF\u2086/BCl\u2083 ALE cycles, why does the mass of the TiO\u2082 film decrease while the mass of the Al\u2082O\u2083 film remains nearly constant?",
+                "answer_type": "Paragraph",
+                "answer": "TiO\u2082 mass decreases because its fluorination/chlorination products (e.g., TiF\u2084 and TiCl\u2084) are volatile at 170\u00b0C, allowing material removal. Al\u2082O\u2083 mass remains stable because its potential reaction products (e.g., AlF\u2083, AlCl\u2083) are non-volatile at this temperature, causing the surface reactions to self-passivate rather than etch."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The QCM data shows highly selective etching of TiO\u2082 over Al\u2082O\u2083. What does this imply for integrating this ALE process into the fabrication of a modern logic transistor that uses a TiO\u2082 spacer and an Al\u2082O\u2083 interfacial layer?",
+                "answer_type": "Paragraph",
+                "answer": "This implies the process can precisely remove the TiO\u2082 spacer while using the Al\u2082O\u2083 layer as a perfect etch stop. This enables the creation of self-aligned, scaled transistor architectures by selectively etching one material without damaging the other, a critical capability for advanced manufacturing."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 1,
+            "width": 527,
+            "height": 417
+        },
+        "b": {
+            "x": 512,
+            "y": 4,
+            "width": 538,
+            "height": 411
+        }
+    }
+}

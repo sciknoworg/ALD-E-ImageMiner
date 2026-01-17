@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/36/fig_11",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The graph shows the gate-drain current (I<sub>GD</sub>) versus gate-source voltage (V<sub>GD</sub>) for Ni/Au-HEMT and Ga<sub>2</sub>O<sub>3</sub> MOS-HEMT.",
+        "b": "The graph shows the drain-source current (I<sub>DS</sub>) versus drain-source voltage (V<sub>DS</sub>) for Ni/Au-HEMT and Ga<sub>2</sub>O<sub>3</sub> MOS-HEMT. Voltage values of 126 V and 170 V are highlighted."
+    },
+    "data_extraction": {
+        "a": "| V<sub>GD</sub> (V) | Ni/Au-HEMT | Ga2O3 MOS-HEMT |\n| --- | --- | --- |\n| -10 | 10^-3 | 10^-5 |\n| -8 | 10^-3 | 10^-5 |\n| -6 |  10^-3  | 10^-5 |\n| -4 |  10^-3  | 10^-5 |\n| -2 |  10^-4  | 10^-6 |\n| 0 |  10^-6  | 10^-9 |\n| 2 |  10^0 | 10^0 |",
+        "b": "| V<sub>GD</sub> (V) | Ni/Au-HEMT | Ga2O3 MOS-HEMT |\n| --- | --- | --- |\n| 0 | 0 | 0 |\n| 30 | 0 | 0 |\n| 60 | 0 | 0 |\n| 90 | 0 | 0 |\n| 120 | 0.15 | 0.01 |\n| 150 | - | 0.05 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which type of chart is shown in the subfigure a?",
+                "answer_type": "Factoid",
+                "answer": "Subfigure a shows the gate-drain current versus voltage gate-drain for both samples."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the drain-source current change with the voltage?",
+                "answer_type": "Factoid",
+                "answer": "For the Ni/Au-HEMT, the current remains constant but begins to increase after 90 V, with a significant increase at 126 V. Meanwhile, the Ga2O3 MOS-HEMT sample remains constant until approximately 150 V and then increases significantly at 170 V."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the drain breakdown voltage of the Ga2O3 MOS-HEMT?",
+                "answer_type": "Factoid",
+                "answer": "170 V."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is there a difference between in the drain breakdown voltage of the samples?",
+                "answer_type": "Factoid",
+                "answer": "The ALD Ga2O3 film can suppressed the gate leakage current density and increased the drain-state voltage."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 14,
+            "y": 25,
+            "width": 462,
+            "height": 400
+        },
+        "b": {
+            "x": 498,
+            "y": 18,
+            "width": 466,
+            "height": 409
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/32/figure_4",
+    "classification": {
+        "a": "line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Line chart of Ar\u207a sputter etch depth vs acceleration grid voltage (50 s/cycle \u00d7 100 cycles). Etching is negligible up to 10 V, becomes measurable by ~30 V, and increases sharply by 50 V, indicating a strong voltage/ion-energy dependence.",
+        "b": "Multiple line chart showing InGaAs etch depth as a function of Ar\u207a ion exposure time at acceleration grid voltages of 10 V and 30 V. The 30 V condition produces substantially higher etch depths over the same exposure times, indicating a strong dependence of sputter yield on ion energy."
+    },
+    "data_extraction": {
+        "a": "| Acceleration Grid Voltage (V) | Etch Depth (\u00c5) |\n|---|---|\n| 0 | 0 |\n| 10 | 0 |\n| 30 | ~10 |\n| 50 | ~60 |",
+        "b": "| Ar+ Ion Exposure Time (sec) | 30V Etch Depth (\u00c5) | 10V Etch Depth (\u00c5) | \n|---|---|---| \n| 0 | 0 | 0 | \n| 50 | ~20 | 0 | \n| 100 | ~95 | 0 | \n| 150 | ~210 | ~75 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the etch depth at 30 V exceed that at 10 V for the non-zero Ar\u207a exposure times shown in subfigure (b)?",
+                "answer_type": "Yes/No",
+                "answer": "Yes."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "In subfigure (b), describe how etch depth depends on Ar\u207a exposure time for 10 V vs 30 V. What does this imply about sputtering conditions?",
+                "answer_type": "Paragraph",
+                "answer": "Etch depth increases non-linearly with exposure time for both, but 30 V increases much faster (\u224820 \u2192 95 \u2192 210 \u00c5) while 10 V stays ~0 up to 100 s and only rises by 150 s (~75 \u00c5). This implies sputtering is strongly ion-energy dependent; at lower voltage there\u2019s an effective \u201clow-yield\u201d regime over much of the time range."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In subfigure (a), at approximately what acceleration grid voltage does the etch depth first become clearly measurable (non-zero)?",
+                "answer_type": "Factoid",
+                "answer": "Around 30 V."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "In subfigure (a), what fixed Ar\u207a ion exposure condition is stated in the inset text?",
+                "answer_type": "Factoid",
+                "answer": "50 s/cycle \u00d7 100 cycles."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 4,
+            "y": 524,
+            "width": 653,
+            "height": 467
+        },
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 660,
+            "height": 513
+        }
+    }
+}

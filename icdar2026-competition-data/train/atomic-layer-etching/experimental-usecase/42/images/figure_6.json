@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/42/figure_6",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The etch rate of ZrO\u2082 and HfO2 increases slightly with increasing SiCl\u2084 exposure time at 350\u00b0C.",
+        "b": "The etch rate of ZrO\u2082 increases significantly while HfO2 only slightly with increasing HF exposure time at 350\u00b0C."
+    },
+    "data_extraction": {
+        "a": "| SiCl\u2084 Exposure Time (s) | ZrO\u2082 Etch Rate (\u00c5/cycle) | HfO\u2082 Etch Rate (\u00c5/cycle) |\n|--------------------------|---------------------------|---------------------------|\n| 0.0                      | 0.00                     | 0.00                     |\n| 0.5                      | 0.13                     | 0.05                     |\n| 1.0                      | 0.14                     | 0.06                     |\n| 1.5                      | 0.14                     | 0.06                     |\n| 2.0                      | 0.14                     | 0.06                     |",
+        "b": "| HF Exposure Time (s)     | ZrO\u2082 Etch Rate (\u00c5/cycle) | HfO\u2082 Etch Rate (\u00c5/cycle) |\n|--------------------------|---------------------------|---------------------------|\n| 0.0                      | 0.00                     | 0.00                     |\n| 0.5                      | 0.07                     | 0.03                     |\n| 1.0                      | 0.12                     | 0.05                     |\n| 1.5                      | 0.15                     | 0.06                     |\n| 2.0                      | 0.17                     |  0.06                     |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the etch rate for ZrO2 and HfO2 versus temperature?",
+                "answer_type": "Paragraph",
+                "answer": "The etch rates for both ZrO2 and HfO2 are self-limiting versus SiCl4 exposure. The etch rates are constant at progressively larger SiCl4 exposure times. The etch rates at each SiCl4 exposure time were determined using at least 3\u22124 measured film\nthicknesses after different numbers of ALE cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the saturated etch rate for ZrO2 and HfO2 at 350 \u00b0C ?",
+                "answer_type": "List",
+                "answer": "1. Saturated etch rate for ZrO2 = 0.14 \u00c5/cycle\n2. Saturated etch rate for HfO2 = 0.06 \u00c5/cycle\nat HF exposure of 1 s and SiCl4 exposure of 1s"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is a self-limiting behaviour observed for SiCl4 exposure?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the ZrO2 etch rate keep increasing with HF exposure?",
+                "answer_type": "Paragraph",
+                "answer": "The etch rate for ZrO2 begins to level off at higher HF exposures. The slight increases at larger HF exposures for ZrO2 can be attributed to the difficulty purging HF from the reactor after longer HF exposures. Residual HF remaining in the reactor will lead to chemical vapor etching (CVE) during  the SiCl4 exposure. Similar influences of CVE on thermal ALE have been observed earlier after longer HF exposures."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 6,
+            "width": 669,
+            "height": 366
+        },
+        "b": {
+            "x": 0,
+            "y": 377,
+            "width": 673,
+            "height": 376
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/36/figure_5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Under reduced TMA pressure, HF-treated Si, SiO\u2082, and Ti exhibit a rapid decrease in WCA to ~45\u00b0 within the first 25 ALD cycles, after which their values remain constant. ODPA/Ti behaves differently, maintaining a high contact angle (~110\u00b0) through early cycles and decreasing gradually to ~90\u00b0 by 150 cycles.",
+        "b": "With reduced TMA pressure and increased Ar purge, the same three substrates again converge rapidly to ~45\u00b0 and remain stable over the entire 370-cycle range. ODPA/Ti shows only a slight decrease from ~110\u00b0 to ~105\u00b0, indicating strong resistance to long-term hydrophilization under these conditions."
+    },
+    "data_extraction": {
+        "a": "| ALD cycles | ODPA/Ti (deg) | HF-treated Si (deg) | SiO\u2082 (deg) | Ti (deg) |\n|-----------|----------------|----------------------|------------|----------|\n| 0         | ~110           | ~90                  | ~70        | ~60      |\n| 25        | ~110           | ~45                  | ~45        | ~45      |\n| 50        | ~110           | ~45                  | ~45        | ~45      |\n| 100       | ~105           | ~45                  | ~45        | ~45      |\n| 150       | ~90            | ~45                  | ~45        | ~45      |",
+        "b": "| ALD cycles | ODPA/Ti (deg) | HF-treated Si (deg) | SiO\u2082 (deg) | Ti (deg) |\n|-----------|----------------|----------------------|------------|----------|\n| 0         | ~110           | ~90                  | ~70        | ~60      |\n| 25        | ~110           | ~45                  | ~45        | ~45      |\n| 150       | ~105           | ~45                  | ~45        | ~45      |\n| 370       | ~105           | ~45                  | ~45        | ~45      |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What comparative trends emerge among the substrates after the first 25 ALD cycles in subfigure (a)?",
+                "answer_type": "List",
+                "answer": "-HF-treated Si stabilizes near ~45\u00b0.\n-SiO\u2082 and Ti follow nearly identical trajectories to ~45\u00b0.\n-ODPA/Ti remains significantly higher than the others.\n-The separation between ODPA/Ti and the remaining substrates persists over subsequent cycles."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why might the rapid convergence to a stable WCA be valuable when coating mixed-material device surfaces?",
+                "answer_type": "Paragraph",
+                "answer": "A fast, stable WCA response reduces uncertainty in downstream wet processing, adhesion, or interfacial layer formation. If most substrates quickly reach a consistent wetting state, process tuning becomes simpler. The persistent exception (ODPA/Ti) also highlights where selectivity might be achievable."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What role does the increased Ar purging appear to play in the WCA behavior of the three non-ODPA substrates?",
+                "answer_type": "Paragraph",
+                "answer": "The curves indicate those substrates still transition rapidly to ~45\u00b0 and then remain stable, even with the modified purge scheme. That suggests the early surface change is robust to this process adjustment once the low-WCA state is reached. The main visible effect is that the long-cycle behavior remains steady rather than drifting."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which substrate maintains the highest WCA across the full 0\u2013370 cycle range in subfigure (b)?",
+                "answer_type": "Factoid",
+                "answer": "ODPA/Ti."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 2,
+            "width": 512,
+            "height": 381
+        },
+        "b": {
+            "x": 1,
+            "y": 406,
+            "width": 515,
+            "height": 390
+        }
+    }
+}

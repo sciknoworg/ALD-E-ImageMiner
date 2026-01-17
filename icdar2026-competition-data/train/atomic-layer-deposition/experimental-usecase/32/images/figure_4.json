@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/32/figure_4",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The figure shows growth rate of thermal ALD TiO\u2082 as a function of TDMAT exposure time at 200\u00b0C. Unlike Ta\u2082O\u2085 from PDMAT, the growth rate does not saturate but continues to increase with exposure time, indicating incomplete self-limiting behavior. This non-ideal ALD characteristic is attributed to the low thermal decomposition temperature of TDMAT (~180\u00b0C)."
+    },
+    "data_extraction": {
+        "a": "| t_S (s) | Growth rate (\u00c5/cycle) |\n|---|---|\n| 0 | 0 |\n| 1 | 1.5 |\n| 2 | 2 |\n| 3 | 2.5 |\n| 4 | 3 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the TiO\u2082 growth rate from TDMAT show saturation behavior similar to Ta\u2082O\u2085 from PDMAT?",
+                "answer_type": "Paragraph",
+                "answer": "No. Unlike Ta\u2082O\u2085 ALD from PDMAT, which shows clear saturation above 1 s exposure time, the TiO\u2082 growth rate from TDMAT continues to increase throughout the tested range up to 7 s. Although some slowdown occurs above 1 s, true saturation is never achieved. This indicates that TDMAT does not adsorb with perfect self-limitation at this temperature."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What causes the non-ideal ALD behavior observed for TDMAT?",
+                "answer_type": "Factoid",
+                "answer": "The low thermal decomposition temperature of TDMAT, reported to be approximately 180\u00b0C, which is below the growth temperature of 200\u00b0C used in this experiment."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the growth rate of TiO\u2082 at t_s = 2 s, and how does it compare to other TiO\u2082 precursors?",
+                "answer_type": "Paragraph",
+                "answer": "At t_s = 2 s, the growth rate is approximately 2.1 \u00c5/cycle. This is significantly higher than values reported for other precursors such as titanium methoxide (0.5 \u00c5/cycle) and titanium chloride (0.75 \u00c5/cycle). However, the higher rate partly reflects the non-ideal CVD contribution rather than pure ALD growth."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the x-axis label t_s represent in this figure?",
+                "answer_type": "Factoid",
+                "answer": "The TDMAT precursor exposure time in seconds."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 2,
+            "width": 670,
+            "height": 944
+        }
+    }
+}

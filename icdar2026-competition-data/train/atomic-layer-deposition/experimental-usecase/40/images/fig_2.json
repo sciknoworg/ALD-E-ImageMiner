@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/40/fig_2",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "Multi-axis chart showing the dependence of growth per cycle (left axis) and silicon atomic content (right axis) on SiH\u2084 pulse time during plasma-enhanced ALD of Ti\u2013Si\u2013N at 350 \u00b0C. Both quantities increase rapidly at short pulse times and saturate for SiH\u2084 exposures of ~8 s or longer, reaching ~0.7 \u00c5/cycle growth and ~9\u201315 at.% Si, indicating self-limiting surface reactions."
+    },
+    "data_extraction": {
+        "a": "| SiH\u2084 pulse time (s) | Thickness per cycle (\u00c5/cycle, left axis) | Si content (at.%, right axis) |\n|--------------------|-------------------------------------------|-------------------------------|\n| 0                  | ~0.45                                     | ~0.0                          |\n| 1                  | ~0.50                                     | ~4.0                          |\n| 2                  | ~0.55                                     | ~5.0                          |\n| 4                  | ~0.60                                     | ~7.5                          |\n| 6                  | ~0.65                                     | ~8.0                          |\n| 8                  | ~0.70                                     | ~9.0                          |\n| 12                 | ~0.70                                     | ~9.0                          |\n| 16                 | ~0.70                                     | ~9.0                          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the growth per cycle and silicon content change as the SiH\u2084 pulse time increases from 0 to ~8 s?",
+                "answer_type": "Paragraph",
+                "answer": "Both the growth per cycle and the silicon content increase rapidly as the SiH\u2084 pulse time is extended from 0 to about 8 s. This reflects increased surface reaction completion during the SiH\u2084 exposure. Beyond this range, further increases in pulse time do not significantly change either quantity."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does extending the SiH\u2084 pulse time beyond ~8 s significantly increase the film growth rate?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the silicon atomic percentage stop increasing once the growth per cycle has saturated?",
+                "answer_type": "Paragraph",
+                "answer": "Once the surface reactive sites available for Si incorporation are fully occupied during the SiH\u2084 half-cycle, additional precursor exposure cannot introduce more silicon. This reflects the self-limiting surface chemistry characteristic of ALD, where adsorption and reaction terminate once saturation is reached."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the shortest SiH\u2084 pulse time required to achieve a growth per cycle of approximately 0.7 \u00c5/cycle?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 8 s."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 634,
+            "height": 555
+        }
+    }
+}

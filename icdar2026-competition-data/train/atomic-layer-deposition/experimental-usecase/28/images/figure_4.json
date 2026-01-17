@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/28/figure_4",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The chart shows the layer density and composition of GeSe<sub>(1-x)</sub> as a function of cycle number for SiO<sub>2</sub>, TiN, and SiO<sub>2</sub>, DFM.",
+        "b": "The chart illustrates the growth rate and composition of GeSe<sub>(1-x)</sub> as a function of substrate temperature for SiO<sub>2</sub> and TiN."
+    },
+    "data_extraction": {
+        "a": "| Cycle Number | Layer Density (\u00b5g/cm\u00b2) | x in GeSe<sub>(1-x)</sub> |\n|---|---|---|\n| 0 | 0 | 0 |\n| 100 | 5 | 0.5 |\n| 200 | 9 | 0.5 |\n| 400 | 17 | 0.5 |",
+        "b": "| Substrate Temperature (\u00b0C) | Growth rate (ngcm<sup>-2</sup>cy<sup>-1</sup>) | x in GeSe<sub>(1-x)</sub> |\n|---|---|---|\n| 70 | 57 | 0.5 |\n| 90 | 26 | 0.5 |\n| 110 | 19 | 0.5 |\n| 130 | 10 | 0.6 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is an expected trend for perfect ALD with respect to layer density and cycle number?",
+                "answer_type": "Paragraph",
+                "answer": "a\tFor perfect ALD, every cycle, the amount of deposited material is the same, meaning there should be a linear relation between the cycle number and the layer density."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Can different dosing schemes be used to differ the material composition?",
+                "answer_type": "Paragraph",
+                "answer": "a\tFor all substrates and dosing methods the composition is the same, i.e. Ge:Se is 1:1. This means that differently dosing the precursors will not result in different composition."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What could be the reason for decreasing growth rate for increasing temperature?",
+                "answer_type": "Paragraph",
+                "answer": "b\tThis can be caused by desorption of adsorbed species leading to less film growth."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which precursor dose is more susceptible to desorption upon increasing temperature?",
+                "answer_type": "Paragraph",
+                "answer": "b\tWith increasing temperature the Ge contribution increases in the film, meaning there is less Se. This means that the Se precursor desorbs more easily."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 46,
+            "width": 508,
+            "height": 408
+        },
+        "b": {
+            "x": 522,
+            "y": 44,
+            "width": 521,
+            "height": 411
+        }
+    }
+}

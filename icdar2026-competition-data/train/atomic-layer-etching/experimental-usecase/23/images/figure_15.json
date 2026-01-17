@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_15",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multiple-line chart shows the thickness change of zinc sulfide thin films as a function of the number of ZnS ALE cycles measured at 300 \u00b0C. The etch rate is approximately 2 \u00c5 per cycle. The data correspond to initial ZnS film thicknesses of 20, 40, and 60 nm, where the original ZnS ALD films were deposited at 100 \u00b0C."
+    },
+    "data_extraction": {
+        "a": "| ALE Cycles | ZnS Thickness (\u00c5) | Initial Thickness (nm) |\n|------------|-------------------|-------------|\n| 0          | 200               | 20        |\n| 0          | 400               | 40        |\n| 0          | 600               | 60        |\n| 50         | 110.02       | 20        |\n| 50         | 317.31       | 40       |\n| 50         | 517.47       | 60       |\n| 100        | 0                 |  20        |\n| 100        | 206            | 40         |\n| 100        | 406.42      | 60        |\n| 150        | \u2014               |  20        |\n| 150        | 91.82         | 40         |\n| 150        | 288.24      | 60         |\n| 200        | \u2014                |  20        |\n| 200        | 0                 | 40         |\n| 200        | 180.93      | 60         |\n| 250        | \u2014                |  20        |\n| 250        | \u2014                | 40        |\n| 250        | 57.3           | 60         |\n| 300        | \u2014                | 20        |\n| 300        | \u2014               | 40         |\n| 300        | 0                 | 60       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What specific experimental procedure ensures that the reported etch rate (\u00c5/cycle) is accurately measured and not influenced by the initial film thickness?",
+                "answer_type": "Paragraph",
+                "answer": "The procedure involves etching multiple samples with different initial thicknesses under identical ALE conditions and confirming the slope (etch rate) is the same for all. This controls for any measurement artifacts and validates that the removal is truly cycle-dependent, not thickness-dependent."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For etching a patterned ZnS feature, would this thermal ALE process or a wet chemical etch provide better selectivity to an underlying photoresist mask?",
+                "answer_type": "Paragraph",
+                "answer": "Thermal ALE would provide better selectivity. Its surface reactions are less aggressive and can be tuned to minimize attack on organic masks, whereas wet etches often undercut and degrade photoresist, leading to loss of pattern fidelity."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the ALE process maintain a constant etch rate (~2.1 \u00c5/cycle) regardless of whether the ZnS film is 20 nm or 60 nm thick?",
+                "answer_type": "Paragraph",
+                "answer": "This occurs because ALE is a surface-limited reaction; each cycle only modifies and removes a fixed monolayer-equivalent from the surface. The bulk film underneath does not influence the surface reaction kinetics, so thickness is irrelevant to the per-cycle etch depth."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The data shows linear thickness reduction over many cycles. What specific optical device manufacturing step could this precise, digital etch capability enable?",
+                "answer_type": "Paragraph",
+                "answer": "This enables absolute thickness correction of ZnS layers in optical interference filters or Bragg mirrors. After deposition, exact numbers of ALE cycles can be applied to trim the layer to the target optical thickness, ensuring precise wavelength performance."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 669,
+            "height": 537
+        }
+    }
+}

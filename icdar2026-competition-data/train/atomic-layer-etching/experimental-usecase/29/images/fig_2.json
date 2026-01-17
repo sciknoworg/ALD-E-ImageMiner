@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/29/fig_2",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the relationship between Ar plasma exposure time and etch depth per cycle. As the exposure time increases, the etch depth also increases, till it soft-saturates."
+    },
+    "data_extraction": {
+        "a": "| Ar Plasma Exposure Time (s) | Etch Depth per Cycle (nm) |\n|---|---|\n| 0 | 0 |\n|10|0.3|\n| 25 | 0.43 |\n|30|0.55|\n| 50 | 0.5 |\n| 100 | 0.6 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is there no etching at 0 s plasma exposure time?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe etching is probably induced by the ion influence from the plasma. If there is no plasma, there is also no etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the mechanism behind the saturation behaviour of the etch depth for increasing Ar plasma exposure time?",
+                "answer_type": "Paragraph",
+                "answer": "a\tWith ALE only the modified layer is selectively etched. It seems that the modification depth is roughly 0.5 nm, so there is soft-saturation at this level."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is there, process wise, any benefit for going from 50 to 100 s of Ar plasma exposure time?",
+                "answer_type": "Paragraph",
+                "answer": "a\tNo there is no such benefit, saturation means that there is no more significant increase."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Besides Ar plasma exposure time, what is also an important plasma parameter to influence the ion dose?",
+                "answer_type": "Paragraph",
+                "answer": "a\tPlasma pressure, with high pressures, there are usually less energetic ions bombarding the substrate, whereas low-pressure plasmas do show this."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 533,
+            "height": 460
+        }
+    }
+}

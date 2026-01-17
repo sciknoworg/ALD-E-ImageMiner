@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/35/fig_1",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the amount of aluminum adsorbed (\u0394c_Al) as a function of AlMe\u2083 reaction temperature on alumina pretreated at 560\u00b0C. The fitted line (y = a + bx) yields a = 2.9 \u00b1 0.1 nm\u207b\u00b2 and b = \u22120.0003 \u00b1 0.0005, indicating that \u0394c_Al remains essentially constant (~2.9 nm\u207b\u00b2) across the 80\u2013300\u00b0C range, demonstrating temperature independence of aluminum adsorption in this regime."
+    },
+    "data_extraction": {
+        "a": "| AlMe\u2083 reaction temperature [\u00b0C] | \u0394c\u2090 [nm\u00b2] |\n|---|---|\n| 100 | 2.9 \u00b1 0.1 |\n| 150 | 2.9 \u00b1 0.1 |\n| 200 | 2.9 \u00b1 0.1 |\n| 250 | 2.9 \u00b1 0.1 |\n| 300 | 2.9 \u00b1 0.1 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the amount of aluminum adsorbed per cycle change significantly with increasing AlMe\u2083 reaction temperature between 80\u00b0C and 300\u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "No. The fitted slope b = \u22120.0003 \u00b1 0.0005 is statistically indistinguishable from zero, meaning \u0394c_Al remains constant at approximately 2.9 nm\u207b\u00b2 regardless of reaction temperature in this range."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why were reaction temperatures above 300\u00b0C excluded from this analysis?",
+                "answer_type": "Factoid",
+                "answer": "Above 300\u00b0C, AlMe\u2083 undergoes thermal decomposition, which would introduce non-ALD growth mechanisms and invalidate the self-limiting surface reaction assumption."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the temperature independence of \u0394c_Al suggest about the surface reaction mechanism of AlMe\u2083 on hydroxylated alumina?",
+                "answer_type": "Paragraph",
+                "answer": "The temperature independence indicates that the AlMe\u2083 chemisorption reaction is not kinetically limited within the 80\u2013300\u00b0C window; rather, it proceeds to completion regardless of thermal energy input. This behavior is characteristic of self-terminating ALD reactions where surface site availability (OH groups) and steric hindrance by adsorbed methyl groups, not reaction kinetics, determine the saturation coverage. The constant \u0394c_Al value of ~2.9 nm\u207b\u00b2 therefore reflects a thermodynamically controlled endpoint defined by the fixed OH concentration on the 560\u00b0C pretreated alumina surface."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the y-axis quantity shown in this figure and what are its units?",
+                "answer_type": "Factoid",
+                "answer": "The y-axis shows \u0394c_Al, the surface concentration of aluminum atoms adsorbed per ALD cycle, expressed in units of nm\u207b\u00b2 (atoms per square nanometer)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 403,
+            "height": 228
+        }
+    }
+}

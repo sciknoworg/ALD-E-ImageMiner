@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/29/fig_3",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the relationship between etch depth and RMS roughness variation for different treatments, including RIE, ALE with Cl2 gas or Cl2 plasma, with the reference after BT."
+    },
+    "data_extraction": {
+        "a": "| Etch Depth (nm) | RMS Roughness Variation (nm) RIE |RMS Roughness Variation (nm) Cl2 gas |RMS Roughness Variation (nm) Cl2 plasma |\n|---|---|---|---|\n| 0 | 0 |0 | 0 |\n| 3 | 0.05|0.01|0|\n| 5 | 0.15 |0.05|0|\n| 7 | 0.2|0.05|0|\n| 10 | - |-|-0.01|\n| 15 | - |-|-|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does reactive ion etching increase or decrease the roughness of the substrate and why is this likely to happen?",
+                "answer_type": "Paragraph",
+                "answer": "a\tRIE is increasing the roughness of the substrate, this is likely due to the sort of random distribution of ion influences on the substrate."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "If a process is pure ALE, what would the effect be on the surface roughness?",
+                "answer_type": "Paragraph",
+                "answer": "a\tIn the case of perfect ALE, all bumps and holes on a substrate are equally etched so the average roughness does not change."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the change in roughness at an etch depth of 5 s after performing reactive ion etching?",
+                "answer_type": "Factoid",
+                "answer": "a\tThe roughness changes with 0.15 nm."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which ALE process seems to work better for constant roughness?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe Cl2 plasma process seems to slightly decrease the roughness but remains constant, the Cl2 gas process increases the roughness on the other hand."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 4,
+            "width": 538,
+            "height": 501
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/32/figure_3",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the temperature dependence of Ta\u2082O\u2085 growth rate for thermal ALD and PE-ALD. Both methods exhibit three regimes: elevated growth rates at low temperatures, a stable ALD window in the middle, and increasing growth rates at high temperatures due to precursor decomposition. The ALD window spans 200 to 250\u00b0C for thermal ALD and 150 to 250\u00b0C for PE-ALD, demonstrating that PE-ALD enables ALD growth at approximately 50\u00b0C lower temperature."
+    },
+    "data_extraction": {
+        "a": "| T_s, \u00b0C | Growth rate thermal ALD (\u00c5/cycle) | Growth rate PE-ALD (\u00c5/cycle) |\n|---|---|---|\n| 100 | - | 1.40 |\n| 125 | 1.32 | - |\n| 150 | 1.20 | 1.20 |\n| 175 | - | 1.18 |\n| 200 | 0.90 | 1.17 |\n| 250 | 0.85 | 1.15 |\n| 275 | - | 1.25 |\n| 300 | 1.00 | - |\n| 500 | 1.58 | 1.70 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What are the temperature boundaries of the ALD window for thermal ALD versus PE-ALD of Ta\u2082O\u2085?",
+                "answer_type": "Factoid",
+                "answer": "The ALD window is 200 to 250\u00b0C for thermal ALD and 150 to 250\u00b0C for PE-ALD."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the growth rate increase at temperatures above the ALD window?",
+                "answer_type": "Paragraph",
+                "answer": "At high temperatures, the PDMAT precursor undergoes thermal decomposition before the self-limiting surface reaction can complete. This leads to continuous CVD-like deposition rather than true ALD, resulting in higher apparent growth rates. The loss of self-limitation compromises the precise thickness control that is characteristic of ALD."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why can PE-ALD achieve ALD growth at lower temperatures than thermal ALD?",
+                "answer_type": "Paragraph",
+                "answer": "PE-ALD uses oxygen plasma containing highly reactive species such as atomic oxygen and activated oxygen molecules. These radicals have sufficient reactivity to oxidize the adsorbed precursor even at lower temperatures where water vapor in thermal ALD would be insufficiently reactive. In fact, the authors note that Ta\u2082O\u2085 could not be deposited without plasma at temperatures below 250\u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the approximate growth rate at the low temperature extreme (100\u00b0C) for PE-ALD?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 1.4 \u00c5/cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 684,
+            "height": 533
+        }
+    }
+}

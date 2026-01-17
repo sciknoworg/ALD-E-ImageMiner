@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/43/fig_5",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "This line chart represents the Etch Per Cycle (EPC) \u00c5/cycle for Atomic Layer Etching (ALE) of Al\u2082O\u2083 as a function of substrate temperature. The process uses cycles of NF\u2083 remote plasma followed by TMA exposure(3 s duration). EPC slowly increases with temperature up to a point (~250\u00b0C), then a rapid etch rate is observed and then stabilizes. This thickness loss was measured via ellipsometry."
+    },
+    "data_extraction": {
+        "a": "| Substrate Temperature (\u00b0C) | Etch Per Cycle (\u00c5/cycle) |\n|----------------------------|--------------------------|\n| 150                        | -0.1                     |\n| 175                        | -0.1                     |\n| 200                        |  0.0                     |\n| 225                        |  0.4                     |\n| 250                        |  1.4                     |\n| 275                        |  2.6                     |\n| 290                        |  3.8                     |\n| 300                        |  4.2                     |\n| 320                        |  4.6                     |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the two main steps in the ALE supercycle described. What is the specific function of the TMA step in this etching context compared to its typical role in deposition?",
+                "answer_type": "List",
+                "answer": "Exposure to NF\u2083 remote plasma for 4 s to fluorinate the surface. \n\nExposure to TMA for 3 s to perform ligand exchange and remove the surface species."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare this thermal ALE process (using TMA) with a plasma-enhanced ALE process where both the fluorination and removal steps use plasma (e.g., NF\u2083 plasma then Ar\u207a sputter). For etching ultra-thin films on a temperature-sensitive 2D material like graphene, which approach is mandatory and why?",
+                "answer_type": "Paragraph",
+                "answer": "The thermal ALE process is mandatory. A plasma-enhanced removal step (Ar\u207a sputter) causes physical bombardment damage, which would destroy the atomic lattice of graphene. The thermal TMA step in this process provides a chemically selective and gentle removal mechanism via volatile AlF\u2083 formation, enabling damage-free etching necessary for 2D materials, despite the low or moderate temperature requirement."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the substrate temperature influence the surface chemical modification during the NF\u2083 plasma step? If the EPC increases with temperature, what does this suggest about the fluorination depth or stability?",
+                "answer_type": "Factoid",
+                "answer": "Higher temperatures typically increase the thermal energy available for diffusion and reaction."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on the temperature dependence shown, if you need to etch an Al\u2082O\u2083 spacer layer with atomic-scale depth control (e.g., \u00b10.1 \u00c5/cycle) next to a silicon channel, is operating at 150\u00b0C a reliable choice?",
+                "answer_type": "Yes/No",
+                "answer": "NO, At 150\u00b0C, the EPC is very low (~0.5 \u00c5/cycle) and is on the steep part of the curve. This means tiny temperature fluctuations in the reactor could cause significant percentage variations in the etch rate, destroying the atomic-scale depth control required. For reliable control, one must operate in the temperature-independent saturation regime (near 250-300\u00b0C) where the rate is stable."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 7,
+            "width": 654,
+            "height": 652
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/32/fig_12",
+    "classification": {
+        "a": "heatmap"
+    },
+    "summarization": {
+        "a": "The visualization shows a heatmap of TMA flux on the substrate surface, scale in mol/m2, during the whole TMA exposure integrated over time, with a color gradient indicating varying values, ranging from blue (lowest value) to red (highest value). The color bar on the right provides the scale."
+    },
+    "data_extraction": {
+        "a": "| Value |\n|---|\n| 0.0118 |\n| 0.0120 |\n| 0.0122 |\n| 0.0124 |\n| 0.0126 |\n| 0.0128 |\n| 0.0130 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the current profile plotted?",
+                "answer_type": "Paragraph",
+                "answer": "In order to analyze the exposure of the substrate to TMA molecules, the species flux on the substrate surface, using the Hertz-Knudsen equation, in terms of mol/m2s is calculated. These species flux is integrated over the whole TMA exposure and purging time of the ALD cycle. The resulting exposure of the substrate to TMA molecules is plotted in the image"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the TMA flux integral over time  uniform?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is the TMA flux integral over time not uniform?",
+                "answer_type": "Paragraph",
+                "answer": "The TMA flux integral has a maximum between the substrate center and the loading door side. This corresponds to the concentration profiles on the substrate during the TMA pulse, when the re-circulation in the gas phase exists. This means that the majority of the substrate exposure to TMA occurs during the first ms of the TMA pulse."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the maximum exposure difference?",
+                "answer_type": "Factoid",
+                "answer": "The computed maximum exposure difference on the substrate surface during the TMA exposure is 10.7%."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 5,
+            "width": 846,
+            "height": 633
+        }
+    }
+}

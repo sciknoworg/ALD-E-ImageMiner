@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/14/figure_5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows how the film thickness of various materials (TiN, ZrO\u2082, SiO\u2082, Si\u2083N\u2084, HfO\u2082, Al\u2082O\u2083) changes over cycles at 300\u00b0C using TMA.",
+        "b": "The chart shows how the film thickness of various materials (TiN, SiO\u2082, Si\u2083N\u2084, ZrO\u2082, HfO\u2082, Al\u2082O\u2083) changes over cycles at 250\u00b0C using DMAC."
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | TiN | ZrO\u2082 | SiO\u2082 | Si\u2083N\u2084 | HfO\u2082 | Al\u2082O\u2083 |\n|---|---|---|---|---|---|---|\n| 0 | 68 | 50 | 48 | 40 | 55 | 44 |\n| 50 | - | 48 | - | - | 50 | 20 |\n| 100 | - | 53 | - | - | 43 | 0 |\n| 200 | 70 | 48 | 43 | 42 | 37 | 0 |",
+        "b": "| Number of Cycles | TiN | SiO\u2082 | Si\u2083N\u2084 | ZrO\u2082 | HfO\u2082 | Al\u2082O\u2083 |\n|---|---|---|---|---|---|---|\n| 0 | 70 | 50 | 40 | 50 | 50 | 48 |\n| 25 | 70 | 51 | 40 | 22 | 40 | 40 |\n| 50 | 70 | 50 | 40 | 5 | 20 | 38 |\n| 100 | 70 | 50 | 40 | 0 | 0 | 18 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the thickness of the film change across the material?",
+                "answer_type": "Factoid",
+                "answer": "Only Al2O3, HfO2, and ZrO2 exhibit etching behavior. For the other materials, the film thickness remains constante over the number of cycles."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which material exhibit the highest film thickness?",
+                "answer_type": "Factoid",
+                "answer": "TiN has the highest film thickness values."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what temperature was the experiment performed?",
+                "answer_type": "Factoid",
+                "answer": "The TMA ALE cycle was performed at 300 \u00b0C."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which material exhibit the highest changes in the film thickness using TMA as reactant?",
+                "answer_type": "Factoid",
+                "answer": "As can be seen in the figure, Al2O3 exhibit the highest etch rates using TMA as reactant."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 49,
+            "y": 539,
+            "width": 604,
+            "height": 506
+        },
+        "a": {
+            "x": 17,
+            "y": 5,
+            "width": 630,
+            "height": 526
+        }
+    }
+}

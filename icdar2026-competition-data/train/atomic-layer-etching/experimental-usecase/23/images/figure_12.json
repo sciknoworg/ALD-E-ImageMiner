@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_12",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multi-line chart shows how the etch rate (\u00c5/cycle) of ZnS ALD changes with HF pressures for depositions carried out at TMA pressures of 20 m.Torr and 200 m.Torr. As the pressure increases till  50, the etch rate increases and plateus."
+    },
+    "data_extraction": {
+        "a": "| HF Pressure (mTorr) | Etch Rate (\u00c5/cycle) | TMA Pressure |\n|----------------------|----------------------|--------------|\n| 0                    | 0.00                 | 20 mTorr     |\n| 0                    | 0.00                 | 200 mTorr    |\n| 50                   | 1.65                 | 20 mTorr     |\n| 50                   | 2.00                 | 200 mTorr    |\n| 100                  | 1.75                 | 20 mTorr     |\n| 100                  | 2.24                 | 200 mTorr    |\n| 150                  | 1.81                 | 20 mTorr     |\n| 150                  | 2.43                 | 200 mTorr    |\n| 200                  | 1.83                 | 20 mTorr     |\n| 200                  | 2.43                 | 200 mTorr    |\n| 250                  | 1.83                 | 20 mTorr     |\n| 250                  | 2.46                 | 200 mTorr    |\n| 300                  | 1.83                 | 20 mTorr     |\n| 300                  | 2.48                 | 200 mTorr    |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What two parameters must be set and stabilized in sequence to collect a single etch rate data point at 50 mTorr HF and 200 mTorr TMA?",
+                "answer_type": "Factoid",
+                "answer": "First, the TMA pressure must be set and stabilized at 200 mTorr. Then, the HF pressure must be set and stabilized at 50 mTorr for the duration of the ALE cycle before measuring the etch depth."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For a manufacturing process requiring high throughput, is it better to operate at 200 mTorr or 20 mTorr of TMA pressure? What is the trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "200 mTorr TMA is better for throughput as it gives a higher etch rate. The trade-off is higher precursor consumption and potentially more stringent pumping requirements to maintain process pressure."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the etch rate plateau at higher HF pressures, and what does this reveal about the surface reaction mechanism?",
+                "answer_type": "Paragraph",
+                "answer": "The plateau occurs because all available surface reaction sites become saturated with HF-derived species within the pulse time. This reveals the self-limiting nature of the HF half-reaction, a defining characteristic of ideal ALE."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The etch rate is sensitive to both HF and TMA pressure. What does this imply for the design of a production ALE tool intended for highly reproducible etching?",
+                "answer_type": "Paragraph",
+                "answer": "It implies the tool requires excellent pressure control and uniformity for both precursors. Any drift or non-uniformity in pressure will directly translate into etch rate variations, affecting device yield and performance consistency."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 2,
+            "width": 665,
+            "height": 554
+        }
+    }
+}

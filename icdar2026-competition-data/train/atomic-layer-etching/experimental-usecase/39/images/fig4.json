@@ -1,0 +1,79 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/39/fig4",
+    "classification": {
+        "a": "heatmap",
+        "b": "heatmap",
+        "c": "multiple line chart",
+        "d": "multiple line chart"
+    },
+    "summarization": {
+        "a": "AFM height map of the TFLN waveguide sidewall before ALE, reporting an RMS roughness (Rq) of 0.82 \u00b1 0.25 nm.",
+        "b": "AFM height map of the same sidewall after 50 ALE cycles, showing a reduced roughness of 0.55 \u00b1 0.13 nm.",
+        "c": "Averaged AFM line scans comparing the waveguide sidewall profile before and after ALE, which the caption states corresponds to a lateral etch rate of 1 nm per cycle.",
+        "d": "PSD of the AFM height maps before and after ALE, showing lower PSD intensity after ALE across the measured spatial frequency range."
+    },
+    "data_extraction": {
+        "a": "| Property | Value (nm) |\n|----------|------------|\n| Rq (Roughness) | 0.82 \u00b1 0.25 |",
+        "b": "| Property | Value (nm) | \n|----------|------------| \n| Rq (Roughness) | 0.55 \u00b1 0.13 |",
+        "c": "| Position (nm) | Height (Before ALE) | Height (After ALE) | \n|---------------|---------------------|--------------------|\n| 0   | ~320 | ~300 |\n| 200 | ~320 | ~300 |\n| 370 | ~320 | ~150 |\n| 500 | ~0   | ~0   |\n| 750 | ~0   | ~0   |",
+        "d": "| Spatial Frequency (nm\u207b\u00b9) | PSD (Before ALE) | PSD  (After ALE) | \n|-----------------------|--------------------|------------------|\n| 0.0 | ~10\u00b3 | ~10\u00b2 |\n| 0.1 | ~10\u2070 | ~10\u2070 |\n| 0.2 | ~5\u00d710\u207b\u00b9 | ~1\u00d710\u207b\u00b9 |\n| 0.3 | ~5\u00d710\u207b\u00b2 | ~1\u00d710\u207b\u00b2 |\n| 0.4 | ~1\u00d710\u207b\u00b2 | ~8\u00d710\u207b\u00b3 |\n| 0.5 | ~1\u00d710\u207b\u00b2 | ~8\u00d710\u207b\u00b3 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What RMS roughness is measured on the waveguide sidewall before ALE?",
+                "answer_type": "Factoid",
+                "answer": "0.82 \u00b1 0.25 nm."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the AFM line scan indicate a lateral retreat of the waveguide sidewall after ALE?",
+                "answer_type": "Yes/No",
+                "answer": "Yes."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What lateral etch rate is reported based on the line-scan comparison?",
+                "answer_type": "Factoid",
+                "answer": "1 nm per cycle."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the PSD of the surface change after 50 ALE cycles compared with before ALE?",
+                "answer_type": "Paragraph",
+                "answer": "The PSD curve after ALE is consistently lower than the curve before ALE across the full spatial frequency range shown. This reduction indicates decreased surface roughness at both low and high spatial frequencies. The trend is directly observable from the relative positions of the two curves in the plot."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 63,
+            "y": 12,
+            "width": 387,
+            "height": 387
+        },
+        "b": {
+            "x": 559,
+            "y": 8,
+            "width": 526,
+            "height": 399
+        },
+        "c": {
+            "x": 14,
+            "y": 410,
+            "width": 482,
+            "height": 421
+        },
+        "d": {
+            "x": 510,
+            "y": 410,
+            "width": 474,
+            "height": 423
+        }
+    }
+}

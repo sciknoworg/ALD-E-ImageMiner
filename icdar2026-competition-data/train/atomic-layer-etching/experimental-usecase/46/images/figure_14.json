@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/46/figure_14",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "QCM data demonstrating BCl\u2083 saturation behavior. After an initial WF\u2086 pulse causes fluorination and mass gain, the first few BCl\u2083 pulses induce a sharp mass loss. Subsequent BCl\u2083 pulses produce negligible change, confirming that the etching reaction is self-limiting once the fluorinated surface layer is consumed.",
+        "b": "QCM data demonstrating WF\u2086 saturation behavior. The first WF\u2086 pulse results in a large mass increase due to surface fluorination, while additional WF\u2086 pulses contribute minimal mass change, confirming that fluorination is also self-limiting and does not proceed indefinitely."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Mass loading (ng cm\u207b\u00b2) | Process condition        |\n|----------|------------------------|-------------------------|\n| 0        | 0                      | Initial state           |\n| 50       | 160                    | WF\u2086 pulse               |\n| 100      | 60                     | 10\u00d7 BCl\u2083                |\n| 300      | 40                     | 10\u00d7 BCl\u2083                |\n| 500      | 30                     | 10\u00d7 BCl\u2083         |\n| 550      | 80                    | WF\u2086 pulse               |\n| 600      | 20                     | 10\u00d7 BCl\u2083                |\n| 800      | 0                      | 10\u00d7 BCl\u2083                |\n| 1000     | \u221220                    |  10\u00d7 BCl\u2083         |\n| 1050     | 60                     | WF\u2086 pulse               |\n| 1100     | \u221210                    | 10\u00d7 BCl\u2083                |\n| 1300     | \u221240                    | 10\u00d7 BCl\u2083                |\n| 1500     | \u221260                    | 10\u00d7 BCl\u2083         |",
+        "b": "| Time (s) | Mass loading (ng cm\u207b\u00b2) | Process condition  |\n|----------|------------------------|------------------|\n| 0        | 0                      | Initial state    |\n| 100      | 150                    | 10\u00d7 WF\u2086          |\n| 300      | 220                    | 10\u00d7 WF\u2086          |\n| 500      | 260                    |  10\u00d7 WF\u2086   |\n| 550      | 50                     | BCl\u2083             |\n| 700      | 80                     | 10\u00d7 WF\u2086          |\n| 900      | 70                     |  10\u00d7 WF\u2086   |\n| 1000     | \u2212120                   | BCl\u2083             |\n| 1150     | \u221280                    | 10\u00d7 WF\u2086          |\n| 1350     | \u2212100                   |  10\u00d7 WF\u2086   |\n| 1500     | \u2212280                   | BCl\u2083             |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In the given sequence of events. After the single \u2018WF\u2086\u2019 peak, there are 10 smaller steps labeled \u201810 \u00d7 BCl\u2083\u2019. Describe the mass change trend during these 10 steps. Does the 10th BCl\u2083 pulse remove as much material as the 1st BCl\u2083 pulse?",
+                "answer_type": "Factoid",
+                "answer": "Diminishing Removal. No, the 10th pulse removes almost nothing. The first BCl\u2083 pulse causes a massive drop, the second is smaller, and by the 5th\u201310th pulse, the mass signal is essentially flat, indicating the reactant has run out of surface fluorides to react with."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the dosing strategy in label a  (1 long WF\u2086, 10 short BCl\u2083) with that in label b (10 short WF\u2086, 1 long BCl\u2083). For maximizing the etch rate per cycle while ensuring complete surface reactions, which strategy is more efficient and why?",
+                "answer_type": "Paragraph",
+                "answer": "The strategy in b is likely more efficient for maximizing etch rate. Multiple short WF\u2086 doses ensure complete fluorination of the surface without excessive precursor waste, while a single, sufficiently long BCl\u2083 dose guarantees complete removal of the modified layer. The method in 'a' may waste BCl\u2083 with many short, possibly incomplete doses."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The data shows the etch rate saturates with increasing dose time for both precursors. What does this saturation prove about the chemical nature of each half-reaction?",
+                "answer_type": "Paragraph",
+                "answer": "Saturation proves both half-reactions are self-limiting. The WF\u2086 dose saturates once all available surface sites are fluorinated, forming a TiF\u2093-WO\u2093F\u1d67 layer. The BCl\u2083 dose saturates once it completely converts/removes this modified layer to volatile products (e.g., TiCl\u2084). Further dosing beyond the saturation point yields no additional etch, confirming layer-by-layer control."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The saturation studies are performed at 170\u00b0C. What does the existence of clear saturation curves imply for the stability and reproducibility of this ALE process in high-volume manufacturing?",
+                "answer_type": "Paragraph",
+                "answer": "Clear saturation implies a robust process window. As long as dose times exceed the saturation point, minor fluctuations in precursor flow or timing will not affect the etch rate per cycle. This insensitivity is critical for high-volume manufacturing, ensuring reproducible etch depth and uniformity across the wafer and from run to run."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 3,
+            "width": 475,
+            "height": 381
+        },
+        "b": {
+            "x": 484,
+            "y": 5,
+            "width": 466,
+            "height": 376
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/30/figure_12",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows activation energies (\u0394E_A) for the C-O bond intersection reaction of TMA and TEA at three SMI layer densities. Barriers increase with SMI density: TMA rises from 179 to 207 kJ/mol, TEA from 160 to 197 kJ/mol. All barriers exceed 150 kJ/mol, indicating this reaction is unlikely under typical ALD conditions.",
+        "b": "The chart shows activation energies for the methoxy-SMI intersection reaction with TMA, TEA, and H\u2082O. TMA and TEA barriers increase substantially with SMI density (99 to 173 kJ/mol for TMA; 115 to 203 kJ/mol for TEA), while H\u2082O barriers remain low (97 to 112 kJ/mol) regardless of SMI density."
+    },
+    "data_extraction": {
+        "a": "| Condition | TMA (Delta E_A, kJ/mol) | TEA (Delta E_A, kJ/mol) |\n|---|---|---|\n| Isolated SMI | 179 (-10) | 160 (-16) |\n| 2.5 SMI per nm^2 | 206 (0) | 193 (-4) |\n| 3.4 SMI per nm^2 | 207 (-5) | 197 (-8) |",
+        "b": "| Condition | TMA (Delta E_A, kJ/mol) | TEA (Delta E_A, kJ/mol) | H2O (Delta E_A, kJ/mol) |\n|---|---|---|---|\n| Isolated SMI | 99 (-17) | 115 (-10) | 97 (-7) |\n| 2.5 SMI per nm^2 | 172 (-12) | 155 (-16) | 112 (-12) |\n| 3.4 SMI per nm^2 | 173 (-25) | 203 (-38) | 106 (-6) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why do activation energies for reactions at methoxy groups increase with SMI layer density?",
+                "answer_type": "Paragraph",
+                "answer": "The increase results from steric effects within the denser blocking layer. The transition states for these reactions require spatial rearrangement of groups around the SMI silicon atom. In a denser layer, displacing SMI substituents to accommodate the approaching precursor ligand invokes repulsive forces from neighboring SMIs. This \"reactivity reduction\" effect destabilizes the transition state, raising the activation barrier. The effect is more pronounced for bulkier precursors like TEA and for reactions requiring larger structural changes at the SMI center."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the horizontal colored bars in panel (a) represent?",
+                "answer_type": "Factoid",
+                "answer": "Each bar represents the activation energy for the C-O bond intersection reaction, with blue bars for TMA and yellow bars for TEA. Numbers in parentheses indicate the dispersion energy contribution to each barrier."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do activation energies for H\u2082O compare to those of Al precursors in the methoxy-SMI intersection reaction?",
+                "answer_type": "Factoid",
+                "answer": "H\u2082O activation energies (97 to 112 kJ/mol) are significantly lower and nearly independent of SMI density, while TMA and TEA barriers increase substantially with density, reaching 173 and 203 kJ/mol at 3.4 SMI/nm\u00b2, respectively."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the low H\u2082O barrier for methoxy hydrolysis imply for AS-ALD selectivity?",
+                "answer_type": "List",
+                "answer": "Key implications include: unreacted methoxy groups will convert to reactive hydroxyl groups during the first water pulse; these hydroxyl groups can then react with Al precursors in subsequent pulses; this may create SMI-bound Al fragments that negatively impact selectivity."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 2,
+            "width": 318,
+            "height": 525
+        },
+        "b": {
+            "x": 330,
+            "y": 2,
+            "width": 326,
+            "height": 526
+        }
+    }
+}

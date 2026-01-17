@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/43/fig_3",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "This two-panel figure shows Mass Change Per Cycle (MCPC) (ng/(cm\u00b2\u00b7cycle)) data for the Atomic Layer Etching (ALE) of Al\u2082O\u2083, MCPC varies the NF\u2083 plasma time (with fixed 3s TMA)",
+        "b": "Mass Change Per Cycle (MCPC) (ng/(cm\u00b2\u00b7cycle)) varies the TMA pulse time (with fixed 4s NF\u2083). Both plots show the mass loss saturating, proving each half-reaction is self-limiting."
+    },
+    "data_extraction": {
+        "a": "| NF\u2083 Remote Plasma Time (s) | MCPC (ng/(cm\u00b2\u00b7cycle)) | Symbol    |\n|---|---|---|\n| 0 | 0 |NF\u2083 remote plasma (square) |\n| 1.5 | -25 | NF\u2083 remote plasma (square) |\n| 2.0 | -60 | NF\u2083 remote plasma (square) |\n| 3.0 | -70 | NF\u2083 remote plasma (square) |\n| 4.0 | -60 | NF\u2083 remote plasma (square) |\n| 4.0 | -2  | NF\u2083 gas (circle) |",
+        "b": "| TMA Pulse Time (s) | MCPC (ng/(cm\u00b2\u00b7cycle)) |\n|---|---|\n| 0.0 | 0 |\n| 0.5 | -25 |\n| 1.5 | -45 |\n| 3.0 | -55 |\n| 4.5 | -58 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "If the fixed TMA time in this chart were reduced to 1 second (undersaturated), how would the saturation curve change? Would you still achieve a stable, self-limiting etch process?",
+                "answer_type": "Paragraph",
+                "answer": "The curve would still rise but plateau at a lower maximum mass loss. With an undersaturated TMA dose, not all the fluorinated layer is removed each cycle. The process would not be fully self-limiting or stable, as the etch depth would depend on the incomplete removal step, leading to poor control and possible residue accumulation."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Explain the physical significance of the 'grey zone' (0\u20131.2 s) in graph. Why is the mass loss negligible in this region despite the presence of plasma?",
+                "answer_type": "Paragraph",
+                "answer": "The grey region represents an incubation or threshold period. During these short exposures, the incoming fluorine radical flux is too low to fully fluorinate the Al\u2082O\u2083 surface to the depth needed for the subsequent ligand-exchange reaction with TMA. Because a sufficient coverage of surface fluoride (AlF\u2093) species has not yet formed, TMA cannot remove material, resulting in nearly zero MCPC."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Calculate the etch rate in \u00c5 per cycle assuming the density of Al\u2082O\u2083 is approximately 3.0 g/cm\u00b3 and the saturated mass loss is \u221260 ng/(cm\u00b2\u00b7cycle). Based on this etch rate, determine how many cycles would be required to remove a 5 nm thick Al\u2082O\u2083 film.",
+                "answer_type": "Factoid",
+                "answer": "60 ng/(cm\u00b2\u00b7cycle corresponds to roughly 2.0 \u00c5/cycle"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the four main sequential steps for one complete ALE cycle used to generate the saturation point (e.g., at 3s TMA time).",
+                "answer_type": "List",
+                "answer": "NF\u2083 Remote Plasma Exposure (4 s)\n\nPurge\n\nTMA Exposure (3 s)\n\nPurge"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 4,
+            "width": 627,
+            "height": 575
+        },
+        "b": {
+            "x": 5,
+            "y": 600,
+            "width": 619,
+            "height": 575
+        }
+    }
+}

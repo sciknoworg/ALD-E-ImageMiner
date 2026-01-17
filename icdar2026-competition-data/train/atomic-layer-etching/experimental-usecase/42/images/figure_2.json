@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/42/figure_2",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure shows the film thickness of various materials (TiN, SiO\u2082, Si\u2083N\u2084, HfO\u2082, ZrO\u2082, Al\u2082O\u2083) at 200\u00b0C when Sn(acac)2 is used for etching.",
+        "b": "The figure illustrates the atomic layer deposition (ALE) rates when Sn(acac)2 is used for etching for HfO\u2082, ZrO\u2082, and Al\u2082O\u2083 at 200\u00b0C over cycles."
+    },
+    "data_extraction": {
+        "a": "| Film Thickness (\u00c5) | TiN | SiO\u2082 | Si\u2083N\u2084 | HfO\u2082 | ZrO\u2082 | Al\u2082O\u2083 |\n|-------------------|-----|------|-------|------|------|-------|\n| 0                | 70  | 50   | 40    | 30   | 0    | 30    |\n| 1-30-1-30         | 68  | 48   | 38    | 32   | 0    | 28    |\n| 200\u00b0C             | 66  | 46   | 36    | 30   | 0    | 26    |",
+        "b": "| Number of Cycles | HfO\u2082 ALE: 0.06 \u00c5/cycle | ZrO\u2082 ALE: 0.14 \u00c5/cycle | Al\u2082O\u2083 ALE: 0.23 \u00c5/cycle |\n|------------------|------------------------|------------------------|-------------------------|\n| 0                | 50                     | 50                     | 50                      |\n| 100              | 45                     | 45                     | 40                      |\n| 200              | 40                     | 40                     | 25                      |\n| 400              | 35                     | 35                     | 0                       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does acetylacetone etch Al2O3?",
+                "answer_type": "Paragraph",
+                "answer": "Sequential exposures of HF and acetylacetone (acacH, Sigma-Aldrich >99%) did not lead to the etching of Al2O3 at 200 \u00b0C. Without the metal acetylacetonate precursor, acetylacetone alone does not yield thermal ALE."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does HF and Sn(acac)2 etch all the materials?",
+                "answer_type": "Paragraph",
+                "answer": "From the film thicknesses after 50, 100, 200, and 400 ALE cycles using sequential HF and Sn(acac)2 exposures at 200 \u00b0C, Al2O3, ZrO2, and HfO2 films were etched linearly versus the number of ALE cycles. In contrast, there were no measurable\nthickness changes for the SiO2, Si3N4, and TiN films."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "How are etch rates calculated?",
+                "answer_type": "List",
+                "answer": "The slopes from the linear least-squares fittings of the data in image b yielded etch rates of 0.23 \u00c5/cycle, 0.14 \u00c5/cycle, and 0.06 \u00c5/cycle for the Al2O3, ZrO2, and HfO2 films, respectively"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Are both HF and Sn(acac)2 necessary to perform ALE?",
+                "answer_type": "Paragraph",
+                "answer": "Additional control experiments were performed on the Al2O3, ZrO2, and HfO2 films to determine if both HF and Sn(acac)2 were necessary for the thermal ALE. Experiments using 200 cycles of HF exposures observed negligible thickness changes for the Al2O3, ZrO2, and HfO2 films."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 4,
+            "width": 671,
+            "height": 454
+        },
+        "b": {
+            "x": 0,
+            "y": 464,
+            "width": 665,
+            "height": 534
+        }
+    }
+}

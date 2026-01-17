@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/32/fig_6",
+    "classification": {
+        "a": "heatmap",
+        "b": "heatmap"
+    },
+    "summarization": {
+        "a": "Temperature field inside the reactor chamber",
+        "b": "temperature profile on the substrate surface for the substratecenter at 300\u25e6C."
+    },
+    "data_extraction": {
+        "a": "| Object | Temperature Range (\u00b0C) |\n|-----------|--------------------------|\n| Reactor      | 50 \u2013 300               |",
+        "b": "| Object | Temperature Range (\u00b0C) |\n|-----------|--------------------------|\n| Substrate| 280 \u2013 300               |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do the images predict and describe the temperature field in the chamber?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the loading door purge affect the temperature?",
+                "answer_type": "Paragraph",
+                "answer": "The Ar flow entering the reactor chamber at 20\u25e6C lowers the temperature in the area close to the loading door  and at the nearby substrate side(at 279\u25e6C). The temperature difference between the substrate center and the loading door side reads 21\u25e6C."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the temperature differ within the chamber?",
+                "answer_type": "Paragraph",
+                "answer": "The gas is quite isothermal into the reactor with a temperature close to that of the walls (270\u25e6C), except near the inlet zones where it is colder and near the substrate where it is hotter (300\u25e6C)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the temperature isothermal in these conditions?",
+                "answer_type": "Paragraph",
+                "answer": "The substrate is not isothermal for image b, due to the cooling provided by the gas coming from the vicinity of the reactor walls. The calculated temperature on the substrate perimeter is equal to 289\u25e6C."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 418,
+            "height": 440
+        },
+        "b": {
+            "x": 485,
+            "y": 1,
+            "width": 521,
+            "height": 447
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/27/fig_11",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "spectra chart",
+        "c": "spectra chart"
+    },
+    "summarization": {
+        "a": "XPS analysis showing Al2p peak area (black) and binding energy (blue) as a function of process temperature after 30 ALE cycles. The Al2p signal is high at low temperatures (~100\u00b0C) with binding energy near AlF3 (76.5 eV), indicating AlF3 deposition dominates. Above 200\u00b0C, the peak area decreases and stabilizes while binding energy shifts toward Al2O3 (74.5 eV), indicating successful ALE with minimal Al contamination.",
+        "b": "Fitted Al2p XPS spectrum at 100\u00b0C showing a large peak consistent with AlF3 formation.",
+        "c": "Fitted Al2p XPS spectrum at 200\u00b0C showing a smaller peak shifted toward Al2O3 binding energy."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | Al2p Peak Area (x10\u00b3 CPS eV) | Peak Binding Energy (eV) |\n|---|---|---|\n| 100 | 17.8 | 76.25 |\n| 125 | 16.2 | 76.45 |\n| 150 | 14.5 | 76.35 |\n| 175 | 5.2 | 75.80 |\n| 200 | 1.2 | 74.85 |\n| 225 | 0.9 | 74.50 |\n| 250 | 0.8 | 74.85 |\n| 275 | 0.9 | 74.65 |\n| 300 | 1.0 | 74.75 |",
+        "b": "| Binding Energy (eV) | Intensity 100\u00b0C (x10\u00b3 CPS) | Intensity 200\u00b0C (x10\u00b3 CPS) |\n|---|---|---|\n| 80.0 | 0.1 | 0.0 |\n| 78.0 | 1.5 | 0.0 |\n| 77.0 | 5.5 | 0.1 |\n| 76.2 | 7.3 | 0.2 |\n| 75.5 | 5.0 | 0.4 |\n| 74.8 | 1.2 | 0.8 |\n| 74.0 | 0.2 | 0.3 |\n| 72.0 | 0.0 | 0.0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the Al contamination on GaN change with increasing ALE process temperature?",
+                "answer_type": "Paragraph",
+                "answer": "At low temperatures (100\u00b0C), significant Al contamination occurs due to dominant AlF3 ALD reactions, resulting in a large Al2p peak area. Between 125 and 175\u00b0C, the Al content decreases as the AlF3 ALD reaction is suppressed while the ALE ligand-exchange reaction becomes more effective. Above 200\u00b0C, the Al2p signal stabilizes at a minimal level (<1 at.%), indicating that Al atoms deposited during the TMA step are efficiently removed."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the binding energy shift from AlF3 toward Al2O3 at higher process temperatures?",
+                "answer_type": "Paragraph",
+                "answer": "At low temperatures, AlF3 deposition from the SF6 plasma/TMA chemistry dominates, resulting in Al-F bonding. At higher temperatures, the AlF3 ALD reaction is suppressed and any residual Al on the surface comes from unreacted TMA in the final half-cycle. When samples are transferred through ambient air to the XPS, this residual TMA oxidizes, producing Al2O3-like binding environments rather than AlF3."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on this figure, what is the minimum recommended temperature for GaN ALE to avoid excessive Al contamination?",
+                "answer_type": "Factoid",
+                "answer": "200\u00b0C."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the binding energy values of 76.5 eV and 74.5 eV indicate about the aluminum chemical environment?",
+                "answer_type": "Factoid",
+                "answer": "76.5 eV corresponds to Al-F bonds (AlF3), while 74.5 eV corresponds to Al-O bonds (Al2O3)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 0,
+            "width": 670,
+            "height": 519
+        },
+        "b": {
+            "x": 245,
+            "y": 121,
+            "width": 165,
+            "height": 161
+        },
+        "c": {
+            "x": 407,
+            "y": 120,
+            "width": 166,
+            "height": 164
+        }
+    }
+}

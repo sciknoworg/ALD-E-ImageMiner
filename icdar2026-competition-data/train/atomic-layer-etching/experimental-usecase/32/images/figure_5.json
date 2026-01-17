@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/32/figure_5",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "Multi-axis chart showing etch depth (left axis) and etch rate (right axis) as a function of Ar\u207a ion exposure time for multiple materials under optimized ALE conditions. InGaAs exhibits a clear increase in etch depth that saturates near ~110 \u00c5, while Si, SiO\u2082, HfO\u2082, PR, and ACL show no measurable etching across the entire time range."
+    },
+    "data_extraction": {
+        "a": "| Time (s/cycle) | InGaAs Etch Depth (\u00c5) | InGaAs Etch Rate (\u00c5/Cycle) | Etch Depth of Si, SiO\u2082, HfO\u2082, PR, ACL (\u00c5) | Etch Rate of Si, SiO\u2082, HfO\u2082, PR, ACL (\u00c5/Cycle) |\n|---|---|---|---|---|\n| 0 | 0 | 0.0 | 0 | 0 |\n| 20 | ~45 | ~0.4 | 0 | 0 |\n| 30 | ~60 | ~0.6 | 0 | 0 |\n| 50 | ~110 | ~1.1 | 0 | 0 |\n| 80 | ~115 | ~1.2 | 0 | 0 |\n| 100 | ~110 | ~1.1 | 0 | 0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What are the six different materials tested for etch depth in this experiment, as shown in the legend?",
+                "answer_type": "List",
+                "answer": "1. InGaAs\n2. Si\n3. SiO2\n4. HfO2\n5. PR (Photoresist)\n6. ACL (Amorphous Carbon Layer)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Do the silicon-based materials (Si and SiO2) show any measurable etch depth under the same conditions that etch InGaAs?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the etch results for InGaAs with the results for the other five materials (Si, SiO2, HfO2, PR, ACL). What does this comparison indicate about the process selectivity?",
+                "answer_type": "Paragraph",
+                "answer": "The figure demonstrates extremely high selectivity for InGaAs. While the InGaAs sample (black squares) shows a significant etch depth that increases to saturation around 110 \u00c5, all other tested materials (Si, SiO2, HfO2, PR, and ACL) exhibit zero etch depth. This indicates that the developed ALE process is highly specific to InGaAs and does not damage or remove common mask or substrate materials."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "For the InGaAs sample, at approximately what Ar+ ion exposure time does the etch depth begin to saturate?",
+                "answer_type": "Factoid",
+                "answer": "Around 50 seconds/cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 1,
+            "width": 649,
+            "height": 440
+        }
+    }
+}

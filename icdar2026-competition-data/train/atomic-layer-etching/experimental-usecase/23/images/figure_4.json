@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_4",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows an expanded view of the ZnS thickness evolution over the first few ALE cycles. It plots the ZnS film thickness as a function of ZnS ALE cycle number using HF and TMA as reactants at 300 \u00b0C, focusing only on the 0\u20135 cycle region. The initial ZnS films used for ALE were deposited by ALD at 100 \u00b0C."
+    },
+    "data_extraction": {
+        "a": "| ALE Cycles | ZnS Thickness (\u00c5) | Stage                    | \n|------------|--------------------|-----------------------------|\n| 0          | 203             | Initial ZnS thickness       |                              \n| 0          |   -                 | After HF Exposure           |                              \n| 0          |     -               | After TMA Exposure          |                              \n| 0.5        |     -               | Initial ZnS thickness       |                              \n| 0.5        | 203.52      | After HF Exposure        |                             \n| 0.5        |       -             | After TMA Exposure          |                              \n| 1          |         -           | Initial ZnS thickness       |                              \n| 1          |         -           | After HF Exposure           |                              \n| 1          | 203.62        | After TMA Exposure       |                              \n| 1.5        |       -             | Initial ZnS thickness       |                              \n| 1.5        | 201.9         | After HF Exposure           |                              \n| 1.5        |       -             | After TMA Exposure          |                              \n| 2          |         -           | Initial ZnS thickness       |                              \n| 2          |         -           | After HF Exposure           |                              \n| 2          | 201.58        | After TMA Exposure       |                              \n| 2.5        |        -            | Initial ZnS thickness       |                              \n| 2.5        | 200             | After HF Exposure           |                              \n| 2.5        |         -           | After TMA Exposure          |                              \n| 3          |        -            | Initial ZnS thickness       |                              \n| 3          |          -          | After HF Exposure           |                              \n| 3          | 199.4          | After TMA Exposure       |                             \n| 3.5        |           -         | Initial ZnS thickness       |                              \n| 3.5        | 198             | After HF Exposure           |                              \n| 3.5        |        -            | After TMA Exposure          |                              \n| 4          |          -          | Initial ZnS thickness       |                              \n| 4          |          -          | After HF Exposure           |                              \n| 4          | 197.25        | After TMA Exposure      |                              \n| 4.5        |        -            | Initial ZnS thickness       |                              \n| 4.5        | 196             | After HF Exposure           |                              \n| 4.5        |      -              | After TMA Exposure          |                              \n| 5          |        -            | Initial ZnS thickness       |                              \n| 5          |         -           | After HF Exposure           |                              \n| 5          | 195.1            | After TMA Exposure          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the repeated two-step sequence for one complete ALE cycle, and what is the purpose of measuring thickness after each step?",
+                "answer_type": "List",
+                "answer": "1) HF Exposure: Fluorinates/modifies the ZnS surface.\n\n2) Thickness Measurement.\n\n3) TMA Exposure: Removes the modified layer.\n\n4) Thickness Measurement. Measuring after each step verifies the self-limiting nature of each half-reaction and quantifies the individual contribution to the total etch per cycle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast this HF/TMA ALE mechanism with a purely thermal decomposition etch of ZnS. For achieving high selectivity over an underlying SiO\u2082 layer, which method is better and why?",
+                "answer_type": "List",
+                "answer": "HF/TMA ALE: Pro: Chemically selective to ZnS; SiO\u2082 is resistant to HF under these conditions.\n\nThermal Decomposition: Con: Non-selective; relies on volatility, likely attacking both ZnS and SiO\u2082."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The thickness drops more after the HF step than the TMA step. What does this indicate about the surface chemical transformation caused by HF?",
+                "answer_type": "Paragraph",
+                "answer": "The larger drop after HF indicates it causes the major physical removal or volumetric change, likely by converting crystalline ZnS into a porous, volatile, or low-density zinc fluoride (ZnF\u2082) compound. The subsequent TMA step then cleans up this modified layer, causing a smaller but essential thickness change to complete the cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The stepwise, controlled removal (~2 \u00c5/cycle) is demonstrated. What key device fabrication capability does this enable for multilayer ZnS/MgS quantum dot structures?",
+                "answer_type": "Paragraph",
+                "answer": "This enables digital etch trimming of quantum dot layers with sub-nanometer precision. Engineers can remove exact numbers of monolayers to tune quantum confinement and emission wavelength after growth, or to expose a specific subsurface dot layer with minimal damage to adjacent layers."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 2,
+            "width": 666,
+            "height": 536
+        }
+    }
+}

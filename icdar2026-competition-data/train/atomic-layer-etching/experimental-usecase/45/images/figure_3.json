@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/45/figure_3",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart illustrates the decrease in film thickness over cycles for TiN ALE at 250\u00b0C using O\u2083 & HF"
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | SE (Film Thickness, \u00c5) | XRR (Film Thickness, \u00c5) |\n|---|---|---|\n| 0 | 73 | 63 |\n| 25 | 68 | 61 |\n| 50 | 63 | 57 |\n| 100 | 52 | 47 |\n| 150 | 45 | 26 |\n| 200 | 34 | 27 |\n| 300 | 16 | 6 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the etch rates from SE and XRR compare?",
+                "answer_type": "Factoid",
+                "answer": "SE gives 0.19 \u00c5/cycle and XRR gives 0.20 \u00c5/cycle\u2014essentially identical within experimental uncertainty, validating both measurement approaches."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why do the SE and XRR data show a vertical offset despite having the same slope?",
+                "answer_type": "Paragraph",
+                "answer": "The offset (~10 \u00c5 difference in initial thickness) arises from different optical/structural models used by each technique. SE uses a Lorentz optical model while XRR measures electron density contrast. Despite this absolute offset, both yield the same etch rate slope."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What reaction sequence was used for the O\u2083/HF ALE process?",
+                "answer_type": "Factoid",
+                "answer": "The optimized sequence was 3-30-1-30: 3 s O\u2083 exposure, 30 s N\u2082 purge, 1 s HF exposure, 30 s N\u2082 purge."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How much TiN can be removed after 300 ALE cycles?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 60 \u00c5 of TiN is removed after 300 cycles, reducing the film from ~70 \u00c5 to ~10 \u00c5 (based on XRR data)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 4,
+            "width": 664,
+            "height": 524
+        }
+    }
+}

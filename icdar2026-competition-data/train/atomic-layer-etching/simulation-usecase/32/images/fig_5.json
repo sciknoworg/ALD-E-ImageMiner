@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/32/fig_5",
+    "classification": {
+        "a": "line chart",
+        "b": "bar chart"
+    },
+    "summarization": {
+        "a": "The line chart illustrates the energy changes at various reaction steps for three routes (Route 1, Route 2, and Route 3). Each route shows a distinct trend in energy increase.",
+        "b": "The bar chart compares the maximum energy achieved by three routes (Route 1, Route 2, and Route 3). Route 3 has the highest maximum energy"
+    },
+    "data_extraction": {
+        "a": "| Reaction Step | Route 1 (eV) | Route 2 (eV) | Route 3 (eV) |\n|---|---|---|---|\n| 0 | 0.0 | 0.0 | 0.0 |\n| 1 | 5.4 | 4.0 | 13.0 |\n| 2 | 7.8 | 11.5 | 11.0 |\n| 3 | 10.8 | 13.5 | 22.0 |\n| 4 | - | 20.5 | 29.0 |\n| 5 | - | 22.5 | 34.0 |",
+        "b": "| Route | Maximum Energy (eV) |\n|---|---|\n| Route 1 | 5.4 |\n| Route 2 | 7.3 |\n| Route 3 | 12.9 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "In panel (a), which marker shapes correspond to routes 1, 2, and 3?",
+                "answer_type": "List",
+                "answer": "Route 1 uses squares. Route 2 uses circles. Route 3 uses triangles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do the text labels near the data points in panel (a) represent (for example AlCl, OBCl, OAlCl, O, Al)?",
+                "answer_type": "Factoid",
+                "answer": "They denote the surface moiety or atom removed at that etching event in the sequence for each route."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which route has the highest maximum reaction energy in panel (b)?",
+                "answer_type": "Factoid",
+                "answer": "Route 3 has the highest maximum reaction energy."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the practical implication of panel (b) for ALET versus conventional plasma etching of Al2O3?",
+                "answer_type": "Paragraph",
+                "answer": "Routes 1 and 2 represent ALET on a BCl3 adsorbed surface and have much lower maximum reaction energies than route 3, which represents conventional plasma etching of pristine Al2O3. This supports the paper\u2019s conclusion that BCl3 presorption reduces the energetic requirement for etching, which in turn can reduce the required Ar kinetic energy for effective removal. The authors also note that changing the etching event sequence can raise the maximum energy toward the conventional plasma etching level, so sequence control matters."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 606,
+            "height": 423
+        },
+        "b": {
+            "x": 96,
+            "y": 435,
+            "width": 421,
+            "height": 387
+        }
+    }
+}

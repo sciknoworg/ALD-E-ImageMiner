@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/30/fig_2",
+    "classification": {
+        "a": "bar chart"
+    },
+    "summarization": {
+        "a": "The bar chart shows an EPC synergy test at 80 V bias by comparing EPC for a full ALE cycle, chlorination only, and Ar sputter only. EPC is 0.37 nm for ALE, about 0.00 nm for chlorination only, and 0.05 nm for Ar sputter only."
+    },
+    "data_extraction": {
+        "a": "| Category | EPC [nm] |\n|----------|----------|\n| ALE      | 0.37     |\n| Chlorination only | 0.00     |\n| Ar sputter only | 0.05     |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do the three bars labeled ALE, Chlorination only, and Ar sputter only represent?",
+                "answer_type": "Factoid",
+                "answer": "They represent the measured etch per cycle when running the full ALE cycle, only the chlorination step, or only the Ar ion removal step, respectively."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What evidence in this figure supports etching synergy at 80 V bias?",
+                "answer_type": "Paragraph",
+                "answer": "The ALE EPC is 0.37 nm, which is much larger than either step alone. Chlorination only is negligible, and Ar sputter only is 0.05 nm. This means most of the etch occurs when chlorination and ion bombardment are combined, consistent with a synergistic reactive ion etching mechanism."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Approximately what fraction of the ALE EPC is accounted for by Ar sputter only at 80 V bias?",
+                "answer_type": "Factoid",
+                "answer": "About 10 to 15% of the ALE EPC."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on this synergy test, what conclusions can you draw about the roles of chlorination and Ar ion bombardment?",
+                "answer_type": "List",
+                "answer": "Chlorination alone does not produce measurable net etching.\n\nAr ion bombardment alone removes only a small amount per cycle.\n\nThe combination enables efficient removal of the chlorinated surface layer, giving the large EPC seen for ALE."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 1,
+            "width": 595,
+            "height": 373
+        }
+    }
+}

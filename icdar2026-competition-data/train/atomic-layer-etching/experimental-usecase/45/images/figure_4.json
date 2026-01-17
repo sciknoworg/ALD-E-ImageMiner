@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/45/figure_4",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The etch rate increases with increasing O\u2083 exposure time at 250\u00b0C",
+        "b": "The etch rate increases with increasing HF exposure time at 250\u00b0C"
+    },
+    "data_extraction": {
+        "a": "| O3 Exposure Time (s) | Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0.0 | 0.00 |\n| 0.5 | 0.08 |\n| 1.0 | 0.11 |\n| 1.5 | 0.17 |\n| 2.0 | 0.17 |\n| 2.5 | 0.20 |\n| 3.0 | 0.19 |\n| 4.0 | 0.22 |",
+        "b": "| HF Exposure Time (s) | Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0.0 | 0.00 |\n| 0.5 | 0.14 |\n| 0.75 | 0.18 |\n| 1.0 | 0.19 |\n| 1.25 | 0.20 |\n| 1.5 | 0.21 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do the saturation curves in both panels demonstrate about the ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The saturation behavior confirms that both half-reactions are self-limiting. The O\u2083 reaction self-terminates because the TiO\u2082 layer acts as a diffusion barrier preventing further oxidation. The HF reaction self-terminates because it can only remove the finite TiO\u2082 layer formed during oxidation\u2014HF does not etch TiN directly."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is there zero etch rate at zero exposure time for both reactants?",
+                "answer_type": "Factoid",
+                "answer": "Neither reactant alone etches TiN-O\u2083 only oxidizes the surface, and HF cannot etch TiN directly. Both half-reactions are required for etching."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the practical benefit of self-limiting reactions for semiconductor processing?",
+                "answer_type": "Paragraph",
+                "answer": "Self-limiting behavior ensures that etch depth depends only on cycle count, not on precise exposure timing or local reactant concentration variations. This enables atomic-level thickness control and uniform etching across large wafers, which is essential for advanced device fabrication."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What exposure times were selected for the optimized ALE process?",
+                "answer_type": "Factoid",
+                "answer": "3 s for O\u2083 and 1 s for HF, yielding the optimized sequence 3-30-1-30 (with 30 s N\u2082 purges)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 4,
+            "width": 667,
+            "height": 472
+        },
+        "b": {
+            "x": 1,
+            "y": 493,
+            "width": 667,
+            "height": 477
+        }
+    }
+}

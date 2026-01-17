@@ -1,0 +1,58 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/27/fig_6",
+    "classification": {
+        "a": "line chart",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "Synergy plot demonstrating self-limiting behavior of the GaN ALE process at 300\u00b0C. During SF6 plasma-only pulses (0-25), the film thickness remains constant after an initial ~0.7 nm drop. During TMA-only pulses (25-50), thickness is also constant. Full ALE cycles (50-125) show linear etching with EPC of 0.41 nm/cycle initially (oxidized layer) decreasing to 0.31 nm/cycle (bulk GaN).",
+        "b": "Magnified view of the transition from SF6-only to TMA-only pulses, showing a 0.33 nm thickness decrease when TMA is first introduced, indicating that etching occurs during the TMA step."
+    },
+    "data_extraction": {
+        "a": "| Pulses/Cycles | Film Thickness (nm) | Phase / Rate |\n|---|---|---|\n| 0 | 43.5 | Half-cycle A |\n| 10 | 43.4 | Half-cycle A |\n| 20 | 43.3 | Half-cycle A |\n| 25 | 43.2 | Half-cycle A (End) |\n| 26 | 42.9 | Half-cycle B (Start, -0.33 nm drop) |\n| 40 | 42.7 | Half-cycle B |\n| 50 | 42.5 | Half-cycle B (End) |\n| 60 | 38.5 | ALE (~0.41 nm/cycle) |\n| 70 | 34.5 | ALE |\n| 80 | 31.5 | ALE (~0.31 nm/cycle) |\n| 90 | 28.5 | ALE |\n| 100 | 25.5 | ALE |\n| 110 | 22.5 | ALE |\n| 120 | 19.5 | ALE |\n| 125 | 18.0 | ALE (End) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the EPC change from 0.41 to 0.31 nm/cycle during the full ALE region?",
+                "answer_type": "Factoid",
+                "answer": "The higher initial EPC corresponds to etching through the oxidized surface layer, while the lower EPC reflects etching of the more stoichiometric bulk GaN underneath."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the synergy value for this ALE process?",
+                "answer_type": "Factoid",
+                "answer": "100%."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the synergy plot reveal about when etching actually occurs in the ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The synergy plot shows that neither SF6 plasma alone nor TMA alone causes continuous etching. The 0.33 nm thickness drop when switching from SF6-only to TMA-only pulses indicates that etching occurs during the TMA ligand-exchange step, which removes the fluorinated surface layer. Since no continuous etching is observed for either half-cycle individually, the process exhibits 100% synergy."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What causes the small thickness reduction (~0.7 nm) during the first SF6 plasma pulse?",
+                "answer_type": "Factoid",
+                "answer": "Removal of adventitious carbon, the heavily oxidized GaN surface layer, or changes in optical properties due to surface fluorination."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 2,
+            "width": 669,
+            "height": 507
+        },
+        "b": {
+            "x": 2,
+            "y": 1,
+            "width": 309,
+            "height": 465
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/27/fig_5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Saturation curve for the SF6 plasma half-cycle showing EPC vs. plasma exposure time at 150\u00b0C and 300\u00b0C. Both temperatures show rapid initial increase followed by soft-saturation, reaching ~0.31 nm/cycle at 150\u00b0C and ~0.40 nm/cycle at 300\u00b0C after 10 s exposure.",
+        "b": "Saturation curve for the TMA half-cycle showing EPC vs. number of TMA pulses at 150\u00b0C and 300\u00b0C. Clear saturation is achieved at 300\u00b0C with 4 pulses (~0.40 nm/cycle), while 150\u00b0C requires more pulses to reach saturation (~0.31 nm/cycle)."
+    },
+    "data_extraction": {
+        "a": "| SF\u2086 plasma time (s) | 300\u00b0C (nm/cycle) | 150\u00b0C (nm/cycle) |\n|---|---|---|\n| 0 | 0.00 | 0.00 |\n| 1 | 0.26 | - |\n| 2 | 0.33 | 0.16 |\n| 5 | 0.38 | 0.27 |\n| 10 | 0.40 | 0.31 |\n| 15 | 0.40 | 0.32 |\n| 30 | 0.42 | 0.35 |",
+        "b": "| TMA pulses | 300\u00b0C (nm/cycle) | 150\u00b0C (nm/cycle) |\n|---|---|---|\n| 0 | 0.00 | 0.00 |\n| 1 | -0.01 | - |\n| 2 | 0.39 | 0.02 |\n| 3 | 0.40 | - |\n| 4 | 0.40 | 0.27 |\n| 5 | 0.40 | 0.25 |\n| 6 | - | 0.31 |\n| 7 | 0.40 | - |\n| 10 | 0.40 | 0.31 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why is the saturated EPC lower at 150\u00b0C compared to 300\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Lower temperature inhibits fluorine diffusion into the GaN, resulting in a thinner fluorinated layer and thus a lower EPC."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What SF6 plasma exposure time was chosen as the standard condition and why?",
+                "answer_type": "Factoid",
+                "answer": "10 s was chosen because the EPC increases by only 0.02 nm/cycle when extending to 30 s, which is within experimental error."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the saturated EPC at 300\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "0.40 \u00b1 0.02 nm/cycle."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the saturation behavior of the SF6 plasma step differ from the TMA step?",
+                "answer_type": "Paragraph",
+                "answer": "The SF6 plasma step shows soft-saturation with a gradual increase in EPC even at longer exposure times, attributed to diffusion-limited fluorination following Deal-Grove kinetics. The TMA step shows clear, sharp saturation once sufficient pulses are provided. This difference reflects the distinct mechanisms: diffusion-controlled surface modification for fluorination vs. self-limiting ligand-exchange reactions for TMA."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 5,
+            "width": 369,
+            "height": 491
+        },
+        "b": {
+            "x": 380,
+            "y": 16,
+            "width": 291,
+            "height": 481
+        }
+    }
+}

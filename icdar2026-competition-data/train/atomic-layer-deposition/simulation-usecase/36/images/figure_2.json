@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/36/figure_2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "The WCA plot shows distinct initial contact angles for the four substrates, followed by progressive convergence with increasing ALD cycles. ODPA/Ti maintains a high angle through early cycles before dropping sharply between 100 and 150 cycles. HF-treated Si reaches its final angle by ~25 cycles, while SiO\u2082 and Ti follow nearly identical trajectories after that point. By 150 cycles, all surfaces converge near ~45\u00b0.",
+        "b": "The Al 2p spectra display a common peak centered near ~75 eV for all cycle counts. Peak intensity increases monotonically from 50 to 100 cycles, while peak position and width remain essentially unchanged. The spectra therefore differ primarily in amplitude rather than energy shift."
+    },
+    "data_extraction": {
+        "a": "| ALD cycles | ODPA/Ti (deg) | HF-treated Si (deg) | SiO\u2082 (deg) | Ti (deg) |\n|-----------|----------------|----------------------|------------|----------|\n| 0         | ~110           | ~90                  | ~70        | ~60      |\n| 25        | ~110           | ~45                  | ~45        | ~45      |\n| 50        | ~105           | ~45                  | ~45        | ~45      |\n| 100       | ~90            | ~45                  | ~45        | ~45      |\n| 150       | ~45            | ~45                  | ~45        | ~45      |",
+        "b": "| Binding energy (eV) | Relative intensity trend |\n|---------------------|--------------------------|\n| ~73.0               | Very low                 |\n| ~74.0               | Rising                   |\n| ~75.0               | Maximum (100 > 70 > 50)  |\n| ~76.0               | Decreasing               |\n| ~77.0               | Very low                 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the four substrates visually evolve through the sequence of ALD cycles in subfigure (a)?",
+                "answer_type": "Paragraph",
+                "answer": "Each substrate begins with a distinct contact-angle value, but the curves progressively collapse toward a common range as ALD cycles increase. ODPA/Ti remains hydrophobic through early cycles before declining sharply, whereas HF-treated Si reaches its final angle quickly and remains constant. SiO\u2082 and Ti show nearly identical behavior after the initial cycles. Overall, increasing ALD cycles reduce substrate-dependent differences."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which substrate maintains the highest contact angle through the first 50 ALD cycles?",
+                "answer_type": "Factoid",
+                "answer": "ODPA/Ti."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What comparative visual trends appear across the three Al 2p spectra as cycle count increases?",
+                "answer_type": "List",
+                "answer": "-All spectra peak near ~75 eV.\n-Peak intensity increases from 50 to 100 cycles.\n-Peak widths and positions remain nearly unchanged.\n-Differences are dominated by amplitude, not energy shift."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is the absence of a noticeable binding-energy shift in the Al 2p peak significant when comparing different ALD cycle counts?",
+                "answer_type": "Paragraph",
+                "answer": "The stable peak position indicates that the chemical state of aluminum remains consistent as the film grows. Increasing cycle count primarily increases signal intensity rather than altering bonding environment. This suggests uniform film growth rather than a change in aluminum coordination or oxidation state."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 510,
+            "height": 384
+        },
+        "b": {
+            "x": 1,
+            "y": 414,
+            "width": 506,
+            "height": 396
+        }
+    }
+}

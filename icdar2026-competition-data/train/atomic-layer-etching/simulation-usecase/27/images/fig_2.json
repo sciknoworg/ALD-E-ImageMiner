@@ -1,0 +1,49 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/27/fig_2",
+    "classification": {
+        "a": "process timing diagram"
+    },
+    "summarization": {
+        "a": "Process timing diagram illustrating the standard GaN ALE cycle. Half-cycle A consists of a 5 s gas stabilization followed by a 10 s SF6/Ar plasma (50/150 sccm, 100 mTorr, 100 W ICP) and a 10 s Ar purge. Half-cycle B involves four repeated TMA dose/hold sequences (0.1 s dose, 2 s hold) at 150 mTorr, followed by a 25 s Ar purge."
+    },
+    "data_extraction": {
+        "a": "| Step | Duration | Ar Flow (sccm) | SF\u2086 Flow (sccm) | Pressure (mTorr) | ICP Power (W) |\n|---|---|---|---|---|---|\n| Gas stabilise | 5 s | 150 | 50 | 100 | 0 |\n| Ar/SF\u2086 Plasma | 10 s | 150 | 50 | 100 | 100 |\n| Purge | 10 s | 300 | 0 | - | 0 |",
+        "b": "| Step | Duration | Ar Flow (sccm) | TMA Dose | Pressure (mTorr) |\n|---|---|---|---|---|\n| Dose | 0.1 s | 10 | On | 150 |\n| Hold | 2 s | 10 | Off | 150 |\n| Purge | 25 s | 300 | Off | - |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the purpose of the \"hold\" step after each TMA dose in half-cycle B?",
+                "answer_type": "Paragraph",
+                "answer": "The hold step acts as a soak period to increase the exposure time of the TMA precursor to the sample surface. This extended contact time facilitates the ligand-exchange reactions between TMA and the fluorinated GaN surface layer, allowing more complete removal of the modified layer and improving etch efficiency."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the chamber pressure differ between half-cycle A and half-cycle B?",
+                "answer_type": "Factoid",
+                "answer": "Half-cycle A operates at 100 mTorr while half-cycle B operates at 150 mTorr."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the flow rate of SF6 during the plasma step?",
+                "answer_type": "Factoid",
+                "answer": "50 sccm."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is a low Ar flow (10 sccm) maintained through the ICP during the TMA dose/hold steps?",
+                "answer_type": "Factoid",
+                "answer": "To limit upstream TMA diffusion into the ICP tube."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 1179,
+            "height": 374
+        }
+    }
+}

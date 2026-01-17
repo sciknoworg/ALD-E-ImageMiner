@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/30/fig_1",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows GaN etch per cycle (EPC) versus bias voltage for an Ar removal step time of 5 s. EPC increases at low bias, is nearly constant around 0.4 nm from about 50 to 100 V (self limited ALE window), and rises strongly above about 100 V."
+    },
+    "data_extraction": {
+        "a": "| Bias Voltage [V] | EPC [nm] |\n|----------------|---------|\n| 0              | 0.0     |\n| 50             | 0.3     |\n| 100            | 0.4     |\n| 150            | 1.1     |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the x axis and y axis quantities in this figure, and what are their units?",
+                "answer_type": "Factoid",
+                "answer": "The x axis is bias voltage in V, and the y axis is EPC in nm."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What bias range corresponds to the ALE window, and what trend does EPC show in that range?",
+                "answer_type": "Paragraph",
+                "answer": "The ALE window is about 50 to 100 V. In this region EPC is almost constant at about 0.4 nm, consistent with a self limited removal per cycle rather than steadily increasing sputter yield."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the sharp EPC increase above about 100 V imply about the dominant removal mechanism?",
+                "answer_type": "Paragraph",
+                "answer": "It suggests a transition toward physical sputtering, where ion energy exceeds the sputtering threshold for GaN. In that regime, EPC rises with increasing bias because removal is no longer limited mainly by the prior chlorination step."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the paper\u2019s explanation, what are the likely reasons for the low bias regime having smaller EPC than the ALE window?",
+                "answer_type": "List",
+                "answer": "Ion energy is insufficient to fully remove the chlorinated, modified surface layer each cycle.\n\nSome modified species remain, so net removal per cycle stays low until bias is increased into the self limited regime."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 7,
+            "width": 598,
+            "height": 386
+        }
+    }
+}

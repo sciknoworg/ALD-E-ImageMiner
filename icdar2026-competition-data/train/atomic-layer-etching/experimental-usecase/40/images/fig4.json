@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/40/fig4",
+    "classification": {
+        "a": "stacked spectra chart",
+        "b": "stacked spectra chart",
+        "c": "stacked spectra chart",
+        "d": "stacked spectra chart"
+    },
+    "summarization": {
+        "a": "The Ti 2p XPS spectra compare original (top) and ALE-treated (bottom) TiN films. Five deconvoluted components are shown: Ti-N, Ti-ON, Ti-O, Ti-F, and Ti-C. After ALE, the Ti-N component increases while oxide-related peaks decrease, indicating reduced surface oxidation.",
+        "b": "The N 1s XPS spectra show N-Ti (~397 eV) and N-O (~399 eV) components for original (top) and ALE-treated (bottom) films. The dominant N-Ti peak increases slightly after ALE treatment.",
+        "c": "The O 1s XPS spectra display O-Ti and O-N components. After ALE (bottom), the overall oxygen signal decreases, indicating reduced native oxide concentration on the surface.",
+        "d": "The F 1s XPS spectra show F-C (~690 eV) and F-Ti (~685 eV) components. The ALE-treated film (bottom) exhibits increased fluorine signal compared to the original (top), consistent with fluorine incorporation from the SF6/H2 plasma step."
+    },
+    "data_extraction": {
+        "a": "| Binding Energy, eV | Component | Original | After ALE |\n|---|---|---|---|\n| 455 | Ti-N | 0.70 | 0.55 |\n| 458 | Ti-ON | 1.00 | 0.85 |\n| 460 | Ti-O | 0.45 | 0.55 |\n| 462 | Ti-F | 0.25 | 0.40 |\n| 454 | Ti-C | 0.10 | 0.15 |\n| 464 | Ti-N (2p\u2081/\u2082) | 0.55 | 0.45 |\n| 466 | Ti-ON (2p\u2081/\u2082) | 0.35 | 0.30 |",
+        "b": "| Binding Energy, eV | Component | Original | After ALE |\n|---|---|---|---|\n| 397 | N-Ti | 1.00 | 0.75 |\n| 399 | N-O | 0.15 | 0.35 |",
+        "c": "| Binding Energy, eV | Component | Original | After ALE |\n|---|---|---|---|\n| 530 | O-Ti | 0.55 | 0.45 |\n| 532 | O-N | 1.00 | 1.00 |",
+        "d": "| Binding Energy, eV | Component | Original | After ALE |\n|---|---|---|---|\n| 685 | F-Ti | 0.45 | 1.00 |\n| 689 | F-C | 1.00 | 0.55 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What chemical bonds are identified in the Ti 2p XPS spectra through peak deconvolution?",
+                "answer_type": "List",
+                "answer": "Ti-N, Ti-ON (titanium oxynitride), Ti-O, Ti-F, and Ti-C."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the oxygen content at the TiN surface change after ALE treatment based on the XPS data?",
+                "answer_type": "Paragraph",
+                "answer": "The O 1s XPS spectra show a clear decrease in signal intensity after ALE treatment. Both the O-Ti and O-N components remain present but with reduced magnitude compared to the original film. This reduction indicates that the ALE process effectively removes a portion of the native oxide layer that forms on TiN surfaces. According to the paper, this corresponds to a 49% decrease in surface oxygen concentration, which is significant for applications where surface oxides degrade device performance."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the increased F 1s signal after ALE indicate about the surface chemistry of the treated TiN film?",
+                "answer_type": "Paragraph",
+                "answer": "The increased F 1s signal after ALE indicates fluorine incorporation at the TiN surface during the SF6/H2 plasma exposure step. Two fluorine species are identified: F-Ti bonds (~685 eV) from direct fluorination of titanium, and F-C bonds (~690 eV) likely from carbon contamination reactions. This fluorinated surface layer may act as a diffusion barrier against subsequent reoxidation when the film is exposed to atmosphere, potentially explaining the lower resistivity observed in ALE-treated films even after aging."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "What do the gray dots and black lines represent in these XPS spectra?",
+                "answer_type": "Factoid",
+                "answer": "The gray dots represent measured experimental data points, and the black lines represent the fitted spectra from peak deconvolution analysis."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 27,
+            "y": 38,
+            "width": 670,
+            "height": 510
+        },
+        "b": {
+            "x": 733,
+            "y": 37,
+            "width": 669,
+            "height": 509
+        },
+        "c": {
+            "x": 29,
+            "y": 587,
+            "width": 650,
+            "height": 495
+        },
+        "d": {
+            "x": 724,
+            "y": 587,
+            "width": 665,
+            "height": 495
+        }
+    }
+}

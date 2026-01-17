@@ -1,0 +1,79 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/9/figure_2",
+    "classification": {
+        "a": "image panel",
+        "b": "image panel",
+        "c": "multiple line chart",
+        "d": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The image panel consists of series of ccanning electron microscopy (SEM) images of InGaAs/InAlAs vertical nanowires (VNWs) during different stages of HF/DMAC ALE process at 250 \u00b0C",
+        "b": "The image panel consists of series of ccanning electron microscopy (SEM) image at different ALE stages at  300 \u00b0C",
+        "c": "The line chart shows the change in X-ray reflectivity intensity with respect to omega-2\u03b8 (arcsec) for different cycles of ALE.",
+        "d": "The line chart illustrates the change in radius (\u0394Radius) over the number of ALE cycles for InAlAs and InGaAs at different temperatures."
+    },
+    "data_extraction": {
+        "a": "| Condition       | InGaAs Thickness | InAlAs Thickness |\n|-----------------|-------------------|-------------------|\n| After RIE       | 28 nm            | 28nm              |\n| 300 cycles      | 24 nm            | 18 nm            |\n| 600 cycles      | 24 nm            | 10 nm            |",
+        "b": "| Condition       | InGaAs Thickness | InAlAs Thickness |\n|-----------------|-------------------|-------------------|\n| After RIE       | 35 nm            | 35 nm               |\n| 250 cycles      | 24 nm            | 4 nm             |",
+        "c": "| Cycles    | Density edge intensity |\n|-----------|--------------------|\n| Pristine  |10^9  |\n| 200       |10^7     |\n| 450       |10^5     |",
+        "d": "| Material  | Temperature | Growth Rate (\u00c5/cycle) |\n|-----------|------------|-------------------------|\n| InAlAs    | 300\u00b0C      | 0.62                  |\n| InGaAs    | 300\u00b0C      | \u2014                     |\n| InAlAs    | 250\u00b0C      | \u2014                     |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why is there a substantial difference in etching rate between InGaAs and InAlAs?",
+                "answer_type": "Paragraph",
+                "answer": "The partial etching selectivity between InGaAs and InAlAs  might occur because fluorination of AlAs (Gibbs free energy \u0394G\u00b0 = \u221286.0 kcal/mol) is thermochemically more favorable than the fluorination of GaAs (\u0394G\u00b0 = \u221217.4 kcal/mol) at 250 \u00b0C. This behavior is also consistent with the faster oxidation of InAlAs versus InGaAs at 300\u2212500 \u00b0C.Fluorination/oxidation of InAlAs is probably more favorable than for InGaAs because Al\u2212F/Al-O bonds are stronger than Ga\u2212F/Ga-O bonds."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How  well is the ALE of InGaAs at higher temperature?",
+                "answer_type": "List",
+                "answer": "The radial etch rates of InGaAs and InAlAs VNWs at 300 \u00b0C are as follows. \n1. After the first 250 cycles, InGaAs is 0.24 and InAlAs is 0.62 \u00c5/cycle on average. \n2. After the second 250 cycles,  InGaAs  is 0.10 and InAlAs decreases to 0.41 \u00c5/cycle on average."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the thermal ALE tested with fin and vertical nanowire (VNW) sidewalls before integrating the ALE process with a full transistor process?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why the etching of InGaAs VNWs nearly stopped but etching of InAlAs continued?",
+                "answer_type": "Factoid",
+                "answer": "The negligible etching of InGaAs after 300 cycles of thermal ALE at 250 \u00b0C may be caused by the low temperature of 250 \u00b0C."
+            }
+        ]
+    },
+    "bbox": {
+        "c": {
+            "x": -3,
+            "y": 358,
+            "width": 442,
+            "height": 375
+        },
+        "b": {
+            "x": 461,
+            "y": 11,
+            "width": 375,
+            "height": 320
+        },
+        "a": {
+            "x": 11,
+            "y": 6,
+            "width": 459,
+            "height": 354
+        },
+        "d": {
+            "x": 432,
+            "y": 360,
+            "width": 411,
+            "height": 368
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/42/figure_5",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure shows the film thickness of various materials (TiN, Al\u2082O\u2083, SiO\u2082, Si\u2083N\u2084, HfO\u2082, ZrO\u2082) at 350\u00b0C using SiCl\u2084 as function of number of cycles",
+        "b": "The figure compares the film thickness of Al\u2082O\u2083, HfO\u2082, and ZrO\u2082 with different atomic layer deposition (ALE) rates at 350\u00b0C using SiCl\u2084."
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | TiN (\u00c5) | SiO\u2082 (\u00c5) | Al\u2082O\u2083 (\u00c5) | Si\u2083N\u2084 (\u00c5) | HfO\u2082 (\u00c5) | ZrO\u2082 (\u00c5) |\n|-------------------|---------|----------|-----------|-----------|----------|----------|\n| 0                | 65      | 50       | 45        | 45        | 55       | 50       |\n| 100              | 65      | 48       | 44        | 44        | 50       | 35       |\n| 200              | 65      | 47       | 44        | 43        | 48       | 20       |\n| 300              | 65      | 46       | 43        | 42        | 46       | 10       |\n| 400              | 65      | 45       | 43        | 42        | 44       | 5        |",
+        "b": "| Number of Cycles | Al\u2082O\u2083 (\u00c5) | HfO\u2082 (\u00c5) | ZrO\u2082 (\u00c5) |\n|-------------------|-----------|----------|----------|\n| 0                | 45        | 55       | 50       |\n| 100              | 45        | 50       | 35       |\n| 200              | 45        | 48       | 20       |\n| 300              | 45        | 46       | 10       |\n| 400              | 45        | 44       | 5        |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does all the process use the same precursors (HF and SiCl4 combination) for etching?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which materials get etched and which do not with HF anf SiCl4 combination?",
+                "answer_type": "Paragraph",
+                "answer": "The film thicknesses after 50, 100, 200, and 400 ALE cycles using sequential HF and SiCl4 exposures at 350 \u00b0C. The ZrO2 and HfO2 films were etched linearly versus the number of ALE cycles. In contrast, there were no measurable thickness changes during 400 ALE cycles for the Al2O3, SiO2, Si3N4, and TiN films"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What are the etch rates determined for the HF and SiCl4 reaction cycles?",
+                "answer_type": "List",
+                "answer": "Al\u2082O\u2083 ALE: 0 \u00c5/cycle  \n HfO\u2082 ALE: 0.05 \u00c5/cycle  \n ZrO\u2082 ALE: 0.14 \u00c5/cycle"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How is image b different from image a?",
+                "answer_type": "Factoid",
+                "answer": "Image b shows only those materials which get etched with HF anf SiCl4 from the group shown in image a"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 669,
+            "height": 468
+        },
+        "b": {
+            "x": 2,
+            "y": 470,
+            "width": 664,
+            "height": 528
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/30/figure_8",
+    "classification": {
+        "a": "molecular structure diagram",
+        "b": "molecular structure diagram",
+        "c": "molecular structure diagram",
+        "d": "molecular structure diagram"
+    },
+    "summarization": {
+        "a": "DB-O:13 conformer on A.1 where the unreacted methoxy group (blue circle) is oriented directly above the O2 silanol. This positioning allows the third condensation to form TB-O:123. The adsorption energy is -44 kJ/mol with -22 kJ/mol dispersion contribution. This conformer is 15 kJ/mol more stable than the one in (b).",
+        "b": "Alternative DB-O:13 conformer where the propyl tail group (red circle) points toward O2, sterically blocking access. This orientation prevents both TB formation and adsorption of additional TMPS molecules at O2, leaving it as a potential nucleation site for Al precursors.",
+        "c": "Precursor state showing MTMS (a monofunctional alkoxysilane) adsorbed at the free O2 silanol within the A.1-O:13/56/4 blocking layer configuration. The adsorption energy is -22 kJ/mol, dominated by dispersion (-113 kJ/mol), indicating the electronic contribution is actually unfavorable (+91 kJ/mol).",
+        "d": "Product state after MTMS condenses with the O2 silanol, blocking the previously exposed site. The reaction has a high activation barrier (\u0394E_A = 151 kJ/mol) and is slightly endothermic (\u0394E_R = 6 kJ/mol). Values in parentheses show dispersion contributions."
+    },
+    "data_extraction": {
+        "a": "| Figure | \u0394E_ads |\n| --- | --- |\n| a) | -44 (-22) |\n| b) | -29 (-13) |\n| c) | -22 (-113) |\n| d) | +151 (-37) <br> +6 (+20) |",
+        "b": "| Figure | \u0394E_ads |\n| --- | --- |\n| a) | -44 (-22) |\n| b) | -29 (-13) |\n| c) | -22 (-113) |\n| d) | +151 (-37) <br> +6 (+20) |",
+        "c": "| Figure | \u0394E_ads |\n| --- | --- |\n| a) | -44 (-22) |\n| b) | -29 (-13) |\n| c) | -22 (-113) |\n| d) | +151 (-37) <br> +6 (+20) |",
+        "d": "| Figure | \u0394E_ads |\n| --- | --- |\n| a) | -44 (-22) |\n| b) | -29 (-13) |\n| c) | -22 (-113) |\n| d) | +151 (-37) <br> +6 (+20) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why might TMPS alone fail to achieve complete silanol coverage?",
+                "answer_type": "Paragraph",
+                "answer": "The conformational freedom of the DB-SMI allows different orientations of unreacted groups. In favorable conformations like panel (a), the methoxy group points toward nearby silanols enabling further condensation. However, unfavorable conformations like panel (b) orient the propyl tail toward the remaining silanol, sterically blocking it from both TB formation and reaction with additional TMPS molecules. Even though the favorable conformer is more stable by 15 kJ/mol, some fraction of unfavorable conformers will exist, leaving silanols exposed."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is MTMS proposed as a second SMI to improve silanol coverage?",
+                "answer_type": "Factoid",
+                "answer": "MTMS is smaller than TMPS and can access silanols that are sterically blocked from additional TMPS molecules, allowing complete silanol coverage through sequential pulsing of trifunctional and monofunctional inhibitors."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the MTMS activation barrier compare to TMPS condensation barriers?",
+                "answer_type": "Factoid",
+                "answer": "The MTMS barrier (151 kJ/mol) is slightly higher than the first TMPS condensation (TS I = 142 kJ/mol), suggesting extended soak times may be needed for optimal coverage by the second SMI."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the colored circles in panels (a) and (b) highlight?",
+                "answer_type": "Factoid",
+                "answer": "The blue circle in (a) highlights the methoxy group positioned to react with O2, while the red circle in (b) highlights the propyl group that sterically blocks access to the O2 silanol."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 4,
+            "width": 323,
+            "height": 278
+        },
+        "b": {
+            "x": 352,
+            "y": 6,
+            "width": 311,
+            "height": 274
+        },
+        "c": {
+            "x": 3,
+            "y": 294,
+            "width": 327,
+            "height": 274
+        },
+        "d": {
+            "x": 345,
+            "y": 294,
+            "width": 318,
+            "height": 270
+        }
+    }
+}

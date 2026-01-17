@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/32/fig_3",
+    "classification": {
+        "a": "workflow diagram"
+    },
+    "summarization": {
+        "a": "The flow chart illustrates the sequential steps involved in modeling argon flow within a reactor and feeding system, including calculating outlet pressure, implementing boundary conditions, and simulating ALD exposure steps."
+    },
+    "data_extraction": {
+        "a": "| Step | Description |\n|------|-------------|\n| 1    | **Model constant flow of argon** (Outlet pressure = 50 mTorr) |\n| 2    | Get pressure distribution, outlet flow rate, and side inlet pressure |\n| 3    | Implement the calculated flow rate as outlet boundary condition |\n| 4    | Implement the calculated pulses as inlet boundary condition |\n| 5    | **Simulate ALD exposure steps** |\n| 6    | **Model argon flow / Feeding system** (Outlet pressure = Reactor side inlet pressure) |\n| 7    | Simulate valve opening / compute react |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What makes the modelling difficult?",
+                "answer_type": "Paragraph",
+                "answer": "A major difficulty in modelling the process under study is the absence of data regarding the reactant pulses that are injected into the ALD reactor during the exposure steps of the cycle, as no measuring device is installed"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How are the reactant flows modelled?",
+                "answer_type": "Paragraph",
+                "answer": "The reactant flows were calculated using the feeding system model and a strategy was developed to connect the models which describe the feeding and the deposition parts of the ALD system."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the inlet boundary conditions?",
+                "answer_type": "List",
+                "answer": "1. Carrier gas Ar flow (through the feeding system and side inlet of the reactor) (sccm) = 30\n2. Top inlet Ar flow (sccm) = 100 \n3. Load lock inlet Ar flow (sccm) = 50\n4. Base pressure (as measured by Pirani gauge at the outlet) (mTorr) = 50"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the heating chuck of the substrate accounted for?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 983,
+            "height": 783
+        }
+    }
+}

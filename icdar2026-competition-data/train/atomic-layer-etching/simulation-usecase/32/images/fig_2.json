@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/32/fig_2",
+    "classification": {
+        "a": "molecular structure diagram",
+        "b": "molecular structure diagram"
+    },
+    "summarization": {
+        "a": "Mulliken atomic electron population changes for the most stable BCl3 adsorption configuration on Al2O3(100). Numbers on atoms show the change in electron population upon adsorption (unit: electron charge), with the largest decrease on B (minus 0.246) and notable increases on the two Al atoms bonded to Cl.",
+        "b": "Mulliken bond electron population changes upon BCl3 adsorption. Positive values indicate increased bond electron population on specific contacts such as B to Oads and Cl to Alads, while negative values indicate decreased bond electron population, including weakened bonds between Oads and neighboring Al atoms."
+    },
+    "data_extraction": {
+        "a": "| Atoms | Bond Lengths |\n|---|---|\n| Green | 0.059*, -0.025*, -0.019* |\n| Purple | 0.148*, 0.009, -0.011, 0.008 |\n| Red | 0.010, -0.059*, -0.001, -0.013 |",
+        "b": "| Atoms | Bond Lengths |\n|---|---|\n| Green | -0.49*, 0.807*, -0.713*, 0.930* |\n| Purple | 0.762*, -0.327*, -0.201*, -0.338* |\n| Red | -0.040, -0.048, 0.000, 0.052 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In panel (a), what does a positive value versus a negative value on an atom mean?",
+                "answer_type": "Factoid",
+                "answer": "Positive means that atom\u2019s electron population increases upon BCl3 adsorption. Negative means it decreases."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which atom shows the largest decrease in electron population in panel (a)?",
+                "answer_type": "Factoid",
+                "answer": "The boron atom shows the largest decrease, with a change of about minus 0.246 electron charge."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on panel (b) and the authors\u2019 interpretation, what new chemical bonds are created when BCl3 adsorbs on Al2O3(100)?",
+                "answer_type": "List",
+                "answer": "1. A bond between B and the adsorption site oxygen (Oads).\n2. Bonds between Cl and the two adsorption site aluminum atoms (Alads)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How do the bond population changes in panel (b) support the proposed early stage detachment mechanism in atomic layer etching?",
+                "answer_type": "Paragraph",
+                "answer": "The bond population analysis indicates that bonds between Oads and its adjacent Al atoms are substantially weakened upon BCl3 adsorption. At the same time, new B to Oads and Cl to Alads bonds are formed, creating OBCl and AlCl containing moieties at the surface. This combination motivates the authors\u2019 inference that Al associated fragments such as OAlCl (or AlCl) can detach readily under Ar bombardment at early etching stages."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 8,
+            "width": 642,
+            "height": 378
+        },
+        "b": {
+            "x": 0,
+            "y": 425,
+            "width": 630,
+            "height": 378
+        }
+    }
+}

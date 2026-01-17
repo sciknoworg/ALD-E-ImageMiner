@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/7/figure_1",
+    "classification": {
+        "a": "conceptual diagram",
+        "b": "conceptual diagram",
+        "c": "conceptual diagram"
+    },
+    "summarization": {
+        "a": "The continuous process diagram shows thickness increasing with time during constant exposure to process A. Because the process is flux-controlled, small changes in gas flow or conditions can strongly affect the final thickness.",
+        "b": "The pulsed process diagram shows that exposure to process A is divided into repeated pulses. This gives better timing control than a continuous process, but the thickness per pulse still depends on how much material arrives at the surface.",
+        "c": "The atomic layer process diagram shows alternating A and B steps that react only with the surface. Once each step is saturated, every cycle adds the same fixed amount of material, allowing very accurate thickness control by counting cycles."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": "",
+        "c": ""
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the uninterrupted exposure in continuous processes make them more sensitive to process variations?",
+                "answer_type": "Paragraph",
+                "answer": "In continuous processes, the total deposited or etched thickness is directly proportional to the integral of the precursor flux over time. Any fluctuation in process parameters like flow rate, pressure, or temperature immediately changes this flux and, consequently, the instantaneous growth or etch rate. Since there is no self-limiting step to cap the reaction, these variations accumulate directly, leading to poor control over the final thickness and non-uniformity."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does thickness evolution in the pulsed process compare to the continuous flux-controlled process?",
+                "answer_type": "List",
+                "answer": "-In both cases, thickness increases in a linear way.\n-Both processes are controlled by precursor flux reaching the surface.\n-Pulsing improves timing control but does not remove flux dependence.\n-Variations in gas delivery still affect final thickness in both cases."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the fixed growth or etch amount per ALD/ALE cycle indicate about the surface reaction?",
+                "answer_type": "Factoid",
+                "answer": "It shows that each half-reaction reaches saturation, so growth depends on surface reactions rather than precursor flux."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the surface-controlled nature of atomic layer processes useful for wafer-scale uniformity?",
+                "answer_type": "Paragraph",
+                "answer": "In atomic layer processes, each cycle deposits or removes a fixed amount of material once the surface is saturated. This makes the result insensitive to small changes in gas flow, pressure, or timing. Because every surface site reacts in the same way, thickness remains uniform across the wafer and from run to run."
+            }
+        ]
+    },
+    "bbox": {
+        "c": {
+            "x": 758,
+            "y": 33,
+            "width": 305,
+            "height": 636
+        },
+        "b": {
+            "x": 407,
+            "y": 30,
+            "width": 315,
+            "height": 639
+        },
+        "a": {
+            "x": 30,
+            "y": 28,
+            "width": 315,
+            "height": 626
+        }
+    }
+}

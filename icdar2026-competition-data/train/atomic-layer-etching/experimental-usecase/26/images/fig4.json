@@ -1,0 +1,97 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/26/fig4",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "box plot",
+        "c": "multiple line chart",
+        "d": "bar chart",
+        "e": "multiple line chart",
+        "f": "multiple line chart"
+    },
+    "summarization": {
+        "a": "A multiple line chart showing the relationship between gate voltage (V_G) and drain current (I_D) before and after a process.",
+        "b": "A box plot comparing the threshold voltage (Vth) for two different etching processes.",
+        "c": "A multiple line chart showing the drain current (I_D) as a function of drain voltage (V_D) for different ALE process and Cl2 etch.",
+        "d": "A bar chart showing the normalized resistance (Re.norm) for different etch cycles of Cl2 etch and the original state.",
+        "e": "A multiple line chart showing the leakage current as a function of drain voltage for different leakage types (ALE-drain leakage (ID), ALE-gate leakage (IG), Cl2 etch-drain leakage (ID), and CL2 etch-gate leakage (IG)).",
+        "f": "A line chart showing the gate current (I_G) as a function of gate voltage (V_G) for two different etching processes (ALE and CL2 etch)."
+    },
+    "data_extraction": {
+        "a": "| V_G (V) | I_D (mA/mm) before | I_D (mA/mm) after |\n| --- | --- | --- |\n| -10 | 1e-7 | - |\n| -5 | 1e-7 | - |\n| 0 | 1e2 | 1e-7 |\n| 5 | - | 1e-7 |\n| 10 | - | 1e2 |",
+        "b": "| Process | Vth |\n| --- | --- |\n| ALE | 5.04 \u00b1 0.10 |\n| Cl\u2082 etch | 4.84 \u00b1 0.33 |",
+        "c": "| V_D (V) | I_D (mA/mm) Cl\u2082 etch | I_D (mA/mm) ALE |\n| --- | --- | --- |\n| 0 | 0 | 0 |\n| 2 | 200 | 210 |\n| 4 | 360 | 400 |\n| 6 | 430 | 510 |\n| 8 | 580 | 600 |\n| 10 | 600 | 630 |\n| 12 | 670 | 700 |\n| 14 | 700 | 740 |\n| 16 | 700 | 750 |",
+        "d": "| Etch cycle | Re.norm (\u03a9\u00b7mm) Cl\u2082 etch | Re.norm (\u03a9\u00b7mm) ALE |\n| --- | --- | --- |\n| 11 | 0.38 | - |\n| 13 | 0.34 | - |\n| 15 | 0.32 | - |\n| 17 | 0.30 | - |\n| 19 | 0.29 | - |\n| 21 | 0.25 | - |\n| 23 | 0.23 | - |\n| 25 | 0.20 | - |\n| 27 | 0.19 | - |\n| 29 | 0.16 | - |\n| Ori | - | 0.48 |",
+        "e": "| V_D (V) | ALE-ID | ALE-IG | Cl\u2082 etch ID | Cl\u2082 etch IG |\n| --- | --- | --- | --- | --- |\n| 0 | 1e-7 | 1e-7 | 1e-7 | 1e-7 |\n| 300 | 1e-5 | 1e-5 | 1e-5 | 1e-5 |\n| 600 | 1e-4 | 1e-5 | 1e-4 | 1e-5 |\n| 900 | 1e-3 | 1e-4 | 1e-3 | 1e-4 |\n| 1200 | 1e-2 | 1e-2 | 1e-2 | 1e-2 |",
+        "f": "| V_G (V) | I_G (mA/mm) ALE | I_G (mA/mm) Cl\u2082 etch |\n| --- | --- | --- |\n| 0 | 1e-5 | 1e-5 |\n| 5 | 1e-5 | 1e-5 |\n| 10 | 1e-5 | 1e-5 |\n| 15 | 1e-4 | 1e-4 |\n| 20 | 1e-3 | 1e-3 |\n| 25 | 1e2 | - |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which steps are shown in the subfigure?",
+                "answer_type": "Factoid",
+                "answer": "The normalized resistance is shown for the original sample, as well as the variation through different amounts of cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the normalized resistance vary as the number of etch cycles increases?",
+                "answer_type": "Factoid",
+                "answer": "As the number of cycles increases, the normalized resistance decreases from around 0.38 \u03a9\u00b7mm to 0.28 \u03a9\u00b7mm."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Application/Performance",
+                "question": "How does the initialization process can affect the Vg value?",
+                "answer_type": "Factoid",
+                "answer": "The initialization process results in a shift of 6.71 V."
+            }
+        ],
+        "e": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which curve exhibits a higher leakage current?",
+                "answer_type": "Yes/No",
+                "answer": "As can be seen, the Cl2 etch-drain leakage (ID) curve shows higher leakage current values at different voltages."
+            }
+        ]
+    },
+    "bbox": {
+        "d": {
+            "x": 289,
+            "y": 245,
+            "width": 279,
+            "height": 205
+        },
+        "b": {
+            "x": 289,
+            "y": 26,
+            "width": 276,
+            "height": 196
+        },
+        "c": {
+            "x": 0,
+            "y": 243,
+            "width": 290,
+            "height": 204
+        },
+        "e": {
+            "x": 0,
+            "y": 452,
+            "width": 286,
+            "height": 227
+        },
+        "f": {
+            "x": 287,
+            "y": 452,
+            "width": 283,
+            "height": 226
+        },
+        "a": {
+            "x": 0,
+            "y": 23,
+            "width": 290,
+            "height": 215
+        }
+    }
+}

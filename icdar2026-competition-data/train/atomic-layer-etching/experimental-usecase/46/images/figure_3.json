@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/46/figure_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart represents the QCM data showing TiO\u2082 mass changes during ALD and subsequent WF\u2086 doses at 120\u00b0C and 220\u00b0C; only the 220\u00b0C sample exhibits noticeable mass loss per dose, indicating active etching.",
+        "b": "Magnified view of the WF\u2086 dosing period; 220\u00b0C shows stepwise mass loss (etching), while 120\u00b0C shows negligible change, confirming the reaction is thermally activated."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Mass Loading (ng/cm\u00b2) | Temperature (\u00b0C) | Condition |\n|---------:|-----------------------|------------------|-----------|\n| 18000 | 5200 | 120 |TiO\u2082 ALD |\n| 18000 | 4000 | 220 |TiO\u2082 ALD |\n| 18500 | 5500 | 120 | TiO\u2082 ALD |\n| 18500 | 4200 | 220 | TiO\u2082 ALD |\n| 19000 | 5650 | 120 | WF\u2086 dose  |\n| 19000 | 4100 | 220 | WF\u2086 dose  |\n| 19500 | 5750 | 120 |  WF\u2086 dose |\n| 19500 | 3950 | 220 | WF\u2086 dose  |\n| 20000 | 5800 | 120 | WF\u2086 dose  |\n| 20000 | 3700 | 220 | WF\u2086 dose  |\n| 20500 | 5800 | 120 | WF\u2086 dose  |\n| 20500 | 3300 | 220 | WF\u2086 dose  |\n| 21000 | 5800 | 120 | WF\u2086 dose  |\n| 21000 | 2600 | 220 | WF\u2086 dose  |",
+        "b": "| Time (s) | Mass Loading (ng/cm\u00b2) | Temperature (\u00b0C) | Condition |\n|---------:|-----------------------|------------------|-----------|\n| 19920 | 5820 | 120 | |\n| 19920 | 5720 | 220 | |\n| 19940 | 5820 | 120 | WF\u2086 |\n| 19940 | 5736 | 220 | WF\u2086|\n| 19960 | 5820 | 120 | |\n| 19960 | 5679 | 220 | |\n| 20000 | 5820 | 120 | WF\u2086 |\n| 20000 | 5700 | 220 | WF\u2086 |\n| 20040 | 5820 | 120 | |\n| 20040 | 5650 | 220 | |\n| 20060 | 5820 | 120 | WF\u2086 |\n| 20060 | 5658 | 220 | WF\u2086 |\n| 20080 | 5820 | 120 | |\n| 20080 | 5600 | 220 | |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the key steps, in order, to obtain the QCM trace for the 220\u00b0C experiment shown in panel (a). Explain the purpose of the TiO\u2082 ALD step before the WF\u2086 doses.",
+                "answer_type": "List",
+                "answer": "Deposit a TiO\u2082 film on the QCM sensor via ALD.\n\nStabilize the system at 220\u00b0C and the desired pressure.\n\nExpose the film to a sequence of 50 WF\u2086 doses, each followed by an inert purge.\n\nContinuously record the QCM frequency (converted to mass loading) throughout the dose sequence."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the two process temperatures. Under a constraint of needing to selectively etch TiO\u2082 without damaging nearby temperature-sensitive polymers, which temperature condition is forced upon you, and what is the primary trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "The lower temperature (120\u00b0C) is forced to protect the polymers. The trade-off is that no etching occurs at this temperature, so the desired material removal cannot be achieved with thermal WF\u2086 alone. An alternative approach, such as using a more reactive chemistry or a non-thermal activation method (like plasma), would be required, introducing complexity or potential damage."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The data shows a clear temperature threshold for etching. What does this imply for integrating a WF\u2086-based TiO\u2082 etch into a back-end-of-line (BEOL) process that must remain below 150\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "This implies that a purely thermal WF\u2086 etch process is not compatible with such a low thermal budget. Since significant etching only occurs at 220\u00b0C, exceeding the 150\u00b0C limit, integration would require a fundamental process change. Options include performing the etch earlier in the flow (before temperature-sensitive layers) or developing a plasma-assisted WF\u2086 process that could lower the required substrate temperature."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on the figure, how does temperature affect the etching reaction of TiO\u2082 by WF\u2086? Provide the chemical cause for this relationship.",
+                "answer_type": "Paragraph",
+                "answer": "Temperature drastically affects the etching rate. At 220\u00b0C, etching proceeds readily, while at 120\u00b0C, it is negligible. This is because the reaction is thermally activated; sufficient thermal energy is required to overcome the activation barrier for breaking Ti\u2013O bonds and forming volatile titanium fluoride (TiF\u2084) and tungsten oxyfluoride products."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 530,
+            "height": 403
+        },
+        "b": {
+            "x": 523,
+            "y": 7,
+            "width": 521,
+            "height": 394
+        }
+    }
+}

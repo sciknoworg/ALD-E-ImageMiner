@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/46/figure_6",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "This line chart represents the change in film thickness with increasing WF\u2086 doses at 220 \u00b0C, showing a linear decrease that indicates progressive etching or consumption of the 5.5 nm TiO\u2082 film.",
+        "b": "This line chart represents the change in refractive index (at 632.8 nm) with increasing WF\u2086 doses, showing a sharp initial drop (0\u201325 doses) followed by stabilization at ~1.85, indicating initial chemical modification before steady-state etching."
+    },
+    "data_extraction": {
+        "a": "| Number of WF\u2086 Doses | Thickness (\u00c5) |\n|--------------------:|--------------:|\n| 0   | 56.00 |\n| 10  | 58.64 |\n| 25  | 53.11 |\n| 50  | 50.34 |\n| 100 | 33.71 |",
+        "b": "| Number of WF\u2086 Doses | Refractive Index @ 632.8 nm |\n|--------------------:|----------------------------:|\n| 0   | 2.31 |\n| 10  | 2.29 |\n| 25  | 1.88 |\n| 50  | 1.83 |\n| 100 | 1.90 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the two distinct sequential stages of sample preparation used in this study before the spectroscopic ellipsometry measurement was taken.",
+                "answer_type": "List",
+                "answer": "Deposition: Deposition of a 5.5 nm TiO\u2082 starting layer.\n\nTreatment: Exposure to a specific number of  WF\u2086 doses (0, 15, 25, 50, or 100) at 220\u00b0C."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The refractive index can be tuned by the number of WF\u2086 doses. Is this method suitable for creating a graded-index optical waveguide on a chip?",
+                "answer_type": "Yes/No",
+                "answer": "Yes. The stepwise, dose-dependent index change allows spatial patterning of the refractive index by controlling the number of WF\u2086 doses across different regions of the waveguide. This enables the fabrication of gradient-index profiles for improved light confinement and mode shaping."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "To lower the refractive index of TiO\u2082 for an optical coating, compare using this WF\u2086 fluorination method versus simply depositing a thinner TiO\u2082 film. Which method allows independent control of thickness and index?",
+                "answer_type": "Paragraph",
+                "answer": "WF\u2086 fluorination is superior for independent control. It changes the index by altering composition while also thinning the film. Simply depositing a thinner film only changes thickness, not the intrinsic index. Fluorination offers two tuning knobs (dose for index, cycles for thickness)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How do the WF\u2086 doses change the film's composition, and why does this cause the refractive index to drop?",
+                "answer_type": "Paragraph",
+                "answer": "WF\u2086 fluorinates the TiO\u2082, converting it into a titanium oxyfluoride (TiOF\u2093) or fluoride. Fluorine incorporation increases the film's band gap and lowers its density/polarizability, both of which directly cause a decrease in the refractive index."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 2,
+            "width": 465,
+            "height": 385
+        },
+        "b": {
+            "x": 514,
+            "y": 1,
+            "width": 469,
+            "height": 385
+        }
+    }
+}

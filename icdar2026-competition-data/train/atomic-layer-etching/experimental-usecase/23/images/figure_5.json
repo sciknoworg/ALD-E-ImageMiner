@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_5",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multiple line chart shows the reduction in ZnS film thickness with increasing ALE cycles (0\u201320) at temperatures from 225 \u00b0C to 300 \u00b0C for films initially deposited at 100 \u00b0C. All values display a linear decrease in thickness, confirming a constant etch per cycle and a well-controlled, self-limiting ALE process. The slope increases with temperature, indicating thermally activated etching, with the highest etch rate at 300 \u00b0C (~2.1 \u00c5/cycle) and the lowest at 225 \u00b0C (~1.25 \u00c5/cycle)."
+    },
+    "data_extraction": {
+        "a": "| Number of ALE Cycles | Change in ZnS Thickness (\u00c5)  | Temperature |\n|------------|------------------|-------------|\n| 0          | 0                | 225 \u00b0C      |\n| 0          | 0                | 250 \u00b0C      |\n| 0          | 0                | 275 \u00b0C      |\n| 0          | 0                | 300 \u00b0C      |\n| 2          | -1.23            | 225 \u00b0C      |\n| 2          | -1.86            | 250 \u00b0C      |\n| 2          | -2.35            | 275 \u00b0C      |\n| 2          | -3.59            | 300 \u00b0C      |\n| 4          | -3.59            | 225 \u00b0C      |\n| 4          | -5.20            | 250 \u00b0C      |\n| 4          | -6.56            | 275 \u00b0C      |\n| 4          | -7.80            | 300 \u00b0C      |\n| 6          | -6.68            | 225 \u00b0C      |\n| 6          | -8.91            | 250 \u00b0C      |\n| 6          | -10.77           | 275 \u00b0C      |\n| 6          | -11.88           | 300 \u00b0C      |\n| 8          | -10.27           | 225 \u00b0C      |\n| 8          | -12.25           | 250 \u00b0C      |\n| 8          | -14.72           | 275 \u00b0C      |\n| 8          | -16.71           | 300 \u00b0C      |\n| 10         | -12.37           | 225 \u00b0C      |\n| 10         | -15.84           | 250 \u00b0C      |\n| 10         | -19.31           | 275 \u00b0C      |\n| 10         | -20.79           | 300 \u00b0C      |\n| 12         | -15.84           | 225 \u00b0C      |\n| 12         | -19.18           | 250 \u00b0C      |\n| 12         | -23.02           | 275 \u00b0C      |\n| 12         | -24.87           | 300 \u00b0C      |\n| 14         | -18.56           | 225 \u00b0C      |\n| 14         | -23.02           | 250 \u00b0C      |\n| 14         | -27.47           | 275 \u00b0C      |\n| 14         | -29.94           | 300 \u00b0C      |\n| 16         | -21.16           | 225 \u00b0C      |\n| 16         | -27.22           | 250 \u00b0C      |\n| 16         | -32.04           | 275 \u00b0C      |\n| 16         | -34.27           | 300 \u00b0C      |\n| 18         | -23.02           | 225 \u00b0C      |\n| 18         | -30.93           | 250 \u00b0C      |\n| 18         | -35.76           | 275 \u00b0C      |\n| 18         | -38.24           | 300 \u00b0C      |\n| 20         | -26.48           | 225 \u00b0C      |\n| 20         | -34.27           | 250 \u00b0C      |\n| 20         | -40.46           | 275 \u00b0C      |\n| 20         | -43.18           | 300 \u00b0C      |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does increasing the substrate temperature from 225\u00b0C to 300\u00b0C affect the efficiency of the etch process? Quantify the approximate difference in total material removed after 20 cycles.",
+                "answer_type": "Paragraph",
+                "answer": "The process is thermally activated. Increasing the temperature from 225\u00b0C to 300\u00b0C nearly doubles the material removal: at 225\u00b0C, roughly -25 \u00c5 is removed after 20 cycles, whereas at 300\u00b0C, roughly -42 \u00c5 is removed."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For etching a ZnS film over a temperature-sensitive underlying layer (e.g., an organic film), would you choose the 225\u00b0C or 300\u00b0C ALE process? What is the trade-off?",
+                "answer_type": "List",
+                "answer": "300\u00b0C Process: Advantage: Faster, higher-throughput etch. Disadvantage : Risk of thermal damage to the underlying sensitive layer.\n\n225\u00b0C Process: Advantage: Lower thermal budget, safer for the underlying layer. Disadvantage: Much slower etch rate, reducing throughput.\n\nFor a temperature-sensitive substrate, the 225\u00b0C process is preferable. The trade-off is accepting a slower etch rate to preserve the integrity of the underlying material."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The graph shows perfect linearity (R^2 ~ 1) for all temperatures up to 20 cycles. What does this constant slope imply about the surface chemistry?",
+                "answer_type": "Paragraph",
+                "answer": "The constant slope proves that the surface chemistry resets perfectly after every cycle. There is no \"memory effect,\" residue accumulation, or surface roughening that inhibits (or accelerates) the reaction over time; the 20th cycle removes exactly as much material as the 1st cycle, confirming the robust, self-limiting nature of the ALE mechanism."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The linear thickness removal with cycle count demonstrates precise digital etching. What specific application in photonics does this enable?",
+                "answer_type": "Paragraph",
+                "answer": "This enables the precise tuning of optical cavity lengths in ZnS-based micro-resonators or filters. By running an exact number of ALE cycles, the thickness of a ZnS waveguide layer can be reduced with sub-nanometer accuracy, allowing for post-fabrication trimming of the device's resonant wavelength to a specific target value without degrading surface smoothness."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 4,
+            "width": 665,
+            "height": 577
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/40/fig_3",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart",
+        "c": "line chart"
+    },
+    "summarization": {
+        "a": "The etch rate increases with increasing temperature.",
+        "b": "The etch rate increases with oxygen exposure time up to 2 seconds, then plateaus.",
+        "c": "The etch rate increases with in-situ HF exposure time up to 15 seconds, then plateaus"
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | Etch rate (\u00c5/cycle) |\n|---|---|\n| 150 | 1.10 |\n| 175 | 1.90 |\n| 200 | 2.45 |\n| 250 | 3.10 |\n| 300 | 3.30 |\n| 350 | 3.28 |",
+        "b": "| Oxygen exposure time (s) | Etch rate (\u00c5/cycle) |\n|---|---|\n| 0.0 | 0.10 |\n| 0.5 | 1.65 |\n| 1.0 | 2.40 |\n| 2.0 | 2.95 |\n| 4.0 | 2.95 |\n| 6.0 | 2.92 |",
+        "c": "| In-situ HF exposure time (s) | Etch rate (\u00c5/cycle) |\n|---|---|\n| 0.0 | -0.20 |\n| 1.0 | 0.55 |\n| 2.5 | 1.25 |\n| 5.0 | 2.30 |\n| 10.0 | 3.05 |\n| 15.0 | 3.10 |\n| 20.0 | 3.05 |"
+    },
+    "vqa": {
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What exposure times were selected for the optimized ALE recipe based on the saturation curves?",
+                "answer_type": "Factoid",
+                "answer": "2 seconds for O2 gas exposure and 10 seconds for in-situ HF exposure, both at the onset of saturation."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the saturation curves in (b) and (c) demonstrate about the ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The saturation curves demonstrate the self-limiting nature of both half-reactions in the ALE process. In subfigure (b), the oxidation step saturates because oxygen diffusion slows as the TiO2 layer thickens. In subfigure (c), the etching step saturates because the in-situ HF selectively removes only the TiO2 layer and stops when it reaches the underlying TiN. This dual self-limiting behavior is essential for achieving precise, reproducible etch depths with angstrom-scale control in each cycle."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch rate change with temperature and why does it plateau above 300\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "The etch rate increases from 1.1 \u00c5/cycle at 150\u00b0C to 3.2 \u00c5/cycle at 300\u00b0C due to enhanced oxygen diffusion into TiN at higher temperatures, which produces thicker TiO2 layers during each oxidation step. Above 300\u00b0C, the etch rate plateaus because the oxide thickness becomes limited by factors other than diffusion kinetics, such as the thermodynamic stability of the oxide layer or surface reaction saturation. This plateau behavior is consistent with observations in other thermal ALE processes for TiN."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the saturated etch rate at 300\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 3 \u00c5/cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 42,
+            "width": 479,
+            "height": 387
+        },
+        "b": {
+            "x": 484,
+            "y": 45,
+            "width": 457,
+            "height": 384
+        },
+        "c": {
+            "x": 953,
+            "y": 43,
+            "width": 452,
+            "height": 382
+        }
+    }
+}

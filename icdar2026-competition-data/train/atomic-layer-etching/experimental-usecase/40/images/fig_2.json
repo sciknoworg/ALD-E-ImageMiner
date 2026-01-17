@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/40/fig_2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The etch rate of TiO\u2082 and TiN as a function of SF\u2086:H\u2082 flow rate ratio.",
+        "b": "The thickness change of materials with different treatments as a function of the number of cycles"
+    },
+    "data_extraction": {
+        "a": "| SF\u2086:H\u2082 flow rate ratio | TiO\u2082 (\u00c5 s\u207b\u00b9) | TiN (\u00c5 s\u207b\u00b9) |\n|---|---|---|\n| 0 | 0.00 | -0.05 |\n| 0.05 | 0.00 | -0.05 |\n| 0.10 | 0.18 | -0.03 |\n| 0.15 | 0.45 | -0.02 |\n| 0.20 | 0.58 | 0.00 |\n| 0.25 | 0.65 | 0.16 |\n| 0.30 | 0.73 | 0.33 |",
+        "b": "| Number of cycles | O\u2082 gas (nm) | In-situ HF (nm) | ALE 200\u00b0C (nm) | ALE 300\u00b0C (nm) |\n|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 |\n| 20 | 0 | 0 | -5 | -6.5 |\n| 40 | 0 | 0 | -10 | -13 |\n| 60 | 0 | 0 | -15 | -19 |\n| 80 | 0 | -1 | -20 | -26 |\n| 100 | 0 | -1 | -24 | -33 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What SF6:H2 flow rate ratio was selected for the ALE experiments and why?",
+                "answer_type": "Paragraph",
+                "answer": "A ratio of 0.2 was selected for the ALE experiments, as indicated by the vertical dashed line in the figure. This ratio was chosen because it lies at the upper boundary of the selective etching window (0.1 to 0.2) where TiO2 is etched while TiN remains unetched. At this ratio, the SF6/H2 plasma produces sufficient in-situ HF to etch the oxide layer, but the fluorine radical concentration remains low enough to avoid spontaneous etching of TiN. This maximizes the etch rate of the modified layer while maintaining selectivity."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does TiN begin to etch when the SF6:H2 ratio exceeds 0.2?",
+                "answer_type": "Paragraph",
+                "answer": "When the SF6:H2 ratio exceeds 0.2, the concentration of fluorine radicals in the plasma becomes sufficient to spontaneously etch TiN. At lower ratios, hydrogen radicals combine with fluorine radicals to form HF molecules, which do not etch TiN due to its 3+ oxidation state. However, at higher ratios, excess fluorine radicals are available that can directly attack the TiN surface, leading to uncontrolled etching of both TiO2 and TiN and loss of selectivity."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the green shaded region in subfigure (a) represent?",
+                "answer_type": "Factoid",
+                "answer": "The green shaded region represents the range of SF6:H2 flow rate ratios (0.1 to 0.2) where selective etching of TiO2 over TiN is achieved."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the etch rates at 200\u00b0C and 300\u00b0C compare for the full ALE process?",
+                "answer_type": "Factoid",
+                "answer": "The etch rate at 300\u00b0C (3.2 \u00c5/cycle) is approximately 33% higher than at 200\u00b0C (2.4 \u00c5/cycle)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 41,
+            "width": 650,
+            "height": 525
+        },
+        "b": {
+            "x": 11,
+            "y": 586,
+            "width": 648,
+            "height": 525
+        }
+    }
+}

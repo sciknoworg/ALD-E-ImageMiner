@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/42/figure_3",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure shows the film thickness of various materials (TiN, ZrO\u2082, SiO\u2082, Si\u2083N\u2084, HfO\u2082, Al\u2082O\u2083) at 300\u00b0C using TMA and HF for ALE etching.",
+        "b": "The figure illustrates the atomic layer etching (ALE) rates of ZrO\u2082, HfO\u2082, and Al\u2082O\u2083 at 300\u00b0C using TMA and HF"
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | TiN (\u00c5) | SiO\u2082 (\u00c5) | Al\u2082O\u2083 (\u00c5) | Si\u2083N\u2084 (\u00c5) | HfO\u2082 (\u00c5) | ZrO\u2082 (\u00c5) |\n|-------------------|---------|----------|-----------|-----------|----------|----------|\n| 0                | 65      | 50       | 45        | 45        | 55       | 50       |\n| 50               | 65      | 49       | 30        | 44        | 50       | 49       |\n| 100              | 65      | 48       | 15        | 43        | 48       | 48       |\n| 150              | 65      | 47       | 5         | 42        | 40       | 47       |\n| 200              | 65      | 46       | 0         | 42        | 38       | 46       |",
+        "b": "| Number of Cycles | Al\u2082O\u2083 (\u00c5) | HfO\u2082 (\u00c5) | ZrO\u2082 (\u00c5) |\n|-------------------|-----------|----------|----------|\n| 0                | 45        | 55       | 50       |\n| 50               | 20        | 50       | 49       |\n| 100              | 0        | 48       | 48       |\n| 150              | -         | 40       | 47       |\n| 200              | 0         | 38       | 47       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Are these thermal ALE processes?",
+                "answer_type": "Factoid",
+                "answer": "All the ALE processes on different materials with HF and TMA are thermal processes conducted at 300 \u00b0C."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What can be observed from image a ?",
+                "answer_type": "Paragraph",
+                "answer": "The film thicknesses after 25, 50, 100, and 200 ALE cycles using sequential HF and TMA exposures at 300 \u00b0C. The Al2O3 and HfO2 films were etched linearly versus the number of ALE cycles. There were negligible thickness changes during 200 ALE cycles for the ZrO2, SiO2, Si3N4, and TiN films."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does TMA atch ZrO2?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Are the measured etch rates accurate?",
+                "answer_type": "Paragraph",
+                "answer": "Etch rates of 0.45 \u00c5/cycle and 0.10 \u00c5/cycle were measured for the Al2O3 and HfO2 films, respectively. The etch rate of Al2O3 is in agreement with the value measured earlier by quartz crystal microbalance\n(QCM) and SE experiments."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 669,
+            "height": 455
+        },
+        "b": {
+            "x": 0,
+            "y": 471,
+            "width": 669,
+            "height": 538
+        }
+    }
+}

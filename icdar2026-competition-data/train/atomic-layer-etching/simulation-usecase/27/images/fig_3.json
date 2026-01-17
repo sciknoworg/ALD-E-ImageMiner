@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/27/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "XPS depth profile showing the Ga-N and Ga-O contributions to the Ga3d peak area as a function of sputter depth. The Ga-O signal is highest at the surface and decreases with depth, indicating an oxidized surface layer extending approximately 10 nm into the film. The Ga-N signal increases with depth, reaching a maximum in the bulk region.",
+        "b": "Fitted Ga3d XPS spectrum after 20 s of sputtering, showing deconvolution into Ga-N (19.3 eV) and Ga-O (20.5 eV) components. At this depth, both bonding environments contribute to the signal."
+    },
+    "data_extraction": {
+        "a": "| Sputter depth (nm) | Ga-N Area (CPS eV) | Ga-O Area (CPS eV) |\n|---|---|---|\n| 0 | 2200 | 4100 |\n| 1 | 3500 | 2800 |\n| 3 | 4200 | 1900 |\n| 5 | 4500 | 1500 |\n| 10 | 4900 | 1000 |\n| 20 | 5400 | 600 |\n| 30 | 5800 | 100 |\n| 35 | 5600 | 0 |\n| 40 | 3500 | 0 |\n| 45 | 100 | 0 |",
+        "b": "| Binding Energy (eV) | Envelope (Norm.) | Ga-N Component (Norm.) | Ga-O Component (Norm.) |\n|---|---|---|---|\n| 23.0 | 0.00 | 0.00 | 0.00 |\n| 21.5 | 0.15 | 0.00 | 0.15 |\n| 20.6 | 0.90 | 0.45 | 0.45 |\n| 19.8 | 1.00 | 0.80 | 0.20 |\n| 19.4 | 0.90 | 0.85 | 0.05 |\n| 18.0 | 0.20 | 0.20 | 0.00 |\n| 16.0 | 0.00 | 0.00 | 0.00 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the vertical dashed line in subfigure (a) indicate?",
+                "answer_type": "Factoid",
+                "answer": "It marks the sputter depth (after 20 s of sputtering) corresponding to the spectrum shown in subfigure (b)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is characterizing this oxidized surface layer important for the ALE study?",
+                "answer_type": "Factoid",
+                "answer": "The oxidized layer represents surface contamination that the ALE process aims to remove, and it affects the initial etch rate before reaching stoichiometric GaN."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the oxygen content in the GaN film change with depth according to the XPS depth profile?",
+                "answer_type": "Paragraph",
+                "answer": "The Ga-O signal is highest at the surface (~4000 CPS\u00b7eV) and decreases rapidly within the first 10 nm, indicating a heavily oxidized surface layer. Beyond ~25 nm sputter depth, the Ga-O signal becomes negligible while Ga-N dominates, representing the transition to stoichiometric GaN in the bulk. This oxidized layer formed during storage in ambient conditions."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What are the binding energies for the Ga-N and Ga-O peaks in the Ga3d spectrum?",
+                "answer_type": "Factoid",
+                "answer": "Ga-N is at 19.3 eV and Ga-O is at 20.5 eV."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 12,
+            "width": 346,
+            "height": 424
+        },
+        "b": {
+            "x": 384,
+            "y": 12,
+            "width": 282,
+            "height": 424
+        }
+    }
+}

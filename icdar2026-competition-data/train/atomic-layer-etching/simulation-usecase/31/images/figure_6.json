@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/31/figure_6",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "Multi-axis line chart showing Wulff-averaged Gibbs free energies of removal (\u0394G_rm at 80 \u00b0C) for nickel as a function of surface coverage. The left y-axis corresponds to formamidine (HFamd) chemistry and the right y-axis to formic acid (HFA). Horizontal lines indicate bulk reference energies for pristine Ni and modified Ni\u2083N.",
+        "b": "Multi-axis line chart showing Wulff-averaged removal energies for copper as a function of coverage. Dual y-axes distinguish formamidine and formic acid chemistries, with bulk reference lines for Cu and Cu\u2083N included for comparison."
+    },
+    "data_extraction": {
+        "a": "| Coverage \u03b8 (\u00c5\u207b\u00b2) | Del_G (HFAmd) (Ni/N)| Del_G (HFA) (Ni/N) | Del_G (HFAmd) (Ni/O)| Del_G (HFA) (Ni/O) |\n|---|---|---|---|---|\n| 0.01 | ~ 0.60 | ~ 0.85 | ~ 0.75 | ~ 0.95 |\n| 0.05 | ~ 0.50 | ~ 0.75 | ~ 0.60 | ~ 0.85 |\n| 0.10 | ~ 0.35 | ~ 0.60 | ~ 0.20 | ~ 0.50 |\n| 0.15 | ~ -0.20| ~ 0.00 | ~ -0.10| ~ 0.20 |\n| 0.20 |     -  |    -   | ~ -0.40| ~ -0.20 |",
+        "b": "| Coverage \u03b8 (\u00c5\u207b\u00b2) | Del_G (HFAmd) (Cu/N)| Del_G (HFA) (Cu/N) | Del_G (HFAmd) (Cu/O)| Del_G (HFA) (Cu/O) |\n|---|---|---|---|---|\n| 0.01 | ~ 0.20 | ~ 0.20 | ~ 0.30 | ~ 0.30 |\n| 0.05 | ~ 0.00 | ~ 0.05 | ~ 0.20 | ~ 0.20 |\n| 0.10 | ~ -0.20| ~ 0.15 | ~ 0.00 | ~ 0.00 |\n| 0.15 |   -    |    -   | ~ -0.20| ~ -0.10|\n| 0.20 |   -    |    -   |    -   |    -   |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which ligand chemistries are represented by the left and right y-axes?",
+                "answer_type": "List",
+                "answer": "-Formamidine (HFamd) \u2014 left y-axis\n-Formic acid (HFA) \u2014 right y-axis"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why's it important to compare these surface removal energies against the bulk reference lines in ALE modeling?",
+                "answer_type": "Paragraph",
+                "answer": "Bulk reference lines provide a baseline to evaluate if surface removal is energetically accessible. Comparing these helps determine if etching remains surface-limited rather than bulk-like, which is essential for achieving atomic-layer control. It's also useful for identifying when modified surface layers become easier to remove than the pristine bulk material."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compared with nickel, does copper reach similarly negative removal energies at comparable coverages?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What implication do the increasingly negative removal energies at higher coverage have for the self-limiting nature of ALE?",
+                "answer_type": "Paragraph",
+                "answer": "The trend suggests that once sufficient surface coverage is achieved, removal becomes thermodynamically favorable without requiring continued activation. This behavior supports self-limiting etching, where removal naturally saturates after one atomic layer is processed."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 17,
+            "width": 667,
+            "height": 433
+        },
+        "b": {
+            "x": 3,
+            "y": 473,
+            "width": 664,
+            "height": 426
+        }
+    }
+}

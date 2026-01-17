@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/32/figure_3",
+    "classification": {
+        "a": "line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Line chart showing InGaAs etch depth as a function of acceleration grid voltage for a fixed Cl species exposure time of 15 min. Etching is negligible below 10 V and increases sharply between 15 and 30 V, indicating a threshold-like voltage dependence.",
+        "b": "Multiple line chart showing InGaAs etch depth as a function of Cl species exposure time at acceleration voltages of 15 V and 10 V. Etching proceeds more rapidly at 15 V, while the 10 V condition shows a delayed onset and substantially lower etch depth over the same time range."
+    },
+    "data_extraction": {
+        "a": "| Acceleration Voltage (V) | Etch Depth (\u00c5) |\n|---|---|\n| 0 | 0 |\n| 5 | 0 |\n| 10 | 0 |\n| 15 | ~45 |\n| 20 | ~75 |\n| 30 | ~150 |",
+        "b": "| Exposure Time (min) | 15V Etch Depth (\u00c5) | 10V Etch Depth (\u00c5) | \n|---|---|---| \n| 0 | 0 | 0 | \n| 5 | 0 | 0 | \n| 10 | 0 | 0 | \n| 15 | ~5 | 0 | \n| 25 | ~20 | ~5 | \n| 35 | ~65 | ~15 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "In subfigure (b), does etching start immediately at 0 min for either voltage condition?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare subfigure (b) for 15 V vs 10 V after the initial delay\u2014how do the etch rates differ?",
+                "answer_type": "Paragraph",
+                "answer": "After ~10\u201315 min, 15 V increases much faster, reaching ~60\u201370 \u00c5 by ~35 min, while 10 V rises slowly to only ~10\u201320 \u00c5 by ~35 min. This indicates a strong voltage/ion-energy dependence of the etch step."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "According to subfigure (a), what is the approximate acceleration grid voltage where measurable etching begins?",
+                "answer_type": "Factoid",
+                "answer": "15 V."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "For subfigure (a), what fixed Cl species exposure time was used while sweeping the grid voltage?",
+                "answer_type": "Factoid",
+                "answer": "15 min."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 6,
+            "y": 545,
+            "width": 658,
+            "height": 527
+        },
+        "a": {
+            "x": 2,
+            "y": 1,
+            "width": 662,
+            "height": 526
+        }
+    }
+}

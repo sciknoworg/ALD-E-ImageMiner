@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_6",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This muliple line chart  shows the etch rate per cycle (\u00c5/cycle) as a function of precursor exposure time for two different ALE process conditions: one varying HF exposure time (x) with fixed TMA time (4 s), and the other varying TMA exposure time (y) with fixed HF time (1 s). Both show a rapid increase in etch rate with exposure time up to ~2 seconds, followed by a saturation plateau, indicating self-limiting surface reactions."
+    },
+    "data_extraction": {
+        "a": "| Precursor Exposure Time (s) | Etch Rate (\u00c5/cycle) | HF-Purging-TMA-Purging     |\n|-----------------------------|----------------------|-----------------------------|\n| 0                           | 0                    | x-30-4-30 (s)               |\n| 0                           | 0.006                | 1-30-y-30 (s)               |\n| 1                           | 2.08                 | x-30-4-30 (s)               |\n| 1                           | 0.57                 | 1-30-y-30 (s)               |\n| 2                           | 2.02                 | x-30-4-30 (s)               |\n| 2                           | 1.8                  | 1-30-y-30 (s)               |\n| 3                           | 2.03                 | x-30-4-30 (s)               |\n| 3                           | 2.03                 | 1-30-y-30 (s)               |\n| 4                           | 2.05                 | x-30-4-30 (s)               |\n| 4                           | 2.05                 | 1-30-y-30 (s)               |\n| 5                           |                      | x-30-4-30 (s)               |\n| 5                           |                      | 1-30-y-30 (s)               |\n| 6                           | 2.04                 | x-30-4-30 (s)               |\n| 6                           | 2.05                 | 1-30-y-30 (s)               |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the complete step sequences and times for one ALE cycle under the two conditions represented by the lines?",
+                "answer_type": "List",
+                "answer": "For the solid red  line (x-30-4-30): 1) HF exposure for \u2018x\u2019 seconds \u2192 2) Purge for 30 s \u2192 3) TMA exposure for 4 s \u2192 4) Purge for 30 s.\nFor the blue line (1-30-y-30): 1) HF exposure for 1 s \u2192 2) Purge for 30 s \u2192 3) TMA exposure for \u2018y\u2019 seconds \u2192 4) Purge for 30 s."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the two processes: which precursor (HF or TMA) requires a longer exposure time to reach saturation when the other is fixed at a sufficient dose? What trade-off does this imply for process optimization?",
+                "answer_type": "Paragraph",
+                "answer": "TMA requires a longer exposure to reach saturation (etch rate plateaus after ~3 s) compared to HF (~1 s). This implies that the TMA half-reaction is kinetically slower, so process optimization must balance sufficient TMA exposure for complete etching against throughput, as longer TMA times increase cycle time."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the etch rate saturate after ~2 seconds of precursor exposure, and what does this reveal about the surface chemistry?",
+                "answer_type": "Factoid",
+                "answer": "The saturation indicates that the surface reaction is self-limiting; after ~2 seconds, all available surface sites have reacted. This reveals that the etching mechanism is governed by monolayer-level surface saturation rather than continuous etching, which is the hallmark of ideal ALE."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The data shows that etch rate is independent of exposure time beyond the saturation point. What key advantage does this provide for manufacturing uniformity across a large wafer?",
+                "answer_type": "Paragraph",
+                "answer": "It ensures robust uniformity despite inevitable local variations in precursor flux or exposure time. As long as the exposure time exceeds the saturation threshold everywhere on the wafer, the etch rate will be identical, eliminating thickness variations caused by flow non-uniformities."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 1,
+            "width": 662,
+            "height": 556
+        }
+    }
+}

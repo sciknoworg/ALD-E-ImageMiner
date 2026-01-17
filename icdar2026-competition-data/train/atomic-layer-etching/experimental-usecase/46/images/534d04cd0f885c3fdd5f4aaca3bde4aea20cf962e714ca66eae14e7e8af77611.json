@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/46/534d04cd0f885c3fdd5f4aaca3bde4aea20cf962e714ca66eae14e7e8af77611",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "This figure presents quartz crystal microbalance (QCM) data showing mass changes during chemical exposures at 170 \u00b0C. In panel (a), only BCl\u2083 or WF\u2086 dosing leads to mass gain or negligible change, and WF\u2086/Sn(acac)\u2082 cycling results in net deposition, whereas alternating WF\u2086 and BCl\u2083 produces a continuous linear mass loss, confirming atomic layer etching (ALE) of TiO\u2082.",
+        "b": "The image zooms into the ALE process, revealing a sawtooth profile in which the WF\u2086 pulse increases mass due to surface fluorination, followed by a sharp mass decrease during the BCl\u2083 pulse from ligand exchange and volatilization, yielding net material removal."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Mass loading (ng/cm\u00b2) | Sample |\n|---------:|----------------------:|--------|\n| 16000 | 4228.46 | WF\u2086/BCl\u2083 |\n| 16000 | 4664.16 | WF\u2086/Sn(acac)\u2082 |\n| 16000 | 5358.22 | WF\u2086 doses |\n| 16000 | 6120.32 | BCl\u2083 doses |\n| 17000 | 4483.84 | WF\u2086/BCl\u2083 |\n| 17000 | 4919.33 | WF\u2086/Sn(acac)\u2082 |\n| 17000 | 5722.26 | WF\u2086 doses |\n| 17000 | 6341.46 | BCl\u2083 doses |\n| 18000 | 4773.03 | WF\u2086/BCl\u2083 |\n| 18000 | 5211.92 | WF\u2086/Sn(acac)\u2082 |\n| 18000 | 6011.45 | WF\u2086 doses |\n| 18000 | 6776.95 | BCl\u2083 doses |\n| 19000 | 4555.29 | WF\u2086/BCl\u2083 |\n| 19000 | 5647.41 | WF\u2086/Sn(acac)\u2082 |\n| 19000 | 6341.46 | WF\u2086 doses |\n| 19000 | 6668.08 | BCl\u2083 doses |\n| 20000 | 4300.12 | WF\u2086/BCl\u2083 |\n| 20000 | 5613.38 | WF\u2086/Sn(acac)\u2082 |\n| 20000 | 6375.48 | WF\u2086 doses |\n| 20000 |  | BCl\u2083 doses |\n| 21000 | 3827.21 | WF\u2086/BCl\u2083 |\n| 21000 | 5501.11 | WF\u2086/Sn(acac)\u2082 |\n| 21000 | 6304.04 | WF\u2086 doses |\n| 21000 |  | BCl\u2083 doses |\n| 22000 | 3279.45 | WF\u2086/BCl\u2083 |\n| 22000 | 5245.94 | WF\u2086/Sn(acac)\u2082 |\n| 22000 | 6266.16 | WF\u2086 doses |\n| 22000 |  | BCl\u2083 doses |\n| 23000 | 2877.99 | WF\u2086/BCl\u2083 |\n| 23000 | 5137.07 | WF\u2086/Sn(acac)\u2082 |\n| 23000 |  | WF\u2086 doses |\n| 23000 |  | BCl\u2083 doses |\n| 24000 | 2333.63 | WF\u2086/BCl\u2083 |\n| 24000 | 4956.75 | WF\u2086/Sn(acac)\u2082 |\n| 24000 |  | WF\u2086 doses |\n| 24000 |  | BCl\u2083 doses |",
+        "b": "| ALE cycle number | Mass loading (ng/cm\u00b2) | Pulse |\n|-----------------:|----------------------:|-------|\n| 20   | 4559.39 | WF\u2086 |\n| 20   | 4629.66 | WF\u2086 |\n| 20.5 | 4526.56 | BCl\u2083 |\n| 20.5 | 4615.65 | BCl\u2083 |\n| 21   | 4507.95 | WF\u2086 |\n| 21   | 4542.97 | WF\u2086 |\n| 21.5 | 4468.11 | BCl\u2083 |\n| 21.5 | 4521.96 | BCl\u2083 |\n| 22   | 4453.88 | WF\u2086 |\n| 22   | 4491.53 | WF\u2086 |\n| 22.5 | 4414.04 | BCl\u2083 |\n| 22.5 | 4468.11 | BCl\u2083 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Consider using Sn(acac)\u2082 (black line) instead of BCl\u2083 (blue line) as the co-reactant with WF\u2086 to etch TiO\u2082. Based on the slope of the mass-loading curves, evaluate whether this substitution would succeed or fail for an etching application.",
+                "answer_type": "Paragraph",
+                "answer": "It would fail. The black line shows a positive slope (mass increase) over time, indicating that combining WF\u2086 and Sn(acac)\u2082 results in chemical vapor deposition (CVD) or film growth rather than etching. Substituting BCl\u2083 with Sn(acac)\u2082 would therefore add material instead of removing it."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "In this image , the WF\u2086-only process (red line) shows an initial mass gain that stabilizes, whereas the WF\u2086/BCl\u2083 process (blue line) shows a continuous mass loss. Physically, what barrier prevents the WF\u2086-only process from etching the film continuously at 170 \u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "At 170 \u00b0C, WF\u2086 can fluorinate the TiO\u2082 surface, creating non-volatile metal fluorides or oxyfluorides and adding mass. However, without a second reagent such as BCl\u2083 to drive a ligand-exchange reaction and convert these surface species into volatile products (e.g., TiCl\u2093 or volatile oxychlorides), the modified surface layer remains solid, blocking further etching."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the two distinct chemical steps that constitute one full ALE cycle and identify which step corresponds to the actual removal of material from the surface.",
+                "answer_type": "List",
+                "answer": "Modification step: WF\u2086 exposure (mass increase).\nRemoval step: BCl\u2083 exposure (mass decrease).\nIdentification: The BCl\u2083 exposure is the removal step, indicated by the sharp drop in mass below the starting baseline of that cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The ALE rate saturates at ~0.6 \u00c5/cycle. If a 10 nm (100 \u00c5) thick TiO\u2082 sacrificial layer needs to be removed with high precision, approximately how many cycles of the WF\u2086/BCl\u2083 process shown in (b) are required, and why is this method preferred over a continuous wet etch?",
+                "answer_type": "Factoid",
+                "answer": "Cycles: Approximately 167 cycles (100 \u00c5 / 0.6 \u00c5\u00b7cycle\u207b\u00b9). It is preferred for its digital controllability. A continuous wet etch is time-dependent and prone to under- or over-etching due to diffusion and timing errors, whereas ALE removes a fixed amount per cycle independent of time, enabling precise thickness control by simply counting cycles."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 6,
+            "width": 468,
+            "height": 370
+        },
+        "b": {
+            "x": 481,
+            "y": 6,
+            "width": 469,
+            "height": 369
+        }
+    }
+}

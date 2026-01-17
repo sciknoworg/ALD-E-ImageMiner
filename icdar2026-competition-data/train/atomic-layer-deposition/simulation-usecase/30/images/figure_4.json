@@ -1,0 +1,113 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/30/figure_4",
+    "classification": {
+        "a": "line chart",
+        "b": "molecular structure diagram",
+        "c": "molecular structure diagram",
+        "d": "molecular structure diagram",
+        "e": "molecular structure diagram",
+        "f": "molecular structure diagram",
+        "g": "molecular structure diagram",
+        "h": "molecular structure diagram"
+    },
+    "summarization": {
+        "a": "Reaction energy profile for TMPS forming the triply bonded (TB) configuration A.1-O:123 through three consecutive condensation reactions with silanols at O1, O3, and O2. Orange lines show total energies (\u0394E) and green lines show Gibbs energies (\u0394G) at ALD conditions (180\u00b0C, 133.3\u00d710\u207b\u2076 bar). Values in parentheses are activation energies relative to the previous minimum. While \u0394E values are endothermic for each step (+37, +40, +51 kJ/mol), entropic contributions from methanol release make all \u0394G_R values exergonic (-45, -45, -15 kJ/mol).",
+        "b": "Precursor state (PS) structure showing TMPS hydrogen-bonded to a surface silanol. The Si-O distance of 3.777 \u00c5 and O-H distance of 1.007 \u00c5 indicate hydrogen bonding between the silanol and a methoxy group.",
+        "c": "Singly bonded (SB) configuration after first condensation, with one Si-O-Si linkage formed. Distance of 3.754 \u00c5 shows remaining silanol separation.",
+        "d": "Doubly bonded (DB) configuration after second condensation, with reduced inter-oxygen distance of 3.420 \u00c5.",
+        "e": "Triply bonded (TB) configuration where TMPS is bonded to three surface silanols (O1, O2, O3), with Si-O bond lengths of 1.643-1.664 \u00c5.",
+        "f": "Transition state I (TS I) showing pentavalent silicon at the TMPS center during the first condensation. The elongated Si-O bond (1.860 \u00c5) and proton transfer (O-H = 1.209 \u00c5) are characteristic features.",
+        "g": "Transition state II (TS II) for the second condensation, with similar pentavalent geometry.",
+        "h": "Transition state III (TS III) for the third condensation forming the TB configuration."
+    },
+    "data_extraction": {
+        "a": "| Reaction Step | Delta G (kJ/mol) | Delta E (kJ/mol) |\n|---|---|---|\n| PS | 30 | -93 |\n| TS I | (+132) | (+142) |\n| SB | -15 | -56 |\n| TS II | (+96) | (+102) |\n| DB | -60 | -16 |\n| TS III | (+135) | (+129) |\n| TB | -75 | 35 |",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": "",
+        "f": "",
+        "g": "",
+        "h": ""
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why do Gibbs energies show exergonic reactions while total energies are endothermic?",
+                "answer_type": "Paragraph",
+                "answer": "Each condensation step releases a methanol molecule into the gas phase, creating a large positive entropy change. At ALD conditions (180\u00b0C), the T\u0394S term significantly contributes to the Gibbs energy, converting endothermic \u0394E_R values (+37 to +51 kJ/mol) into exergonic \u0394G_R values (-15 to -45 kJ/mol). This entropic driving force makes TB formation thermodynamically feasible despite the unfavorable electronic energies."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which condensation step has the lowest activation barrier?",
+                "answer_type": "Factoid",
+                "answer": "The second condensation (TS II) has the lowest barrier at 96-102 kJ/mol (\u0394G_A = 96 kJ/mol, \u0394E_A = 102 kJ/mol), compared to TS I (132-142 kJ/mol) and TS III (129-135 kJ/mol)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Is TB-TMPS formation feasible under typical ALD conditions?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, for the A.1-O:123 configuration. At 180\u00b0C with typical dose and soak times of 5 minutes, barriers up to approximately 135-145 kJ/mol can achieve significant conversion (>5-50%). Since all three \u0394G_A values (132, 96, and 135 kJ/mol) fall within this range, TB formation is kinetically accessible. However, this is only possible for favorable silanol arrangements like O:123; other TB configurations have prohibitively high energy penalties."
+            }
+        ],
+        "f": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What structural feature characterizes all three transition states?",
+                "answer_type": "Factoid",
+                "answer": "All transition states show a pentavalent silicon atom at the TMPS center, with simultaneous Si-O bond formation to the surface oxygen and Si-O bond elongation to the departing methoxy group as it accepts a proton to form methanol."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 39,
+            "y": 0,
+            "width": 1358,
+            "height": 497
+        }, 
+        "b": {
+            "x": 367,
+            "y": 797,
+            "width": 319,
+            "height": 242
+        },
+        "c": {
+            "x": 725,
+            "y": 797,
+            "width": 319,
+            "height": 242
+        },
+        "d": {
+            "x": 1082,
+            "y": 797,
+            "width": 316,
+            "height": 242
+        },
+        "e": {
+            "x": 119,
+            "y": 521,
+            "width": 319,
+            "height": 244
+        },
+        "f": {
+            "x": 546,
+            "y": 520,
+            "width": 319,
+            "height": 244
+        },
+        "g": {
+            "x": 973,
+            "y": 520,
+            "width": 320,
+            "height": 244
+        },
+        "h": {
+            "x": 8,
+            "y": 798,
+            "width": 320,
+            "height": 241
+        }
+    }
+}

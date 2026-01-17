@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/23/figure_10",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The multi axis chart shows time-resolved QMS ion intensities during the TMA pulse. Volatile zinc byproducts, \u2076\u2078Zn(CH\u2083)\u207a (m/z 83) and \u2076\u2078Zn(CH\u2083)\u2082\u207a (m/z 98), appear immediately at the start of the pulse and decay rapidly, well before the TMA signal (m/z 72) saturates. This indicates a fast, self-limiting surface reaction that releases dimethylzinc.",
+        "b": "The multi axis bottom chart shows the aluminum-fluoride dimer fragment Al\u2082(CH\u2083)\u2084F\u207a (m/z 133) relative to the TMA signal (m/z 72). The product signal spikes instantly at the beginning of the TMA exposure, confirming rapid removal of surface fluorine through volatile dimethylaluminum fluoride formation, occurring concurrently with zinc removal."
+    },
+    "data_extraction": {
+        "a": "| Time (min) | TMA Intensity (mV) | Product Intensity (mV) | Material                     |\n|------------|---------------------|--------------------------|------------------------------|\n| 38         | 0                   |                          | TMA, m/z 72                 |\n| 38         |                     | 5.84                     | \u2076\u2078Zn(CH\u2083)\u207a, m/z 83          |\n| 38         |                     | 1.62                     | \u2076\u2078Zn(CH\u2083)\u2082\u207a, m/z 98         |\n| 39         | 52.87               |                          | TMA, m/z 72                 |\n| 39         |                     | 0.54                     | \u2076\u2078Zn(CH\u2083)\u207a, m/z 83          |\n| 39         |                     | 0.34                     | \u2076\u2078Zn(CH\u2083)\u2082\u207a, m/z 98         |\n| 39.5       | 54.16               |                          | TMA, m/z 72                 |\n| 39.5       |                     | 0.44                     | \u2076\u2078Zn(CH\u2083)\u207a, m/z 83          |\n| 39.5       |                     | 0.33                     | \u2076\u2078Zn(CH\u2083)\u2082\u207a, m/z 98         |\n| 40         | 55.09               |                          | TMA, m/z 72                 |\n| 40         |                     | 0.56                     | \u2076\u2078Zn(CH\u2083)\u207a, m/z 83          |\n| 40         |                     | 0.27                     | \u2076\u2078Zn(CH\u2083)\u2082\u207a, m/z 98         |\n| 40.5       | 55.65               |                          | TMA, m/z 72                 |\n| 40.5       |                     | 0.69                     | \u2076\u2078Zn(CH\u2083)\u207a, m/z 83          |\n| 40.5       |                     | 0.29                     | \u2076\u2078Zn(CH\u2083)\u2082\u207a, m/z 98         |\n| 41         | 0                   |                          | TMA, m/z 72                 |\n| 41         |                     | 0.23                     | \u2076\u2078Zn(CH\u2083)\u207a, m/z 83          |\n| 41         |                     | 0.33                     | \u2076\u2078Zn(CH\u2083)\u2082\u207a, m/z 98         |",
+        "b": "| Time (min) | TMA Intensity (mV) | Product Intensity (mV) | Material                     |\n|------------|---------------------|--------------------------|------------------------------|\n| 38.5       | 0                   |                          | TMA, m/z 72                 |\n| 38.5       |                     | 9.377                    | Al\u2082(CH\u2083)\u2084F\u207a, m/z 133         |\n| 39         | 51.04               |                          | TMA, m/z 72                 |\n| 39         |                     | 8.77                     | Al\u2082(CH\u2083)\u2084F\u207a, m/z 133         |\n| 39.5       | 52.01               |                          | TMA, m/z 72                 |\n| 39.5       |                     | 8.64                     | Al\u2082(CH\u2083)\u2084F\u207a, m/z 133         |\n| 40         | 54.87               |                          | TMA, m/z 72                 |\n| 40         |                     | 9.12                     | Al\u2082(CH\u2083)\u2084F\u207a, m/z 133         |\n| 40.5       | 54.3                |                          | TMA, m/z 72                 |\n| 40.5       |                     | 9.24                     | Al\u2082(CH\u2083)\u2084F\u207a, m/z 133         |\n| 41         | 0                   |                          | TMA, m/z 72                 |\n| 41         |                     | 0                        | Al\u2082(CH\u2083)\u2084F\u207a, m/z 133         |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "This image confirms the removal of Fluorine via Al\u2082(CH\u2083)\u2084F\u207a. If this signal were missing or very low while the Zinc signal (a) remained high, what specific problem would arise in the resulting film?",
+                "answer_type": "Paragraph",
+                "answer": "This allows you to minimize the TMA exposure time per cycle. Since the reaction completes instantly, the pulse time can be very short, significantly reducing the total cycle time and increasing etch throughput without losing etch per cycle."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the key steps to collect the QMS data in label (a). What is the purpose of the timed valve controlling the TMA exposure?",
+                "answer_type": "List",
+                "answer": "1. Set the mass spectrometer to monitor specific m/z values (72, 83, 98). \n2. Initiate a short, controlled pulse of TMA into the reactor. \n3. Record ion intensities versus time. \nThe timed valve creates a sharp TMA pulse to resolve the rapid surface reaction kinetics from the slower gas-phase filling."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast this surface-limited reaction (product-before-reactant signal) with a process where the reactant signal rises first. For efficient precursor usage, which is better and what is a potential downside?",
+                "answer_type": "Paragraph",
+                "answer": "The surface-limited reaction is better for efficiency, as all TMA is consumed at the surface with no waste. A potential downside is extreme sensitivity to surface defects, which could lead to non-uniform etching if the starting surface is inconsistent."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why do the product signals (m/z 83, 98) rise before the TMA reactant signal (m/z 72)? What does this reveal about the surface condition?",
+                "answer_type": "Paragraph",
+                "answer": "This indicates TMA is consumed instantly upon reaching the surface, confirming a highly reactive, fluorinated Zn-F surface* from the prior HF step. The surface reaction is faster than the gas-phase residence time, making product detection the first signature of the TMA pulse."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 22,
+            "y": 518,
+            "width": 645,
+            "height": 465
+        },
+        "a": {
+            "x": 6,
+            "y": 37,
+            "width": 658,
+            "height": 464
+        }
+    }
+}

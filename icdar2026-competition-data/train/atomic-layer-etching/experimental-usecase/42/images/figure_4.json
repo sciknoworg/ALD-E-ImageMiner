@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/42/figure_4",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure shows the film thickness of various materials (TiN, SiO\u2082, Si\u2083N\u2084, ZrO\u2082, HfO\u2082, Al\u2082O\u2083) at 250\u00b0C for various DMAC and HF etch cycles.",
+        "b": "The figure illustrates the atomic layer etching (ALE)  etch rates of HfO\u2082, Al\u2082O\u2083, and ZrO\u2082 at 250\u00b0C"
+    },
+    "data_extraction": {
+        "a": "| Film Thickness (\u00c5) | TiN | SiO\u2082 | Si\u2083N\u2084 | ZrO\u2082 | HfO\u2082 | Al\u2082O\u2083 |\n|-------------------|-----|------|-------|------|------|-------|\n| 0                | 65  | 50   | 40    | 40   | 50   | 45    |\n| 25               | 65  | 50   | 40    | 30   | 40   | 40    |\n| 50               | 65  | 50   | 40    | 20   | 30   | 35    |\n| 100              | 65  | 50   | 40    | 0    | 0    | 20     |",
+        "b": "| Film Thickness (\u00c5) | HfO\u2082 ALE: 0.77 \u00c5/cycle | Al\u2082O\u2083 ALE: 0.32 \u00c5/cycle | ZrO\u2082 ALE: 0.96 \u00c5/cycle |\n|-------------------|-------------------------|-------------------------|-------------------------|\n| 0                 | 50                      | 45                      | 50                      |\n| 25                | 40                      | 40                      | 35                      |\n| 50                |20                      | 35                      | 10                      |\n| 100               | 0                       | 20                       | 0                       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to the film thicknesses after DMAC ALE cycles?",
+                "answer_type": "Yes/No",
+                "answer": "The film thicknesses after 10, 25, 50, and 100 ALE cycles using sequential HF and DMAC exposures at 250 \u00b0C show linear etching\n for the ZrO2, HfO2, and Al2O3 films. While no measurable thickness changes were  observed for the SiO2, Si3N4, and TiN films"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the temperature used for this process?",
+                "answer_type": "Factoid",
+                "answer": "250 \u00b0C"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the three materials that DMAC etches?",
+                "answer_type": "List",
+                "answer": "1. Al2O3\n2. HfO2\n3. ZrO2"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the etch rates compare?",
+                "answer_type": "Paragraph",
+                "answer": "Etch rates of 0.96 \u00c5/cycle, 0.77 \u00c5/cycle, and 0.32 \u00c5/cycle were determined for the ZrO2, HfO2, and Al2O3 films, respectively. Al2O3 etched at the slowest rate compared to the other two materials."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 673,
+            "height": 451
+        },
+        "b": {
+            "x": 0,
+            "y": 464,
+            "width": 671,
+            "height": 538
+        }
+    }
+}

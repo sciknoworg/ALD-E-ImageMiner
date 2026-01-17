@@ -1,0 +1,80 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/31/fig_12",
+    "classification": {
+        "a": "heatmap",
+        "b": "heatmap",
+        "c": "heatmap",
+        "d": "heatmap"
+    },
+    "summarization": {
+        "a": "Heatmaps displaying \u03bb correlation at various Reynolds numbers (Re) ranging from 40 to 2400, for injection directions tilted 90 degrees.",
+        "b": "Heatmaps displaying \u03bb correlation at various Reynolds numbers (Re) ranging from 40 to 2400, for opposite injection directions.",
+        "c": "Heatmaps displaying thickness, after 10 and 600 cycles, for injection directions tilted 90 degrees.",
+        "d": "Heatmaps comparing measured thickness at 10 and 600 cycles, for opposite injection directions."
+    },
+    "data_extraction": {
+        "a": "| Re=40 | Re=80 | Re=200 | Re=800 | Re=2400 |\n|---|---|---|---|---|\n| ![](https://example.com/image1.png) | ![](https://example.com/image2.png) | ![](https://example.com/image3.png) | ![](https://example.com/image4.png) | ![](https://example.com/image5.png) |",
+        "b": "| Re=40 | Re=80 | Re=200 | Re=800 | Re=2400 |\n|---|---|---|---|---|\n| ![](https://example.com/image6.png) | ![](https://example.com/image7.png) | ![](https://example.com/image8.png) | ![](https://example.com/image9.png) | ![](https://example.com/image10.png) |",
+        "c": "| Measured 10 cycles | Measured 600 cycles |\n|---|---|\n| ![](https://example.com/image11.png) | ![](https://example.com/image12.png) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which Reynolds number show the highest uniformity?",
+                "answer_type": "Factoid",
+                "answer": "a\tRe = 80"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "From which Reynolds number on is there more chaotic flow?",
+                "answer_type": "Factoid",
+                "answer": "c\t800."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the non-uniformity constant over time?",
+                "answer_type": "Paragraph",
+                "answer": "d\tNo, the non-uniformity is not constant, for 10 and for 600 cycles the high spots are at completely different locations."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the deposition more dependent on the flow of one of the reactants?",
+                "answer_type": "Paragraph",
+                "answer": "b\tYes, the deposition is more dependent on the flow coming from the black arrow, as there a thicker layer is measured."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 5,
+            "width": 490,
+            "height": 967
+        },
+        "b": {
+            "x": 715,
+            "y": 8,
+            "width": 500,
+            "height": 947
+        },
+        "c": {
+            "x": 5,
+            "y": 981,
+            "width": 508,
+            "height": 407
+        },
+        "d": {
+            "x": 612,
+            "y": 966,
+            "width": 606,
+            "height": 423
+        }
+    }
+}

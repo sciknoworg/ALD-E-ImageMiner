@@ -1,0 +1,56 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/45/figure_9",
+    "classification": {
+        "a": "apparatus diagram",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Schematic of the hot-wall reactor showing five TiN sample positions over 12.7 cm, with reactant flow from left toward the pump.",
+        "b": "Film thickness versus sample location before and after 200 TiN ALE cycles using O\u2083 and HF at 350\u00b0C. Initial thickness is uniform at approximately 72 \u00c5. After ALE, significant non-uniformity appears: upstream positions (1 through 3) show substantial etching to approximately 20 to 25 \u00c5, while downstream positions (4 and 5) retain more material at 35 to 47 \u00c5 due to reduced O\u2083 concentration from thermal decomposition."
+    },
+    "data_extraction": {
+        "a": "| Sample Location | Initial TiN Thickness (\u00c5) | After 200 Cycles ALE at 250\u00b0C (\u00c5) |\n|-----------------|--------------------------|----------------------------------|\n| 1               | 75                       | 20                               |\n| 2               | 75                       | 20                               |\n| 3               | 75                       | 22                               |\n| 4               | 75                       | 30                               |\n| 5               | 75                       | 45                               |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does spatial uniformity at 350\u00b0C compare to 250\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "The uniformity is significantly worse at 350\u00b0C compared to 250\u00b0C. At 250\u00b0C, positions 2 through 5 showed consistent etch rates of 0.19 \u00c5/cycle. At 350\u00b0C, there is a clear gradient with downstream positions showing progressively less etching. Position 5 retains approximately 47 \u00c5 while positions 1 through 3 are etched to around 20 to 25 \u00c5. This gradient results from O\u2083 decomposition on reactor surfaces at higher temperature, depleting the oxidant before it reaches downstream samples."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What causes the non-uniform etching at 350\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Thermal decomposition of O\u2083 on the hot-wall reactor surfaces, which reduces O\u2083 concentration at downstream positions."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What practical implication does this result have for TiN ALE process design?",
+                "answer_type": "Paragraph",
+                "answer": "This result indicates that operating temperature must be carefully selected to balance etch rate and uniformity. While higher temperatures may offer faster kinetics, O\u2083 decomposition limits the useful reactor volume and creates thickness gradients across the substrate. For applications requiring uniform etching over large areas, 250\u00b0C appears preferable. Alternatively, reactor designs that minimize O\u2083 surface decomposition or provide distributed oxidant injection could extend the uniform etching region at higher temperatures."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which sample positions showed the most etching at 350\u00b0C?",
+                "answer_type": "List",
+                "answer": "Positions 1, 2, and 3 (upstream, nearest to reactant entry), with final thicknesses of approximately 22, 22, and 24 \u00c5 respectively."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 2,
+            "width": 669,
+            "height": 162
+        },
+        "b": {
+            "x": 2,
+            "y": 165,
+            "width": 582,
+            "height": 387
+        }
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/30/figure_6",
+    "classification": {
+        "a": "conceptual diagram",
+        "b": "scatter plot",
+        "c": "scatter plot",
+        "d": "scatter plot"
+    },
+    "summarization": {
+        "a": "Conceptual diagram defining the distance metrics for analyzing SMI bonding configurations. d_init is the initial inter-silanol distance on the free surface, d_bond is the distance between surface oxygen atoms after forming a doubly bonded (DB) SMI, and \u0394d is their absolute difference representing the structural distortion required for bonding.",
+        "b": "Scatter plot showing electronic energy (\u0394E_elec) versus \u0394d for DB SMI configurations, referenced to the most stable A.1-O:13 configuration. Below \u0394d = 1.2 \u00c5, energies remain moderate (~50 kJ/mol). Beyond this threshold, \u0394E_elec increases dramatically (>100 kJ/mol), indicating large energy penalties for DB formation when significant silanol rearrangement is required.",
+        "c": "Scatter plot showing \u0394E_elec versus d_bond for SB/SB configurations (two singly bonded SMIs sharing adjacent silanols), referenced to geminal A.1-O:34 (empty circle). Electronic stability increases (more negative \u0394E_elec) with larger d_bond, indicating that greater separation between two SB SMIs reduces steric repulsion.",
+        "d": "Scatter plot showing \u0394E_elec versus \u0394d for SB/SB configurations. Larger \u0394d correlates with less negative \u0394E_elec, showing that surface distortion to accommodate two adjacent SMIs imposes an energy penalty that partially offsets the stabilization from increased separation."
+    },
+    "data_extraction": {
+        "b": "| Delta d (\u00c5) | Delta E_elec (kJ/mol) |\n|---|---|\n| 0.20 | 0 |\n| 0.30 | 25 |\n| 0.70 | 45 |\n| 0.90 | 50 |\n| 1.05 | 50 |\n| 1.20 | 50 |\n| 1.60 | 140 |\n| 1.85 | 120 |\n| 1.95 | 60 |\n| 2.25 | 230 |\n| 3.00 | 155 |",
+        "c": "| d_bond (\u00c5) | Delta E_elec (kJ/mol) |\n|---|---|\n| 2.65 | 0 |\n| 3.52 | -19 |\n| 3.62 | -34 |\n| 4.18 | -56 |",
+        "d": "| Delta d (\u00c5) | Delta E_elec (kJ/mol) |\n|---|---|\n| 0.00 | 0 |\n| 0.30 | -55 |\n| 0.60 | -35 |\n| 1.35 | -20 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is represented by the empty circle in panels (c) and (d)?",
+                "answer_type": "Factoid",
+                "answer": "The empty circle represents the geminal A.1-O:34 SB/SB configuration, which serves as the reference point (\u0394E_elec = 0) for comparing other SB/SB configurations."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do these energy relationships guide the prediction of optimal SMI blocking layer configurations?",
+                "answer_type": "Paragraph",
+                "answer": "The data show that short inter-silanol distances (d_init < 4 \u00c5) favor DB configuration formation, while larger distances favor two separate SB SMIs. By analyzing the silanol distribution on a given surface, one can predict which binding motif will be energetically preferred at each site. This allows systematic derivation of the most stable full-coverage blocking layer without computing all possible permutations, by simply matching silanol pair distances to the appropriate bonding mode."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the \u0394d = 1.2 \u00c5 threshold in panel (b) indicate about DB SMI formation?",
+                "answer_type": "Paragraph",
+                "answer": "This threshold marks the boundary between feasible and unfeasible doubly bonded (DB) SMI configurations. When \u0394d < 1.2 \u00c5, the surface silanols are already close enough that minimal structural rearrangement is needed for one TMPS molecule to bond to both, resulting in moderate energy penalties. When \u0394d > 1.2 \u00c5 (corresponding to initial inter-silanol distances \u22654 \u00c5), the silica framework must deform substantially to bring the oxygens into bonding distance, causing \u0394E_elec to exceed 100 kJ/mol and making DB formation kinetically and thermodynamically unfavorable."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why do SB/SB configurations become more stable at larger d_bond values?",
+                "answer_type": "Factoid",
+                "answer": "Greater separation between two singly bonded SMIs reduces steric repulsion between their substituents (propyl and methoxy groups), lowering the electronic energy and stabilizing the configuration."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 36,
+            "width": 443,
+            "height": 192
+        },
+        "b": {
+            "x": 3,
+            "y": 262,
+            "width": 443,
+            "height": 276
+        },
+        "c": {
+            "x": 3,
+            "y": 568,
+            "width": 456,
+            "height": 284
+        },
+        "d": {
+            "x": 3,
+            "y": 889,
+            "width": 453,
+            "height": 275
+        }
+    }
+}

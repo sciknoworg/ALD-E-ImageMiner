@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/30/figure_10",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure illustrates the energy changes (\u0394E) during the reaction of TMA and TEA with O1 of A.1-O:123 and A.1-O:13 at different stages: Adsorption (Ads), Transition State (TS), and Product (Prod).",
+        "b": "The figure shows the energy changes (\u0394E) during the reaction involving TMA and TEA with O4 and O1 of A.1-O:123/45/6 at different stages: Adsorption (Ads), Transition State (TS), and Product (Prod)."
+    },
+    "data_extraction": {
+        "a": "| Reaction Step | TMA with O1 of A.1-O:123 | TEA with O1 of A.1-O:13 |\n|---|---|---|\n| Ads | -55 (-60) | -77 (-88) |\n| TS | +38 (-65) | +28 (-101) |\n| Prod | -92 (-59) | -147 (-86) |",
+        "b": "| Reaction Step | TMA with O4 of A.1-O:123/45/6 | TMA with O1 of A.1-O:123/45/6 | TEA with O1 of A.1-O:123/45/6 |\n|---|---|---|---|\n| Ads | -9 (-81) | -97 (-77) | -107 (-118) |\n| TS | +110 (-118) | +93 (-86) | +83 (-83) |\n| Prod | -18 (-133) | -101 (-94) | -134 (-86) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does TMA have an additional reaction pathway at the O4 position that TEA lacks?",
+                "answer_type": "Factoid",
+                "answer": "TMA's smaller methyl ligands allow it to access the O4 adsorption site (\u0394E_ads = \u22129 kJ mol\u207b\u00b9) where bulkier TEA cannot adsorb, giving TMA an additional low-barrier decomposition channel (\u0394E_A = 92 kJ mol\u207b\u00b9)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the values in parentheses represent in this figure?",
+                "answer_type": "Factoid",
+                "answer": "The values in parentheses represent the dispersion energy contribution (\u0394E_disp) to the total energy at each state."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does this data support using TEA over TMA for better AS-ALD selectivity?",
+                "answer_type": "Yes/No",
+                "answer": "Yes. TEA shows higher activation barriers and more endothermic reaction energies at the blocking layer, making Si_SMI\u2212O_surf disintegration less favorable compared to TMA."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do activation barriers change between isolated SMI and the 2.5 SMI/nm\u00b2 blocking layer?",
+                "answer_type": "Paragraph",
+                "answer": "Activation barriers more than double when going from isolated SMI to the blocking layer. For TMA at O1, \u0394E_A increases from 93 to 190 kJ mol\u207b\u00b9; for TEA at O1, from 105 to 217 kJ mol\u207b\u00b9. This demonstrates the \"reactivity reduction\" effect where the dense SMI layer destabilizes transition states through steric repulsion."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 4,
+            "width": 556,
+            "height": 678
+        },
+        "b": {
+            "x": 5,
+            "y": 677,
+            "width": 553,
+            "height": 652
+        }
+    }
+}

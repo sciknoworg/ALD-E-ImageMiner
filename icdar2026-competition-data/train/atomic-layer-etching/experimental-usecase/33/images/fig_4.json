@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/33/fig_4",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the relationship between Radical Exposure Time (in seconds) and EPC (in nm/cycle). There is a positive correlation where EPC increases as the Radical Exposure Time increases, but form as saturation is observed."
+    },
+    "data_extraction": {
+        "a": "| Radical Exposure Time (s) | EPC (nm/cycle) |\n|---|---|\n| 0 | 0 |\n| 10 | 0.9 |\n| 30 | 0.6|\n| 50 | 1.2 |\n| 60 | 2.8 |\n| 120 | 3 |\n| 240 | 3.3 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the process fully saturation in the given exposure time range?",
+                "answer_type": "Paragraph",
+                "answer": "a\tIt seems as if the EPC is soft-saturated, meaning that additional radical exposure time after 250 s will still increase the EPC."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the guide to the eye overlapping with all data points?",
+                "answer_type": "Paragraph",
+                "answer": "a\tNo, there is mostly overlap for longer exposure times. The shorter exposure times shows less overlap."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What would be regarded as the saturation radical exposure time?",
+                "answer_type": "Paragraph",
+                "answer": "a\tSomewhere between 50 and 100 of radical exposure time."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the EPC after 200 s of radical exposure time?",
+                "answer_type": "Factoid",
+                "answer": "a\t3.4 nm/cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 1,
+            "width": 673,
+            "height": 534
+        }
+    }
+}

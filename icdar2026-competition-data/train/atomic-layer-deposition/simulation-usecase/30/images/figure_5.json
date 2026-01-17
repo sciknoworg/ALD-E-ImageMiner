@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/30/figure_5",
+    "classification": {
+        "a": "molecular structure diagram",
+        "b": "molecular structure diagram"
+    },
+    "summarization": {
+        "a": "Initial precursor state (PS) showing TMPS adsorbed near the reactive bridge oxygen (RBO) on the A.2 amorphous silica surface. The adsorption is strongly exothermic (\u0394E_ads = -100 kJ/mol), with dispersion interactions contributing -65 kJ/mol. The RBO is the strained Si-O-Si bridge visible in the surface framework.",
+        "b": "Final state after the RBO opening reaction, showing two products: a singly bonded (SB) TMPS and a methoxy group directly attached to a surface silicon atom. The reaction has a very low activation barrier (\u0394E_A = 26 kJ/mol, with zero dispersion contribution) and is strongly exothermic (\u0394E_R = -127 kJ/mol)."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": ""
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is the RBO opening reaction by TMPS potentially detrimental to AS-ALD selectivity?",
+                "answer_type": "Paragraph",
+                "answer": "Although this reaction removes the highly reactive RBO and forms an SB-SMI, it also creates a methoxy group bonded directly to a surface silicon atom. During the first water pulse, this methoxy group undergoes hydrolysis to form a new free silanol within the blocking layer. If no adjacent SMI substituents shield this silanol, it becomes an accessible nucleation site for Al precursors in subsequent cycles, initiating unwanted Al\u2082O\u2083 growth on the non-growth surface."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the activation barrier for RBO opening compare to TMPS condensation with silanols?",
+                "answer_type": "Factoid",
+                "answer": "The RBO opening barrier (26 kJ/mol) is much lower than the first condensation reaction with surface silanols (TS I = 142 kJ/mol), making RBO opening kinetically highly favorable when TMPS can access the RBO."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Will TMPS always react with RBOs present on the surface?",
+                "answer_type": "Paragraph",
+                "answer": "Not necessarily. Since surface silanols protrude into the vacuum and can form hydrogen bonds with TMPS methoxy groups, the blocking layer may build up without TMPS reaching the RBOs located closer to the surface. In this case, unreacted RBOs would remain beneath the SMI layer, where they could later react with Al precursors that penetrate the blocking layer, causing selectivity loss."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the numbers in parentheses represent in the energy values?",
+                "answer_type": "Factoid",
+                "answer": "The values in parentheses indicate the dispersion energy contribution (\u0394E_disp) to each energy term, showing how van der Waals interactions contribute to adsorption, activation, and reaction energetics."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 7,
+            "y": 12,
+            "width": 317,
+            "height": 266
+        },
+        "b": {
+            "x": 358,
+            "y": 11,
+            "width": 311,
+            "height": 268
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/42/figure_9",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The chart plots the etch rate of SiCl4  versus temperature for ZrO2, HfO2, and Al2O3."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | ZrO\u2082 Etch Rate (\u00c5/cycle) | HfO\u2082 Etch Rate (\u00c5/cycle) | Al\u2082O\u2083 Etch Rate (\u00c5/cycle) |\n|------------------|---------------------------|---------------------------|---------------------------|\n| 250              | 0.00                    | 0.00                    | 0.00                    |\n| 300              | 0.055                 | 0.015                   | 0.005                   |\n| 350              | 0.15                    | 0.06                  | 0.01                    |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the etch rate of Al2O3 increase with temperature?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate of ZrO2 using SiCl4 as precursor?",
+                "answer_type": "List",
+                "answer": "1. At 250 \u00b0C, Etch rate is almost 0\n2. At 300 \u00b0C, Etch rate is 0.055 \u00c5/cycle\n3. At 350 \u00b0C, Etch rate is 0.15 \u00c5/cycle"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does etch rate  of Al2O3 is zero at all temperatures?",
+                "answer_type": "Factoid",
+                "answer": "The ligand-exchange reaction between SiCl4 and AlF3 is unfavorable at all the temperatures hence the etch rate is nil."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why etch rates of ZrO2 and HfO2 increases?",
+                "answer_type": "Paragraph",
+                "answer": "The ligand-exchange reaction between SiCl4 and ZrF4 or HfF4 is feasible at >200 \u00b0C, hence increasing etch rates observed at >250 \u00b0C . The ZrO2 etch rate is higher than the HfO2 etch rate even though their predicted \u0394G values are nearly equivalent. There must be additional kinetic factors that determine the actual etch rates"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 663,
+            "height": 496
+        }
+    }
+}

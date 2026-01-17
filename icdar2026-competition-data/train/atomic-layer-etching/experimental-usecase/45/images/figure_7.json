@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/45/figure_7",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The etch rate increases with temperature up to 250\u00b0C and then plateaus"
+    },
+    "data_extraction": {
+        "a": "| Temperature(\u00b0C) | Etch Rate (\u00c5/cycle) |\n|---|---|\n| 150 | 0.06 |\n| 200 | 0.14 |\n| 250 | 0.21 |\n| 300 | 0.20 |\n| 350 | 0.21 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what temperature does the etch rate first reach about 0.20 angstrom per cycle?",
+                "answer_type": "Factoid",
+                "answer": "About 250 C."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why can the etch rate become nearly temperature independent from 250 C to 350 C in this thermal ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The paper suggests that the oxidation step forms a similar thickness TiO2 layer over this temperature range, and the HF step removes only that oxidized layer. Because the amount removed per cycle is limited by how much oxide is formed in the oxidation step, the etch rate can stabilize even as temperature increases. This behavior is described as analogous to an ALD window."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the figure indicate an ALE temperature window where the etch rate is approximately constant?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, from about 250 C to 350 C."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "In this plot, what do the vertical error bars on the data points represent?",
+                "answer_type": "Factoid",
+                "answer": "They represent the uncertainty or variation in the measured etch rate at each temperature."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 668,
+            "height": 528
+        }
+    }
+}

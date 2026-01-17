@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/35/fig_2",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the effect of alumina heat-treatment temperature on both the aluminum adsorbed per cycle (\u0394c_Al, triangles) and the surface OH group concentration (c_(O)H, X markers). Both quantities decrease with increasing pretreatment temperature (200\u2013800\u00b0C). The linear fit to \u0394c_Al yields a = 5.9 \u00b1 0.2 nm\u207b\u00b2 and b = \u22120.0050 \u00b1 0.0003, indicating that higher pretreatment temperatures reduce aluminum uptake.",
+        "b": "The scatter plot shows analogous data for silica substrates, with \u0394c_Al measured at two reaction temperatures (150\u00b0C: circles; 250\u00b0C: squares) and c_(O)H shown as + markers. The fit gives a = 4.7 \u00b1 0.3 nm\u207b\u00b2 and b = \u22120.0033 \u00b1 0.0005. Both \u0394c_Al and c_(O)H decrease with heat-treatment temperature, with c_(O)H declining more steeply at higher temperatures."
+    },
+    "data_extraction": {
+        "a": "| Alumina heat-treatment[\u00b0C] | \u0394C<sub>Al</sub><sup>(OH)</sup>[nm<sup>-2</sup>] |\n|---|---|\n| 200 | 6 |\n| 400 | 5 |\n| 600 | 4 |\n| 800 | 2 |",
+        "b": "| Silica heat-treatment[\u00b0C] | \u0394C<sub>Si</sub><sup>(OH)</sup>[nm<sup>-2</sup>] |\n|---|---|\n| 200 | 7 |\n| 400 | 6 |\n| 600 | 5 |\n| 800 | 3 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the trends of \u0394c_Al and c_(O)H compare as substrate heat-treatment temperature increases?",
+                "answer_type": "Paragraph",
+                "answer": "Both \u0394c_Al and c_(O)H decrease with increasing heat-treatment temperature on both alumina and silica substrates. However, c_(O)H decreases more rapidly than \u0394c_Al, particularly at higher temperatures. At elevated pretreatment temperatures, c_(O)H can even fall below \u0394c_Al, indicating that the simple model where each OH group binds one aluminum atom cannot fully explain the observed growth. This divergence suggests that AlMe\u2083 can also adsorb through mechanisms other than ligand exchange with OH groups, such as dissociation on oxygen bridges."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does pretreating the substrate at higher temperatures reduce the amount of aluminum deposited per ALD cycle?",
+                "answer_type": "Factoid",
+                "answer": "Higher heat-treatment temperatures cause dehydroxylation, where pairs of surface OH groups combine to form oxygen bridges and release water, thereby reducing the concentration of reactive OH sites available for AlMe\u2083 chemisorption."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the different marker symbols in panel (b) represent?",
+                "answer_type": "List",
+                "answer": "Circles represent \u0394c_Al measured at 150\u00b0C reaction temperature, squares represent \u0394c_Al at 250\u00b0C reaction temperature, and + markers represent the surface OH group concentration c_(O)H."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which substrate, alumina or silica, shows a higher initial aluminum uptake at low heat-treatment temperatures, and what might explain this difference?",
+                "answer_type": "Paragraph",
+                "answer": "Alumina shows higher initial aluminum uptake, with a fitted intercept of a = 5.9 \u00b1 0.2 nm\u207b\u00b2 compared to a = 4.7 \u00b1 0.3 nm\u207b\u00b2 for silica. This difference correlates with the higher initial OH group concentration on alumina surfaces. Additionally, alumina and silica have different surface chemistries and OH group types (isolated, bridged, hydrogen-bonded), which affect their reactivity toward AlMe\u2083. The steeper slope for alumina (b = \u22120.0050) versus silica (b = \u22120.0033) also indicates that alumina's aluminum uptake is more sensitive to dehydroxylation."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 288,
+            "height": 230
+        },
+        "b": {
+            "x": 307,
+            "y": 0,
+            "width": 271,
+            "height": 230
+        }
+    }
+}
