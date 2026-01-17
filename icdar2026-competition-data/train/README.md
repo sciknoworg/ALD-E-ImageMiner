@@ -6,7 +6,11 @@ Each release will be announced via the Sci-ImageMiner [Google Group](https://gro
 
 For task definitions and evaluation details, please refer to the [Task Description](https://sites.google.com/view/sci-imageminer/task-description) and [Task Evaluation Metrics](https://sites.google.com/view/sci-imageminer/task-evaluation-metrics) pages.
 
-### 🗂️ Directory Structure
+### 🗂️ Dataset Release Batches
+
+- [Training dataset batch 1](train-batch1-release/)
+
+### 📁 Directory Structure
 
 The figure annotations are distributed and stored alongside each figure in the "images" folder.
 
@@ -97,7 +101,7 @@ Each item in the VQA list should have the following structure:
 },
 ```
 
-#### Description
+#### 📜 Description
 
 - **sample_id**: Unique sample id, represents actual path to the figure
 - **classification**: Data for the classification task 
