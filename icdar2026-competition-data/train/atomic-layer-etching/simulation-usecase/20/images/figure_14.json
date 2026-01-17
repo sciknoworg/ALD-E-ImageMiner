@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/20/figure_14",
+    "classification": {
+        "a": "spectra chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "This figure shows real-time mass spectrometry (MS) data during a 2-minute HF exposure at 300 \u00b0C.  This image shows a simultaneous H\u2082O output signal that appears only during HF exposure, confirming water formation as a direct reaction byproduct (TiO\u2082 + 4HF \u2192 TiF\u2084 + 2H\u2082O).",
+        "b": "The spectral image displays the HF input signal, which rises at ~6.2 min, remains constant, and drops at ~8.1 min."
+    },
+    "data_extraction": {
+        "a": "| Time (min) | Intensity (mV) |\n|---|---|\n| 6.0 | 82.8 | \n| 6.1 | 81.8 |\n| 6.2 | 139.8 |\n| 6.5 | 131.8 | \n| 7.7 | 130.8 | \n| 8.1 | 127.3 | \n| 8.4 | 99.9 | \n| 8.8 | 94.3 | \n| 9.3 | 90.4 | \n| 9.8 | 88.4 |\n| 10 | 86.6 |",
+        "b": "| Time (min) | Intensity (mV) |\n|---|---|\n| 6.0 | 0.2 |\n| 6.1 | 3.2 |\n| 6.2 | 120.9 |\n| 6.3 | 232.6 |\n| 6.8 | 275.3 |\n| 7.4 | 295.4 |\n| 8.0 | 308.9 |\n| 8.1 | 214.3 |\n| 8.2 | 93.3 |\n| 8.4 | 44.4 |\n| 8.8 | 21.6 |\n| 9.2 | 15.5 |\n| 9.8 | 10.8 |\n| 10  | 10.8 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "The H\u2082O signal rises simultaneously with HF exposure. What does this correlation confirm about the chemical reaction occurring at the surface?",
+                "answer_type": "Paragraph",
+                "answer": "This correlation confirms that H\u2082O is a direct reaction product of the HF surface etching process. The immediate rise indicates HF molecules are reacting with surface oxygen species (e.g., from TiO\u2082) to form and desorb water vapor, confirming an oxide-fluoride exchange mechanism."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The H\u2082O signal rapidly returns to baseline after HF exposure stops. What does this imply about using such a process for self-limiting atomic layer etching (ALE)?",
+                "answer_type": "Paragraph",
+                "answer": "The rapid return indicates the surface reaction is fast and non-persistent, ceasing when the HF gas is removed. This is a necessary characteristic for a self-limiting ALE step. However, true ALE would also require a second step to remove the fluorinated surface layer, which this MS data alone does not confirm."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the time-aligned graphs, identify the exact duration of the 'Active Etch' phase. What specific signal behavior in this label confirms that the reaction stops immediately when the gas flow in label (b) is cut off?",
+                "answer_type": "Factoid",
+                "answer": "Duration: Approximately 2 minutes (from 6.2 min to 8.1 min). Confirmation: The H2O signal drops sharply back to its baseline value at 8.1 min, indicating that byproduct generation ceases the instant the reactant supply is removed."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast this thermal HF etching process (which produces H\u2082O) with a plasma-enhanced process using SF\u2086/O\u2082 chemistry. For etching an oxide layer on a substrate sensitive to oxygen loss, which method is less suitable and why?",
+                "answer_type": "Paragraph",
+                "answer": "The thermal HF process is less suitable. It directly removes oxygen from the surface as H\u2082O, potentially creating oxygen vacancies that may degrade the electrical properties of an oxygen-sensitive substrate. A plasma SF\u2086/O\u2082 process could maintain a more oxidizing environment, potentially suppressing oxygen vacancy formation."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 2,
+            "y": 225,
+            "width": 650,
+            "height": 254
+        },
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 649,
+            "height": 225
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/17/fig7",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "scatter plot",
+        "d": "scatter plot"
+    },
+    "summarization": {
+        "a": "The partial pressure of HF is plotted against substrate position for reactors G0 under different conditions. Each has four different dwell times (1.0 s, 0.3 s, 0.2 s, 0.1 s) represented by different markers.",
+        "b": "The partial pressure of HF is plotted against substrate position for reactors G1 under different conditions.",
+        "c": "The partial pressure of HF is plotted against substrate position for reactors G2 under different conditions.",
+        "d": "The partial pressure of HF is plotted against substrate position for reactors G3 under different conditions."
+    },
+    "data_extraction": {
+        "a": "| Substrate Position | 0.1 s | 0.2 s | 0.3 s | 1.0 s |\n|--------------------|-------|-------|-------|-------|\n| 1                  | 08    | 38    | 58    | 68    |\n| 2                  | 9       | 39    | 59    | 68    |\n| 3                  | 10    | 40    | 60    | 68   |\n| 4                  | 11    | 41    | 61    | 68    |\n| 5                  | 12    | 42    | 62    | 68   |\n| 6                  | 13    | 43    | 62    | 68    |\n| 7                  | 13    | 43    | 62    | 68    |\n| 8                  | 12    | 42    | 62    | 68    |\n| 9                  | 11    | 41    | 61    | 68    |\n| 10                 | 10    | 40    | 60    | 68    |\n| 11                 | 9    | 39    | 59    | 68    |\n| 12                 | 8    | 38    | 58    | 68    |",
+        "b": "| Substrate Position | 0.1 s | 0.2 s | 0.3 s | 1.0 s |\n|--------------------|-------|-------|-------|-------|\n| 1                  | 08    | 38    | 58    | 68    |\n| 2                  | 9       | 39    | 59    | 68    |\n| 3                  | 10    | 40    | 60    | 68   |\n| 4                  | 11    | 41    | 61    | 68    |\n| 5                  | 12    | 42    | 62    | 68   |\n| 6                  | 13    | 43    | 62    | 68    |\n| 7                  | 13    | 43    | 62    | 68    |\n| 8                  | 12    | 42    | 62    | 68    |\n| 9                  | 11    | 41    | 61    | 68    |\n| 10                 | 10    | 40    | 60    | 68    |\n| 11                 | 9    | 39    | 59    | 68    |\n| 12                 | 8    | 38    | 58    | 68    |",
+        "c": "| Substrate Position | 0.1 s | 0.2 s | 0.3 s | 1.0 s |\n|--------------------|-------|-------|-------|-------|\n| 1                  | 08    | 38    | 58    | 68    |\n| 2                  | 9       | 39    | 59    | 68    |\n| 3                  | 10    | 40    | 60    | 68   |\n| 4                  | 11    | 41    | 61    | 68    |\n| 5                  | 12    | 42    | 62    | 68   |\n| 6                  | 13    | 43    | 62    | 68    |\n| 7                  | 13    | 43    | 62    | 68    |\n| 8                  | 12    | 42    | 62    | 68    |\n| 9                  | 11    | 41    | 61    | 68    |\n| 10                 | 10    | 40    | 60    | 68    |\n| 11                 | 9    | 39    | 59    | 68    |\n| 12                 | 8    | 38    | 58    | 68    |",
+        "d": "| Substrate Position | 0.1 s | 0.2 s | 0.3 s | 1.0 s |\n|--------------------|-------|-------|-------|-------|\n| 1                  | 08    | 38    | 58    | 68    |\n| 2                  | 9       | 39    | 59    | 68    |\n| 3                  | 10    | 40    | 60    | 68   |\n| 4                  | 11    | 41    | 61    | 68    |\n| 5                  | 12    | 42    | 62    | 68   |\n| 6                  | 13    | 43    | 62    | 68    |\n| 7                  | 13    | 43    | 62    | 68    |\n| 8                  | 12    | 42    | 62    | 68    |\n| 9                  | 11    | 41    | 61    | 68    |\n| 10                 | 10    | 40    | 60    | 68    |\n| 11                 | 9    | 39    | 59    | 68    |\n| 12                 | 8    | 38    | 58    | 68   |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which reactor has the most uniform flow pattern?",
+                "answer_type": "Factoid",
+                "answer": "The reactor with the inclined plate (G3) has the most uniform flow pattern at every time step, in which the largest pressure deviation is 2.9 Pa at 0.2 s."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Apart from G3, which reactor has uniform flow at the shortest time of 0.1s?",
+                "answer_type": "Factoid",
+                "answer": "Among G0, G1 and G2, G2 reactor has uniform flow at the shortest time of 0.1s"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "At 1s dwell time, all reactors have uniform HF low",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the pressure across the substrate point?",
+                "answer_type": "Paragraph",
+                "answer": "For every group (G0\u2013G3), partial pressure increases strongly with longer HF pulse time: 0.1 s < 0.2 s < 0.3 s \u226a 1.0 s.\nThe 1.0 s trace is near the upper limit (~68\u201370 Pa) and essentially flat. Across-substrate uniformity: Pressures are lower at the edges and higher near the center, especially at the shorter pulses (0.1\u20130.3 s). The center\u2011to\u2011edge difference is ~4\u201310 Pa depending on dose and group."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 10,
+            "y": 0,
+            "width": 588,
+            "height": 399
+        },
+        "b": {
+            "x": 627,
+            "y": 0,
+            "width": 584,
+            "height": 401
+        },
+        "c": {
+            "x": 8,
+            "y": 472,
+            "width": 591,
+            "height": 386
+        },
+        "d": {
+            "x": 624,
+            "y": 472,
+            "width": 587,
+            "height": 389
+        }
+    }
+}

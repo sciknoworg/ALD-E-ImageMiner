@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/3/fig_4",
+    "classification": {
+        "a": "stacked bar chart"
+    },
+    "summarization": {
+        "a": "The stacked bar chart displays the etch depth per cycle  in monolayers  against AR values for two methods, Passivation and Ion Bombarded, across different aspect ratios (AR) and gamma ratios (\u0393\u2032/\u0393\u2032<sub>s</sub>)."
+    },
+    "data_extraction": {
+        "a": "| \u0393\u1d62/\u0393\u2099   | AR  | Ion Bombard (ML) | Passivation (ML) | Total Etch Depth (ML) | % Ion Bombard |\n|---------|-----|-------------------|-------------------|-------------------------|---------------|\n| 10\u207b\u2074    | 10  | 1.0               | 0.0               | 1.0                     | 99            |\n| 10\u207b\u2074    | 2   | 1.0               | 0.0               | 1.0                     | 99            |\n| 10\u207b\u00b3    | 10  | 1.0               | 0.04              | 1.04                    | 96            |\n| 10\u207b\u00b3    | 2   | 1.0               | 0.04              | 1.04                    | 96            |\n| 0.01    | 10  | 1.1               | 0.4               | 1.5                     | 76            |\n| 0.01    | 2   | 1.1               | 0.6               | 1.7                     | 76            |\n| 0.02    | 10  | 1.1               | 0.7               | 1.8                     | 62            |\n| 0.02    | 2   | 1.1               | 1.0               | 2.1                     | 63            |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do all of the etching in excess of 1 ML occur during the passivation phase?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does extending the ion bombardment introduce more etching?",
+                "answer_type": "Paragraph",
+                "answer": "For \u0393\u1d62/\u0393\u2099 >10^-3, etching during the ion bombardment phase results in removal of more than 1ML. The conditions of the ion bombardment phase\nare the same as for the ideal case, so in principle the ion bombardment phase is intrinsically self-limited. The extra etching producing>1ML per cycle results from roughness produced by the nonideal passivation phase. Since this etching mechanism is self-limited, it cannot lower Sy during the ion bombardment phase. In fact, extending the ion bombardment phase will not introduce more etching per cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What could jeopardize the uniformity ?",
+                "answer_type": "Paragraph",
+                "answer": "This correlation between surface roughness and increased material removed per cycle does not necessarily introduce nonideality since the self-limited nature of the etch process is retained. However, this coupling of surface roughness and Sy could jeopardize etch uniformity and aspect ratio independence if the surface roughness depends on etch time or aspect ratio."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the key findings from the graph?",
+                "answer_type": "List",
+                "answer": "1. \u0393\u1d62/\u0393\u2099> 0 the EPC is different for the AR 2 and AR 10 features.\n2.  Ion fluxes during the passivation phase reintroduce an ARDE which was absent in the ideal case.\n3.  ALE synergy, Sy, does not have the same dependence on AR, being nearly constant for both ARs over the entire range of \u0393\u1d62/\u0393\u2099 studied.\n4. Etching the AR 10 feature resulted in a lower EPC than the AR 2 feature in spite of having the same Sy"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 7,
+            "width": 573,
+            "height": 532
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/20/figure_3",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This figure plots the thermodynamic contributions to the reaction free energy profile (FEP) for the etching reaction TiO\u2082(bulk) + 4HF(g) \u2192 TiF\u2084(g) + 2H\u2082O(g) as a function of temperature (0\u2013800 K) at a constant HF pressure of 0.2 Torr. It shows how the electronic energy (\u0394E), zero-point correction (\u0394E+\u0394ZPE), Gibbs free energy (\u0394G), and entropic term (T\u0394S) evolve with temperature."
+    },
+    "data_extraction": {
+        "a": "| Temperature [K] | E [eV / TiO<sub>2</sub>] |  |\n|---|---|----|\n| 0    | -1.4 | \u0394E |\n| 0    | -1.2 | \u0394E + \u0394ZPE |\n| 0    | -1.2 | \u0394G |\n| 0    | 0.0  | T\u0394S |\n| 0    | 0.0  | \u0394W |\n| 0    | 0.0  | RT ln(Q) |\n| 200  | -1.4 | \u0394E |\n| 200  | -1.2 | \u0394E + \u0394ZPE |\n| 200  | -1.2 | \u0394G |\n| 200  | -0.1 | T\u0394S |\n| 200  | -0.03  | \u0394W |\n| 200  | -0.01  | RT ln(Q) |\n| 400  | -1.4 | \u0394E |\n| 400  | -1.2 | \u0394E + \u0394ZPE |\n| 400  | -1.1 | \u0394G |\n| 400  | -0.2 | T\u0394S |\n| 400  | -0.1 | \u0394W |\n| 400  | -0.02  | RT ln(Q) |\n| 600  | -1.4 | \u0394E |\n| 600  | -1.2 | \u0394E + \u0394ZPE |\n| 600  | -1.0 | \u0394G |\n| 600  | -0.4 | T\u0394S |\n| 600  | -0.1 | \u0394W |\n| 600  | -0.04  | RT ln(Q) |\n| 800  | -1.4 | \u0394E |\n| 800  | -1.2 | \u0394E + \u0394ZPE |\n| 800  | -0.8 | \u0394G |\n| 800  | -0.6 | T\u0394S |\n| 800  | -0.1 | \u0394W |\n| 800  | -0.1 | RT ln(Q) |\n| 1000 | -1.4 | \u0394E |\n| 1000 | -1.2 | \u0394E + \u0394ZPE |\n| 1000 | -0.7 | \u0394G |\n| 1000 | -0.7 | T\u0394S |\n| 1000 | -0.2 | \u0394W |\n| 1000 | -0.1 | RT ln(Q) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the light green curve (\u0394G), determine if this etching reaction is spontaneous at room temperature (300 K). Explain your reasoning using the value on the Y-axis.",
+                "answer_type": "Factoid",
+                "answer": "Yes, it is spontaneous. At 300 K, the Gibbs free energy (\u0394G) is approximately \u22121.2 eV, and a negative \u0394G indicates a spontaneous reaction."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare operating this HF-based etching process at 400 K versus 700 K. Under a constraint of needing a spontaneous reaction (\u0394G < 0) while minimizing thermal budget, which condition is better and what is the trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "700 K is better for ensuring spontaneity (more negative \u0394G). The trade-off is the higher thermal budget, which may damage temperature-sensitive materials or increase energy costs, whereas 400 K offers lower thermal stress but may result in a non-spontaneous or slower etch rate."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the Gibbs free energy (\u0394G) for this etching reaction change with increasing temperature? Explain the dominant physical cause for this trend based on the other curves.",
+                "answer_type": "Paragraph",
+                "answer": "\u0394G becomes more negative (more spontaneous) as temperature increases. This is primarily driven by the large, positive T\u0394S term (entropy gain) due to the production of gas-phase molecules (TiF\u2084 and H\u2082O) from a solid and gas, which outweighs the endothermic enthalpy contribution at higher temperatures."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The \u0394G curve crosses from positive to negative near 500 K. What does this imply for using HF gas to etch TiO\u2082 in a manufacturing process targeting room-temperature operation?",
+                "answer_type": "Paragraph",
+                "answer": "This implies that HF gas etching of TiO\u2082 is not feasible at room temperature (\u0394G > 0). To enable etching, the process must be heated above ~500 K, or an alternative, more reactive chemistry (e.g., plasma activation) must be used to lower the kinetic barrier and drive the reaction at lower temperatures."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 539,
+            "height": 498
+        }
+    }
+}

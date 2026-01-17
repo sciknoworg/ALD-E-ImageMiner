@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/8/fig_11",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "The chart shows the relationship between the table temperature and the Al2p peak area and peak binding energy of AlF3 and Al2O3.",
+        "b": "The inset spectra chart displays the intensity of Al2p peaks at different binding energies."
+    },
+    "data_extraction": {
+        "a": "| Table temperature\u00b0C | Al2p peak area (CPS eV) | Peak binding energy (eV) |\n|---|---|---|\n| 100 | 17000 | 76.0 |\n| 125 | 17000 | 76.0 |\n| 150 | 15000 | 76.0 |\n| 175 | 5000 | 75.7|\n| 200 | 2000 | 74.7 |\n| 225 | 2000 | 74.5 |\n| 250 | 2000 | 74.7 |\n| 275 | 2000 | 74.5 |\n| 300 | 2000 | 74.6 |",
+        "b": "| Binding energy (eV) | Intensity (CPS) |\n|---|---|\n| 72 | 0 |\n| 74 | 0 |\n| 76 | Peak |\n| 78 | 0 |\n| 80 | 0 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What trend is visible in the given spectra?",
+                "answer_type": "Paragraph",
+                "answer": "b\tIt seems that upon etching there is a shift in binding energy."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the given spectra, can it be said that there is a higher EPC?",
+                "answer_type": "Paragraph",
+                "answer": "b\tAll data points are from films after 30 cycles of etching. There is way less al2p peak intensity for 200 degrees celcius indicating a higher EPC."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What could be the reason for the shift from AlF3 to Al2O3 upon increasing the table temperature?",
+                "answer_type": "Paragraph",
+                "answer": "a\tA reason could be that fluorine species get more volatile at higher temperatures, meaning they will leave the surface, resulting in more Al2O3."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "To have the lowest fluorine contamination after etching, what range of temperature can be chosen?",
+                "answer_type": "Paragraph",
+                "answer": "a\tTemperatures above 200 degrees celcius show almost no fluorine."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 246,
+            "y": 123,
+            "width": 162,
+            "height": 160
+        },
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 669,
+            "height": 515
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/20/figure_5",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This figure plots the Free Energy Profiles (FEPs) for the CVE1 (continuous vapor etch) and SL1 (self-limiting surface reaction) pathways for HF interacting with TiO\u2082. The lines cross at 360 K, defining three regimes: below 360 K, SL1 is favored (self-limiting); between 360 K and ~700 K, CVE1 becomes progressively more favored (preferred etching); above 700 K, CVE1 is strongly favored (purely etching)."
+    },
+    "data_extraction": {
+        "a": "| Temperature [K] | \u0394G [eV / TiO<sub>2</sub>] | Label    | Region                |\n|-----------------|---------------------------|----------|-----------------------|\n| 0               | -2.2                      | SL1(X1)  | Preferred self-limiting |\n| 0               | -1.1                      | CVE1(Y2) | Preferred self-limiting |\n| 200             | -1.5                      | SL1(X1)  | Preferred self-limiting |\n| 200             | -1.1                      | CVE1(Y2) | Preferred self-limiting |\n| 400             | -0.9                      | SL1(X1)  | Preferred etching       |\n| 400             | -1.0                      | CVE1(Y2) | Preferred etching       |\n| 600             | -0.3                      | SL1(X1)  | Preferred etching       |\n| 600             | -0.9                      | CVE1(Y2) | Preferred etching       |\n| 800             | 0.2                       | SL1(X1)  | Purely etching          |\n| 800             | -0.8                      | CVE1(Y2) | Purely etching          |\n| 1000            | 0.8                       | SL1(X1)  | Purely etching          |\n| 1000            | -0.7                      | CVE1(Y2) | Purely etching          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "To ensure the process operates in the 'Preferred self-limiting' regime, what is the maximum temperature limit (T1) a process engineer must enforce for the reactor? What happens to the thermodynamic preference immediately above this temperature?",
+                "answer_type": "Factoid",
+                "answer": "Max Temperature: 360 K (87\u00b0C).Above 360 K, the preference switches; the bulk etching reaction (CVE1) becomes more energetically favorable than the surface modification (SL1)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast operating at 300 K versus 800 K for patterning TiO\u2082 with HF. What is the key trade-off between controllability and throughput?",
+                "answer_type": "List",
+                "answer": "300 K (Self-limiting regime): Pro: Excellent depth control, atomic-layer precision. Con: Very slow or negligible material removal rate.\n800 K (Purely etching regime): Pro: High etch rate, fast throughput. Con: Poor depth control, isotropic etching.\nTrade-off: The choice is between controllability (low temp) and throughput (high temp). For precise patterning, a low-temperature, self-limiting process is necessary, sacrificing speed."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the reaction mechanism shift from \"preferred self-limiting\" to \"purely etching\" as temperature increases?",
+                "answer_type": "Paragraph",
+                "answer": "The shift is driven by entropy. The CVE1 pathway produces more gas molecules, granting it a larger, favorable entropy term (+T\u0394S). As temperature rises, this term dominates the free energy (\u0394G = \u0394H - T\u0394S), making the complete volatilization reaction (CVE1) increasingly favorable over the surface passivation reaction (SL1)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Your goal is a slow, precisely controlled etch of TiO\u2082. According to the FEPs, should you operate above or below 360 K? Justify.",
+                "answer_type": "Yes/No",
+                "answer": "Yes, it should be operated below 360 K. The SL1 pathway is thermodynamically favored over CVE1. This makes the reaction inherently self-limiting, as it preferentially forms a stable surface layer rather than volatile products, ensuring precise, layer-by-layer removal essential for controlled etching."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 2,
+            "width": 555,
+            "height": 488
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/23/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The image describes a two-step thermal Atomic Layer Etching (ALE) process controlled by temperature:Step 1 (Modification): Reactant 1 chemisorbs onto the surface at a specific temperature, modifying it without etching.",
+        "b": "Step 2 (Etching): Reactant 2 reacts with the modified surface at the same temperature, causing the modified layer to desorb, resulting in precise, isotropic etching of exactly one atomic layer. The process window is the narrow temperature range where both steps proceed in a self-limiting manner, enabling atomic-scale control."
+    },
+    "data_extraction": {
+        "a": "| Process Window | Temperature |\n|----------------|------------|\n| Chemisorption of reactant 1 | Reaction Rates |\n| Desorption of reaction products 1 | Reaction Rates |",
+        "b": "| Process Window | Temperature |\n|----------------|------------|\n| Chemisorption and reaction of reactant 2 | Reaction Rates |\n| Desorption of reaction products 2 | Reaction Rates |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the main advantage of using this thermal isotropic ALE process in advanced semiconductor manufacturing?",
+                "answer_type": "Paragraph",
+                "answer": "It enables perfectly isotropic etching with atomic-layer precision, which is critical for creating extremely small, smooth, and uniform features in 3D chip architectures without the damage caused by plasma-based etching. More used in FinFETs or 3D NAND memorys"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the two distinct phases in a thermal isotropic ALE cycle, and what happens in each?",
+                "answer_type": "List",
+                "answer": "Phase 1 is the Modification Step: Reactant 1 sticks to and chemically alters the surface without removing material. \nPhase 2 is the Etching Step: Reactant 2 reacts with the altered surface, causing precisely one modified layer to vaporize and etch away."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the required temperature for the Modification Step compare to that for the Etching Step in this process?",
+                "answer_type": "Paragraph",
+                "answer": "In thermal isotropic ALE, both steps must occur at the same constant temperature. The process window is the single temperature where modification is complete and etching is spontaneous, making control more challenging than in processes with separate temperature steps."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is the first step (modification) non-etching, and how does this lead to atomic-scale precision?",
+                "answer_type": "List",
+                "answer": "The first step only changes the surface chemistry (e.g., converting a metal to a volatile compound), making it reactive but stable. \nThis creates a sharp boundary between the modified top layer and the unmodified layer below. \nThe second step then removes only this distinct top layer, ensuring exactly one atomic layer is etched per cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 0,
+            "y": 429,
+            "width": 671,
+            "height": 468
+        },
+        "a": {
+            "x": 2,
+            "y": 4,
+            "width": 669,
+            "height": 423
+        }
+    }
+}

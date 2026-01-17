@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/3/fig_1",
+    "classification": {
+        "a": "process flow diagram",
+        "b": "conceptual diagram"
+    },
+    "summarization": {
+        "a": "The figure illustrates a silicon structure with the initial trench geometry used for ideal ALE simulations.",
+        "b": "The figure depicts a process flow of the etch front at multiple times, with different colors representing different materials."
+    },
+    "data_extraction": {
+        "a": "| Feature        | Aspect Ratio (AR) | Width (nm) |\n|---------------|--------------------|------------|\n| Trench 1      | 2                 | 30         |\n| Trench 2      | 10                | 30         |",
+        "b": "| Step | Description        | Species Present         |\n|------|--------------------|-------------------------|\n| 1    | Initial surface    | Si                     |\n| 2    | After Cl exposure  | SiCl                   |\n| 3    | Intermediate       | SiCl\u2082                  |\n| 4    | After Ar\u207a bombard  | SiCl\u2083 + SiCl\u2082 + SiCl   |\n| 5    | Final surface      | Si                     |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens after passivation phase?",
+                "answer_type": "Paragraph",
+                "answer": "During the passivation phase the surface concentration of Cl quickly increases to a steady state coverage. Once Ar+ bombardment begins, the\npassivated surface is eroded to leave an ideally smooth silicon surface."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is etching of the top surface prevented?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do the images represent the actual composition during etching?",
+                "answer_type": "Factoid",
+                "answer": "The images are intended to show the progress of the chlorination and etching during the ALE period"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Explain the geometry used in the study",
+                "answer_type": "Paragraph",
+                "answer": "The geometry used in the study is  includes a shallow feature with an aspect ratio -AR of 2 and a deeper feature with an AR of 10. The aspect ratios were established by pre-etched ideal trenches of different depths in the bulk silicon"
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 299,
+            "y": 0,
+            "width": 308,
+            "height": 931
+        },
+        "a": {
+            "x": 1,
+            "y": -1,
+            "width": 285,
+            "height": 940
+        }
+    }
+}

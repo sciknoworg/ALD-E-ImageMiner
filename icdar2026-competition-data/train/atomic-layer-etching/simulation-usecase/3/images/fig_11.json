@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/3/fig_11",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the ion energy distribution versus energies for Cl passivation phase",
+        "b": "The chart illustrates the ion energy distribution during Ar+ ion bombardment phase"
+    },
+    "data_extraction": {
+        "a": "| Energy (eV) | Cl\u2082\u207a | Ar\u207a | Cl\u207a |\n|-------------|------|-----|-----|\n| 15          | 0.00 | 0.00| 0.00|\n| 20          | 0.22 | 0.22| 0.18|\n| 25          | 0.20 | 0.20| 0.15|\n| 30          | 0.05 | 0.05| 0.08|\n| 40          | 0.00 | 0.00| 0.02|\n| 60          | 0.00 | 0.00| 0.00|",
+        "b": "| Energy (eV) | Cl\u2082\u207a | Ar\u207a | Cl\u207a |\n|-------------|------|-----|-----|\n| 20          | 0.00 | 0.00| 0.00|\n| 30          | 0.03 | 0.02| 0.02|\n| 40          | 0.06 | 0.04| 0.03|\n| 50          | 0.05 | 0.03| 0.02|\n| 60          | 0.02 | 0.02| 0.01|\n| 80          | 0.00 | 0.00| 0.00|"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the resulting fluxes?",
+                "answer_type": "List",
+                "answer": "The resulting fluxes to the wafer are\n1.  7.8*10^14  /cm2 s  for Cl\n2. 3.9*10^12 /cm2 s for Cl2+\n3.  9.2*10^13 /cm2 s for Cl+\n4. 2.3*10^16 /cm2 s for Ar+,\n with ion energies distributed from 33 eV to 60 eV,"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the energy distribution modelled?",
+                "answer_type": "Paragraph",
+                "answer": "Each ion energy distribution is a probability density function for that ion, and is normalized such that integrating the function in energy results in a value of 1 regardless of the total flux of that ion."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is chlorine contamination simulated?",
+                "answer_type": "Paragraph",
+                "answer": "During the ion bombardment phase Ar gas with 100 ppm Cl2 was used to simulate chlorine contamination of the process due to incomplete purging, etch products or desorption from the walls. The total gas flow was 200 sccm at a pressure of 20 mTorr."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the bias voltages used?",
+                "answer_type": "Factoid",
+                "answer": "A bias of 30V at 10MHz was applied to the wafer, resulting in a DC bias of 8.4V and a plasma potential oscillating between 35V and 49 V."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 0,
+            "y": 459,
+            "width": 577,
+            "height": 412
+        },
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 572,
+            "height": 419
+        }
+    }
+}

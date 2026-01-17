@@ -1,0 +1,68 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/20/figure_6",
+    "classification": {
+        "a": "heatmap",
+        "b": "heatmap",
+        "c": "heatmap"
+    },
+    "summarization": {
+        "a": "This figure uses heat maps to visualize the Gibbs free energy (\u0394G) for continuous etching (CVE1) and self-limiting modification (SL1) as a function of temperature (X-axis) and reactant pressure (Y-axis). A contour plot showing the reaction conditions favorable or unfavorable for continuous etching (CVE1) across varying temperatures and reactant pressures. Panel (a) shows that CVE1 is \u201cfavorable\u201d (green, \u0394G < 0) across nearly the entire parameter space, indicating TiO\u2082 is naturally unstable in HF.",
+        "b": "A contour plot showing the reaction conditions favorable or unfavorable for self-limiting modification (SL1) across varying temperatures and reactant pressures.",
+        "c": "A contour plot showing the difference between the two reactions (Y1 \u2212 X1) across temperature and pressure. Red regions (Y1 > X1) indicate the self-limiting reaction is energetically preferred (lower \u0394G), while green regions (Y1 < X1) indicate continuous etching is preferred. The vertical boundary at 360 K confirms that temperature, not pressure, is the \u201ccontrol knob\u201d dictating the transition between ALE and uncontrolled etching."
+    },
+    "data_extraction": {
+        "a": "| Reactant Pressure [Torr] | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 | 3.5 | 4.0 |\n|---|---|---|---|---|---|---|---|---|---|\n| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |\n| 500 K | -1.2 | -1.2 | -1.2 | -1.2 | -1.2 | -1.2 | -1.2 | -1.2 | -1.2 |\n| 1000 K | -1.6 | -1.6 | -1.6 | -1.6 | -1.6 | -1.6 | -1.6 | -1.6 | -1.6 |\n| 1500 K | -1.8 | -1.8 | -1.8 | -1.8 | -1.8 | -1.8 | -1.8 | -1.8 | -1.8 |\n| 2000 K | -2.0 | -2.0 | -2.0 | -2.0 | -2.0 | -2.0 | -2.0 | -2.0 | -2.0 |",
+        "b": "| Temperature [K] | 0.0 | 500 K | 1000 K | 1500 K | 2000 K |\n|---|---|---|---|---|---|\n| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |\n| 500 K | -1.6 | -1.6 | -1.6 | -1.6 | -1.6 |\n| 1000 K | -2.0 | -2.0 | -2.0 | -2.0 | -2.0 |\n| 1500 K | -2.4 | -2.4 | -2.4 | -2.4 | -2.4 |\n| 2000 K | -2.8 | -2.8 | -2.8 | -2.8 | -2.8 |",
+        "c": "| Temperature [K] | 0.0 | 500 K | 1000 K | 1500 K | 2000 K |\n|---|---|---|---|---|---|\n| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |\n| 500 K | -0.4 | -0.4 | -0.4 | -0.4 | -0.4 |\n| 1000 K | -0.8 | -0.8 | -0.8 | -0.8 | -0.8 |\n| 1500 K | -1.2 | -1.2 | -1.2 | -1.2 | -1.2 |\n| 2000 K | -1.6 | -1.6 | -1.6 | -1.6 | -1.6 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Regarding the SL1 reaction, the 'Favorable' (blue/green) region transitions to 'Unfavorable' (yellow) as temperature increases. If a researcher attempts to run the surface modification step at 1500 K, what specific defect would likely be found on the wafer surface using X-ray Photoelectron Spectroscopy (XPS)?",
+                "answer_type": "Paragraph",
+                "answer": "Lack of Fluorination / Pristine Surface. At 1500 K, the $\\Delta G$ for SL1 is positive (Unfavorable). This means the surface fluorination reaction is non-spontaneous. XPS would show no Fluorine peak (or very low coverage), as the HF gas would simply desorb rather than reacting to form the necessary TiF_x surface layer."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "A process engineer wants to ensure the process remains strictly in the 'Self-limiting' regime to achieve atomic precision. What is the maximum allowable operating temperature, and does increasing the reactant pressure to 4.0 Torr allow them to exceed this temperature limit?\"",
+                "answer_type": "Factoid",
+                "answer": "Max Temperature: 360 K. Pressure Effect: No. The boundary line at 360 K is vertical, indicating that the transition is independent of pressure; increasing pressure does not expand the self-limiting window."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the operating condition at T = 200 K (Red zone in panel c) versus T = 1000 K (Green zone in panel c). Why is the thermodynamic state at 1000 K considered a 'catastrophic failure' for an Atomic Layer Etching process recipe?",
+                "answer_type": "Paragraph",
+                "answer": "At 1000 K, the value of Y1 - X1 is negative (Green), meaning the continuous etching reaction (Y1) has a lower energy than the surface modification (X1). The system will bypass the self-limiting step entirely and continuously consume the device material. This destroys the \"atomic layer\" control, turning the precision process into a rapid, uncontrolled bulk etch."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The entire region from 0 to 2000 K is colored green ('Favorable',  \u0394 G < 0 ). Physically, what does this tell you about the intrinsic chemical stability of the Titanium Dioxide crystal lattice when exposed to HF gas, regardless of the temperature?",
+                "answer_type": "Paragraph",
+                "answer": "It indicates that the TiO\u2082 lattice is thermodynamically unstable relative to the gaseous products (TiF\u2084 + H\u2082O). There is no kinetic or thermodynamic barrier preventing the bulk crystal from disintegrating into gas; the reaction is spontaneous everywhere. This necessitates the use of the self-limiting mechanism (Panels b/c) to artificially stop the reaction at the surface."
+            }
+        ]
+    },
+    "bbox": {
+        "c": {
+            "x": 844,
+            "y": 3,
+            "width": 436,
+            "height": 447
+        },
+        "b": {
+            "x": 411,
+            "y": 6,
+            "width": 428,
+            "height": 447
+        },
+        "a": {
+            "x": 4,
+            "y": 3,
+            "width": 401,
+            "height": 450
+        }
+    }
+}

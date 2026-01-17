@@ -1,0 +1,79 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/24/fig_4",
+    "classification": {
+        "a": "line chart",
+        "b": "multiple line chart",
+        "c": "line chart",
+        "d": "line chart"
+    },
+    "summarization": {
+        "a": "A line chart showing the change in \u0394M<sub>TMA</sub> with increasing TMA exposure time at 300\u00b0C.",
+        "b": "A multiple line chart showing the change \u0394MTMA, and \u0394MHF as a function of the exposure time.",
+        "c": "A line chart showing the change in \u0394M<sub>HF</sub> with increasing HF exposure time at 300\u00b0C.",
+        "d": "A line chart showing the change in MCPC as a function of the temperature, between 250 and 325  \u00b0C."
+    },
+    "data_extraction": {
+        "a": "| TMA Exposure Time (s) | \u0394M<sub>TMA</sub> (ng/cm<sup>2</sup> cycle)) |\n| --- | --- |\n| 0.0 | 0 |\n| 1.0 | -20 |\n| 2.0 | -30 |\n| 3.0 | - |",
+        "b": "| Exposure time | \u0394M HF | \u0394M TMA |\n| --- | --- | --- |\n| - | 5 | -10 |\n| - | 10 | -20 |\n| - | 18 | -30 |\n|  | 20 | -40 |",
+        "c": "| HF Exposure Time (s) | \u0394M<sub>HF</sub> (ng/cm<sup>2</sup> cycle)) |\n| --- | --- |\n| 0.0 | 0 |\n| 0.5 | 12 |\n| 1.0 | 14 |\n| 1.5 | 15 |\n| 2.0 | - |",
+        "d": "| Temperature (\u00b0C) | MCPC (ng/cm<sup>2</sup> cycle)) |\n| --- | --- |\n| 250 | 0 |\n| 275 | -10 |\n| 300 | -18 |\n| 325 | -20 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which temperature leas to the highest MCPC?",
+                "answer_type": "Factoid",
+                "answer": "The lower temperature, i.e. 250 \u00b0C"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How does the temperature affect the mass change per cycle?",
+                "answer_type": "Factoid",
+                "answer": "As the temperature increases, the amount of mass that changes per cycle decreases, slowing the ALE cycle down."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass change over the exposure time?",
+                "answer_type": "Factoid",
+                "answer": "As can be seen in the subfigure, the mass change increases with the exposure time for HF, but decreases for TMA."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which feature is illustrated in the subfigure?",
+                "answer_type": "Factoid",
+                "answer": "The mass changes of the samples, in this case for HF, are shown as a function of the HF exposure time (s)."
+            }
+        ]
+    },
+    "bbox": {
+        "c": {
+            "x": 7,
+            "y": 285,
+            "width": 501,
+            "height": 292
+        },
+        "b": {
+            "x": 532,
+            "y": 8,
+            "width": 469,
+            "height": 249
+        },
+        "a": {
+            "x": 1,
+            "y": 5,
+            "width": 510,
+            "height": 274
+        },
+        "d": {
+            "x": 536,
+            "y": 256,
+            "width": 467,
+            "height": 329
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/20/figure_4",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This multiple line chart image compares the free energy profiles (FEPs) of three Continuous Vapor Etching (CVE) reactions (red, red-dashed, blue) with their corresponding self-limiting (SL) surface modification reactions (green, green-dashed, yellow). For ideal Atomic Layer Etching (ALE), the SL reaction must be spontaneous (\u0394G < 0) while the CVE reaction remains non-spontaneous (\u0394G > 0), defining a \u201cGoldilocks\u201d window where the surface is modified but bulk etching is suppressed."
+    },
+    "data_extraction": {
+        "a": "| Temperature [K] | \u0394G [ev / TiO<sub>2</sub>] | Materials |\n|--------|---------|---------|\n| 0    | -1.2 | CVE1(Y1) |\n| 0    | 2.1  | CVE2(Y2) |\n| 0    | 2.2  | CVE3(Y3) |\n| 0    | -2.2 | SL1(X1) |\n| 0    | -1.1 | SL2(X2) |\n| 0    | -0.1 | SL3(X3) |\n| 200  | -1.2 | CVE1(Y1) |\n| 200  | 1.7  | CVE2(Y2) |\n| 200  | 1.9  | CVE3(Y3) |\n| 200  | -1.6 | SL1(X1) |\n| 200  | -0.8 | SL2(X2) |\n| 200  | 0.2  | SL3(X3) |\n| 400  | -1.1 | CVE1(Y1) |\n| 400  | 1.4  | CVE2(Y2) |\n| 400  | 1.7  | CVE3(Y3) |\n| 400  | -0.9 | SL1(X1) |\n| 400  | -0.5 | SL2(X2) |\n| 400  | 0.6  | SL3(X3) |\n| 600  | -1.0 | CVE1(Y1) |\n| 600  | 1.1  | CVE2(Y2) |\n| 600  | 1.4  | CVE3(Y3) |\n| 600  | -0.3 | SL1(X1) |\n| 600  | -0.2 | SL2(X2) |\n| 600  | 1.0  | SL3(X3) |\n| 800  | -0.8 | CVE1(Y1) |\n| 800  | 0.9  | CVE2(Y2) |\n| 800  | 1.2  | CVE3(Y3) |\n| 800  | 0.3  | SL1(X1) |\n| 800  | 0.1  | SL2(X2) |\n| 800  | 1.3  | SL3(X3) |\n| 1000 | -0.7 | CVE1(Y1) |\n| 1000 | 0.6  | CVE2(Y2) |\n| 1000 | 1.0  | CVE3(Y3) |\n| 1000 | 0.9  | SL1(X1) |\n| 1000 | 0.4  | SL2(X2) |\n| 1000 | 1.6  | SL3(X3) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "According to Table 1 corresponding to this image, list the specific reactant stoichiometries (HF gas molecules per TiO\u2082 unit) required for the three postulated reaction pathways (CVE1, CVE2, CVE3). Which pathway consumes the most reactant?",
+                "answer_type": "List",
+                "answer": "CVE1: 4 HF molecules.\n\nCVE2: 2 HF molecules.\n\nCVE3: 3 HF molecules.\n\nConclusion: CVE1 consumes the most reactant (4 HF)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the CVE1 and CVE2 pathways for HF etching of TiO\u2082. Under the constraint of needing a spontaneous, continuous etch (\u0394G < 0) at the lowest possible temperature, which pathway is not viable?",
+                "answer_type": "Paragraph",
+                "answer": "The CVE2 pathway is not viable for a spontaneous, continuous etch. Its \u0394G remains positive (non-spontaneous) across the entire temperature range shown, unlike CVE1 which becomes favorable above ~700 K. To achieve continuous etching, one must use conditions that favor CVE1, accepting a higher thermal budget."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the fundamental difference between a \"CVE\" and an \"SL\" reaction pathway, and how is this difference reflected in their respective reaction energies (\u0394E) in Table 1?",
+                "answer_type": "Paragraph",
+                "answer": "A CVE pathway produces volatile gas-phase products (e.g., TiF\u2084(g)), leading to complete material removal. An SL pathway produces a modified, non-volatile surface layer (e.g., TiF\u2084(surf)). The SL reactions are always more exothermic (more negative \u0394E) than their CVE counterparts because forming a surface layer is energetically cheaper than completely breaking bonds to release gas molecules."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The FEP shows CVE1 (complete etching) becomes thermodynamically favorable only above ~700 K. What does this imply for using HF gas to pattern TiO\u2082 in a microelectronic fabrication process?",
+                "answer_type": "Paragraph",
+                "answer": "This implies that isotropic, continuous etching of TiO\u2082 with HF gas requires a high-temperature process (>700K). At lower temperatures, the reaction will self-limit, only modifying the surface. Therefore, for patterning, one must either operate at high temperature or use an alternative activation method (like plasma) to drive the CVE pathway at lower temperatures."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 556,
+            "height": 501
+        }
+    }
+}

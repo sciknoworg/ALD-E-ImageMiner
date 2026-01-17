@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/15/fig_5",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot represents that Atomic Layer Etching produces a much higher EPC than physical sputtering at the same ion energies, demonstrating the advantage of chlorine surface modification. An optimal \u201cALE window\u201d (~70\u201390 eV) allows selective removal of the modified layer without damaging bulk silicon, while sufficient ion fluence is essential, as low fluence yields negligible etching despite chlorination. Etch per cycle is shown as a function of Ar\u207a ion energy. For the \u201cHigh Fluence\u201d simulation results, one cycle corresponds to 2255 Cl\u2082 impacts and 1000 Ar\u207a impacts, while for \u201cLow Fluence,\u201d one cycle corresponds to 2255 Cl\u2082 impacts and 68 Ar\u207a impacts. Solid red circles represent physical sputtering results from MD simulations, open red circles represent ALE results from the \u201cHigh Fluence\u201d MD simulations, and open red triangles represent ALE results from the \u201cLow Fluence\u201d MD simulations. Solid blue squares are experimental physical sputtering results, while open blue squares are experimental ALE results, both from Park et al. (Ref. 11). The dotted lines indicate the experimentally identified ALE window."
+    },
+    "data_extraction": {
+        "a": "| Ar\u207a Energy (eV) | Etch per Cycle (\u00c5/cycle) | Process / Condition |\n|-----------------|--------------------------:|---------------------|\n| 40              | 0.031                     | Physical Sputtering (Simulation) |\n| 40              | 0.458                     | ALE (Simulation, High Fluence) |\n| 40              | 0.181                     | ALE (Simulation, Low Fluence) |\n| 40              | 0                         | Physical Sputtering (Experiment) |\n| 40              |                            | ALE (Experiment) |\n| 50              | 0.083                     | Physical Sputtering (Simulation) |\n| 50              | 0.5941                    | ALE (Simulation, High Fluence) |\n| 50              | 0.233                     | ALE (Simulation, Low Fluence) |\n| 50              | 0                         | Physical Sputtering (Experiment) |\n| 50              |                            | ALE (Experiment) |\n| 60              |                            | Physical Sputtering (Simulation) |\n| 60              | 0.739                     | ALE (Simulation, High Fluence) |\n| 60              | 0.205                     | ALE (Simulation, Low Fluence) |\n| 60              | 0.167                     | Physical Sputtering (Experiment) |\n| 60              | 0.233                     | ALE (Experiment) |\n| 70              | 0.289                     | Physical Sputtering (Simulation) |\n| 70              | 0.894                     | ALE (Simulation, High Fluence) |\n| 70              |                            | ALE (Simulation, Low Fluence) |\n| 70              | 0.200                     | Physical Sputtering (Experiment) |\n| 70              | 1.105                     | ALE (Experiment) |\n| 80              | 0.425                     | Physical Sputtering (Simulation) |\n| 80              | 1.020                     | ALE (Simulation, High Fluence) |\n| 80              |                            | ALE (Simulation, Low Fluence) |\n| 80              | 0.360                     | Physical Sputtering (Experiment) |\n| 80              | 1.076                     | ALE (Experiment) |\n| 90              | 0.598                     | Physical Sputtering (Simulation) |\n| 90              | 1.175                     | ALE (Simulation, High Fluence) |\n| 90              |                            | ALE (Simulation, Low Fluence) |\n| 90              |                            | Physical Sputtering (Experiment) |\n| 90              |                            | ALE (Experiment) |\n| 100             | 0.763                     | Physical Sputtering (Simulation) |\n| 100             | 1.320                     | ALE (Simulation, High Fluence) |\n| 100             |                            | ALE (Simulation, Low Fluence) |\n| 100             | 0.894                     | Physical Sputtering (Experiment) |\n| 100             | 1.316                     | ALE (Experiment) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In the simulation data at 50 eV, the 'High Fluence' cycle (open circle) achieves ~0.6 \u00c5/cycle, while the 'Low Fluence' cycle (open triangle) achieves only ~0.2 \u00c5/cycle. What specific process control parameter is responsible for this failure to etch?",
+                "answer_type": "Paragraph",
+                "answer": "The \"Low Fluence\" step uses only 68 $Ar^+ impacts, which is mathematically insufficient to cover and clear the surface sites generated by the 2255 Cl\u2082 impacts."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the experimental results at 100 eV. The ALE rate (Open Blue Square) is high, but the Physical Sputtering rate (Solid Blue Square) has also risen to ~0.9 \u00c5/cycle. Why is 100 eV considered a 'worse' route than 70 eV for high-precision applications?",
+                "answer_type": "Paragraph",
+                "answer": "At 100 eV, the selectivity decreases because Physical Sputtering (uncontrolled removal) becomes a dominant fraction of the total etch. Operating at 70 eV maintains a larger gap between the ALE rate and the Sputtering rate (Solid Square is low, ~0.2 \u00c5/cycle). This ensures the etching is primarily driven by chemical modification, not brute-force kinetic damage."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At 80 eV, the ALE result (Open Blue Square) is ~1.1 \u00c5/cycle, while Physical Sputtering (Solid Blue Square) is only ~0.4 \u00c5/cycle. Physically, how has the pre-step of Chlorination altered the material's properties to allow this massive increase in removal rate?",
+                "answer_type": "Paragraph",
+                "answer": "Chlorination weakens the surface binding energy. The adsorption of Chlorine atoms draws electron density away from the silicon-silicon backbonds, lowering the energy threshold required to break them. This allows the same 80 eV ions to remove significantly more material than they could from a pristine, unmodified surface."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The vertical dotted lines define the 'ALE Window' from roughly 70 eV to 90 eV. Based on the Physical Sputtering data (Solid Blue Squares), what is the primary risk to the device structure if the process is operated above this window (e.g., at 110 eV)?",
+                "answer_type": "Paragraph",
+                "answer": "Above the window, the physical sputtering component becomes too high, causing ions to penetrate and damage the underlying lattice even after the chlorinated layer is removed."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 672,
+            "height": 461
+        }
+    }
+}

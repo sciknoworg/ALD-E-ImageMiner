@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/17/fig_10",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The chart displays the pressure and coverage of AIF<sub>3</sub> over time, with two separate axes for each metric for reactor model G3."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | HF Pressure (Pa) | TMA Pressure (Pa) | Coverage of AlF\u2083 (%) |\n|----------|-------------------|--------------------|------------------------|\n| 0        | 0                | 0                 | 0                      |\n| 0.5      | 30               | 0                 | 40                     |\n| 1.0      | 65               | 0                 | 80                     |\n| 1.5      | 68               | 0                 | 95                     |\n| 2.0      | 65               | 0                 | 100                    |\n| 3.0      | 0                | 0                 | 100                    |\n| 6.0      | 0                | 0                 | 100                    |\n| 7.0      | 0                | 30                | 100                    |\n| 8.0      | 0                | 60                | 100                    |\n| 9.0      | 0                | 65                | 100                    |\n| 10.0     | 0                | 60                | 100                    |\n| 11.0     | 0                | 0                 | 100                    |\n| 15.0     | 0                | 0                 | 100                    |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the process conditions?",
+                "answer_type": "Factoid",
+                "answer": "The HF and TMA feed flow rate of 150 sccm and 70 sccm, respectively."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which reactor model shows the best performance?",
+                "answer_type": "Factoid",
+                "answer": "The inclined plate reactor (G3) shows the best performance in terms of the film uniformity and etching speed."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does complete cycle mean?",
+                "answer_type": "List",
+                "answer": "It means a complete etching cycle consisting of \n1. HF dose of 2 s\n2. N 2 purge of 5 s\n3. A TMA dose of 3 s\n4. N 2 purge of 5 s"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the process sequential?",
+                "answer_type": "Paragraph",
+                "answer": "HF Pressure starts increasing at 0 s, peaks around 65\u201370 Pa between 1\u20132 s, then drops sharply to near zero by 3 s, indicating  that the HF pulse occurs early in the cycle (roughly 0\u20132.5 s). TMA Pressure (Red dashed line), remains at zero until about 7 s, then rises sharply to about 60\u201365 Pa between 8\u201310 s, and falls back to zero by 11 s. This shows the TMA pulse happens later in the cycle (roughly 7\u201310.5 s). Coverage of AlF\u2083 (Yellow dotted line): Starts at 0%, rises rapidly during the HF pulse, reaching 100% coverage by ~2 s, and stays constant for the rest of the cycle. This means the surface becomes fully covered with AlF\u2083 after the HF exposure and does not change during the TMA pulse. Thus the process is sequential as it represents complete cycle with TMA following HF."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 5,
+            "width": 664,
+            "height": 326
+        }
+    }
+}

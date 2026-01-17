@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/3/fig_3",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The chart shows the Si surface coverage and average chlorine per site over time, with two curves labeled 'Ar = 2' and 'Ar = 10' as a function of time."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Si Coverage (Ar=2) | Si Coverage (Ar=10) | Cl Coverage (Ar=2) | Cl Coverage (Ar=10) |\n|----------|---------------------|----------------------|---------------------|----------------------|\n| 2.8      | 1.00               | 1.00                | 0.00               | 0.00                |\n| 3.0      | 0.00               | 0.00                | 2.80               | 2.50                |\n| 3.2      | 0.00               | 0.00                | 2.90               | 2.70                |\n| 3.4      | 0.10               | 0.05                | 2.80               | 2.60                |\n| 3.6      | 0.50               | 0.40                | 2.00               | 1.80                |\n| 3.8      | 0.90               | 0.80                | 1.00               | 0.80                |\n| 4.0      | 1.00               | 0.95                | 0.20               | 0.10                |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the difference in the ALE process when the aspect ratios are different?",
+                "answer_type": "Paragraph",
+                "answer": "The only significant difference between the ideal ALE of features having AR 2 and AR 10 is the time required to achieve the steady state value of <Cl>"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the passivation step self-limiting?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the change in aspect ratio influence the process?",
+                "answer_type": "Paragraph",
+                "answer": "A longer time is required to fully passivate the AR 10 feature compared to AR 2. As the AR increases, the neutral conductance through the feature decreases, and a larger portion of the incoming neutral flux is reflected back into the plasma by collisions with the sidewalls before the flux can passivate the etch front\nat the bottom of the feature. The lower conductance of the AR 10 feature requires a larger fluence of Cl radicals, and therefore a longer passivation time, to achieve the same <Cl > as the AR 2 feature."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How is the chlorine coverage for these different AR?",
+                "answer_type": "Factoid",
+                "answer": "From the image, it can be observed thattThe Cl coverage for AR 2 is always higher than AR 10"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 5,
+            "width": 572,
+            "height": 432
+        }
+    }
+}

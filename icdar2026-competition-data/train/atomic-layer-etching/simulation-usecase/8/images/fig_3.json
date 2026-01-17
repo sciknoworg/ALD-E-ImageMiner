@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/8/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the peak area of XPS signals for Ga-N and Ga-O as a function of sputter depth.",
+        "b": "The spectrum displays the XPS counts at various binding energies for Ga-N and Ga-O."
+    },
+    "data_extraction": {
+        "a": "| Sputter depth (nm)| Peak area (CPS eV) Ga-O| Peak area (CPS eV) Ga-N|\n|---|---|---|\n| 0 | 4000 |0|\n|5|1300|4500|\n|10|1000|5000|\n|15|1000|5000|\n|20|1000|5000|\n|25|0|5700|\n|30|0|6000|\n|35|0|5700|\n|40|0|500|",
+        "b": "| Binding energy (eV) | XPS counts (a.u.) |\n|---|---|\n| 14 | 0 |\n| 16 | 0 |\n| 18 | 0.3 |\n| 20 | 2 |\n| 22 | 0.3 |\n| 24 | 0 |\n| 26 | 0 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the calculation of the areas in the spectrum 100% accurate?",
+                "answer_type": "Paragraph",
+                "answer": "b\tThe envelope, which is a result of the two contributions together does not fully overlap with the measured spectrum indicating that the fit is not fully accurate."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which species is more present in the film, oxygen or nitrogen?",
+                "answer_type": "Factoid",
+                "answer": "b\tNitrogen is more present, at least in the form where it is bonded to gallium."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "From what depth of sputtering is there no Ga-O in the film?",
+                "answer_type": "Factoid",
+                "answer": "a\tFrom 25 nm and deeper."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Can the type of measurement influence the stoichiometry of the physical film?",
+                "answer_type": "Paragraph",
+                "answer": "a\tDepth profiles with XPS are known to influence material properties. During the sputtering binding states can change and shift, so it is possible that the film has been altered due to the measurement."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 12,
+            "width": 346,
+            "height": 427
+        },
+        "b": {
+            "x": 384,
+            "y": 12,
+            "width": 282,
+            "height": 427
+        }
+    }
+}

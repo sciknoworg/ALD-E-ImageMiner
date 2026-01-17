@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/20/figure_11",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This figure is an Arrhenius plot (logarithm of etch rate vs. inverse temperature) derived from the data in Figure 10. The linear fit (a dashed line) yields an activation energy (E\u2090) of 42 kJ/mol for the HF etching reaction of the Ti-based film."
+    },
+    "data_extraction": {
+        "a": "| 1000/T (K\u207b\u00b9) | ln[\u0394 Int. Abs. Loss / HF Exposure] |\n|-------------:|------------------------------------:|\n| 1.75         | 2.65                               |\n| 1.80         | 2.50                               |\n| 1.85         | 2.45                               |\n| 2.00         | 2.05                               |\n| 2.20         | 2.00                               |\n| 2.35         | 1.30                               |\n| 2.45         | 0.70                               |\n| 2.55         | 0.75                               |\n| 2.65         | 0.10                               |\n| 2.80         | 0.25                               |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the key data processing step performed on the raw etch rate vs. temperature data to create this Arrhenius plot, and why is this transformation necessary?",
+                "answer_type": "Paragraph",
+                "answer": "The key step is taking the natural logarithm of the etch rate (ln(k)) and plotting it against the inverse absolute temperature (1/T). This transformation linearizes the Arrhenius equation, allowing the activation energy (E\u2090) to be determined directly from the slope of the best-fit line (-E\u2090/R)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare this wet chemical etch (E\u2090 = 42 kJ/mol) with a plasma-enhanced dry etch for the same material. For an application demanding perfect anisotropy (vertical sidewalls), which process is fundamentally unsuitable and why?",
+                "answer_type": "List",
+                "answer": "Thermal HF Wet Etch: Pro: Selective, low damage. Con: Isotropic (etches in all directions).\n\nPlasma-Enhanced Dry Etch: Pro: Can be highly anisotropic via ion bombardment."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The slope gives an E\u2090 of 42 kJ/mol. What does this specific value indicate about the nature of the rate-limiting step in the HF etching reaction?",
+                "answer_type": "Paragraph",
+                "answer": "An E\u2090 of 42 kJ/mol (a relatively low value, ~0.44 eV) indicates the rate-limiting step is a surface chemical reaction with a moderate thermal barrier. It is not diffusion-limited (which would be lower, ~10-20 kJ/mol) nor a very high-energy bond-breaking process, suggesting a specific, activated chemisorption or ligand-exchange step controls the etch rate."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The well-defined E\u2090 allows accurate prediction of etch rate with temperature. What key process design advantage does this provide for manufacturing?",
+                "answer_type": "Paragraph",
+                "answer": "It enables predictable process tuning and scaling. Engineers can precisely calculate the temperature change needed to achieve a target etch rate (e.g., to meet throughput specs) or to maintain a constant rate despite equipment variations, ensuring reproducible results during high-volume manufacturing."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 5,
+            "width": 646,
+            "height": 644
+        }
+    }
+}

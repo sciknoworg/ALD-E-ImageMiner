@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/15/fig_7",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the relationship between the number of Cl\u2082 impacts and etch per cycle.  The EPC initially increases rapidly with chlorine dose due to incomplete surface coverage, then saturates beyond ~1000 Cl\u2082 i impacts at ~0.9 \u00c5/cycle. This plateau demonstrates the self-limiting behavior of ideal atomic layer etching, where additional chlorine does not increase material removal once the surface is fully chlorinated."
+    },
+    "data_extraction": {
+        "a": "| Number of Cl\u2082 Impacts | Etch per Cycle (\u00c5/cycle) |\n|----------------------|--------------------------:|\n| 0                    | 14.52                     |\n| 110                  | 0.53                      |\n| 250                  | 0.68                      |\n| 500                  | 0.84                      |\n| 1000                 | 0.85                      |\n| 2265                 | 0.89                      |\n| 3000                 | 0.92                      |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "A process engineer sets the Cl\u2082 i exposure to 250 impacts to save time. Based on the graph, why is this a poor decision for process stability compared to setting it at 1500 impacts?",
+                "answer_type": "Paragraph",
+                "answer": "Because 250 impacts is in the non-saturated region (steep slope). Small fluctuations in gas flow or pressure at this point would cause large changes in the etch rate. At 1500 impacts, the process is on the plateau (saturated), so it is robust against small variations."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "The plateau is at ~0.9 \u00c5/cycle. If a competing Continuous Plasma Etch process removes 50 \u00c5/sec, what is the primary trade-off accepted by choosing this ALE method instead?",
+                "answer_type": "Paragraph",
+                "answer": "Speed vs. Precision. The ALE process is extremely slow (only 0.9 \u00c5 per full cycle) compared to continuous etching. The trade-off is accepting low throughput to gain atomic-level precision and control."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What changes occur on the silicon surface between 500 and 2500 chlorine impacts that lead to saturation and cessation of further increase in the etch per cycle?",
+                "answer_type": "Factoid",
+                "answer": "Site Saturation. At 500 impacts, active surface sites are still available. By 2500 impacts, every available surface bond is already occupied by a Chlorine atom (saturated). Since no new Chlorine can stick, the subsequent ion etch cannot remove any additional material, leading to the plateau."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If the data points at 2000 and 3000 impacts suddenly jumped up to 1.5 \u00c5/cycle instead of staying flat, what non-ideal failure mechanism would that indicate?",
+                "answer_type": "Paragraph",
+                "answer": "Spontaneous Etching. It would indicate that the excess Chlorine is beginning to etch the silicon chemically on its own (without ions), destroying the self-limiting behavior that defines Atomic Layer Etching."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 8,
+            "width": 675,
+            "height": 469
+        }
+    }
+}

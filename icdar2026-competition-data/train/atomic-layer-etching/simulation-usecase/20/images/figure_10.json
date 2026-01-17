@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/20/figure_10",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "This line chart  plots the etch rate (measured by the loss of integrated Ti-O IR absorbance per HF exposure) against temperature (80-300\u00b0C) for a titanium-based film, showing that the etch rate increases with temperature."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | \u0394 Int. Abs. Loss / HF Exposure |\n|-----------------:|--------------------------------:|\n| 80                | 0.00                            |\n| 100              | 0.02                            |\n| 120              | 0.05                            |\n| 140              | 0.07                            |\n| 160              | 0.25                            |\n| 180              | 1.00                            |\n| 200              | 1.10                            |\n| 220              | 1.30                            |\n| 240              | 1.90                            |\n| 260              | 2.10                            |\n| 280              | 2.50                            |\n| 300              | 3.80                            |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the graph, determine the 'Cut-Off Temperature' below which the etching process is essentially inactive. What temperature a user has to set as minimum sets in the reactor to be successfully etched?",
+                "answer_type": "Paragraph",
+                "answer": "The cut-off temperature is approximately 150\u00b0C. Below this point, the curve is effectively flat (close to zero on the Y-axis), indicating that the reaction kinetics are insufficient to remove material.Minimum Reactor Setting: To ensure the film is successfully etched, the user must set the reactor to a minimum of 150\u00b0C (or ideally higher, such as 175\u00b0C, for a practical rate). Any setting below 150\u00b0C results in negligible absorbance loss, meaning the process essentially fails to etch the film."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the slope of the curve in the 80\u2013150\u00b0C region versus the 200\u2013300\u00b0C region. What does the steep slope at high temperatures suggest ?",
+                "answer_type": "Paragraph",
+                "answer": "The low-temperature region is flat (low sensitivity), while the high-temperature region is steep (high sensitivity).At 300 \u00b0C, the etch rate is high, enabling fast throughput, but the process is highly sensitive to temperature variations; a \u00b15 \u00b0C deviation causes large fluctuations in etch rate. At 100 \u00b0C, the etch rate is stable but negligible. Thus, while intermediate temperatures may offer a trade-off, operation at 300 \u00b0C requires stringent thermal control."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The Y-axis measures the 'Loss in Ti-O Absorbance.' Physically, if this value increases from 1.0 (at 175\u00b0C) to 4.0 (at 300\u00b0C), what does this factor of 4 imply about the volume of material removed per cycle at the higher temperature?",
+                "answer_type": "Paragraph",
+                "answer": "Since infrared absorbance follows the Beer\u2013Lambert law and is proportional to the number of bonds, a fourfold increase in absorbance loss indicates that approximately four times more TiO2  is removed per HF exposure at 300 \u00b0C than at 175 \u00b0C. This strong temperature dependence underscores the need for precise thermal control to ensure a stable etch rate."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If this specific HF etching process were applied to a 3D-NAND device structure with a high aspect ratio, where the bottom of the trench is often 10\u00b0C cooler than the top, how would the 'taper profile' (sidewall angle) likely look if etched at 250\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "At 250 \u00b0C, the etch rate shows strong temperature dependence; a 10 \u00b0C gradient (250 \u00b0C at the top vs. 240 \u00b0C at the bottom) would therefore cause slower etching at the bottom, leading to a tapered (V-shaped) profile. Achieving vertical sidewalls would require operation in a temperature-insensitive (saturated) regime, which is not observed here."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 647,
+            "height": 651
+        }
+    }
+}

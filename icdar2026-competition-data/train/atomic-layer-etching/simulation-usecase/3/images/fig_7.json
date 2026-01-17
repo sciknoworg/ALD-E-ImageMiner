@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/3/fig_7",
+    "classification": {
+        "a": "stacked bar chart"
+    },
+    "summarization": {
+        "a": "The chart shows the etch depth per cycle for different Cl2 concentrations at both non-ideal and ideal conditions."
+    },
+    "data_extraction": {
+        "a": "| Cl\u2082 (ppm) | AR  | Ideal (ML) | Non-Ideal (ML) | Total Etch Depth (ML) | % Ideal |\n|-----------|-----|------------|-----------------|-------------------------|---------|\n| 1         | 10  | 1.0        | 0.0             | 1.0                     | 100     |\n| 1         | 2   | 1.0        | 0.02            | 1.02                    | 98      |\n| 10        | 10  | 1.0        | 0.01            | 1.01                    | 99      |\n| 10        | 2   | 1.0        | 0.06            | 1.06                    | 94      |\n| 100       | 10  | 1.0        | 0.08            | 1.08                    | 92      |\n| 100       | 2   | 1.0        | 0.4             | 1.4                     | 71      |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why do non-idealities occur?",
+                "answer_type": "Paragraph",
+                "answer": "In addition to nonidealities caused by ions during the passivation phase, nonidealities can also occur by chlorine fluxes onto the wafer during the ion bombardment phase, a condition that can also result in continuous etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does Cl persist even after purging?",
+                "answer_type": "Paragraph",
+                "answer": "While long purge times can be used to eliminate most of the gas phase Cl remaining in the chamber from the passivation phase, etch products released from the wafer during the ion bombardment phase are themselves chlorine containing. These etch products can be dissociated by electron impact in the plasma, or they can deposit on the chamber walls which can then act as a source of Cl radicals under ion bombardment. Cl may also be adsorbed onto any surface in contact with the plasma during the passivation phase, and desorb during the etching phase. While the actual source of Cl radicals during the ion bombardment phase is likely not Cl2 gas in the feedstock gases, it is convenient to quantify the level of Cl contamination by parts-per-million (ppm) of Cl2 in the gas phase."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What can be concluded from the etch per cycle as a function of Cl flux?",
+                "answer_type": "Paragraph",
+                "answer": "That increasing concentrations of Cl2 result in increased EPC and decreased Sy due to the continuous etching enabled by even these small Cl fluxes."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is Cl flux calculated?",
+                "answer_type": "Factoid",
+                "answer": "the HPEM was used to calculate the Cl flux to the surface of the wafer when the feedstock Ar gas contained 1, 10, and 100 ppm of Cl2."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 8,
+            "width": 568,
+            "height": 519
+        }
+    }
+}

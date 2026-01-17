@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/3/fig_13",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "heatmap"
+    },
+    "summarization": {
+        "a": "The line chart illustrates the relationship between ALE synergy and ion bombardment time, showing a peak at around 0.5 seconds.",
+        "b": "The heatmap visualizes the ALE synergy across different passivation times and ion bombardment times, with color intensity indicating the level of synergy."
+    },
+    "data_extraction": {
+        "a": "| Ion Bombardment Time (Ti, s) | ALE Synergy (%) Tp = 44 ms | Tp = 66 ms | Tp = 88 ms |\n|------------------------------|----------------------------|------------|------------|\n| 0.00                         | 90                         | 85         | 82         |\n| 0.25                         | 93                         | 91         | 86         |\n| 0.50                         | 92                         | 89         | 87         |\n| 0.75                         | 89                         | 87         | 86         |\n| 1.00                         | 87                         | 86         | 85         |\n| 1.25                         | 85                         | 84         | 82         |\n| 1.50                         | 84                         | 83         | 81         |",
+        "b": "| Passivation Time (Tp, ms) | Ion Bombardment Time (Ti, s) | ALE Synergy (%) |\n|---------------------------|------------------------------|------------------|\n| 5                         | 0.30                         | ~75             |\n| 25                        | 0.30                         | ~85             |\n| 45                        | 0.30                         | ~90             |\n| 64                        | 0.30                         | ~88             |\n| 84                        | 0.30                         | ~85             |\n| 104                       | 0.30                         | ~82             |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens during short ion bombardment time?",
+                "answer_type": "Paragraph",
+                "answer": "For short TI (<0.15 s), a large fraction of the passivated Si which covers the surface of the feature is not removed during the ion bombardment step. The continuous etching produced by ions in the passivation phase then makes a significant contribution to the total rate of etching, which then lowers Sy."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens during large ion bombardment time?",
+                "answer_type": "Paragraph",
+                "answer": "For long TI (>1 s), the passivated Si covering the feature is completely removed and the now bare silicon is exposed to ion bombardment for an extended time. The continuous etching produced during the ion bombardment step by the presence of chlorine radicals and physical sputtering then accounts for a significant portion of the EPC, which then lowers Sy"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "which is the optimized process time?",
+                "answer_type": "Paragraph",
+                "answer": "In general, to minimize nonidealities during ALE, the  optimized process should use the shortest pulse times which result in ~1ML material removal per cycle for the largest AR feature being etched. These optimized process times will be given by the point closest to the origin on the solid line in image (b). These conditions also correspond to the smallest contribution of continuous chemical sputtering, and will result in the smoothest surface and widest processing window in terms of AR."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does ALE synergy, Sy, also depend on ALE step times?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 0,
+            "y": 433,
+            "width": 572,
+            "height": 549
+        },
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 568,
+            "height": 423
+        }
+    }
+}

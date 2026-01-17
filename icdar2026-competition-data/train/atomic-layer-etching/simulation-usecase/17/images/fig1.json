@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/17/fig1",
+    "classification": {
+        "a": "grouped bar chart",
+        "b": "grouped bar chart"
+    },
+    "summarization": {
+        "a": "The figure shows the consumption of HF at different feed flow rates, along with the half-cycle time for G0 and G3 processes for Step A.",
+        "b": "The figure shows the consumption of TMA at different feed flow rates, along with the half-cycle time for G0 and G3 processes for Step B."
+    },
+    "data_extraction": {
+        "a": "| HF Feed Flow Rate (sccm) | G0: HF Consumed (\u00d710\u2075 std cm\u00b3/year) | G3: HF Consumed (\u00d710\u2075 std cm\u00b3/year) | G0: Half-Cycle Time (s) | G3: Half-Cycle Time (s) |\n|---------------------------|--------------------------------------|--------------------------------------|---------------------------|---------------------------|\n| 50                         | 0.5                                  | 0.5                                  | 1.6                       | 1.6                       |\n| 150                       | 1.2                                  | 1.2                                  | 1.4                       | 1.4                       |\n| 300                       | 2.5                                  | 2.5                                  | 1.4                       | 1.4                       |\n| 600                       | 4.8                                  | 4.2                                  | 1.3                       | 1.2                       |\n| 600                       | 5.8                                  | 5.3                                  | 1.1                       | 1.0                       |",
+        "b": "| TMA Feed Flow Rate (sccm) | G0: TMA Consumed (\u00d710\u2075 std cm\u00b3/year) | G3: TMA Consumed (\u00d710\u2075 std cm\u00b3/year) | G0: Half-Cycle Time (s) | G3: Half-Cycle Time (s) |\n|----------------------------|---------------------------------------|---------------------------------------|---------------------------|---------------------------|\n| 70                         | 1.0                                   | 1.0                                    | 2.5                       | 2.5                       |   \n| 150                        | 2.2                                   | 2.2                                   | 2.5                       | 2.5                       |\n| 300                        | 4.2                                   | 4.2                                   | 2.4                       | 2.4                       |\n| 600                        | 7.8                                  | 7.0                                    | 2.1                       | 1.8                       |\n| 900                        | 10                                   |9.8                                      | 1.8                       | 1.8                      |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does G3 reactor process always consume less than G0?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "When does the HF half cycle time and TMA half cycle time change?",
+                "answer_type": "List",
+                "answer": "For both reactors, the HF cycle time and TMA cycle time remain constant until 500 sccm and change respectively when\n1. HF flow rate is 600 and 900 sccm\n2. TMA flow rate is 600 and 900 sccm."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How are the precusor consumptions estimated?",
+                "answer_type": "Paragraph",
+                "answer": "The annual feed consumption is calculated by assuming that 96 cycles of etching are conducted daily and that the half-cycle times for each feed flow rate remain constant with each cycle in a single wafer system. The estimates for the precursor consumption are calculated for a single wafer."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which reactor saves HF?",
+                "answer_type": "Paragraph",
+                "answer": "The results for Step A a indicate that the half-cycle time for Step A for G3 is consistently faster compared to that of G0. Thus, the amount of precursor needed to ensure complete coverage is less than that of G0. By utilizing G3, at least 1.3 \u00d710 3 std cm 3 and at most 5.5 \u00d710 4 std cm 3 of HF can be saved for the range of the simulated flow rates with 600 sccm flow rate achieving the greatest amount of precursor that could be saved"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 9,
+            "width": 613,
+            "height": 433
+        },
+        "b": {
+            "x": 644,
+            "y": 11,
+            "width": 632,
+            "height": 431
+        }
+    }
+}

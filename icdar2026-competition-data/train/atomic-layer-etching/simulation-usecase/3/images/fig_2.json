@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/3/fig_2",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The chart shows the etch depth and roughness over time during a process involving alternating cycles of Ar+ and Cl treatments.",
+        "b": "The chart illustrates the surface coverage of Si, SiCl, SiCl2, and SiCl3 along with the average chlorine site over time during a process involving Cl and Ar+ treatments."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Etch Depth (ML) | Roughness |\n|----------|-----------------|-----------|\n| 3.0      | 0              | 0.00      |\n| 6.5      | -1.5           | 1.00      |\n| 10.0     | -3.0           | 1.00      |\n| 13.5     | -4.5           | 1.00      |\n| 17.0     | -5.0           | 0.00      |",
+        "b": "| Time (s) | Si Coverage | <Cl> | SiCl3 | SiCl2 | SiCl |\n|----------|-------------|------|-------|-------|------|\n| 3.0      | 1.00        | 0.00 | 0.00  | 0.00  | 0.00 |\n| 3.3      | 0.00        | 2.80 | 0.80  | 0.50  | 0.20 |\n| 4.8      | 0.90        | 0.50 | 0.10  | 0.05  | 0.00 |\n| 6.8      | 1.00        | 2.90 | 0.90  | 0.60  | 0.30 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the surface coverage over time reveal?",
+                "answer_type": "Paragraph",
+                "answer": "The surface coverages of SiClx plotted as a function of time for one ALE cycle indicate that there is a short (50 ms) transient period at the beginning\nof the Cl passivation step where SiClx x<3 species dominate."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens after the transient period?",
+                "answer_type": "List",
+                "answer": "After the initial transient the surface quickly establishes a steady state coverage of \n1. 1% SiCl\n2. 21% SiCl2\n3. 78% SiCl3\nmaking an average chlorination per surface site, <Cl>, of 2.77."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the etch proceed?",
+                "answer_type": "Paragraph",
+                "answer": "The etch depth as a function of time for the AR2 feature shows exactly one ML of material being removed in each ALE cycle from the second cycle after starting the etch, to the fifth cycle. The roughness increases at the beginning of each ion bombardment step as the passivated layer is partially and statistically eroded."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the roughness become zero?",
+                "answer_type": "Yes/No",
+                "answer": "Yes after etching"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 11,
+            "y": 8,
+            "width": 561,
+            "height": 448
+        },
+        "b": {
+            "x": 0,
+            "y": 501,
+            "width": 572,
+            "height": 427
+        }
+    }
+}

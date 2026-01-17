@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/15/fig_1",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows silicon ALE using cyclic Cl\u2082 adsorption and Ar\u207a bombardment, producing a characteristic stair-step etch profile. Material removal occurs only during the ion step, confirming the self-limiting ALE sequence. The etch per cycle increases with ion energy, from ~3 \u00c5 at 40 eV to ~11 \u00c5 at 100 eV after 8 cycles, indicating that higher energies may exceed the monolayer-limited regime."
+    },
+    "data_extraction": {
+        "a": "| Cycle number | Si etched (\u00c5) | Ion energy (eV) |\n|-------------:|--------------:|---------------:|\n| 1 | 0.3 | 40  |\n| 1 | 0.6 | 60  |\n| 1 | 1.0 | 80  |\n| 1 | 1.4 | 100 |\n| 2 | 0.5 | 40  |\n| 2 | 1.0 | 60  |\n| 2 | 1.7 | 80  |\n| 2 | 2.6 | 100 |\n| 3 | 0.8 | 40  |\n| 3 | 1.6 | 60  |\n| 3 | 2.5 | 80  |\n| 3 | 3.6 | 100 |\n| 4 | 1.2 | 40  |\n| 4 | 2.2 | 60  |\n| 4 | 3.5 | 80  |\n| 4 | 5.0 | 100 |\n| 5 | 1.7 | 40  |\n| 5 | 3.0 | 60  |\n| 5 | 4.8 | 80  |\n| 5 | 6.7 | 100 |\n| 6 | 2.1 | 40  |\n| 6 | 3.9 | 60  |\n| 6 | 5.8 | 80  |\n| 6 | 8.0 | 100 |\n| 7 | 2.6 | 40  |\n| 7 | 4.5 | 60  |\n| 7 | 6.8 | 80  |\n| 7 | 9.2 | 100 |\n| 8 | 3.1 | 40  |\n| 8 | 5.2 | 60  |\n| 8 | 7.7 | 80  |\n| 8 | 10.8| 100 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Observe the flat horizontal segments of the lines (labeled Cl2). If the line started sloping upward during this Cl_2 step (before the Ar^+ pulse), what 'Parasitic' reaction would that indicate is happening in the chamber?",
+                "answer_type": "Paragraph",
+                "answer": "Spontaneous Chemical Etching. Ideally, Cl_2 should only adsorb. If the line rises, it means the chlorine is etching the silicon spontaneously without ion activation, destroying the precision of the ALE process."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "To etch a delicate nano-fin structure without damaging the sidewalls, would you choose the 40 eV (Blue) or 100 eV (Black) recipe? Why is the 'slower' process the correct engineering choice here?",
+                "answer_type": "Paragraph",
+                "answer": "40 eV (Blue). Although slower, the lower energy ensures the etch is strictly limited to the surface surface. The 100 eV ions would cause sidewall sputtering or corner rounding, ruining the shape of the delicate nano-fin."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Compare the step height of the Black line (100 eV) with that of the Blue line (40 eV). Given that a single atomic layer of silicon is approximately 1.36 \u00c5, which energy setting is likely removing more than one monolayer per cycle, and what risk does this pose to the substrate?",
+                "answer_type": "Paragraph",
+                "answer": "100 eV (Black). It removes >1.3 \u00c5 per cycle (steeper steps). This poses a risk of sub-surface damage or amorphization, as the high-energy ions penetrate deeper than the chemically modified surface layer."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If the Argon ion pulse was skipped entirely in Cycle 4 (a hardware fault), how would the graph shape change for that specific cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The line would stay flat. Without the kinetic energy of the Ar^+ ions to knock off the chlorinated layer, no material would be removed, resulting in a 'missed step' in the staircase pattern."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 3,
+            "width": 1002,
+            "height": 458
+        }
+    }
+}

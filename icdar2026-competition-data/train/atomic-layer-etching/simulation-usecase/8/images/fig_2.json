@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/8/fig_2",
+    "classification": {
+        "a": "process flow diagram"
+    },
+    "summarization": {
+        "a": "A process flow diagram illustrating the sequence of operations and gas flow rates during two half-cycles (A and B) in a plasma process."
+    },
+    "data_extraction": {
+        "a": "| Time (s)| Ar (sccm)| SF6 (sccm)|TMA (pulses)|Pressure (mTorr)|ICP(W)|\n|---|---|---|---|---|---|\n|0-5|150|50|0|100|0|\n|5-15|150|50|0|100|100|\n|15-25|300|0|0|-|0|\n|25-33.4|10|0|4|150|0|\n|33.4-58.4|300|0|0|-|0|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What processing gas is used in this reactor?",
+                "answer_type": "Paragraph",
+                "answer": "a\tArgon is used as processing gas, this is usually done as it is inert."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is the ICP not turned on the moment SF6 is in the reactor chamber?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe gas mixture in the reactor chamber first has to stabilize, so there is a wait step before the plasma is turned on."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is TMA not dosed continuously?",
+                "answer_type": "Paragraph",
+                "answer": "a\tTMA is usually dosed in a vapor drawn fashion, this method is not suited to continuous dosing as this will reduce the controllability."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How are the two half-cycles seperated?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe two half-cycles are seperated by purging steps, where high flows of argon are used to flush the reactor chamber."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 1,
+            "width": 1181,
+            "height": 376
+        }
+    }
+}

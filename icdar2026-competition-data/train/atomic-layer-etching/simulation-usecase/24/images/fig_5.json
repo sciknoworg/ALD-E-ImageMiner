@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/24/fig_5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the changes on the film thickness of various materials (TiN, SiO_2, Si_3N_4, HfO_2, Al_2O_3, ZrO_2) over cycles with Sn(acac)2 at 200 \u00b0C.",
+        "b": "The figure shows the changes on the film thickness of various materials (TiN, SiO_2, Si_3N_4, HfO_2, Al_2O_3, ZrO_2) over cycles with TMA at 300 \u00b0C."
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | TiN | SiO_2 | Si_3N_4 | HfO_2 | Al_2O_3 | ZrO_2 |\n|---|---|---|---|---|---|---|\n| 0 | 70 | 50 | 40 | 50 | 48 | 50 | \n| 100 | 70 | 50 | 40 | 48 | 20 | 40 | \n| 200 | 70 | 50 | 40 | 45 | 0 | 30 | \n| 300 | - | - | - | - | - | - | \n| 400 | 70 | 50 | 40 | 38 | 0 | 0 |",
+        "b": "| Number of Cycles | TiN | SiO_2 | Si_3N_4 | HfO_2 | Al_2O_3 | ZrO_2 |\n|---|---|---|---|---|---|---|\n| 0 | 70 | 50 | 40 | 50 | 48 | 50 |\n| 100 | - | - | - | 48 | 20 | 50 | \n| 200 | - | - | - | 45 | 0 | 53 | \n| 300 | - | - | - | - | - | - | \n| 400 | 75 | 48 | 38 | 35 | 0 | 50 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "How does the film thickness change for TiN with Sn(acac)2 or TMA dosing?",
+                "answer_type": "Factoid",
+                "answer": "The film thickness for TiN remains approximately constant for the ALE cycle with Sn(acac)2, but increases for the ALE cycle with TMA."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which parameters are evaluated?",
+                "answer_type": "Factoid",
+                "answer": "The film thickness was studied as a function of the number of cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the film thickness changes over the number of cycles?",
+                "answer_type": "Factoid",
+                "answer": "As the number of cycles increases the thickness of the HfO2, ZrO2 and Al2O3 film decreases, but the thickness of the TiN, SiO2 and Si3N4 films remains approximately constant."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which materials have the lowest film thickness?",
+                "answer_type": "Factoid",
+                "answer": "As can be seen in the subfigure a, Al2O3 has the lowest film thickness at 100 and 200 cycles. Then, at 300 cycles, both Al2O3 and ZrO3 exhibit a value of 0."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 631,
+            "y": 4,
+            "width": 573,
+            "height": 463
+        },
+        "a": {
+            "x": 1,
+            "y": 3,
+            "width": 621,
+            "height": 467
+        }
+    }
+}

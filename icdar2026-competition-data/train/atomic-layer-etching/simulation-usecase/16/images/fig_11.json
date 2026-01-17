@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/16/fig_11",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "A scatter plot showing the relationship between velocity (mm/s) and etching per cycle (\u00c5/cycle). The etching decreases as the velocity increases.",
+        "b": "A scatter plot showing the etching per cycle (\u00c5/cycle) at different substrate positions (mm) for velocities of 80 mm/s, 120 mm/s, and 160 mm/s. The etching remains relatively constant across the substrate positions for each velocity."
+    },
+    "data_extraction": {
+        "a": "| Velocity (mm/s) | Etching per cycle (\u00c5/cycle) |\n|---|---|\n| 0 | 0.47 |\n| 50 | 0.42 |\n| 100 | 0.26 |\n| 150 | 0.15 |",
+        "b": "| Substrate position (mm) | Etching per cycle (\u00c5/cycle) 80 |Etching per cycle (\u00c5/cycle) 120 |Etching per cycle (\u00c5/cycle) 160 |\n|---|---|---|---|\n| 0 | 0.36 | 0.22 | 0.1 |\n| 0.1 | 0.36 | 0.22 | 0.1 |\n| 0.2 | 0.36 | 0.22 | 0.1 |\n| 0.3 | 0.36 | 0.22 | 0.1 |\n| 0.4 | 0.36 | 0.22 | 0.1 |\n| 0.5 | 0.36 | 0.22 | 0.1 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the sample with velocity of 80 mm/s show the least fluctuations in uniformity?",
+                "answer_type": "Paragraph",
+                "answer": "b\tWith increasing velocity, the exposure time is decreasing. Usually long exposure times result in better uniformity."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the parameter that is changed when increasing the velocity, compared to temporal ALD and what is the relation?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe parameter that is changed is the dosing time or exposure time. The exposure time scales with 1/velocity."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the saturated EPC and what velocity is required for that?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe saturated EPC is 0.47 A/cycle, this is reached with a velocity below 40 mm/s."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the average EPC at a velocity of 80 mm/s?",
+                "answer_type": "Factoid",
+                "answer": "a\t0.36 mm/s"
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 3,
+            "y": 587,
+            "width": 658,
+            "height": 535
+        },
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 666,
+            "height": 522
+        }
+    }
+}
