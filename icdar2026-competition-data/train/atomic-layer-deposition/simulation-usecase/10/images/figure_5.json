@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/10/figure_5",
+    "classification": {
+        "a": "reaction scheme",
+        "b": "reaction scheme"
+    },
+    "summarization": {
+        "a": "DFT-computed energy profile (PBE-D3) for InCp chemisorption on hydrogenated silicon (Si-H termination). The reaction is endothermic with a final energy of +0.31 eV and an activation barrier of 0.36 eV. Molecular snapshots show the InCp precursor, transition state, and the surface-bound In species with released cyclopentadiene (HCp).",
+        "b": "DFT-computed energy profile for InCp chemisorption on hydroxylated silicon oxide (Si-OH termination). The reaction is exothermic with a final energy of -0.30 eV and a lower activation barrier of 0.28 eV. The favorable thermodynamics and kinetics on Si-OH compared to Si-H explain the selectivity of In2O3:H ALD."
+    },
+    "data_extraction": {
+        "a": "| Reaction Step | Energy (eV) |\n|---|---|\n| Initial State | 0.00 |\n| Transition State | 0.36 |\n| Final State | 0.31 |",
+        "b": "| Reaction Step | Energy (eV) |\n|---|---|\n| Initial State | 0.00 |\n| Transition State | 0.28 |\n| Final State | -0.30 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the kinetic barrier and overall reaction energy differ between (a) and (b)?",
+                "answer_type": "Paragraph",
+                "answer": "Panel (a) shows a larger barrier (0.36 eV) and ends above the starting energy (~+0.31 eV), so it is less favorable thermodynamically. Panel (b) shows a smaller barrier (0.28 eV) and ends below the start (~\u22120.30 eV), so it is more favorable. Overall, (b) is both kinetically and thermodynamically more favorable than (a)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does a negative final-state energy in panel (b) imply about the surface interaction compared with panel (a)?",
+                "answer_type": "Paragraph",
+                "answer": "A negative final-state energy indicates a more stable bound/relaxed product state on that surface. Here, the oxygen-containing surface model in (b) stabilizes the final state much more than the oxygen-free surface in (a). This is consistent with the idea that surface termination strongly affects adsorption/reaction energetics and therefore nucleation behavior."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do the axes and symbols represent in each panel?",
+                "answer_type": "List",
+                "answer": "y-axis: Energy (eV)\n\nx-axis: Reaction coordinate (\u00c5)\n\nBlack horizontal bars: discrete states (initial / intermediate / final)\n\nDashed line: the pathway connecting those states"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How can the energetic differences between (a) and (b) support area-selective ALD in this paper?",
+                "answer_type": "Paragraph",
+                "answer": "If one surface termination (like b) provides a lower barrier and an exothermic pathway, nucleation and growth will proceed there earlier and more reliably. Conversely, a higher-barrier, endothermic pathway (like a) can translate into a long nucleation delay and suppressed growth. That contrast is exactly what is exploited in area-selective ALD to obtain deposition on activated regions while inhibiting non-activated regions."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 0,
+            "y": 330,
+            "width": 510,
+            "height": 349
+        },
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 507,
+            "height": 329
+        }
+    }
+}

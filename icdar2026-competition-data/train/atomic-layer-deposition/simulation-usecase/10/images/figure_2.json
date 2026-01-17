@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/10/figure_2",
+    "classification": {
+        "a": "image panel",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "Photograph of a 4-inch Si(100) wafer coated with 10 nm a-Si:H, showing the letters \"TU/e\" patterned by direct-write ALD of In2O3:H (approximately 35 nm thick after 400 ALD cycles), demonstrating successful area-selective deposition at macroscopic scale.",
+        "b": "XPS spectra of the In 3d region comparing activated (black) and non-activated (red) areas. The activated area shows strong In 3d5/2 (approximately 444.5 eV) and In 3d3/2 (approximately 452 eV) peaks, while the non-activated area shows negligible indium signal, confirming excellent selectivity."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": "| Binding energy (eV) | activated area (10^5 counts/s) | non-activated area (10^5 counts/s) |\n|---|---|---|\n| 439 | 0.05 | 0.05 |\n| 441 | 0.10 | 0.05 |\n| 442 | 0.15 | 0.05 |\n| 443 | 0.50 | 0.05 |\n| 444 | 1.80 | 0.05 |\n| 445 | 2.90 | 0.05 |\n| 446 | 1.60 | 0.05 |\n| 447 | 0.50 | 0.05 |\n| 448 | 0.20 | 0.05 |\n| 449 | 0.15 | 0.05 |\n| 450 | 0.30 | 0.05 |\n| 451 | 1.00 | 0.05 |\n| 452 | 1.90 | 0.05 |\n| 452.5 | 2.10 | 0.05 |\n| 453 | 1.80 | 0.05 |\n| 454 | 0.70 | 0.05 |\n| 455 | 0.25 | 0.05 |\n| 457 | 0.10 | 0.05 |\n| 459 | 0.10 | 0.05 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does subfigure (b) compare, and how are the two areas identified?",
+                "answer_type": "List",
+                "answer": "It compares XPS spectra from two locations on the same sample.\n\nBlack curve: activated area\n\nRed curve: non-activated area"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the main difference between the activated and non-activated XPS signals, and what does it indicate?",
+                "answer_type": "Paragraph",
+                "answer": "The activated area shows strong peaks, while the non-activated area stays close to the baseline across the binding-energy window. This indicates that indium-containing material is present (or much thicker) only on the activated region. In other words, the data support strong area selectivity in the deposition process."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "From an XPS standpoint, why does a near-baseline signal on the non-activated region support \u201cnucleation delay\u201d on that surface?",
+                "answer_type": "Paragraph",
+                "answer": "XPS is surface-sensitive; if nucleation had occurred on the non-activated area, even a thin initial film would typically produce detectable indium-related features. The near-baseline response implies the surface remains largely uncovered by the deposited In\u2082O\u2083:H (or is below detection / extremely thin). This is consistent with a long nucleation delay on the non-activated, H-terminated Si surface."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is combining the optical pattern (a) with the XPS contrast (b) valuable for demonstrating a working AS-ALD patterning approach?",
+                "answer_type": "Paragraph",
+                "answer": "The optical photo shows that a macroscopic pattern is produced, but it does not by itself prove chemical selectivity. The XPS comparison verifies that the patterned regions differ strongly in composition (indium signal present vs absent/very low). Together, they provide both a visual and chemical validation of selective growth suitable for direct-write patterning."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 310,
+            "height": 232
+        },
+        "b": {
+            "x": 311,
+            "y": 4,
+            "width": 356,
+            "height": 267
+        }
+    }   
+}

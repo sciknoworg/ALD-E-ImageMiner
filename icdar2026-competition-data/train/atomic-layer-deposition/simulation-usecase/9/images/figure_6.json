@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/9/figure_6",
+    "classification": {
+        "a": "workflow diagram"
+    },
+    "summarization": {
+        "a": "The figure shows the main loop of a kinetic Monte Carlo (KMC) simulation. First, all possible events are filtered based on the current system state. Next, the time for each remaining event is calculated. The event with the smallest occurrence time is then selected and applied, which changes the system configuration. This update completes one KMC cycle, after which the process repeats to move the simulation forward in time."
+    },
+    "data_extraction": {
+        "a": ""
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the KMC cycle repeat after each configuration change?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the KMC workflow differ from a fixed time-step simulation?",
+                "answer_type": "Paragraph",
+                "answer": "In a fixed time-step method, the system is updated at regular time intervals, even if nothing important happens. In contrast, KMC advances time by jumping directly to the next event. This makes KMC more efficient for systems where events happen at irregular times, such as surface reactions in ALD or ALE."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which step calculates how long each possible event will take to occur?",
+                "answer_type": "Factoid",
+                "answer": "Specific occurrence times calculation."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is event filtering important in a KMC simulation?",
+                "answer_type": "List",
+                "answer": "-It removes events that cannot happen\n-It reduces unnecessary calculations\n-It keeps the simulation physically correct"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 668,
+            "height": 353
+        }
+    }
+}

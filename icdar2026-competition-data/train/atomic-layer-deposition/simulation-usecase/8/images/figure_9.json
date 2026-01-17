@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/8/figure_9",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the mass gain over time at different temperatures (27\u00b0C, 77\u00b0C, 127\u00b0C, 177\u00b0C). The mass gain increases stepwise with time, indicating a cumulative effect, characteristic of ALD."
+    },
+    "data_extraction": {
+        "a": "| Time / seconds | Mass-gain / ng cm\u207b\u00b2 27 | Mass-gain / ng cm\u207b\u00b2 77 | Mass-gain / ng cm\u207b\u00b2 127 | Mass-gain / ng cm\u207b\u00b2 177 |\n|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 |\n| 1 | 120 | 120 | 120 | 120 |\n| 2 | 225|250|300|300|\n| 4 | 300 |350|450|450|\n| 6 | 300 |450|600|600|\n| 8 | 300 |740|900|900|\n| 10 | 375 |850|1050|1050|\n| 12 | 375 |975|1200|1200|\n| 14 | 375 |1100|1350|1350|\n| 16 | 375 |1250|1500|1500|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the duration of a single cycle and how can this be concluded from the graph?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe duration of single cycle is 1.6 seconds. This can be concluded from the graph that there are 10 cycles in a time span of 16 seconds in the figure."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is there cyclic growth for the process at 27 degrees?",
+                "answer_type": "Paragraph",
+                "answer": "a\tNo there is no cyclic growth. For ALD the increase every cycle should be the same, this is not the case fpr 27 degrees Celcius."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For which temperatures do the GPCs overlap?",
+                "answer_type": "List",
+                "answer": "a\t127 and 177 degrees Celcius."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is a processing temperature of 77 degrees not preferred when working with water as one of the reactants?",
+                "answer_type": "Paragraph",
+                "answer": "a\tWater can condensate below a 100 degrees Celcius, so a process temperature of 77 degrees can result in liquid water in the reactor."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 609,
+            "height": 482
+        }
+    }
+}

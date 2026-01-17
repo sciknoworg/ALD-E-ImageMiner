@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/8/figure_10",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the mass deposited per unit area over time during a ZnO ALD process according to simulations. It includes labeled phases such as 'Dose DEZ', 'Purge', 'Dose H<sub>2</sub>O', and 'Purge'.",
+        "b": "The chart illustrates the mass deposited over time during a ZnO ALD process according to experimental data. It includes labeled phases such as 'Dose DEZ', 'Purge', 'Dose H<sub>2</sub>O', and 'Purge'."
+    },
+    "data_extraction": {
+        "a": "|Time (s)| Mass deposited / ng cm<sup>-2</sup> | \n|---|---|\n| 0.0 | 155 |\n|0.4| 155 |\n|0.8|160|\n|1.2|155|\n|1.6|155|",
+        "b": "|Time (s)| Mass deposited / ng cm<sup>-2</sup> | \n|---|---|\n| 0 | 120 |\n|2| 115 |\n|4|115|\n|6|110|\n|7|120|\n|8|115|\n|10|115|\n|12|115|"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is there more of a gradual increase upon DEZ exposure in stead of a step-like function for simulations?",
+                "answer_type": "Paragraph",
+                "answer": "b\tThe gradual increase is related to the reordering at the surface to reach perfect saturation, which will not happen right from the start. It could be that this is not incorporated in the model."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How long does a single cycle take and where is room for improvement on efficiency?",
+                "answer_type": "Paragraph",
+                "answer": "b\tThe duration of a single cycle is 12 s. It seems as if the purge after the water dose is longer than required."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the duration of the DEZ pulse?",
+                "answer_type": "Factoid",
+                "answer": "a\t0.7 s"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is there initially a mass increase upon water exposure which decreases over time?",
+                "answer_type": "Paragraph",
+                "answer": "a\tIt could be that water initially physisorbs at the surface after which the ligands are removed. Leading to a mass increase first."
+            }
+        ]
+    },
+    "bbox": {
+        "b": {
+            "x": 554,
+            "y": 7,
+            "width": 426,
+            "height": 427
+        },
+        "a": {
+            "x": 1,
+            "y": 4,
+            "width": 515,
+            "height": 405
+        }
+    }
+}

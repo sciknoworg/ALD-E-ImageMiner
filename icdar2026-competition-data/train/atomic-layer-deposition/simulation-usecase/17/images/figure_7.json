@@ -1,0 +1,67 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/17/figure_7",
+    "classification": {
+        "a": "bar chart",
+        "b": "bar chart",
+        "c": "unknown"
+    },
+    "summarization": {
+        "a": "The bar chart represents the Density functional theory model schematics used to calculate metal co-segregation on the B-site with a cation exchange and O vacancy where the co-segregation energy is represented in eV of the deposited metal",
+        "b": "The bar chart represents  the exchange energy comparison of the different deposited transition metals showing two different regions 'Exchangeable region' and 'Non-exchangeable region'."
+    },
+    "data_extraction": {
+        "a": "| Deposited metal | Cosegregation energy (eV) |\n|---|---|\n| Ti | -0.12 |\n| Cr | -1.05 |\n| Fe | -1.45 |\n| Mn | -1.89 |\n| Co | -2.92 |\n| Ni | -3.32 |\n| Cu | -4.32 |",
+        "b": "| Deposited metal | Exchange energy (eV) |\n|---|---|\n| Ti | -3.2 |\n| Cr | -2.27 |\n| Fe | -1.87 |\n| Mn | -1.43 |\n| Co | -0.4 |\n| Ni | 0 |\n| Cu | 1.0 |",
+        "c": ""
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "The \"non-exchangeable region\" (energy > 0) contains Ni and Cu. What does this imply for designing a material where you desire in-situ formation of surface Ni nanoparticles without any external metal deposition?",
+                "answer_type": "Paragraph",
+                "answer": "This implies it is thermodynamically unfavorable for Ni to spontaneously exsolve from this specific host oxide on its own. To form Ni nanoparticles, you cannot rely on self-exsolution; you must use an external driving force, such as the ALD-deposited Fe layer shown in figure (a), to provide the chemical potential gradient needed to pull Ni to the surface."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the negative sign across all values indicate about the spontaneity of this process?",
+                "answer_type": "Paragraph",
+                "answer": "The  negative sign indicates that the co-segregation or exchange process is exothermic and spontaneous for all these metals. This suggests that once the metal is deposited and thermal energy is applied, the system will naturally move toward the exchanged state without requiring additional energy input to drive the reaction."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the strategy of using ALD-deposited Fe to trigger Ni exsolution versus a traditional method of simply doping the bulk material with Fe during synthesis. Under a constraint of needing surface-specific exsolution without altering the bulk electrical properties, which method is superior?",
+                "answer_type": "Paragraph",
+                "answer": "The ALD-deposited Fe method is superior. Traditional bulk Fe doping would homogeneously alter the composition and, thus, the bulk electronic properties. ALD deposits Fe only on the surface, creating a localized driving force for Ni to exsolve from the immediate sub-surface without changing the bulk's intrinsic properties."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on the trend from Ti to Cu, how does the type of deposited transition metal affect the thermodynamic driving force for exchanging with bulk Ni? What underlying atomic property likely governs this trend?",
+                "answer_type": "Paragraph",
+                "answer": "The driving force becomes more favorable (more negative energy) as you move from Ti to Fe, then becomes less favorable after Fe through Cu. Fe is the most favorable. This trend is likely governed by the metal's binding energy or oxidation state stability within the specific host oxide lattice, with Fe achieving the optimal ionic size and charge match to minimize the system's total energy upon exchange."
+            }
+        ]
+    },
+    "bbox": {
+        "c": {
+            "x": 6,
+            "y": 575,
+            "width": 1321,
+            "height": 480
+        },
+        "b": {
+            "x": 670,
+            "y": 12,
+            "width": 660,
+            "height": 531
+        },
+        "a": {
+            "x": 1,
+            "y": 5,
+            "width": 645,
+            "height": 534
+        }
+    }
+}

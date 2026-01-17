@@ -1,0 +1,69 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/10/figure_3",
+    "classification": {
+        "a": "image panel",
+        "b": "multiple line chart",
+        "c": "line chart"
+    },
+    "summarization": {
+        "a": "Optical photo of a patterned/printed region on a substrate, used to show a visible contrast between deposited and non-deposited areas along a line.",
+        "b": "EDX line-scan composition across the pattern: In and O (from In\u2082O\u2083:H) atomic percentages vs distance (mm). In and O are high on the deposited regions (near the ends of the scan) and drop to ~0 over the non-deposited middle region, indicating strong lateral selectivity.",
+        "c": "EDX line-scan Si atomic percentage vs distance. Si is low where In/O are high (film-covered regions) and high in the central region where In/O are near zero (exposed substrate), complementing panel (b)."
+    },
+    "data_extraction": {
+        "b": "| Distance (mm) | In (Atomic %) | O (In2O3:H) (Atomic %) |\n|---|---|---|\n| 0.0 | 8.0 | 12.0 |\n| 0.8 | 31.0 | 51.5 |\n| 1.6 | 31.0 | 51.0 |\n| 2.4 | 31.0 | 55.0 |\n| 3.2 | 25.0 | 41.0 |\n| 4.0 | 1.5 | 2.0 |\n| 4.8 | 0.0 | 0.0 |\n| 5.6 | 0.0 | 0.0 |\n| 6.4 | 0.0 | 0.0 |\n| 7.2 | 0.0 | 0.0 |\n| 8.0 | 0.0 | 0.0 |\n| 8.8 | 0.0 | 0.0 |\n| 9.6 | 0.0 | 0.0 |\n| 10.4 | 0.0 | 0.0 |\n| 11.2 | 0.0 | 0.0 |\n| 12.0 | 0.0 | 0.0 |\n| 12.8 | 0.0 | 0.0 |\n| 13.6 | 0.0 | 0.0 |\n| 14.4 | 0.0 | 0.5 |\n| 15.2 | 14.0 | 24.0 |\n| 16.0 | 30.0 | 51.0 |\n| 16.8 | 12.0 | 20.0 |\n| 17.6 | 0.5 | 0.5 |\n| 18.4 | 0.5 | 0.5 |",
+        "c": "| Distance (mm) | Si (Atomic %) |\n|---|---|\n| 0.0 | 47.0 |\n| 0.8 | 2.0 |\n| 1.6 | 2.0 |\n| 2.4 | 2.0 |\n| 3.2 | 13.0 |\n| 4.0 | 66.0 |\n| 4.8 | 72.0 |\n| 5.6 | 73.0 |\n| 6.4 | 73.0 |\n| 7.2 | 73.5 |\n| 8.0 | 74.0 |\n| 8.8 | 73.0 |\n| 9.6 | 75.0 |\n| 10.4 | 74.0 |\n| 11.2 | 74.0 |\n| 12.0 | 74.0 |\n| 12.8 | 74.5 |\n| 13.6 | 74.0 |\n| 14.4 | 73.0 |\n| 15.2 | 35.0 |\n| 16.0 | 3.0 |\n| 16.8 | 37.0 |\n| 17.6 | 72.0 |\n| 18.4 | 73.0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is a millimeter-scale composition line scan useful for evaluating pattern fidelity in this AS-ALD approach?",
+                "answer_type": "Paragraph",
+                "answer": "It quantifies the lateral chemical contrast over a macroscopic distance, not just a single point. The steep transitions between In/O-rich and Si-rich regions provide a practical measure of pattern edge sharpness and selectivity. This supports claims that the process can produce patterned films over device-relevant length scales."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is plotted in (b) and (c), and what is the x-axis?",
+                "answer_type": "List",
+                "answer": "(b) Atomic % of In and O (In\u2082O\u2083:H) vs distance\n\n(c) Atomic % of Si vs distance\n\nx-axis (both): distance (mm) along the measured line scan"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the near-zero In and O signal over most of the scan imply about nucleation on the non-activated region?",
+                "answer_type": "Paragraph",
+                "answer": "It implies that nucleation (and thus measurable film growth) is strongly suppressed on the non-activated surface over that lateral region. If significant nucleation had occurred, In and O would remain detectible across a wider span. The sharp localization of In/O is consistent with a large nucleation delay difference between activated and non-activated areas."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the In/O signals in (b) relate to the Si signal in (c) across the scan?",
+                "answer_type": "Paragraph",
+                "answer": "Where In and O are high in (b), Si is low in (c), indicating those regions are covered by the In\u2082O\u2083:H film. In the middle section of the scan, In and O drop to ~0 while Si rises to a high level, indicating exposed substrate. This complementary behavior supports strong spatial selectivity of the deposition."
+            }
+        ]
+    },
+    "bbox": {
+        "c": {
+            "x": 3,
+            "y": 519,
+            "width": 504,
+            "height": 363
+        },
+        "b": {
+            "x": 0,
+            "y": 208,
+            "width": 507,
+            "height": 308
+        },
+        "a": {
+            "x": 85,
+            "y": -1,
+            "width": 425,
+            "height": 208
+        }
+    }
+}

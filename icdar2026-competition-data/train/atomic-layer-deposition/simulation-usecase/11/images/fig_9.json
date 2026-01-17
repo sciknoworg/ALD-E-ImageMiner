@@ -1,0 +1,77 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/11/fig_9",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multiple line chart",
+        "d": "multiple line chart"
+    },
+    "summarization": {
+        "a": "A line chart showing the normalized pressure of ligand and precursor species over time after a single dose, t_d = 0.2 s, \u03b2_1 = 10^-2.",
+        "b": "A line chart showing the normalized pressure of ligand and precursor species over time after a single dose, t_d = 0.4 s, \u03b2_1 = 10^-3.",
+        "c": "A line chart showing the normalized pressure of ligand and precursor species over time after microdose sequence, \u03b2_01 = 10^-2.",
+        "d": "A line chart showing the normalized pressure of ligand and precursor species over time after microdose sequence, \u03b2_02 = 10^-3."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Norm. pressure (p/p0) Ligand | Norm. pressure (p/p0) Precursor |\n|---|---|---|\n| 0.0 | 0.0 | 0.0 |\n| 0.2 | 0.0 | 0.0 |\n| 0.4 | 0.4 | 0.0 |\n| 0.6 | 0.2 | 0.2 |\n| 0.8 | 0.1 | 0.1 |\n| 1.0 | 0.0 | 0.0 |\n| 1.2 | 0.0 | 0.0 |",
+        "b": "| Time (s) | Norm. pressure (p/p0) Precursor | Norm. pressure (p/p0) Ligand |\n|---|---|---|\n| 0.0 | 0.0 | 0.0 |\n| 0.5 | 0.35 | 0.25 |\n| 1.0 | 0.75 | 0.1 |\n| 1.5 | 0.0 | 0.0 |",
+        "c": "| Time (s) | Norm. pressure (p/p0) Precursor | Norm. pressure (p/p0) Ligand |\n|---|---|---|\n| 0.0 | 0.0 | 0.0 |\n| 1.0 | 0.08 | 0.14 |\n| 2.0 | 0.02 | 0.02 |\n| 3.0 | 0.14 | 0.0 |\n| 4.0 | 0.16 | 0.0 |\n| 5.0 | 0.0 | 0.0 |",
+        "d": "| Time (s) | Norm. pressure (p/p0) Precursor | Norm. pressure (p/p0) Ligand |\n|---|---|---|\n| 0.0 | 0.0 | 0.0 |\n| 1.0 | 0.08 | 0.08 |\n| 2.0 | 0.01 | 0.02 |\n| 3.0 | 0.05 | 0.02 |\n| 4.0 | 0.15 | 0.03 |\n| 5.0 | 0.0 | 0.0 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the dosage time (t_d)?",
+                "answer_type": "Factoid",
+                "answer": "0.4 seconds."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the average precursor pressure at the inlet for all experiments?",
+                "answer_type": "Factoid",
+                "answer": "p_0 = 50 mTorr."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the dosage time (t_d)?",
+                "answer_type": "Factoid",
+                "answer": "0.2 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does this figure show about the influence of reaction probability on the temporal separation of precursor and by-product signals in QMS measurements?",
+                "answer_type": "Paragraph",
+                "answer": "For high reaction probabilities, the precursor reacts rapidly upon entering the reactor, leading to immediate release of reaction by-products and an offset between the by-product signal and the arrival of unreacted precursor. As the reaction probability decreases, this temporal separation diminishes, and precursor and by-product signals increasingly overlap. When a single dose is resolved into a sequence of microdoses, this effect becomes more pronounced: at high reaction probability, early microdoses are dominated by by-product signals followed by an abrupt transition to precursor-dominated signals, whereas at lower reaction probability both signals persist throughout the dosing sequence with a gradual transition."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 10,
+            "y": 13,
+            "width": 631,
+            "height": 316
+        },
+        "b": {
+            "x": 15,
+            "y": 354,
+            "width": 626,
+            "height": 301
+        },
+        "c": {
+            "x": 15,
+            "y": 677,
+            "width": 626,
+            "height": 304
+        },
+        "d": {
+            "x": 10,
+            "y": 983,
+            "width": 632,
+            "height": 331
+        }
+        }
+}

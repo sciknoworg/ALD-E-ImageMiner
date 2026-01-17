@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/17/figure_20",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The line chart image represents the fraction of Nitrogen(N) in terms of percentage as a function of various nitrogen-to-aluminium flux ratios (N : Al), values of a range from 0.8 to 2.8. The values of N fraction steadily seems to increase till 2 and then saturates at close to 50% of N fraction. The image also shows the molecular representation computed using Molecular dynamics at temperature of 1800K"
+    },
+    "data_extraction": {
+        "a": "| N : Al flux ratio | N fraction (%) |\n|---|---|\n| 0.8 | 42 |\n| 1.2 | 44 |\n| 1.6 | 49 |\n| 2.0 | 51 |\n| 2.4 | 51 |\n| 2.8 | 52 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does increasing the substrate temperature from 1,000 K to 2,000 K affect the deposition process in terms of growth rate and film quality?",
+                "answer_type": "List",
+                "answer": "Growth Rate: Decreases as temperature increases.\n\nCrystallinity: Enhances significantly up to 1,800 K, then saturates between 1,800 K and 2,000 K."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the film state at a flux ratio of 0.8 versus 2.4. Which deviation from stoichiometry (N-deficient vs. N-rich) is depicted,  which is more detrimental to crystallinity?",
+                "answer_type": "Paragraph",
+                "answer": "The N-deficient route (0.8) is more detrimental. The text explicitly links good crystallinity to a \"near 50% nitrogen fraction,\" and the visuals confirm that significant N-deficiency destroys the lattice order."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on the figure and caption, describe how the N:Al flux ratio controls the film's stoichiometry and, consequently, its crystallinity. What is the direct causal link between composition and structure here?",
+                "answer_type": "Paragraph",
+                "answer": "A higher N:Al flux ratio delivers more N atoms per Al atom to the growth surface, increasing the N fraction in the film toward the ideal 50%. The caption states that good crystallinity is linked to this near-stoichiometric composition. The cause is that a stoichiometric film minimizes point defects (Al or N vacancies) and anti-site defects, allowing atoms to find proper lattice positions and form a well-ordered crystal."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The data shows that a N:Al flux ratio >2.0 is needed to achieve ~50% N. What does this imply for designing a real reactor to grow high-quality, single-crystal AlN for a deep-UV LED ?",
+                "answer_type": "Paragraph",
+                "answer": "This implies the reactor must be capable of delivering a highly N-rich environment (flux ratio >2:1) to achieve stoichiometric films. For a deep-UV LED, the near-perfect crystallinity resulting from this stoichiometry is critical to minimize defect-related non-radiative recombination and ensure high internal quantum efficiency for efficient light emission."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 5,
+            "width": 650,
+            "height": 486
+        }
+    }
+}

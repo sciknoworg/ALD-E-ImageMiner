@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/8/figure_13",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the fraction of ethyl-ligands persisting at various temperatures. The simulated data points are represented by red squares, while the experimental data points are shown by gray triangles. The graph shows the fraction of ethyl-ligands persisting decreasing with increasing temperature."
+    },
+    "data_extraction": {
+        "a": "| Temperature / \u00b0C | Fraction of ethylligands persisting Simulated |Fraction of ethylligands persisting Long exposure |Fraction of ethylligands persisting short exposure |\n|---|---|---|---|\n| 25 | 0.83 |-|-|\n| 50 | 0.6 |-|-|\n| 75 | 0.5 |-|-|\n| 100 | 0.45 |0.3|0.75|\n| 120 | 0.45 |-|-|\n| 150 | 0.45 |0.15|0.55|\n| 180 | 0.45 |-|-|\n| 200 | - |0.05|0.12|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the experimental data overlap with the simulated data?",
+                "answer_type": "Paragraph",
+                "answer": "a\tBoth for long and short water exposures the experimental data does not overlap with the simulated data indicating that the model is incomplete."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is it likely that for short exposures there are more ligands remaining?",
+                "answer_type": "Paragraph",
+                "answer": "a\tWater is supposed to react with the ligands and remove them. If the exposure is shorter, it could be that there are less ligand removing reactions."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Will the process at 25 degrees result in sequential growth and why?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe fraction is close to one, this means that the ligands are not removed and therefore also not replaced with reactive surface sites to which new precursor molecules can adsorb. This means it is unlikely there will be any substantial growth at this temperature."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why should all the ligands be removed?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe layers grown with ALD are usually used in devices where carbon from ligands can degrade the material properties making them incompatible with the application of interest."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 619,
+            "height": 516
+        }
+    }
+}

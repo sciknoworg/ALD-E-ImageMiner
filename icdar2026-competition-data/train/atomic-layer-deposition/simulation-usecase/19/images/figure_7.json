@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/19/figure_7",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "bar chart"
+    },
+    "summarization": {
+        "a": "Transfer characteristics (drain current versus gate voltage) of IGZO TFTs under positive bias temperature stress (PBTS) for devices where individual cation layers (In, Ga, or Zn) are selectively treated with N\u2082O plasma, showing different degrees of threshold voltage shift.",
+        "b": "Summary of the corresponding threshold voltage shifts (\u0394V_TH), demonstrating that N\u2082O treatment during the gallium oxide sub-cycle significantly improves stability (~50% reduction), while treatment during the indium oxide sub-cycle degrades stability (\u224868% increase in \u0394V_TH)."
+    },
+    "data_extraction": {
+        "a": "| Gate voltage (V) | Pristine (A) | 100 s (A) | 500 s (A) | 1500 s (A) | 2500 s (A) | 3500 s (A) | 3600 s (A) | 7200 s (A) | 10000 s (A) |\n|------------------|--------------|-----------|-----------|------------|------------|------------|------------|------------|-------------|\n| -6               | 1e-12        | 1e-12     | 1e-12     | 1e-12      | 1e-12      | 1e-12      | 1e-12      | 1e-12      | 1e-12       |\n| -4               | 1e-11        | 1e-11     | 1e-11     | 1e-11      | 1e-11      | 1e-11      | 1e-11      | 1e-11      | 1e-11       |\n| -2               | 1e-10        | 1e-10     | 1e-10     | 1e-10      | 1e-10      | 1e-10      | 1e-10      | 1e-10      | 1e-10       |\n| 0                | 1e-9         | 1e-9      | 1e-9      | 1e-9       | 1e-9       | 1e-9       | 1e-9       | 1e-9       | 1e-9        |\n| 2                | 1e-7         | 1e-7      | 1e-7      | 1e-7       | 1e-7       | 1e-7       | 1e-7       | 1e-7       | 1e-7        |\n| 4                | 1e-5         | 1e-5      | 1e-5      | 1e-5       | 1e-5       | 1e-5       | 1e-5       | 1e-5       | 1e-5        |",
+        "b": "| Controlled cation elements | O\u2082 1s (Ref) \u0394V_TH (V) | N\u2082O 1s \u0394V_TH (V) | N\u2082O 5s \u0394V_TH (V) |\n|----------------------------|-----------------------|------------------|------------------|\n| Indium oxide               | ~2.4                  | ~1.6 (33% decrease) | ~1.2 (50% decrease) |\n| Gallium oxide              | ~2.0                  | ~1.0 (50% decrease) | ~0.8 (60% decrease) |\n| Zinc oxide                      | ~1.8                  | ~1.7 (8% decrease)  | ~1.6 (11% decrease) |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the bar chart data in label b  for \u201cGallium oxide\u201d versus \u201cIndium oxide.\u201d Which cation modification strategy results in a decrease in threshold voltage shift (\u0394V\ud835\udc47\ud835\udc3b) compared to the reference, and by approximately how much?",
+                "answer_type": "Factoid",
+                "answer": "Gallium oxide. The Gallium oxide modification results in a ~50% decrease in \u0394V\ud835\udc47\ud835\udc3b (improved stability), whereas the Indium oxide modification causes a ~68% increase (worsened stability) relative to the reference."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Physically, why does the \u201cControlled cation: Gallium oxide\u201d sample exhibit the smallest threshold voltage shift (\u0394V\ud835\udc47\ud835\udc3b = +0.45 V) under PBTS stress?",
+                "answer_type": "Paragraph",
+                "answer": "Suppression of oxygen vacancies. Gallium is a strong oxygen binder. Selective N\u2082O treatment during the Gallium cycle effectively reduces oxygen vacancies and defect states (which act as electron traps) without severely disrupting channel conduction, leading to the most stable device operation."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In the selective N\u2082O plasma treatment process, increasing the N\u2082O exposure from 1 s (Red line) to 5 s (Blue line) has a negligible effect on the Vth shift for the Zinc Oxide\u2013controlled cation. Yes or No?",
+                "answer_type": "Yes/No",
+                "answer": "No. For the Zinc Oxide\u2013controlled cation, increasing the N\u2082O exposure to 5 s significantly increases the instability, resulting in a \u0394V\ud835\udc47\ud835\udc3b of +0.83 V compared to the more stable Gallium condition (+0.45 V)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "For a high-reliability display backplane requiring minimal degradation over 10,000 s of operation at 95 \u00b0C, which specific selective plasma condition should be chosen?",
+                "answer_type": "Paragraph",
+                "answer": "Selective N\u2082O on Gallium Oxide. This condition yields the lowest \u0394V\ud835\udc47\ud835\udc3b (+0.45 V) compared to Indium (+1.51 V) or Zinc (+0.83 V), ensuring the most stable switching performance under thermal and bias stress."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 17,
+            "y": 11,
+            "width": 905,
+            "height": 349
+        },
+        "b": {
+            "x": 978,
+            "y": 38,
+            "width": 416,
+            "height": 316
+        }
+    }
+}

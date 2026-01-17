@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/10/figure_4",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the relationship between ALD cycles and the thickness of In_{2}O_{3}:H, with SiO_{2} and a-Si:H marked by different symbols"
+    },
+    "data_extraction": {
+        "a": "| ALD cycles | SiO\u2082 (nm) | a-Si:H (nm) |\n|---|---|---|\n| 0 | 0 | 0 |\n| 50 | 0 | 0 |\n| 100 | 2 | 0 |\n| 150 | 7 | 0 |\n| 200 | 12 | 0 |\n| 250 | 17 | 0 |\n| 300 | 22 | 0 |\n| 350 | 27 | 0 |\n| 400 | 32 | 0 |\n| 450 | 38 | 0 |\n| 500 | 43 | 0 |\n| 550 | 48 | 0 |\n| 600 | 53 | 0 |\n| 650 | 58 | 0 |\n| 700 | 63 | 0 |\n| 750 | 68 | 0 |\n| 800 | 75 | 10 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the axes and what do the symbols represent?",
+                "answer_type": "List",
+                "answer": "x-axis: ALD cycles\n\ny-axis: In\u2082O\u2083:H thickness (nm)\n\nTriangles: SiO\u2082 substrate\n\nCircles: a-Si:H substrate"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the growth behavior differ between SiO\u2082 and a-Si:H as the number of cycles increases?",
+                "answer_type": "Paragraph",
+                "answer": "On SiO\u2082, the film thickness increases steadily with cycle number after a small initial delay, indicating normal nucleation and a roughly constant growth per cycle. On a-Si:H, the thickness stays close to zero across most of the cycle range, indicating a long nucleation delay. Only at very high cycle count does measurable growth begin to appear on a-Si:H."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What surface-chemistry difference between SiO\u2082 and a-Si:H is consistent with the observed nucleation delay?",
+                "answer_type": "Paragraph",
+                "answer": "SiO\u2082 typically presents oxygen-containing / hydroxylated sites that can readily react with many ALD precursors, enabling fast nucleation. In contrast, a-Si:H is H-terminated and comparatively less reactive toward oxide ALD chemistry until it is modified (e.g., oxidized or activated). The plot is consistent with that difference: rapid nucleation on SiO\u2082 and strongly delayed nucleation on a-Si:H."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is this substrate-dependent nucleation delay important for area-selective ALD patterning?",
+                "answer_type": "Paragraph",
+                "answer": "Area-selective ALD relies on having one surface where growth proceeds and another where growth is delayed or suppressed over the desired number of cycles. The strong inhibition on a-Si:H relative to SiO\u2082 provides that selectivity window. This enables pattern formation by locally converting only selected regions into the \u201cfast nucleation\u201d surface while keeping the rest in the \u201cslow nucleation\u201d state."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 1,
+            "width": 520,
+            "height": 387
+        }
+    }
+}

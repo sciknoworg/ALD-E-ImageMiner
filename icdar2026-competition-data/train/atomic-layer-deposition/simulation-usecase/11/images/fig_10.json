@@ -1,0 +1,68 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/11/fig_10",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the reactor growth profiles for a soft-saturating self-limited model with two components, with \u03b2_1a = 10^-2 and \u03b2_1b = 10^-3.",
+        "b": "The figure shows the reactor growth profiles for a soft-saturating self-limited model with two components, with \u03b2_1a = 10^-2 and \u03b2_1b = 10^-4.",
+        "c": "The figure shows the reactor growth profiles with the same conditions as (b), but with four different dose times (t_d)."
+    },
+    "data_extraction": {
+        "a": "| Axial position (m) | f\u2082 = 0 | f\u2082 = 0.1 | f\u2082 = 0.2 | f\u2082 = 0.4 | f\u2082 = 0.6 | f\u2082 = 0.8 | f\u2082 = 1 |\n|---|---|---|---|---|---|---|---|\n| 0.00 | 1.00 | 0.95 | 0.90 | 0.80 | 0.65 | 0.55 | 0.45 |\n| 0.10 | 0.98 | 0.92 | 0.88 | 0.75 | 0.60 | 0.50 | 0.40 |\n| 0.20 | 0.85 | 0.80 | 0.75 | 0.65 | 0.55 | 0.45 | 0.35 |\n| 0.30 | 0.30 | 0.35 | 0.45 | 0.55 | 0.50 | 0.40 | 0.30 |\n| 0.40 | 0.05 | 0.10 | 0.15 | 0.30 | 0.35 | 0.30 | 0.25 |",
+        "b": "| Axial position (m) | f\u2082 = 0 | f\u2082 = 0.1 | f\u2082 = 0.2 | f\u2082 = 0.4 | f\u2082 = 0.6 | f\u2082 = 0.8 | f\u2082 = 1 |\n|---|---|---|---|---|---|---|---|\n| 0.00 | 1.00 | 0.95 | 0.85 | 0.65 | 0.45 | 0.25 | 0.08 |\n| 0.10 | 0.98 | 0.92 | 0.82 | 0.62 | 0.44 | 0.25 | 0.08 |\n| 0.20 | 0.90 | 0.85 | 0.75 | 0.60 | 0.43 | 0.25 | 0.08 |\n| 0.30 | 0.35 | 0.45 | 0.55 | 0.50 | 0.42 | 0.25 | 0.08 |\n| 0.40 | 0.08 | 0.12 | 0.20 | 0.40 | 0.40 | 0.25 | 0.08 |",
+        "c": "| Axial position (m) | t_d = 0.2 s | t_d = 0.3 s | t_d = 0.5 s | t_d = 1.0 s |\n|---|---|---|---|---|\n| 0.00 | 0.90 | 0.92 | 0.93 | 0.94 |\n| 0.10 | 0.88 | 0.91 | 0.92 | 0.94 |\n| 0.20 | 0.75 | 0.90 | 0.92 | 0.94 |\n| 0.30 | 0.40 | 0.88 | 0.92 | 0.94 |\n| 0.40 | 0.12 | 0.70 | 0.92 | 0.94 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the surface coverage at 0.1 m for f_2 = 0.1?",
+                "answer_type": "Factoid",
+                "answer": "Roughly 0.9."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the average precursor pressure at the inlet for all experiments?",
+                "answer_type": "Factoid",
+                "answer": "50 mTorr."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the dose time?",
+                "answer_type": "Factoid",
+                "answer": "0.2 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does this figure demonstrate about the influence of a slow self-limited reaction component on axial growth profiles and saturation behaviour in a tube reactor?",
+                "answer_type": "Paragraph",
+                "answer": "Figure 10 shows that the presence and relative contribution of a slow self-limited reaction component can substantially alter growth profiles and lead to apparent saturation behaviour that is not fully representative of true surface saturation. When both fast and slow components have relatively high reaction probabilities, increasing the fraction of the slow component produces a gradual transition from a steep, step-like saturation profile to a more gently varying, nearly linear axial coverage profile. When the reaction probability of the slow component is reduced by two orders of magnitude, profiles near the reactor inlet can exhibit a plateau characteristic of saturated growth even though the absolute surface coverage remains well below full saturation. Increasing the dose time in this regime further accentuates this effect: beyond a certain dose duration, the process appears saturated, yet the slow component continues to evolve and yields a small but measurable increase in surface coverage."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 14,
+            "y": 28,
+            "width": 618,
+            "height": 395
+        },
+        "b": {
+            "x": 14,
+            "y": 457,
+            "width": 618,
+            "height": 398
+        },
+        "c": {
+            "x": 14,
+            "y": 886,
+            "width": 618,
+            "height": 436
+        }
+    }
+}
