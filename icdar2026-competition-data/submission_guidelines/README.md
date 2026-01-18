@@ -69,6 +69,10 @@ Summaries must be provided per sub-figure.
 
 - Summaries should be factual, concise, and grounded in the visual content of the figure.
 
+### 2.2 Submission Format
+
+The submission must be a JSON array containing one entry per test sample:
+
 ```json
 [
   {
@@ -108,12 +112,19 @@ Empty tables are allowed when no extractable data is present.
 
 ## 3.2 Submission Format
 
+The submission must be a JSON array containing one entry per test sample:
+
 ```json
 [
   {
     "sample_id": "...",
     "data_extraction": { ... }
-  }
+  },
+  {
+    "sample_id": "...",
+    "data_extraction": { ... }
+  },
+  ...
 ]
 ```
 
@@ -155,12 +166,19 @@ Questions are grouped by sub-figure label and include multiple question and answ
 
 ### 4.2 Submission Format
 
+The submission must be a JSON array containing one entry per test sample:
+
 ```json
 [
   {
     "sample_id": "...",
     "vqa": { ... }
-  }
+  },
+  {
+    "sample_id": "...",
+    "vqa": { ... }
+  },
+  ...
 ]
 ```
 
