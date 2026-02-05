@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/36/fig1",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The line chart shows the relationship between plasma treatment time (s) and the etched amount (nm), indicating a linear increase."
+    },
+    "data_extraction": {
+        "a": "| plasma treatment (s) | etched amount (nm) |\n|---|---|\n| 0 | 0 |\n| 15 | 2.58 |\n| 30 | 6.6 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the relationship between values linear?",
+                "answer_type": "Yes/No",
+                "answer": "Yes."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the size of the error bar at 30 s suggest about the controllability of this process?",
+                "answer_type": "Paragraph",
+                "answer": "The error bar spans nearly 1 nm or a 6.6 nm measurement. It is a non-negligible variation. This suggests that it might be difficult to precisely control the process at the angstrom level often required for device manufacturing."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the etching mechanism self-limiting? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "It is not self-limiting. The linearity indicates this is a continuous etching process, where the amount removed is directly proportional to time. Self-limiting process would show a plateau after a certain time."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the etching rate speed up, slow down, or stay constant over time?",
+                "answer_type": "Factoid",
+                "answer": "It stays roughly constant over time."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 2,
+            "width": 597,
+            "height": 510
+        }
+    }
+}

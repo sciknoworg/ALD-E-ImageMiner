@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/28/fig_5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the relationship between RF power and the depth of fluorinated layer and etched depth, demonstrating  both depths increasing with power, with the fluorinated layer always thicker than the removed thickness.",
+        "b": "The chart displays the atomic percentage of O1s, Al2p, F1s, and C1s across NF3 and TMA half-cycles. Percentage of fluorine is increasing after NF\u2083, then decreasing after TMA."
+    },
+    "data_extraction": {
+        "a": "| RF power (W) | Fluorinated layer depth (nm) | Etched depth (nm) |\n|---|---|---|\n| 0 | 0.0 | 0.0 |\n| 10 | 0.79 | 0.3 |\n| 50 | 0.95 | 0.38 |\n| 100 | 1.14 | 0.43 |",
+        "b": "| Cycle number | Step |O 1s | Al 2p | F 1s | C 1s |\n|---|---|---|---|---|---|\n| 0 | Start NF3  | 51 | 29 | 0 |18 |\n| 0.5 | Start TMA  | 38 | 29 | 26 | 9 |\n| 1 | Start NF3  | 44 | 30 |  15 | 10 |\n| 1.5 | Start TMA | 39 | 26 | 25 | 9 |\n| 2 | Start NF3  | 48 | 29 | 14 | 9 |\n| 2.5 | Start TMA | 38 | 28 | 25 | 9 |\n| 3 | Start NF3  | 48 | 30 | 13 | 9 |\n| 3.5 | Start TMA | 38 | 28 | 26 | 9 |\n| 4 | End TMA | 46 | 30 | 13 | 11 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does the plot suggest about the efficiency of the removal step?",
+                "answer_type": "Factoid",
+                "answer": "TMA is not removing fluorine completely, as the etched depth is always smaller than the fluorinated-layer depth."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which power gives the highest etched-depth/fluorinated-depth ratio?",
+                "answer_type": "Factoid",
+                "answer": "50 W."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the role of TMA and NF3 based on the plot?",
+                "answer_type": "Paragraph",
+                "answer": "NF\u2083 acts as the fluorination step: during the NF\u2083 half-cycles the F1s signal rises, showing that the surface is converted to an F-rich layer. TMA then serves as the removal step: in the TMA half-cycles the F1s signal decreases. This is consistent with TMA consuming surface fluorine to form volatile Al-containing products."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Are fluorinated layers being fully removed after the end of TMA cycle?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 72,
+            "y": 10,
+            "width": 588,
+            "height": 476
+        },
+        "b": {
+            "x": 72,
+            "y": 522,
+            "width": 587,
+            "height": 477
+        }
+    }
+}

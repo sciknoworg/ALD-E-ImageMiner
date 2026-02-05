@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/4/fig_2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the relationship between DC bias and EPC (\u00c5) for two conditions: ALE and Ar milling only.",
+        "b": "The line chart illustrates the synergy percentage at different DC bias voltages."
+    },
+    "data_extraction": {
+        "a": "| DC bias (-V) | EPC (\u00c5) ALE | EPC (\u00c5) Ar milling only |\n|---|---|---|\n| 0 | 0.1 | 0 |\n| 6 | 0.5 |  |\n| 9 | 1 | 0.1 |\n| 12 | 1.5 | 0.25 |\n| 18 | 1.5 | 0.5 |",
+        "b": "| DC bias (-V) | Synergy (%) |\n|---|---|\n| 0 |  |\n| 6 |  |\n| 9 | 80 |\n| 12 | 75 |\n| 18 | 55 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is observed after 15 W for both data series and what implications does this have?",
+                "answer_type": "Paragraph",
+                "answer": "The resulting EPC as a function of RF power starts to plateau at 20-30 W. Meanwhile, when observing just the effect of the Ar ions, which is the case for \"Ar milling only\", the Ar ions become energetic enough to significantly etch the surface above 15 W. This means that extra care should be taken when analysing the process above 15 W, as Ar etching might influence the observed EPC."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the EPC for the ALE process at 15 W?",
+                "answer_type": "Factoid",
+                "answer": "1.5 \u00c5."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the EPC for Ar milling only at 30 W?",
+                "answer_type": "Factoid",
+                "answer": "0.5 \u00c5."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the synergy at 15 W?",
+                "answer_type": "Factoid",
+                "answer": "80%."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 37,
+            "y": 39,
+            "width": 647,
+            "height": 444
+        },
+        "b": {
+            "x": 760,
+            "y": 41,
+            "width": 650,
+            "height": 441
+        }
+    }
+}

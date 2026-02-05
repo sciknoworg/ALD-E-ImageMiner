@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/54/figure_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure depicts the growth rate of TiN and TaN films as a function of plasma exposure time, where the growth rate of TiN plateaus after 5 seconds, but the growth rate of TaN keeps increasing after 5 seconds.",
+        "b": "The figure depicts the FPP resistivity of the TiN and TaN films as a function of plasma exposure time. The resistivity of TiN is practically constant, but the resistivity of TaN decreases exponentially as a function of plasma exposure time."
+    },
+    "data_extraction": {
+        "a": "| Plasma exposure time (s) | TaN (H\u2082 plasma) | TiN (H\u2082-N\u2082 30:4 plasma) |\n|---|---|---|\n| 0 | 0.02 | 0.03 |\n| 5 | 0.03 | 0.04 |\n| 10 | 0.04 | 0.04 |\n| 20 | 0.05 | 0.04 |\n| 30 | 0.06 | 0.04 |",
+        "b": "| Plasma exposure time (s) | TaN (H\u2082 plasma) | TiN (H\u2082-N\u2082 30:4 plasma) |\n|---|---|---|\n| 0 | 3*10^4 | 2*10^2 |\n| 5 | 4*10^3 | 2*10^2 |\n| 10 | 10^3 | 2*10^2 |\n| 30 | 4*10^2 | 10^2 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the growth rates of TaN and TiN as a function of plasma exposure time compare?",
+                "answer_type": "Paragraph",
+                "answer": "The growth rates for both species as a function of time increase rapidly during the first few seconds of plasma exposure. The growth rate of TiN quickly plateaus after 5 seconds of exposure, whilst the growth rate of TaN keeps increasing steadily, albeit significantly slower than the initial time exposure."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the growth rate of TiN after 30 seconds of plasma exposure?",
+                "answer_type": "Factoid",
+                "answer": "0.04 nm/cycle."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the FPP resistivity of the TaN film after about 1 second of plasma exposure?",
+                "answer_type": "Factoid",
+                "answer": "3*10^4 \u03bc\u03a9 cm."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the FPP resistivity of the TiN film after 20 seconds of plasma exposure?",
+                "answer_type": "Factoid",
+                "answer": "10^2 \u03bc\u03a9 cm."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": -1,
+            "width": 675,
+            "height": 526
+        },
+        "b": {
+            "x": 0,
+            "y": 535,
+            "width": 674,
+            "height": 516
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/57/figure_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure shows the optical characterization of a 100 nm ALD-grown CsI film. The transmittance spectrum indicates that the CsI film (blue) is highly transparent (>80%) across the visible and near-infrared range (300\u20131100 nm), closely matching the bare sapphire substrate (black), confirming high optical quality with minimal scattering or defect-related absorption. A sharp decrease in transmittance near 225 nm marks the onset of strong fundamental absorption.",
+        "b": "The Tauc plot (\ud835\udefc\u210e\ud835\udf08)^2 vs. photon energy shows a linear region, whose extrapolation intersects the energy axis at ~5.5 eV, confirming that CsI is a wide-bandgap insulator with a direct optical bandgap of ~5.5 eV."
+    },
+    "data_extraction": {
+        "a": "| Wavelength (nm) | Transmittance (%) | Material |\n|----------------|-------------------|------|\n| 200            | 79                 | CsI |\n| 200            | 0                 | Sapphire |\n| 300            | 84                | CsI |\n| 300            | 81                | Sapphire |\n| 400            | 84               | CsI |\n| 400            | 84                | Sapphire |\n| 500            | 85                | CsI |\n| 500            | 85                | Sapphire |\n| 600            | 85                | CsI |\n| 600            | 85                | Sapphire |\n| 700            | 85                | CsI |\n| 700            | 85                | Sapphire |\n| 800            | 85                | CsI |\n| 800            | 85                | Sapphire |\n| 900            | 85               | CsI |\n| 900            | 85               | Sapphire |",
+        "b": "| hv (eV) | (\u03b1hv)^2 (a.u.) |\n|----------|-----------------|\n| 5.0      | 0               |\n| 5.25     | 0               |\n| 5.5      | 1E+16           |\n| 5.62      | 8E+16            |\n| 5.75     | 3.7E+16           |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Analyze the transparency curve  between 400 nm and 800 nm. The CsI film almost perfectly overlaps with the bare Sapphire substrate. If the ALD process had suffered from severe contamination (due to incomplete precursor ligand removal), how would the curve in this 'Visible Region' likely change?\"",
+                "answer_type": "Factoid",
+                "answer": "The Blue curve would drop significantly below the Black curve (lower transmittance). Impurities typically act as absorbing centers (darkening the film) or scattering sites. If the film were contaminated, it would appear brownish or cloudy rather than clear."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Consider the substrate choice in this image. The researcher  has used Sapphire, which transmits light down to ~200 nm. If they had used standard Borosilicate Glass (which absorbs light below 300 nm) , Wuld it have been impossible to derive the Tauc plot  ?",
+                "answer_type": "Paragraph",
+                "answer": "The critical absorption feature for CsI is at ~225 nm (5.5 eV).  Borosilicate glass is opaque in this UV region (cutoff ~300 nm). If used, the substrate itself would absorb all the UV light before the CsI band edge was reached. The spectrometer would measure the glass cutoff (4.0 eV) instead of the CsI bandgap (5.5 eV), yielding false data."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the optical band gap of the ALD-grown CsI film as determined from the Tauc plot in (b)? Explain what this value signifies for the film's electronic structure.",
+                "answer_type": "Paragraph",
+                "answer": "The x-intercept indicates a direct band gap of approximately 5.7 eV. This signifies that the CsI film is a wide-band-gap insulator, where a photon with at least 5.7 eV of energy is required to excite an electron from the valence band to the conduction band."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The film shows high transmittance and a sharp band edge near 220 nm. What does this imply for its suitability as a conformal coating for a vacuum ultraviolet (VUV) photodetector?",
+                "answer_type": "Paragraph",
+                "answer": "The high transmittance and sharp cutoff imply it is an excellent solar-blind VUV coating. It would be transparent to wavelengths above its band edge (~220 nm), blocking visible light, while potentially converting shorter VUV photons into detectable electrons via the photoelectric effect, enabling selective VUV sensing."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 16,
+            "y": 10,
+            "width": 474,
+            "height": 346
+        },
+        "b": {
+            "x": 514,
+            "y": 14,
+            "width": 496,
+            "height": 342
+        }
+    }
+}

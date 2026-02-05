@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/25/figure_7",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The  chart shows the growth per cycle for two methods, CLD (blue) and ALD (red), over ten cycles. CLD growth is less uniform than ALD under the conditions shown.",
+        "b": "The line chart displays the surface roughness for two methods, CLD and ALD, over cycles. CLD (blue) exhibits a progressive roughening trend, ALD (red) remains roughly constant ."
+    },
+    "data_extraction": {
+        "a": "| Cycle | Growth per cycle, A: ALD | Growth per cycle, A: CLD |\n|---|---|---|\n| 1 | 1.0 | 0.2 |\n| 2 | 0.9 | 0.9 |\n| 3 | 0.8 | 1.5 |\n| 4 | 0.9 | 0.2 |\n| 5 | 1.1 | 1.0 |\n| 6 | 0.8 | -0.8 |\n| 7 | 1.1 | 0.5 |\n| 8 | 1.1 | 4.7 |\n| 9 | 0.9 | 0.4 |\n| 10 | 1.1 | 1.0 |",
+        "b": "| Cycle | Surface Roughness, A:  ALD| Surface Roughness, A: CLD|\n|---|---|---|\n| 0 | - | 0.7 |\n| 1 | 0.8 | 1.2 |\n| 2 | 1.1 | 2.2 |\n| 3 | 1.2 | 3.5 |\n| 4 | 1.3 | 3.8 |\n| 5 | 1.5 | 5.0 |\n| 6 | 1.3 | 3.7 |\n| 7 | 1.2 | 4.2 |\n| 8 | 1.4 | 8.5 |\n| 9 | 1.4 | 7.3 |\n| 10 | 1.3 | 8.5 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process eventually switches from deposition to the etching mode? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "The CLD process eventually switches from deposition to etching mode. The growth per cycle for CLD drops below zero at cycle 6, indicating a negative growth rate. A negative value for growth per cycle physically means the removal of material from the surface rather than addition."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process shows a more stable GPC?",
+                "answer_type": "Factoid",
+                "answer": "ALD (GPC remains roughly constant)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process is more suitable for manufacturing a film with predictable surface roughness?",
+                "answer_type": "Factoid",
+                "answer": "ALD (surface roughness is relatively constant)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process produces a smoother film?",
+                "answer_type": "Factoid",
+                "answer": "ALD (surface roughness is lower)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 1,
+            "width": 509,
+            "height": 322
+        },
+        "b": {
+            "x": 519,
+            "y": 0,
+            "width": 472,
+            "height": 323
+        }
+    }
+}

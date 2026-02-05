@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/4/fig_3",
+    "classification": {
+        "a": "bar chart",
+        "b": "multi-axis chart",
+        "c": "line chart",
+        "d": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "A bar chart comparing etch per cycle for different reactions.",
+        "b": "A multi-axis chart showing EPC and etch depth against the number of cycles.",
+        "c": "A line chart showing EPC change with BCl3 exposure time.",
+        "d": "A line chart showing EPC change with Ar plasma exposure time for two conditions."
+    },
+    "data_extraction": {
+        "a": "| Reaction | Etch per cycle (\u00c5) |\n|---|---|\n| Reaction A | 0.15 |\n| Reaction A+B | 1.10 |\n| Reaction B | 0.20 |",
+        "b": "| Number of cycles | EPC (\u00c5) | Etch depth (\u00c5) |\n|---|---|---|\n| 50 | 0.90 | 50 |\n| 100 | 1.10 | 100 |\n| 150 | 1.30 | 200 |\n| 200 | 1.00 | 210 |",
+        "c": "| BCl3 exposure (s) | EPC (\u00c5) |\n|---|---|\n| 0 | 0.10 |\n| 5 | 0.60 |\n| 10 | 0.80 |\n| 15 | 0.90 |\n| 20 | 1.00 |",
+        "d": "| Ar plasma exposure (s) | EPC (\u00c5) ALE | EPC (\u00c5) Ar milling only |\n|---|---|---|\n| 0 | 0.10 | 0 |\n| 5 | 0.30 |  |\n| 10 | 0.90 | 0.10 |\n| 15 | 1.10 |  |\n| 20 | 1.90 | 0.25 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the synergy determined?",
+                "answer_type": "Paragraph",
+                "answer": "Synergy is a way to numerically represent how much the exposure of the individual precursors to the substrate etch the material compared to the combined use of the precursors. This is represented by the following formula: S = 1 - (\u03b1 + \u03b2)/ALE x 100%, where \u03b1 and \u03b2 represent the EPC during exposure of the individual components and ALE the EPC during the dombined use. In this case, S = 1 - 0.2/1.1 = 82%."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the EPC change over the number of cycles.",
+                "answer_type": "Factoid",
+                "answer": "The EPC increases slightly over the number of cycles, but the authors consider it \"nearly constant\", so this process meets the ALE requirements."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the EPC at 10 seconds of Ar exposure for the ALE process?",
+                "answer_type": "Factoid",
+                "answer": "About 1.2 \u00c5."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the EPC at 5 seconds of BCl3 exposure?",
+                "answer_type": "Factoid",
+                "answer": "About 0.6 \u00c5."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 14,
+            "y": 14,
+            "width": 694,
+            "height": 455
+        },
+        "b": {
+            "x": 730,
+            "y": 34,
+            "width": 679,
+            "height": 428
+        },
+        "c": {
+            "x": 7,
+            "y": 508,
+            "width": 689,
+            "height": 425
+        },
+        "d": {
+            "x": 722,
+            "y": 512,
+            "width": 683,
+            "height": 421
+        }
+    }
+}

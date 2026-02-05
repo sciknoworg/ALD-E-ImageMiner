@@ -1,0 +1,86 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/57/figure_2",
+    "classification": {
+        "a": "image panel",
+        "b": "image panel",
+        "c": "stacked spectra chart",
+        "d": "line chart",
+        "e": "heatmap"
+    },
+    "summarization": {
+        "a": "The figure displays SEM images of CsI films deposited at various temperatures.",
+        "b": "The figure shows SEM images of CsI films deposited at different temperatures.",
+        "c": "The figure presents Grazing Incidence X-ray Diffraction (GIXRD) patterns for Cesium Iodide (CsI) films deposited on Silicon at temperatures ranging from 150\u00b0C to 350\u00b0C. All deposited films exhibit diffraction peaks that perfectly match the reference pattern for cubic CsI (ICDD 6-311)",
+        "d": "This figure plots the relative surface roughness (Rq normalized by film thickness) of ALD-grown films against deposition temperature, showing roughness decreases to a minimum around 225-250\u00b0C before increasing at higher temperatures.",
+        "e": "The figure compares AFM images of CsI films deposited at different temperatures and thicknesses."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "| Temperature (\u00b0C) | 2\u03b8 (\u00b0) | Assigned Plane |\n|-----------------|-------|----------------|\n| 150              | 28.5   | (200)          |\n| 150              | 33.0   | (211)          |\n| 150              | 36.0   | (220)          |\n| 150              | 47.5   | (310)          |\n| 150              | 56.0   | (222)          |\n| 150              | 69.0   | (321)          |",
+        "e": "| Deposition temperature (\u00b0C) | Relative roughness Rq (%) |\n|-----------------------------|---------------------------|\n| 150                         | 5                          |\n| 170                         | 7                          |\n| 190                         | 10                         |\n| 210                         | 15                         |\n| 230                         | 22                         |\n| 250                         | 35                         |\n| 270                         | 55                         |\n| 290                         | 80                         |\n| 305                         | 95                         |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the relationship between deposition temperature and relative film roughness? Provide the physical cause for the minimum near 225\u00b0C.",
+                "answer_type": "Paragraph",
+                "answer": "Roughness decreases with temperature up to ~225\u00b0C, then increases. The minimum occurs due to enhanced adatom surface diffusion at moderate temperatures, which smoothens growth, while higher temperatures may induce excessive decomposition or 3D islanding, increasing roughness."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Given the roughness minimum at 225\u00b0C, is this temperature optimal for depositing a gate dielectric for a thin-film transistor? Justify your answer.",
+                "answer_type": "Yes/No",
+                "answer": "Yes, the minimal roughness at 225\u00b0C is beneficial for a gate dielectric. A smoother film reduces interfacial scattering and charge trapping, improving channel mobility and threshold voltage stability. However, the electrical quality of the dielectric itself must also be verified at this temperature."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Compare the measured diffraction patterns with the red reference bars at the bottom. What specific crystalline material is confirmed to be present in the film?",
+                "answer_type": "Factoid",
+                "answer": "Cesium Iodide (CsI). The peaks align perfectly with the ICDD 6-311 reference bars for CsI."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the film quality at 150\u00b0C versus 350\u00b0C. Since the crystallinity (peak sharpness) is virtually identical, why is operating at 150\u00b0C the superior manufacturing choice?",
+                "answer_type": "Paragraph",
+                "answer": "To save thermal budget/energy. Since there is no gain in crystal quality at 350\u00b0C, the lower temperature is preferred to protect the substrate and reduce costs."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 34,
+            "y": 1,
+            "width": 637,
+            "height": 198
+        },
+        "b": {
+            "x": 32,
+            "y": 242,
+            "width": 642,
+            "height": 219
+        },
+        "c": {
+            "x": 717,
+            "y": 1,
+            "width": 462,
+            "height": 437
+        },
+        "d": {
+            "x": 698,
+            "y": 425,
+            "width": 473,
+            "height": 292
+        },
+        "e": {
+            "x": 717,
+            "y": 724,
+            "width": 456,
+            "height": 181
+        }
+    }
+}

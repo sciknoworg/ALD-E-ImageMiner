@@ -1,0 +1,63 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/31/figure_3",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "For PE-ALD Co on SiO\u2082 using CoCp(CO)\u2082 at 300 \u00b0C, the growth rate increases with substrate exposure time and reaches a maximum at longer exposure, while the resistivity initially decreases and then increases at high exposure times, indicating an optimal time window for achieving low-resistivity cobalt films.",
+        "b": "In the PE-ALD Co process using CoCp\u2082 at 300 \u00b0C, the growth rate increases rapidly at short exposure times and then saturates, while the resistivity remains relatively low and stable with increasing exposure time, suggesting a more robust and self-limiting growth behavior."
+    },
+    "data_extraction": {
+        "a": "| t<sub>S</sub> (s)|Growth Rate (\u00c5/cycle)|Resistivity (\u00b5\u03a9cm)|\n|------------------|---------------------|------------------|\n|0|0|0|\n|1|2|250|\n|2|1|100|\n|3|0.5|50|\n|4|0|25|",
+        "b": "| t<sub>S</sub> (s)|Growth Rate (\u00c5/cycle)|Resistivity (\u00b5\u03a9cm)|\n|------------------|---------------------|------------------|\n|0|0|0|\n|2|0.5|250|\n|4|0.5|150|\n|6|0.5|100|\n|8|0.5|50|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the growth behavior in Figure 3 indicate self-limiting ALD reactions for both Co precursors?",
+                "answer_type": "Yes/No",
+                "answer": "NO"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which precursor shows clear saturation of growth rate with increasing precursor exposure time?",
+                "answer_type": "Factoid",
+                "answer": "CoCp\u2082."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the growth saturation and low resistivity observed with CoCp\u2082 important for device applications?",
+                "answer_type": "Paragraph",
+                "answer": "Growth saturation confirms true ALD behavior, ensuring precise thickness control and excellent conformality on complex device structures. The consistently low resistivity obtained with CoCp\u2082 indicates high-purity metallic cobalt, which is essential for interconnect and contact applications in advanced CMOS technology. Together, these properties make CoCp\u2082 a suitable precursor for scalable and reliable cobalt deposition."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What features in the figure indicate poor film quality when using CoCp(CO)\u2082 as the precursor?",
+                "answer_type": "List",
+                "answer": "Lack of growth-rate saturation, Strong increase in resistivity at longer exposure times, Unstable electrical properties, Evidence of CVD-like or decomposition-driven growth"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 542,
+            "height": 370
+        },
+        "b": {
+            "x": 3,
+            "y": 386,
+            "width": 536,
+            "height": 355
+        }
+    }
+}

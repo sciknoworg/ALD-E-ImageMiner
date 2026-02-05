@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/28/fig_4",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "line chart",
+        "c": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "The etch per cycle as a function of TMA exposure time shows a rapid rise and then saturation, with 300 \u00b0C   removal-step temperature highest etch rate.",
+        "b": "The etch per cycle versus removal-step temperature increases sharply from low temperature, peaks around 300 \u00b0C, and then decreases at higher temperatures,",
+        "c": "XP-Spectrum shows that the peak intensity of C-C and C-Fx species increase with temperature."
+    },
+    "data_extraction": {
+        "a": "| TMA exposure time (s) | Temperature (\u00b0C) | Etch per cycle (nm/cycle) |\n|---|---|---|\n| 0 | 290 | 0.0 |\n| 0 | 300 | 0.0 |\n| 0 | 330 | 0.0 |\n| 10 | 290 | 0.097 |\n| 10 | 300 | 0.17 |\n| 10 | 330 | 0.14 |\n| 20 | 290 | 0.17 |\n| 20 | 300 | 0.25 |\n| 20 | 330 | 0.23 |\n| 30 | 290 | 0.20 |\n| 30 | 300 | 0.30 |\n| 30 | 330 | 0.27 |\n| 40 | 290 | 0.21 |\n| 40 | 300 | 0.30 |\n| 40 | 330 | 0.27 |",
+        "b": "| Removal step temperature (\u00b0C) | Etch per cycle (nm/cycle) |\n|---|---|\n| 250 | 0.0 |\n| 275 | 0.09 |\n| 290 | 0.20 |\n| 300 | 0.3 |\n| 330 | 0.27 |\n| 400 | 0.20 |\n| 480 | 0.0 |",
+        "c": "| Measurement | Binding energy [eV] | Intensity (a.u.) | Assignment |\n|---|---|---|---|\n| NF3 plasma | 284.7 | 22 | C-C |\n| NF3 plasma | 289.0 | 5 | C-Fx|\n| 280 \u00b0C | 284.7 | 28 | C-C |\n| 280 \u00b0C | 288.9 | 5 | C-Fx|\n| 290 \u00b0C | 284.7 | 26 | C-C |\n| 290 \u00b0C | 288.8 |4 | C-Fx|\n| 300 \u00b0C | 284.7 | 35 | C-C |\n| 300 \u00b0C | 288.8 | 5 | C-Fx|\n| 400 \u00b0C | 284.7 | 51 | C-C |\n| 400 \u00b0C | 288.7 | 9 | C-Fx |\n| 480 \u00b0C | 284.7 | 58 | C-C |\n| 480 \u00b0C | 288.7 | 10 | C-Fx |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the optimal TMA exposure time  for ALE?",
+                "answer_type": "Factoid",
+                "answer": "30 s (etch per cycle plateaus after 30 s)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the optimal operating temperature for ALE?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C (fastest etching)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How can we explain that the etch per cycle is similar at both the lowest and highest removal-step temperatures?",
+                "answer_type": "Paragraph",
+                "answer": "The EPC curve has a volcano-like shape because different mechanisms dominate at different temperatures. At low removal-step temperature, the etch per cycle is low because the ligand-exchange reaction between TMA and the fluorinated film is likely  kinetically hindered.  As the temperature increases into the intermediate range, this reaction proceeds more efficiently, leading to a higher EPC. At the highest temperatures, the EPC drops back to low values,  because TMA might be thermally decomposing, which hinders the reaction."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What features in the spectrum hint that TMA might be decomposing at higher temperatures?",
+                "answer_type": "Factoid",
+                "answer": "At the high removal-step temperatures (400 \u00b0C  and 480 \u00b0C ), the C 1s spectra show a much stronger C\u2013C peak, compared to lower temperatures. This suggests that non-volatile carbon residues are accumulating on the surface with higher temperatures. Since TMA is the only significant source of carbon in the process, this strongly hints thermal decomposition of TMA at high temperatures."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 62,
+            "y": 5,
+            "width": 585,
+            "height": 481
+        },
+        "b": {
+            "x": 72,
+            "y": 498,
+            "width": 577,
+            "height": 492
+        },
+        "c": {
+            "x": 110,
+            "y": 1016,
+            "width": 536,
+            "height": 472
+        }
+    }
+}

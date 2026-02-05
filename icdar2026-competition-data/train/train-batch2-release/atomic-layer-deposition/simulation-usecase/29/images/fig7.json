@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/29/fig7",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot illustrates the validation of a computational model for Atomic Layer Deposition (ALD) with TDEAT by comparing the calculated growth rates (nm/cycle) against pulse time (s) with experimental data (measured and interpolated). The coefficient of determination is 0.99, which indicates a strong correlation."
+    },
+    "data_extraction": {
+        "a": "| Pulse Time (s) | Growth Rate (nm/cyc) | Data series |\n| --- | --- | --- |\n| 0,0 | 0,000 | Gr exp |\n| 1,0 | 0,023 | Gr exp |\n| 2,0 | 0,040 | Gr exp |\n| 4,0 | 0,040 | Gr exp |\n| 0,0 | 0,000 | Gr exp (interpolated) |\n| 0,4 | 0,010 | Gr exp (interpolated) |\n| 0,8 | 0,020 | Gr exp (interpolated) |\n| 1,0 | 0,023 | Gr exp (interpolated) |\n| 1,4 | 0,027 | Gr exp (interpolated) |\n| 1,8 | 0,032 | Gr exp (interpolated) |\n| 2,0 | 0,033 | Gr exp (interpolated) |\n| 2,4 | 0,035 | Gr exp (interpolated) |\n| 2,8 | 0,038 | Gr exp (interpolated) |\n| 3,0 | 0,038 | Gr exp (interpolated) |\n| 3,4 | 0,039 | Gr exp (interpolated) |\n| 3,8 | 0,040 | Gr exp (interpolated) |\n| 4,0 | 0,040 | Gr exp (interpolated) |\n| 0,4 | 0,014 | Gr calc |\n| 0,8 | 0,020 | Gr calc |\n| 1,0 | 0,023 | Gr calc |\n| 1,4 | 0,028 | Gr calc |\n| 1,8 | 0,030 | Gr calc |\n| 2,0 | 0,032 | Gr calc |\n| 2,4 | 0,034 | Gr calc |\n| 2,8 | 0,036 | Gr calc |\n| 3,0 | 0,037 | Gr calc |\n| 3,4 | 0,039 | Gr calc |\n| 3,8 | 0,041 | Gr calc |\n| 4,0 | 0,041 | Gr calc |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How good does the theoretical model predict the experimental values? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "The graph displays an R\u00b2 value of 0.99. It implies an excellent statistical fit.  This value means that the theoretical model explains 99% of the variance in the experimental data and predicts the growth rate with very high accuracy ."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which data point doesn't fall within the margin of error of experimental data?",
+                "answer_type": "Factoid",
+                "answer": "The data point at 2 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Would a pulse time of 0.5 seconds be sufficient for a high-quality ALD process? Why or why not?",
+                "answer_type": "Paragraph",
+                "answer": "No. At 0.5 seconds, the growth rate is only about ~0.01 nm/cycle. It is below the saturation level of ~0.04 nm/cyc. This indicates the surface is not fully covered, which would lead to poor film quality."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what specific pulse time does the saturation plateau begin in the experiment?",
+                "answer_type": "Factoid",
+                "answer": "At 2s."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 5,
+            "width": 961,
+            "height": 607
+        }
+    }
+}

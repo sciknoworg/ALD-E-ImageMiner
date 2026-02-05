@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/13/figure_8",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multiple line chart",
+        "d": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the relationship between forward voltage and current for two methods: ALE and Digital etching.",
+        "b": "The line chart displays the logarithmic scale of current against forward voltage for ALE and Digital etching.",
+        "c": "The line chart illustrates the absolute value of current against reverse voltage for ALE and Digital etching.",
+        "d": "The line chart depicts the ideality factor n against forward voltage for ALE and Digital etching."
+    },
+    "data_extraction": {
+        "a": "| Forward voltage (V) | Current [mA] ALE | Current [mA] Digital etching |\n|---|---|---|\n| 0.0 | 0 | 0 |\n| 0.5 | 0 | 0 |\n| 1.0 | 20 | 20 |\n| 1.5 | 60 | 60 |\n| 2.0 | 100 | 100 |",
+        "b": "| Forward voltage (V) | Current [A] ALE | Current [A] Digital etching |\n|---|---|---|\n| 0.0 | 10^-11 | 10^-11 |\n| 0.5 | 10^-5 | 10^-6 |\n| 1.0 | 10^-2 | 10^-2 |\n| 1.5 | 10^-2 | 10^-2 |\n| 2.0 | 10^-1 | 10^-1 |",
+        "c": "| Reverse voltage (V) | Current [A] ALE | Current [A] Digital etching |\n|---|---|---|\n| -10 | 10^-4 | 10^-4 |\n| -9 | 10^-5 | 10^-5 |\n| -8 | 10^-5 | 10^-5 |\n| -7 | 10^-6 | 10^-6 |\n| -6 | 10^-6 | 10^-6 |\n| -5 | 10^-6 | 10^-6 |\n| -4 | 10^-7 | 10^-7 |\n| -3 | 10^-7 | 10^-7 |\n| -2 | 10^-8 | 10^-8 |\n| -1 | 10^-10 | 10^-8 |\n| 0 | 10^-12 | 10^-10 |",
+        "d": "| Forward voltage (V) | Ideality factor n Digital etching | Ideality factor n ALE |\n|---|---|---|\n| 0.0 | 0.5 | 1.4 |\n| 0.05 | 1.3 | 1.3 |\n| 0.1 | 1.8 | 1.2 |\n| 0.15 | 1.9 | 1.2 |\n| 0.2 | 2.2 | 1.1 |\n| 0.25 | 2.4 | 1.2 |\n| 0.3 | 2.5 | 1.1 |\n| 0.35 | 1.7 | 1.2 |\n| 0.4 | 1.5 | 1.2 |\n| 0.45 | 1.2 | 1.2 |\n| 0.5 | 1.2 | 1.5 |\n| 0.55 | 1.2 | 1.7 |\n| 0.6 | 1.6 | 2.3 |\n| 0.65 | 2.2 |  |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the current for both samples at a forward voltage of 1.0 V?",
+                "answer_type": "Factoid",
+                "answer": "About 20 mA."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the current at a forward voltage of 0.25 V?",
+                "answer_type": "Factoid",
+                "answer": "It is about 10^-8 A for the ALE sample and 10^-7 A for the Digital etching sample."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the comparison of ideality factors reveal about the difference in plasma-induced damage between the ALE and digital etching processes?",
+                "answer_type": "Paragraph",
+                "answer": "Figure 8d shows that the diode fabricated using ALE exhibits a much more uniform and lower ideality factor in the low forward-bias region compared to the diode processed by digital etching, indicating reduced trap-assisted recombination and fewer defect states at the junction. In contrast, the non-uniform slope observed for the digital etching case suggests greater plasma-induced damage."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the absolute current at a reverse voltage of -1 V?",
+                "answer_type": "Factoid",
+                "answer": "Roughly 10^-10 A for the ALE sample and 10^-9 A for the Digital etching sample."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 11,
+            "width": 659,
+            "height": 432
+        },
+        "b": {
+            "x": 703,
+            "y": 9,
+            "width": 663,
+            "height": 460
+        },
+        "c": {
+            "x": 5,
+            "y": 535,
+            "width": 641,
+            "height": 421
+        },
+        "d": {
+            "x": 721,
+            "y": 551,
+            "width": 645,
+            "height": 402
+        }
+    }
+}

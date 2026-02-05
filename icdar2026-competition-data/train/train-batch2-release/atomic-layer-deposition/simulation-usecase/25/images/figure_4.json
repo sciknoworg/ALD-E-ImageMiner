@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/25/figure_4",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the film growth per ALD cycle in \u00c5 for two studies,  comparing the present study simulation (blue) with the results from Hu et al (red) over 12 cycles. The yellow band marks the experimentally reported growth range (~0.9\u20131.1 \u00c5/cycle).",
+        "b": "The line chart displays the surface roughness  in \u00c5 vs. cycle number for two studies, 'Present Study' and 'Hu et al.', over 12 cycles. The roughness from the present study is less rough."
+    },
+    "data_extraction": {
+        "a": "| Cycle | Growth per cycle, \u00c5 : Present Study | Growth per cycle, \u00c5: Hu et al. |\n| --- | --- | --- | \n| 1 | 1.04 | 0.49 |\n| 2 | 0.88 | 0.48 |\n| 3 | 0.83 | 0.54 |\n| 4 | 0.89 | 0.38 |\n| 5 | 1.06 | 0.48 |\n| 6 | 0.76 | 0.59 |\n| 7 | 1.17 | 0.68 |\n| 8 | 1.17 | 0.46 |\n| 9 | 1.00 | 0.49 |\n| 10 | 1.07 | 0.46 |\n| 11 | 1.19 | 0.57 |\n| 12 | 0.97 | 0.45 |",
+        "b": "| Cycle | Surface Roughness, \u00c5: Present Study | Surface Roughness, \u00c5: Hu et al. |\n| --- | --- | --- | \n| 1 | 0.78 | 1.4 |\n| 2 | 1.13 | 1.5 |\n| 3 | 1.28 | 1.56; 1.66 |\n| 4 | 1.31 | 1.73 |\n| 5 | 1.44 | 1.80 |\n| 6 | 1.33 | 2.0 |\n| 7 | 1.35 | 2.0 |\n| 8 | 1.42 | 1.89 |\n| 9 | 1.44 | 1.89 |\n| 10 | 1.36 | 1.70 |\n| 11 | 1.51 | 1.68 |\n| 12 | 1.58 | 1.65 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which simulative study better reproduces the experimental results?",
+                "answer_type": "Factoid",
+                "answer": "Present study (the values are better aligned with experimental ones, shown as yellow band)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which simulative study shows more cycle-to-cycle variability in growth per cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The present study shows higher cycle-to-cycle variability. You can see it from the spread of values: for the present study it ranges from 0.76 \u00c5/cycle (cycle 6) up to 1.19 \u00c5/cycle (cycle 11), a spread of about 0.43 \u00c5/cycle. Hu et al. ranges from 0.38 \u00c5/cycle (cycle 4) to 0.68 \u00c5/cycle (cycle 7), a smaller spread of about 0.30 \u00c5/cycle. From one cycle to the next, the present study has a big jump from 0.76 (cycle 6) to 1.17 (cycle 7) (\u2248 +0.41), whereas the largest step change in Hu et al. is smaller (e.g., 0.68 \u2192 0.46, \u2248- 0.22).  So overall, the values fluctuate more in the present study."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which simulative study predicts a smoother film surface?",
+                "answer_type": "Factoid",
+                "answer": "Present study (the values for roughness are generally lower than in the study of Hu et al.)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Do both data series diverge or converge upon cycling?",
+                "answer_type": "Factoid",
+                "answer": "They converge overall (the gap between the two data series decreases)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 1,
+            "width": 565,
+            "height": 434
+        },
+        "b": {
+            "x": 572,
+            "y": 2,
+            "width": 549,
+            "height": 434
+        }
+    }
+}

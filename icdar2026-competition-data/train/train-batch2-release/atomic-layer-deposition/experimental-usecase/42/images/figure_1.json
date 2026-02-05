@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/42/figure_1",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Thermogravimetric analyses and evaporation rates of 1 (black) and 2 (gray) run at 10 \u00b0C/min ramp rate, with 10 \u00b0C increments for the stepped isotherm used to determine evaporation rate. TGA graph shows how much mass is left as Compound\u202f1 is heated. The black trace indicates that all of the compound vaporized cleanly starting at 91\u202f\u00b0C, leaving 0% residue by about 150\u202f\u00b0C.",
+        "b": "This label shows the evaporation rate (in nmoles/min) of two compounds (1 in black, 2 in gray) as temperature increases (plotted as 1/T in K\u207b\u00b9 \u00d7 10\u00b3). Both lines are straight and sloping upward,the steeper slope for Compound\u202f1 suggests it has a higher activation energy for evaporation than Compound\u202f2, meaning it is more temperature-sensitive."
+    },
+    "data_extraction": {
+        "a": "| temperature (\u00b0C) | mass loss (%) |material  |\n|---|---|---|\n| 50 | 100 | 1 |\n| 50 | 100 | 2 |\n| 100 | 98 | 1 |\n| 100 | 98 | 2 |\n| 150 | 92 | 1 |\n| 150 | 92 | 2 |\n| 200 | 0  | 1 |\n| 200 | 20 | 2 |\n| 250 | 0  | 1 |\n| 250 | 18 | 2 |\n| 300 | 0  | 1 |\n| 300 | 17 | 2 |\n| 350 | 0  | 1 |\n| 350 | 15 | 2 |",
+        "b": "| temperature (1/K x10^3) | evaporation rate (nmol/min) |material  |\n|---|---|---|\n| 2.25 | 1200 | 1  |\n| 2.25 | 1100 | 2  |\n| 2.3  | 1050 | 1  |\n| 2.3  | 1030 | 2  |\n| 2.35 | 1000 | 1  |\n| 2.35 | 800 | 2  |\n| 2.41 | 800 | 1  |\n| 2.41 | 600 | 2  |\n| 2.47 | 600 | 1  |\n| 2.47 | 500 | 2  |\n| 2.5  | 500 | 1  |\n| 2.5  | 300 | 2  |\n| 2.52 | 300 | 1  |\n| 2.52 | 150 | 2  |\n| 2.6 | 150 | 1  |\n| 2.6 | 100 | 2  |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does a TGA experiment measure here, and what happened to Compound\u202f1 as it was heated from 50\u202f\u00b0C to 350\u202f\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "TGA measures how much mass is lost as a sample is subject to increased temperature. Thermogravimetric analysis (TGA) showed the onset of volatility at 91 \u00b0C and a residual mass of 0%."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Based on the TGA, how did the volatility behavior of Compound\u202f1 compare to Compound\u202f2?",
+                "answer_type": "Paragraph",
+                "answer": "Compound\u202f1 vaporized completely with 0% residue, while Compound\u202f2 left 7.4% solid residue, meaning it was less cleanly volatile and likely partially decomposed during heating. Since the mass of copper in 2 comprises 15.72% of the total molecular mass, this compound was possibly undergoing volatilization and decomposition over the thermal range of the TGA."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If you were using Compound\u202f1 as a precursor in an ALD tool, why would you need precise temperature control of its source container?",
+                "answer_type": "Paragraph",
+                "answer": "Because Compound\u202f1\u2019s evaporation rate changes sharply with small temperature changes (steep slope). To keep the vapor supply stable and repeatable for uniform film growth, the precursor temperature must be controlled very accurately (\u00b11\u202f\u00b0C or better)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is the evaporation-rate graph plotted against 1/Temperature instead of just Temperature?",
+                "answer_type": "Factoid",
+                "answer": "Plotting against 1/T (inverse Kelvin) gives a straight line when evaporation follows the Arrhenius equation. The slope of the line tells us the activation energy for evaporation \u2013 a steeper slope (like Compound\u202f1) means evaporation is more sensitive to temperature changes."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 501,
+            "height": 396
+        },
+        "b": {
+            "x": 491,
+            "y": 3,
+            "width": 436,
+            "height": 395
+        }
+    }
+}

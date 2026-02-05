@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/28/fig_3",
+    "classification": {
+        "a": "stacked spectra chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows Al 2p XPS spectra for reference and fluorination samples. After  fluorination, new species (AlF3 and AlOFx) can be detected compared to reference (Al2O3).",
+        "b": "The figure illustrates the SIMS depth profiles of O-, F-, Al-, AIO-, and AIOF- species as a function of sputter time."
+    },
+    "data_extraction": {
+        "a": "| Measurement | Assignment | Curve type | Peak: Binding energy [eV] | Peak: Intensity (a.u.) |\n|---|---|---|---|---|\n|Reference| Al2O3 | Envelope | 74.57 | 273 |\n| Fluorination | Al2O3, AlOFx, AlF3 | Envelope | 74.98| 75 |\n| Fluorination | Al2O3 |Component | 74.72 | 65 |\n| Fluorination | AlOFx |Component | 75.76 | 38 |\n| Fluorination | AlF3 |Component | 76.59 | 6 |",
+        "b": "| Sputter time (s) | Intensity (a.u): O- | Intensity (a.u): F- | Intensity (a.u): Al- | Intensity (a.u): AlO- | Intensity (a.u): AlOF- |\n|---|---|---|---|---|---|\n| 0 | 0 | 51 | 0 |0 | 0 |\n| 5 | 52 | 34 | 3 | 40 | 2 |\n| 10 | 52 | 12 | 3 |43 | 0 |\n| 15 | 52 |  6| 3 | 43 | 0 |\n| 20 | 52 | 5 | 3 | 43 | 0 |\n| 25 | 52 | 3 | 3 | 43| 0 |\n| 30 | 53 | 3 | 3 | 44 | 0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is F or O more electronegative based on binding energies of components assigned to Al\u2082O\u2083, AlOF\u2093, and AlF\u2083 ?  Why?",
+                "answer_type": "Paragraph",
+                "answer": "Al 2p binding energy increases with increasing fluorine coordination of Al ( from Al\u2082O\u2083 to AlOF\u2093 to AlF\u2083). That means that  fluorine withdraws  electron density around Al more strongly,  making Al more positively charged, which leads to the higher binding energy.  Therefore, F is more electronegative."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the spectrum suggest complete fluorination in the probed region or only partial transformation?",
+                "answer_type": "Factoid",
+                "answer": "Partial fluorination."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the binding energy of the AlOF\u2093 component reflect its mixed O/F coordination?",
+                "answer_type": "Paragraph",
+                "answer": "The AlOF\u2093 component  between  Al\u2082O\u2083 and  AlF\u2083 on bonding energy axis. Because F is more electronegative than O, replacing some O neighbors with F withdraws more electron density from Al than in pure Al\u2082O\u2083, but less than in fully fluorinated AlF\u2083. As a result, the effective positive charge on Al (and thus the Al 2p binding energy) is intermediate between the oxide and the fluoride."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is there evidence for a smooth change or an abrupt change between fluorinated and unfluorinated regions?",
+                "answer_type": "Factoid",
+                "answer": "It looks more like a smooth change."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 102,
+            "y": 12,
+            "width": 570,
+            "height": 496
+        },
+        "b": {
+            "x": 97,
+            "y": 528,
+            "width": 570,
+            "height": 474
+        }
+    }
+}

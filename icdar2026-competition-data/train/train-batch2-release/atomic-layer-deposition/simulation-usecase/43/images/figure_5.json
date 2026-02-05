@@ -1,0 +1,66 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/43/figure_5",
+    "classification": {
+        "a": "molecular structure diagram",
+        "b": "molecular structure diagram",
+        "c": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure displays calculated potential energy profiles (ReaxFF-NEB) for Al\u2082O\u2083 ALD surface reactions on Ge(100). Panel (a) shows the reaction of trimethylaluminum (TMA) with a passivated H-terminated surface, exhibiting an energy barrier of 1.41 eV.  (not quantitative)",
+        "b": "Panel (b) shows the thermodynamically unfavorable reaction of water (H\u2082O) on the same surface. (not quantitative)",
+        "c": "Panel (c) contrasts this behavior with the reaction on a Ge dangling-bond defect, which proceeds via barrier-less, spontaneous adsorption followed by ligand elimination.The line chart illustrates the percentage of oxygen diffusion over time for two different systems: GeOx/Ge and [Al2O3/GeOx]/Ge."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": "",
+        "c": "| Time (ns) | Oxygen Diffusion (%) | Structure |\n|-----------|-----------------------|------------|\n| 0   | 0     | GeO\u2093/Ge |\n| 0   | 0     | [Al\u2082O\u2083/GeO\u2093]/Ge |\n| 0.5 | 12.2  | GeO\u2093/Ge |\n| 0.5 | 6.05  |[Al\u2082O\u2083/GeO\u2093]/Ge |\n| 1   | 12.3  |  GeO\u2093/Ge |\n| 1   | 8.28  | [Al\u2082O\u2083/GeO\u2093]/Ge |\n| 1.5 | 18.62 | GeO\u2093/Ge |\n| 1.5 | 10.31 | [Al\u2082O\u2083/GeO\u2093]/Ge |\n| 2   | 20.77 |  GeO\u2093/Ge |\n| 2   | 10.4  | [Al\u2082O\u2083/GeO\u2093]/Ge |"
+    },
+    "vqa": {
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on label (c), list the sequence of chemical steps for TMA reacting with a Ge dangling bond. How does the energetics of the first step compare to the initial interaction in label (a)?",
+                "answer_type": "List",
+                "answer": "Spontaneous adsorption of TMA onto the Ge dangling bond (Ge-*).\n\nLigand exchange with a neighboring $Ge-H*$ site to eliminate methane (CH4)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For passivating a Ge MOS device, compare using only a GeO\u2093 interlayer versus using a GeO\u2093/Al\u2082O\u2083 bilayer. Which provides better interface stability and what is a potential integration challenge?",
+                "answer_type": "Paragraph",
+                "answer": "The GeO\u2093/Al\u2082O\u2083 bilayer provides far better stability by suppressing oxygen exchange. The trade-off is increased process complexity and the risk of introducing new defects at the Al\u2082O\u2083/GeO\u2093 interface during capping layer deposition."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the presence of the Al\u2082O\u2083 capping layer (structure) affect the oxygen diffusion rate (property) at the Ge interface?",
+                "answer_type": "Paragraph",
+                "answer": "The dense, chemically stable Al\u2082O\u2083 capping layer drastically reduces the oxygen diffusion rate. This is because it presents a kinetic barrier that impedes the transport pathways for oxygen atoms, effectively sealing the interface."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The data shows Al\u2082O\u2083 effectively blocks oxygen diffusion. Does this make it a suitable capping layer for preserving the electrical quality of a high-mobility Ge channel during back-end processing?",
+                "answer_type": "Yes/No",
+                "answer": "Yes. By preventing oxygen loss from or ingress into the critical GeO\u2093/Ge interface, the Al\u2082O\u2083 cap helps maintain stable interface composition and low defect density, which is essential for preserving channel mobility and threshold voltage stability during subsequent thermal steps."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 31,
+            "y": 3,
+            "width": 532,
+            "height": 207
+        },
+        "b": {
+            "x": 11,
+            "y": 240,
+            "width": 551,
+            "height": 202
+        },
+        "c": {
+            "x": 106,
+            "y": 456,
+            "width": 355,
+            "height": 279
+        }
+    }
+}

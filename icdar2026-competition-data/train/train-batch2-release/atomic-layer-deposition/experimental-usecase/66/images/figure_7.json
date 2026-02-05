@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/66/figure_7",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart",
+        "c": "scatter plot"
+    },
+    "summarization": {
+        "a": "This plot shows dielectric constant as a function of frequency. Dielectric constant (\u03b5<sub>r</sub>) decreases with increasing frequency for all materials (Co, Fe, Ni).",
+        "b": "Plot shows the tangent delta (tan\u03b4) as a function of frequency where tangent decreases with increasing frequency for all materials (Co, Fe, Ni).",
+        "c": "Plot shows variation of capacitance (C) as a function of  applied voltage for different frequencies (100kHz, 1MHz) and materials (Co, Fe, Ni)."
+    },
+    "data_extraction": {
+        "a": "| frequency (Hz) | dielectric constant, \u03b5<sub>r</sub>  of Co | Fe | Ni |\n| --- | --- | --- | --- | \n| 10<sup>3</sup>  | 50 | 50 | 75 |\n| 10<sup>4</sup>  | 50 | 50 | 50 |\n| 10<sup>5</sup>  | 50 | 40 | 30 |\n| 10<sup>6</sup>  | 50 | 20 | 10 |",
+        "b": "| frequency (Hz) | tan\u03b4 of Co | Fe | Ni |\n| --- | --- | --- | --- | \n| 10<sup>3</sup> | 800 | 200 | 200 | \n| 10<sup>4</sup> | 400 | 100 | 100 | \n| 10<sup>5</sup> | 200 | 50 | 50 | \n| 10<sup>6</sup> |  80 | 20 | 20 |",
+        "c": "| Applied Voltage (V) | C (Co, 100kHz) | C (Fe, 100kHz) | C (Ni, 100kHz) | C (Co, 1MHz) | C (Fe, 1MHz) | C (Ni, 1MHz) |\n|---|---|---|---|---|---|---|\n| -4 | 220 | 230 | 480 | 40 | 50 | 70 |\n| -2 | 230 | 260 | 500 | 45 | 55 | 75 |\n| 0  | 200 | 320 | 520 | 50 | 60| 100 |\n| 2  | 200 | 320 | 520 | 50 | 60 | 80 |\n| 2  | 260 | 280 | 500 | 45 | 55 | 75 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does it mean when the ZnO/Ni film has high dielectric constant initially?",
+                "answer_type": "Paragraph",
+                "answer": "For the ZnO/Ni film, it is seen that there is another polarization mechanism, which is involved at f = 10^3\u221210^4 Hz and significantly increases \u03b5r in this frequency range. The most likely polarization mechanism, which adds to the net polarizability in the range 10^3\u221210^5 Hz, is the orientation (dipolar) polarization"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the polarization of ZnO/Co compare to other materials?",
+                "answer_type": "Paragraph",
+                "answer": "The dielectric response of the ZnO/Co film is significantly weaker than that of the other two films, \u03b5r is substantially smaller than that of ZnO/Ni and ZnO/Fe films; it is also smaller than that of pure ZnO layers. However, it should be noticed that the measurement of C\u2212f curves is performed at a small voltage (0.3\u22120.5 V) where the capacitance of the ZnO/Co film has the minimum in the C\u2212V curves, while that of the other two films reaches its maximum"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What can be said about the CV characteristics at different frequency ?",
+                "answer_type": "Paragraph",
+                "answer": "A strong frequency dependence of the dielectric constant is observed, especially for Fe- and Ni-doped ZnO. Various polarization mechanisms (ionic, orientation, and space\ncharge) can exist in the layers and give rise to an increased polarization (hence \u03b5r) at a certain frequency"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does all layers have high dielectric loss?",
+                "answer_type": "Factoid",
+                "answer": "All layers have a relatively high dielectric loss  due to the increased conductivity of the layers."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 3,
+            "width": 321,
+            "height": 280
+        },
+        "b": {
+            "x": 332,
+            "y": 3,
+            "width": 330,
+            "height": 272
+        },
+        "c": {
+            "x": 135,
+            "y": 287,
+            "width": 390,
+            "height": 307
+        }
+    }
+}

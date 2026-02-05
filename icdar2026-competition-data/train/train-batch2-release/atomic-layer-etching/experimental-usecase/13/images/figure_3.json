@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/13/figure_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The etch rate increases linearly with increasing O\u2082 time/cycle for both BCl\u2083 time/cycles of 60 sec and 30 sec.",
+        "b": "The etch rate increases linearly with increasing BCl\u2083 time/cycle for both O\u2082 time/cycles of 60 sec and 30 sec."
+    },
+    "data_extraction": {
+        "a": "| O\u2082 time/cycle (sec) | Etch rate [nm/cycle] BCl\u2083 time/cycle 30 sec | Etch rate [nm/cycle] BCl\u2083 time/cycle 60 sec |\n|---|---|---|\n| 0 | 0.0 | 0.0 |\n| 30 | 0.4 | 0.4 |\n| 45 | 0.5 | 0.6 |\n| 50 | 0.5 | 0.6 |\n| 60 | 0.55 | 0.7 |\n| 90 | 0.55 | 0.7 |",
+        "b": "| BCl\u2083 time/cycle (sec) | Etch rate [nm/cycle] O\u2082 time/cycle 30 sec | Etch rate [nm/cycle] O\u2082 time/cycle 60 sec |\n|---|---|---|\n| 0 | 0.0 | 0.0 |\n| 30 | 0.4 | 0.6 |\n| 45 | 0.4 | 0.7 |\n| 50 | 0.4 | 0.7 |\n| 90 | 0.4 | 0.7 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the atomic layer etching (ALE) rate of the GaN/AlGaN structure depend on the individual O\u2082 and BCl\u2083 plasma exposure times, and what does the observed saturation behaviour imply about the etching mechanism?",
+                "answer_type": "Paragraph",
+                "answer": "Figure 3 shows that the etch rate per ALE cycle increases with increasing O\u2082 plasma exposure up to 60 s when the BCl\u2083 plasma time is held constant, indicating that longer oxidation enhances the formation of a removable surface layer. Beyond 60 s, the etch rate plateaus, suggesting that the surface becomes fully oxidized and that further O\u2082 exposure does not increase the amount of material available for removal, consistent with self-limiting behaviour. Similarly, when the O\u2082 plasma time is fixed at 60 s and the BCl\u2083 exposure is increased, the etch rate rises until 45 s, after which it also saturates, implying that the chlorination and removal step has become complete."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate at 30 seconds for a BCl3 time/cycle of 30 seconds?",
+                "answer_type": "Factoid",
+                "answer": "0.4 nm/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate at 90 seconds for a BCl3 time/cycle of 60 seconds?",
+                "answer_type": "Factoid",
+                "answer": "0.7 nm/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate at 30 seconds for a O2 time/cycle of 60 seconds?",
+                "answer_type": "Yes/No",
+                "answer": "0.6 nm/cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 4,
+            "width": 549,
+            "height": 409
+        },
+        "b": {
+            "x": 595,
+            "y": 8,
+            "width": 553,
+            "height": 404
+        }
+    }
+}

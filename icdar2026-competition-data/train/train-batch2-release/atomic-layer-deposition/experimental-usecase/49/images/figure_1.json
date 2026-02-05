@@ -1,0 +1,99 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/49/figure_1",
+    "classification": {
+        "a": "scatter plot",
+        "c": "scatter plot",
+        "e": "multiple line chart",
+        "b": "scatter plot",
+        "d": "scatter plot",
+        "f": "line chart"
+    },
+    "summarization": {
+        "a": "This multi-panel figure characterizes the Atomic Layer Deposition (ALD) of MoS\u2082 films, showing how thickness depends on various parameters such as  (a) temperature, (b) H\u2082S exposure time, (c) precursor dose time, (d) Mo-precursor exposure time, (e) optical properties versus cycles, and (f) linear thickness growth with cycle number.  The scatter plot shows the relationship between reaction temperature and layer thickness after 100 ALD cycles. The film thickness after 100 cycles peaks at approximately 250 \u00b0C (~9 nm), defining the optimal ALD window. Below 225 \u00b0C, growth is slow due to kinetic limitations, while above 275 \u00b0C, the thickness drops sharply, likely due to desorption or precursor decomposition.",
+        "b": "The scatter plot shows the relationship between H\u2082S exposure time and layer thickness after 50 ALD cycles. The thickness saturates at approximately 30 s exposure time.",
+        "c": "The scatter plot illustrates the effect of C\u2087H\u2088Mo(CO)\u2083 dose time on layer thickness after 50 ALD cycles. The growth saturates at approximately 0.8 s dose time.",
+        "d": "The scatter plot illustrates the effect of C\u2087H\u2088Mo(CO)\u2083 exposure time on layer thickness after 50 ALD cycles. The thickness shows a peak at 20 s, followed by a decrease, suggesting possible etching or desorption at very long exposure times.",
+        "e": "The line chart depicts the change in ellipsometric delta (\u0394) with respect to wavelength. The delta parameter shifts monotonically with increasing ALD cycles.",
+        "f": "The scatter plot shows the linear relationship between ALD cycle number and layer thickness. The graph confirms a highly linear growth per cycle (GPC) of 0.11 nm/cycle with R\u00b2 = 0.994, demonstrating that the process is stable and self-limiting."
+    },
+    "data_extraction": {
+        "a": "| Reaction Temperature (\u00b0C) | Layer Thickness After 100 ALD Cycles (nm) |\n|---|---|\n| 175      | 0.7       |\n| 200      | 3         |\n| 225      | 8         |\n| 250      | 9         |\n| 275      | 7.8       |\n| 285      | 9.1       |\n| 300      | 4         |",
+        "b": "| H2S Exposure Time (s) | Layer Thickness After 50 ALD Cycles (nm) |\n|---|---|\n| 0.1 | 0.2 |\n| 1   | 2   |\n| 5   | 3.1 |\n| 10  | 3.3 |\n| 30  | 4.7 |\n| 40  | 4   |\n| 60  | 4.7 |",
+        "c": "| C7H8Mo(CO)3 Dose Time (s) | Layer Thickness After 50 ALD Cycles (nm) |\n|---|---|\n| 0        | 0         |\n| 0.25     | 3         |\n| 0.5      | 4.2       |\n| 0.75     | 4.8       |\n| 1        | 4.7       |\n| 1.5      | 5.1       |",
+        "d": "| C7H8Mo(CO)3 Exposure Time (s) | Layer Thickness After 50 ALD Cycles (nm) |\n|---|---|\n| 5   | 2.7 |\n| 10  | 4.9 |\n| 20  | 6.5 |\n| 30  | 4.7 |",
+        "e": "| Wavelength (nm) | Delta (degree) | Number of cycles |\n|---|---|---|\n| 370            | 164       | 0 cycle |\n| 370            | 158       | 25 cycle |\n| 370            | 145       | 50 cycle |\n| 370            | 135       | 100 cycle |\n| 370            | 105       | 200 cycle |\n| 370            | 72        | 300 cycle |\n| 400            | 167       | 0 cycle |\n| 400            | 163       | 25 cycle |\n| 400            | 150       | 50 cycle |\n| 400            | 140       | 100 cycle |\n| 400            | 110       | 200 cycle |\n| 400            | 83        | 300 cycle |\n| 500            | 170       | 0 cycle |\n| 500            | 166       | 25 cycle |\n| 500            | 154       | 50 cycle |\n| 500            | 143       | 100 cycle |\n| 500            | 115       | 200 cycle |\n| 500            | 93        | 300 cycle |\n| 600            | 171       | 0 cycle |\n| 600            | 169       | 25 cycle |\n| 600            | 157       | 50 cycle |\n| 600            | 147       | 100 cycle |\n| 600            | 120       | 200 cycle |\n| 600            | 98        | 300 cycle |\n| 700            | 173       | 0 cycle |\n| 700            | 171       | 25 cycle |\n| 700            | 160       | 50 cycle |\n| 700            | 149       | 100 cycle |\n| 700            | 124       | 200 cycle |\n| 700            | 104       | 300 cycle |\n| 800            | --       | 0 cycle |\n| 800            | --       | 25 cycle |\n| 800            | --       | 50 cycle |\n| 800            | --       | 100 cycle |\n| 800            | --       | 200 cycle |\n| 800            | 109      | 300 cycle |\n| 900            | --       | 0 cycle |\n| 900            | --       | 25 cycle |\n| 900            | --       | 50 cycle |\n| 900            | --       | 100 cycle |\n| 900            | --       | 200 cycle |\n| 900            | 114      | 300 cycle |",
+        "f": "| ALD Cycle Number | Layer Thickness (nm) |\n|---|---|\n| 0   | 0  |\n| 25  | 1  |\n| 50  | 4  |\n| 101 | 8  |\n| 200 | 19 |\n| 301 | 33 |"
+    },
+    "vqa": {
+        "e": [
+            {
+                "question_type": "Application/Performance",
+                "question": "The linear thickness vs. cycles relationship (f) and the spectroscopic data (e) confirm what two critical ALD characteristics for integrating MoS\u2082 into scalable electronic devices?",
+                "answer_type": "Paragraph",
+                "answer": "It confirms precise, atomic-level thickness control and excellent film uniformity. These characteristics are essential for reliably fabricating thin MoS\u2082 channels or barriers in scalable transistors and memory devices."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the temperature window in this label  (a), identify the optimal process temperature. If a user sets the reactor to 300\u00b0C to 'speed up' the reaction, what negative outcome does the data predict regarding film thickness?",
+                "answer_type": "Paragraph",
+                "answer": "The optimal temperature is 250\u00b0C (highest thickness, stable growth). The film thickness drops significantly to <4 nm (compared to ~9 nm at 250\u00b0C). This indicates that 300\u00b0C is outside the stable ALD window, likely causing precursor desorption or parasitic etching, resulting in a much thinner film than intended."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the saturation behavior of the Molybdenum precursor dose (c) vs. exposure time (d). The dose curve (c) saturates stably, but the exposure curve (d) drops after 20s. What trade-off does this suggest for setting a 'safe' safety margin for the exposure time?",
+                "answer_type": "Paragraph",
+                "answer": "Increasing dose saturates the surface coverage (good). However, extending the residence time (exposure) beyond 20s causes a loss in thickness (bad).\nThis suggests a competing desorption or etching mechanism at long exposures. The process engineer cannot simply set an arbitrarily long exposure time \"just to be safe.\" They must choose a value (e.g., 20s) that ensures saturation without crossing into the regime where the film begins to degrade or desorb."
+            }
+        ],
+        "f": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Analyze the linearity in label (f). The trendline equation is y = 0.11x - 1.06. Physically, what does the negative y-intercept (-1.06 nm) imply about the initial stages of film growth on the substrate?",
+                "answer_type": "Paragraph",
+                "answer": "It implies a Nucleation Delay. In an ideal scenario, the line would pass through zero. A negative intercept signifies that during the first ~10 cycles, virtually no film was deposited (incubation period). The precursor struggled to nucleate on the initial substrate surface, requiring several cycles to establish a seed layer before the steady-state growth rate of 0.11 nm/cycle was achieved."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 4,
+            "width": 456,
+            "height": 350
+        },
+        "b": {
+            "x": 5,
+            "y": 358,
+            "width": 450,
+            "height": 345
+        },
+        "c": {
+            "x": 471,
+            "y": 2,
+            "width": 449,
+            "height": 354
+        },
+        "d": {
+            "x": 471,
+            "y": 362,
+            "width": 450,
+            "height": 343
+        },
+        "e": {
+            "x": 922,
+            "y": 4,
+            "width": 447,
+            "height": 354
+        },
+        "f": {
+            "x": 931,
+            "y": 357,
+            "width": 438,
+            "height": 347
+        }
+    }
+}

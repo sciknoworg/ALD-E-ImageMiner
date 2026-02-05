@@ -1,0 +1,49 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/49/fig_2",
+    "classification": {
+        "a": "reaction energy profile diagram"
+    },
+    "summarization": {
+        "a": "The figure illustrates the energy levels of various boron-hydrogen complexes and their corresponding activation energies.",
+        "b": "The figure shows the molecular structures of boron-hydrogen complexes at different energy levels"
+    },
+    "data_extraction": {
+        "a": "| Reaction Step (Species) | Energy (eV) |\n|---|---|\n| B2H6* | -0.06 |\n| Transition State (B-B) | 1.11 |\n| BH3* | -1.95 |\n| Transition State (B-H) | 1.65 |\n| BH2* | -0.66 |\n| Transition State (B-H) | 1.75 |\n| BH* | 0.79 |\n| Transition State (B-H) | 1.83 |\n| B* | 2.30 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the activation energy labels (Ea) provided in the figure, which dissociation step presents the highest kinetic barrier in this reaction pathway?",
+                "answer_type": "Factoid",
+                "answer": "The dissociation of BH to B (the final B\u2013H bond breaking step) presents the highest kinetic barrier, with an activation energy (Ea) of 1.83 eV."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "According to the energy diagram, which intermediate species represents the most thermodynamically stable state on the TiN(001) surface?",
+                "answer_type": "Factoid",
+                "answer": "The BH\u2083 species (adsorbed borane) is the most stable intermediate, corresponding to the global energy minimum of the profile at -1.95 eV."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the energy of the final reaction product (B* + H atoms) compare to the initial reactant (B\u2082H\u2086*), and what does this imply about the thermodynamics of the process?",
+                "answer_type": "Paragraph",
+                "answer": "The final product state (B*) is located at 2.30 eV, which is significantly higher than the initial reactant state (B\u2082H\u2086*) at -0.06 eV. This large positive energy change indicates that the overall decomposition reaction on the TiN(001) surface is strongly endothermic and thermodynamically unfavorable, meaning the system prefers to remain in the intermediate BH\u2083 state rather than fully decomposing."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "In the context of Atomic Layer Deposition (ALD) for Tungsten, why is the reaction profile shown in this figure considered \"unfavorable\" for film growth?",
+                "answer_type": "Paragraph",
+                "answer": "For effective ALD, the precursor must react completely to leave the desired material (Boron/Tungsten) on the surface while removing ligands. This profile shows that removing Hydrogen from Boron is energetically costly (uphill) and has high barriers, leading to a surface dominated by stable BH\u2083 intermediates or bare TiN rather than a reactive Boron layer. This explains why the TiN(001) orientation yields poor nucleation and low deposition rates compared to other surfaces."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 2,
+            "width": 649,
+            "height": 485
+        }
+    }
+}

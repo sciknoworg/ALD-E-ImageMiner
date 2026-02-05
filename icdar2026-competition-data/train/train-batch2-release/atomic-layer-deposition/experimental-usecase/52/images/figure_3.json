@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/52/figure_3",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The growth per cycle increases with increasing Li precursor dosing time until it plateaus.",
+        "b": "The growth per cycle shows a slight increase with increasing Co precursor dosing time, but remains relatively stable"
+    },
+    "data_extraction": {
+        "a": "| Li precursor dosing time (s) | Growth per cycle (nm) |\n|---|---|\n| 0 | 0.00 |\n| 0.5 | 0.08 |\n| 1 | 0.10 |\n| 2 | 0.12 |\n| 3 | 0.12 |",
+        "b": "| Co precursor dosing time (s) | Growth per cycle (nm) |\n|---|---|\n| 0 | 0.00 |\n| 0.5 | 0.08 |\n| 1 | 0.09 |\n| 2 | 0.08 |\n| 3 | 0.10 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the plateau in these saturation curves indicate about the ALD dosing step?",
+                "answer_type": "Paragraph",
+                "answer": "A plateau indicates that increasing precursor dosing time no longer increases the growth per cycle, which is consistent with surface saturation. In ALD terms, this suggests the surface reactions become self limiting once enough precursor has been supplied. Operating at or beyond the saturation point helps ensure reproducible growth and composition control."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which precursor appears to reach saturation faster in these measurements, Li precursor or CoCp2, and how can you tell?",
+                "answer_type": "Paragraph",
+                "answer": "CoCp2 reaches saturation faster, because panel b levels off at a shorter dosing time than panel a. In panel b, the growth per cycle increases sharply and then becomes nearly constant by around the first second or less. In panel a, the curve continues rising over a broader dosing time range before leveling off."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "In panel b, what quantity is on the x axis, and what quantity is on the y axis in both panels?",
+                "answer_type": "Factoid",
+                "answer": "The x axis in panel b is Co precursor dosing time (s), and the y axis in both panels is growth per cycle (nm)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on these curves, what is the practical reason to choose Li and Co precursor dosing times in the saturated region when running the super cycle process?",
+                "answer_type": "List",
+                "answer": "To avoid dose limited growth that would change the growth per cycle.\n\nTo improve run to run reproducibility by ensuring surface saturation.\n\nTo reduce sensitivity to small dosing time fluctuations during long depositions."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 5,
+            "width": 603,
+            "height": 427
+        },
+        "b": {
+            "x": 1,
+            "y": 451,
+            "width": 603,
+            "height": 432
+        }
+    }
+}

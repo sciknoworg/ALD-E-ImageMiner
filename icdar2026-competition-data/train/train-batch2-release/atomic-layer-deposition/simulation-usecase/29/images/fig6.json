@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/29/fig6",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot illustrates the validation of a computational model for Atomic Layer Deposition (ALD) by comparing the calculated growth rates (nm/cycle) against pulse time (s)  with experimental data (measured and interpolated). The coefficient of determination is 0.85."
+    },
+    "data_extraction": {
+        "a": "| Pulse Time (s) | Growth Rate (nm/cyc) | Data series |\n|---|---|---|\n| 0 |  0 | GR exp |  \n| 1 |  0.121 | GR exp |  \n| 2 |  0.121 | GR exp |  \n| 10 |  0.120 | GR exp |\n| 0.0 | 0.001 | Gr exp (Interp) |\n| 0.2 | 0.013 | Gr exp (Interp) |\n| 0.4 | 0.033 | Gr exp (Interp) |\n| 0.6 | 0.059 | Gr exp (Interp) |\n| 0.8 | 0.079 | Gr exp (Interp) |\n| 1.0 | 0.101 | Gr exp (Interp) |\n| 1.2 | 0.108 | Gr exp (Interp) |\n| 1.4 | 0.114 | Gr exp (Interp) |\n| 1.6 | 0.119 | Gr exp (Interp) |\n| 1.8 | 0.121 | Gr exp (Interp) |\n| 2.0 | 0.120 | Gr exp (Interp) |\n| 4.0 | 0.119 | Gr exp (Interp) |\n| 6.0 | 0.120 | Gr exp (Interp) |\n| 8.0 | 0.120 | Gr exp (Interp) |\n| 10.0 | 0.120 | Gr exp (Interp) |\n| 0.2 | 0.039 | Gr calc |\n| 0.5 | 0.056 | Gr calc |\n| 0.6 | 0.066 | Gr calc |\n| 0.8 | 0.075 | Gr calc |\n| 1.0 | 0.081 | Gr calc |\n| 1.2 | 0.089 | Gr calc |\n| 1.4 | 0.095 | Gr calc |\n| 1.6 | 0.099 | Gr calc |\n| 1.8 | 0.104 | Gr calc |\n| 2.0 | 0.109 | Gr calc |\n| 4.0 | 0.128 | Gr calc |\n| 6.0 | 0.135 | Gr calc |\n| 8.0 | 0.138 | Gr calc |\n| 10.0 | 0.139 | Gr calc |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what pulse time interval does the theoretical model transition from underestimating to overestimating the experimental growth rate?",
+                "answer_type": "Paragraph",
+                "answer": "The transition occurs between the 2-second and 4-second pulse times. The theoretical model underestimates the growth rate at 2 s. By the 4 s mark, the model surpasses the experimental data."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Comparing the experimental data and the theoretical model, which trend achieves saturation more quickly?",
+                "answer_type": "Factoid",
+                "answer": "The experimental data reaches saturation faster than the theoretical model ."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Comparing the experimental data and the theoretical model, which trend looks more like an ideal ALD process?",
+                "answer_type": "Factoid",
+                "answer": "The experimental data more closely resembles an ideal ALD process."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why might relying exclusively on the theoretical model for designing the ALD process lead to inefficient material usage?",
+                "answer_type": "Paragraph",
+                "answer": "The theoretical model predicts that the substrate requires a pulse time of approximately 4 to 6 seconds to reach full saturation, whereas the experimental data demonstrates that saturation is actually achieved in just 1 second. Consequently, an engineer relying solely on the model would likely program the reactor to dose the precursor for longer than necessary to ensure full coverage. This discrepancy leads to waste because the excess precursor introduced after the 1-second mark cannot react with the already saturated surface and is simply purged from the system."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 6,
+            "width": 967,
+            "height": 562
+        }
+    }
+}

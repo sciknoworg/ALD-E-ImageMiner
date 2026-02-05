@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/25/figure_8",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the growth per cycle over 10 cycles for two conditions: the base case and a process using half the H\u2082O injected per cycle. The base case remains low and fairly steady. In contrast, halving the H\u2082O dose produces highly unstable growth, with large cycle-to-cycle fluctuations.",
+        "b": "The chart illustrates the surface roughness over 10 cycles for two conditions: the base case and a process using half the H\u2082O injected per cycle. The base case remains relatively smooth, showing a slow increase in roughness over cycling. The half-H\u2082O condition exhibits significant increases in surface roughness."
+    },
+    "data_extraction": {
+        "a": "| Cycle | Growth per cycle, \u00c5 (Base case) | Growth per cycle, \u00c5 (Half H\u2082O amount injected per cycle) |\n|---|---|---|\n| 1 | 0.98 | 3.07 |\n| 2 | 1.22 | 5.64 |\n| 3 | 1.96 | 2.57 |\n| 4 | 0.98 | 18.77 |\n| 5 | 1.59 | 25.15 |\n| 6 | 0 | 3.31 |\n| 7 | 1.22 | 47.8 |\n| 8 | 5.27 | 9.44 |\n| 9 | 0.85 | 3.55 |\n| 10 | 1.47 | 32.0 |",
+        "b": "| Cycle | Surface Roughness, \u00c5 (Base case) | Surface Roughness, \u00c5 (Half H\u2082O amount injected per cycle) |\n|---|---|---|\n| 0 | 1.17 | 1.17 |\n| 1 | 1.76 | 4.5 |\n| 2 | 2.35 | 10 |\n| 3 | 4.11 | 12.35 |\n| 4 | 4.51 | 29.01 |\n| 5 | 5.49 | 38.23 |\n| 6 | 3.72 | 43.13 |\n| 7 | 4.51 | 67.84 |\n| 8 | 8.63 | 64.90 |\n| 9 | 7.45 | 67.25 |\n| 10 | 8.43 | 72.15 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does halving the H\u2082O dose affect growth stability across cycles?",
+                "answer_type": "Paragraph",
+                "answer": "Halving the H\u2082O dose makes the growth much less stable from cycle to cycle. In the base case, the growth per cycle stays low and fairly consistent, with only small fluctuations across the 10 cycles. With half H\u2082O, the growth becomes unstable, showing large swings.  So the reduced H\u2082O dose breaks the steady, repeatable growth behavior."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Are growth rates sensitive to the input stoichiometries?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "To obtain smooth films, which dosing condition should be chosen, and what evidence supports that?",
+                "answer_type": "Paragraph",
+                "answer": "To obtain smooth films, the base-case  (stoichiometric) dosing  should be selected. The base case maintains a consistently low surface roughness (below 10 \u00c5 ) throughout the sequence. By contrast, the half-H\u2082O condition exhibits a rapid and substantial increase in roughness, reaching over 70 \u00c5 by the end of the measurement. Overall, this behavior is consistent with the development of a rough surface."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the effect of using substoichiometric amounts of H\u2082O?",
+                "answer_type": "Factoid",
+                "answer": "Using substoichiometric (insufficient) amounts of H\u2082O leads to surface roughening."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 1,
+            "width": 476,
+            "height": 345
+        },
+        "b": {
+            "x": 497,
+            "y": 2,
+            "width": 487,
+            "height": 342
+        }
+    }
+}

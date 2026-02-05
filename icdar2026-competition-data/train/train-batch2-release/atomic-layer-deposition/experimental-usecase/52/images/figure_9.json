@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/52/figure_9",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "Constant current charge and discharge curves of an ALD LiCoO2 film (x = 4) between 3.0 V and 4.1 V versus Li/Li+, plotted as E versus Q. The paper notes an about 12% capacity loss between charge and discharge in this panel.",
+        "b": "Differential capacity dQ/dE versus E for the same cycling window, showing a clear charge transfer feature near 3.9 V that the paper associates with LiCoO2.",
+        "c": "Capacity versus cycle number comparing x = 2 and x = 4 films, showing higher capacity for x = 4 and fairly stable cycling behavior over the shown cycles, with areal capacity on the left axis and gravimetric capacity on the right axis."
+    },
+    "data_extraction": {
+        "a": "| Q, mAh/g | E (V) vs Li/Li\u207a (Charge) | E (V) vs Li/Li\u207a (Discharge) |\n|---|---|---|\n| 5 | 3.20 | 3.00 |\n| 10 | 3.55 | 3.20 |\n| 20 | 3.70 | 3.50 |\n| 40 | 3.85 | 3.70 |\n| 60 | 3.92 | 3.85 |\n| 80 | 4.00 | 3.92 |\n| 95 | 4.15 | 4.00 |",
+        "b": "| E (V) vs Li/Li\u207a | dQ/dE (mAh/Vg) Charge | dQ/dE (mAh/Vg) Discharge |\n|---|---|---|\n| 3.2 | 0 | 0 |\n| 3.4 | 0 | 0 |\n| 3.6 | 0.05 | -0.05 |\n| 3.8 | 0.10 | -0.10 |\n| 3.9 | 0.35 | -0.40 |\n| 3.95 | 0.80 | -0.75 |\n| 4.0 | 0.40 | -0.30 |\n| 4.05 | 0.20 | -0.15 |",
+        "c": "| (Dis)charge cycles | Capacity Co/Li (x)=4 (\u03bcAh \u03bcm\u207b\u00b9cm\u207b\u00b2) | Capacity Co/Li (x)=4 (mAh/g) | Capacity Co/Li (x)=2 (\u03bcAh \u03bcm\u207b\u00b9cm\u207b\u00b2) | Capacity Co/Li (x)=2 (mAh/g) |\n|---|---|---|---|---|\n| 1 | 26 | 95 | 11.5 | 42 |\n| 2 | 25.5 | 93 | 11.5 | 42 |\n| 3 | 25 | 92 | 11.5 | 42 |\n| 5 | 25 | 91 | 11 | 40 |\n| 7 | 24.5 | 90 | 11 | 40 |\n| 10 | 24.5 | 89 | 10.5 | 38 |\n| 12 | 24 | 88 | 10 | 37 |\n| 14 | 24 | 88 | 10 | 37 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What voltage window and cycling condition were used for the constant current measurements in this figure?",
+                "answer_type": "List",
+                "answer": "Voltage window: 3.0 V to 4.1 V versus Li/Li+\n\nConstant current cycling at 0.35 C rate\n\nLiquid electrolyte: LiClO4 in EC/DEC 1/1"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "In panel c, does the x = 4 film show higher capacity than the x = 2 film over the plotted cycles?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "In panel b, what quantity is plotted on the y axis and what is on the x axis?",
+                "answer_type": "Factoid",
+                "answer": "The y axis is dQ/dE (differential capacity) and the x axis is E versus Li/Li+."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The paper mentions a clear reaction feature near 3.9 V in panel b. What does the paper interpret this feature to represent?",
+                "answer_type": "Factoid",
+                "answer": "A charge transfer reaction at about 3.9 V as expected for LiCoO2."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 18,
+            "width": 624,
+            "height": 466
+        },
+        "b": {
+            "x": 8,
+            "y": 487,
+            "width": 601,
+            "height": 427
+        },
+        "c": {
+            "x": 3,
+            "y": 956,
+            "width": 652,
+            "height": 464
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/38/fig5",
+    "classification": {
+        "a": "bar chart",
+        "b": "bar chart"
+    },
+    "summarization": {
+        "a": "The bar chart shows the etch rate per cycle for the individual half-reactions (Reaction A only and Reaction B only) compared with the full ALE cycle. Reaction A alone produces no measurable etch, Reaction B (AlGaN) alone causes only a small background etch (~0.07 \u00c5/cycle), while the combined ALE process yields ~0.807 \u00c5/cycle, giving a  synergy of ~91%.",
+        "b": "The bar chart shows the etch rate per cycle for the individual half-reactions (Reaction A only and Reaction B only) compared with the full ALE cycle. Reaction A alone produces no measurable etch, Reaction B (GaN) alone causes only a small background etch (~0.07 \u00c5/cycle), while the combined ALE process yields ~2.639 \u00c5/cycle, giving a  synergy of ~97%."
+    },
+    "data_extraction": {
+        "a": "| Etch rate (\u00c5/cycle): Reaction A (240 cycles) | Etch rate (\u00c5/cycle):ALE (100 Cycles) | Etch rate (\u00c5/cycle):Reaction B (400 cycles) |\n|---|---|---|\n| 0.000 | 0.807 | 0.07 |",
+        "b": "| Etch rate (\u00c5/cycle):Reaction A (240 cycles) | Etch rate (\u00c5/cycle):ALE (72 Cycles) | Etch rate (\u00c5/cycle):Reaction B (400 cycles) |\n|---|---|---|\n| 0.000 | 2.639 | 0.07 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which reaction shows parasitic etch?",
+                "answer_type": "Factoid",
+                "answer": "Reaction B."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is reaction A parasitic?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "If reaction's A etch rate were exactly the same as the etch rate of reaction B, what would happen to the synergy value and why?",
+                "answer_type": "Paragraph",
+                "answer": "Synergy would decrease. By definition, synergy is calculated by subtracting the sum of the two single-step etch rates from the full ALE rate. Numerically, it would be: (2.639-0.14)/2.639 = 94.6%."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process is closer to an ideal ALE? AlGaN has a synergy of ~91%.",
+                "answer_type": "Factoid",
+                "answer": "The GaN process is closer to ideal ALE, because its synergy is higher."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 666,
+            "height": 530
+        },
+        "b": {
+            "x": 3,
+            "y": 599,
+            "width": 667,
+            "height": 464
+        }
+    }
+}

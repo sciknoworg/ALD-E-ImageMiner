@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/63/fig_1",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "scatter plot"
+    },
+    "summarization": {
+        "a": "The deposition rate increases rapidly with increasing O\u2082 plasma duration up to 10 seconds, then plateaus.",
+        "b": "The deposition rate remains relatively constant across a wide range of temperatures, with a slight decrease at higher temperatures.",
+        "c": "Film thickness increases linearly with the number of PEALD cycles."
+    },
+    "data_extraction": {
+        "a": "| O2 plasma duration (s) | Deposition rate (nm/cycle) |\n|---|---|\n| 2 | 0.020 |\n| 5 | 0.043 |\n| 10 | 0.051 |\n| 20 | 0.053 |\n| 40 | 0.051 |\n| 60 | 0.052 |",
+        "b": "| Temperature (\u00b0C) | Deposition rate (nm/cycle) |\n|---|---|\n| 30 | 0.061 |\n| 100 | 0.054 |\n| 150 | 0.053 |\n| 200 | 0.053 |\n| 250 | 0.053 |\n| 300 | 0.053 |\n| 350 | 0.052 |\n| 400 | 0.053 |",
+        "c": "| Number of PEALD cycles | Film thickness (nm) |\n|---|---|\n| 50 | 3.0 |\n| 150 | 8.0 |\n| 300 | 16.0 |\n| 500 | 26.5 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "In panel (a), how does deposition rate change as O2 plasma duration increases, and about when does it saturate?",
+                "answer_type": "Factoid",
+                "answer": "The deposition rate rises rapidly from about 0.02 nm per cycle at 2 s to about 0.05 nm per cycle by about 10 s, then stays near that level up to 60 s. Saturation begins at roughly 10 s."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the linear trend in panel (c) imply about the growth behavior during Ga2O3 PEALD at 250 C?",
+                "answer_type": "List",
+                "answer": "The growth per cycle is approximately constant over the tested cycle counts.\n\nThere is no strong incubation delay in thickness accumulation over this range.\n\nThe process behaves in a self limiting manner consistent with ALD type growth."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In panel (b), what do the square data points and the horizontal dashed line represent?",
+                "answer_type": "Factoid",
+                "answer": "The squares are measured deposition rate values at different substrate temperatures. The dashed line indicates the approximate constant growth per cycle within the ALD temperature window, about 0.53 \u00c5 per cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the nearly constant growth per cycle over a wide temperature range in panel (b) useful for PEALD of Ga2O3?",
+                "answer_type": "Paragraph",
+                "answer": "A broad temperature window with stable growth per cycle makes the process easier to transfer across tools and substrates because small temperature variations have limited impact on thickness control. It also enables deposition on temperature sensitive substrates by selecting a lower temperature while keeping similar thickness per cycle. In practice, this supports more predictable film thickness targeting across devices and wafer areas."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 548,
+            "height": 417
+        },
+        "b": {
+            "x": 4,
+            "y": 424,
+            "width": 542,
+            "height": 419
+        },
+        "c": {
+            "x": 0,
+            "y": 851,
+            "width": 547,
+            "height": 411
+        }
+    }
+}

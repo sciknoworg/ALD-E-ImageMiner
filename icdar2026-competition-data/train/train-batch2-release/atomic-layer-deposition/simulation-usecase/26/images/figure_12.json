@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/26/figure_12",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The chart shows two time-series: events/\u03bcs (red, left axis) and total protons in film/cell (green, right axis). Both signals oscillate in a repeating cycle pattern and generally increase with time, with higher event rates occurring alongside higher proton counts.",
+        "b": "The chart zooms into one cycle (0.0024\u20130.0028 s) and marks step transitions (metal pulse, purge, oxygen pulse, purge, end). The events/\u03bcs drops to a minimum after the metal pulse and then rises to a peak after the oxygen pulse."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Number of events/\u03bcs | Total protons in film/cell |\n|---|---|---|\n| 0.0000 | 275 | 27 |\n| 0.0003 | 984 | 1239 |\n| 0.0005 | 300 | 183 |\n| 0.0007 | 1406 | 1842 |\n| 0.0010 | 471 | 543 |\n| 0.0011 | 1547 | 1799 |\n| 0.0014 | 383 | 419 |\n| 0.0015 | 1714 | 1979 |\n| 0.0018 | 449 | 481 |\n| 0.0019 | 1884 | 2122 |\n| 0.0022 | 471 | 568 |\n| 0.0023 | 2235 | 2234 |\n| 0.0025 | 748 | 1047 |\n| 0.0027 | 2441 | 2414 |\n| 0.0029 | 772 | 947 |\n| 0.0031 | 2403 | 2476 |\n| 0.0033 | 863 | 1090 |\n| 0.0035 | 2809 | 2954 |\n| 0.0037 | 1057 | 1464 |\n| 0.0039 | 2982 | 3111 |\n| 0.0041 | 1107 | 1451 |\n| 0.0043 | 3435 | 3681 |\n| 0.0045 | 1595 | 2146 |\n| 0.0047 | 3591 | 3644 |\n| 0.0049 | 1736 | 2084 |\n| 0.0051 | 3653 | 3483 |\n| 0.0053 | 1827 | 2146 |\n| 0.0055 | 3774 | 3799 |\n| 0.0057 | 1930 | 2488 |\n| 0.0059 | 3823 | 3893 |\n| 0.0061 | 1975 | 2264 |\n| 0.0063 | 4057 | 4315 |\n| 0.0065 | 2406 | 2905 |\n| 0.0068 | 4232 | 4533 |\n| 0.0069 | 2554 | 3190 |\n| 0.0071 | 4361 | 4496 |\n| 0.0073 | 2709 | 3296 |\n| 0.0075 | 4517 | 4719 |\n| 0.0077 | 2850 | 3209 |\n| 0.0079 | 4907 | 4968 |",
+        "b": "| Step | Time (s) | Number of events/\u03bcs |\n|---|---|---|\n| Start of metal pulse (cycle) | 0.0024 | 2018 |\n| Start of purge | 0.0025 | 789 |\n| Start of oxygen pulse | 0.0026 | 768 |\n| Start of purge | 0.0027 | 2453 |\n| End of cycle | 0.0028 | 2249 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the proton count generally rise and fall synchronously with the event rate?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How many cycles are visible in the plot?",
+                "answer_type": "Factoid",
+                "answer": "20 cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the plot indicate net accumulation or loss of protons? What features of the proton trace support that interpretation?",
+                "answer_type": "Paragraph",
+                "answer": "The plot indicates net proton accumulation in the film over time. The proton trace shows a repeating up\u2013down pattern each cycle, but its overall level shifts upward across the time window. That upward drift means any proton losses during parts of the cycle are smaller than the gains, so the net balance is positive."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the event rate evolve after each precursor pulse?",
+                "answer_type": "Paragraph",
+                "answer": "The event rate is high at the start of the metal pulse (~2018 events/\u03bcs) and then drops sharply by the start of the first purge to ~789 events/\u03bcs. After the oxygen pulse, the event rate jumps to a peak (~2453 events/\u03bcs). By the end of the cycle it stays high but drops slightly (~2249 events/\u03bcs)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 653,
+            "height": 459
+        },
+        "b": {
+            "x": 152,
+            "y": 472,
+            "width": 362,
+            "height": 528
+        }
+    }
+}

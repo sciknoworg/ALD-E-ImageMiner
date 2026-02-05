@@ -1,0 +1,97 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/57/figure_1",
+    "classification": {
+        "a": "molecular structure diagram",
+        "b": "line chart",
+        "c": "line chart",
+        "d": "line chart",
+        "e": "line chart",
+        "f": "line chart"
+    },
+    "summarization": {
+        "a": "A molecular structure diagram illustrating the atomic arrangement of the cesium precursor Cs(btsa). The bulky silylamide ligands are clearly visible, highlighting their role in enhancing precursor volatility while influencing surface reaction kinetics during the ALD process.",
+        "b": "A line plot showing the dependence of growth per cycle (GPC, in \u00c5/cycle) on deposition temperature. A well-defined ALD temperature window is observed between 150 \u00b0C and 175 \u00b0C, where the GPC remains stable and reaches a maximum value of approximately 3.3 \u00c5/cycle. At temperatures above 200 \u00b0C, the GPC decreases sharply, suggesting precursor desorption or reduced surface residence time.",
+        "c": "A linear plot of film thickness as a function of deposition cycles (0\u2013400 cycles). The linear relationship confirms layer-by-layer ALD growth behavior. The linear fit passes through the origin, indicating instant nucleation on the silicon substrate with no observable nucleation delay.",
+        "d": "A saturation curve showing the variation of GPC with Cs(btsa) pulse duration. Due to the bulky molecular structure of the Cs precursor, longer pulse times (approximately 1.0\u20131.5 s) are required to fully saturate the surface, demonstrating self-limiting adsorption behavior characteristic of ALD.",
+        "e": "A line plot depicting the influence of SnI\u2084 pulse duration on GPC. Saturation is achieved rapidly at short pulse times (approximately 0.25 s), reflecting the smaller molecular size and higher reactivity of the SnI\u2084 precursor compared to Cs(btsa).",
+        "f": "A plot showing GPC as a function of purge time between precursor exposures. The GPC remains constant over the studied purge durations, indicating effective removal of excess precursors and by-products and confirming the absence of parasitic CVD reactions."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": "| Deposition temperature (\u00b0C) | GPC (\u00c5) |\n|---|---|\n| 150 | 3.30 |\n| 200 | 2.87 |\n| 250 | 2.60 |\n| 300 | 1.08 |\n| 350 | 0.5 |",
+        "c": "| Deposition cycles | Thickness (nm) |\n|---|---|\n| 0 | 0 |\n| 100 | 30 |\n| 200 | 70 |\n| 300 | 100 |\n| 400 | 130 |",
+        "d": "| Cs(btsa) pulse duration (s) | GPC (\u00c5) |\n|---|---|\n| 0.5 | 1.0 |\n| 1.0 | 3.0 |\n| 1.5 | 3.3 |\n| 2.0 | 3.3 |",
+        "e": "| SnI\u2084 pulse duration (s) | GPC (\u00c5) |\n|---|---|\n| 0.1 | 2.18 |\n| 0.2 | 3.3 |\n| 0.5 | 3.2 |\n| 1.0 | 3.5 |",
+        "f": "| Purge duration (s) | GPC (\u00c5) |\n|---|---|\n| 0.0 | 3.0 |\n| 0.5 | 3.0 |\n| 1.0 | 3.0 |\n| 1.5 | 3.0 |\n| 2.0 | 3.0 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Describe one complete, optimized ALD cycle for depositing CsI at 150\u00b0C based on the saturation data in this image relevant to labels d , e and f.",
+                "answer_type": "List",
+                "answer": "1. Cs(btsa) precursor pulse (~1.5 s).\n\n2. Inert gas purge (~1.0 s).\n\n3. SnI\u2084 precursor pulse (~0.5 s).\n\n4. Inert gas purge (~1.0 s).\nThis sequence uses pulse and purge times within the saturated regimes, ensuring complete surface reactions and byproduct removal for self-limiting growth."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "If the linearity plot shows an x-intercept at Cycle 50 when depositing on a hydrophobic polymer, what does this imply about film continuity at low thickness?",
+                "answer_type": "Paragraph",
+                "answer": "An x-intercept at Cycle 50 indicates a nucleation delay, meaning the first 50 cycles are spent overcoming the surface energy barrier via island growth. As a result, very thin films (<10 nm) would be discontinuous and contain pinholes, rather than forming a uniform, conformal layer. In contrast, the near-zero intercept on silicon indicates immediate nucleation, which is ideal for ultrathin, continuous films."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The linear thickness vs. cycles plot (c) and pulse saturation plots (d-f) confirm ideal ALD behavior. What key advantage does this provide for using CsI ALD to fabricate a conformal coating on a complex 3D micro-structured substrate for an X-ray imaging detector?",
+                "answer_type": "Paragraph",
+                "answer": "This provides excellent conformality and precise thickness control. The self-limiting reactions ensure uniform deposition on all surfaces of the 3D structure, while the linear growth allows exact thickness tuning by cycle count. This is critical for creating a consistent, optimized scintillation layer across the complex detector geometry."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on this image (b), what is the relationship between deposition temperature and the GPC for CsI ALD? Explain the likely cause for the decrease in GPC at temperatures above 200\u00b0C.",
+                "answer_type": "Paragraph",
+                "answer": "GPC is stable in an ALD window (~150-200\u00b0C) then decreases at higher temperatures. The decrease is likely due to precursor decomposition or desorption of the Cs(btsa) precursor at elevated temperatures, which reduces the amount of reactive species available for the self-limiting surface reaction."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 123,
+            "y": 18,
+            "width": 278,
+            "height": 336
+        },
+        "b": {
+            "x": 497,
+            "y": 7,
+            "width": 445,
+            "height": 352
+        },
+        "c": {
+            "x": 950,
+            "y": 1,
+            "width": 455,
+            "height": 361
+        },
+        "d": {
+            "x": 8,
+            "y": 373,
+            "width": 448,
+            "height": 353
+        },
+        "e": {
+            "x": 501,
+            "y": 384,
+            "width": 432,
+            "height": 345
+        },
+        "f": {
+            "x": 988,
+            "y": 379,
+            "width": 419,
+            "height": 345
+        }
+    }
+}

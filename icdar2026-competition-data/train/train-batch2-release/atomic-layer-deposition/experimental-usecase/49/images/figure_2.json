@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/49/figure_2",
+    "classification": {
+        "a": "stacked spectra chart",
+        "b": "stacked spectra chart"
+    },
+    "summarization": {
+        "a": "The figure presents X-ray Photoelectron Spectroscopy (XPS) spectra of Molybdenum Disulfide (MoS\u2082) films deposited between 200 \u00b0C and 300 \u00b0C. \u2013 Mo 3d: At 200 \u00b0C, the spectrum shows a mixture of Mo\u2076\u207a species (oxide or unreacted precursor, ~236 eV) and Mo\u2074\u207a states characteristic of MoS\u2082 (~229/233 eV). As the deposition temperature increases to 250 \u00b0C and 275 \u00b0C, the spectra are dominated by a sharp Mo\u2074\u207a doublet, indicating improved formation of stoichiometric MoS\u2082.",
+        "b": "\u2013 S 2p: Low-temperature films exhibit peak broadening toward higher binding energies (S\u2070 or S\u2082\u00b2\u207b), suggesting incomplete sulfidation. At higher temperatures, the spectra evolve into a clean S\u00b2\u207b doublet, confirming the formation of a well-defined MoS\u2082 lattice."
+    },
+    "data_extraction": {
+        "a": "| Binding Energy (eV) | Mo 3d |\n|---|---|\n| 236 | Mo^{6+} |\n| 232 | Mo^{4+} |\n| 228 | 300 \u00b0C |\n| 225 | 275 \u00b0C |\n| 220 | 250 \u00b0C |\n| 215 | 225 \u00b0C |\n| 210 | 200 \u00b0C |",
+        "b": "| Binding Energy (eV) | S 2p |\n|---|---|\n| 166 | S^{0}/S^{2-} |\n| 164 | S^{2-} |\n| 162 | 300 \u00b0C |\n| 160 | 275 \u00b0C |\n| 158 | 250 \u00b0C |\n| 156 | 225 \u00b0C |\n| 154 | 200 \u00b0C |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the final step in the sample preparation sequence before collecting the XPS spectrum for the film deposited at 250\u00b0C? Why is this step critical?",
+                "answer_type": "Paragraph",
+                "answer": "The final step is transferring the sample into the XPS ultra-high vacuum chamber without air exposure. This is critical to prevent surface oxidation, which would distort the measured Mo and S chemical states and obscure the true film composition."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast depositing at 200\u00b0C versus 300\u00b0C for an application requiring pure, semiconducting 2H-MoS\u2082. Which temperature is preferable, and what is a potential integration trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "300\u00b0C is preferable for purer MoS\u2082. The trade-off is the higher thermal budget, which may be incompatible with temperature-sensitive substrates or back-end-of-line (BEOL) integration in advanced chips."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does increasing the deposition temperature from 200\u00b0C to 300\u00b0C affect the oxidation state of Molybdenum in the film? State the chemical cause.",
+                "answer_type": "Paragraph",
+                "answer": "Increasing temperature reduces Mo\u2076\u207a and increases Mo\u2074\u207a. The cause is more complete precursor decomposition and ligand removal at higher temperature, which minimizes oxygen incorporation and favors the formation of Mo-S bonds over Mo-O bonds."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "The dominance of the Mo\u2074\u207a and S\u00b2\u207b peaks at 300\u00b0C confirms the formation of stoichiometric MoS\u2082. What key electrical property for a transistor channel does this directly imply will be optimal?",
+                "answer_type": "Paragraph",
+                "answer": "It implies an optimal semiconductor band gap and high channel mobility. Stoichiometric MoS\u2082 has a well-defined band gap (~1.8 eV for monolayers) and minimal defect scattering from oxides or sulfur vacancies, enabling efficient transistor operation."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 6,
+            "width": 343,
+            "height": 500
+        },
+        "b": {
+            "x": 343,
+            "y": 4,
+            "width": 293,
+            "height": 497
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/43/figure_1",
+    "classification": {
+        "a": "reaction scheme",
+        "b": "reaction scheme",
+        "c": "reaction scheme"
+    },
+    "summarization": {
+        "a": "The graph represents the energy profile obtained from ReaxFF-NEB calculations for Al\u2082O\u2083 ALD on an H-terminated Ge(100) surface, showing the adsorption of trimethylaluminum (TMA). The reaction proceeds via chemisorption of TMA on a Ge\u2013H* site, forming a Ge\u2013Al(CH\u2083)\u2082* surface complex with the release of a CH\u2084 molecule, with an activation barrier of about 1.41 eV and an overall exothermic reaction energy of \u22121.09 eV. The insets illustrate the atomic configurations at each reaction stage.",
+        "b": "The graph represents the energy profile obtained from ReaxFF-NEB calculations for the H\u2082O half-cycle of Al\u2082O\u2083 ALD on an H-terminated Ge(100) surface. It shows the reaction of H\u2082O with a Ge\u2013H* site to form a Ge\u2013OH* surface species and molecular H\u2082, with an activation energy of approximately 2.32 eV and a final reaction energy of about 1.04 eV. The insets depict the corresponding molecular adsorption and reaction configurations along the reaction pathway.",
+        "c": "The graph represents the energy profile obtained from ReaxFF-NEB calculations for TMA adsorption on a Ge dangling bond (Ge\u2013) site on the Ge(100) surface. TMA initially adsorbs strongly on the Ge\u2013 site, followed by a hydrogen-assisted ligand elimination reaction involving a neighboring Ge\u2013H* site, resulting in the formation of a Ge\u2013Al(CH\u2083)\u2082* complex and CH\u2084, with an overall reaction energy of \u22121.74 eV. The insets show the atomic arrangements corresponding to each intermediate and transition state."
+    },
+    "data_extraction": {
+        "a": "| Reaction Step | Energy (eV) |  reaction state |\n|---|---|---|\n|                |   0.0     |   Initial State |\n| Ge\u2013H* + Al(CH\u2083)\u2083 \u2192 Ge\u2013Al(CH\u2083)\u2082* + CH\u2084 | 1.41 |Transition state | \n| Ge\u2013Al(CH\u2083)\u2082* \u2192 Ge\u2013Al(CH\u2083)\u2082* + CH\u2084 | \u22121.09 |Final state |",
+        "b": "| Reaction Step | Energy (eV) |reaction state |\n|---|---|----- |\n|      - |  0.0         |   Initial State |\n|      - |  -0.58     |      Intermediate  State |\n| Ge\u2013H* + H\u2082O \u2192 Ge\u2013OH* + H\u2082 | 2.32 |Transition state | \n| Ge\u2013OH* \u2192 Ge\u2013OH* + H\u2082 | 1.04 |Final state |",
+        "c": "| Reaction Step | Energy (eV) |reaction state |\n|---|---|----- |\n|      -    |  0.0   |   Initial State |\n| -0.0824 |Ge* + Al(CH\u2083)\u2083 \u2192 Ge\u2013Al(CH\u2083)\u2083* | Intermediate  State |\n| Ge\u2013Al(CH\u2083)\u2083* + Ge\u2013H* \u2192 Ge\u2013Al(CH\u2083)\u2082* + CH\u2084 + Ge* | \u22120.824 |Transition state | \n|      -    |  0.079     |      Intermediate  State |\n| Ge\u2013Al(CH\u2083)\u2082* \u2192 Ge\u2013Al(CH\u2083)\u2082* + CH\u2084 + Ge* | \u22121.74 |Final state |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Given the high barrier (1.41 eV) for TMA on H-terminated Ge vs. the barrier-less adsorption on dangling bonds (-0.824 eV), what does this imply for the growth mode of the first ALD monolayer?",
+                "answer_type": "Paragraph",
+                "answer": "Growth will not occur uniformly; it will be highly selective to defects (dangling bonds). Since the ideal H-terminated surface is unreactive, nucleation will cluster around existing defects where adsorption is spontaneous, leading to island growth and potential pinholes rather than a conformal layer-by-layer deposition."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on panel (c), list the two-step mechanism for TMA reaction on a Ge dangling bond. How does the energy of the first step differ from the initial interaction in panel (a)?",
+                "answer_type": "List",
+                "answer": "1. Spontaneous adsorption of TMA onto the Ge dangling bond (Ge-*).\n2.  Reaction with a neighboring Ge-H* site to eliminate methane (CH\u2084).\n\nThe first step in (c) is spontaneous and exothermic (-0.824 eV) due to the open radical site. In contrast, the initial interaction in (a) faces a significant activation barrier (1.41 eV) because the H-passivated surface lacks active binding sites."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the activation barriers for TMA (1.41 eV) and H\u2082O (2.32 eV) on the H-terminated surface. Which precursor is more likely to cause unintentional surface etching or nucleation during a purge step, and why?",
+                "answer_type": "Paragraph",
+                "answer": "TMA is more likely to react, although both barriers are high. The activation energy for TMA (1.41 eV) is nearly 1 eV lower than for H\u2082O (2.32 eV), implying that under thermal stress, TMA has a statistically higher probability of overcoming the passivation layer than water."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the activation energy for the H\u2082O half-reaction (b) compare to the TMA reaction (a), and what does this imply for the kinetics of the ALD cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The H\u2082O reaction has a higher barrier (~2.32 eV vs. ~1.41 eV), implying it is the slower, rate-limiting half-reaction in the ALD cycle. This higher barrier originates from the stronger O\u2013H bond that must be broken."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 17,
+            "y": 18,
+            "width": 649,
+            "height": 254
+        },
+        "b": {
+            "x": 19,
+            "y": 297,
+            "width": 649,
+            "height": 234
+        },
+        "c": {
+            "x": 16,
+            "y": 570,
+            "width": 652,
+            "height": 234
+        }
+    }
+}

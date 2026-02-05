@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/42/figure_3",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot image represents the growth rate (in A/cycle) against pulse length (in seconds). There seems to be no growth till 2 secs and it  seems to increase only after 3 secs and reaches a peak at 5 secs and slightly decreases.  This saturation is the identity of a self-limiting ALD process, where increasing the exposure time beyond a certain point no longer increases thickness, confirming complete surface reaction."
+    },
+    "data_extraction": {
+        "a": "| pulse length (s) | growth rate (A/cycle) |\n|---|---|\n| 1 | 0 |\n| 2 | 0 |\n| 3 | 0.15 |\n| 4 | 0.2 |\n| 5 | 0.22 |\n| 6 | 0.21 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What were the main steps in one PE-ALD cycle for depositing copper using Compound\u202f1?",
+                "answer_type": "List",
+                "answer": "Step 1: Pulse of Compound\u202f1 (vapor) onto the hot substrate \nStep 2: 3\u202fs purge with N\u2082 \nStep 3: 6\u202fs pulse of H\u2082 plasma \nStep 4: Second N\u2082 purge. Repeat."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How did the copper growth rate change as the pulse length of Compound\u202f1 was increased?",
+                "answer_type": "Factoid",
+                "answer": "It increased until it reached a plateau at 0.2\u202f\u00c5/cycle after a 4\u202fs pulse. Shorter pulses (1\u20132\u202fs) gave no measurable thickness."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why did the growth rate saturate at 0.2\u202f\u00c5/cycle, and what does this tell us about the surface reaction?",
+                "answer_type": "Factoid",
+                "answer": "The surface became fully covered with precursor after 4\u202fs; longer pulses couldn\u2019t add more copper because all reaction sites were occupied a sign of self-limiting ALD behavior."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Was the Cu film produced by this process pure and suitable for microelectronics?",
+                "answer_type": "Yes/No",
+                "answer": "Mostly yes\u2014EDS showed it was mainly copper metal with <5% carbon impurity. The growth rate (0.2\u202f\u00c5/cycle) is within the typical range for copper ALD, making it potentially useful for chip interconnects or barrier layers."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 560,
+            "height": 284
+        }
+    }
+}

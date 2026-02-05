@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/26/figure_15",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the relationship between simulation time and growth rate, with three different conditions represented by different markers: considering all ALD reactions (red +), cooperative effect is excluded (green circles), and when the migration process is switched off (blue triangle). Excl. cooperation gives the highest growth (~1.4\u20131.6 \u00c5/cycle), incl. all is intermediate (~0.5\u20130.75 \u00c5/cycle), and excl. migration is lowest (~0.12\u20130.22 \u00c5/cycle)."
+    },
+    "data_extraction": {
+        "a": "| Simulation time (s) | Growth rate \u2013 incl. all (\u00c5/cycle) | Growth rate \u2013 excl. cooperation (\u00c5/cycle) | Growth rate \u2013 excl. migration (\u00c5/cycle) |\n|---|---|---|---|\n| 0.0064 | 0.75 | 1.58 | 0.19 |\n| 0.0068 | 0.59 | 1.45 | 0.12 |\n| 0.0072 | 0.50 | 1.42 | 0.21 |\n| 0.0076 | 0.50 | 1.42 | 0.22 |\n| 0.0080 | 0.65 | 1.59 | 0.16 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At simulation time 0.0068 s, how do the three conditions rank from highest to lowest growth rate?",
+                "answer_type": "List",
+                "answer": "Excl. cooperation, Incl. all, Excl. migration"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does disabling migration appear to do to growth rate compared to the full model?",
+                "answer_type": "Factoid",
+                "answer": "Disabling migration reduces the growth rate compared to the full model."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process (migration or cooperation) is important to sustain film growth? What evidence supports the conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "Migration is more important to sustain growth. The evidence is that when migration is disabled (\u201cexcl. migration\u201d), the growth rate collapses to very low values (~0.12\u20130.22 \u00c5/cycle) at every time point, far below the full model (~0.5\u20130.75 \u00c5/cycle). In contrast, disabling cooperation (\u201cexcl. cooperation\u201d) does not reduce growth."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process (migration or cooperation) hinders the film growth in the model? What evidence supports the conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "Cooperation hinders film growth in this model. The evidence is that when cooperation is removed (\u201cexcl. cooperation\u201d), the growth rate jumps to the highest values in the plot (~1.4\u20131.6 \u00c5/cycle) across all times, well above the full model (~0.5\u20130.75 \u00c5/cycle). By contrast, removing migration lowers growth (~0.12\u20130.22 \u00c5/cycle), so migration is not what limits growth."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 638,
+            "height": 444
+        }
+    }
+}

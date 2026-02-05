@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/15/fig2",
+    "classification": {
+        "a": "reaction energy profile diagram"
+    },
+    "summarization": {
+        "a": "The chart illustrates the potential energy diagram plotting the energy changes (\u0394E) in kJ/mol for two reaction mechanisms: one occurring on the same dimer  (R1a/R2a) and one bridging adjacent dimers (R1b/R2b). The chart traces the reaction progress through  chemisorption state (CS), transition states (TS) and physisorption states (PS) ."
+    },
+    "data_extraction": {
+        "a": "|  Reaction coordinate, a.u.| Species Label | \u0394E, kJ/mol | \n| --- | --- | --- |\n| 1 | CS | -132.0 | \n| 2 | TS(R1a) | -41.0 |\n| 3 | PS(R1a) | -70.5 |\n| 4  | Product(R1a) | -50.1 |\n| 5 | TS (R2a) | 19.7 |\n| 6 | PS(R2a) | 12.9 |\n| 7 | Product(R2a) | 18.0 |\n| 2 | TS(R1b) | -71.1 |\n| 3 | PS(R1b) | -111.1 |\n| 4 | Product(R1b) | -93.4 |\n| 5 | TS(R2b) | -20.8 |\n| 6 | PS(R2b) | -59.9 |\n| 7 | Product(R2b) | - 39.9 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do all products rank from thermodynamically less stable to thermodynamically more stable?",
+                "answer_type": "List",
+                "answer": "Product(R2a): 18.0 kJ/mol (highest \u0394E  \u2192  least stable), Product(R2b): -39.9 kJ/mol, Product(R1a): -50.1 kJ/mol, Product(R1b): -93.4 kJ/mol"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which reaction is the rate-determining step for the pathway CS \u2192 R1b \u2192 R2b?",
+                "answer_type": "Factoid",
+                "answer": "Reaction Product(R1b) \u2192 TS(R2b) is rate-determining (highest barrier)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which reaction is the rate-determining step for the pathway CS \u2192 R1a \u2192 R2a?",
+                "answer_type": "Factoid",
+                "answer": "Reaction CS \u2192 TS(R1a) is the slowest (highest barrier)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Once the intermediate PSR2b is formed, is it more likely to move forward to the product or reverse back? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "It is more likely to move forward to form the final product rather than reversing. The energy barrier to proceed forward is 20.0 kJ/mol. The barrier to reverse back to the transition state is nearly double at 39.1 kJ/mol."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 1,
+            "width": 961,
+            "height": 365
+        }
+    }
+}

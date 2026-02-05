@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/29/fig8",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot illustrates the validation of a computational model for Atomic Layer Deposition (ALD) with TDEAH by comparing the calculated growth rates (nm/cycle) against pulse time (s) with experimental data. The coefficient of determination is 0.93, which indicates a strong correlation."
+    },
+    "data_extraction": {
+        "a": "| Pulse Time (s) | Growth Rate (nm/cyc) | Data series |\n| --- | --- | --- |\n| 0,0 | 0,000 | Gr exp |\n| 1,0 | 0,039 | Gr exp |\n| 2,0 | 0,088 | Gr exp |\n| 3,0 | 0,115 | Gr exp |\n| 4,0 | 0,121 | Gr exp |\n| 5,9 | 0,133 | Gr exp |\n| 8,0 | 0,145 | Gr exp |\n| 12,0 | 0,141 | Gr exp |\n| 1,0 | 0,064 | Gr calc |\n| 2,0 | 0,079 | Gr calc |\n| 3,0 | 0,094 | Gr calc |\n| 4,0 | 0,109 | Gr calc |\n| 6,0 | 0,125 | Gr calc |\n| 8,0 | 0,134 | Gr calc |\n| 12,0 | 0,150 | Gr calc |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the model generally underestimate or overestimate the experimental values?",
+                "answer_type": "Factoid",
+                "answer": "It generally underestimates the experimental values, except for the first and the last data points."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "When does the experimental process reach saturation?",
+                "answer_type": "Factoid",
+                "answer": "After ~ 8s."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Did the model fully capture the self-limiting behavior of the real process? Why or why not?",
+                "answer_type": "Paragraph",
+                "answer": "No. While the experimental data shows the growth rate reaching a saturation between 8 and 12 seconds, the model predicts a continued increase in growth rate during that same interval. This discrepancy leads the model to overestimate the growth rate at 12 seconds, failing to replicate the self-limiting behavior of an ALD process."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What are the two specific time intervals where the theoretical model and the experimental data intersect (cross over each other)?",
+                "answer_type": "Factoid",
+                "answer": "Between 1 and 2 seconds and between 8 and 12 seconds."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 7,
+            "y": 9,
+            "width": 964,
+            "height": 616
+        }
+    }
+}

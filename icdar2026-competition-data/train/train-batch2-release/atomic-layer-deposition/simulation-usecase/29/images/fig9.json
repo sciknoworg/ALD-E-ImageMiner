@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/29/fig9",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot illustrates the validation of a computational model for Atomic Layer Deposition (ALD) with TEMAH by comparing the calculated growth rates (nm/cycle) against pulse time (s) with experimental data. The coefficient of determination is 0.93, which indicates a strong correlation."
+    },
+    "data_extraction": {
+        "a": "| Pulse time (s) | Growth Rate (nm/cyc) | Data series |\n|---|---|---|\n| 0,0 | 0,000 | Gr exp |\n| 0,2 | 0,030 | Gr exp |\n| 0,5 | 0,066 | Gr exp |\n| 0,8 | 0,070 | Gr exp |\n| 1,2 | 0,071 | Gr exp |\n| 1,6 | 0,072 | Gr exp |\n| 2,0 | 0,072 | Gr exp |\n| 3,0 | 0,074 | Gr exp |\n| 4,0 | 0,074 | Gr exp |\n| 0,2 | 0,044 | Gr calc |\n| 0,5 | 0,054 | Gr calc |\n| 0,8 | 0,061 | Gr calc |\n| 1,2 | 0,067 | Gr calc |\n| 1,6 | 0,069 | Gr calc |\n| 2,0 | 0,071 | Gr calc |\n| 3,0 | 0,073 | Gr calc |\n| 4,0 | 0,075 | Gr calc |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process (theoretical or experimental) reaches saturation faster?",
+                "answer_type": "Factoid",
+                "answer": "The experimental process reaches saturation faster."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which phase of the deposition curve (beginning/middle/end) contributes the most to the residuals between the model and the experiment?",
+                "answer_type": "Factoid",
+                "answer": "The beginning of the curve contributes the most."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "When does the experimental process reach saturation?",
+                "answer_type": "Factoid",
+                "answer": "After ~ 1s."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If the precursor pulse time were to accidentally fluctuate between 2.0 and 4.0 seconds due to an operational failure, how would this affect the final film thickness according to the experimental data?",
+                "answer_type": "Paragraph",
+                "answer": "It would have no effect on the film thickness. The experimental data shows a saturation plateau; this confirms the process is self-limiting. Once the surface is saturated (which happens before 2 seconds), adding extra precursor due to an accidental fluctuation does not result in extra growth."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 4,
+            "width": 967,
+            "height": 624
+        }
+    }
+}

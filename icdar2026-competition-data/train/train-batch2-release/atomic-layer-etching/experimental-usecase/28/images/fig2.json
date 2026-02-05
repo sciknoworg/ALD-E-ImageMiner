@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/28/fig2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multi spectra chart",
+        "c": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the intensity of F-  at different depths for various powers (0, 10, 50, 100 W). Increasing power leads to penetration of the F\u207b deeper into the film.",
+        "b": "The XP-spectrum t displays the intensity of F 1s peaks at different times (Reference, 5s, 20s, 50s, 60s)  during plasma fluorination. The Al\u2013F peak grows strongly after fluorination and then changes more modestly at longer times.",
+        "c": "The chart illustrates the atomic percentage changes of O1 s, Al 2p, F 1s, and C 1s with increasing plasma fluorination time. O, Al and C decrease rapidly and then plateau, F increases rapidly and then plateaus."
+    },
+    "data_extraction": {
+        "a": "| Depth (nm) | 0W: Intensity (arb.units) | 10W: Intensity (arb.units) | 50W: Intensity (arb.units) | 100W: Intensity (arb.units) |\n|---|---|---|---|---|\n| 0 | 2 | 65 | 63 | 66 |\n| 1 | 2|  43| 52 | 60 |\n| 2 | 2 | 15 | 15 | 20 |\n| 3 | 2 | 8 | 10 | 11 |\n| 4 | 2 | 6 | 8 | 7 |",
+        "b": "| Measurement | Peak: Intensity (arb.units) | Peak: Binding energy [eV]  | \n|---|---|---|\n| Reference | 2.15 | 685 | \n| 5s |  29 | 686.1 | \n| 20s| 38 | 686.4 | \n| 50s| 42 | 686.4 | \n| 60s| 42 | 686.4 |",
+        "c": "| Plasma fluorination time (s) | Atomic % O 1s | Atomic % Al 2p | Atomic % F 1s | Atomic % C 1s |\n|---|---|---|---|---|\n| 0 | 52.1% | 28.8% | 0% | 18.5% |\n| 5 | 42% | 27.9% | 21.2% | 9% |\n| 20 | 38.7% | 27% | 21.8% | 10.8% |\n| 50 | 37.5% | 27.9% | 24.9% | 8.6% |\n| 60 | 38.4% | 27.9% | 25.3% | 8.1% |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What trend is observed in the F\u207b depth profiles across the different plasma powers, and what mechanism could explain that behavior?",
+                "answer_type": "Paragraph",
+                "answer": "The depth profiles indicate that increasing RF power leads to greater fluorine incorporation and a deeper fluorinated layer. This is attributed to higher RF power producing a larger flux of reactive fluorine radicals in the NF\u2083 plasma, which enhances fluorination. The fluorine signal still decreases with depth because the formed fluorinated layer acts as a diffusion barrier and hinders further transport."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At approximately what fluorination time does the surface reach saturation?",
+                "answer_type": "Factoid",
+                "answer": "Approx. 50 s (F 1s peak stops increasing)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which feature of the spectrum suggest that the fluorine chemical environment might be changing between the 5 s and 20 s fluorination measurements?",
+                "answer_type": "Factoid",
+                "answer": "Noticeable binding energy shift suggest that the dominant bonding environment might be evolving between 5s and 20s (consistent with the probed surface becoming more uniformly fluorinated)."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does fluorination modify the entire region probed by XPS or not? What evidence in the figure supports that conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "Fluorination does not appear to modify the entire region probed by XPS. The F atomic % increases but reaches a plateau while O remains predominant. It is consistent with a picture of a fluorine-enriched surface layers over underlying oxide that is still largely unfluorinated."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 102,
+            "y": 10,
+            "width": 556,
+            "height": 478
+        },
+        "b": {
+            "x": 111,
+            "y": 522,
+            "width": 542,
+            "height": 470
+        },
+        "c": {
+            "x": 72,
+            "y": 1026,
+            "width": 583,
+            "height": 495
+        }
+    }
+}

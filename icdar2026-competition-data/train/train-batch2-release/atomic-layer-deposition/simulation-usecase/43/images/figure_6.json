@@ -1,0 +1,68 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/43/figure_6",
+    "classification": {
+        "a": "line chart",
+        "b": "multi-axis chart",
+        "c": "line chart"
+    },
+    "summarization": {
+        "a": "This line chart shows the stepwise increase in film thickness over time during Al\u2082O\u2083 Atomic Layer Deposition (ALD) using TMA and H\u2082O on a GeO\u2093/Ge substrate, with each thickness jump corresponding to one ALD cycle.",
+        "b": "This multi axis chart shows the TMA dose peak and growth per cycle over ALD cycles. The values seems to dip initally till 3 ALD cycles and increased slowly.",
+        "c": "This  line chart shows the evolution of Growth Per Cycle (GPC) for TMA adsorption over the first 15 ALD cycles, starting from a baseline. The GPC increases from an initial low value before stabilizing, indicating a nucleation period before steady-state growth is achieved."
+    },
+    "data_extraction": {
+        "a": "| Time (min) | Thickness (\u00c5) |\n|------------|----------------|\n| 0  | 0   |\n| 2  | 1.8 |\n| 4  | 2.7 |\n| 6  | 5   |\n| 8  | 8.2 |\n| 10 | 10  |",
+        "b": "| ALD Cycles | Y (\u00c5) | Parameter |\n|------------|--------|------------------------|\n| 0  | 0    | TMA dose peak (\u00c5) |\n| 0  | 0    | Growth per cycle (\u00c5) |\n| 3  | 1.32 | TMA dose peak (\u00c5) |\n| 3  | 0.04 | Growth per cycle (\u00c5) |\n| 6  | 1.29 | TMA dose peak (\u00c5) |\n| 6  | 0.29 | Growth per cycle (\u00c5) |\n| 9  | 1.9  | TMA dose peak (\u00c5) |\n| 9  | 0.5  | Growth per cycle (\u00c5) |\n| 12 | 2.21 | TMA dose peak (\u00c5) |\n| 12 | 0.86 | Growth per cycle (\u00c5) |\n| 15 | 2.2  | TMA dose peak (\u00c5) |\n| 15 | 0.86 | Growth per cycle (\u00c5) |",
+        "c": "| ALD Cycles | GPC / TMA-Adsorp. |\n|------------|--------------------|\n| 0  | 0    |\n| 3  | 0.04 |\n| 6  | 0.23 |\n| 9  | 0.30 |\n| 12 | 0.40 |\n| 15 | 0.37 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What repeating two-step sequence is responsible for each thickness jump in the graph, and what critical phase separates each step?",
+                "answer_type": "Paragraph",
+                "answer": "The sequence is a TMA precursor pulse followed by a H\u2082O oxidant pulse. A purge step with inert gas separates each pulse to remove excess precursor and byproducts, enabling self-limiting surface reactions."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the total reaction energy for the process on the H-terminated surface (panel a) versus the dangling bond surface (panel c).",
+                "answer_type": "Factoid",
+                "answer": "The reaction on the dangling bond is significantly more exothermic (-1.74 eV) than on the H-terminated surface (-1.09 eV)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What key film growth property is demonstrated by the constant thickness increase per cycle, and what does it imply about the surface reactions?",
+                "answer_type": "Factoid",
+                "answer": "It demonstrates linear, layer-by-layer growth with a constant growth per cycle (GPC). This implies the surface reactions are self-limiting and saturate each cycle, leading to precise thickness control."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Application/Performance",
+                "question": "The data shows a barrier of 0 eV for defects and 1.41 eV for the ideal surface (label a). What does this extreme selectivity imply for the interface quality and leakage current of a resulting Ge/Al2O3 MOS capacitor?",
+                "answer_type": "Paragraph",
+                "answer": "This selectivity leads to island growth rather than layer-by-layer deposition, as nucleation occurs exclusively at defect sites first. This non-uniform nucleation creates pinholes and a rough interface, which typically results in high interface trap densities and increased gate leakage current in the final device."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 7,
+            "y": 35,
+            "width": 199,
+            "height": 248
+        },
+        "b": {
+            "x": 216,
+            "y": 36,
+            "width": 248,
+            "height": 248
+        },
+        "c": {
+            "x": 475,
+            "y": 40,
+            "width": 191,
+            "height": 245
+        }
+    }
+}
