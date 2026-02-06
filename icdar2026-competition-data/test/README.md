@@ -2,6 +2,14 @@
 
 The full competition dataset will be released **in batches according to the competition timeline**.
 
+Each release will be announced via the Sci-ImageMiner [Google Group](https://groups.google.com/u/4/g/sci-imageminer/) and reflected on the [Important Dates page](https://sites.google.com/view/sci-imageminer/important-dates).
+
+For task definitions and evaluation details, please refer to the [Task Description](https://sites.google.com/view/sci-imageminer/task-description) and [Task Evaluation Metrics](https://sites.google.com/view/sci-imageminer/task-evaluation-metrics) pages.
+
+### 🗂️ Dataset Release Batches
+
+- [Test dataset batch 1](test-batch1-release/)
+
 ### 🗂️ Directory Structure
 
 ```text
