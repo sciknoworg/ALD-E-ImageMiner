@@ -47,46 +47,7 @@ The submission must be a JSON array containing one entry per test sample:
 
 ---
 
-## 2. Summarization Task
-
-The summarization task requires generating concise, sub-figure level textual summaries describing the content of each sub-figure.
-
-### Submission Format
-
-The submission must be a JSON array containing one entry per test sample:
-
-```json
-[
-  {
-    "sample_id": "...",
-    "summarization": { ... }
-  },
-  {
-    "sample_id": "...",
-    "summarization": { ... }
-  },
-  ...
-]
-```
-
-- sample_id: Unique identifier corresponding to a test sample.
-- summarization: A mapping from figure labels to predicted summaries.
-
-### Example
-
-```json
-{
-  "sample_id": "atomic-layer-deposition/experimental-usecase/12/fig_1",
-  "summarization": {
-    "a": "The figure shows the deposition rate as a function of temperature.",
-    "b": "The panel illustrates film thickness variation over time."
-  }
-}
-```
-
----
-
-## 3. Data Extraction Task
+## 2. Data Extraction Task
 
 The data extraction task requires extraction underlying quantitative-plot data into structured Markdown tables (GitHub compatible), for each sub-figure.
 
@@ -122,6 +83,45 @@ Please note:
   "sample_id": "atomic-layer-deposition/experimental-usecase/45/fig_3",
   "data_extraction": {
     "a": "```markdown\n| Temperature (°C) | Growth Rate (Å/cycle) |\n| --- | --- |\n| 200 | 0.85 |\n| 250 | 1.10 |\n```"
+  }
+}
+```
+
+---
+
+## 3. Summarization Task
+
+The summarization task requires generating concise, sub-figure level textual summaries describing the content of each sub-figure.
+
+### Submission Format
+
+The submission must be a JSON array containing one entry per test sample:
+
+```json
+[
+  {
+    "sample_id": "...",
+    "summarization": { ... }
+  },
+  {
+    "sample_id": "...",
+    "summarization": { ... }
+  },
+  ...
+]
+```
+
+- sample_id: Unique identifier corresponding to a test sample.
+- summarization: A mapping from figure labels to predicted summaries.
+
+### Example
+
+```json
+{
+  "sample_id": "atomic-layer-deposition/experimental-usecase/12/fig_1",
+  "summarization": {
+    "a": "The figure shows the deposition rate as a function of temperature.",
+    "b": "The panel illustrates film thickness variation over time."
   }
 }
 ```
