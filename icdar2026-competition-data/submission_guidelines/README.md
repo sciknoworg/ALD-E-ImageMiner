@@ -4,17 +4,36 @@ This document describes the required prediction and submission formats for all t
 
 Participants must strictly follow the specified formats to ensure correct and fair evaluation. Submissions that do not conform to these guidelines may be rejected or scored incorrectly.
 
-All submissions must be provided in **JSON format** and uploaded via the official **CodaBench** competition platform.
+All submissions must be provided in **JSON format** and uploaded via the official **CodaBench** competition platform as a **ZIP** file.
 
 ---
 
 ## 1. Classification Task
 
-The classification task requires participants to predict the **figure type** for each figure/sub-figure(s) in a scientific figure.
+The classification task requires participants to predict the **figure type** for each figure/sub-figure(s).
 
-### 1.1 Prediction Format
+### Submission Format
 
-For each sample, predictions must be provided **at the sub-figure level**, where each sub-figure is identified by a lowercase alphabetical label (e.g., `a`, `b`, `c`).
+The submission must be a JSON array containing one entry per test sample:
+
+```json
+[
+  {
+    "sample_id": "...",
+    "classification": { ... }
+  },
+  {
+    "sample_id": "...",
+    "classification": { ... }
+  },
+  ...
+]
+```
+
+- sample_id: Unique identifier corresponding to a test sample.
+- classification: A mapping from figure labels to predicted class names.
+
+### Example
 
 ```json
 {
@@ -26,10 +45,13 @@ For each sample, predictions must be provided **at the sub-figure level**, where
 }
 ```
 
-- sample_id: Unique identifier corresponding to a test sample.
-- classification: A mapping from figure labels to predicted class names.
+---
 
-### 1.2 Submission Format
+## 2. Summarization Task
+
+The summarization task requires generating concise, sub-figure level textual summaries describing the content of each sub-figure.
+
+### Submission Format
 
 The submission must be a JSON array containing one entry per test sample:
 
@@ -37,25 +59,20 @@ The submission must be a JSON array containing one entry per test sample:
 [
   {
     "sample_id": "...",
-    "classification": { ... }
+    "summarization": { ... }
   },
   {
     "sample_id": "...",
-    "classification": { ... }
+    "summarization": { ... }
   },
   ...
 ]
 ```
 
----
+- sample_id: Unique identifier corresponding to a test sample.
+- summarization: A mapping from figure labels to predicted summaries.
 
-## 2. Summarization Task
-
-The summarization task requires generating concise, sub-figure level textual summaries describing the content of each figure panel.
-
-### 2.1 Prediction Format
-
-Summaries must be provided per sub-figure.
+### Example
 
 ```json
 {
@@ -67,9 +84,13 @@ Summaries must be provided per sub-figure.
 }
 ```
 
-- Summaries should be factual, concise, and grounded in the visual content of the figure.
+---
 
-### 2.2 Submission Format
+## 3. Data Extraction Task
+
+The data extraction task requires extraction underlying quantitative-plot data into structured Markdown tables (GitHub compatible), for each sub-figure.
+
+### Submission Format
 
 The submission must be a JSON array containing one entry per test sample:
 
@@ -77,25 +98,24 @@ The submission must be a JSON array containing one entry per test sample:
 [
   {
     "sample_id": "...",
-    "summarization": { ... }
+    "data_extraction": { ... }
   },
   {
     "sample_id": "...",
-    "summarization": { ... }
+    "data_extraction": { ... }
   },
   ...
 ]
 ```
 
----
+- sample_id: Unique identifier corresponding to a test sample.
+- data_extraction: A mapping from figure labels to predicted markdown tables.
 
-### 3. Data Extraction Task
+Please note:  
+- Tables must follow standard GitHub Markdown syntax and enclosed between **\```markdown** and **\```** markers.
+- Empty tables are allowed when no extractable data is present.
 
-The data extraction task requires extraction underlying quantitative-plot data into structured Markdown tables (GitHub compatible), one per sub-figure.
-
-## 3.1 Prediction Format
-
-Each panel must be represented by a Markdown table enclosed between '''markdown and '''.
+### Example
 
 ```json
 {
@@ -106,28 +126,6 @@ Each panel must be represented by a Markdown table enclosed between '''markdown 
 }
 ```
 
-- Tables must follow standard GitHub Markdown syntax.
-
-Empty tables are allowed when no extractable data is present.
-
-## 3.2 Submission Format
-
-The submission must be a JSON array containing one entry per test sample:
-
-```json
-[
-  {
-    "sample_id": "...",
-    "data_extraction": { ... }
-  },
-  {
-    "sample_id": "...",
-    "data_extraction": { ... }
-  },
-  ...
-]
-```
-
 ---
 
 ## 4. Visual Question Answering (VQA) Task
@@ -135,7 +133,28 @@ The submission must be a JSON array containing one entry per test sample:
 The VQA task requires answering scientific questions grounded in figure content.
 Questions are grouped by sub-figure label and include multiple question and answer types.
 
-### 4.1 Prediction Format
+### Submission Format
+
+The submission must be a JSON array containing one entry per test sample:
+
+```json
+[
+  {
+    "sample_id": "...",
+    "vqa": { ... }
+  },
+  {
+    "sample_id": "...",
+    "vqa": { ... }
+  },
+  ...
+]
+```
+
+- question_type: Process-Oriented, Comparative/Trend, Structure-Property, Application/Performance
+- answer_type: Factoid, List, Paragraph, Yes/No
+
+### Example
 
 ```json
 {
@@ -161,31 +180,15 @@ Questions are grouped by sub-figure label and include multiple question and answ
 }
 ```
 
-- question_type: Process-Oriented, Comparative/Trend, Structure-Property, Application/Performance
-- answer_type: Factoid, List, Paragraph, Yes/No
+Please note:
+- Multiple Q&A pairs per sub-figure are allowed.
 
-### 4.2 Submission Format
-
-The submission must be a JSON array containing one entry per test sample:
-
-```json
-[
-  {
-    "sample_id": "...",
-    "vqa": { ... }
-  },
-  {
-    "sample_id": "...",
-    "vqa": { ... }
-  },
-  ...
-]
-```
 
 ## General Notes
 
-- Each submission file must be a single JSON file.
+- Each submission file must be a single **JSON** file.
 - Each **sample_id** must appear at most once per submission sample.
+- For each sample, predictions must be provided **at the sub-figure level**, where each sub-figure is identified by a lowercase alphabetical label (e.g., `a`, `b`, `c`).
 - Predictions must correspond exactly to the provided test samples.
 - Text outputs are evaluated using automatic metrics and are subject to normalization.
 - Failure to comply with these formats may result in incorrect scoring or disqualification.
