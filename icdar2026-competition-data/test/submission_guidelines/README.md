@@ -4,7 +4,7 @@ This document describes the required prediction and submission formats for all t
 
 Participants must strictly follow the specified formats to ensure correct and fair evaluation. Submissions that do not conform to these guidelines may be rejected or scored incorrectly.
 
-All submissions must be provided in **JSON format** and uploaded via the official **CodaBench** competition platform as a **ZIP** file.
+All submissions must be provided in **JSON format** and named as "prediction_data.json", compressed as a **ZIP** file and then uploaded via the official **CodaBench** competition platform.
 
 ---
 
@@ -44,6 +44,11 @@ The submission must be a JSON array containing one entry per test sample:
   }
 }
 ```
+
+### Additional Resources
+
+- [Sample Submission](sample_submissions/classification/prediction_data.json)
+- [Competition Page](https://www.codabench.org/competitions/12901/)
 
 ---
 
@@ -87,6 +92,11 @@ Please note:
 }
 ```
 
+### Additional Resources
+
+- [Sample Submission](sample_submissions/data_extraction/prediction_data.json)
+- [Competition Page](https://www.codabench.org/competitions/12902/)
+
 ---
 
 ## 3. Summarization Task
@@ -125,6 +135,11 @@ The submission must be a JSON array containing one entry per test sample:
   }
 }
 ```
+
+### Additional Resources
+
+- [Sample Submission](sample_submissions/summarization/prediction_data.json)
+- Competition Page (TBA)
 
 ---
 
@@ -183,6 +198,12 @@ The submission must be a JSON array containing one entry per test sample:
 Please note:
 - Multiple Q&A pairs per sub-figure are allowed.
 
+### Additional Resources
+
+- [Sample Submission](sample_submissions/vqa/prediction_data.json)
+- Competition Page (TBA)
+
+---
 
 ## General Notes
 
