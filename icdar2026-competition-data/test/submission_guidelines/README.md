@@ -139,7 +139,7 @@ The submission must be a JSON array containing one entry per test sample:
 ### Additional Resources
 
 - [Sample Submission](sample_submissions/summarization/prediction_data.json)
-- Competition Page (TBA)
+- [Competition Page](https://www.codabench.org/competitions/12909/)
 
 ---
 
@@ -201,7 +201,7 @@ Please note:
 ### Additional Resources
 
 - [Sample Submission](sample_submissions/vqa/prediction_data.json)
-- Competition Page (TBA)
+- [Competition Page](https://www.codabench.org/competitions/12908/)
 
 ---
 
