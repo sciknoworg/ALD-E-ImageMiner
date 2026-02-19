@@ -1,0 +1,68 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/47/fig_3",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the relationship between deposition rate and precursor purge time. As the precursor purge time increases, the deposition rate decreases slightly.",
+        "b": "The figure shows the relationship between and reactor temperature. As the reactor temperature increases, so does the deposition rate.",
+        "c": "The figure shows the relationship between the thickness and number of cycles. As the number of cycles increases, so does the thickness."
+    },
+    "data_extraction": {
+        "a": "| Prec. Purge (sec) | Dep. Rate (\u00c5/cycle) |\n|------------------|--------------------|\n| 0                | ~1                 |\n| 10               | ~0.87              |\n| 20               | ~0.89              |\n| 30               | ~0.82              |\n| 40               | ~0.80              |\n| 60               | ~0.79              |",
+        "b": "| Reactor Temperature (\u00b0C) | Dep. Rate (\u00c5/cycle) |\n|---------------------------|---------------------|\n| 200                       |           -         |\n| 250                       | ~0.85               |\n| 300                       | ~0.88               |\n| 350                       | ~1.1                |\n| 400                       | ~1.6                |",
+        "c": "| Number of Cycles | Thickness (\u00c5ng) |\n|-------------------|-----------------|\n| 75                |      -          |\n| 125               | ~135            |\n| 175               | ~150            |\n| 225               |    -            |\n| 275               |    -            |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Does this subfigure correspond to an ALD process?",
+                "answer_type": "Factoid",
+                "answer": "Yes, because it shows an increase in film thickness. Also, it is possible to observe the self-limiting behavior of an ALD process."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which reactant is used in the ALD growth?",
+                "answer_type": "Factoid",
+                "answer": "Al(DIA)3 is analyzed in all the subfigures."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the thickness of the film vary with the number of cycles?",
+                "answer_type": "Factoid",
+                "answer": "The film's thickness increases with the number of cycles, which corresponds with an atomic layer deposition process."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the maximum thickness reached?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 210 Ang at 250 cycles."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 637,
+            "height": 333
+        },
+        "b": {
+            "x": 7,
+            "y": 334,
+            "width": 645,
+            "height": 338
+        },
+        "c": {
+            "x": 18,
+            "y": 668,
+            "width": 618,
+            "height": 366
+        }
+    }
+}

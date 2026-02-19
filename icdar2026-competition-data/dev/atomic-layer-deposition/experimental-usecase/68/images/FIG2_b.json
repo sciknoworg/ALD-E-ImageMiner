@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/68/FIG2_b",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The plot shows growth per cycle as a function of precursor purge time. Growth varies slightly at very short purge times but rapidly stabilizes. Beyond approximately 2 s of purge, the growth per cycle remains constant at ~0.28 \u00c5 within experimental uncertainty. Increasing the purge time further does not affect growth, indicating complete removal of excess precursor and self-limiting ALD behavior."
+    },
+    "data_extraction": {
+        "a": "| Precursor purge (s) | Growth per cycle (\u00c5) | \n|--------------------------|----------------------------|\n| ~0.5 | ~0.27 |  \n| ~1.0 | ~0.29 |   \n| ~2.0 | ~0.28 | \n| ~3.0 | ~0.27 | \n| ~5.0 | ~0.28 | \n| ~14\u201315 | ~0.27 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the growth per cycle stop changing once the purge time exceeds about 2 seconds?",
+                "answer_type": "Paragraph",
+                "answer": "Once all excess precursors and by-products are removed from the chamber, extending the purge no longer affects the surface chemistry. The surface reactions are already complete, so the growth per cycle becomes independent of purge duration."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the growth per cycle at very short purge times compare to that at long purge times?",
+                "answer_type": "Factoid",
+                "answer": "Growth per cycle is slightly lower at very short purge times and stabilizes at longer purge times."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the constant growth per cycle indicate about surface saturation during deposition?",
+                "answer_type": "Paragraph",
+                "answer": "A constant growth per cycle indicates that the surface reactions are self-limiting and reach full saturation each cycle. This suggests that precursor adsorption and reaction are confined to available surface sites rather than continuing uncontrollably."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is identifying the minimum effective purge time important for ALD process optimization?",
+                "answer_type": "Paragraph",
+                "answer": "Using a purge time longer than necessary reduces throughput without improving film quality. Identifying the shortest purge that still gives saturated growth helps optimize cycle time while maintaining reliable and reproducible deposition."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 7,
+            "width": 658,
+            "height": 534
+        }
+    }
+}

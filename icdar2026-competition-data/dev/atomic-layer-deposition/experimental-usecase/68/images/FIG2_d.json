@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/68/FIG2_d",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The plot shows growth per cycle as a function of oxygen plasma purge time. Growth values cluster around ~0.29 \u00c5/cycle across the entire purge range. A vertical marker at about 2 seconds indicates the minimum purge time needed to reach saturation. Beyond this point, increasing the oxygen plasma purge does not change the growth per cycle, confirming that the process is self-limiting and fully purged."
+    },
+    "data_extraction": {
+        "a": "| Oxygen plasma purge (s) | Growth per cycle (\u00c5) |\n|---|---|\n| 0 | 0.28 \u00b1 0.02 |\n| 1 | 0.29 \u00b1 0.02 |\n| 2 | 0.27 \u00b1 0.02 |\n| 5 | 0.29 \u00b1 0.02 |\n| 8 | 0.26 \u00b1 0.02 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the growth per cycle remain constant once the oxygen plasma purge exceeds about 2 seconds?",
+                "answer_type": "Paragraph",
+                "answer": "Once residual reactants and by-products are removed from the chamber, the surface reactions are already complete. Additional plasma purge time does not change the surface chemistry, so the growth per cycle remains constant."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does growth per cycle at short plasma purge times compare with that at longer purge times?",
+                "answer_type": "Factoid",
+                "answer": "Growth per cycle is essentially the same within error across all purge times."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the stable growth per cycle indicate about surface saturation during oxygen plasma exposure?",
+                "answer_type": "Paragraph",
+                "answer": "A stable growth per cycle indicates that surface reactions reach saturation each cycle and are not limited by incomplete oxidation or residual species. This suggests uniform and reproducible surface chemistry."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is identifying the minimum effective oxygen plasma purge time important for process optimization?",
+                "answer_type": "Paragraph",
+                "answer": "Using a purge time longer than necessary increases cycle time without improving film quality. Identifying the shortest purge that achieves saturation allows faster processing while maintaining consistent growth."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 702,
+            "height": 537
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/68/FIG2_c",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "This figure shows the dependence of growth per cycle on oxygen plasma exposure time. Growth increases sharply upon introducing the plasma and reaches a saturation plateau near ~0.3 \u00c5 per cycle within ~1\u20132 s. Further increases in plasma exposure do not enhance growth and instead lead to a slight decrease at the longest exposure. The dashed lines mark the approximate saturation level and the plasma time required to reach it, indicating a narrow optimal process window."
+    },
+    "data_extraction": {
+        "a": "| Oxygen plasma exposure (s) | Growth per cycle (\u00c5) |\n|----------------------------|----------------------|\n| 0                          | 0.00                 |\n| 0.5                        | 0.28                 |\n| 1.0                        | 0.30                 |\n| 2.0                        | 0.32                 |\n| 4.0                        | 0.30                 |\n| 5.0                        | 0.28                 |\n| 10.0                       | 0.26                 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the growth per cycle rise sharply when oxygen plasma is first introduced but change very little after about 1\u20132 s?",
+                "answer_type": "Paragraph",
+                "answer": "At very short plasma times, the surface still contains unreacted precursor fragments, so plasma exposure rapidly completes the oxidation step. Once those surface reactions are finished, additional plasma does not create new reactive sites, and the process becomes self-limiting, causing growth to plateau."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the growth behavior at long plasma exposure (~10 s) compare to that in the saturated region (~1\u20132 s)?",
+                "answer_type": "Paragraph",
+                "answer": "At long plasma exposure, the growth per cycle is slightly lower than in the saturated region. This suggests diminishing returns and possibly mild surface modification or densification, whereas the 1\u20132 s region represents stable self-limiting growth."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the change in growth per cycle from 2 s to 5 s larger than the experimental uncertainty indicated by error bars?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "From a processing standpoint, why is operating at plasma exposures much longer than the saturation point undesirable?",
+                "answer_type": "Paragraph",
+                "answer": "Longer plasma exposures increase process time and energy use without improving growth. They can also introduce unwanted effects such as surface damage or slight material removal. Operating near the saturation point gives the same growth efficiency while keeping the process faster and more stable."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 663,
+            "height": 540
+        }
+    }
+}

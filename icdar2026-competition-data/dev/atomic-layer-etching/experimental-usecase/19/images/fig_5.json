@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/19/fig_5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Shows film thickness versus ALE cycles using Sn(acac)\u2082 and HF at 200\u00b0C. Al\u2082O\u2083, HfO\u2082, and ZrO\u2082 show linear thickness decrease (etchable), while SiO\u2082, Si\u2083N\u2084, and TiN remain constant (not etchable), demonstrating material selectivity.",
+        "b": "Shows film thickness versus ALE cycles using TMA and HF at 300\u00b0C. Al\u2082O\u2083 and HfO\u2082 are etched, ZrO\u2082 shows slight etching, while SiO\u2082, Si\u2083N\u2084, and TiN are not etched, demonstrating different selectivity compared to Sn(acac)\u2082."
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | TiN (\u00c5) | SiO2 (\u00c5) | HfO2 (\u00c5) | Si3N4 (\u00c5) | ZrO2 (\u00c5) | Al2O3 (\u00c5) |\n|---|---|---|---|---|---|---|\n| 0 | 68 | 49 | 52 | 39 | 48 | 47 |\n| 50 | 70 | 48 | 52 | 40 | 47 | 35 |\n| 100 | 69 | 47 | 50 | 40 | 42 | 23 |\n| 200 | 69 | 47 | 45 | 40 | 28 | 0 |\n| 400 | 69 | 46 | 33 | 39 | 0 | - |",
+        "b": "| Number of Cycles | TiN (\u00c5) | SiO2 (\u00c5) | HfO2 (\u00c5) | Si3N4 (\u00c5) | ZrO2 (\u00c5) | Al2O3 (\u00c5) |\n|---|---|---|---|---|---|---|\n| 0 | 68 | 50 | 52 | 39 | 48 | 47 |\n| 50 | - | 49 | 51 | - | 52 | 34 |\n| 100 | - | 48 | 49 | - | 51 | 21 |\n| 200 | - | - | 44 | - | 52 | 0 |\n| 400 | 71 | 45 | 33 | 36 | 50 | 0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Why cannot SiO\u2082 and Si\u2083N\u2084 be etched by fluorination and ligand-exchange?",
+                "answer_type": "Paragraph",
+                "answer": "SiO\u2082 and Si\u2083N\u2084 resist etching because neither is spontaneously fluorinated by HF in the absence of water, and the Si-F bond is too strong to undergo effective ligand exchange reactions that would generate volatile Si-containing products."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is TiN not etched by this thermal ALE approach?",
+                "answer_type": "Factoid",
+                "answer": "TiN cannot be etched due to either the absence of stable/volatile Ti(III) reaction products or the difficulty of fluorinating Ti(IV) surface species using HF."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the linear decrease in film thickness indicate about the ALE process?",
+                "answer_type": "Factoid",
+                "answer": "Linear thickness decrease indicates constant etch per cycle (EPC), confirming reproducible self-limiting etching behavior."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which materials can be etched by both Sn(acac)\u2082 and TMA based precursor chemistries?",
+                "answer_type": "List",
+                "answer": "Al\u2082O\u2083 and HfO\u2082 can be etched by both; ZrO\u2082 is etched by Sn(acac)\u2082 but only slightly by TMA."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 4,
+            "width": 621,
+            "height": 467
+        },
+        "b": {
+            "x": 628,
+            "y": 0,
+            "width": 577,
+            "height": 470
+        }
+    }
+}

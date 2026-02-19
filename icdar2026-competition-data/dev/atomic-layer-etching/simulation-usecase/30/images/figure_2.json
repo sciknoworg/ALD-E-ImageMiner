@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/30/figure_2",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the relationship between the pulse time of NbF<sub>5</sub> and the etch per cycle in \u00c5/cycle in the cycle (X/6s/3s/6s). The temperature was fixed at 460\u00b0C."
+    },
+    "data_extraction": {
+        "a": "| NbF<sub>5</sub> pulse time [s] | etch per cycle [\u00c5/Cycle] |\n|---|---|\n| 0.0 | -0.05 |\n| 0.5 | 0.49 |\n| 1.75 | 0.87 |\n| 3.0 | 1.46 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the EPC show self-limiting behaviour? Why or why not?",
+                "answer_type": "Paragraph",
+                "answer": "No, it doesn't. When the process is self-limiting, the graph should look like a plateau, because adding more precursor doesn't increase etch rate any further, when the surface is saturated. Here, the EPC keeps increasing with increasing pulse time."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the specific process conditions for this data set?",
+                "answer_type": "Factoid",
+                "answer": "The pulse sequense is X/6/3/6 s (variable NbF5, 6s Purge, 3s CCl4, 6s Purge). The temperature is 460\u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does CCl4 etch the material on its own? Why or why not?",
+                "answer_type": "Paragraph",
+                "answer": "No. The data point corresponding to a NbF5 pulse time of 0 seconds is centred at 0.0 \u00c5/cycle. Although there are error bars due to experimental uncertanty, the deviation is small and eessentially zero material is removed without the second precursor."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the highest removal rate shown?",
+                "answer_type": "Factoid",
+                "answer": "1.46 \u00c5/Cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 458,
+            "height": 420
+        }
+    }
+}

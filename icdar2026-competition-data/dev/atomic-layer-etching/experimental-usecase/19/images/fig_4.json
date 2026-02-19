@@ -1,0 +1,79 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/19/fig_4",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart",
+        "c": "multiple line chart",
+        "d": "line chart"
+    },
+    "summarization": {
+        "a": "Shows mass change (\u0394M_TMA) during the TMA half reaction versus TMA exposure time at 300\u00b0C. The curve approaches saturation around \u221229 ng/cm\u00b2 after ~2 s, demonstrating self limiting ligand exchange behavior.",
+        "b": "Shows mass change (\u0394M_HF) during the HF half reaction versus HF exposure time at 300\u00b0C. The curve saturates at ~13 ng/cm\u00b2 after ~1 s, confirming self limiting fluorination.",
+        "c": "Shows temperature dependence of both half reaction mass changes. \u0394M_HF (red) shows slight increase with temperature while \u0394M_TMA (blue) becomes more negative, indicating enhanced etching at higher temperatures.",
+        "d": "Shows mass change per cycle (MCPC) versus temperature. The increasingly negative MCPC from 250\u00b0C to 325\u00b0C indicates higher etch rates at elevated temperatures."
+    },
+    "data_extraction": {
+        "a": "| TMA Exposure Time (s) | Delta M_TMA (ng/(cm^2 cycle)) |\n|---|---|\n| 0.0 | 0 |\n| 0.6 | -14 |\n| 1.0 | -20 |\n| 1.5 | -23 |\n| 1.75 | -27 |\n| 2.0 | -29 |\n| 2.25 | -32 |\n| 2.5 | -32 |",
+        "b": "| HF Exposure Time (s) | Delta M_HF (ng/(cm^2 cycle)) |\n|---|---|\n| 0.00 | 0 |\n| 0.60 | 12 |\n| 0.75 | 12 |\n| 1.00 | 13 |\n| 1.25 | 14 |\n| 1.50 | 15 |\n| 1.75 | 15 |",
+        "c": "| Temperature (\u00b0C) | Delta M_HF (Red Circles) | Delta M_TMA (Blue Squares) |\n|---|---|---|\n| 250 | 6 | -10 |\n| 275 | 9 | -20 |\n| 300 | 13 | -29 |\n| 325 | 19 | -42 |",
+        "d": "| Temperature (\u00b0C) | MCPC (ng/(cm^2 cycle)) |\n|---|---|\n| 250 | -4 |\n| 275 | -10 |\n| 300 | -16 |\n| 325 | -23 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch rate of Al\u2082O\u2083 change with temperature based on the MCPC data?",
+                "answer_type": "Factoid",
+                "answer": "The etch rate increases with temperature, from about 0.14 \u00c5/cycle at 250\u00b0C to 0.75 \u00c5/cycle at 325\u00b0C, as shown by the increasingly negative MCPC values."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What evidence in panels I-a and I-b demonstrates self limiting behavior of the TMA/HF thermal ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "Both curves show saturation behavior where mass change plateaus after sufficient exposure time. For TMA, \u0394M_TMA saturates at approximately \u221229 ng/cm\u00b2 after 2 s exposure. For HF, \u0394M_HF saturates at approximately 13 ng/cm\u00b2 after 1 s exposure. This saturation indicates that the surface reactions terminate once available reactive sites are consumed, confirming self limiting behavior."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What do the x axes represent in panel I?",
+                "answer_type": "Factoid",
+                "answer": "The x axes represent the precursor exposure time in seconds for each half reaction: TMA exposure time in (a) and HF exposure time in (b)."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is \u0394M_TMA negative while \u0394M_HF is positive?",
+                "answer_type": "Factoid",
+                "answer": "\u0394M_TMA is negative because the ligand exchange step removes AlF\u2083 as volatile AlF(CH\u2083)\u2082, causing mass loss. \u0394M_HF is positive because fluorination adds fluorine to form the heavier AlF\u2083 surface layer."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 4,
+            "width": 524,
+            "height": 273
+        },
+        "b": {
+            "x": 6,
+            "y": 284,
+            "width": 505,
+            "height": 298
+        },
+        "c": {
+            "x": 517,
+            "y": 0,
+            "width": 478,
+            "height": 254
+        },
+        "d": {
+            "x": 519,
+            "y": 253,
+            "width": 484,
+            "height": 317
+        }
+    }
+}

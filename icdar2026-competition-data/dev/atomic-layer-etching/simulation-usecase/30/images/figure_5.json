@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/30/figure_5",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the relationship between etch temperature and etch per cycle for two different sequences: NbF5 +  CCl4 (3/6/3/6s) and CCl4 (3/6s). CCl4 alone produces no etching."
+    },
+    "data_extraction": {
+        "a": "| etch temperature [\u00b0C] | NbF5 +  CCl4 (3/6/3/6s): etch per cycle [A/Cycle] |CCl4 (3/6s): etch per cycle [A/Cycle] |\n|---|---|---|\n| 380 | 0.03 | -0.07 |\n| 400 | 0.225 | -0.06 |\n| 460 | 1.45 | -0.06 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the process exhibit a clear ALE window? Why or why not?",
+                "answer_type": "Paragraph",
+                "answer": "No. An ALE window would look like a plateau, where the EPC remains roughly constant across wide range of temperatures. Here, the EPC rises continiously."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which cycle sequence is shorter?",
+                "answer_type": "Factoid",
+                "answer": "CCl4 sequence (9 seconds vs. 18 seconds in NbF5/CCl4 sequence)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the presence or absence of the NbF5 step impact the etching?",
+                "answer_type": "Factoid",
+                "answer": "Wihtout NbF5 step, no etching occurs."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is this ALE process insenstiive or highly sensitive to the temperature fluctuations?",
+                "answer_type": "Factoid",
+                "answer": "Highly sensitive (EPC jumps from 0.2 \u00c5/Cycle at 400 \u00b0C to 1.45 \u00c5/Cycle at 460 \u00b0C)"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 450,
+            "height": 416
+        }
+    }
+}

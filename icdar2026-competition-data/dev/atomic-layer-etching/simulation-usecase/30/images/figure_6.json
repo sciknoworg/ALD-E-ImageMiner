@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/30/figure_6",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The chart shows the etched thickness of Al2O3 (ALD), SiO2 (TOx), and Si3N4 (LPCVD) as a function of etch cycles. For  Al2O, the thickness increases linearly with etch cycles. For Si3N4 (LPCVD) and SiO2 (TOx), no etching is observed."
+    },
+    "data_extraction": {
+        "a": "| etch cycles | etched thickness [nm] | Film |\n|---|---|---|\n| 1 | 0,40 | Al2O3 (ALD) |\n| 60 | 5,49 | Al2O3 (ALD) |\n| 100 | 12,19 | Al2O3 (ALD) |\n| 149 | 17,05 | Al2O3 (ALD) |\n| 0 | 0,51 | SiO2(TOx) |\n| 60 | 0,48 | SiO2(TOx) |\n| 100 | 0,44 | SiO2(TOx) |\n| 150 | 0,44 | SiO2(TOx) |\n| 0 | 0,32 | Si3N4(LPCVD) |\n| 50 | 0,40 | Si3N4(LPCVD) |\n| 100 | 0,44 | Si3N4(LPCVD) |\n| 150 | 0,44 | Si3N4(LPCVD) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the etch rate per cycle for Al2O3? How to derive it?",
+                "answer_type": "Paragraph",
+                "answer": "0.11 nm/cycle. The trendlineshown on the image is  y = 0.11x - 0.49. The slope of the line represents the rate of removal per cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which materials can act as masks for selective etching of Al2o3 with this process?",
+                "answer_type": "Factoid",
+                "answer": "SiO2 and Si3N4."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the EPC of Al2O3 constant or does it increase?",
+                "answer_type": "Factoid",
+                "answer": "EPC is constant (as the trendline is linear)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What percentage of the variance in the experimental data is explained by the linear fit?",
+                "answer_type": "Factoid",
+                "answer": "98%"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 450,
+            "height": 414
+        }
+    }
+}

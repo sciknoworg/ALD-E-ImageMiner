@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/19/fig10",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the film thickness of various materials (TiN, Al\u2082O\u2083, Si\u2083N\u2084, HfO\u2082, ZrO\u2082, SiO\u2082) over cycles at 250\u00b0C using O\u2083 & HF."
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | TiN | Al\u2082O\u2083 | Si\u2083N\u2084 | HfO\u2082 | ZrO\u2082 | SiO\u2082 |\n|---|---|---|---|---|---|---|\n| 0 | 75 | 40 | 40 | 55 | 55 | 55 |\n| 100 | 60 | 40 | 40 | 55 | 55 | 55 |\n| 200 | 45 | 40 | 40 | 55 | 55 | 55 |\n| 300 | 30 | 40 | 40 | 55 | 55 | 55 |\n| 400 | 15 | 40 | 40 | 55 | 55 | 55 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material is selectively etched using O\u2083/HF chemistry at 250\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Only TiN is etched; Al\u2082O\u2083, HfO\u2082, ZrO\u2082, SiO\u2082, and Si\u2083N\u2084 show negligible thickness change."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why are Al\u2082O\u2083, HfO\u2082, and ZrO\u2082 not etched by O\u2083/HF despite being etchable by fluorination and ligand-exchange?",
+                "answer_type": "Paragraph",
+                "answer": "These oxides form stable, nonvolatile fluorides (AlF\u2083, HfF\u2084, ZrF\u2084) when exposed to HF. Unlike TiN which forms volatile TiF\u2084, these metal fluorides remain on the surface and do not desorb, preventing net material removal in the oxidation-fluorination mechanism."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the approximate EPC for TiN etching shown in this figure?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 0.20 \u00c5/cycle, calculated from roughly 55 \u00c5 removal over about 300 cycles."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is selective TiN etching important for semiconductor fabrication?",
+                "answer_type": "Factoid",
+                "answer": "TiN is used as gate electrode material in CMOS and as a copper diffusion barrier, requiring selective removal without damaging surrounding dielectric materials."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 652,
+            "height": 511
+        }
+    }
+}
