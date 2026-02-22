@@ -1,0 +1,58 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/34/figure_7",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "This figure presents time-resolved quadrupole mass spectrometry (QMS) data tracking the evolution of several ion fragments (e.g., CH\u2083\u207a, H\u2082O\u207a, SiH\u2082\u207a, CO\u2082\u207a, HNSi\u2082Me\u2085\u207a) under sequential exposure to LiHMDS, hydrogen plasma (H\u2082*), oxygen plasma (O\u2082*), and combined steps in an ALD process. Notably, the CH\u2083\u207a and HNSi\u2082Me\u2085\u207a signals are elevated during LiHMDS dosing, consistent with precursor fragmentation. H\u2082O\u207a and CO\u2082\u207a peaks emerge during SR phases involving oxidants, suggesting combustion of ligands. The pressure trace shows dosing windows for each reactant and aligns with corresponding ion signal surges. Together, these data elucidate the chemical pathways of ligand decomposition and by-product release across plasma-activated ALD cycles"
+    },
+    "data_extraction": {
+        "a": "| Time (s) | LiHMDS (A) | LiHMDS+H\u2082* (A) | H\u2082*+O\u2082* (A) | LiHMDS+O\u2082* (A) | SR end (A) |\n|----------|-------------|----------------|-------------|----------------|------------|\n| 0        | 9.5E-11     | 9.5E-11        | 9.5E-11     | 9.5E-11        | 9.5E-11    |\n| 5        | 1.1E-10     | 1.1E-10        | 1.1E-10     | 1.1E-10        | 1.1E-10    |\n| 10       | 1.0E-10     | 1.0E-10        | 1.0E-10     | 1.0E-10        | 1.0E-10    |\n| 15       | 9.0E-11     | 9.0E-11        | 9.2E-11     | 9.0E-11        | 9.0E-11    |\n| 20       | 1.2E-10     | 1.1E-10        | 1.3E-10     | 1.2E-10        | 1.2E-10    |\n| 25       | 8.5E-11     | 9.0E-11        | 1.1E-10     | 9.5E-11        | 9.0E-11    |\n| 30       | 6.5E-11     | 7.5E-11        | 9.0E-11     | 7.0E-11        | 7.0E-11    |\n| 35       | 5.0E-11     | 6.0E-11        | 8.0E-11     | 6.0E-11        | 6.0E-11    |\n| 40       | 3.5E-11     | 4.0E-11        | 6.5E-11     | 4.5E-11        | 4.5E-11    |",
+        "b": "| Time (s) | Pressure (mTorr) |\n|----------|------------------|\n| 0        | 0                |\n| 5        | 50               |\n| 10       | 120              |\n| 15       | 50               |\n| 20       | 0                |\n| 25       | 50               |\n| 30       | 100              |\n| 35       | 50               |\n| 40       | 0                |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What do the distinct trends in CO\u2082\u207a and HNSi\u2082Me\u2085\u207a ion currents suggest about the fate of the LiHMDS precursor during exposure to H\u2082* and O\u2082*, and how can this information guide process tuning?",
+                "answer_type": "Paragraph",
+                "answer": "The rise in CO\u2082\u207a during the SR period following O\u2082* exposure suggests effective combustion of organic ligands from the LiHMDS precursor, implying that oxidative plasma plays a key role in removing residual carbonaceous species. Meanwhile, HNSi\u2082Me\u2085\u207a signals peaking during the LiHMDS step indicate gas-phase fragmentation rather than surface retention. The differing behaviors underscore the sequential decomposition of ligands and highlight the importance of synchronizing plasma exposure to ensure full ligand removal."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the signal for CH\u2083\u207a increase immediately after LiHMDS is pulsed into the chamber?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the approximate maximum pressure reached during the O\u2082* exposure window?",
+                "answer_type": "Factoid",
+                "answer": "About 120 mTorr."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which ion fragments increase significantly during the surface reaction (SR) step following O\u2082* exposure",
+                "answer_type": "List",
+                "answer": "H\u2082O\u207a (m/z=18), CO\u2082\u207a (m/z=44), and CH\u2083\u207a (m/z=15)"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 666,
+            "height": 796
+        },
+        "b": {
+            "x": 4,
+            "y": 796,
+            "width": 664,
+            "height": 190
+        }
+    }
+}

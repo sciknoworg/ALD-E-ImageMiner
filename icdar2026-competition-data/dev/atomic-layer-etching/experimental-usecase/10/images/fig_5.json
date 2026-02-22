@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/10/fig_5",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "Panel (a) demonstrates a saturating trend in EPC with increasing number of Hhfac pulses, indicating that the surface becomes increasingly modified until further pulses yield no significant additional etching.",
+        "b": "Panel (b) reveals that EPC also increases with H\u2082 plasma exposure time, but plateaus earlier, suggesting a time threshold beyond which further plasma exposure does not significantly enhance etching. Together, these panels show that both precursor dose and plasma activation are necessary for etching, but only up to saturation limits where the EPC levels off."
+    },
+    "data_extraction": {
+        "a": "| Number of Hhfac pulses | EPC (nm) |\n|------------------------|----------|\n| 0                      | 0.00     |\n| 2                      | 0.04     |\n| 4                      | 0.07     |\n| 6                      | 0.09     |\n| 8                      | 0.10     |\n| 10                     | 0.12     |\n| 12                     | 0.14     |\n| 14                     | 0.15     |\n| 16                     | 0.16     |\n| 18                     | 0.17     |\n| 20                     | 0.17     |",
+        "b": "| H\u2082 plasma exposure time (s) | EPC (nm) |\n|-----------------------------|----------|\n| 0                           | 0.00     |\n| 5                           | 0.07     |\n| 10                          | 0.10     |\n| 20                          | 0.12     |\n| 30                          | 0.16     |\n| 60                          | 0.15     |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the process parameters varied and how do they affect EPC?",
+                "answer_type": "List",
+                "answer": "Hhfac pulses increase EPC to saturation, H\u2082 plasma time increases EPC then plateaus"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At how many Hhfac pulses does the EPC begin to saturate?",
+                "answer_type": "Factoid",
+                "answer": "Around 15 - 20 pulses."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the saturation of EPC with increasing Hhfac pulses or H\u2082 plasma exposure suggest about the ALE mechanism?",
+                "answer_type": "Paragraph",
+                "answer": "The observed saturation of EPC with respect to both Hhfac pulses and H\u2082 plasma exposure indicates a self-limiting process characteristic of atomic layer etching. In panel (a), the surface reaches a state where additional precursor does not further modify it, suggesting that all reactive sites have been consumed. In panel (b), the plasma step reaches a threshold where all chemically modified species have been activated or removed, and further exposure has negligible effect. This behavior supports the controlled, layer-by-layer removal fundamental to ALE."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does increasing the number of Hhfac pulses beyond 20 significantly increase the EPC",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 664,
+            "height": 341
+        },
+        "b": {
+            "x": 2,
+            "y": 349,
+            "width": 661,
+            "height": 330
+        }
+    }
+}

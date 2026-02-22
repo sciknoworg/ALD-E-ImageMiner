@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/22/figure_2",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The line chart displays the effect of temperature on the mass change per cycle during a process governed by the recipe \"1/20/2.5/20\". As the temperature increases from 100\u00b0C to 300\u00b0C, the mass change becomes increasingly negative, indicating greater mass loss per cycle at higher temperatures. This trend suggests that etching becomes more efficient or aggressive as the temperature rises, especially beyond 200\u00b0C."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | Mass Change Per Cycle (ng/cm\u00b2) |\n|------------------|-------------------------------|\n| 100              | 0                             |\n| 150              | -10                           |\n| 200              | -20                           |\n| 250              | -100                          |\n| 300              | -250                          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the mass change per cycle at 250\u00b0C",
+                "answer_type": "Factoid",
+                "answer": "-100 ng/cm\u00b2"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "At which temperatures does the mass change per cycle exceed -50 ng/cm\u00b2?",
+                "answer_type": "List",
+                "answer": "100\u00b0C, 150\u00b0C, 200\u00b0C"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the mass loss per cycle increase with increasing temperature?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does temperature influence mass change per cycle according to the figure?",
+                "answer_type": "Paragraph",
+                "answer": "The figure demonstrates that increasing temperature leads to a more significant negative mass change per cycle, indicating enhanced etching. From 100\u00b0C to 200\u00b0C, the mass loss increases gradually. However, beyond 200\u00b0C, the rate of mass loss accelerates sharply, with the most substantial decrease observed at 300\u00b0C. This suggests a temperature threshold beyond which the etching process becomes markedly more aggressive, possibly due to increased reactivity or volatilisation of etch products."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 567,
+            "height": 433
+        }
+    }
+}

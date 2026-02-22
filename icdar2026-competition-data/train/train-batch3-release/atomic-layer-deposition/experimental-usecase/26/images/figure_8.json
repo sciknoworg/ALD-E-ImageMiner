@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/26/figure_8",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows a sharp initial decrease in resistivity with increasing ALD cycles and ITO film thickness, plateauing at around 0.002 \u03a9\u00b7cm beyond 500 \u00c5.",
+        "b": "The scatter plot shows a gradual decrease in resistivity with increasing deposition temperature, reaching a minimum at 350\u202f\u00b0C"
+    },
+    "data_extraction": {
+        "a": "| ALD Cycles | ITO Thickness (\u00c5) | Resistivity (Ohm\u00b7cm) |\n|------------|-------------------|-----------------------|\n| 0          | 0                 | 0.015                 |\n| 100        | 100               | 0.002                 |\n| 200        | 200               | 0.002                 |\n| 300        | 300               | 0.002                 |\n| 400        | 400               | 0.002                 |\n| 500        | 500               | 0.002                 |\n| 600        | 600               | 0.002                 |\n| 700        | 700               | 0.002                 |\n| 800        | 800               | 0.002                 |\n| 900        | 900               | 0.002                 |\n| 1000       | 1000              | 0.002                 |",
+        "b": "| Deposition Temperature (\u00b0C) | Resistivity (Ohm\u00b7cm) |\n|-----------------------------|----------------------|\n| 150                         | 0.01                 |\n| 200                         | 0.005                |\n| 250                         | 0.003                |\n| 300                         | 0.002                |\n| 350                         | 0.001                |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Does higher depostio temperature lead to lower resisitivity?",
+                "answer_type": "Factoid",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what depostion temperature is the lowest resistivity observed?",
+                "answer_type": "Factoid",
+                "answer": "350\u202f\u00b0C"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does resitivity change as the number of ALD cycles increases?",
+                "answer_type": "Paragraph",
+                "answer": "Resistivity decreases rapidly during early cycles and plateaus at ~0.002 \u03a9\u00b7cm after 500 \u00c5 film thickness."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What parameters influence resistivity in these experiments?",
+                "answer_type": "List",
+                "answer": "ALD cycle number, ITO thickness, Depostion temperature"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 7,
+            "y": 0,
+            "width": 595,
+            "height": 623
+        },
+        "b": {
+            "x": 657,
+            "y": 62,
+            "width": 579,
+            "height": 551
+        }
+    }
+}

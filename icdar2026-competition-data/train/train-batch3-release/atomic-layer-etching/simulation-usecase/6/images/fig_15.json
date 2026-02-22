@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_15",
+    "classification": {
+        "a": "scatter plot",
+        "b": "box plot"
+    },
+    "summarization": {
+        "a": "The experimental scatter plot shows a sharp decrease in Cl count with increasing ion dosage up to about 10\u201315 \u00d7 10\u00b9\u2075 Ar\u207a/cm\u00b2. After that, the count levels off around 0.5 arb. units, suggesting that most Cl atoms have been desorbed or sputtered and that the system has reached a steady state.",
+        "b": "The MD simulation results mirror this trend but show a steeper and more sustained decline. Initial Cl counts are slightly higher in simulation, but decrease more rapidly, falling below 0.2 arb. units by 50 \u00d7 10\u00b9\u2075 Ar\u207a/cm\u00b2. The more aggressive decline in simulations may reflect idealized surface models with fewer defect traps or re-adsorption pathways"
+    },
+    "data_extraction": {
+        "a": "| Ion Dosage (Ar\u207a/cm\u00b2) \u00d7 10\u00b9\u2075 | Cl Count (arb. units)  |\n|-----------------------------|------------------------|\n| 0                           | 1.20                   |\n| 2                           | 1.00                   |\n| 4                           | 0.90                   |\n| 6                           | 0.80                   |\n| 8                           | 0.70                   |\n| 10                          | 0.65                   |\n| 12                          | 0.60                   |\n| 14                          | 0.58                   |\n| 16                          | 0.55                   |\n| 18                          | 0.53                   |\n| 20                          | 0.52                   |\n| 25                          | 0.51                   |\n| 30                          | 0.50                   |\n| 35                          | 0.50                   |\n| 40                          | 0.50                   |\n| 45                          | 0.50                   |\n| 50                          | 0.50                   |",
+        "b": "| Ion Dosage (Ar\u207a/cm\u00b2) \u00d7 10\u00b9\u2075 | Cl Count (arb. units)  |\n|-----------------------------|------------------------|\n| 0                           | 1.60                   |\n| 2                           | 1.20                   |\n| 4                           | 1.00                   |\n| 6                           | 0.80                   |\n| 8                           | 0.65                   |\n| 10                          | 0.55                   |\n| 12                          | 0.48                   |\n| 14                          | 0.42                   |\n| 16                          | 0.38                   |\n| 18                          | 0.34                   |\n| 20                          | 0.30                   |\n| 25                          | 0.27                   |\n| 30                          | 0.24                   |\n| 35                          | 0.22                   |\n| 40                          | 0.20                   |\n| 45                          | 0.19                   |\n| 50                          | 0.18                   |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What surface processes contribute to the decline in Cl signal during Ar\u207a ion bombardment?",
+                "answer_type": "List",
+                "answer": "Cl desorption, Surface sputtering, Bond breakage, Cl depletion over time"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the Cl coynt vary with increasing ion dosage in the experimental and simualtion plots?",
+                "answer_type": "Paragraph",
+                "answer": "In both the experimental and simulation results, Cl count decreases as ion dosage increases. The experimental data shows a rapid initial drop followed by a plateau near 0.5 arb. units, indicating surface saturation or depletion. In contrast, simulations exhibit a sharper and more sustained decline, reaching much lower final values. This suggests that Cl is more easily removed in the idealized simulation environment, while experimental surfaces may retain Cl due to surface defects or incomplete reactions."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At what ion dosage does the experimental Cl count begin to plateau?",
+                "answer_type": "Factoid",
+                "answer": "Around 15 \u00d7 10\u00b9\u2075 Ar\u207a/cm\u00b2"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Would a surface with lower final Cl count be more favourable for subsequent metal precurso adsorption in ALD?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 8,
+            "y": 11,
+            "width": 686,
+            "height": 478
+        },
+        "b": {
+            "x": 720,
+            "y": 7,
+            "width": 690,
+            "height": 481
+        }
+    }
+}

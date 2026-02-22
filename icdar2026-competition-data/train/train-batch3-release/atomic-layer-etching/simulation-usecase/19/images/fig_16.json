@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/19/fig_16",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the neutral flux of various species as a function of wafer radius (0 - 6 cm).The flux is dominated by CF3 radical.",
+        "b": "The figure shows the ion flux of various species as a function of of wafer radius (0 - 6 cm). The flux is dominated by Ar(+)."
+    },
+    "data_extraction": {
+        "a": "| Radius (cm) | CF2 flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) | CF flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) | C flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) | CF3 (\u00d72) flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) | C2F3 (\u00d72) flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) | F (\u00d72) flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) | C2F4 (\u00d72) flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) | C2F5 (\u00d72) flux (10\u00b9\u2077 cm\u207b\u00b2 s\u207b\u00b9) |\n|---|---|---|---|---|---|---|---|---|\n| 0 | 5.75 | 3.75 | 2.82 | 1.65 | 1.25 | 0.9 | 0.45 | 0.3 |\n| 3 | 5.64 | 3.79 | 2.68 | 1.61 | 1.34 | 0.82 | 0.51 | 0.32 |\n| 6| 5.79 | 4.12 | 2.53 | 1.54 | 1.75 | 0.63 | 0.63 | 0.33 |",
+        "b": "| Radius (cm) | Ar+ flux (10\u00b9\u2075 cm\u207b\u00b2 s\u207b\u00b9) | CF3+ flux (10\u00b9\u2075 cm\u207b\u00b2 s\u207b\u00b9)  | CF2+ flux (10\u00b9\u2075 cm\u207b\u00b2 s\u207b\u00b9)  | CF+ flux (10\u00b9\u2075 cm\u207b\u00b2 s\u207b\u00b9)  | C2F4+ flux (10\u00b9\u2075 cm\u207b\u00b2 s\u207b\u00b9)  | C2F5+ + C3F5+ flux (10\u00b9\u2075 cm\u207b\u00b2 s\u207b\u00b9)  | F+ flux (10\u00b9\u2075 cm\u207b\u00b2 s\u207b\u00b9) |\n|---|---|---|---|---|---|---|---|\n| 0 | 7 | 3.5 | 2.6 | 2.4 | 0.52 | 0.52 | 0.12 |\n| 3 | 6 | 2.9 | 2.3 | 2.14 | 0.52 | 0.52 | 0.07 |\n| 6 | 4.6 | 2.6 | 1.75 | 1.75 | 0.52 | 0.52 | 0.07 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which ion shows the least uniform flux?",
+                "answer_type": "Factoid",
+                "answer": "Ar(+)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the species rank from lowest to highest flux at the center of the wafer?",
+                "answer_type": "List",
+                "answer": "C2F5(+) + C3F5(+), C2F4(+), CF(+), CF2(+), CF3(+), Ar(+)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At which place of the wafer would Ar(+) sputtering be the strongest? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "At the center of the wafer (r = 0 cm).Since physical sputtering is driven by the bombardment of ions, the region receiving the highest flux of heavy Argon ions will experience the most intense sputtering. The Ar(+) flux shows its peak at the center of the wafer and decreases towards the edge."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the species rank from highest to lowest flux at the edge of the wafer?",
+                "answer_type": "List",
+                "answer": "CF2, CF, C, C2F3, CF3, F, C2F4, C2F5"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 0,
+            "width": 371,
+            "height": 377
+        },
+        "b": {
+            "x": 0,
+            "y": 392,
+            "width": 377,
+            "height": 365
+        }
+    }
+}

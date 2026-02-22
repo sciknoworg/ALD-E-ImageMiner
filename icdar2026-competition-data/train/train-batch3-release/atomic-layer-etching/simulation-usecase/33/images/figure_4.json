@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/33/figure_4",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure presents a parity plot comparing reaction energies computed via Density Functional Theory (DFT) and a Neural Network Potential (NNP) model. Each point represents a single reaction\u2019s predicted energy from both methods, with the color intensity indicating the density of data points at that value. The data clusters tightly along the diagonal parity line (dashed), suggesting strong agreement between DFT and NNP predictions across a broad energy range (from -5 eV to 10 eV). This indicates that the NNP model is well-trained and capable of accurately reproducing DFT-level energetics for the evaluated reactions."
+    },
+    "data_extraction": {
+        "a": "| $E_{\\mathrm{rxn}}^{\\mathrm{DFT}}$ (eV) | $E_{\\mathrm{rxn}}^{\\mathrm{NNP}}$ (eV) |\n|---------------------------------------|----------------------------------------|\n| -5                                    | -5                                     |\n| -3                                    | -2.9                                   |\n| 0                                     | 0.1                                    |\n| 2                                     | 2.1                                    |\n| 5                                     | 5.2                                    |\n| 8                                     | 8.3                                    |\n| 10                                    | 10                                     |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the parity plot indicate about the relationship between E_NNP and  E_DFT?",
+                "answer_type": "Paragraph",
+                "answer": "The plot indicates a strong linear correlation between the reaction energies predicted by the neural network potential (NNP) and those calculated via density functional theory (DFT). Most points cluster along the diagonal, which represents perfect agreement. This suggests that the NNP model closely replicates DFT-calculated values across a wide range of reaction energies, validating its reliability as a surrogate model for high-throughput or large-scale simulations."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the NNP model consistently reproduce DFT reaction energies within a narrow margin of error?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what $E_{\\mathrm{rxn}}^{\\mathrm{DFT}}$ value does the highest density of data points occur?",
+                "answer_type": "Factoid",
+                "answer": "Around 0 eV."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does this plot suggest about the usefulness of the NNP model?",
+                "answer_type": "Factoid",
+                "answer": "It can replace DFT in large-scale simulations with high accuracy, It provides significant computational speed-up while preserving fidelity."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 569,
+            "height": 439
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/33/figure_5",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure compares the dependence of ALD growth rate on substrate temperature for two different processes or materials. In subfigure (a), the growth rate increases steadily from approximately 0.01\u202f\u00c5/cycle at 260\u202f\u00b0C to 0.12\u202f\u00c5/cycle at 340\u202f\u00b0C, suggesting a thermally activated process with relatively linear behavior in this temperature range.",
+        "b": "In subfigure (b), the growth rate follows a sigmoidal trend, increasing more sharply between 200\u202f\u00b0C and 280\u202f\u00b0C, indicating a possible transition from a kinetically limited regime to a more saturated or efficient growth regime. Both plots highlight the strong influence of temperature on film growth dynamics, with potential implications for process window optimisation."
+    },
+    "data_extraction": {
+        "a": "| Substrate temperature (\u00b0C) | Growth rate (\u00c5 per cycle) |\n|----------------------------|----------------------------|\n| 260                        | 0.01                       |\n| 280                        | 0.03                       |\n| 300                        | 0.06                       |\n| 320                        | 0.09                       |\n| 340                        | 0.12                       |",
+        "b": "| Substrate temperature (\u00b0C) | Growth rate (\u00c5 per cycle) |\n|----------------------------|----------------------------|\n| 160                        | 0.0                        |\n| 200                        | 0.1                        |\n| 220                        | 0.2                        |\n| 240                        | 0.35                       |\n| 280                        | 0.5                        |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the plot show evidence of a saturation plateau in growth rate at higher temperatures?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the different trends in growth rate with temperature in plots (a) and (b) inform decisions about ALD process optimisation?",
+                "answer_type": "Paragraph",
+                "answer": "The plots suggest that different ALD processes or chemistries have distinct thermal activation behaviors. In (a), the steady increase in growth rate with temperature implies a broad and controllable window, which is advantageous for uniform deposition. In contrast, the sigmoidal trend in (b) indicates that below a certain threshold (~200\u202f\u00b0C), the process is kinetically limited, but rapidly becomes efficient above this temperature. This means that process engineers may need to operate within a narrower high-temperature window for maximum efficiency, potentially requiring more precise thermal control. Understanding these trends helps optimize reactor conditions for consistent film quality and throughput"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At what temperature does the growth rate in the plot reach approximately 0.09\u202f\u00c5/cycle?",
+                "answer_type": "Factoid",
+                "answer": "320\u202f\u00b0C."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "List two possible reasons why growth rate increases with temperature in ALD.",
+                "answer_type": "List",
+                "answer": "Higher temperatures enhance precursor reactivity, improve byproduct desorption"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 12,
+            "y": 8,
+            "width": 681,
+            "height": 533
+        },
+        "b": {
+            "x": 15,
+            "y": 569,
+            "width": 666,
+            "height": 491
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/22/e491b4d038fdd578fa1d521ec6367993f5d8e0ca7e5b91f94752170244c6b21d",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "Panel (a) shows the mass loss (ng/cm\u00b2) of material as a function of MoF\u2086 dose duration, revealing rapid initial etching followed by saturation beyond ~1 second.",
+        "b": "Panel (b) plots mass loss against H\u2082O dose time, similarly showing an initial sharp increase that levels off near 4 seconds. The graphs indicate self-limiting behaviour characteristic of atomic layer etching (ALE), where further dosing does not result in additional material removal beyond a certain threshold."
+    },
+    "data_extraction": {
+        "a": "| MoF\u2086 dose (s) | Mass Loss (ng/cm\u00b2) |\n|---|---|\n| 0.0 | 0.0 |\n| 0.5 | 16.0 |\n| 1.0 | 18.0 |\n| 1.5 | 18.0 |\n| 2.0 | 18.0 |\n| 2.5 | 18.0 |\n| 3.0 | 18.0 |",
+        "b": "| H\u2082O dose (s) | Mass Loss (ng/cm\u00b2) |\n|---|---|\n| 0.0 | 0.0 |\n| 0.5 | 9.0 |\n| 1.0 | 16.0 |\n| 2.0 | 19.0 |\n| 3.0 | 22.0 |\n| 4.0 | 22.0 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the mass loss trends differ between MoF\u2086 and H\u2082O dosing?",
+                "answer_type": "List",
+                "answer": "MoF\u2086: Mass loss quickly reaches saturation around 0.5\u20131.0 s, H\u2082O: Mass loss increases over a wider dose range, saturating near 3\u20134 s."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the platea in both graphs suggest about the MoF\u2086 and H\u2082O dosing processes?",
+                "answer_type": "Factoid",
+                "answer": "They exhibit self-limiting behaviour, indicating atomic layer etching (ALE) characteristics"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does dose duration affect material removal efficiency for MoF\u2086 and H\u2082O?",
+                "answer_type": "Paragraph",
+                "answer": "The data show that MoF\u2086 achieves most of its etching effect within the first second, after which further increases in dose do not increase mass loss. This suggests a surface-limited reaction where all available reactive sites are quickly consumed. In contrast, H\u2082O dosing results in a more gradual increase in mass loss, reaching a plateau around 4 seconds. This indicates that the removal step may depend on the availability of MoF\u2086-reacted surface species and the diffusion/reactivity of H\u2082O, making it the rate-limiting factor in the overall ALE cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Do the curves indicate which doses are optimal for each precursor?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 507,
+            "height": 394
+        },
+        "b": {
+            "x": 0,
+            "y": 398,
+            "width": 502,
+            "height": 396
+        }
+    }
+}

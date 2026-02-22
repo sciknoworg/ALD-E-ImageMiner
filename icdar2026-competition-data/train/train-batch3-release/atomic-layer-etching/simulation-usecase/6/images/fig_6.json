@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_6",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "This multi-axis chart tracks the progression of Si etching and Cl uptake across five repeated cycles under 100 eV Ar\u207a ion bombardment. The red curve (left y-axis) indicates the amount of Si etched per cycle, which increases sharply during each ion bombardment step and then returns to baseline, showing a reproducible, step-like etching profile. Meanwhile, the blue line (right y-axis) demonstrates a continuous, linear increase in chlorine uptake with each cycle, indicating cumulative surface adsorption. Together, these trends reveal a consistent etch\u2013adsorb dynamic where physical sputtering removes Si while chemical Cl incorporation steadily rises, likely due to residual Cl interactions at the surface"
+    },
+    "data_extraction": {
+        "a": "| Cycle Number | Si Etched (\u00c5) | Cl Uptake (Cl/cm\u00b2 \u00d7 10\u00b9\u2075) |\n|--------------|----------------|----------------------------|\n| 0            | 0              | 0.10                       |\n| 1            | 32             | 0.22                       |\n| 2            | 32             | 0.34                       |\n| 3            | 32             | 0.46                       |\n| 4            | 32             | 0.58                       |\n| 5            | 32             | 0.70                       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the trends of Si etching and Cl uptake differ across ALD/E cycles?",
+                "answer_type": "Paragraph",
+                "answer": "The Si etching profile exhibits a periodic, stepwise increase and reset pattern with each cycle, reflecting ion-driven material removal during plasma exposure. In contrast, the chlorine uptake increases steadily without any resetting, indicating cumulative surface incorporation. This divergence highlights the physical versus chemical nature of each process: sputtering is transient and self-limiting per cycle, whereas adsorption builds progressively with repeated Cl exposure."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which y-axis measurement exhibits cumulative behaviour across cycles?",
+                "answer_type": "Factoid",
+                "answer": "Cl uptake (Cl/cm\u00b2 \u00d7\u202f10\u00b9\u2075)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the typical process actions during each ALD/E cycle represented here?",
+                "answer_type": "List",
+                "answer": "Cl\u2082 exposure, Pump and purge, Ar\u207a bombardment, Pump and purge"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the chart indicate that the etch process is repeatable across cycles?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 675,
+            "height": 428
+        }
+    }
+}

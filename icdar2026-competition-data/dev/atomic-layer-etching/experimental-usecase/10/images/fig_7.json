@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/10/fig_7",
+    "classification": {
+        "a": "line chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "Panel (a) shows that the Al\u2082O\u2083 film undergoes a steady decrease in thickness over repeated cycles at 300\u202f\u00b0C, with an etch-per-cycle (EPC) of ~0.08\u202fnm. In contrast, the SiO\u2082 film exhibits negligible thickness change under identical conditions, indicating that the process is selective for Al\u2082O\u2083.",
+        "b": "Panel (b) supports this observation by displaying FTIR spectra with distinct vibrational signatures for Al\u2013O bonds and hfac ligands on the Al\u2082O\u2083 sample, while SiO\u2082 shows minimal spectral activity. Together, the panels demonstrate selective etching of Al\u2082O\u2083 and surface chemical verification via absorbance spectroscopy."
+    },
+    "data_extraction": {
+        "a": "| Cycles | Thickness change (nm) \u2013 SiO\u2082 | Thickness change (nm) \u2013 Al\u2082O\u2083 |\n|--------|------------------------------|-------------------------------|\n| 0      | 0.00                         | 0.00                          |\n| 5      | 0.00                         | -0.40                         |\n| 10     | 0.00                         | -0.80                         |\n| 15     | 0.00                         | -1.20                         |\n| 20     | 0.00                         | -1.60                         |\n| 25     | 0.00                         | -2.00                         |\n| 30     | 0.00                         | -2.40                         |",
+        "b": "| Wavenumber (cm\u207b\u00b9) | Absorbance \u2013 Al\u2082O\u2083 | Absorbance \u2013 SiO\u2082 |\n|-------------------|---------------------|--------------------|\n| 4000              | ~0.0001             | ~0.00005           |\n| 3300              | ~0.0001             | ~0.00005           |\n| 1650              | Peak (hfac)         | \u2014                  |\n| 1000              | Strong peak (Al\u2013O)  | Low/no peak        |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the selective etching behavior shown in panel (a) indicate about the ALE process used?",
+                "answer_type": "Paragraph",
+                "answer": "The ALE process selectively etches Al\u2082O\u2083 without affecting SiO\u2082 under the tested conditions. This selectivity is important in applications where material-specific removal is critical, such as semiconductor patterning. The result implies that the chemical reactions involved are highly dependent on the film\u2019s composition, likely due to differences in surface chemistry and bonding environments."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the approximate EPC value observed for Al\u2082O\u2083 at 300\u202f\u00b0C in panel (a)?",
+                "answer_type": "Factoid",
+                "answer": "0.08 nm per cycle"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What characteristic vibrational modes are present in the Al\u2082O\u2083 IR spectrum shown in panel (b)?",
+                "answer_type": "List",
+                "answer": "Al\u2013O stretching peak at ~1000 cm\u207b\u00b9, Hhfac ligand peak at ~1650 cm\u207b\u00b9"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the etching process affect SiO\u2082 thickness under the same conditions used for Al\u2082O\u2083?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 652,
+            "height": 560
+        },
+        "b": {
+            "x": 17,
+            "y": 559,
+            "width": 640,
+            "height": 371
+        }
+    }
+}

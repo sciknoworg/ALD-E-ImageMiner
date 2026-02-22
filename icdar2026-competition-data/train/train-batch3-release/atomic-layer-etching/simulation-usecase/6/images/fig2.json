@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig2",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multi-axis chart shows the evolution of DC self-bias voltage, chlorine gas flow, and chamber pressure over time. The process is divided into four clearly marked steps, each showing how plasma conditions and gas flow influence system parameters. The other panels are not separate figures but sub-intervals within (a). Their summaries have been removed to avoid redundancy and reflect the unified timeline."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | DC Self-Bias (V) | Cl\u2082 Flow (seccm) | P (mTorr) |\n|----------|------------------|------------------|-----------|\n| 0        | 0                | 0                | 22        |\n| 1        | 0                | 20               | 22        |\n| 2        | -60              | 20               | 21        |\n| 3        | -60              | 0                | 20        |\n| 4        | -60              | 0                | 20        |\n| 5        | 0                | 20               | 21        |\n| 6        | 0                | 0                | 22        |\n| 7        | 0                | 0                | 22        |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the four steps shown in the figure?",
+                "answer_type": "List",
+                "answer": "Step 1: Cl\u2082 On, ICP Off, Bias Off; Step 2: ICP On, Bias On; Step 3: Cl\u2082 Off, Bias Off; Step 4: All Off"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does turning on the ICP source impact the DC Self-Bias?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do pressure and Cl\u2082 flow change across the four steps?",
+                "answer_type": "Factoid",
+                "answer": "Pressure decreases slightly with ICP on, then returns to baseline; Cl\u2082 flow toggles between 20 seccm and 0 based on step."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which parameters are plotted over time ?",
+                "answer_type": "List",
+                "answer": "DC Self-Bias (V), Cl\u2082 Flow (seccm), Pressure (mTorr)"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 678,
+            "height": 475
+        }
+    }
+}

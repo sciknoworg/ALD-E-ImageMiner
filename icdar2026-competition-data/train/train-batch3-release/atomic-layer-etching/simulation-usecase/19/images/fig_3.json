@@ -1,0 +1,68 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/19/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "contour heatmap",
+        "c": "contour heatmap"
+    },
+    "summarization": {
+        "a": "The  chart shows the ion flux of different ions (Ar<sup>+</sup>, Cl<sup>+</sup>, and Cl<sub>2</sub><sup>+</sup>) for step 1 (passivation) and step 2(etching) at various radii from the center of the wafer.",
+        "b": "The heatmap displays the ion energy and angular distribution (IEAD) for step 1 (passivation).",
+        "c": "The heatmap displays the ion energy and angular distribution (IEAD) for step 2 (etching)."
+    },
+    "data_extraction": {
+        "a": "| Radius (cm) | Ion Flux (10<sup>16</sup> cm<sup>-2</sup>s<sup>-1</sup>) | Species|\n|---|---|---|\n| 0 | 7.93 | Ar (+) Step 2|\n| 3 | 7.27 | Ar (+) Step 2|\n| 6 | 5.18 | Ar (+) Step 2|\n| 0 | 1.35 | Ar (+) Step 1|\n| 3 | 1.2 | Ar (+) Step 1|\n| 6 | 0.7 | Ar (+) Step 1|\n| 0 | 3.6 | Cl (+) Step 1|\n| 3 | 3.1 | Cl (+) Step 1|\n| 6 | 1.89 | Cl (+) Step 1|\n| 0 | 0.5 | Cl2(+) Step 1|\n| 3 | 0.5 | Cl2(+) Step 1|\n| 6 | 0.5 | Cl2(+) Step 1|",
+        "b": "| Angle (deg) | Energy (eV) | Intensity |\n|---|---|---|\n| -15 | 14 | 0.01 |\n| 0 | 14 | 0.01 |\n| 15 | 14 | 0.01 |\n| -15 | 16 | 0.69|\n| 0 | 16 | 0.69 |\n| 15 | 16 | 0.36 |\n| -15 | 17 | 0.69 |\n| 0 | 17 | 1 |\n| 15 | 17 | 0.36 |\n| -15 | 21 | 0.01 |\n| 0 | 21 | 0.01 |\n| 15 | 21 | 0.01 |",
+        "c": "| Angle (deg) | Energy (eV) | Intensity |\n|---|---|---|\n| 0 | 42 | 0.01 |\n| 0 | 51 | 0.85 |\n| -9 | 51 | 0.01 |\n| 9 | 51 | 0.01|\n| 0 | 57 | 1 |\n| 9 | 57 | 0.01 |\n| -9 | 57 | 0.01 |\n| 0 | 61 | 0.01 |\n| 9 | 17 | 0.01 |\n| -9 | 21 | 0.01 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the dominant ion during passivation?",
+                "answer_type": "Factoid",
+                "answer": "Cl (+)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which flux is the most uniform from the center to the edge of the wafer?",
+                "answer_type": "Factoid",
+                "answer": "Cl2 (+)."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which angle do the most ions arrive?",
+                "answer_type": "Factoid",
+                "answer": "Perpendicular to the wafer surface (0 degrees)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the angular spread of ions?",
+                "answer_type": "Factoid",
+                "answer": "~ \u00b1 10 degrees."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 368,
+            "height": 364
+        },
+        "b": {
+            "x": 8,
+            "y": 372,
+            "width": 201,
+            "height": 442
+        },
+        "c": {
+            "x": 202,
+            "y": 370,
+            "width": 170,
+            "height": 437
+        }
+    }
+}

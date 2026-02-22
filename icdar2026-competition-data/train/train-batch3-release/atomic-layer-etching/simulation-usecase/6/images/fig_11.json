@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_11",
+    "classification": {
+        "a": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "The figure presents a multi-line plot showing product count (in arbitrary units) over time for three different incident electron energies: 45 eV, 80 eV, and 215 eV. Each energy condition produces a distinct response pattern across four repeated steps, with the 215 eV trace showing the highest product count. The signal rises sharply at the beginning of each active phase and drops immediately at the end of each step, highlighting a rapid and reversible product formation tied to process cycles."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | 45 eV  | 80 eV  | 215 eV  |\n|----------|--------|--------|---------|\n| 0        | 0      | 0      | 0       |\n| 1        | ~20k   | ~60k   | ~180k   |\n| 2        | ~20k   | ~60k   | ~180k   |\n| 5        | ~20k   | ~60k   | ~180k   |\n| 6        | 0      | 0      | 0       |\n| 7        | ~20k   | ~60k   | ~180k   |\n| 10       | ~20k   | ~60k   | ~180k   |\n| 12       | 0      | 0      | 0       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the prodcut count increase with increasing energy level across all time steps?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At which energy does the product count reach the highest value during the active phases?",
+                "answer_type": "Factoid",
+                "answer": "215eV"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the four steps labeled in the time-series chart, and what pattern do they follow?",
+                "answer_type": "List",
+                "answer": "Signal onset, Signal plateau, Signal drop, Cycle repeat"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How might the energy-dependent product count behaviour observed in tis figure infrom the optimisation of electron-driven surface processes in ALD or plasma systems?",
+                "answer_type": "Paragraph",
+                "answer": "The figure demonstrates that higher electron energies lead to significantly greater product formation, suggesting that tuning energy input can directly enhance process efficiency. For systems like ALD or plasma etching, optimising electron energy could allow for precise control over reaction rates and product yields. Moreover, the sharp responsiveness of the signal to energy application indicates potential for real-time modulation during pulsed processes, improving throughput and selectivity."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 669,
+            "height": 458
+        }
+    }
+}

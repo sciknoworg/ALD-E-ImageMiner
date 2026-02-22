@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_9",
+    "classification": {
+        "a": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "This line chart displays time-resolved product formation for three species ,Si, SiCl, and SiCl\u2082, during repeated etching cycles, each consisting of four steps. The signal intensities sharply increase during Step 1 (etchant exposure) and then decay across subsequent steps. SiCl\u2082 consistently shows the highest intensity, followed by SiCl and then Si, indicating that higher chlorinated etch products dominate during active etching. The periodic recurrence and relative ordering of product counts suggest a reproducible reaction mechanism governed by sequential Cl\u2082 plasma and ion bombardment steps. The figure captures the cyclic and self-limiting nature of the etching process under controlled ALD/E conditions."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Si (arb. units) | SiCl (arb. units) | SiCl\u2082 (arb. units) |\n|----------|------------------|-------------------|---------------------|\n| 0        | 0                | 0                 | 0                   |\n| 1        | 150000           | 200000            | 250000              |\n| 2        | 100000           | 150000            | 200000              |\n| 3        | 60000            | 120000            | 180000              |\n| 4        | 50000            | 100000            | 160000              |\n| 5        | 0                | 0                 | 0                   |\n| 6        | 140000           | 190000            | 240000              |\n| 7        | 100000           | 150000            | 200000              |\n| 8        | 60000            | 120000            | 180000              |\n| 9        | 50000            | 100000            | 160000              |\n| 10       | 0                | 0                 | 0                   |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the intensities of Si, SiCl, and SiCl\u2082 evolve over time, and what trend is observed across successive cycles?",
+                "answer_type": "Paragraph",
+                "answer": "Across both etching cycles, SiCl\u2082 exhibits the highest product count, followed by SiCl and then Si, suggesting a dominant formation of more heavily chlorinated etch products. The counts peak rapidly during the early phase of each cycle and then decay, likely corresponding to surface saturation and depletion events. This trend repeats consistently, confirming that each cycle produces a reproducible chemical response in the etch process."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which etch product consitently exhinits the highest intensity?",
+                "answer_type": "Factoid",
+                "answer": "SiCl\u2082"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the four process steps involved in each etching cycle shown in the figure?",
+                "answer_type": "List",
+                "answer": "Cl\u2082 exposure, Pump and purge, Ar\u207a bombardment, Final purge"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the figure indicate a stable and repeatable etch process?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 675,
+            "height": 466
+        }
+    }
+}

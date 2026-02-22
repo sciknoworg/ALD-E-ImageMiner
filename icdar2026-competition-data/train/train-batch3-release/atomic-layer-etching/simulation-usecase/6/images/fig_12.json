@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_12",
+    "classification": {
+        "a": "multiple scatter plot",
+        "b": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "Panel (a) shows experimental measurements of Si count as a function of Ar\u207a ion dosage for three incident energies. The Si signal is consistently highest at 215 eV and increases with dosage before saturating, while the 80 eV signal shows a moderate rise and 45 eV shows negligible counts.",
+        "b": "Panel (b) presents Monte Carlo simulation results for the same ion energies and dosages. The simulated Si counts for 215 eV also show a plateauing behavior at higher dosages, though with more fluctuations and slightly different relative magnitudes compared to the experimental data"
+    },
+    "data_extraction": {
+        "a": "| Ion Dosage (Ar\u207a/cm\u00b2) \u00d7 10\u00b9\u2075 | 45 eV | 80 eV | 215 eV |\n|----------------------------|-------|-------|--------|\n| 0                          | 0     | 0     | 2      |\n| 10                         | 0     | 0.5   | 4      |\n| 20                         | 0     | 1     | 5      |\n| 30                         | 0     | 1.5   | 6      |\n| 40                         | 0     | 2     | 7      |\n| 50                         | 0     | 2.5   | 8      |",
+        "b": "| Ion Dosage (Ar\u207a/cm\u00b2) \u00d7 10\u00b9\u2075 | 45 eV | 80 eV | 215 eV |\n|----------------------------|-------|-------|--------|\n| 0                          | 5     | 0.5   | 6      |\n| 10                         | 6     | 1     | 7      |\n| 20                         | 7     | 1.5   | 8      |\n| 30                         | 6     | 2     | 7      |\n| 40                         | 7     | 2.5   | 6      |\n| 50                         | 6     | 3     | 6      |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What energy level yields he highest SI count across all ion dosages?",
+                "answer_type": "Factoid",
+                "answer": "215 eV"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the Si count at 215 eV p,ateau after an ion dosage of approximately 30 \u00d7 10\u00b9\u2075 Ar\u207a/cm\u00b2 in both experiment and simulation?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the key differences between the experimental and simulation data trends shown in the two panels?",
+                "answer_type": "List",
+                "answer": "More fluctuation in simulation, Clearer plateau in experiment, Smoother experimental curves with simulation error bars"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How can the comparison between ex[perimental and simulated Si counts inform process optimisation in ion-driven surface treatments?",
+                "answer_type": "Paragraph",
+                "answer": "between experiment and simulation allows researchers to validate modeling accuracy and adjust physical parameters like ion energy and dose for surface processing. Since 215 eV consistently leads to higher and saturating Si counts, this suggests it may be the most effective energy for maximising surface modification efficiency."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 8,
+            "y": 2,
+            "width": 679,
+            "height": 458
+        },
+        "b": {
+            "x": 721,
+            "y": 3,
+            "width": 687,
+            "height": 457
+        }
+    }
+}

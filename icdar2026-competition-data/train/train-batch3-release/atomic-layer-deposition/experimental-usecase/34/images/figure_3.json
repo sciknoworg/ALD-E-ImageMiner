@@ -1,0 +1,64 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/34/figure_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure presents ion current traces for various species monitored during sequential pulsing of LiHMDS and H\u2082O in an ALD process. Subfigure (a) shows the evolution of ion signals for multiple mass fragments (e.g., CH\u2083\u207a, H\u2082O\u207a, NH(SiMe\u2083)\u2082\u207a) across time and marks key events such as precursor pulses and surface reaction (SR) start and end times. Subfigures (b) and (c) zoom in on the time-resolved ion currents for specific m/z values (15 and 146), further detailing the temporal behavior of key reaction byproducts during the LiHMDS pulse. Together, the data provide insight into precursor decomposition and reaction dynamics on the surface."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | LiHMDS | SR start | H\u2082O | SR end |\n|----------|--------|----------|-----|--------|\n| 0        | 1E-12  | 1E-12    | 1E-12| 1E-12  |\n| 5        | 1E-11  | 1E-11    | 1E-11| 1E-11  |\n| 10       | 1E-12  | 1E-12    | 1E-12| 1E-12  |\n| 15       | 1E-12  | 1E-12    | 1E-12| 1E-12  |\n| 20       | 1E-12  | 1E-12    | 1E-12| 1E-12  |\n| 25       | 1E-12  | 1E-12    | 1E-12| 1E-12  |\n| 30       | 1E-12  | 1E-12    | 1E-12| 1E-12  |\n| 75       | 1E-12  | 1E-12    | 1E-12| 1E-12  |\n| 80       | 1E-12  | 1E-12    | 1E-12| 1E-12  |",
+        "b": "| Time (s) | Ion current (A) |\n|----------|-----------------|\n| 0        | 1E-11           |\n| 2        | 1E-10           |\n| 4        | 1E-10           |\n| 6        | 1E-10           |\n| 8        | 1E-10           |",
+        "c": "| Time (s) | Ion current (A) |\n|----------|-----------------|\n| 0        | 1E-11           |\n| 2        | 1E-10           |\n| 4        | 1E-10           |\n| 6        | 1E-10           |\n| 8        | 1E-10           |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the time-resolved ion current behavior help determine the sequence and surface reactions occurring during LiHMDS and H\u2082O ALD cycles?",
+                "answer_type": "Paragraph",
+                "answer": "The ion current profiles reveal the presence and intensity of specific species over time, corresponding to precursor introduction and reaction phases. In subfigure (a), CH\u2083\u207a and NH(SiMe\u2083)\u2082\u207a signals spike during the LiHMDS pulse, suggesting the release of ligand fragments due to surface reactions. The H\u2082O\u207a signal increases during the water pulse, indicating oxidant introduction. The timing of signal changes at SR start and SR end further supports surface-limited reactions consistent with ALD. Subfigures (b) and (c) confirm this by showing that key mass fragments peak during the precursor pulse, then decay rapidly, demonstrating self-limiting behavior and supporting the controlled nature of ALD chemistry."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At what time does the ion current for m/z=146 peak during the LiHMDS pulse?",
+                "answer_type": "Factoid",
+                "answer": "Approx. 5 seconds."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the ion current at m/z=146 persist after the LiHMDS pulse ends?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which mass fragments are monitored?",
+                "answer_type": "List",
+                "answer": "CH\u2083\u207a (m/z = 15), H\u2082O\u207a (m/z = 18), NH(SiMe\u2083)\u2082\u207a (m/z = 146)"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 595,
+            "height": 545
+        },
+        "b": {
+            "x": 656,
+            "y": 3,
+            "width": 477,
+            "height": 260
+        },
+        "c": {
+            "x": 661,
+            "y": 294,
+            "width": 472,
+            "height": 253
+        }
+    }
+}

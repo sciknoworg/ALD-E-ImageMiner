@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_7",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "This multi-axis chart illustrates the relationship between species dosage (Cl\u2082 or Ar\u207a/cm\u00b2) and two parameters: Si etching depth and chlorine uptake. The red curve (left y-axis) represents silicon etching at 100 eV Ar\u207a, which begins only after Cl\u2082 exposure has saturated the surface. Etching increases steadily with Ar\u207a dosage and plateaus at ~9.8 \u00c5, indicating the removal of one atomic layer of Si. The blue curve (right y-axis) shows Cl uptake, which rises quickly during Cl\u2082 exposure and saturates around 1.35 \u00d7 10\u00b9\u2075 Cl/cm\u00b2. The dashed lines and arrows illustrate the sequential process: first Cl uptake during Cl\u2082 exposure, followed by Si etching upon Ar\u207a bombardment, revealing a synergistic etch mechanism."
+    },
+    "data_extraction": {
+        "a": "| Species Dosage (Cl\u2082 or Ar\u207a/cm\u00b2) \u00d7 10\u00b9\u2075 | Si Etched (\u00c5) | Cl Uptake (Cl/cm\u00b2) \u00d7 10\u00b9\u2075 |\n|----------------------------------------|---------------|----------------------------|\n| 0                                      | 0             | 0                          |\n| 10                                     | 0             | 0.75                       |\n| 20                                     | 0             | 1.25                       |\n| 25                                     | 0             | 1.35                       |\n| 30                                     | 1.5           | 1.35                       |\n| 50                                     | 4             | 1.35                       |\n| 75                                     | 6.5           | 1.35                       |\n| 100                                    | 9.0           | 1.35                       |\n| 125                                    | 9.8           | 1.35                       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What do the trends in Si etching and  Cl uptake differ as species dosage increases?",
+                "answer_type": "Paragraph",
+                "answer": "Chlorine uptake increases rapidly during initial Cl\u2082 exposure and saturates near 1.35 \u00d7 10\u00b9\u2075 Cl/cm\u00b2, showing a self-limiting surface reaction. In contrast, silicon etching does not begin during Cl\u2082 exposure but increases progressively during the Ar\u207a dosage phase. This distinction highlights that Cl\u2082 alone does not etch Si, but pre-functionalises the surface, enabling etching when energy is provided by Ar\u207a bombardment. The etching depth reaches a maximum around 9.8 \u00c5, corresponding to the removal of a single Si layer."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the maximum chlorine uptake observed during the process?",
+                "answer_type": "Factoid",
+                "answer": "1.35 \u00d7 10\u00b9\u2075 Cl/cm\u00b2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the sequential steps involved in the etching mechanism shown?",
+                "answer_type": "List",
+                "answer": "Cl adsorption, Surface saturation, Ar\u207a bombardment, Si\u2013Cl bond breaking, Silicon etching"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Can etching proceed without prior Cl\u2082 exposure?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 669,
+            "height": 425
+        }
+    }
+}

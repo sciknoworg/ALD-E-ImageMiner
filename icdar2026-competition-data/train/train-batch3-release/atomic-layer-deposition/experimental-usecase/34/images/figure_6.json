@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/34/figure_6",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure presents ion current versus time data across several subplots, each tracking a different species (e.g., H\u2082O\u207a, SiH\u2083\u207a, CO\u2082\u207a, HNSi\u2082Me\u2083\u207a) detected by mass spectrometry at their respective m/z values. Different reactant conditions, such as LiHMDS alone, and combinations with O\u2082* and H\u2082*,  are compared to observe how plasma and precursor combinations influence gaseous by-product formation. For example, the H\u2082O\u207a signal peaks during exposure to O\u2082*, indicating oxidative ligand removal, while HNSi\u2082Me\u2083\u207a signals provide evidence of volatile organosilicon fragments. The pressure trace at the bottom confirms timing of reagent pulses and surface reactions (SR), validating the synchrony of signal changes with process steps"
+    },
+    "data_extraction": {
+        "a": "| Time (s) | LiHMDS (m/z=18) | O\u2082* (m/z=30) | H\u2082* (m/z=44) | H\u2082O (m/z=146) |\n|----------|------------------|--------------|--------------|----------------|\n| 0        | 1E-10            | 1E-11        | 1E-12        | 1E-12          |\n| 10       | 1.2E-10          | 1.1E-11      | 1.3E-12      | 1.2E-12        |\n| 20       | 1.5E-10          | 1.4E-11      | 1.6E-12      | 1.8E-12        |\n| 30       | 1.3E-10          | 1.3E-11      | 1.4E-12      | 1.5E-12        |\n| 40       | 1.1E-10          | 1.2E-11      | 1.2E-12      | 1.3E-12        |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the ion current for H\u2082O\u207a (m/z = 18) increase following O\u2082* exposure, indicating oxidative removal of surface species?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At approximately what time does the HNSi\u2082Me\u2083\u207a (m/z = 146) ion current reach its peak during the LiHMDS + O\u2082* condition?",
+                "answer_type": "Factoid",
+                "answer": "Around 20 seconds."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which species show a delayed peak in ion current relative to the start of the SR window?",
+                "answer_type": "List",
+                "answer": "SiH\u2083\u207a (m/z = 30), CO\u2082\u207a (m/z = 44), and HNSi\u2082Me\u2083\u207a (m/z = 146)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does the sequence of rising ion currents for H\u2082O\u207a, CO\u2082\u207a, and HNSi\u2082Me\u2083\u207a suggest about the chemical mechanism taking place during the combined LiHMDS + O\u2082* + H\u2082* exposure, and how might this inform future ALD process tuning?",
+                "answer_type": "Paragraph",
+                "answer": "The ion current trends suggest that ligand combustion and surface reactions are being actively driven during the LiHMDS + O\u2082* + H\u2082* exposure. The sharp rise in H\u2082O\u207a indicates oxidative ligand breakdown, possibly of methyl or HMDS groups. Concurrent increases in CO\u2082\u207a and HNSi\u2082Me\u2083\u207a imply that both organic and silicon-containing fragments are released as volatile by-products. The sequential timing and magnitude of these signals can guide optimization of ALD cycle parameters, such as plasma duration and purge steps,  to ensure complete removal of precursor residues and maximise film purity. This is particularly important when designing ALD processes for sensitive electronics, where residual ligands can impair dielectric or conductive properties."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 666,
+            "height": 862
+        }
+    }
+}

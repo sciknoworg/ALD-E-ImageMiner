@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/22/figure_1",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The line chart depicts mass change during sequential deposition and etching stages over elapsed time. The deposition phase (blue arrow) shows a steady increase in mass, while the etching phase (orange arrow) leads to a gradual decrease, indicating material removal.",
+        "b": "The line chart illustrates real-time mass changes during alternating exposures to H\u2082O and MoF\u2086, visualised through stepwise increases and decreases. Annotated bars indicate the timing of each precursor pulse, and labeled \u0394 values quantify the mass gain and loss per cycle."
+    },
+    "data_extraction": {
+        "a": "| Elapsed Time (s) | Mass Change (ng/cm\u00b2) |\n|------------------|----------------------|\n| 0                | 0                    |\n| 5                | ~13                  |\n| 10               | ~26                  |\n| 15               | ~39                  |\n| 17               | ~42 (peak)           |\n| 20               | ~37                  |\n| 25               | ~25                  |\n| 30               | ~12                  |\n| 35               | ~0                   |",
+        "b": "| Elapsed Time (s) | Mass Change (ng/cm\u00b2) |\n|------------------|----------------------|\n| 0                | 0                    |\n| 10               | ~42                  |\n| 12               | ~23                  |\n| 20               | ~65                  |\n| 22               | ~46                  |\n| 30               | ~88                  |\n| 32               | ~69                  |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What are the two chemical precursors shown?",
+                "answer_type": "List",
+                "answer": "H\u2082O, MoF\u2086"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the figure provide evidence for a self-limiting etch mechanism?",
+                "answer_type": "Paragraph",
+                "answer": "Panel (b) shows mass gain and loss in response to alternating pulses of H\u2082O and MoF\u2086. The plateaus between each pulse and the consistent magnitude of change suggest that the surface reactions saturate at each step, characteristic of self-limiting behavior in atomic layer etching (ALE). The consistent \u0394 mass values following each precursor exposure reinforce the interpretation that a stoichiometric, repeatable reaction occurs with each cycle, indicative of controlled surface etching rather than continuous etching or deposition."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the mass loss per MoF\u2086 pulse  remain constant throughout the cycle?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the approximate mass gain during the deposition stage in panel (a)?",
+                "answer_type": "Factoid",
+                "answer": "~ 42 ng/ cm\u00b2"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 38,
+            "y": 16,
+            "width": 469,
+            "height": 358
+        },
+        "b": {
+            "x": 35,
+            "y": 402,
+            "width": 471,
+            "height": 351
+        }
+    }
+}

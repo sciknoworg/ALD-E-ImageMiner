@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_8",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot compares the EPC (etching per cycle) values measured experimentally and via MD simulations across a range of ion energies. Both datasets exhibit a positive correlation between ion energy and EPC, indicating that higher ion energies lead to more effective etching. However, the experimental EPC values increase more rapidly and reach higher maximum values than those predicted by MD simulations. This suggests that simulations may underestimate etch rates due to idealised conditions, or that experimental conditions involve synergistic effects not captured in the model. The discrepancy becomes more pronounced above ~100 eV, highlighting the importance of validating simulations against experimental benchmarks"
+    },
+    "data_extraction": {
+        "a": "| Ion Energy (eV) | EPC (Experiments, nm/cycle) | EPC (MD Simulations, nm/cycle) |\n|-----------------|-----------------------------|---------------------------------|\n| 0               | 0.0                         | 0.0                             |\n| 25              | 0.3                         | 0.1                             |\n| 50              | 0.6                         | 0.2                             |\n| 75              | 1.2                         | 0.6                             |\n| 100             | 2.2                         | 1.2                             |\n| 125             | 3.2                         | 1.8                             |\n| 150             | 4.3                         | 2.2                             |\n| 175             | 5.5                         | 2.6                             |\n| 200             | 6.4                         | 3.0                             |\n| 225             | 7.0                         | 3.4                             |\n| 250             | 7.5                         | 3.8                             |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do EPC values from experiments compare with MD simulatuons across increasing ion energies?",
+                "answer_type": "Paragraph",
+                "answer": "Both experimental and simulation results show increasing EPC with rising ion energy, indicating enhanced etching efficiency. However, the experimental data consistently show higher EPC values than the simulations, especially beyond 100 eV. This suggests either additional synergistic effects in the experiment or limitations in the simulation model, such as neglect of secondary ion effects or surface roughness."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At what ion energy do experimens and MD simulations begin to divege significantly in EPC?",
+                "answer_type": "Factoid",
+                "answer": "Around 100 eV"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What physical mechanisms may contribute to increased EPC with higher ion energies?",
+                "answer_type": "List",
+                "answer": "Higher momentum transfer, Increased sputtering yield, Enhanced bond breaking, Deeper penetration for bulk removal."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Would using ion energies above 150 eV be expected to significantly improve etching efficiency in practice ALD/E systems?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 541,
+            "height": 406
+        }
+    }
+}

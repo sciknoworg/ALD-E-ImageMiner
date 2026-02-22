@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/6/fig_14",
+    "classification": {
+        "a": "multiple scatter plot",
+        "b": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The experimental scatter plot shows that the SiCl\u2082 count decreases as ion dosage increases for all energy levels (45 eV, 80 eV, 215 eV). The highest counts are seen at 215 eV, while the lowest are at 45 eV. After ~30\u00d710\u00b9\u2075 Ar\u207a/cm\u00b2, the counts plateau, indicating a saturation or steady-state regime.",
+        "b": "The MD simulation panel reflects a similar trend to the experiment: initial steep decrease in SiCl\u2082 count, more prominent at higher energies. Notably, the simulated values begin at a slightly higher range than experimental values and converge more rapidly with dosage"
+    },
+    "data_extraction": {
+        "a": "| Ion Dosage (Ar\u207a/cm\u00b2) \u00d7 10\u00b9\u2075 | 45 eV  | 80 eV  | 215 eV  |\n|-----------------------------|--------|--------|---------|\n| 0                           | 1.2    | 1.4    | 1.6     |\n| 5                           | 0.9    | 1.1    | 1.3     |\n| 10                          | 0.7    | 0.9    | 1.1     |\n| ...                         | ...    | ...    | ...     |",
+        "b": "| Ion Dosage (Ar\u207a/cm\u00b2) \u00d7 10\u00b9\u2075 | 45 eV  | 80 eV  | 215 eV  |\n|-----------------------------|--------|--------|---------|\n| 0                           | 1.30   | 1.75   | 2.1     |\n| 5                           | 0.80   | 1.20   | 1.4     |\n| 10                          | 0.55   | 0.85   | 1.0     |\n| 15                          | 0.45   | 0.70   | 0.85    |\n| 20                          | 0.40   | 0.60   | 0.78    |\n| 25                          | 0.35   | 0.55   | 0.72    |\n| 30                          | 0.30   | 0.50   | 0.65    |\n| 35                          | 0.28   | 0.48   | 0.60    |\n| 40                          | 0.27   | 0.46   | 0.58    |\n| 45                          | 0.26   | 0.45   | 0.56    |\n| 50                          | 0.25   | 0.45   | 0.55    |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the steps in the MD simulation process that might explain the observed decline in SiCl\u2082 count with ion dosage?",
+                "answer_type": "List",
+                "answer": "Ion energy transfer, Surface atom displacement, SiCl\u2082 formation and ejection, Yield reduction with dose"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Is a higher SiCl\u2082 count always indicative of a more efficient etching process?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does SiCl\u2082 count vary with increasing ion dosage in both experiment and simulation, and how does this vary with ion energy?",
+                "answer_type": "Paragraph",
+                "answer": "In both experimental and simulated datasets, the SiCl\u2082 count decreases with increasing ion dosage for all ion energies. The rate of decrease is steepest between 0 and 15\u00d710\u00b9\u2075 Ar\u207a/cm\u00b2, after which the counts stabilize, indicating a saturation effect. Higher ion energies (e.g., 215 eV) consistently produce more SiCl\u2082 than lower energies like 45 eV, reflecting enhanced sputtering or reaction yields under more energetic conditions."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which ion energy yields the highest SiCl\u2082 count at zero ion dosage?",
+                "answer_type": "Factoid",
+                "answer": "215 eV"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 9,
+            "y": 10,
+            "width": 683,
+            "height": 451
+        },
+        "b": {
+            "x": 725,
+            "y": 9,
+            "width": 684,
+            "height": 452
+        }
+    }
+}
