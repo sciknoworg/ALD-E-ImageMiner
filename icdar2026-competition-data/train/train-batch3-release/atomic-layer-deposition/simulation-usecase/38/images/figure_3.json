@@ -1,0 +1,54 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/38/figure_3",
+    "classification": {
+        "a": "process flow diagram"
+    },
+    "summarization": {
+        "a": "Figure 3 presents a process flow diagram of the multiscale simulation architecture, showing how the mesoscopic model (ab initio methods and kinetic Monte Carlo) and the macroscopic CFD model are conjoined via a Linux Shell script interface. The diagram highlights the iterative exchange of pressure, temperature, and source generation/consumption between the models, enabling simultaneous simulation of surface kinetics and macroscopic fluid dynamics."
+    },
+    "data_extraction": {
+        "a": "| Category / Component            | Description                                                                 |\n|---------------------------------|-----------------------------------------------------------------------------|\n| Overall Description             | Diagram showing integration of mesoscopic (kMC) and macroscopic (CFD) simulations via a Linux Shell script, enabling iterative exchange of pressure, temperature, and source terms for multiscale modeling. |\n| Input: Macroscopic CFD Model    | ANSYS Fluent (continuum fluid dynamics, reactor optimization, boundary conditions) |\n| Input: Mesoscopic kMC Model     | Python Script (surface kinetics via kinetic Monte Carlo, based on ab initio QM + statistical mechanics) |\n| Input: Process Time & Source Terms | Simulation time span and source term definitions for coupling with CFD model |\n| Data Exchange: UDF              | Transfers process time & source terms from mesoscopic \u2192 macroscopic model   |\n| Data Exchange: UDM              | Feedback loop from mesoscopic model to CFD (surface kinetics \u2192 fluid dynamics) |\n| Output: Coupled Simulation      | Combined results showing surface kinetics and macroscopic fluid behavior    |\n| Output: Species Distribution    | Time-evolving concentrations and reaction rates across the reactor domain   |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "List the types of data exchanged between the mesoscopic and macroscopic models in the multiscale simulation.",
+                "answer_type": "List",
+                "answer": "Pressure, Temperature, Source generation rates, Source consumption rates"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does linking the mesoscopic and macroscopic simulations improve the predictive accuracy of the multiscale model compared to using each model separately?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. Integrating the two simulations allows for feedback between surface kinetics and fluid dynamics, providing a more comprehensive and accurate representation of the process than running either model independently."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the coding architecture enable the mesoscopic and macroscopic models to work together in the multiscale simulation?",
+                "answer_type": "Paragraph",
+                "answer": "The architecture uses a Linux Shell script as an interface between the mesoscopic and macroscopic models. It allows the two simulations to exchange key data such as pressure, temperature, and source generation or consumption iteratively. This data exchange enables simultaneous modeling of surface kinetics and macroscopic fluid dynamics, ensuring the multiscale simulation reflects both atomic-level and continuum-level phenomena accurately."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which programming languages or tools are used to implement the mesoscopic and macroscopic simulations in the framework?",
+                "answer_type": "Factoid",
+                "answer": "The mesoscopic simulation uses Python scripts for kinetic Monte Carlo modeling, and the macroscopic simulation uses ANSYS Fluent for CFD. A Linux Shell script connects the two."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 761,
+            "height": 652
+        }
+    }
+}

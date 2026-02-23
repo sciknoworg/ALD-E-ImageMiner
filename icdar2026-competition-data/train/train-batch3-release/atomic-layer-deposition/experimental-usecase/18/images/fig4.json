@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/18/fig4",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart",
+        "c": "line chart",
+        "d": "line chart"
+    },
+    "summarization": {
+        "a": "ZrN growth per cycle versus substrate temperature shows a low-temperature ALD window with stable GPC and a sharp increase at higher temperatures due to thermally activated, non-self-limiting growth.",
+        "b": "GPC saturation with increasing TDMAZr pulse time confirms self-limiting precursor adsorption and complete surface coverage beyond a critical pulse duration.",
+        "c": "GPC rapidly reaches a constant value with increasing forming-gas plasma exposure, indicating efficient ligand removal and nitridation within short plasma times.",
+        "d": "Post-precursor purge time affects GPC: insufficient purging causes elevated growth from parasitic reactions, while longer purge times restore true ALD behavior."
+    },
+    "data_extraction": {
+        "a": "| Substrate Temperature (\u00b0C) | GPC (nm/cycle) |\n|---|---|\n| 100 | ~0.11 |\n| 150 | ~0.10 |\n| 200 | ~0.11 |\n| 250 | ~0.15 |\n| 300 | ~0.55 |",
+        "b": "| TDMAZr pulse (s) | GPC (nm/cycle) |\n|---|---|\n| 0.02 | ~0.07 |\n| 0.04 | ~0.09 |\n| 0.06 | ~0.10 |\n| 0.08 | ~0.10 |\n| 0.10 | ~0.10 |\n| 0.12 | ~0.10 |\n| 0.16 | ~0.10 |\n| 0.20 | ~0.10 |",
+        "c": "| Plasma exposure (s) | GPC (nm/cycle) |\n|---|---|\n| 1 | ~0.12 |\n| 3 | ~0.12 |\n| 6 | ~0.10 |\n| 9 | ~0.10 |\n| 12 | ~0.10 |\n| 15 | ~0.10 |\n| 18 | ~0.10 |",
+        "d": "| Post-TDMAZr purge (s) | GPC (nm/cycle) |\n|---|---|\n| 1 | ~0.26 |\n| 3 | ~0.25 |\n| 6 | ~0.10 |\n| 9 | ~0.10 |\n| 12 | ~0.10 |\n| 15 | ~0.10 |\n| 18 | ~0.10 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "How do the trends in this figure guide optimization of ZrN PEALD for device-relevant applications?",
+                "answer_type": "Paragraph",
+                "answer": "The figure identifies an ALD process window that ensures stable, self-limiting ZrN growth at low temperatures by balancing precursor exposure, plasma reactivity, and purge efficiency. These optimized conditions yield consistent growth per cycle while suppressing parasitic CVD reactions, enabling uniform, conductive ZrN films suitable for temperature-sensitive electronic and interconnect applications"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the observed trend in GPC when varying TDMAZr pulse time and post-precursor purge time?",
+                "answer_type": "Factoid",
+                "answer": "GPC increases and saturates with increasing TDMAZr pulse time, while it decreases and then stabilizes with increasing post-precursor purge time."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do the growth-per-cycle trends shown in the figure confirm self-limiting PEALD behavior for ZrN under optimized conditions?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which process-related structural factors influence the growth-per-cycle behavior shown in the figure?",
+                "answer_type": "List",
+                "answer": "Surface saturation by TDMAZr precursor molecules, Efficient removal of surface ligands by forming-gas plasma, Prevention of gas-phase reactions through sufficient purge time, Thermal stability of surface-bound species within the ALD window"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 10,
+            "y": 0,
+            "width": 490,
+            "height": 330
+        },
+        "b": {
+            "x": 520,
+            "y": 0,
+            "width": 477,
+            "height": 363
+        },
+        "c": {
+            "x": 10,
+            "y": 389,
+            "width": 476,
+            "height": 352
+        },
+        "d": {
+            "x": 520,
+            "y": 389,
+            "width": 477,
+            "height": 352
+        }
+    }
+}

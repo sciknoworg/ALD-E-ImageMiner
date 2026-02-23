@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/38/figure_8",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "bar chart",
+        "d": "bar chart"
+    },
+    "summarization": {
+        "a": "Hacac partial pressure contour on wafers in reactor R1 at 2 s, showing coverage regions in red and illustrating spatial distribution of the reagent.",
+        "b": "Hacac partial pressure contour on wafers in reactor R4 at 3 s, showing coverage regions in red and illustrating spatial distribution of the reagent.",
+        "c": "Bar chart of Hacac exposure times for all wafer nodes in reactor R1, showing a broader distribution with average 2.717 s and standard deviation 0.1925 s.",
+        "d": "Bar chart of Hacac exposure times for all wafer nodes in reactor R4, showing a tightly centered distribution with average 2.701 s and standard deviation 0.0079 s."
+    },
+    "data_extraction": {
+        "a": "| x-coordinate|y-coordinate|\n|-------------|------------|\n|0.1|-0.05|\n|0.15|-0.1|\n|0.2|-0.15|\n|0.25|-0.2|\n|0.3|-0.25|",
+        "b": "| x-coordinate|y-coordinate|\n|-------------|------------|\n|0.05|-0.1|\n|0.1|-0.15|\n|0.15|-0.2|\n|0.2|-0.25|\n|0.25|-0.3|",
+        "c": "| Exposure time (s)|Number of nodes|\n|------------------|---------------|\n|2.0|0|\n|2.1|0|\n|2.2|0|\n|2.3|0|\n|2.4|0|\n|2.5|0|\n|2.6|0|\n|2.7|0|\n|2.8|0|\n|2.9|0|\n|3.0|0|\n|3.1|0|\n|3.2|0|\n|3.3|0|\n|3.4|0|\n|3.5|0|\n|3.6|0|\n|3.7|0|\n|3.8|0|\n|3.9|0|\n|4.0|0|",
+        "d": "| Exposure time (s)|Number of nodes|\n|------------------|---------------|\n|2.0|0|\n|2.1|0|\n|2.2|0|\n|2.3|0|\n|2.4|0|\n|2.5|0|\n|2.6|0|\n|2.7|0|\n|2.8|0|\n|2.9|0|\n|3.0|0|\n|3.1|0|\n|3.2|0|\n|3.3|0|\n|3.4|0|\n|3.5|0|\n|3.6|0|\n|3.7|0|\n|3.8|0|\n|3.9|0|\n|4.0|0|"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "List the factors that influence the uniformity of exposure time across a wafer in these spatial reactors.",
+                "answer_type": "List",
+                "answer": "Reactor geometry (shape of reaction zones), Wafer rotation speed (angular velocity), Radial position of nodes on the wafer, Design of inlet and outlet configurations, Arc length of reaction zones relative to radial distance"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the exposure time distribution differ between reactors R1 and R4?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. R1 exhibits a wider exposure time distribution with higher standard deviation, whereas R4 has a tightly centered distribution with low variability, despite similar average exposure times."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the exposure time for each node on the wafer determined in the spatial ASALD reactors?",
+                "answer_type": "Paragraph",
+                "answer": "Exposure time is determined by recording the Hacac partial pressure at every node of the wafer as it passes through the reaction zone. Each node is considered exposed as long as the pressure is above a threshold, and the total time in this state defines the exposure time. The wafer rotation and geometry of the reaction zones influence how long each node remains in contact with the reagent, which is then visualized as a distribution across all nodes."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What are the average exposure times and standard deviations for R1 and R4?",
+                "answer_type": "Factoid",
+                "answer": "R1: Average exposure time = 2.717 s, Standard deviation = 0.1925 s\nR4: Average exposure time = 2.701 s, Standard deviation = 0.0079 s"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 538,
+            "height": 388
+        },
+        "b": {
+            "x": 557,
+            "y": 0,
+            "width": 532,
+            "height": 388
+        },
+        "c": {
+            "x": 0,
+            "y": 481,
+            "width": 498,
+            "height": 389
+        },
+        "d": {
+            "x": 557,
+            "y": 481,
+            "width": 500,
+            "height": 357
+        }
+    }
+}

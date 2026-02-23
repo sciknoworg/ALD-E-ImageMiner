@@ -1,0 +1,72 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/38/figure_13",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart",
+        "c": "line chart"
+    },
+    "summarization": {
+        "a": "Hacac surface coverage (%) over time during adsorption (0.1 mole fraction), reaching full coverage at ~3.77 s. The progression reflects non-linear adsorption behavior due to integration of macroscopic fluid dynamics with mesoscopic surface kinetics.",
+        "b": "BDEAS surface coverage (%) over time during adsorption (0.5 mole fraction), reaching full coverage at ~6.99 s. Slower adsorption is influenced by pressure depletion zones and reagent interactions in the fluid phase.",
+        "c": "O\u2083 surface coverage (%) over time during adsorption (0.1 mole fraction), reaching full coverage at ~3.72 s. The curves indicate non-linear adsorption behavior and are consistent with experimental dosage times reported in the literature."
+    },
+    "data_extraction": {
+        "a": "| Time (s)|Hacac Coverage (%)|\n|---------|------------------|\n|0.0|0|\n|1.0|25|\n|2.0|60|\n|3.0|90|\n|3.77|100|",
+        "b": "| Time (s)|BDEAS Coverage (%)|\n|---------|------------------|\n|0.0|0|\n|2.0|20|\n|4.0|50|\n|6.0|85|\n|6.99|100|",
+        "c": "| Time (s)|O\u2083 Coverage (%)|\n|---------|---------------|\n|0.0|0|\n|1.0|40|\n|2.0|80|\n|3.0|95|\n|3.72|100|"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "How can the insights from Figure 13 be used to optimize ASALD process parameters?",
+                "answer_type": "Paragraph",
+                "answer": "By analyzing the coverage progression over time, researchers can adjust operating conditions such as reagent dosage, surface pressure, and wafer exposure time to ensure full coverage without overexposure. Understanding that BDEAS requires longer process times due to slower adsorption allows for precise control of deposition thickness and prevents oversaturation. Additionally, recognizing the impact of pressure depletion zones and species interactions informs reactor design modifications, such as improved purge streams, to maintain reagent availability and optimize surface coverage kinetics for all adsorption steps."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which adsorption step requires the longest process time to reach full coverage in the multiscale CFD simulations?",
+                "answer_type": "Factoid",
+                "answer": "The BDEAS step requires the longest process time, reaching full coverage at 6.99 seconds."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the integration of macroscopic fluid dynamics into the mesoscopic model affect the process time to reach full surface coverage?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. The integration introduces pressure depletion zones and species interactions that reduce adsorption rates, leading to longer process times in the multiscale CFD simulations compared to prior mesoscopic models."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What factors contribute to the slower surface coverage progression observed in the multiscale CFD simulations?",
+                "answer_type": "List",
+                "answer": "Pressure depletion zones in the reactor, Reagent dilution and reduced surface exposure, Repulsive interactions between species in the fluid phase, Partitioning of the wafer into discrete sections for kMC simulations, which reduces spatial resolution"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 9,
+            "width": 498,
+            "height": 385
+        },
+        "b": {
+            "x": 547,
+            "y": 9,
+            "width": 513,
+            "height": 383
+        },
+        "c": {
+            "x": 273,
+            "y": 488,
+            "width": 504,
+            "height": 387
+        }
+    }
+}

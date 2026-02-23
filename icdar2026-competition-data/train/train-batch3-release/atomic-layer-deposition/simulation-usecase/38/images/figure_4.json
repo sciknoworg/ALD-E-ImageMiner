@@ -1,0 +1,54 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/38/figure_4",
+    "classification": {
+        "a": "conceptual diagram"
+    },
+    "summarization": {
+        "a": "Conceptual diagram of the kinetic Monte Carlo (kMC) simulation on a lattice, showing probabilistic assignment of reactions to 90,000 substrate sites based on weighted reaction rate constants. Time progression is determined by a secondary random number, and steric hindrance effects illustrate how bulky adsorbates affect neighboring site availability in the simulation."
+    },
+    "data_extraction": {
+        "a": "| Site (row \\ column) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |\n| ------------------- | - | - | - | - | - | - | - | - | - | -- | -- | -- |\n| 1                   | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0  | 0  | 1  |\n| 2                   | 0 | 1 | 3 | 0 | 2 | 1 | 0 | 3 | 0 | 1  | 2  | 0  |\n| 3                   | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 1  | 0  |\n| 4                   | 0 | 0 | 3 | 4 | 0 | 1 | 0 | 0 | 1 | 0  | 3  | 0  |\n| 5                   | 0 | 4 | 0 | 1 | 3 | 0 | 0 | 2 | 0 | 0  | 1  | 2  |\n| 6                   | 0 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 3 | 0  | 1  | 0  |\n| 7                   | 2 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0  | 0  | 1  |\n| 8                   | 0 | 1 | 0 | 3 | 1 | 0 | 2 | 0 | 0 | 1  | 0  | 0  |\n| 9                   | 0 | 2 | 3 | 0 | 0 | 3 | 0 | 0 | 2 | 0  | 0  | 3  |\n| 10                  | 0 | 0 | 0 | 2 | 0 | 0 | 4 | 3 | 0 | 0  | 1  | 4  |\n| 11                  | 3 | 0 | 0 | 0 | 1 | 0 | 3 | 3 | 4 | 0  | 0  | 0  |\n| 12                  | 0 | 2 | 2 | 1 | 0 | 0 | 3 | 0 | 1 | 0  | 0  | 0  |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "List the key steps involved in the kMC simulation procedure as represented in Figure 4.",
+                "answer_type": "List",
+                "answer": "Assign reaction sites on the lattice, Calculate total reaction rate (ktot) from possible reactions at each site, Randomly select a reaction using a weighted probability (g1 \u2208 (0,1]), Determine time progression for the selected reaction using a secondary random number (g2 \u2208 (0,1]), Apply steric hindrance rules to block neighboring sites as needed, Update the lattice to reflect adsorption and reaction outcomes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does incorporating steric hindrance in the kMC simulation improve the accuracy of surface adsorption predictions compared to a standard kMC algorithm?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. Including steric hindrance ensures that bulky adsorbates block neighboring sites, which better reflects actual surface kinetics and improves the predictive accuracy of adsorption behavior."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the kMC algorithm assign reactions to substrate sites in the simulation?",
+                "answer_type": "Paragraph",
+                "answer": "The kMC algorithm probabilistically assigns reactions to each substrate site based on weighted reaction rate constants. A random number (g1) is generated to select a reaction at each site, and a secondary random number (g2) determines the time progression before the next reaction occurs. The process accounts for steric hindrance, ensuring bulky adsorbates properly block adjacent sites, thereby reflecting realistic surface kinetics."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the size of the lattice used in the kMC simulation, and how many reaction sites does it contain?",
+                "answer_type": "Factoid",
+                "answer": "The lattice is 300 \u00d7 300, containing a total of 90,000 reaction sites."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 1094,
+            "height": 378
+        }
+    }
+}
