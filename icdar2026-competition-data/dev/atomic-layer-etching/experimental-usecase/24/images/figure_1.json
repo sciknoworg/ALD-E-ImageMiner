@@ -1,0 +1,266 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_1",
+    "classification": [
+        {
+            "a": "line chart"
+        }
+    ],
+    "summarization": {
+            "a": "This QCM measurement shows the mass change during 100 Al\u2082O\u2083 ALE cycles using sequential TMA and HF exposures at 300\u00b0C. The reaction sequence \"2-30-1-30\" indicates a 2.0 s TMA dose, 30 s N\u2082 purge, 1.0 s HF dose, and 30 s N\u2082 purge per cycle. The highly linear decrease in mass demonstrates that Al\u2082O\u2083 ALE proceeds at a constant rate, yielding a mass change per cycle (MCPC) of \u221215.9 ng/(cm\u00b2 cycle), equivalent to an etch rate of 0.51 \u00c5/cycle. The slight initial mass gain during the first cycle corresponds to the nucleation period where the AlF\u2083 surface layer is established on the hydroxylated Al\u2082O\u2083 substrate."
+    },
+    "data_extraction": {
+            "a": "| Time (s) | Mass Change (ng/cm\u00b2) |\n|---|---|\n| 0 | 0 |\n| 500 | -125 |\n| 1000 | -250 |\n| 1500 | -375 |\n| 2000 | -500 |\n| 2500 | -625 |\n| 3000 | -750 |\n| 3500 | -875 |\n| 4000 | -1000 |\n| 4500 | -1125 |\n| 5000 | -1250 |\n| 5500 | -1375 |\n| 6000 | -1500 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which process is shown in the figure?",
+                "answer_type": "Factoid",
+                "answer": "As the mass decreases over the time and negative values are displayed, the process corresponds to atomic layer etching."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does mass change over the time?",
+                "answer_type": "Factoid",
+                "answer": "As the exposure time increases, the mass change decreases."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How much N2 purge time is applied?",
+                "answer_type": "Factoid",
+                "answer": "30s of N2 after TMA dosing, and 30s after HF."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How is the relation between the mass change over the time?",
+                "answer_type": "Factoid",
+                "answer": "Mass change is inversely proportional at 300C. As, the time increases, mass change decreases."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How can the line chart be used to identify the process as ALE?",
+                "answer_type": "Paragraph",
+                "answer": "The stepwise decrease in mass indicates that there are two steps needed to remove material. This is characteristic for ALE."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the oberved etch rate?",
+                "answer_type": "Factoid",
+                "answer": "The observed etch rate is the slope. This gives an etch rate of 0.25ng/(cm\u00b2*s)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the notation 2-30-1-30 stand for?",
+                "answer_type": "Paragraph",
+                "answer": "The notation 2-30-1-30 represent the standard way of reporting the dosing scheme in ALD and ALE sources. For this process it corresponds to 2 s of TMA dose, 30 s purge, 1 s HF dose, ending with another 30 s purge."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the given information in the graph provide enough information to determine the film density?",
+                "answer_type": "Paragraph",
+                "answer": "No the data does not provide enough information. For this also the thickness of the film before and after etch should be known."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What experimental sequence is implied by the \u201cTMA 2\u201330 \u2013 HF 1\u201330\u201d annotation, and how does it relate to the mass-change curve?",
+                "answer_type": "Paragraph",
+                "answer": "The annotation indicates alternating exposures of TMA and HF, each followed by purge steps, repeated continuously during the measurement. In ALE, one half-reaction modifies the surface while the other removes material in a controlled way. The nearly constant negative slope in the curve shows that each cycle produces a similar net mass loss, resulting in steady cumulative etching over time."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which visible features of the curve support the conclusion of steady etching behavior?",
+                "answer_type": "Paragraph",
+                "answer": "-The mass decreases monotonically with time.\n-The slope is approximately constant over most of the plot.\n-Mass loss scales proportionally with elapsed time.\n-No long plateaus or reversals are observed."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What material and temperature are explicitly indicated in the figure?",
+                "answer_type": "Factoid",
+                "answer": "Al2O3 at 300\u00b0C."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does a nearly linear mass-loss curve imply about ALE process performance over this time window?",
+                "answer_type": "Paragraph",
+                "answer": "A near-linear mass-loss curve implies that the ALE process is highly repeatable from cycle to cycle. Each exposure sequence removes approximately the same amount of material. This behavior indicates good controllability, allowing total removal to be estimated directly from time or cycle count."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the reaction sequence notation \"2-30-1-30\" represent in the Al\u2082O\u2083 ALE process?",
+                "answer_type": "Factoid",
+                "answer": "It represents a 2.0 s TMA exposure, followed by a 30 s N\u2082 purge, then a 1.0 s HF exposure, and finally a 30 s N\u2082 purge."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the first ALE cycle show a mass gain instead of a mass loss like subsequent cycles?",
+                "answer_type": "Paragraph",
+                "answer": "During the first ALE cycle, the initial hydroxylated Al\u2082O\u2083 substrate undergoes reactions that result in net mass gain rather than loss. The first TMA exposure produces AlCH\u2083* surface species through reaction with surface AlOH* groups, causing a mass gain of approximately 32 ng/cm\u00b2. The subsequent first HF exposure fluorinates the Al\u2082O\u2083 to form an AlF\u2083 surface layer while converting AlCH\u2083* to AlF*, adding another ~33 ng/cm\u00b2. This first cycle establishes the initial AlF\u2083 layer necessary for the ligand-exchange etching mechanism. Only after this nucleation period do subsequent cycles exhibit the characteristic mass loss associated with material removal."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What etch rate does the QCM data indicate for Al\u2082O\u2083 ALE at 300\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "The MCPC of \u221215.9 ng/(cm\u00b2 cycle) corresponds to an etch rate of 0.51 \u00c5/cycle, based on an Al\u2082O\u2083 film density of 3.1 g/cm\u00b3."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the linearity of the mass change versus time curve indicate about the Al\u2082O\u2083 ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The highly linear mass decrease over 100 ALE cycles demonstrates that the etching process is extremely reproducible and proceeds at a constant rate throughout the experiment. This linearity is a hallmark of well-controlled atomic layer processes, indicating that each TMA and HF half-cycle removes a consistent amount of material regardless of how much Al\u2082O\u2083 has already been etched. It confirms that the sequential reactions are self-limiting and that there is no degradation or accumulation of byproducts that would alter the etch rate over time. This predictable behavior is essential for applications requiring precise thickness control at the atomic scale."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the sequential exposures listed out in this ALE process given in this figure?",
+                "answer_type": "List",
+                "answer": "1) TMA (Trimethylaluminum) for 2.0 s\n2) purged with nitrogen (N\u2082) for 30 s \n3) HF (Hydrogen Fluoride) for 1.0 s\n4) purged again with N\u2082 for 30 seconds"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does a  linear etching trend of the Al\u2082O\u2083 film observed in this ALE process ?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, A  linear etching of the Al\u2082O\u2083 film with a  slope of the mass change versus time yields a mass change per cycle (MCPC) of \u221215.9 ng/(cm\u00b2 cycle)"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the given Al\u2082O\u2083 film density of 3.1 g/cm\u00b3 (from XRR) allow the conversion of the measured Mass Change Per Cycle (MCPC) into an etch rate in \u00c5/cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The density provides the mass-to-volume relationship for the material. By dividing the MCPC (-15.9 ng/cm\u00b2/cycle) by the density, you calculate the volume of material removed per unit area per cycle. Converting this volumetric thickness (cm\u00b3/cm\u00b2) into angstroms yields the linear etch rate of 0.51 \u00c5/cycle, linking a bulk material property to a nanoscale process metric."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The first ALE cycle shows no mass loss, unlike subsequent cycles. What does this imply about the initial state of the film surface for a manufacturing process?",
+                "answer_type": "Paragraph",
+                "answer": "It implies the first cycle serves as an activation or conditioning step, likely modifying the surface chemistry for subsequent etching. In manufacturing, this means the process recipe must account for an initial \"dead cycle\" to achieve stable, predictable etch rates. This stabilization is critical for achieving uniform depth control across a wafer."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the mass change increase with increasing time/duration?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the ALE etching sequence ?",
+                "answer_type": "Paragraph",
+                "answer": "One ALE cycle consists of \nI. TMA dose of 2.0 s\nII.  N2 purge of 30 s\nIII. HF dose of 1.0 s\nIV. N2 purge of 30 s."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does all ALE cycles lead to a decrease in mass?",
+                "answer_type": "Factoid",
+                "answer": "All ALE cycles show mass loss except during the first ALE cycle. The first cycle displays mass gains."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the slope of Mass change give?",
+                "answer_type": "Paragraph",
+                "answer": "slope of\nthe mass change versus time yields a mass change per cycle\n(MCPC) of \u221215.9 ng/(cm2 cycle). This MCPC represents the\nremoval of 9.4 \u00d7 1013 \u201cAl2O3\u201d units/(cm2 cycle). This MCPC is\nalso equivalent to an etch rate of 0.51 \u00c5/cycle based on the\nAl2O3 ALD film density of 3.1 g/cm3 determined by XRR."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the ALE process steps?",
+                "answer_type": "Paragraph",
+                "answer": "1) Exposure to TMA, 2 seconds, 2)System purge with N2, 30 seconds, 3) Exposure to HF, 1 second, 4) System purge with N2, 30 seconds."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the system pressure remain constant throughout the process?",
+                "answer_type": "Yes/No",
+                "answer": "No, pressure transients were observed during the TMA and HF exposures, which were 40 and 80 mTorr, respectively."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the observed mass change per cycle (MCPC)?",
+                "answer_type": "Factoid",
+                "answer": "The observed MCPC was -15.9 ng/(cm^2 cycle), which corresponds to an etch rate of 0.51 \u00c5/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How come no mass is removed but added instead during the first ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The first cycle displays mass gains of 32 ng/cm^2 for TMA and 33 ng/cm^2 for HF. The mass gain for TMA is attributed to the formation of AlCH3* surface species on the initial hydroxylated Al2O3 substrate. Exposure to HF can lead to the formation of AlF* surface species (by reaction with AlCH3*), but the underlying Al2O3 substrate can also be fluorinated to form AlF3. The initial ALE cycle primarily forms AlF3, which is why mass gain is observed rather than etching."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which cycle shows mass gain?",
+                "answer_type": "Factoid",
+                "answer": "The first ALE cycle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does negative mass change physically represent in this experiment?",
+                "answer_type": "Factoid",
+                "answer": "Etching of the Al\u2082O\u2083 film"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the time of one ALE cycle?",
+                "answer_type": "Factoid",
+                "answer": "63 seconds (2s + 30s + 1s + 30s)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Based on this graph, how to estimate the mass change per cycle?",
+                "answer_type": "Paragraph",
+                "answer": "From the figure, one ALE cycle consists of 2 s TMA exposure, 30 s purge, 1 s HF exposure, and a further 30 s purge, giving a total cycle time of  63 s/cycle. Using two points from the graph, for example, (53 s; 65 ng/cm\u00b2) and (4648s; -1095 ng/cm\u00b2), the change in mass is \u0394\ud835\udc40= - 1095 - 65 = - 1160 ng/cm\u00b2. The change in time is  \u0394\ud835\udc61 = 4648 - 53 = 4595 s. The slope is therefore  \u0394\ud835\udc40/ \u0394\ud835\udc61 = -1160/4595 \u2248 - 0.25245 ng/(cm\u00b2\u22c5s).  Multiplying by the cycle time gives the mass change per cycle: MCPC = (- 0.25245)(63) \u2248 - 15.9 ng/(cm\u00b2 \u22c5 cycle)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What temperature was used for the experiment shown in the figure?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass of the Al2O3 sample change over time during the TMA/HF sequence?",
+                "answer_type": "Paragraph",
+                "answer": "The mass decreases steadily throughout the entire experiment. The slope is quite consistent, this gives the appearance of a near-linear drop in mass as the cycles proceed. By the end of the 6000 s window, the sample has lost around 1500 ng/cm\u00b2, showing that the etching process continues at a  nearly uniform rate."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the plot indicate any periods where the mass increases?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the four steps in the exposure sequence indicated in the figure",
+                "answer_type": "List",
+                "answer": "TMA dose (2), purge (30), HF dose (1), purge (30)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass change evolve during the initial and steady-state cycles of the ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "During the first cycle, mass gains are observed in both the TMA and HF steps (+32 and +33 ng/cm\u00b2, respectively), reflecting precursor adsorption on the Al\u2082O\u2083 surface. After several cycles, the process reaches a steady regime where the mass decreases linearly with each ALE cycle. The slope of this linear decrease corresponds to a mass loss of \u221215.9 ng/cm\u00b2 per cycle, indicating a consistent etch rate and demonstrating stable layer-by-layer removal over 100 cycles."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the etch rate per cycle derived from the QCM measurement?",
+                "answer_type": "Factoid",
+                "answer": "0.51 \u00c5 per cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the QCM trace indicate that the ALE process has reached a stable, repeatable etching regime after the initial cycle?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the key steps in the ALE sequence shown in the QCM measurement?",
+                "answer_type": "List",
+                "answer": "TMA dose for 2 seconds, N\u2082 purge for 30 seconds, HF dose for 1 second, N\u2082 purge for 30 seconds, Repetition over 100 cycles"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 670,
+            "height": 528
+        }
+    }
+}

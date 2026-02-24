@@ -1,0 +1,197 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/fig1",
+    "classification": {
+        "a": "process timing diagram",
+        "b": "conceptual diagram"
+    },
+    "summarization": {
+        "a": "Time sequence of ALE process parameters over one cycle: ICP power held constant (~1500 W) and Ar flow steady (~50 sccm); CF\u2084 + H\u2082 flow (\u224810\u201325 sccm) is pulsed only during the modification step; the DC bias (\u22484\u20136 W) is applied only during the activation step to ion-energize Ar and drive the surface reaction/etch. Cycle boundaries are indicated by vertical dividers.",
+        "b": "Conceptual illustration of the surface state through the cycle: (1) CF\u2084 + H\u2082 plasma deposits a polymer layer on the target surface (modification), (2) the film reaches saturation and uniformly covers the surface, and (3) Ar-ion activation reacts the polymer with the top atomic layer, ejecting by-products and removing a controlled thickness (etch)."
+    },
+    "data_extraction": {
+        "a": "| Step within cycle            | W_DC (W) | W_ICP (W) | CF4+H2 (sccm) | Ar (sccm) |\n|-------------------------------|--------------|----------------|--------------------|--------------|\n| Modification step  |        0 |      1500 |         10\u201325 |        50 |\n| Saturated layer formed  |        0 |      1500 |              0|        50 |\n| Activation step |      4\u20136 |      1500 |              0|        50 |",
+        "b": ""
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the steps involved in etching the target layer?",
+                "answer_type": "Factoid",
+                "answer": "The target layer is first exposed to carbon fluor reactant species. Then, the layer is exposed to Ar, after which the modified layer desorbs."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on the figure, is it likely that due to the ALE process the final substrate will contain carbon and fluorine contaminations, and what could be the reason of this?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, in the most right part of subfigure b, there are still CF groups present at the surface. This incomplete removal by the Ar ions can be related to the ion energy as well as the binding energy of these groups to the surface."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "According to the conceptual diagram, what is the first step of the etching mechanism?",
+                "answer_type": "Factoid",
+                "answer": "The first step involves the adsorption of reactant species (fluorine and carbon atoms) onto the surface of the target layer."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What physical property of the target layer is modified by completing one ALE cycle?",
+                "answer_type": "Factoid",
+                "answer": "The thickness of the target layer is reduced, as indicated by the \"Etched thickness\" label in the final schematic."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "When is the atom of target layer etched away?",
+                "answer_type": "Paragraph",
+                "answer": "During the third sequence in the ALE cycle, DC bias step."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "When does the surface reach saturation?",
+                "answer_type": "Paragraph",
+                "answer": "During the second step in the cycle, the C, F atoms on the target surface appear to have reached saturation"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the surface behavior during the modification step differ from the activation step in the ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "During the modification step, a fluorocarbon polymer layer is deposited on the surface using an Ar/CF\u2084/H\u2082 plasma without applying a DC bias, leading to surface passivation rather than material removal. In contrast, the activation step employs argon plasma with an applied DC bias, which generates energetic ions that partially remove the polymer layer and activate surface reactions with the underlying material. This contrast between surface protection and controlled ion-driven activation enables layer-by-layer etching."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which process parameters influence the surface modification and activation behavior in the ALE sequence?",
+                "answer_type": "List",
+                "answer": "Gas composition (Ar/CF\u2084/H\u2082 versus Ar plasma), Presence or absence of DC bias, Plasma power (ICP power), Process duration for each step, Substrate temperature"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What role does the argon purge step play in the ALE process sequence?",
+                "answer_type": "Factoid",
+                "answer": "It removes residual reactive gases between modification and activation steps."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the variables behave over the time?",
+                "answer_type": "Factoid",
+                "answer": "Both Inductively Coupled Plasma power and Ar flow rate, maintain constant over the process. Instead, DC power increases and decreases just before the  pulse of CH4+H2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is there any relation between DC power and the ICP power?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which type of ALE process does this graph correspond to?",
+                "answer_type": "Factoid",
+                "answer": "Plasma atomic layer etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the three main steps of this ALE cycle and what function fullfills the last sub-cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The three main parts in this ALE cycle are the dosing of a plasma containing Ar, CH4, and H2 related species, a plasma exposure, solely consisting of Ar, and lastly a Ar plasma exposure with a biased substrate. This last step is introduced to enable energetic ions to bombard the substrate, leading to selective etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the pressure in the reactor chamber constant during this process?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What information is missing in subfigure a, that prevents the reproduction of this process?",
+                "answer_type": "Paragraph",
+                "answer": "To be able to reproduce this experiment the dosing times should be present."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is W_DC bias applied only during the activation/etch step?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the application of Ar differ from the CF\u2084+H\u2082 gas during the ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "The Ar flow is continuous and constant at 50 sccm throughout the entire cycle, whereas the CF\u2084+H\u2082  flow is pulsed, occurring only during the initial step."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the gas conditions in the modification step differ from those in the activation step?",
+                "answer_type": "Factoid",
+                "answer": "The modification step uses an Ar + CF\u2084+H\u2082 plasma, while the activation step uses only Ar plasma."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the main steps of the ALE cycle shown in this figure, and why is purging between them essential?",
+                "answer_type": "Paragraph",
+                "answer": "The ALE cycle has two main steps: modification deposits a fluorocarbon polymer film from CF\u2084 + H\u2082 plasma until saturation, and activation uses Ar ion bombardment to drive surface reaction between polymer and target material, removing a precise thickness. Purging between steps removes unreacted precursors and prevents gas-phase mixing. This maintains self-limiting behavior and ensures etching occurs only through the controlled surface reaction mechanism."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is Ar used as the continuous background gas in all parts of the ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "Ar provides a stable plasma environment for both the polymer-deposition and the activation steps. During modification, it dilutes CF\u2084+H\u2082 and helps form a controllable fluorocarbon film without over-fluorinating the surface. During activation, the same Ar plasma is accelerated by the DC bias to supply low-energy ion bombardment, so the chamber does not need to switch gases between steps, which improves repeatability of the self-limiting etch."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the DC bias applied continuously throughout the entire ALE cycle?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Explain how the timing and synchronization between plasma power and gas flow affect the surface reaction selectivity in this given ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "Proper timing  and synchronization makes sure that the film deposition, activation, and etching happen one after another without overlap. \nWhen plasma power and gas flow are well-synchronized, the right species are active at the right time resulting in lesser undesired reactions, improving selectivity, and giving precise atomic-layer control."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the functions of CF\u2084, H\u2082 and Ar differ across the ALE cycle?",
+                "answer_type": "List",
+                "answer": "CF\u2084: Active mainly during the modification step, providing fluorine radicals that form a thin fluorocarbon (CF\u2093) layer.\n\nH\u2082: Works with CF\u2084 to regulate plasma, reducing over-fluorination and ensuring balanced polymer growth.\n\nAr: Dominates during the activation step, supplying Ar\u207a ions for controlled sputtering and also acts as a purge gas between cycles."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the ALE cycle duration relate to etch depth per cycle?",
+                "answer_type": "Paragraph",
+                "answer": "A typical ALE cycle lasts about 10\u201315 seconds, corresponding to the removal of roughly 0.1\u20130.2 nm of material. The precise control of timing directly determines the atomic-scale etch depth, linking the process structure (timing) to the resulting property (etch rate)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does separating the modification and activation steps improve etch uniformity and anisotropy?",
+                "answer_type": "Yes/No",
+                "answer": "Yes. \nSeperating these steps allows independent control over chemical and physical reactions, minimizing surface damage and sidewall erosion. This results in better uniformity, higher selectivity, and improved anisotropy in the etched features."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is there constant DC bias during the atomic layer etching sequence",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What parameters remain constant throughout the process",
+                "answer_type": "Factoid",
+                "answer": "ICP power and Ar flow are constant throughout the process"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the ALE process rely on alternating modification and activation steps to achieve controlled etching?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 958,
+            "height": 786
+        }
+    }
+}

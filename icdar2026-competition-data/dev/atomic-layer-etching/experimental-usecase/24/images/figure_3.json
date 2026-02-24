@@ -1,0 +1,275 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_3",
+    "classification": {
+            "a": "multiple scatter plot",
+            "b": "scatter plot"
+    },
+    "summarization": {
+            "a": "Evolution of mass changes during Al\u2082O\u2083 ALE at 300 \u00b0C, showing the mass change after TMA exposure (\u0394M_TMA), the mass change after HF exposure (\u0394M_HF), and the mass change per cycle (MCPC). After a short nucleation period, \u0394M_TMA and \u0394M_HF reach constant values, resulting in a steady-state MCPC of approximately \u221215.9 ng/(cm\u00b2\u00b7cycle).",
+            "b": "\u0394M_TMA/MCPC ratio as a function of ALE cycles, which stabilizes at approximately 1.8 after the first three cycles. This steady ratio is used to define the stoichiometry of the ALE reactions and indicates consistent, repeatable mass changes."
+    },
+    "data_extraction": {
+            "a": "| Number of cycles | \u0394M_HF (ng/cm\u00b2) | MCPC (ng/(cm\u00b2\u00b7cycle)) | \u0394M_TMA (ng/cm\u00b2) |\n|------------------|----------------|-----------------------|------------------|\n| 0   | ~35 | ~ -15 | ~ -30 |\n| 20  | ~15 | ~ -15 | ~ -30 |\n| 40  | ~15 | ~ -15 | ~ -30 |\n| 60  | ~15 | ~ -15 | ~ -30 |\n| 80  | ~15 | ~ -20 | ~ -30 |\n| 100 | ~15 | ~ -15 | ~ -30 |",
+            "b": "| Number of cycles | \u0394M_TMA / MCPC |\n|------------------|---------------|\n| 0   | ~0.5 |\n| 20  | ~2.0 |\n| 40  | ~2.0 |\n| 60  | ~2.0 |\n| 80  | ~2.0 |\n| 100 | ~2.0 |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "What are the advantages of calculating and presenting the deltaTMA/MCPC ratio?",
+                "answer_type": "Factoid",
+                "answer": "This value can be used to calculate the stoichiometry of the reactions."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How can ALE be proven with these graphs?",
+                "answer_type": "Paragraph",
+                "answer": "For every cycle the mass changes are constant showing the self-limiting and controlable behaviour of ALE."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What could be a reason for the outliers in the initial cycle?",
+                "answer_type": "Paragraph",
+                "answer": "It could be that there are some defects on the substrate to which HF can adsorb. Similar for TMA."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does a nearly constant \u0394M_TMA/MCPC ratio (~2) suggest about the TMA contribution to the cycle?",
+                "answer_type": "Paragraph",
+                "answer": "A near-constant ratio indicates that the TMA-related mass change scales proportionally with the net per-cycle mass change. This suggests the TMA half-reaction contribution remains consistent across most cycles. Such behavior is consistent with a stable surface chemistry after the initial transient."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which simple process-monitoring check could be derived from the ratio plot during long ALE runs?",
+                "answer_type": "Paragraph",
+                "answer": "-Monitor whether \u0394M_TMA/MCPC remains near ~2\n-Flag sustained drift away from this value\n-Treat early outliers as startup behavior and focus on the stable regime"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the constant \u0394M_TMA/MCPC ratio indicate?",
+                "answer_type": "Factoid",
+                "answer": "A constant ratio of ~1.8 indicates stable reaction stoichiometry throughout the ALE process."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The data points form a perfectly horizontal line (green diamonds). If the surface were becoming progressively rougher (increasing surface area) during the etch, would you expect this ratio to remain constant? Why or why not?",
+                "answer_type": "Factoid",
+                "answer": "Roughness changes usually alter surface site density."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is used to define the stoichiometry of the Al2O3 ALE reactions?",
+                "answer_type": "Paragraph",
+                "answer": "The \u0394MTMA/MCPC ratio shows a steady-state value of 1.8 after the first three ALE cycles. The \u0394MTMA/MCPC ratio will be employed to define the stoichiometry of the Al2O3 ALE reactions"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the value of MCPC?",
+                "answer_type": "Factoid",
+                "answer": "After a short nucleation period,  MCPC attains a steady state value of \u221215.9 ng/(cm2 cycle)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which cycles are clear outliers?",
+                "answer_type": "Factoid",
+                "answer": "First two cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the ALE process appear to be in steady state between cycles 40 and 80?",
+                "answer_type": "Yes/No",
+                "answer": "Yes."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the ratio \u0394M_TMA / MCPC in panel (b) show a strong upward or downward trend?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does \u0394MTMA/MCPC ratio change over the number of ALE cycles?",
+                "answer_type": "List",
+                "answer": "First three cycles \u2192 \u0394MTMA/MCPC increases, After three cycles \u2192 ratio becomes steady"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does a stable MCPC value indicate about the ALE reaction?",
+                "answer_type": "Factoid",
+                "answer": "A constant MCPC shows that the mass change per cycle is reproducible and self-limiting."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the \u0394MTMA/MCPC ratio important for evaluating the Al\u2082O\u2083 ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The \u0394MTMA/MCPC ratio provides a measure of the relative mass contribution from TMA during each cycle. By monitoring this ratio, researchers can define the stoichiometry of the ALE reactions and verify that the process remains consistent across cycles. A stable ratio ensures predictable etching behavior and allows optimization of process parameters for precise Al\u2082O\u2083 removal."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the MCPC's behavior change with the number of cycles?",
+                "answer_type": "Factoid",
+                "answer": "The mass change per cycle remains relatively constant throughout the number of cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which reactant  has the greatest influence on the MCPC?",
+                "answer_type": "Factoid",
+                "answer": "As we can see in the figure, the difference between the mass change after HF exposure and the mass change after TMA exposure leads to the MCPC being closest to the TMA mass change values, meaning that TMA exposure has the greatest impact on the mass change per cycle."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why are the TMA values negative?",
+                "answer_type": "Factoid",
+                "answer": "This means that the value of the last cycle is more negative than that of the previous one. For this reason, the difference between the two is still negative."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "After 100 cycles, how much material mass is removed?",
+                "answer_type": "Factoid",
+                "answer": "Around 180 ng/cm\u00b2 is removed."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the MCPC calculated?",
+                "answer_type": "Paragraph",
+                "answer": "The MCPC is calculated by adding both the \u0394M's of the TMA and HF subcycles together."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do \u0394M_HF, \u0394M_TMA, and MCPC each represent during one ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "\u0394M_HF is the mass change measured after the HF half-reaction. \u0394M_TMA is the mass change measured after the TMA half-reaction. MCPC is the net mass change over a full ALE cycle, reflecting the combined outcome of both steps."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which quantity is most stable across 0\u2013100 cycles, and which shows the largest deviation?",
+                "answer_type": "Paragraph",
+                "answer": "-Most stable: \u0394M_HF, which stays near ~15 ng/cm\u00b2 after the initial cycle\n-Also largely stable: \u0394M_TMA around \u221230 ng/cm\u00b2\n-Largest deviation: MCPC, which shows a deeper negative point near ~80 cycles"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why do the first few cycles show different behavior than steady-state?",
+                "answer_type": "Factoid",
+                "answer": "The first cycles establish the initial AlF\u2083 surface layer on the hydroxylated Al\u2082O\u2083 substrate (nucleation period)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the three data series in panel (a) represent?",
+                "answer_type": "Paragraph",
+                "answer": "\u0394M_TMA (blue): mass change after TMA exposure; \u0394M_HF (red): mass change after HF exposure; MCPC (black): total mass change per cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does this data support reproducible atomic layer etching?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. The constant values over 100 cycles demonstrate highly reproducible, steady-state etching behavior."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Describe the sequence of steps in one Al\u2082O\u2083 ALE cycle as inferred from the mass change data. Explain the purpose of measuring mass change after each half-cycle.",
+                "answer_type": "List",
+                "answer": "1.  HF Exposure: Fluorinates the Al\u2082O\u2083 surface, forming a non-volatile AlF\u2083-like layer (mass gain).\n\n2.  Purge: Removes excess HF and byproducts.\n\n3.  TMA Exposure: Performs ligand-exchange, converting the AlF\u2083 layer to volatile species that desorb (mass loss).\n\n4.  Purge: Clears volatile etch products and residual TMA.\nMeasuring mass change after each half-cycle with a quartz crystal microbalance (QCM) allows direct, real-time monitoring of the fluorination and ligand-exchange reactions. This confirms each step is self-limiting and enables precise control over the etch amount per cycle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the ALE process stability for Al\u2082O\u2083 at 300\u00b0C versus a hypothetical process at a lower temperature (e.g., 250\u00b0C). Under a constraint of needing a consistent etch rate over many cycles, which temperature is preferable and why?",
+                "answer_type": "Paragraph",
+                "answer": "The process at 300\u00b0C is preferable for consistent etch rate. At lower temperatures, the reaction kinetics are slower, potentially leading to incomplete reactions and longer transients before stabilization. The 300\u00b0C data shows stable \u0394M_TMA and \u0394M_HF values after few cycles, indicating rapid achievement of steady-state surface conditions, which ensures a reproducible etch rate critical for multi-cycle etching."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Given the data showing stable \u0394M(TMA) and \u0394M(HF) values after several cycles, what does this imply for the suitability of this ALE process for etching a 10 nm thick Al\u2082O\u2083 film in a high-aspect-ratio trench? Justify your answer.",
+                "answer_type": "Paragraph",
+                "answer": "The stable mass changes imply a highly suitable process. The consistent, self-limiting half-reactions guarantee uniform etching per cycle, enabling precise depth control (critical for the 10 nm target). Furthermore, the self-limiting nature ensures perfect conformality in high-aspect-ratio trenches, as reactions proceed equally on all surfaces, preventing lateral etching or bowing."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Are the mass changes after TMA exposure and HF exposure constant?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the MCPC defined?",
+                "answer_type": "Factoid",
+                "answer": "MCPC is defined by mass change after TMA and HF exposure. MCPC = \u0394MTMA + \u0394MHF."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is mass change after HF exposure?",
+                "answer_type": "Factoid",
+                "answer": "13 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the mass change after TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "-29 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the mass change per cycle (MCPC)?",
+                "answer_type": "Factoid",
+                "answer": "16 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What information can be gained from the ratio of mass change after TMA exposure (\u0394M<sub>TMA</sub>) to MCPC?",
+                "answer_type": "Factoid",
+                "answer": "According to the authors, this ratio can be used to gain information about the stoichiometry  of the ALE reactions that occur on the Al2O3 substrate."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which step produces the larger mass change?",
+                "answer_type": "Factoid",
+                "answer": "TMA exposure."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What do the values of  \u0394M<sub>TMA</sub> and \u0394M<sub>HF</sub> imply about what each reactant is doing during the ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "A positive \u0394M<sub>HF</sub> means the HF step increases the surface mass, consisting with fluorinating the surface. A negative \u0394M<sub>TMA</sub> means the TMA step decreases the surface mass, indicating it removes material by converting the surface species into volatile products that leave the surface. Overall, HF builds a fluorinated layer, and TMA strips it."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what temperature were the measurements collected?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do \u0394MHF, \u0394MTMA, and MCPC change over cycle number",
+                "answer_type": "Paragraph",
+                "answer": "All three remain relatively steady throughout the experiment. \u0394M_HF stays slightly positive and \u0394M_TMA remains slightly negative with only small drifts, while MCPC stays near a low positive value. The trends suggest that the etching mechanism does not significantly change over time."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which quantities are plotted",
+                "answer_type": "List",
+                "answer": "\u0394M_HF, \u0394M_TMA,  MCPC."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do the mass changes (\u0394MTMA and \u0394MHF) reach a steady-state value during the ALE cycles at 300\u202f\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, the figure shows that after an initial nucleation period, both \u0394MTMA and \u0394MHF become very constant, indicating that the ALE process has reached a steady state. This steady behavior demonstrates the self-limiting nature of the sequential TMA and HF reactions."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 1,
+            "width": 670,
+            "height": 300
+        },
+        "b": {
+            "x": 0,
+            "y": 311,
+            "width": 672,
+            "height": 377
+        }
+    }
+}

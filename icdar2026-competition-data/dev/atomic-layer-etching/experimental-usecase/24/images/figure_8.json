@@ -1,0 +1,275 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_8",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The multiple line chart shows how \u0394M_TMA and \u0394M_HF vary with temperature. As temperature increases, \u0394M_TMA becomes more negative, indicating greater mass loss during TMA exposure, while \u0394M_HF increases, indicating greater mass gain during HF exposure.",
+        "b": "The line chart shows MCPC as a function of temperature. MCPC decreases steadily with increasing temperature, indicating a larger net mass loss per cycle at higher temperatures."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | \u0394M_TMA (ng/cm\u00b2\u00b7cycle) | \u0394M_HF (ng/cm\u00b2\u00b7cycle) |\n|------------------|------------------------|-----------------------|\n| 250              | ~-15                   | ~5                    |\n| 275              | ~-20                   | ~10                   |\n| 300              | ~-30                   | ~15                   |\n| 325              | ~-40                   | ~20                   |",
+        "b": "| Temperature (\u00b0C) | MCPC (ng/cm\u00b2\u00b7cycle) |\n|------------------|---------------------|\n| 250              | ~-10                |\n| 275              | ~-15                |\n| 300              | ~-20                |\n| 325              | ~-25                |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the mass change per cycle remain constant over time?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which temperature are the values of mass change per cycle lowest?",
+                "answer_type": "Factoid",
+                "answer": "250 \u00b0C"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which temperature exhibits lower values of mass change per cycle?",
+                "answer_type": "Factoid",
+                "answer": "TMA"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Is it a given that a higher etch rate is achieved for an even higher temperature?",
+                "answer_type": "Paragraph",
+                "answer": "No, this is not given as at a certain point desorption can have a roll. Thereby eliminating the ALE mechanism."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "If a MCPC of -15 ng/cm^2 is desired, which process temperature should be chosen?",
+                "answer_type": "Factoid",
+                "answer": "b\tFor this MCPC 300 degrees celcius should be chosen as temperature."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does a more negative MCPC indicate in this figure?",
+                "answer_type": "Factoid",
+                "answer": "It indicates a larger net mass loss per ALE cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Given the strong temperature dependence of MCPC shown in panel (b), why is temperature control critical for this ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "Since the etch rate per cycle (MCPC) changes significantly with temperature, small variations in temperature across a wafer would lead to different amounts of material being removed. Therefore, precise and uniform temperature control is essential to achieve uniform etching depths and consistent device performance across the entire substrate."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Evaluate the MCPC at 250\u00b0C in label (b). The value is close to zero. If a user restricts the process to 250\u00b0C to prevent thermal damage to a sensitive substrate, what is the primary operational penalty?",
+                "answer_type": "Paragraph",
+                "answer": "At 250\u00b0C, the MCPC is nearly zero, meaning the mass added by HF is almost exactly canceled by the mass removed by TMA, resulting in no net etch. The penalty is that the process effectively stops working as an etch; to remove any significant thickness, the cycle count would need to be prohibitively high, or the process would simply stagnate."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "The net MCPC shows only a slight decrease with rising temperature despite larger individual half-cycle changes. What does this imply for setting the temperature in a production ALE tool?",
+                "answer_type": "Paragraph",
+                "answer": "This implies the process is robust across this temperature range, with the opposing half-cycles compensating. A production tool can select a temperature based on throughput (higher T) or precision (lower T) without drastically altering the net etch depth per cycle, simplifying process window definition."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the behaviour in graph a relate to graph b?",
+                "answer_type": "Paragraph",
+                "answer": "As \u0394MTMA mass losses increase  at higher temperatures compared to \u0394MHF and the MCPC also decreases with increase in temperature, it can be concluded that the temperature dependence of \u0394MTMA observed in graph a dominates the temperature dependence observed in the MCPC shown in graph b"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "From graph a and graph b, can the \u0394MTMA/MCPC ratio be computed?",
+                "answer_type": "Paragraph",
+                "answer": "The \u0394MTMA/MCPC ratio for different temperatures are as follows\n\n1.  250  \u00b0C, 2.55\n2.  275 \u00b0C, 1.94\n3.  300 \u00b0C, 1.83\n4.  325 \u00b0C, 1.81"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the overall effect of temperature on the MCPC?",
+                "answer_type": "Factoid",
+                "answer": "As the change in mass loss during TMA exposure is larger than the mass gain during HF exposure, the MCPC decreases with temperature."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the dominating factor for MCPC?",
+                "answer_type": "Factoid",
+                "answer": "The temperature dependence of the mass change during TMA exposure."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the process deposition-dominated at  300\u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the MCPC value at 325\u00b0C  imply about etch vs deposition balance?",
+                "answer_type": "Paragraph",
+                "answer": "At  325 \u00b0C, the MCPC point is below zero, which means the net mass change per cycle is negative. That implies the process is etch-dominated at this temperature.  In other words, deposition during the HF half-cycle does not fully compensate the loss from the TMA half-cycle, so you get net etching."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "To minimize material loss per cycle, which temperature from the range 250 - 325 \u00b0C should be chosen?",
+                "answer_type": "Factoid",
+                "answer": "250 \u00b0C"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does MCPC decrease as temperature increases?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What trend is observed when comparing MCPC values across the full temperature range for Al\u2082O\u2083 ALE?",
+                "answer_type": "List",
+                "answer": "Low temperature \u2192 higher MCPC, Mid temperature \u2192 moderate MCPC, High temperature \u2192 lowest MCPC"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does temperature influence the relationship between surface reaction behavior and the resulting mass-change properties in Al\u2082O\u2083 ALE?",
+                "answer_type": "Factoid",
+                "answer": "Higher temperature reduces surface reaction uptake and lowers mass change."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on the temperature-dependent trends in \u0394M and MCPC, would higher temperatures be suitable for achieving faster Al\u2082O\u2083 removal in ALE?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Application/Performance",
+                "question": "What performance does the mass change after TAM exhibit as a function of the temperature?",
+                "answer_type": "Factoid",
+                "answer": "Mass loss increases progressively with temperature after TMA exposure."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which subcycle is more temperature dependent?",
+                "answer_type": "Paragraph",
+                "answer": "a\tThe TMA dose seems to be more temperature dependent as the curve has a higher absolute slope."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Based on this figure, what is the MCPC at 325 degrees celcius?",
+                "answer_type": "Paragraph",
+                "answer": "The MCPC can be caluclated by adding both the delta M of TMA and HF, which gives an MCPC of -20 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the \u0394M_TMA and \u0394M_HF trends compare across temperature?",
+                "answer_type": "Paragraph",
+                "answer": "\u0394M_TMA and \u0394M_HF change in opposite directions with increasing temperature. \u0394M_TMA becomes more negative, indicating greater mass loss during the TMA step, while \u0394M_HF becomes more positive, indicating greater mass gain during the HF step. Together, these opposing trends influence the net mass change per cycle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which temperature yields the largest \u0394M_HF value?",
+                "answer_type": "Factoid",
+                "answer": "325 \u00b0C yields the largest \u0394M_HF value."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the etch rates change across the temperature range studied?",
+                "answer_type": "Paragraph",
+                "answer": "250\u00b0C: 0.14 \u00c5/cycle; 275\u00b0C: 0.34 \u00c5/cycle; 300\u00b0C: 0.51 \u00c5/cycle; 325\u00b0C: 0.75 \u00c5/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does higher temperature lead to larger etch rates?",
+                "answer_type": "Paragraph",
+                "answer": "Higher temperatures enable TMA to remove a larger fraction of the AlF\u2083 surface layer during the ligand-exchange reaction. At 250\u00b0C, only ~19% of the AlF\u2083 layer is removed, while at 325\u00b0C, ~74% is removed. When more AlF\u2083 is removed, more fresh Al\u2082O\u2083 is exposed for fluorination in the subsequent HF step, leading to greater net material removal per cycle."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why do both |\u0394M_TMA| and \u0394M_HF increase together with temperature?",
+                "answer_type": "Factoid",
+                "answer": "Greater AlF\u2083 removal by TMA exposes more Al\u2082O\u2083 surface, which allows more fluorination (and thus larger mass gain) during the subsequent HF exposure."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What practical advantage does the temperature dependence offer for Al\u2082O\u2083 ALE?",
+                "answer_type": "Factoid",
+                "answer": "It allows the etch rate to be tuned by adjusting process temperature, providing flexibility for different application requirements."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Analyze the sign of the mass change for each precursor in panel (a). HF shows positive values (\u0394M(HF) > 0) while TMA shows negative values (\u0394M(TMA) < 0). Physically, what distinct role does each precursor play in the layer-by-layer removal mechanism?",
+                "answer_type": "Paragraph",
+                "answer": "HF acts as the surface modification agent, reacting with the oxide to form a solid fluoride layer (adding mass). TMA acts as the removal agent, reacting with that fluoride layer to form volatile species that leave the surface (removing mass). The cycle works because the mass removed by TMA is greater than the mass added by HF."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Observe the trend in this figure label (a). As temperature increases, the mass gain from HF (\u0394M(HF)) increases significantly. How does this 'thicker' fluorinated layer formed at 325\u00b0C directly influence the magnitude of the subsequent TMA mass loss?",
+                "answer_type": "Paragraph",
+                "answer": "The increase in (\u0394M(HF)  implies that at higher temperatures, fluorine penetrates deeper or saturates the surface more densely. This creates a larger reservoir of Al-F bonds available for the ligand-exchange reaction. Consequently, the TMA step consumes this thicker layer, resulting in a proportionally larger negative mass loss (\u0394M(TMA))."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Where all ALE reactions performed with same sequence for graph a and b?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. Followed same  reaction sequence of 2\u221230\u22121\u221230 on initial Al2O3 substrates."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the mass change after TMA and HF exposures?",
+                "answer_type": "Factoid",
+                "answer": "\u0394MTMA shows progressively larger mass losses at higher temperatures. In contrast, \u0394MHF reveals progressively larger mass gains at higher temperatures."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass change for the TMA exposure change with temperature?",
+                "answer_type": "Factoid",
+                "answer": "As the temperature increases, the mass change during TMA exposure keeps decreasing linearly."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass change for the HF exposure change with temperature?",
+                "answer_type": "Factoid",
+                "answer": "As temperature increases, the mass change during HF exposure keeps increasing linearly."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which half-cycle contributes more to the net mass change at 275\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "TMA half-cycle (|\u221240| > |+15|)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do \u0394M_TMA and \u0394M_HF change with increasing temperature?",
+                "answer_type": "Paragraph",
+                "answer": "\u0394M_TMA becomes increasingly negative with temperature, indicating greater mass loss during TMA exposure, while \u0394M_HF increases, indicating greater mass gain during HF exposure. This suggests that both half-reactions become more pronounced at higher temperatures."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the x-axis variable in both panels?",
+                "answer_type": "Factoid",
+                "answer": "Temperature."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which temperatures are shown in the figure?",
+                "answer_type": "List",
+                "answer": "250 \u00b0C, 275 \u00b0C, 300 \u00b0C, 325 \u00b0C"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does increasing temperature affect the mass change during Al\u2082O\u2083 atomic layer etching (ALE) in both TMA and HF steps?",
+                "answer_type": "Paragraph",
+                "answer": "As the temperature increases, both \u0394MTMA and \u0394MHF drop steadily, which shows that each reaction step contributes less mass compared with lower temperatures. This trend suggests reduced reaction uptake at elevated temperatures, which is typical when surface adsorption becomes less favorable in ALE conditions."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 665,
+            "height": 299
+        },
+        "b": {
+            "x": 0,
+            "y": 303,
+            "width": 666,
+            "height": 375
+        }
+    }
+}

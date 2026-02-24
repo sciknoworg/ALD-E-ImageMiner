@@ -1,0 +1,264 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_2",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+            "a": "This QCM enlargement shows the stepwise mass changes during individual TMA and HF exposures in the steady-state Al\u2082O\u2083 ALE regime at 300\u00b0C. Each TMA exposure causes a mass decrease (\u0394M_TMA = \u221229 ng/cm\u00b2) as AlF\u2083 is removed via ligand-exchange. Each HF exposure causes a mass increase (\u0394M_HF = +13 ng/cm\u00b2) as Al\u2082O\u2083 is fluorinated to form a new AlF\u2083 layer. The net mass change per cycle (MCPC = \u0394M_TMA + \u0394M_HF) is \u221215.9 ng/(cm\u00b2 cycle), corresponding to 0.51 \u00c5/cycle etch rate."
+    },
+    "data_extraction": {
+            "a": "| Time (s) | Mass change (ng/cm\u00b2) | Precursor | Stage         |\n|--------|--------------------|-----|--------------------------|\n| 6120     | -1440                | \u2013   | Start of shown segment   |\n| 6130     | -1455                | TMA | Mass decrease (\u0394M_TMA)   |\n| 6160     | -1465                | TMA | End of TMA segment       |\n| 6185     | -1455                | HF  | Mass increase (\u0394M_HF)    |\n| 6210     | -1485                | HF  | End of HF segment        |\n| 6240     | -1475                | TMA | TMA pulse   |\n| 6260     | -1510                | HF  | HF pulse     |\n| 6290     | -1490                | HF  | End of last HF segment   |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What describes the figure presented?",
+                "answer_type": "Factoid",
+                "answer": "The figure shows a zoom-in view of the entire mass change graph. Here, it is possible to observe the mass change after TMA and HF dosing at 300 \u00b0C on Al2O3, with decreasing values over the time and slight mass gains after the HF dose."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does mass change over the time?",
+                "answer_type": "Factoid",
+                "answer": "The figure shows a slight decrease as time increases. After the TMA dose, a mass loss can be observed. Subsequently, the HF dose leads to mass gain."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which reactant causes a loss of mass over time?",
+                "answer_type": "Factoid",
+                "answer": "TMA"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why does TMA produce a loss of mass over time?",
+                "answer_type": "Factoid",
+                "answer": "TMA can etch the fluorinated Al2O3 films, removing the AlF3 from the surface. This explains why decreases are observed after TMA dose."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How much is the average mass change per cycle?",
+                "answer_type": "Factoid",
+                "answer": "The MCPC is around -20 ng/cm\u00b2."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is there a mass increase after an HF exposure?",
+                "answer_type": "Paragraph",
+                "answer": "CH3 has an atomic mass of 15 amu, F has an atomic mass of 19 amuu. So the replacement of a singel CH3 group with a F atom increases the mass with 4 amu."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How long does a single cycle take?",
+                "answer_type": "Factoid",
+                "answer": "Around 65 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the effect every cycle the same?",
+                "answer_type": "Paragraph",
+                "answer": "Based on the few shown cycles it seems that the mass changes are constant for the different cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to the mass signal during the TMA step in this zoomed region?",
+                "answer_type": "Factoid",
+                "answer": "The mass increases (becomes less negative), appearing as an upward step corresponding to \u0394M_TMA."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to the mass signal during the HF step in this zoomed region?",
+                "answer_type": "Factoid",
+                "answer": "The mass decreases (becomes more negative), appearing as a downward step associated with \u0394M_HF."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which half-cycle produces the larger step magnitude in this trace, TMA or HF?",
+                "answer_type": "Paragraph",
+                "answer": "The HF step produces the larger step magnitude, reaching a lower mass level of roughly \u22121510 ng/cm\u00b2. The TMA step shows a smaller upward recovery to around \u22121470 ng/cm\u00b2. Visually, the HF-related drop is sharper and deeper than the TMA-related gain in this zoomed window."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which practical ALE metrics can be estimated from this zoomed mass\u2013time trace?",
+                "answer_type": "Paragraph",
+                "answer": "-\u0394M_TMA from the upward mass step during TMA.\n-\u0394M_HF from the downward mass step during HF.\n-MCPC from the net mass change across one full cycle.\n-Presence of plateaus indicating stepwise behavior."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do the labels \u0394M_TMA and \u0394M_HF represent in this figure?",
+                "answer_type": "Factoid",
+                "answer": "\u0394M_TMA is the mass change after TMA exposure (\u221229 ng/cm\u00b2) and \u0394M_HF is the mass change after HF exposure (+13 ng/cm\u00b2)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does TMA exposure cause mass loss while HF exposure causes mass gain?",
+                "answer_type": "Paragraph",
+                "answer": "TMA causes mass loss because it removes the AlF\u2083 surface layer through ligand-exchange, producing volatile AlF(CH\u2083)\u2082 that desorbs. HF causes mass gain because fluorination converts lighter Al\u2082O\u2083 (102 amu) into heavier AlF\u2083 (168 amu for 2AlF\u2083), a 65% mass increase for the converted layer."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How is MCPC calculated from the individual mass changes?",
+                "answer_type": "Factoid",
+                "answer": "MCPC = \u0394M_TMA + \u0394M_HF = (\u221229) + (+13) = \u221215.9 ng/(cm\u00b2 cycle)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the consistent step height between cycles indicate about the ALE process?",
+                "answer_type": "Factoid",
+                "answer": "It indicates highly reproducible, steady-state etching with constant material removal per cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "In a standard ALD (Deposition) process, a TMA pulse typically results in a mass gain due to adsorption. Here, the TMA pulse causes a mass decrease. What specific chemical event explains this reversal in behavior?",
+                "answer_type": "Factoid",
+                "answer": "The formation of volatile byproducts. \nIn ALD, TMA adsorbs onto the surface and remains there, leading to a net mass gain. In contrast, during this ALE process, TMA reacts with the fluorinated surface (AlF\u2083) to form volatile species such as dimethylaluminum fluoride, which desorb from the surface. This desorption removes surface atoms, resulting in the observed mass loss (\u0394M_TMA)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast this thermal ALE process with a purely thermal etch using only HF gas. Which process provides true layer-by-layer control, and what is the key limitation of the HF-only method?",
+                "answer_type": "Paragraph",
+                "answer": "The HF/TMA ALE cycle provides true layer-by-layer control, as the mass drop is discrete and self-limiting. A purely thermal HF etch would cause continuous, non-self-limiting mass loss, leading to poor depth control and potential damage from excessive etching, as it lacks the crucial TMA step to regulate the reaction."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the immediate, sharp mass drop during the TMA pulse indicate about the kinetics and mechanism of the etching reaction?",
+                "answer_type": "Paragraph",
+                "answer": "The immediate, sharp drop indicates a fast, self-limiting surface reaction. The mass loss is not gradual, confirming that TMA rapidly reacts with the pre-formed AlF\u2083 layer in a ligand-exchange process that is limited only by the number of AlF\u2083 sites created in the previous HF step."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The QCM shows a repeatable, discrete mass loss per cycle. Does this guarantee the ALE process will etch a 10 nm Al\u2082O\u2083 film with perfect uniformity across a 300 mm wafer?",
+                "answer_type": "Yes/No",
+                "answer": "No.\nWhile QCM confirms self-limiting chemistry at the sensor spot, perfect wafer-scale uniformity depends on gas flow dynamics, temperature uniformity, and precursor delivery across the entire reactor chamber, which this single-point measurement cannot verify."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Is the enlarged mass change versus time necessary?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. It helps understand the pronouned mass changes after reactant exposure."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does TMA exposure indicate?",
+                "answer_type": "Factoid",
+                "answer": "The TMA exposure results in a mass decrease. This behavior indicates TMA can remove the AlF3 surface layer on the Al2O3 film."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the change in mass after reactant exposure.",
+                "answer_type": "Paragraph",
+                "answer": "1. A mass loss of \u0394MTMA = \u221229 ng/cm2 was observed after 2.0 s of TMA exposure.\n2. A mass gain of \u0394MHF = 13 ng/cm2 after 1.0 s of HF exposure."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does the mass gain indicate?",
+                "answer_type": "Paragraph",
+                "answer": "This mass gain is consistent with the fluorination of Al2O3 to form an AlF3 surface layer. This AlF3 surface layer is then ready for the ligand-exchange reaction during the next TMA exposure."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the effect of the TMA and HF exposures on the mass change?",
+                "answer_type": "Factoid",
+                "answer": "Exposure to TMA causes the mass change to decrease by 29 ng/cm^2, whilst exposure to HF causes the mass change to increase by 13 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the implication of the mass loss after TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "That TMA can successfully remove the AlF3 surface layer on Al2O3."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the overall mass change consistent between ALE cycles?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, each ALE cycle results in a net loss of mass and the mass loss per ALE cycle is constant."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the mass change after one ALE cycle?",
+                "answer_type": "Factoid",
+                "answer": "-16 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How many cycles are shown on the figure?",
+                "answer_type": "Factoid",
+                "answer": "3 cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the approximate mass change per cycle for the second cycle shown in the graph?",
+                "answer_type": "Factoid",
+                "answer": "MCPC = -1474 - (-1457) = - 17 (ng/cm\u00b2\u22c5 cycle)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why do the mass changes are followed by plateaus?",
+                "answer_type": "Paragraph",
+                "answer": "The plateaus occur because after each TMA or HF pulse, the surface reactions quickly reach completion, so the mass stops changing. During the purge periods, excess precursor and volatile byproducts are flushed out without further reaction on the surface, which also keeps the signal flat. The graph therefore shows step changes during dosing and stable plateaus once the chamber returns to a reactant-free state."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the order of the process steps within one cycle?",
+                "answer_type": "List",
+                "answer": "TMA exposure, Purge, HF exposure, Purge"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the mass changes caused by TMA and HF exposures differ in this QCM trace?",
+                "answer_type": "Paragraph",
+                "answer": "The plot shows that each HF pulse produces a larger mass decrease than each TMA pulse. TMA steps create small, shallow decreases, while HF steps cause deeper drops. This difference in step magnitude reflects the stronger etching action of HF compared to the ligand-exchange removal associated with TMA."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What temperature was the experiment conducted at?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the mass trace ever increase during the sequence?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which labeled features in the plot denote the separate contributions of TMA and HF?",
+                "answer_type": "List",
+                "answer": "\u0394M_TMA, \u0394M_HF, TMA, HF arrows"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Do the mass changes during TMA and HF exposures follow opposite trends?",
+                "answer_type": "Factoid",
+                "answer": "TMA leads to mass loss, while HF leads to mass gain."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Is the observed mass gain during HF exposure linked to the formation of an AlF\u2083 surface layer?",
+                "answer_type": "List",
+                "answer": "HF reacts with Al\u2082O\u2083, AlF\u2083 forms on the surface, This structural change results in mass increase"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Do these alternating mass changes indicate that the ALE process is functioning properly at 300\u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, the figure shows a stable and repeatable pattern of mass loss followed by mass gain, demonstrating that the etching process is operating as expected. The consistency of these responses across exposures confirms that both half-reactions are self-limiting and that the ALE mechanism is performing effectively at 300\u00b0C."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does Figure 2 show distinct mass changes for each step in the TMA\u2013HF ALE cycle at 300\u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 669,
+            "height": 508
+        }
+    }
+}

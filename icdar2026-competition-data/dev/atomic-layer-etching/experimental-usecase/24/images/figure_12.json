@@ -1,0 +1,264 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_12",
+    "classification": {
+        "a": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "The FTIR spectra compare TMA and HF exposures on Al2O3 at 300 \u00b0C in the 4000\u20132500 cm^-1 region. The TMA spectrum shows a positive CH3 stretching feature near 2950 cm^-1, while the HF spectrum shows negative absorbance changes at this position. HF also produces a broader negative band near 3200 cm^-1, whereas the TMA trace remains close to baseline there. These differences show opposite surface reactions during the two exposures."
+    },
+    "data_extraction": {
+        "a": "| Wavenumber (cm\u207b\u00b9) | Absorbance | Condition |\n| ----------------- | ---------- | --------- |\n|      ~2950        |  ~+0.010   |    TMA    |\n|      ~2950        |  ~-0.005   |    HF     |\n|      ~3200        |  ~+0.002   |    TMA    |\n|      ~3200        |  ~-0.010   |    HF     |\n|      ~3600        |  ~0.000    |    TMA    |\n|      ~3600        |  ~-0.003   |    HF     |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What temperature is used in the ALE process?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which materials exhibit positive absorbance values?",
+                "answer_type": "Factoid",
+                "answer": "TMA"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which material supplies the surface with CH3 groups?",
+                "answer_type": "Factoid",
+                "answer": "TMA, based on the positive absorbance value."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What do positive and negative absorbance values represent?",
+                "answer_type": "Factoid",
+                "answer": "In this case, positive values represent groups being supplied to the surface. Conversely, negative values show groups being lost from the surface."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is all the formed CH3 during the TMA step removed upon HF exposure?",
+                "answer_type": "Paragraph",
+                "answer": "All the CH3 seems to be removed as the peaks have similar height."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is HF adsorbed on the surface based on the given IR spectra?",
+                "answer_type": "Paragraph",
+                "answer": "No, there is no HF formed as there is no positive peak visible in the HF IR active region."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How many vibrational states of CH3 are there in the given wavenumber range?",
+                "answer_type": "Paragraph",
+                "answer": "At least three can be observed. The main peak consists of two sharp peaks close together, with a shoulder to the right."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Can any peaks be observed between 4000 and 3250 cm^-1 be observed?",
+                "answer_type": "Paragraph",
+                "answer": "No, in general there must be a certain signal to noise ratio to be able to identify actual peaks. In this region, the signal seems to be fully comprised of noise."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the sign flip in the 2950\u20132900 cm\u207b\u00b9 region between the TMA and HF steps indicate about surface CH\u2083/C\u2013H species during one ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "In FTIR difference spectra, a positive signal indicates formation of a vibrational species relative to the reference state, while a negative signal indicates its removal. The positive band at ~2950\u20132900 cm\u207b\u00b9 after TMA shows that CH\u2083/C\u2013H-containing surface species are formed during the TMA half-cycle. After HF, the same region becomes strongly negative, indicating that these species are consumed or removed. This sign inversion directly demonstrates cyclic surface termination changes that are characteristic of Al\u2082O\u2083 ALE."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which half-cycle produces the larger magnitude change in the CH stretching region, based on the curated data?",
+                "answer_type": "Factoid",
+                "answer": "a\tThe HF half-cycle produces the larger magnitude change (\u2248 \u22120.010) compared with the TMA half-cycle (\u2248 +0.007)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which spectral regions are most diagnostic for CH\u2083/C\u2013H species and for HF-related changes, and how do they respond in each half-cycle?",
+                "answer_type": "Paragraph",
+                "answer": "-CH\u2083/C\u2013H region (~2950\u20132900 cm\u207b\u00b9):\n1) After TMA: positive (\u2248 +0.0070)\n2) After HF: negative (\u2248 \u22120.0100)\n\n-Lower C\u2013H tail (~2750\u20132500 cm\u207b\u00b9):\n1) After TMA: small positive (\u2248 +0.0020)\n2) After HF: small negative (\u2248 \u22120.0030)\n\n-\u03bd(HF)-marked higher wavenumbers (~4000\u20133250 cm\u207b\u00b9):\n1) After TMA: ~0.0000 (near baseline)\n2) After HF: slightly negative (\u2248 \u22120.0015)"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How could these difference spectra be used as a simple in situ check of ALE process health?",
+                "answer_type": "Paragraph",
+                "answer": "A robust acceptance criterion is the behavior of the CH stretching region around 2950\u20132900 cm\u207b\u00b9. A healthy process should show a reproducible positive excursion after TMA and a reproducible negative excursion after HF. Loss of the positive CH signal after TMA would suggest incomplete methylation, while failure of the signal to invert after HF would indicate insufficient HF reaction or purge issues. Monitoring both sign and magnitude provides a simple, chemistry-specific indicator of cycle completeness."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the mechanistic significance of the absence of HF* surface species at 300\u00b0C during Al\u2082O\u2083 ALE?",
+                "answer_type": "Paragraph",
+                "answer": "The absence of HF* surface species at 300\u00b0C is critical for enabling etching rather than deposition. At lower temperatures, HF* species remain adsorbed on the surface and react with incoming TMA to form AlF\u2083, leading to AlF\u2083 ALD growth. At 300\u00b0C, HF* species desorb from the surface, which allows TMA to instead accept fluorine directly from the underlying AlF\u2083 layer through the ligand-exchange transmetalation reaction, producing volatile AlF(CH\u2083)\u2082 etch products. Temperature therefore determines whether the TMA/HF chemistry leads to AlF\u2083 ALD or Al\u2082O\u2083 ALE."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the C\u2013H stretching vibration intensities change between TMA and HF exposures?",
+                "answer_type": "Factoid",
+                "answer": "The C\u2013H stretching peaks at ~2900 and ~2950 cm\u207b\u00b9 show positive absorbance (gain) after TMA exposure and negative absorbance (complete loss) after HF exposure."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What vibrational modes do the peaks at ~2900 cm\u207b\u00b9 and ~2950 cm\u207b\u00b9 correspond to?",
+                "answer_type": "Factoid",
+                "answer": "These peaks correspond to the symmetric (~2900 cm\u207b\u00b9) and asymmetric (~2950 cm\u207b\u00b9) C\u2013H stretching vibrations of AlCH\u2083* surface species."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How does this FTIR data in the 2500\u20134000 cm\u207b\u00b9 region complement the 800\u20131300 cm\u207b\u00b9 data for understanding Al\u2082O\u2083 ALE?",
+                "answer_type": "Paragraph",
+                "answer": "The two spectral regions provide complementary information about different aspects of the ALE surface chemistry. The 800\u20131300 cm\u207b\u00b9 region monitors the Al\u2013O and Al\u2013F stretching vibrations, revealing the removal of the AlF\u2083 surface layer during TMA exposure and fluorination of Al\u2082O\u2083 during HF exposure. The 2500\u20134000 cm\u207b\u00b9 region tracks the C\u2013H stretching vibrations, confirming the cyclic addition and removal of methyl groups during TMA and HF half-cycles. Additionally, the higher wavenumber region allows detection of any HF* surface intermediates; their absence at 300\u00b0C explains why etching occurs rather than AlF\u2083 deposition. Together, these data provide a complete picture of the surface species involved in each half-reaction."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "During in-situ FTIR monitoring of ALE, what specific surface change is measured immediately after the TMA exposure step in this spectral range?",
+                "answer_type": "Paragraph",
+                "answer": "The FTIR measures the appearance of new C\u2013H stretching vibrations (\u03bd\u2090\u209b,\u209b(CH\u2083)) from methyl groups deposited by TMA. This confirms the ligand-exchange reaction where TMA replaces surface fluorides with \u2013CH\u2083, a critical step in forming volatile etch products."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast using in-situ FTIR (as shown) with using Quartz Crystal Microbalance (QCM) for monitoring Al\u2082O\u2083 ALE. Which method provides direct chemical bonding information, and what is a limitation?",
+                "answer_type": "Paragraph",
+                "answer": "FTIR provides direct chemical bonding information, identifying specific surface species like Al\u2013CH\u2083 and adsorbed HF. A limitation is that it requires specialized transparent substrates or particles, whereas QCM works on any thin film but only measures mass change, not chemistry."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the presence of the \u03bd(HF) feature in the HF exposure spectrum indicate about the state of the HF reactant upon surface interaction?",
+                "answer_type": "Paragraph",
+                "answer": "The \u03bd(HF) feature indicates that molecular HF adsorbs onto the Al\u2082O\u2083 surface before dissociating. This adsorbed precursor state is essential for the subsequent fluorination reaction that converts surface Al\u2013O bonds to Al\u2013F bonds, enabling the etching mechanism."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The distinct, reversible spectral features for each half-cycle confirm self-limiting reactions. Does this guarantee that the ALE process will selectively remove Al\u2082O\u2083 without etching an underlying SiO\u2082 layer in a stack?",
+                "answer_type": "Yes/No",
+                "answer": "No, While the self-limiting mechanism is confirmed, selectivity depends on the relative reactivity of HF/TMA with Al\u2082O\u2083 versus SiO\u2082. The spectra alone don't prove selectivity; a separate experiment comparing etch rates on both materials is required to guarantee selective removal."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does observing the absorbance in the range of 2500 to 4000cm-1 provide more information about the ALE mechanism compared to 800 to 1300cm-1?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens after TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "After the TMA exposure,  an increase in absorbance is observed at \u223c2900 and 2950 cm\u22121 ."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What forms new species and what removes species?",
+                "answer_type": "Paragraph",
+                "answer": "After TMA exposure, n increase in absorbance is observed at \u223c2900 and 2950 cm\u22121, this absorbance gain is in accord with the formation of AlF2(CH3)* or \u2212OAl(CH3)2* species .  After the HF exposure, an absorbance decrease at \u223c2900 and \u223c2950 cm\u22121 is consistent with the removal of the previously added AlCH3* species"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does observing the IR absorbance at various spectra help with the understanding of the ALE mechanism?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which wavenumbers do the absorbance increases appear after the TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "At about 2900 and 2950 cm^-1."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which surface species are associated with the new absorbance bands observed after TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "AlCH3* surface species, consistent with the formation of AlF2(CH3)* or -OAl(CH3)2*."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What change occurs at 2900 and 2950 cm^-1 after HF exposure?",
+                "answer_type": "Factoid",
+                "answer": "The absorbance at those wavenumbers decreases, indicating the removal of AlCH3* surface species."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Are any vibrational features corresponding to HF* surface species observed between 3000 and 3675 cm^-1 at 300 \u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the role of HF based on the spectra?",
+                "answer_type": "Factoid",
+                "answer": "HF removes methyl (\u2013CH\u2083) species from the surface."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the role of TMA based on the spectra?",
+                "answer_type": "Factoid",
+                "answer": "TMA adds methyl (\u2013CH\u2083) groups to the surface"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Given that HF surface species are key intermediates for AlF\u2083 ALD, do these spectra at 300 \u00b0C indicate an ALD-like or ALE-like regime, and what specific spectral evidence supports your conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "The spectra at 300 \u00b0C point to an ALE-like regime rather than AlF\u2083 ALD. The spectra indicate no clear change in the \u03bd(HF) region. If HF surface species are required intermediates for ALD, then the lack of a clear HF-related band suggests those HF species are not persisting on the surface, and the ALD pathway is not favored at this temperature."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the CH\u2083 absorbance changes indicate whether CH\u2083 builds up over repeated cycles or is removed each cycle?",
+                "answer_type": "Factoid",
+                "answer": "CH\u2083 doesn't accumulate over repeated cycles, based on the magnitude of the absorbance during each half-cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "List three wavenumber regions where TMA and HF show different absorbance signs.",
+                "answer_type": "List",
+                "answer": "~2950cm^-1, ~3200cm^-1, ~3600cm^-1"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What temperature were the FTIR spectra collected at?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does HF introduce a detectable change in absorption near 3200 cm^-1",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the TMA and HF spectra differ around 2950 cm^-1?",
+                "answer_type": "Paragraph",
+                "answer": "The TMA spectrum shows a small positive peak at this position, consistent with CH3 stretching from methyl groups bonded to the surface. In contrast, the HF spectrum displays a negative feature at the same location, indicating removal or changeof these groups. This opposite behavior shows the different surface chemistry  caused by the two exposures."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the absorbance values at ~2900\u202fcm\u207b\u00b9 and ~2950\u202fcm\u207b\u00b9 change after HF exposure compared to TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "The absorbance at ~2900\u202fcm\u207b\u00b9 and ~2950\u202fcm\u207b\u00b9 decreases after HF exposure, indicating removal of AlCH\u2083* species."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which vibrational features in the 2500\u20134000\u202fcm\u207b\u00b9 region are relevant for monitoring surface changes during ALE?",
+                "answer_type": "List",
+                "answer": "Symmetric stretching of AlCH\u2083 (~2900\u202fcm\u207b\u00b9), Asymmetric stretching of AlCH\u2083 (~2950\u202fcm\u207b\u00b9), Absence of HF vibrational features between ~3000\u20133675\u202fcm\u207b\u00b9"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What do the changes observed in the 2500\u20134000\u202fcm\u207b\u00b9 difference spectra indicate about the effectiveness of the Al\u2082O\u2083 ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The increase in absorbance at ~2900 and 2950\u202fcm\u207b\u00b9 after TMA exposure and their subsequent removal after HF exposure demonstrate that the ALE process is effectively forming and removing AlCH\u2083* surface species. The absence of HF* features in this region indicates that at 300\u202f\u00b0C, HF desorbs efficiently, enabling TMA to react with the underlying AlF\u2083 layer and produce controlled etching of Al\u2082O\u2083. These trends confirm the self-limiting nature and effectiveness of the ALE process under the described conditions."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does TMA exposure lead to the formation of AlCH\u2083* species on the Al\u2082O\u2083 surface during ALE at 300\u202f\u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 655,
+            "height": 580
+        }
+    }
+}

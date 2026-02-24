@@ -1,0 +1,240 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/fig_7",
+    "classification": {
+        "a": "polar chart (rose chart)"
+    },
+    "summarization": {
+        "a": "This contour heatmap shows the Al\u2082O\u2083 etch rate distribution (nm/cycle) across the wafer in polar coordinates. The etch rate is highest at the wafer center (~0.139 nm/cycle) and decreases gradually toward the edge, reaching ~0.131\u20130.133 nm/cycle at a radius of ~3 cm. The distribution is largely concentric, with only weak azimuthal modulation visible as small lobes. Overall, the total radial variation is ~0.008 nm/cycle, indicating good etch uniformity."
+    },
+    "data_extraction": {
+        "a": "| Radius (cm) | Angle (\u00b0) | Etch rate (nm/cycle) |\n|-------------|-----------|----------------------|\n| 0.0 | 0   | ~0.139 |\n| 0.0 | 90  | ~0.139 |\n| 0.0 | 180 | ~0.139 |\n| 0.0 | 270 | ~0.139 |\n| 1.0 | 0   | ~0.137 |\n| 1.0 | 90  | ~0.136 |\n| 1.0 | 180 | ~0.136 |\n| 1.0 | 270 | ~0.137 |\n| 2.0 | 0   | ~0.135 |\n| 2.0 | 90  | ~0.134 |\n| 2.0 | 180 | ~0.134 |\n| 2.0 | 270 | ~0.135 |\n| 3.0 | 0   | ~0.132 |\n| 3.0 | 90  | ~0.132 |\n| 3.0 | 180 | ~0.132 |\n| 3.0 | 270 | ~0.132 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the etch rate shown in the figure measured?",
+                "answer_type": "Factoid",
+                "answer": "The distribution of the wafer rate is evaluated based on the radius of the wafer (with the center taken as the origin) and the polar angle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the largest etching are that can be achieved on this wafer?",
+                "answer_type": "Factoid",
+                "answer": "The center of the wafer"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Is the etch rate distributed uniformly across the wafer?",
+                "answer_type": "Factoid",
+                "answer": "No, the center of the wafer achieves higher etch rates compared to the edges. As the radius increases, the etch rate achieved decreases."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "It is desirable to have a decreasing etch rate as the wafer radius increases, as shown in the figure?",
+                "answer_type": "Factoid",
+                "answer": "For semiconductor development, it is ideal to achieve the greatest possible homogeneity across the wafer, unlike what is shown in the figure. Otherwise, there could be variations in the performance of the device."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the highest observed difference in etch rate on the wafer?",
+                "answer_type": "Factoid",
+                "answer": "The largest difference in etch rate is 0.008 nm/cycle"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What can be a reason for non-uniformity in processing?",
+                "answer_type": "Paragraph",
+                "answer": "An explanation for non-uniformity in ALE processes is the non-uniform distribution of reactants in the reactor."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which trend can be identified regarding the dependence of the etch rate on the position in the reactor?",
+                "answer_type": "Paragraph",
+                "answer": "There seems to be solely a radial dependence. There is no uni-directional trend visible."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Where has the etch process the highest performance (i.e. etch rate)?",
+                "answer_type": "Factoid",
+                "answer": "In the center of the reactor, in a circle with a radius of around 1 cm."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the etch rate decrease from the wafer center toward the edge?",
+                "answer_type": "Factoid",
+                "answer": "Yes, As radius increases from the center, the colors shift from warm to cooler colors, showing the etch rate decreases toward the edge."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What are the approximate maximum and minimum etch rates shown, and where do they occur?",
+                "answer_type": "Factoid",
+                "answer": "Max: 0.139 at  center.\nMin: 0.131 at outer rim."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does radial position (0\u20133 cm) relate to the etch rate, and what azimuthal non-uniformities are visible?",
+                "answer_type": "Paragraph",
+                "answer": "The etch rate is highest near the center and decreases as radius increases. At r \u2248 1 cm , values fall to 0.138-0.139, indicating a steady radial gradient. Small azimuthal variations appear as lobes around [angles], but the overall pattern is mostly concentric. This shows a primary dependence on radial position with minor angle-to-angle variation."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If a process requires an etch rate \u2265 0.136 nm/cycle, which wafer region satisfies this condition?",
+                "answer_type": "Paragraph",
+                "answer": "-Central region (r \u2272 1 cm): satisfies\n-Mid-radius (\u22481\u20132 cm): partially satisfies\n-Outer edge (r \u2273 2.5 cm): does not satisfy"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the maximum Al\u2082O\u2083 etch rate shown on the color scale?",
+                "answer_type": "Factoid",
+                "answer": "0.139 nm/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which spatial coordinates are used to describe the etch-rate map in this figure?",
+                "answer_type": "Paragraph",
+                "answer": "-) Radius from the wafer center (cm)\n\n-) Polar angle around the wafer (degrees)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the wafer center etch faster than the outer radial zone in this ALE run?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the figure confirm that the Al\u2082O\u2083 ALE etch rate decreases toward the wafer edge, consistent with the statement that the uniformity is about \u00b13% from minimum to maximum?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What process oriented parameters  led to the cause the center-to-edge etch rate gradient observed on the wafer?",
+                "answer_type": "List",
+                "answer": "1   - Plasma density distribution\n2  - Neutral radical flux and gas flow pattern \n3  - Ion energy/sheath potential variation"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch rate non-uniformity change from the center of the wafer to the edge?",
+                "answer_type": "Paragraph",
+                "answer": "At the center (0\u20131 cm): ~0.137\u20130.139 nm/cycle; highest etch rates. At the mid-radius (1\u20132.2 cm): ~0.134\u20130.136 nm/cycle; moderate etch rates finally at the edge (2.2\u20133.5 cm): ~0.131\u20130.133 nm/cycle; lowest etch rates"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the minimum and maximum etch rate value shown on this given polar plot?",
+                "answer_type": "Factoid",
+                "answer": "minimum ~  0.131 nm/cycle, maximum ~  0.139 nm/cycle"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Is the etch-rate uniformity shown in this ALE wafer map acceptable for manufacturing nanoscale devices?",
+                "answer_type": "Yes/No",
+                "answer": "No\n\nReason - the center-to-edge variation (~0.131\u20130.139 nm/cycle) and the six-fold spatial nonuniformity exceed typical nanoscale CD tolerances and would likely require process or hardware correction before manufacturing."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the etch rate constant through out the wafer?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Where is the etch rate highest?",
+                "answer_type": "Factoid",
+                "answer": "At the center of the wafer"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Where does the etch rate decrease?",
+                "answer_type": "Factoid",
+                "answer": "The etch rate decreases towards the edge"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the relative error in the uniformity or etch-rate distribution?",
+                "answer_type": "Factoid",
+                "answer": "Based on the maximum and minimum values in the color scale,  difference of 0.004nm is observed and the average value is 0.135nm, therefore the relative error is 3% (difference/average)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Where is the maximum and minimum Al\u2082O\u2083 etch rate on the wafer?",
+                "answer_type": "Factoid",
+                "answer": "Maximum in the center, minimum on the edge of the wafer."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the etch rate change more rapidly near the edge or in the center?",
+                "answer_type": "Factoid",
+                "answer": "Near the edge."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which angular sector has systematically lower etch rate?",
+                "answer_type": "Paragraph",
+                "answer": "Starting from about r = 1 cm, the 30\u00b0\u2013120\u00b0 sector is consistently one color interval lower than the others. This indicates a slightly reduced etch rate at the same radius. By r \u2248 2.8 cm, this sector shows no measurable etch, while most other angular regions still exhibit etching."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which region of the wafer (center, mid-radius, or edge) is most suitable for placing devices that require high etch uniformity?",
+                "answer_type": "Paragraph",
+                "answer": "The center region of the wafer is most suitable. There, the etch rate is both highest and most uniform, with very small radial and angular variation compared to the mid-radius and especially the edge, where the etch rate drops and even goes to zero in some sectors."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does the color map reveal about the etch-rate distribution across the wafer?",
+                "answer_type": "Paragraph",
+                "answer": "The etch rate is highest near the centre of the wafer and decreases toward the edge. The red region marks the maximum values, colour contours indicate lower etch rate going from orange, yellow, green and blue . This centre to edge drop suggests a non-uniform etching environment, with the strongest etching occurring close to the centre of the wafer."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the figure show angular variation in the etch rate?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "List three wafer locations (radius, angle) where the etch rate is lower than at the centre.",
+                "answer_type": "List",
+                "answer": "(2 cm, 0\u00b0), (3 cm, 180\u00b0), (3 cm, 270\u00b0)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What quantity is represented by the color scale?",
+                "answer_type": "Factoid",
+                "answer": "The local etch rate of Al2O3 in nm per cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the polar coordinate mapping help in understanding etch uniformity across the wafer?",
+                "answer_type": "Paragraph",
+                "answer": "Using polar coordinates allows visualization of etch rate variations both radially and angularly across the wafer. By plotting radius from the center and polar angle as axes, it becomes possible to identify regions of higher or lower etching, quantify overall uniformity, and detect any asymmetry due to loading or equipment effects. This approach provides a clear spatial overview that single-point measurements cannot capture."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What structural features of the wafer influence the etch rate distribution observed in the polar chart?",
+                "answer_type": "List",
+                "answer": "Central region exposure leading to higher etch rates, Edge effects due to plasma distribution or gas flow, Loading variations across the wafer, Material uniformity and surface preparation"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the approximate etch rate uniformity across the wafer as indicated by the polar chart?",
+                "answer_type": "Factoid",
+                "answer": "\u00b13% from minimum to maximum."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the etch rate decrease as the radius increases from the center to the edge of the wafer?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 695,
+            "height": 497
+        }
+    }
+}

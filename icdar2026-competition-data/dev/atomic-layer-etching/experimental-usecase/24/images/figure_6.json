@@ -1,0 +1,264 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_6",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Figure 6 shows the mass changes during the first two Al\u2082O\u2083 ALE cycles at 250, 275, 300, and 325\u202f\u00b0C. The first TMA exposure produces mass gains of 27\u201332\u202fng/cm\u00b2, corresponding to the reaction of surface AlOH* with TMA. The subsequent HF exposure adds 33\u201336\u202fng/cm\u00b2 due to the conversion of AlCH\u2083* species to AlF* and formation of an AlF\u2083 surface layer. Mass changes are nearly constant across the temperatures during these early cycles, and higher temperatures lead to slightly larger gains. The figure highlights the initial nucleation behavior and the temperature-dependent early-stage mass changes."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | 250\u00b0C (ng/cm^2) | 275\u00b0C (ng/cm^2) | 300\u00b0C (ng/cm^2) | 325\u00b0C (ng/cm^2) |\n|----------|-----------------|-----------------|-----------------|-----------------|\n| 1        | ~25             | ~25             | ~25             | ~25             |\n| 30       | ~65             | ~62             | ~60             | ~58             |\n| 60       | ~68             | ~62             | ~64             | ~60             |\n| 90       | ~60             | ~48             | ~40             | ~20             |\n| 120     | ~70             | ~60             | ~58             | ~40             |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How many cycles are being evaluated?",
+                "answer_type": "Factoid",
+                "answer": "2 cycles of sequential TMA and HF dosing."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which temperature is the mass loss higher?",
+                "answer_type": "Factoid",
+                "answer": "The mass change increase until 60 s, and then it shows a decrease in its values."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At which temperature is the mass loss higher?",
+                "answer_type": "Factoid",
+                "answer": "325 \u00b0C"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which performance advantages are shown at higher temperatures?",
+                "answer_type": "Factoid",
+                "answer": "Higher temperatures result in a greater removal of AlF3 from the surface and greater fluorination of Al2O3."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which temperature results in the highest etch rate?",
+                "answer_type": "Paragraph",
+                "answer": "325 degrees results in a net decrease of around 20 nm/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the initial cycle of dosing TMA and HF temperature dependent?",
+                "answer_type": "Paragraph",
+                "answer": "No, it seems as if the initial cycle is not temperature depentent. For all temperatures similar mass changes are recorded."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is there a temperature that deviates from a linear increase in etch rate for increasing temperature?",
+                "answer_type": "Paragraph",
+                "answer": "If a linear relation is expected between etch rate and temperature, the final mass change level of 300 degrees celcius should be lower (equally spaced between the level of 275 and 325 degrees celcius)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What could be a reason for the positive feature at 60 seconds at 250 degrees C?",
+                "answer_type": "Paragraph",
+                "answer": "It could be that there is net adsorption of TMA at the surface after which it starts etching as opposed to etching from the start."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the repeated step-like pattern indicate about the cycle structure?",
+                "answer_type": "Factoid",
+                "answer": "It indicates that mass changes occur in discrete, repeatable steps within each cycle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which temperature trace shows the largest overall mass swing within one cycle?",
+                "answer_type": "Factoid",
+                "answer": "325 \u00b0C shows the largest overall mass swing within one cycle."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is a mass decrease observed after HF exposure in each cycle?",
+                "answer_type": "Factoid",
+                "answer": "HF removes fluorinated surface species formed during TMA exposure, leading to controlled material removal and mass loss."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why might lower temperatures retain more mass after two cycles?",
+                "answer_type": "Paragraph",
+                "answer": "At lower temperatures, the final mass after each cycle remains higher than at elevated temperatures. This indicates smaller net mass loss over the same number of cycles. Such differences are relevant when comparing cumulative removal across temperatures."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What reactions during the first HF exposure establish the AlF\u2083 layer needed for ALE?",
+                "answer_type": "Paragraph",
+                "answer": "The first HF exposure converts AlCH\u2083* species to AlF* via AlCH\u2083* + HF \u2192 AlF* + CH\u2084, and fluorinates the underlying Al\u2082O\u2083 through Al\u2082O\u2083 + 6HF \u2192 2AlF\u2083 + 3H\u2082O. This spontaneous reaction (\u0394G \u2248 \u221250 kcal) creates the AlF\u2083 surface layer that TMA can subsequently remove through ligand-exchange, enabling cyclic etching."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which temperatures does mass loss (etching) begin during the second ALE cycle?",
+                "answer_type": "Factoid",
+                "answer": "Mass loss begins during the second cycle at 275\u00b0C, 300\u00b0C, and 325\u00b0C, while 250\u00b0C requires a third cycle before etching onset."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the colored arrows labeled \"TMA\" and \"HF\" indicate in the figure?",
+                "answer_type": "Factoid",
+                "answer": "The arrows mark the timing of sequential precursor exposures\u2014blue arrows indicate TMA doses and red arrows indicate HF doses during the ALE cycles."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why does 325\u00b0C show the largest mass decrease after the second TMA exposure?",
+                "answer_type": "Paragraph",
+                "answer": "At higher temperatures, TMA removes a larger fraction of the AlF\u2083 surface layer through ligand-exchange reactions, producing more volatile AlF(CH\u2083)\u2082 products. The percentage of AlF\u2083 removed increases from 19% at 250\u00b0C to 74% at 325\u00b0C, explaining the pronounced mass loss at 325\u00b0C."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Identify the specific timepoint where the actual 'etching' (material removal) occurs. Why does the mass increase significantly at the 35-second mark (HF pulse) instead of decreasing?",
+                "answer_type": "Factoid",
+                "answer": "Etching occurs at ~65 seconds (TMA pulse)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Evaluate the net process outcome at 250\u00b0C (Red line). After the full sequence (TMA ->HF -> TMA -> HF), is the final mass lower than the starting mass?",
+                "answer_type": "Yes/No",
+                "answer": "No, the final mass is effectively higher (or barely changed) compared to the start of the cycle."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Compare the mass loss during the TMA pulse (t=65s) for the 250\u00b0C sample (Red) versus the 325\u00b0C sample (Green). What does this disparity indicate about the activation energy of the ligand-exchange reaction?",
+                "answer_type": "Paragraph",
+                "answer": "At 250\u00b0C (Red), the mass drop is negligible, implying the thermal energy is insufficient to drive the ligand-exchange reaction between TMA and the fluorinated surface. In contrast, at 325\u00b0C (Green), the massive drop indicates the barrier has been overcome, enabling rapid and efficient volatilization. This strong temperature dependence confirms the process is kinetically controlled by a significant energy barrier."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "A process engineer observes the Green curve (325\u00b0C) and notes that the mass continues to drift downward slightly between 70s and 90s (after the sharp drop). What does this instability suggest about the 'Self-Limiting' nature of the etch at high temperatures?",
+                "answer_type": "Paragraph",
+                "answer": "Ideally, an ALE step should be self-limiting, showing a sharp drop followed by a flat plateau (saturation). The slight continuous downward slope seen in the Green line (325\u00b0C) suggests a loss of self-limiting behavior, potentially due to thermal desorption of the film itself or a secondary CVD-like reaction. This instability makes precise depth control more difficult compared to the stable plateaus seen at intermediate temperatures (e.g., 300\u00b0C, Black line)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the figure aid in evaluating nucleation delay at different temperatures?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How are the mass gains after first exposures of different reactants?",
+                "answer_type": "Paragraph",
+                "answer": "1. The first TMA exposure displays mass gains of \u0394MTMA = 27\u221232 ng/cm2 at 250\u2212325 \u00b0C\n2. The first HF exposure shows mass gains of \u0394MHF = 33\u221236 ng/cm2 at 250\u2212325 \u00b0C."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "which reaction is spontaneous?",
+                "answer_type": "Factoid",
+                "answer": "The fluorination reaction Al2O3 + 6HF \u2192 2AlF3 + 3H2Ois spontaneous over the temperature range from 250 to 325 \u00b0C"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens after subsequent exposures to different reactants?",
+                "answer_type": "Paragraph",
+                "answer": "After the first HF exposure, the next TMA exposure removes the AlF3 layer on the Al2O3 substrate. Figure shows that mass losses during the TMA and HF cycles begin with the second TMA and HF cycle for temperatures from 275\u2212325 \u00b0C. The\nTMA and HF cycles at 250 \u00b0C show a mass loss after the third ALE cycle. The higher temperatures produce both a larger mass loss for the removal of AlF3 by TMA and a larger mass gain for the subsequent fluorination of Al2O3 by HF."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What temperatures were selected to investigate the effect of temperature on the mass change?",
+                "answer_type": "Factoid",
+                "answer": "250\u00b0C, 275\u00b0C, 300\u00b0C and 325\u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "When does the effect of the temperature become visible in the graph?",
+                "answer_type": "Factoid",
+                "answer": "After 60 seconds, which corresponds to the beginning of the second ALE cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What causes the mass gain for the first TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "These mass gains result from the reaction of AlOH* surface species with TMA according to AlOH* + Al(CH3)3 \u2192 AlOAl(CH3)2* + CH4."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does temperature affect the individual exposure steps?",
+                "answer_type": "Factoid",
+                "answer": "After the first ALE cycle, the mass loss during TMA exposure increases with temperature (roughly from 10 ng/cm^2 to 40 ng/cm^2), whereas the mass gain during HF exposure remains constant around 35-38 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How many ALE cycles are shown on the figure?",
+                "answer_type": "Factoid",
+                "answer": "2 cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What role does TMA play in the cycles shown?",
+                "answer_type": "Paragraph",
+                "answer": "The first TMA exposure causes a mass gain because TMA reacts with Al\u2082O\u2083 surface, leaving Al\u2013CH\u2083\u2013containing surface species. This methylation increases the measured mass. After HF converts the surface into an AlF\u2083-like fluorinated layer, TMA mainly acts as the etch step by reacting with that fluoride to form volatile AlF(CH\u2083)\u2082 that desorbs, producing the mass drop."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which half-cycle (TMA exposure or HF exposure) shows the strongest temperature dependence, and what evidence supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "The TMA exposure half-cycle shows the strongest temperature dependence. This is indicated by the increasing magnitude of the mass drop during TMA as temperature rises, meaning TMA removes a larger fraction of the fluorinated surface at higher temperature. By comparison, the HF step\u2019s mass gain changes much less across the same temperature range, consistent with it reaching a self-limited endpoint under the pulse conditions used."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which temperature  is closest to  etch/deposition balance?",
+                "answer_type": "Factoid",
+                "answer": "250\u00b0C"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does temperature affect the mass change behavior over time?",
+                "answer_type": "Paragraph",
+                "answer": "Increasing temperature reduces the net mass retained after each cycle. While all temperatures show stepwise increases during TMA exposure and decreases during HF exposure, the 325 \u00b0C trace exhibits significantly lower mass accumulation, indicating enhanced etching or reduced adsorption at higher temperature."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which precursor exposures correspond to the step increases in mass?",
+                "answer_type": "Factoid",
+                "answer": "TMA exposures."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the highest temperature result in the lowest mass change?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which temperatures are compared in the figure?",
+                "answer_type": "List",
+                "answer": "250 \u00b0C ,275 \u00b0C ,300 \u00b0C , 325 \u00b0C"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the temperature affect the magnitude of mass changes during the first two ALE cycles?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. Higher temperatures lead to slightly larger mass gains during both TMA and HF exposures, reflecting more efficient surface reactions."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which surface species are responsible for the mass changes observed during TMA and HF exposures in the first two ALE cycles?",
+                "answer_type": "List",
+                "answer": "TMA exposure: AlOH reacting with Al(CH\u2083)\u2083 \u2192 formation of AlOAl(CH\u2083)\u2082, HF exposure: AlCH\u2083 reacting with HF \u2192 formation of AlF and AlF\u2083 surface layer"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is understanding mass changes during the first two ALE cycles important for controlling Al\u2082O\u2083 etching?",
+                "answer_type": "Factoid",
+                "answer": "It helps determine the nucleation behavior, confirms self-limiting reactions, and allows estimation of the thickness of the AlF\u2083 surface layer, which is critical for precise etch depth control in ALE processes."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the sequential TMA and HF exposures affect the mass of Al\u2082O\u2083 during the first two ALE cycles?",
+                "answer_type": "Paragraph",
+                "answer": "The first TMA exposure reacts with surface AlOH* species, resulting in a mass gain of 27\u201332\u202fng/cm\u00b2 depending on the temperature. The subsequent HF exposure converts AlCH\u2083* species to AlF* and forms an AlF\u2083 surface layer, producing an additional mass gain of 33\u201336\u202fng/cm\u00b2. These sequential reactions illustrate the self-limiting and surface-specific nature of the ALE process during the early cycles."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 667,
+            "height": 533
+        }
+    }
+}

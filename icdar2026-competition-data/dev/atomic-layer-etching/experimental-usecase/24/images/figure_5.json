@@ -1,0 +1,264 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_5",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The figure shows mass loss from Al2O3 during repeated TMA/HF cycles at four temperatures. All traces decrease roughly linearly with time, but the slope becomes steeper at higher temperatures, indicating faster etching. The 250 \u00b0C curve shows the smallest mass loss while the 325 \u00b0C trace shows the largest, consistent with thermally enhanced reaction rates. The right-hand axis converts the mass loss to an equivalent thickness removed."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | Time (s) | Mass change (ng/cm\u00b2) |\n|------------------|----------|-----------------------|\n| 250              | 0        | ~0                    |\n| 250              | 4000     | ~-500                 |\n| 250              | 8000     | ~-900                 |\n| 275              | 0        | ~0                    |\n| 275              | 4000     | ~-800                 |\n| 275              | 8000     | ~-1600                |\n| 300              | 0        | ~0                    |\n| 300              | 4000     | ~-1100                |\n| 300              | 8000     | ~-2200                |\n| 325              | 0        | ~0                    |\n| 325              | 4000     | ~-1500                |\n| 325              | 8000     | ~-3000                |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the step for the ALE cycle?",
+                "answer_type": "Factoid",
+                "answer": "2.0 s of TMA exposure, 30.0 s of N2 purge, 1.0 s of HF exposure, and 30.0 s of N2 purge."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does mass change vary with the temperature?",
+                "answer_type": "Factoid",
+                "answer": "The mass change per cycle increases with higher temperature values."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which process temperature results in a higher mass change per cycle?",
+                "answer_type": "Factoid",
+                "answer": "325 \u00b0C"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What performance advantage is shown in the figure?",
+                "answer_type": "Factoid",
+                "answer": "The information shown in the figure makes it possible to determine that the temperature of the ALE cycle affects the rates of the process."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process has the highest etch rate?",
+                "answer_type": "Paragraph",
+                "answer": "The process with the highest etch rate is the one at 325 degree Celcius."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How long would it take to etch 1 nm at 250 degrees celcius?",
+                "answer_type": "Factoid",
+                "answer": "This would take 6000 seconds."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If an industrial player would use the proposed process, and their thermal budget allows for all the temperatures, which process would they pick?",
+                "answer_type": "Paragraph",
+                "answer": "Industrial players usually aim for the highest throughput. This would be achieved with the process at 325 degrees Celcius."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which process has the lowest etch rate?",
+                "answer_type": "Factoid",
+                "answer": "The process at 250 degrees Celcius."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What trend does the mass change follow with time at each temperature?",
+                "answer_type": "Paragraph",
+                "answer": "At each temperature, the mass decreases approximately linearly with time. The lines do not show curvature or abrupt changes over the plotted interval. This indicates a steady accumulation of mass loss during the process."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which two temperature curves remain closest together over time?",
+                "answer_type": "Factoid",
+                "answer": "The 250 \u00b0C and 275 \u00b0C curves remain closest together."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which plotted quantity directly represents cumulative material removal?",
+                "answer_type": "Factoid",
+                "answer": "Mass change on the left y-axis directly represents cumulative material removal."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the secondary thickness axis useful alongside mass change?",
+                "answer_type": "Paragraph",
+                "answer": "The thickness axis provides an alternative way to interpret the same trend in length units. It allows readers to estimate film removal depth directly from the plot. This is useful for process planning without additional conversion."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What trend is observed in the etch rate as temperature increases?",
+                "answer_type": "Factoid",
+                "answer": "Etch rate increases approximately 5-fold from 0.14 \u00c5/cycle at 250\u00b0C to 0.75 \u00c5/cycle at 325\u00b0C."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is the dual y-axis (mass change and thickness) useful for presenting this data?",
+                "answer_type": "Paragraph",
+                "answer": "The dual axes allow direct comparison of the raw QCM measurement (mass change in ng/cm\u00b2) with the more practically relevant thickness change (in \u00c5). The thickness conversion uses the known Al\u2082O\u2083 density of 3.1 g/cm\u00b3, enabling readers to immediately understand the etch depth without manual calculation. This is particularly useful for process development where target etch depths are typically specified in thickness units."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the linearity of the curves indicate about the ALE process at all temperatures?",
+                "answer_type": "Factoid",
+                "answer": "Linear behavior confirms that the etch rate remains constant throughout 100 cycles at each temperature, indicating stable, reproducible etching."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How much Al\u2082O\u2083 thickness is removed after 100 ALE cycles at 325\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 75 \u00c5 (based on 0.75 \u00c5/cycle \u00d7 100 cycles), as shown on the right y-axis."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the four-step sequence of one complete Al\u2082O\u2083 ALE cycle as labeled. What is the purpose of the numeric notation (e.g., \"2-30-1-30\")?",
+                "answer_type": "List",
+                "answer": "TMA dose (2 s) \u2192 2. Purge (30 s) \u2192 3. HF dose (1 s) \u2192 4. Purge (30 s).\nThe notation defines the precise timing: reactant dose length and purge length. This controls reactant exposure and byproduct removal, ensuring self-limiting surface reactions and preventing gas-phase mixing."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare operating at 250\u00b0C vs. 325\u00b0C. For etching a 10 nm film with a strict thermal budget of \u2264300\u00b0C, which temperature is ruled out, and what is gained by using the highest allowed temperature?",
+                "answer_type": "Paragraph",
+                "answer": "325\u00b0C is ruled out. Using 300\u00b0C (the highest allowed) maximizes the etch rate within the constraint, reducing process time. The trade-off is operating near the budget limit, which may increase thermal stress compared to 250\u00b0C, but offers significantly faster throughput."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does increasing temperature affect the slope of the mass and thickness loss lines? State the kinetic principle responsible.",
+                "answer_type": "Paragraph",
+                "answer": "Increasing temperature increases the slope (etch rate). This follows the Arrhenius law, where higher thermal energy accelerates the surface reaction kinetics of both the fluorination (HF) and ligand-exchange (TMA) steps, leading to more material removed per unit time."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If the reactant purge times were insufficient, leading to CVD-like parasitic growth, how would the shape of these mass change curves likely deviate from the linear decrease shown here?",
+                "answer_type": "Paragraph",
+                "answer": "If CVD-like growth occurred (e.g., TMA and HF mixing in the gas phase), the net mass change would likely turn positive (mass gain) or the etch rate would slow down drastically, causing the curves to flatten or curve upward. The fact that the lines remain strictly negative and linear confirms that the process is operating in a pure etching mode with no competing deposition artifacts."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does mass changes versus time during Al2O3 ALE remain linear at all temperatures?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does Mass change and thickness relate in the graph?",
+                "answer_type": "Factoid",
+                "answer": "These MCPCs correspond to etch rates hence a mass loss is a direct indicator of thickness decreasing and vice versa."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the etch rates ?",
+                "answer_type": "Paragraph",
+                "answer": "Etch rates are\n1. 0.14 \u00c5/cycle at 250 \u00b0C \n2.  0.75 \u00c5/cycle at 325 \u00b0C"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How are the etch rates determined?",
+                "answer_type": "Paragraph",
+                "answer": "The determination of these etch rates is based on the Al2O3 ALD film density of 3.1 g/cm3, the MCPC, the number of ALE cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How many ALE cycles were performed for this experiment?",
+                "answer_type": "Factoid",
+                "answer": "100"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does temperature affect the mass change per cycle?",
+                "answer_type": "Factoid",
+                "answer": "The MCPC increases with temperature from -4.2 ng/(cm^2 cycle) at 250 \u00b0C to -23.3 ng/(cm2 cycle) at 325 \u00b0C. This corresponds to etch rates of 0.14 \u00c5/cycle at 250 \u00b0C to 0.75 \u00c5/cycle at 325 \u00b0C."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How were the etch rates determined?",
+                "answer_type": "Paragraph",
+                "answer": "For this study, a quartz crystal microbalance (QCM) was used, which yields mass change in ng/cm^2. Before the experiments, the density of the Al2O3 substrate was determined to be 3.1 g/cm^3. Dividing mass change (per area) by the density in this case results in the material thickness that was etched per cycle, expressed in \u00c5."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the reaction sequence used for this experiment?",
+                "answer_type": "Factoid",
+                "answer": "2 s TMA exposure, 30 s purge, 1 s HF exposure, 30 s purge."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What process parameter can be adjusted to control etch rate, based on this data?",
+                "answer_type": "Factoid",
+                "answer": "Temperature"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the correct order of etch rates from fastest to slowest across the four temperatures?",
+                "answer_type": "List",
+                "answer": "325 \u00b0C, 300 \u00b0C, 275 \u00b0C, 250 \u00b0C"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which temperature should be chosen to etch at least 6 nm after 100 cycles and why.",
+                "answer_type": "Paragraph",
+                "answer": "Since one cycle is about 63 s, 100 cycles correspond to roughly 6300 s, so you can read the expected thickness removal near that time on the right-hand axis. At 325 \u00b0C, the curve reaches roughly 70 \u00c5 (\u22656 nm). All lower-temperature curves show less than 6 nm after 100 cycles. Therefore, 325 \u00b0C is the best choice because it meets the \u22656 nm target within 100 cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "To remove roughly 3 nm in 60 to 65 cycles, which operating temperature is the best choice?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does temperature affect the mass-loss rate in the figure?",
+                "answer_type": "Paragraph",
+                "answer": "Higher temperatures produce steeper mass-loss slopes. The 250 \u00b0C curve decreases slowly, while the 300 \u00b0C and 325 \u00b0C curves show progressively faster loss. This indicates that the etching reaction accelerates significantly with temperature."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which exposure sequence is shown in the figure?",
+                "answer_type": "Factoid",
+                "answer": "TMA / purge / HF / purge (\u201c2\u201330\u20131\u201330\u201d)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the mass change ever increase during the experiment?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "List the temperatures compared in the figure.",
+                "answer_type": "List",
+                "answer": "250 \u00b0C, 275 \u00b0C, 300 \u00b0C, and 325 \u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does temperature affect the mass change per cycle (MCPC) and etch rate during Al\u2082O\u2083 ALE?",
+                "answer_type": "Factoid",
+                "answer": "MCPC increases from \u22124.2\u202fng/(cm\u00b2 cycle) at 250\u202f\u00b0C to \u221223.3\u202fng/(cm\u00b2 cycle) at 325\u202f\u00b0C."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the linear mass change versus time indicate about the Al\u2082O\u2083 ALE process?",
+                "answer_type": "List",
+                "answer": "Consistent removal of Al\u2082O\u2083 per cycle, Predictable thickness reduction, Minimal fluctuations between cycles"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is temperature control important for Al\u2082O\u2083 ALE in practical applications?",
+                "answer_type": "Paragraph",
+                "answer": "Temperature control is crucial because it directly determines the etch rate. By selecting appropriate temperatures, practitioners can achieve precise and uniform removal of Al\u2082O\u2083, tailor etch depths, and ensure consistent results across multiple samples or production batches. Proper temperature management is therefore essential for reproducible, high-quality ALE in both research and industrial applications."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do the ALE reactions at different temperatures show linear mass change over time?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 667,
+            "height": 486
+        }
+    }
+}

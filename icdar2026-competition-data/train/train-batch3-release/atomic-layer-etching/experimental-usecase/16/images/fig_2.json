@@ -1,0 +1,275 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/fig_2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows the deposition rate on different materials (Si, Al2O3, HfO2, AlNx, TiN, SiO2) against the fraction of CF4 in the plasma mixture. For all materials, the deposition rate increases rapidly at low CF\u2084 content and then decreases again at higher CF\u2084 concentrations.",
+        "b": "The figure illustrates the concentration of F, CF2, and CF species against the fraction of CF4 in the plasma mixture. For all three species, the concentration increases with CF\u2084 content, but the increase becomes more gradual at higher CF\u2084 concentrations."
+    },
+    "data_extraction": {
+        "a": "| \u03bd_CF4 (%) | Si (nm/min) | Al2O3 (nm/min) | HfO2 (nm/min) | AlNx (nm/min) | TiN (nm/min) | SiO2 (nm/min) |\n|-----------|-------------|----------------|---------------|---------------|--------------|---------------|\n| ~3        | ~1.5        | ~2.5           | ~2.3          | ~2.6          | ~2.2         | ~0.8          |\n| ~5        | ~4.0        | ~6.0           | ~5.5          | ~6.2          | ~1.5         | ~1.2          |\n| ~10       | ~3.0        | ~4.5           | ~3.5          | ~4.8          | ~\u22121.0        | ~\u22125.5         |\n| ~13       | ~2.0        | ~3.8           | ~3.2          | ~4.0          | ~\u22120.3        | ~\u22125.0         |",
+        "b": "| \u03bd_CF4 (%) | F (cm\u207b\u00b3)        | CF2 (cm\u207b\u00b3)      | CF (cm\u207b\u00b3)       |\n|-----------|------------------|------------------|------------------|\n| ~3        | ~1\u00d710\u00b9\u00b3          | ~5\u00d710\u00b9\u2070         | ~2\u00d710\u00b9\u2070         |\n| ~5        | ~2\u00d710\u00b9\u00b3          | ~8\u00d710\u00b9\u2070         | ~3\u00d710\u00b9\u2070         |\n| ~7        | ~5\u00d710\u00b9\u00b3          | ~1\u00d710\u00b9\u00b9         | ~5\u00d710\u00b9\u2070         |\n| ~10       | ~8\u00d710\u00b9\u00b3          | ~1.6\u00d710\u00b9\u00b9       | ~9\u00d710\u00b9\u2070         |\n| ~13       | ~1\u00d710\u00b9\u2074          | ~1.8\u00d710\u00b9\u00b9       | ~1.1\u00d710\u00b9\u00b9       |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the difference in concentration between F and CF change as the concentration of CF4 increases?",
+                "answer_type": "Factoid",
+                "answer": "Both increase in value as the concentration of CH4 increases. However, F reaches a maximum value close to 10^14, while CF reaches 10^11"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which plasma component fraction is systematically varied to study its effect on deposition rate and radical concentration?",
+                "answer_type": "Factoid",
+                "answer": "The CF\u2084 fraction (\u03bd_CF\u2084) in the plasma mixture."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "The authors chose low v_CF4 mixtures for the modification step to enable selectivity to mask materials?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the most likely reason why the deposition rate for most of the studied materials slows down or even become negative when the CF4 fraction in the mixture reaches about 5% or higher?",
+                "answer_type": "Paragraph",
+                "answer": "The plot indicates that as the CF4 fraction in the plasma increases, the F concentration rises extremely rapidly for mixtures above about 5% CF4, growing by several orders of magnitude relative to CF and CF2 (due to the logarithmic scale). While CF and CF2 radicals contribute mainly to film growth, F atoms favor the formation of volatile fluorides and thus promote etching. When F becomes predominant in the plasma, deposition is progressively suppressed and, for some materials, the overall process switches from film growth to etching."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which radicals have high concentration?",
+                "answer_type": "Factoid",
+                "answer": "The Fluorine radical concentration increases from 10^13 to the order of 10^14  with change in CF4 concentration and is higher than the CFx concentrations."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the deposition rate of various materials behave with respect to increasing CF4 concentration?",
+                "answer_type": "Paragraph",
+                "answer": "With increase of CF4 fraction, the deposition rate increases slowly at first and then reaches a maximum. Further increase of CF4 leads to decrease of deposition rate for Si, Al2O3, HfO2, and AlNx.  In the case of SiO2 and TiN, increase of CF4 causes a change from deposition to etching."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the fluorine (F) radical concentration decrease by two orders of magnitude compared with the concentrations of CF and CF\u2082?",
+                "answer_type": "Yes/No",
+                "answer": "No.\nFluorine-containing radicals concentration increase with the growth of CF\u2084 fraction in plasma mixture."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which radical species shows the highest concentration at 13.3% CF\u2084?",
+                "answer_type": "Factoid",
+                "answer": "F (fluorine), with concentration near 10\u00b9\u2074 cm\u207b\u00b3."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do the concentrations of F, CF\u2082, and CF radicals increase as \u03bd_CF\u2084 increases?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How do the species trends in (b) relate to the non-monotonic deposition response in (a)?",
+                "answer_type": "Paragraph",
+                "answer": "As \u03bd_CF\u2084 increases, higher F and CF\u2093 radical densities initially enhance surface reactions, leading to higher deposition rates. Beyond the mid-fraction range, excessive fluorination and increased etching probability reduce net growth, producing the observed decline in deposition rates despite rising radical concentrations."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which radical concentration has the highest dependence on CF4 concentration?",
+                "answer_type": "Factoid",
+                "answer": "The radical concentration of CF has the highest dependence on the CF4 concentration."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How do changes in radical concentrations influence the transition from film deposition to net etching for different materials?",
+                "answer_type": "Paragraph",
+                "answer": "As the CF\u2084 fraction increases, the concentration of fluorine-containing radicals such as F, CF, and CF\u2082 rises significantly, enhancing chemical reactivity at the surface. At moderate CF\u2084 levels, polymer-forming species promote deposition, while at higher CF\u2084 fractions, the high density of reactive fluorine radicals enhances bond breaking and material removal. This shift in plasma chemistry alters surface reaction pathways, causing certain materials, such as SiO\u2082 and TiN, to transition from net deposition to net etching."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which materials exhibit net etching behavior at higher CF\u2084 fractions according to the deposition-rate data?",
+                "answer_type": "List",
+                "answer": "TiN, SiO\u2082"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why are there negative values?",
+                "answer_type": "Factoid",
+                "answer": "Although the process involves depositing materials onto a film, come materials, such as TiN and SiO2, etch. Therefore, the deposition rate decreases as the CF4 concentration increases."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What material has the lowest and highest deposition rates during the process?",
+                "answer_type": "Factoid",
+                "answer": "The deposition rate is lowest for SiO1 and highest for ALNx"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does an increase in CF4 concentration affect the deposition of each material as well as the concentration of radicals?",
+                "answer_type": "Factoid",
+                "answer": "The deposition ratio increases up to around 5% and 6% of CF4, then decreases as the concentration increases. In contrast, the concentration of CF4 and radicals is proportional, and the relationship is stronger in the case of F."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does increasing the CF\u2084 fraction beyond an intermediate value lead to a decrease in deposition rate for most materials shown in the figure?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which radical has the fastest growth with v_CF4 and what can be implied from this?",
+                "answer_type": "Factoid",
+                "answer": "Atomic F has the fastest growth relative to CF and CF2, this implies a kinetic shift towards etching as v_CF4 increases."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "List the materials plotted",
+                "answer_type": "List",
+                "answer": "Si, Al2O3, HfO2, AINx, TiN, SiO2"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "how does depostion/etch rate on each material change as v_CF4(%) increases?",
+                "answer_type": "Paragraph",
+                "answer": "All materials start in net deposition at low \u03bd_CF\u2084. As \u03bd_CF\u2084 increases, the rates climb to a peak at low\u2013mid \u03bd_CF\u2084 and then drop. For SiO\u2082 and TiN, the curve crosses zero at higher \u03bd_CF\u2084, this means they switch from deposition to etching. This is consistent with panel (b): the F radical grows fastest relative to CF/CF\u2082, pushing the surface balance toward etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Will SiO2 be etched in a plasma containing 7% CF4?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Based solely on the graph, which material appears to be the best choice for industrial applications? Why?",
+                "answer_type": "Paragraph",
+                "answer": "The graph shows how the deposition rate changes with CF4 fraction for different materials. Based only on this data, AlNx looks like the best choice for industrial use. It has the highest deposition rate and stays relatively high across the whole CF4 concentration range, which would enable faster processing."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the optimal CF4 fraction for deposition on Si?",
+                "answer_type": "Factoid",
+                "answer": "6.6% (fastest deposition)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the concentration of CF4 in the plasma mixture affect the deposition rate on different substrates?",
+                "answer_type": "Paragraph",
+                "answer": "Below 5% CF4, as the concentration of CF4 increases, so too does the deposition rate on all substrates. Above 5%, the deposition rate generally decreases. On SiO2 however, etching occurs instead above 5% CF4 and this also occurs for TiN above 10% CF4."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "On which substrates does etching occur?",
+                "answer_type": "Factoid",
+                "answer": "TiN and SiO2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Was DC bias applied to the substrate during deposition?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What were the chamber pressure and plasma composition?",
+                "answer_type": "Factoid",
+                "answer": "The chamber pressure was kept at 10 mTorr; The plasma was always composed of 83.3% Ar the molecular fraction of CF4 varied between 3.3 and 13.3%, with the remaining fraction consisting of H2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does higher concentration of CF4 result in etching of all the materials?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "When are the deposition rates of many materials highest?",
+                "answer_type": "Factoid",
+                "answer": "At about 7% CF4 concentration, the deposition rates of Al2O3, HfO2, Si and AlN are highest."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Explain why the increasing in the \u03bdCF\u2084(%) shift the surface reaction balance from polymer deposition to etching?",
+                "answer_type": "Paragraph",
+                "answer": "As the CF\u2084 fraction rises further, the concentration of highly reactive fluorine (F) radicals increases much more rapidly. This significant rise in 'F' radicals shifts the surface kinetics from a deposition-dominated process to an etching-dominated one, where 'F' atoms aggressively etch the deposited film."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the deposition rate on SiO\u2082 compare to that of Si and Al\u2082O\u2083 at high CF\u2084 fractions?",
+                "answer_type": "List",
+                "answer": "For higher CF\u2084 fractions:-\n\n1) On SiO\u2082 the deposition rate becomes negative, indicating an etching process.\n\n2) On Si, Al\u2082O\u2083, HfO\u2082, and AlN\u2093, the deposition rate decreases but remains positive, indicating net deposition."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does increasing the  CF\u2084 fraction (volume %) in the Ar/CF\u2084/H\u2082 plasma shift the surface reaction from polymer deposition to net etching?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, but only for specific materials."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which two materials show etching rather than deposition at high CF\u2084 fractions?",
+                "answer_type": "Factoid",
+                "answer": "SiO\u2082 and TiN"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on the deposition behavior, which CF\u2084 fraction regime would be optimal for the ALE modification step and why?",
+                "answer_type": "Paragraph",
+                "answer": "Low CF\u2084 fraction (<5%) because: (1) provides polymer deposition on target materials (Al\u2082O\u2083, AlNx, HfO\u2082), (2) avoids etching of potential mask materials (SiO\u2082, TiN)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Do all materials show maximum deposition rate at the same CF\u2084 fraction?",
+                "answer_type": "Factoid",
+                "answer": "Yes (approximately\u2014most materials peak around 5-6.6% CF\u2084)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At 5% v_CF4, which material has the highest deposition and which shows net etch?",
+                "answer_type": "Factoid",
+                "answer": "Highest: [ALNx] (~[6.1]); net etch: SiO2 (negative)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Would operating at the highest \u03bd_CF\u2084 fraction be optimal for oxide film growth?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which materials are etched upon exposure to a plasma with more than 10% CF4 added to the plasma?",
+                "answer_type": "Factoid",
+                "answer": "The materials are TiN and SiO2"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material should be used as substrate to have the highest film deposition rate?",
+                "answer_type": "Factoid",
+                "answer": "The material that should be used as substrate is AlNx"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "By adding more CF4 to the plasma composition can different starting substrates be identified?",
+                "answer_type": "Paragraph",
+                "answer": "An experiment can be designed such that initial thickness and final thickness can be determined after exposure to the plasma. Some materials thicknesses will decrease, others will increase."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 43,
+            "y": 35,
+            "width": 470,
+            "height": 319
+        },
+        "b": {
+            "x": 529,
+            "y": 36,
+            "width": 434,
+            "height": 318
+        }
+    }
+}

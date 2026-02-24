@@ -1,0 +1,264 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/fig_6",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Etch depth increases approximately linearly with the number of ALE cycles for most materials, indicating a near-constant etch-per-cycle under a 10 s activation step. SiO\u2082 exhibits the steepest slope and the largest accumulated etch depth, reaching ~27 nm after 40 cycles. AlN\u2093 and Al\u2082O\u2083 show moderate linear removal, while HfO\u2082 etches slowly. TiN shows essentially no measurable etch depth across all cycles, indicating strong resistance to the ALE process. Dashed lines represent linear fits to the experimental data."
+    },
+    "data_extraction": {
+        "a": "| Cycles | Al2O3 etch depth (nm) | HfO2 etch depth (nm) | AlNx etch depth (nm) | TiN etch depth (nm) | SiO2 etch depth (nm) |\n|---|---|---|---|---|---|\n| 0  | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |\n| 15 | ~2.0 | ~1.5 | ~3.0 | ~0.0 | ~6.0 |\n| 20 | ~3.5 | ~2.5 | ~5.0 | ~0.0 | ~12.0 |\n| 30 | ~5.0 | ~3.2 | ~6.0 | ~0.0 | ~20.0 |\n| 40 | ~6.0 | ~4.0 | ~7.5 | ~0.0 | ~27.0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which variable is analyzed in the figure?",
+                "answer_type": "Factoid",
+                "answer": "The etch depth as a function of the number of cycles, for different materials."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which of these materials is resistant to etching?",
+                "answer_type": "Factoid",
+                "answer": "TiN, because the etch depth value is close to 0, regardless of the number of cycles."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Could it be suggested that saturation has been reached in the case of SiO2?",
+                "answer_type": "Factoid",
+                "answer": "No, because, unlike other materials, the etch depth continues to increase with each cycle. However, after 30 cycles, the etch depth appears to remain constant for Al2O2, HfO3, AlNx, and TiN."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which material used has the highest etching rate and how can this be determined?",
+                "answer_type": "Factoid",
+                "answer": "SiO2 is preferred because its slope is steeper than that of the other materials. This means that a greater etching depth can be achieved in the same number of cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "For which material are more datapoints required to have a more reliable linear fit and what implications are there if this is not done?",
+                "answer_type": "Paragraph",
+                "answer": "SiO2 does not show that good of a fit. This suggests that, if the characterization is performed well, that the process is not that controlled. This in turn suggests that perfect ALE is not acquired."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "From the materials that actually etch, which one has the highest etch resistivity?",
+                "answer_type": "Paragraph",
+                "answer": "HfO2 shows the highest etch resistivity as for this material, the total etch depth is the lowest."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What two materials can be used together, for which no two ALE processes have to be used to get similar results?",
+                "answer_type": "Factoid",
+                "answer": "Al2O3 and AlNx."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How many cycles are required to reach an etch depth of 20 nm for SiO2?",
+                "answer_type": "Factoid",
+                "answer": "30 cycles are required."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does etch depth increase approximately linearly with cycle count for each material?",
+                "answer_type": "Factoid",
+                "answer": "Yes, approximately linear for Al2O3, HfO2, AlNx, SiO2;  TiN shows flat/near-zero change."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material exhibits the largest etch depth after 40 cycles?",
+                "answer_type": "Factoid",
+                "answer": "\u201cSiO2\u201d\nEvidence: \u201cAt 40 cycles it has the largest etch depth  compared with other materials.\""
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does material identity relate to etch per cycle inferred from the dashed linear fits?",
+                "answer_type": "Paragraph",
+                "answer": "EPC depends strongly on material. SiO2 has the highest slope, followed by AlNx and Al2O3, while HfO2 is low and TiN is \u22480. This ranking indicates, how etch depth varies with increasing number of cycles."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which material is the best candidate for an etch-stop (mask) under these ALE conditions, and why?",
+                "answer_type": "Paragraph",
+                "answer": "TiN is the best candidate for an etch-stop under these ALE conditions. Its etch depth stays zero after 40 cycles, giving an etch-per-cycle of 0 nm/cycle. In the plot, its markers lie near the x-axis and the dashed fit has nearly zero slope, whereas other materials show measurable slopes and larger depths. Therefore, TiN would maintain thickness during etching and serve as an effective mask/stop layer."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "List the materials plotted in the figure, together with the marker used for each.",
+                "answer_type": "Paragraph",
+                "answer": "Al\u2082O\u2083 \u2013 black squares\n\nHfO\u2082 \u2013 red circles\n\nAlN\u2093 \u2013 blue triangles\n\nSiO\u2082 \u2013 black asterisks\n\nTiN \u2013 red crosses"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What activation-step duration was used to generate all the curves in Fig. 6?",
+                "answer_type": "Factoid",
+                "answer": "10 seconds."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How much Al\u2082O\u2083 will have been removed after 40 cycles?",
+                "answer_type": "Factoid",
+                "answer": "Roughly, 5 to 6 nm."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the practical implication of all slopes being stable up to ~40 cycles?",
+                "answer_type": "Paragraph",
+                "answer": "The process doesn't drift quickly with time. That allows predictable depth control just by choosing the cycle number."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the principle of self-limiting reactions, the cumulative etch depth in an Atomic Layer Etching (ALE) process typically increases linearly with the number of cycles. What fundamental material-specific properties govern whether this linearity is observed for different materials, and does the data in Figure 6 confirm the process' adherence to this self-limiting mechanism for the tested material?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, the data in Figure 6 confirms the process's adherence to the self-limiting mechanism, as evidenced by the perfectly linear relationship between etch depth and the number of cycles. \nThis linearity is governed by material-specific properties, including the surface's ability to saturate during the activation step and the volatility of the etched byproducts during the removal step. \nFor the material tested here, these properties are well-suited to the ALE process, whereas materials with poor surface saturation or low byproduct volatility would show a sub-linear, reaction-limited etch rate."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Explain the significance of the linear trend observed in Figure 6 in relevance to the ALE process.",
+                "answer_type": "Paragraph",
+                "answer": "The linear relationship is significant because it confirms the process is self-limiting itself , highly controllable and predictable. \nIn a perfect ALE process, each cycle removes exactly one layer of atoms and then stops on its own. It cannot continue etching deeper, no matter how long you leave the reactants there. This trend is very well observed for most of the materials studied here."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What two key factors/metrics that can be directly determined from the slope of the observed lines from Figure 6?",
+                "answer_type": "List",
+                "answer": "1) The Etch Per Cycle (EPC) for various different materials\n2) The total etch depth for a given number of cycles."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the linearity trend observed in Figure 6 makes this prcoess and given materials suitable for the practical application of the ALE process ?",
+                "answer_type": "Yes/No",
+                "answer": "Yes \n(This trend allows device manufacutures to achieve atomic-scale precision by simply controlling the number of cycles. Also, they can reliably etch to a target depth with minimal risk of damaging the underlying substrate, which is crucial for manufacturing advanced semiconductor devices.)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is TiN getting etched as the number of etch cycles is increased from 10 to 40?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Among the various materials -Al\u2082O\u2083, HfO\u2082, AlNx, SiO\u2082, TiN, which one has higher etch rate?",
+                "answer_type": "Paragraph",
+                "answer": "From the graph, SiO2 has higher etch rate compared to other materials"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the etch depth vary with respect to the number of cycles?",
+                "answer_type": "Paragraph",
+                "answer": "The etch depth has a linearly dependence  with the number of cycles"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the current process, which two materials are suitable for selective etching",
+                "answer_type": "Paragraph",
+                "answer": "From the graph, it is evident that TiN is not etched at all, while SiO2 has high etch rate, therefore with the current process, SiO2 could be selectively etched from a target containing both TiN and SiO2 films."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What were the durations of the modification and activation steps in the optimized process?",
+                "answer_type": "Factoid",
+                "answer": "10 seconds for both steps each."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What were the etch rates per cycle for Al2O3, AlNx, and HfO2?",
+                "answer_type": "Factoid",
+                "answer": "0.16, 0.20, and 0.11 nm per cycle, respectively."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What were the selectivity ratios of Al2O3, AlNx and HfO2 etching over TiN?",
+                "answer_type": "Factoid",
+                "answer": "About 30, 40, and 20, respectively."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the measured etch rates demonstrate atomic-level precision?",
+                "answer_type": "Factoid",
+                "answer": "The measured etch rates for Al2O3, AlNx and HfO2 are comparable to the Al-O bond length of 0.169 nm, which means that the ALE process has close to single-atom precision."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material would act as the most effective etch mask in this process, and why?",
+                "answer_type": "Paragraph",
+                "answer": "TiN would make the best mask. From the graph, its etch depth stays close to zero even after 40 cycles, meaning it is almost not etched at all. It can protect underlying layers while the other materials are removed."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "To reach the etch depth of 5 nm, approximately how many cycles would be needed for AlN?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 24 - 25 cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which materials exhibit the highest etch selectivity over TiN, listed in order from most to least selective?",
+                "answer_type": "List",
+                "answer": "SiO2, AlNx, Al2O3, HfO2."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material demonstrates the most inconsistent etch behavior over repeated cycles?",
+                "answer_type": "Factoid",
+                "answer": "SiO2 (largest fluctuations in etch depth)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which material shows almost no change in etch depth over the cycle range given?",
+                "answer_type": "Factoid",
+                "answer": "TiN"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does AINx etch faster than Al2O3 across the cycle range shown?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch depth curve differ among the different materials as the number of cycles increases?",
+                "answer_type": "Paragraph",
+                "answer": "The five materials show noticeably different slopes. SiO\u2082 increases the most rapidly and reaches the largest etch depth. AlN\u2093, Al\u2082O\u2083, and HfO\u2082 all rise more moderately, with HfO\u2082 showing the slowest increase of the three. TiN remains nearly flat across the entire range, with only a slight upward shift at the highest cycle count."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which materials show a clear increase in etch depth with cycles?",
+                "answer_type": "List",
+                "answer": "SiO2, AINx, Al2O3, HfO2"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which materials show the highest and lowest etch rates per cycle according to the figure?",
+                "answer_type": "List",
+                "answer": "Highest: AlN\u2093 (0.20 nm/cycle), Medium: Al\u2082O\u2083 (0.16 nm/cycle), HfO\u2082 (0.11 nm/cycle), Lowest: TiN (0.006 nm/cycle), Poor repeatability: SiO\u2082 (0.62 nm/cycle)"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the etch depth of Al\u2082O\u2083 after 40 ALE cycles?",
+                "answer_type": "Factoid",
+                "answer": "8 nm."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the multi-line chart demonstrate material-dependent selectivity in the ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The chart shows that etch depth increases linearly with cycles, but the rate differs strongly between materials. Al\u2082O\u2083, AlN\u2093, and HfO\u2082 exhibit controlled, moderate etch rates, indicating effective ALE behavior. TiN shows almost no etching, confirming resistance to the process, while SiO\u2082 has high variability, indicating poor repeatability. This illustrates that the ALE process can selectively remove material layer-by-layer depending on the chemical and physical properties of each substrate, highlighting the importance of tuning parameters for selective etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the etch depth increase linearly with the number of ALE cycles for Al\u2082O\u2083, HfO\u2082, and AlN\u2093?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 698,
+            "height": 556
+        }
+    }
+}

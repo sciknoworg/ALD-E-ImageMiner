@@ -1,0 +1,275 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_4",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "\u0394M_TMA versus TMA exposure time at 300\u00b0C. The mass loss increases with exposure time and approaches self-limiting behavior at approximately \u221229 ng/cm\u00b2 after 2.0 s. The slow approach to saturation suggests that an initial fraction of the AlF\u2083 layer is easily removed, but complete removal becomes progressively more difficult.",
+        "b": "\u0394M_HF versus HF exposure time at 300\u00b0C. The mass gain increases rapidly and saturates at ~13 ng/(cm\u00b2 cycle) after about 1.0 s exposure. This sharp saturation indicates that HF fluorinates the Al\u2082O\u2083 surface to form a passivating AlF\u2083 layer that prevents further reaction."
+    },
+    "data_extraction": {
+        "a": "| TMA exposure time (s) | \u0394M_TMA (ng/cm\u00b2\u00b7cycle) |\n| --------------------- | --------------------- |\n|         0.0           |           ~0          |\n|         0.5           |          ~-6          |\n|         1.0           |         ~-10          |\n|         1.5           |         ~-12          |\n|         2.0           |         ~-14          |\n|         2.5           |         ~-15          |",
+        "b": "| HF exposure time (s) | \u0394M_HF (ng/cm\u00b2\u00b7cycle) |\n| -------------------- | -------------------- |\n|        0.0           |         ~0           |\n|        0.5           |        ~10           |\n|        1.0           |        ~14           |\n|        1.5           |        ~15           |\n|        2.0           |        ~16           |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What information can be extracted from this figure?",
+                "answer_type": "Factoid",
+                "answer": "It is possible to determine the exposure times required to achieve the reaction's self-limiting behavior."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass change after TMA exposure changes with the TMA exposure time?",
+                "answer_type": "Factoid",
+                "answer": "The mass change after TMA exposure decreases while TMA exposure increases."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the TMA exposure time required to achieve self-limiting behavior?",
+                "answer_type": "Factoid",
+                "answer": "2.0 s of TMA exposure."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why does the mass change continue to change after 2.0 s of TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "This could be related to the difficulty of removing the AlF3 species from the surface."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is there evidence for saturating behaviour with respect to the decrease in mass change for increasing TMA exposure time?",
+                "answer_type": "Paragraph",
+                "answer": "The last two data points have the same value and overall the mass change seems to saturate towards this value, so yes."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the trend in mass change difference with respect to TMA exposure time linear?",
+                "answer_type": "Yes/No",
+                "answer": "No, the trend is not linear."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the plateau seen in the mass change versus TMA exposure time indicate about the surface reaction?",
+                "answer_type": "Paragraph",
+                "answer": "The plateau indicates that the reaction between the TMA precursor and the surface has reached saturation. This means that after a certain exposure time (around 2 seconds), all available reactive sites on the surface have been consumed, and further exposure to TMA does not lead to any significant additional mass change. This self-limiting behavior is a hallmark of ALD and ALE half-cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass change vary with HF exposure time before reaching saturation?",
+                "answer_type": "Factoid",
+                "answer": "The mass change increases rapidly from 0 to about +12 ng/(cm\u00b2\u00b7cycle) within the first 0.5 seconds of exposure."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is self-limiting behavior important for atomic layer etching?",
+                "answer_type": "Paragraph",
+                "answer": "Self-limiting reactions are essential because they ensure that each half-cycle removes or modifies only a defined amount of material, regardless of excess reactant exposure. This enables precise thickness control at the atomic scale and allows for conformal, isotropic etching of three-dimensional structures. Without self-limiting behavior, the etch rate would depend on exposure time and local reactant flux, making uniform etching impossible."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the saturation behavior differ between TMA and HF exposures?",
+                "answer_type": "Factoid",
+                "answer": "HF saturates sharply after ~1.0 s, while TMA approaches saturation more slowly and gradually levels off after ~2.0 s."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the AlF\u2083 layer passivate the surface against further HF fluorination?",
+                "answer_type": "Paragraph",
+                "answer": "The AlF\u2083 layer passivates the Al\u2082O\u2083 surface because it has a Pilling-Bedworth ratio (R_PB) greater than 1, specifically ~1.8. This means the AlF\u2083 layer occupies more volume than the Al\u2082O\u2083 it replaces, ensuring complete surface coverage without gaps. Once formed, this continuous fluoride layer prevents HF from accessing the underlying oxide, analogous to how native oxide layers protect metals from further oxidation."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What exposure times were selected for the standard ALE reaction sequence based on this data?",
+                "answer_type": "Factoid",
+                "answer": "2.0 s for TMA and 1.0 s for HF, corresponding to the \"2-30-1-30\" reaction sequence."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the experimental steps, in order, to determine the optimal TMA exposure time from the \u0394M(TMA) saturation plot. Explain the purpose of systematically varying the exposure time.",
+                "answer_type": "List",
+                "answer": "1. Run multiple ALE cycles at a fixed temperature (300\u00b0C) and HF exposure time.\n\n2. For each set of cycles, use a different, precisely controlled TMA exposure time (e.g., 0.5 s, 1.0 s, 1.5 s, 2.0 s).\n\n3. Measure the mass change per cycle (\u0394M) for each TMA time using QCM.\n\n4. Plot \u0394M(TMA) vs. TMA Exposure Time to identify the saturation point."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare using a TMA exposure time at the saturation point (e.g., ~2.0 s) versus a shorter, non-saturating time (e.g., 0.5 s). Under a constraint of minimizing total cycle time for high throughput, which is better and what is the key trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "The shorter, non-saturating time (0.5 s) is better for minimizing cycle time. The trade-off is a lower etch per cycle and potentially incomplete surface reactions, which could lead to non-uniform etching, residue accumulation, and poor process control over many cycles compared to the stable, saturated regime."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on the \u0394M(TMA) plot, how does increasing TMA exposure time affect the completeness of the ligand-exchange etching reaction at 300\u00b0C? Provide the kinetic reason for the observed saturation.",
+                "answer_type": "Paragraph",
+                "answer": "Increasing TMA exposure time initially makes the etch more complete, removing more of the fluorinated layer per cycle, as shown by the increasingly negative \u0394M(TMA). Saturation occurs because the reaction is self-limiting; once all the AlF\u2083 sites formed during the prior HF step have reacted, additional TMA cannot further increase the etch amount, leading to a constant \u0394M."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is a self-limiting behaviour observed?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the self-limiting behaviour slow?",
+                "answer_type": "Paragraph",
+                "answer": "Self-limiting behavior at \u0394MTMA = \u221229 ng/cm2 is  observed after 2.0 s of TMA exposure. This slow approach to self-limiting behavior may result from the difficulty in removing all of the AlF3 surface layer. An initial fraction of the AlF3 surface layer may be easily removed by TMA. The removal of more of the AlF3 surface layer may then become progressively difficult."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the steady-state value for \u0394M<sub>HF</sub>?",
+                "answer_type": "Factoid",
+                "answer": "According to the authors, 13 ng/cm^2."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the steady-state value for \u0394M<sub>TMA</sub>?",
+                "answer_type": "Factoid",
+                "answer": "According to the authors, -29 ng/cm^2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What were the process conditions when the effects of TMA and HF exposure times were investigated?",
+                "answer_type": "Paragraph",
+                "answer": "For both experiments, the temperature was kept at 300 \u00b0C and the ALE cycle always consisted of TMA exposure, purge, HF exposure and purge. For the experiments, the times of these individual steps can be represented as follows:\n1) x - 30 - 1 - 30\n2) 2 - 30 - x - 30\nWhere x denotes the variable time."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "The graphs show that a steady-state/constant value for \u0394M<sub>HF</sub> and \u0394M<sub>TMA</sub> is reached very slowly, which is also what the authors state. What phenomena do they attribute to this observation?",
+                "answer_type": "Paragraph",
+                "answer": "During TMA exposure, the initial layer of AlF3 is removed readily, but this gets progressively difficult as AlF3 disappears. The authors state that temperature plays a role here, which was also investigated. They already reveal that this AlF3 layer is not entirely removed, even at the highest temperatures. During HF exposure, something similar occurs where the initial AlF3 layer is quickly formed, but after a certain point, the formed AlF3 layer passivates the reaction between Al2O3 and HF."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which half-cycle (HF or TMA)  appears more kinetically limited, if HF approaches a plateau by ~ 1s, and what supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "The TMA half-cycle appears more kinetically limited because \u0394M<sub>TMA</sub> approaches its plateau much more slowly than \u0394M<sub>HF</sub. HF levels off by about 1s, while TMA needs ~2s to level off. Longer time-to-saturation and gradual flattering indicates that the TMA step is slower to complete under the same conditions."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What temperature were these measurements collected at?",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does \u0394M_TMA continue decreasing indefinitely with longer exposure times?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the mass-change responses  differ with exposure time?",
+                "answer_type": "Paragraph",
+                "answer": "\u0394M_TMA becomes more negative as exposure time increases, while \u0394M_HF becomes more positive. Both curves rise rapidly at short times and then begin to plateau. The opposing signs reflect the different chemical processes occurring during TMA and HF exposures."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the trends of \u0394MTMA and \u0394MHF differ with exposure time?",
+                "answer_type": "Factoid",
+                "answer": "\u0394MTMA decreases with TMA exposure time, while \u0394MHF increases with HF exposure time."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the plateau in mass change indicate about the surface layer formed during ALE?",
+                "answer_type": "List",
+                "answer": "\u0394MTMA plateau \u2192 AlF\u2083 removal reaches limit, \u0394MHF plateau \u2192 AlF\u2083 formation completes, Ensures controlled layer-by-layer etching"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is monitoring the exposure time versus mass change important for ALE process optimization?",
+                "answer_type": "Paragraph",
+                "answer": "Monitoring mass change versus exposure time allows determination of the exposure duration needed to reach self-limiting behavior. This ensures that each ALE cycle fully reacts without wasting precursor or risking over-etching. It is critical for process optimization, reproducibility, and achieving precise, conformal etching of Al\u2082O\u2083 films."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do the TMA and HF exposures exhibit self-limiting behavior during the ALE process at 300\u202f\u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the optimal HF exposure time and why?",
+                "answer_type": "Paragraph",
+                "answer": "The optimal HF exposure time is 1.5 s. At this time the mass change saturates, and is, in that saturated regime the lowest value that can be taken."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the mass change tell anything on the film composition?",
+                "answer_type": "Paragraph",
+                "answer": "No, with just the mass change the film composition cannot be determined. As with just this information it can not be determined which specific atoms are removed."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does \u0394M_HF approach a constant value at longer HF exposure times in panel (b)?",
+                "answer_type": "Factoid",
+                "answer": "Because the mass change reaches a plateau, indicating that additional HF exposure does not produce further measurable mass change under these conditions."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How does the time required for saturation in the HF step compare to the TMA step shown in panel (a)?",
+                "answer_type": "Paragraph",
+                "answer": "The HF step appears to reach saturation faster, leveling off after about 1.0 second. In contrast, the TMA step in panel (a) requires closer to 2.0 seconds to fully saturate. This suggests the HF half-reaction kinetics may be faster under these conditions."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The data shows distinct saturation plateaus. If the curve in panel (a) never plateaued but continued to slope downward linearly with time, what would that imply about the mechanism, and why would that be fatal for 'Atomic Precision'?",
+                "answer_type": "Paragraph",
+                "answer": "If the curve never plateaued, it would imply a continuous (CVD-like) etch, where the etchant spontaneously consumes the material as long as it is present. This would be fatal for precision because the etch depth would depend entirely on timing (analog control). A 10% error in pulse time would mean a 10% error in depth. The plateau seen here proves the mechanism is self-limiting (digital control), which is the defining requirement for atomic precision."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does mass change after HF exposure achieve saturation and when?",
+                "answer_type": "Factoid",
+                "answer": "\u0394MHF versus the HF exposure time increases and  then levels off at approximately \u0394MHF = 13 ng/(cm2 cycle) after a 1.0 s HF exposure"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does HF passivate Al2O3?",
+                "answer_type": "Paragraph",
+                "answer": "HF fluorinating the Al2O3 film and forming an AlF3 surface layer that passivates the underlying Al2O3 film by protecting it from further oxidation"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the mass of Al\u2082O\u2083 change after HF exposure?",
+                "answer_type": "Paragraph",
+                "answer": "HF fluorinates the surface, converting part of the oxide into an AlF\u2083 surface layer.  The reaction is Al\u2082O\u2083 + 6HF \u2192 2AlF\u2083 + 3H\u2082O, meaning that Al2O3 is converted into two AlF3.  Since 2AlF3 have a mass of 168 amu, while Al2O3 is 102 amu, the mass increases during the HF exposure."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the reactant shows self-limiting behavior or constnt increase?",
+                "answer_type": "Factoid",
+                "answer": "Self-limiting behavior."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "When is self-limiting behavior observed for HF?",
+                "answer_type": "Factoid",
+                "answer": "After 1s."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "List the exposure times at which \u0394M_HF was recorded.",
+                "answer_type": "List",
+                "answer": "~0.0, 0.5, 1.0, 1.5,  2.0 seconds."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 6,
+            "width": 670,
+            "height": 368
+        },
+        "b": {
+            "x": 0,
+            "y": 381,
+            "width": 672,
+            "height": 388
+        }
+    }
+}

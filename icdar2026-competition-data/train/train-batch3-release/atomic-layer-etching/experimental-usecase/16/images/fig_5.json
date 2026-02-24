@@ -1,0 +1,264 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/fig_5",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Etch rate as a function of activation step duration shows a common negative starting value near \u22120.5 nm/cycle at 0 s for all materials, indicating net film formation without activation. As activation time increases, material-dependent removal emerges. SiO\u2082 exhibits the strongest response, increasing monotonically to ~0.7 nm/cycle at 20 s. AlN\u2093 and Al\u2082O\u2083 show intermediate increases, reaching ~0.3 nm/cycle at 20 s, while HfO\u2082 increases only modestly. TiN remains near zero across the range, indicating strong resistance to activation-induced removal."
+    },
+    "data_extraction": {
+        "a": "| Activation step duration (s) | Al2O3 etch rate (nm/cyc) | HfO2 etch rate (nm/cyc) | AlNx etch rate (nm/cyc) | TiN etch rate (nm/cyc) | SiO2 etch rate (nm/cyc) |\n|---|---|---|---|---|---|\n| 0  | ~-0.55 | ~-0.55 | ~-0.55 | ~-0.55 | ~-0.55 |\n| 5  | ~0.00  | ~0.00  | ~0.00  | ~0.00  | ~0.40  |\n| 10 | ~0.18  | ~0.10  | ~0.18  | ~0.00  | ~0.55  |\n| 20 | ~0.30  | ~0.15  | ~0.30  | ~0.05  | ~0.72  |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which aspects of this graph are being evaluated?",
+                "answer_type": "Factoid",
+                "answer": "They are studying the etch rate  (nm/cyc) as a function of the activation step duration (s) for the different materials used in the process (Al2O3, HfO2, AlNx, TiN, SiO2)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Do HfO2 and AlNx exhibit the same behavior?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which material exhibit the lowest etch rate?",
+                "answer_type": "Factoid",
+                "answer": "TiN"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Could these materials be used for etching considering an activation step duration of under 5?",
+                "answer_type": "Factoid",
+                "answer": "No, because all materials demonstrate film deposition when activation step duration is less than 5s (2.5s for SiO2)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For the etching of aluminum based material, does it matter which type of material it is (i.e. nitride/oxide)?",
+                "answer_type": "Paragraph",
+                "answer": "No it does not seem to matter. Both Al2O3 and AlNx have similar etch results."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on these results is it possible to have selective ALE, if so, which material can be selectively etched?",
+                "answer_type": "Paragraph",
+                "answer": "Yes it is possible, SiO2 can be selectively etched wrt to all other materials at an activation time of 5 seconds."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on this data, can an ALE recipe be developed for TiN?",
+                "answer_type": "Yes/No",
+                "answer": "Yes, there is an increase in etch rate for increasing activation time"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which activation step durations should be applied to have similar etching of HfO2 and Al2O3?",
+                "answer_type": "Factoid",
+                "answer": "20 s for HfO2 and 10 s for Al2O3."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does increasing the activation step duration generally increase the etch rate compared to 0 s?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material has the highest etch rate at 20 s?",
+                "answer_type": "Factoid",
+                "answer": "SiO2 at 20 s with \u2248 0.70nm/cycle.\nEvidence: Its marker/line is highest among the series at 20 s."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does material identity govern the etch-per-cycle response to activation time (0 \u2192 20 s)?",
+                "answer_type": "Paragraph",
+                "answer": "The etch-per-cycle response depends on material. SiO2 shows the steepest increase with activation time, while AlNx and Al2O3 rise more modestly and TiN remains near zero. By 20s, the ranking is SiO2 \u226b AlNx ~ Al2O3 \u226b HfO2\u226b TiN. This indicates [concise implication about selectivity or sensitivity to activation] grounded in the plotted slopes."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on the curves, which material is suitable as an etch-stop under these conditions, and which requires the longest activation to achieve net removal?",
+                "answer_type": "Paragraph",
+                "answer": "Stop layer: TiN \u2014 its curve stays ~0 across the range (slope \u2248 0).\nLongest activation to achieve net removal: TiN\u2014 remains negative or near 0 until  10s, then crosses into positive etch."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens at zero activation step duration, and how does the etch rate behavior change as activation step duration increases?",
+                "answer_type": "Paragraph",
+                "answer": "At zero activation, polymer deposits at -0.5 nm/cycle on all surfaces. Increasing activation duration causes etch rates to shift from negative to positive as ions first remove polymer then activate material etching. The gradual increase in etch rate with activation time reflects the sequential sputtering and surface reaction activation processes."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the film deposition rate per cycle when no activation step is applied?",
+                "answer_type": "Factoid",
+                "answer": "Around 0.5 nm/cycle (i.e. negative etch rate of -0.5 nm/cycle)"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the etch rate of Al2O3 at 10 seconds activation step duration?",
+                "answer_type": "Factoid",
+                "answer": "It is 0.16 nm/cycle"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does material etching occur immediately when the activation step begins? Motivate your answer.",
+                "answer_type": "Factoid",
+                "answer": "No. The reason is that the deposited polymer film must first be sputtered away before material etching can begin."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the activation step duration influence the etch rate in this ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "The activation step duration directly controls the etch rate by determining the extent of surface modification. At very short durations, incomplete reactions lead to net film formation, but as duration increases, the surface becomes fully saturated, allowing the etch rate to rise sharply. Once the surface is completely modified, the process reaches a self-limiting plateau where further increases in activation time no longer affect the etch rate."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the process behavior change with increase from smaller to higher activation durations?",
+                "answer_type": "List",
+                "answer": "1.\tAt very short durations, film formation (negative etch rate) occurs.\n2.\tAs duration increases, the process transitions from net deposition to net etching.\n3.\tAt intermediate durations, the etch rate rises sharply.\n4.\tAt long durations, the etch rate plateaus at a higher value."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does HfO\u2082 etch more slowly (nearly 2 times low)  than Al\u2082O\u2083 because it has a higher sputtering threshold?",
+                "answer_type": "Factoid",
+                "answer": "Yes . HfO\u2082 etches more slowly than Al\u2082O\u2083 because its higher sputtering threshold reduces ion-induced material removal."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Can activation step tuning improve etch selectivity for high-k dielectrics?",
+                "answer_type": "Yes/No",
+                "answer": "Yes."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How long after the activation step does it take for the materials to start getting etched?",
+                "answer_type": "Paragraph",
+                "answer": "After 5s of activation steps, the etch rate begins to increase for all materials except TiN"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the etch rate of TiN increase?",
+                "answer_type": "Paragraph",
+                "answer": "No, the etch rate remains low and only goes up to 0.02nm/cycle after 20s of activation steps"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do any of the materials exhibit similar trend in terms of etch rate vs activation steps?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, Al2O3 and AlN show similar behaviour in etch rate vs activation steps and also have similar etch rates."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which material requires the least activation step?",
+                "answer_type": "Paragraph",
+                "answer": "SiO2 requires the least number of activation as the etch rate increases after ~2.5s of activation step duration."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does a negative etch rate mean?",
+                "answer_type": "Factoid",
+                "answer": "A negative etch rate corresponds to film growth/formation, rather than etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the constant modification-step duration used in this experiment?",
+                "answer_type": "Factoid",
+                "answer": "10 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What causes the lower slope (etch-rate dependence) for HfO2 compared to Al2O3 and AlN3?",
+                "answer_type": "Factoid",
+                "answer": "HfO2 has a higher sputtering threshold."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "The ALE window is seemingly absent for the activation step. Why is this the case according to the authors?",
+                "answer_type": "Factoid",
+                "answer": "It is probably due to the non-monoenergetic ion distribution function. The incline observed in the ALE window for the activation step may hamper reproducibility."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does any of the materials etch without the activation step?",
+                "answer_type": "Yes/No",
+                "answer": "No."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "After the activation, which material becomes most volatile and which remains least volatile? How can this be inferred from the plot?",
+                "answer_type": "Paragraph",
+                "answer": "A strong time-dependent increase in etch rate indicates that more volatile products are generated as the activation time increases. Almost no volatile species are produced during the activation of TiN, since its etch rate remains essentially zero over the entire activation-time range. In contrast, SiO\u2082 is the most volatile, exhibiting the highest etch rate and a continuous rise with activation time."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which activation step duration does AlNx transition from net deposition to etching?",
+                "answer_type": "Factoid",
+                "answer": "At around 5 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How thick will the film deposited on the surface of AlNx be after two cycles without the activation step?",
+                "answer_type": "Factoid",
+                "answer": "About 1 nm thick (0.5 nm/cycle)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch rate trend differ among the materials as the activation step duration increases?",
+                "answer_type": "Paragraph",
+                "answer": "Al\u2082O\u2083, HfO\u2082, and AlN\u2093 all show a  shallow rise in etch rate as the activation step becomes increases. TiN stays close to zero throughout, only moving slightly upward from a negative value at short times. SiO\u2082  increases far more strongly than the other materials, becoming the most rapidly etched surface at longer activation durations."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which material showsthe highest etch rate at the longest activation-step duration?",
+                "answer_type": "Factoid",
+                "answer": "SiO2"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does TiN transition into positive etch rates at any of the activation durations shown?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which materials show a clear upward trend in etch rate between 5 and 20 seconds?",
+                "answer_type": "List",
+                "answer": "Al2O3, HfO2, SiO2"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the key stages observed in the etch rate as the activation step duration increases?",
+                "answer_type": "List",
+                "answer": "Zero activation: polymer film deposition (~0.5 nm) results in negative etch rate, Early activation (5\u201310 s): transition from deposition to etching, Moderate activation (10\u201315 s): onset of positive etch rate and initiation of steady etching, Longer activation (15\u201320 s): gradual increase in etch rate, no clear plateau"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At an activation duration of 10 s, what is the etch rate for both Al\u2082O\u2083 and HfO\u2082?",
+                "answer_type": "Factoid",
+                "answer": "0.0 nm/cycle for both materials (transition point from deposition to etching)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the figure indicate a well-defined ALE window for either material under the tested conditions?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the etch behavior of HfO\u2082 differ from Al\u2082O\u2083 during increasing activation step durations, and what structural property influences this difference?",
+                "answer_type": "Paragraph",
+                "answer": "HfO\u2082 shows a slower increase in etch rate compared to Al\u2082O\u2083, with the slope of the etch rate approximately half that of Al\u2082O\u2083. This difference arises from HfO\u2082\u2019s higher sputtering threshold and stronger resistance to argon ion bombardment, which reduces etching efficiency and delays the onset of steady material removal, highlighting how intrinsic material properties influence ALE performance."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 689,
+            "height": 434
+        }
+    }
+}

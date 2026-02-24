@@ -1,0 +1,240 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/figure_10",
+    "classification": {
+        "a": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "This in situ FTIR spectroscopy measurement shows the progressive loss of infrared absorbance from Al\u2013O stretching vibrations (800\u20131000 cm\u207b\u00b9) during Al\u2082O\u2083 ALE at 300\u00b0C. The spectra are referenced to the initial ZrO\u2082 nanoparticle substrate. As the number of ALE cycles increases from 0 to 4, 6, and 8, the absorbance peak centered around 900 cm\u207b\u00b9 systematically decreases in intensity, directly confirming the removal of Al\u2082O\u2083 material. The Al\u2082O\u2083 film was initially grown using 15 cycles of Al\u2082O\u2083 ALD with TMA and H\u2082O at 150\u00b0C, then etched using sequential TMA and HF exposures at 300\u00b0C."
+    },
+    "data_extraction": {
+        "a": "| Wavenumber (cm\u207b\u00b9) | Absorbance (0 cycles) | Absorbance (4 cycles) | Absorbance (6 cycles) | Absorbance (8 cycles) |\n|---|---:|---:|---:|---:|\n| 1300 | ~0.06 | ~0.05 | ~0.04 | ~0.03 |\n| 1100 | ~0.06 | ~0.05 | ~0.04 | ~0.03 |\n| 940  | ~0.59 | ~0.56 | ~0.50 | ~0.40 |\n| 900  | ~0.53 | ~0.52 | ~0.42 | ~0.38 |\n| 800  | ~0.00 | ~0.00 | ~0.00 | ~0.00 |\n| 700  | ~0.00 | ~0.00 | ~0.00 | ~0.00 |"
+    }, 
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which variable is being studied in the given figure?",
+                "answer_type": "Factoid",
+                "answer": "The absorbance intensity is studied as a function of the number of cycles of etching applied to the Al2O3 films."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How many cycles are needed  to achieve the higher etch value?",
+                "answer_type": "Factoid",
+                "answer": "The etch rate is higher with 8 cycles, which is why the spectra show the lowest absorbance intensity."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the temperature remains constant throughout all the ALE cycles?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How do the ALD cycles affect the absorbance peak of Al2O3?",
+                "answer_type": "Factoid",
+                "answer": "As the number of cycles increases, the absorbance peak of Al2O3 decreases slightly  and shifts towards higher wavenumber values."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the trend in absorbance linear?",
+                "answer_type": "Paragraph",
+                "answer": "The trend in absorbance is non-linear. This does not mean that the etching is non-linear, to conclude this, the integrated absorbance of the full peak must be considered."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "With the full infrared spectrum, can fluorine be detected on the shell of the Al2O3?",
+                "answer_type": "Paragraph",
+                "answer": "Al-F is a bond with permanent dipole so it will vibrate upon IR absorption."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What could be the reason for the narrowing of the peak for the higher wavenumbers?",
+                "answer_type": "Paragraph",
+                "answer": "For thicker films, generally broader peaks are observed, by decreasing the film thickness with the etch process, the peak gets more narrow."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on the IR spectra, does the composition of the film change upon etching?",
+                "answer_type": "Paragraph",
+                "answer": "No the composition does not change based on the given data, as the peak shape remains constant."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the intensity of the main Al\u2013O stretching feature change as the ALE cycle count increases, and what does that imply about the film during etching?",
+                "answer_type": "Paragraph",
+                "answer": "The Al\u2013O stretching peak in the ~900\u20131000 cm\u207b\u00b9 region systematically decreases as the ALE cycle count increases from 0 to 8. Because FTIR absorbance is proportional to the amount of the corresponding bonding environment, this monotonic decrease indicates a reduction in Al\u2013O content. This directly implies progressive thinning or removal of the Al\u2082O\u2083 film during the ALE process."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the key steps required to use FTIR spectra like these to verify Al\u2082O\u2083 removal during ALE?",
+                "answer_type": "Paragraph",
+                "answer": "- Acquire a reference spectrum (here: referenced to the initial ZrO2 nanoparticles) before ALE begins.\n- Record spectra after defined numbers of ALE cycles (e.g., 0, 4, 6, 8).\n- Identify the Al2O3/Al\u2013O stretching region (here centered around ~900\u20131000 cm\u207b\u00b9).\n- Compare peak height/area across cycles to check for a monotonic decrease.\n- Confirm that the baseline regions (outside the Al\u2013O band) remain relatively stable to rule out simple scaling artifacts.\n- Interpret the decreasing Al\u2013O band intensity as reduced Al\u2013O content consistent with material removal."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What vibrational mode is explicitly monitored in this FTIR measurement?",
+                "answer_type": "Factoid",
+                "answer": "The Al\u2013O stretching vibration in bulk Al2O3."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How could the decrease in the Al\u2013O FTIR band be used for endpoint detection or process control in ALE?",
+                "answer_type": "Paragraph",
+                "answer": "The Al\u2013O band intensity provides a chemically specific indicator of the remaining Al\u2082O\u2083 material. An ALE endpoint could be defined when the Al\u2013O absorbance falls below a predetermined threshold or approaches the baseline. Monitoring the rate of absorbance decrease per cycle can also reveal changes in etch efficiency, enabling real-time adjustment of exposure or cycle count to achieve consistent material removal."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why were ZrO\u2082 nanoparticles used as the substrate for FTIR measurements of Al\u2082O\u2083 ALE?",
+                "answer_type": "Paragraph",
+                "answer": "ZrO\u2082 nanoparticles were chosen as the substrate because they provide a high surface area that enhances the FTIR signal from the deposited Al\u2082O\u2083 film and subsequent surface reactions. Critically, ZrO\u2082 absorbs infrared radiation only between approximately 400\u2013800 cm\u207b\u00b9, leaving an open spectral window above 800 cm\u207b\u00b9 where the Al\u2013O stretching vibrations of Al\u2082O\u2083 can be monitored without interference. This allows clear observation of the Al\u2082O\u2083 absorbance changes during the ALE process. The nanoparticles were pressed into a tungsten grid that could be resistively heated for temperature control."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What trend is observed in the Al\u2013O stretching vibration absorbance as ALE cycles progress?",
+                "answer_type": "Factoid",
+                "answer": "The absorbance between 800 and 1000 cm\u207b\u00b9 progressively decreases with increasing ALE cycles, confirming the removal of Al\u2082O\u2083 material."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What vibrational mode does the absorbance peak near 900 cm\u207b\u00b9 correspond to, and why does its intensity indicate material removal?",
+                "answer_type": "Paragraph",
+                "answer": "The broad absorbance peak between 800 and 1000 cm\u207b\u00b9 corresponds to Al\u2013O stretching vibrations in the bulk Al\u2082O\u2083 film. The intensity of infrared absorbance is directly proportional to the amount of the absorbing species present, following Beer-Lambert principles. As the Al\u2082O\u2083 film is etched away through the sequential TMA and HF reactions, there are fewer Al\u2013O bonds available to absorb infrared radiation at these frequencies. The progressive decrease in peak intensity from 0 to 8 ALE cycles therefore provides direct spectroscopic evidence that the Al\u2082O\u2083 material is being removed from the substrate."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does FTIR spectroscopy provide complementary information to QCM for monitoring Al\u2082O\u2083 ALE?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. While QCM measures mass changes, FTIR provides chemical-specific information by tracking the loss of Al\u2013O bonds and can also identify surface intermediates such as AlF* and AlCH\u2083* species formed after HF and TMA exposures, respectively."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the sequence of steps in one Al\u2082O\u2083 ALE cycle as implied by the FTIR monitoring. Explain the purpose of referencing the spectra to the initial ZrO\u2082 nanoparticles.",
+                "answer_type": "List",
+                "answer": "1) Expose the Al\u2082O\u2083 surface to a fluorinating reactant (e.g., HF).\n\n2) Purge with inert gas to remove excess reactant and byproducts.\n\n3) Expose to a second reactant (e.g., TMA) to form volatile species.\n\n4) Purge again to clear the chamber.\nReferencing to the initial ZrO\u2082 nanoparticles subtracts the strong infrared absorption background of the substrate, isolating the signal from the Al\u2082O\u2083 film and allowing accurate measurement of the Al\u2013O bond removal."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast Al\u2082O\u2083 ALE with wet chemical etching using a hydrofluoric acid (HF) solution. For a constraint of etching a precise, ultra-thin layer from a 3D nanostructure, which method is better and what is the trade-off?",
+                "answer_type": "Paragraph",
+                "answer": "ALE is superior for 3D nanostructures because it offers anisotropic, self-limiting etching with perfect conformality. Wet etching is isotropic and difficult to control at the nanometer scale. The trade-off is that ALE is significantly slower and requires more complex equipment than a simple wet etch."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does increasing the number of ALE cycles affect the concentration of Al\u2013O bonds in the film? Connect this trend to the chemical reaction mechanism.",
+                "answer_type": "Paragraph",
+                "answer": "The Al\u2013O bond concentration decreases linearly with each ALE cycle, as shown by the diminishing peak absorbance. This occurs because each cycle converts a self-limiting layer of surface Al\u2082O\u2083 into volatile aluminum fluoride and aluminum methyl species, which are purged away, systematically etching the film."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The linear decrease in Al\u2013O absorbance per cycle demonstrates highly controlled removal. What does this imply for using ALE to trim the thickness of an Al\u2082O\u2083 gate dielectric in an advanced transistor?",
+                "answer_type": "Paragraph",
+                "answer": "This implies that ALE can precisely tune the gate dielectric thickness with atomic-scale accuracy. Such control is essential for setting the exact threshold voltage and leakage current in scaled transistors, enabling performance optimization and device matching across a wafer."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does 0, 4, 6, 8 in the graph represent?",
+                "answer_type": "Factoid",
+                "answer": "It describes the number of ALE cycles and how the FTIR spectra changes after 4 ALE cycles, 6 ALE cycles and 8 ALE cycles."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the range of Al-O stretching?",
+                "answer_type": "Factoid",
+                "answer": "Al-O stretching is observed between 800 cm-1 and 1000 cm\u22121"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens in the FTIR spectra after ALE?",
+                "answer_type": "Paragraph",
+                "answer": "the sample temperature was raised to 300 \u00b0C, and the Al2O3 film was etched using sequential exposures of TMA and HF. FTIR spectra recorded during the TMA and HF exposures at 300 \u00b0C. The progressive loss in absorbance between 800 and 1000 cm\u22121 with ALE cycles is in agreement with the etching of the Al2O3 film."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Was there a reference to FTIR spectra.",
+                "answer_type": "Paragraph",
+                "answer": "Yes. These FTIR spectra were referenced to the initial ZrO2 nanoparticles"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does the progressive change of Al-O peak indicate about the Al\u2082O\u2083 film?",
+                "answer_type": "Paragraph",
+                "answer": "The Al-O peak decreases  as the cycle count increases from 0 to 8. This indicates that the amount of material contributing to that vibration is decreasing with each cycle. Overall, the spectra are consistent with progressive etching of the Al\u2082O\u2083 layer during ALE."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What change in the spectra suggests that the Al\u2082O\u2083 bonding environment might be evolving during cycling?",
+                "answer_type": "Factoid",
+                "answer": "Systematic shift in peak position (from about 930 to ~921 cm\u207b\u00b9)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which spectral feature is not noticeably changing as the number of ALE cycles increases?",
+                "answer_type": "Factoid",
+                "answer": "Peak shape"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the absorbance decrease more slowly at the beginning of cycling or toward the end?",
+                "answer_type": "Factoid",
+                "answer": "It decreases more slowly at the beginning."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "List the ALE cycle numbers shown in the figure",
+                "answer_type": "List",
+                "answer": "0,4,6, 8."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what temperature were the FTIR measurements performed",
+                "answer_type": "Factoid",
+                "answer": "300 \u00b0C"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Do the spectra show that ALE cycles reduce the concentration of the absorbing species?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the main absorbance peak change as more ALE cycles are applied?",
+                "answer_type": "Paragraph",
+                "answer": "The peak near 1000 cm^-1 steadily decreases in height with increasing ALE cycles. The 0-cycle spectrum shows the strongest feature, and each followingspectrum is progressively lower. This indicates that repeated ALE steps remove or change the surface species responsible for this absorption."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the absorbance in the 800\u20131000\u202fcm\u207b\u00b9 region change as the number of Al\u2082O\u2083 ALE cycles increases?",
+                "answer_type": "Factoid",
+                "answer": "The absorbance progressively decreases with increasing ALE cycles."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which structural feature of Al\u2082O\u2083 is monitored in the FTIR spectra during ALE?",
+                "answer_type": "List",
+                "answer": "Al\u2013O stretching vibrations in bulk Al\u2082O\u2083, Surface hydroxyl (Al\u2013OH) groups, indicating surface reactions during ALE"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the observed decrease in Al\u2013O absorbance imply about the performance of the ALE process on Al\u2082O\u2083 films?",
+                "answer_type": "Paragraph",
+                "answer": "The progressive loss of Al\u2013O absorbance indicates effective etching of the Al\u2082O\u2083 film during ALE cycles. This confirms that the sequential TMA and HF exposures at 300\u202f\u00b0C can selectively remove Al\u2082O\u2083 layers on ZrO\u2082 nanoparticles, which is critical for controlled layer-by-layer modification in atomic layer etching applications."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the FTIR data indicate that Al\u2082O\u2083 is being etched during the ALE cycles at 300\u202f\u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 664,
+            "height": 619
+        }
+    }
+}

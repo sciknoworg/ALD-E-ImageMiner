@@ -1,0 +1,269 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/24/fig_4",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Etch rate as a function of modification step duration shows material-dependent behavior. SiO\u2082 increases nearly monotonically, reaching ~0.8 nm/cycle at long times. AlN\u2093 and Al\u2082O\u2083 exhibit mid-range maxima (~6\u201310 s) followed by a decline at longer durations. HfO\u2082 peaks later (~10\u201312 s) at a lower maximum rate. TiN remains near zero or slightly negative across the full duration range.",
+        "b": "The enlarged view emphasizes distinct optimal modification windows: AlN\u2093 peaks earliest (~6\u20138 s), Al\u2082O\u2083 slightly later (~8\u201310 s), and HfO\u2082 latest (~10\u201312 s). Beyond these windows, etch rates decrease, indicating over-modification effects."
+    },
+    "data_extraction": {
+        "a": "| Modification step duration (s) | Al\u2082O\u2083 (nm/cyc) | HfO\u2082 (nm/cyc) | AlN\u2093 (nm/cyc) | TiN (nm/cyc) | SiO\u2082 (nm/cyc) |\n|---|---|---|---|---|---|\n| 0  | ~0.02 | ~0.01 | ~0.02 | ~0.00 | ~0.05 |\n| 4  | ~0.15 | ~0.06 | ~0.17 | ~0.00 | ~0.30 |\n| 6  | ~0.17 | ~0.08 | ~0.18 | ~0.00 | ~0.45 |\n| 10 | ~0.16 | ~0.09 | ~0.17 | ~0.00 | ~0.62 |\n| 12 | ~0.15 | ~0.09 | ~0.16 | ~0.00 | ~0.65 |\n| 14 | ~0.09 | ~0.07 | ~0.10 | ~\u22120.02 | ~0.82 |",
+        "b": "| Modification step duration (s) | Al\u2082O\u2083 (nm/cyc) | HfO\u2082 (nm/cyc) | AlN\u2093 (nm/cyc) |\n|---|---|---|---|\n| 0  | ~0.02 | ~0.01 | ~0.02 |\n| 4  | ~0.15 | ~0.07 | ~0.17 |\n| 6  | ~0.17 | ~0.09 | ~0.19 |\n| 10 | ~0.16 | ~0.10 | ~0.19 |\n| 12 | ~0.16 | ~0.10 | ~0.18 |\n| 14 | ~0.08 | ~0.06 | ~0.10 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which aspect are being evaluated in the process shown in the figure?",
+                "answer_type": "Factoid",
+                "answer": "The etch ratio of different materials such as Al2O3, HfO2, AlNx, TiN, SiO2, is analyzed as a function of modification step duration."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch rate change over the time?",
+                "answer_type": "Factoid",
+                "answer": "The etch rate increases for all materials except for SiO2 up to approximately 5s, after which remains constant until 12s before finally decreasing. In contrast, the etch ratio of SiO2 depend on the duration of the modification step."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which material have the highest and lowest etch rates, respectively?",
+                "answer_type": "Factoid",
+                "answer": "SiO2, and TiN"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What performance advantage is shown when SiO2 is used as material?",
+                "answer_type": "Factoid",
+                "answer": "Using SiO2 enables higher etch ratios to be achieved in a shorter amount of tiem."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Do Al\u2082O\u2083, AlN\u2093, and HfO\u2082 exhibit a stable ALE window at intermediate modification step durations?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch rate change with modification step duration for the materials  ?",
+                "answer_type": "Paragraph",
+                "answer": "For AL2O3, HFO2, and AINx, the etch rate rises rapidly and peaks around 6-8 seconds. It then falls off. TiN's etch rate remains low/inactive across the whole duration. SiO2's etc rate rises throughout the whole duration range."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which material shows the least/no etching under the conditions tested?",
+                "answer_type": "Factoid",
+                "answer": "a2: TiN"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material shows highest sputtering by argon, when modification step is not performed?",
+                "answer_type": "Factoid",
+                "answer": "SiO2 (highest etch rate by modification step t = 0)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which of the materials exhibit an ALE process window? Why?",
+                "answer_type": "Paragraph",
+                "answer": "Al2O3, HfO2, and AlNx show an ALE window. Their etch rate rises with increasing modification time and then becomes nearly constant, indicating self-limiting, surface-saturation behavior characteristic of ALE. SiO2 does not show a clear window because its etch rate keeps increasing with time, and TiN does not because it is essentially not etched."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material pairs would be a good choice for achieving precise, highly selective etching?",
+                "answer_type": "List",
+                "answer": "Al2O3/TiN, HfO2/TiN, AlNx/TiN."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Between what modification-step durations was the ALE window observed and for which substrates?",
+                "answer_type": "Factoid",
+                "answer": "Between 5 and 12 seconds; Al2O3, HfO2 and AlNx."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which material showed no measurable etching regardless of modification step duration?",
+                "answer_type": "Factoid",
+                "answer": "TiN."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What possibly caused the stark difference in etch rate between SiO2 and TiN?",
+                "answer_type": "Paragraph",
+                "answer": "According to the authors, this is most likely due to the difference in volatility between the formed products: the sublimation point of titanium fluoride is at 284 \u25e6C and the boiling point of silicon-fluoride is -86 \u25e6C. Titanium fluoride is much less volatile, which makes etching more difficult and the etch rate slower. The sputtering rate of argon ions on SiO2 is also two to three times higher than that of the other studies materials, which adds to the etch rate."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What causes the etch rate values at 0 s modification step to be non-zero?",
+                "answer_type": "Factoid",
+                "answer": "Although insignificant, the minimal etching is attributed to sputtering by argon ions."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "The etch rate increases linearly with the duration of  modification step for which material?",
+                "answer_type": "Paragraph",
+                "answer": "For SiO2 the etch rate increases linearly with modification step duration, for other materials it is more complex"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the etch rate vs modification step duration compare for Al2O3, HfO2, AlN?",
+                "answer_type": "Paragraph",
+                "answer": "With the increase of modification step duration, the etch rate of Al2O3, AlNx and HfO2 reaches saturation, providing the ALE window. Further rise of modification step leads to the decrease of the etch rate due to too thick film deposition"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does increasing the modification-step duration change the surface chemistry and therefore the etch rate in this ALE process?",
+                "answer_type": "Paragraph",
+                "answer": "Increasing the modification time gives the activating chemicals more time to react with the surface, breaking more bonds and making the material easier to remove. This creates a thicker or more reactive modified layer, which leads to a higher etch rate. However, this effect eventually levels off once the surface is fully saturated."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which of the studied materials exhibits the most stable and lowest etch rate irrespective of the modification step duration?",
+                "answer_type": "Factoid",
+                "answer": "HfO\u2082"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why does SiO2 show continuously increasing etch rate with modification step duration while TiN shows negligible etching, and what are the implications for process selectivity?",
+                "answer_type": "Paragraph",
+                "answer": "SiO2 exhibits continuously increasing etch rate because silicon fluoride (SiF4) desorbs easily at lower temperatures, making it easily removed even with relatively low ion energy bombardment. In contrast, TiN shows virtually no etching because titanium fluoride has a much higher sublimation point, making desorption of reaction products extremely difficult at the process conditions used. This difference in etch behavior provides good selectivity for etching Al2O3, AlNx, and HfO2 over a TiN hard mask."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which material shows the highest etch rate per cycle in this ALE process?",
+                "answer_type": "Factoid",
+                "answer": "AlNx"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what modification step duration does the ALE window begin for Al2O3, AlNx, and HfO2?",
+                "answer_type": "Factoid",
+                "answer": "About 5-6 seconds"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does increasing modification step duration always increase etch rate for all materials?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material has the highest etch rate at 16 s, and which is lowest?",
+                "answer_type": "Factoid",
+                "answer": "Highest: SiO\u2082 (~0.82). \nLowest: TiN (~0)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which material acts as an effective etch-stop under these conditions?",
+                "answer_type": "Factoid",
+                "answer": "TiN."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Can SiO2 be partially selective be etch with respect to any of the other materials, and if so, for which conditions?",
+                "answer_type": "Paragraph",
+                "answer": "a\tSiO2 has a way higher etch rate than for example HfO2, at 15 s of modification duration. This indicates that SiO2, at least partially, can selectively be etch with respect to HfO2."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which material has the highest etch resistance for these chemistries?",
+                "answer_type": "Factoid",
+                "answer": "a\tTiN does not etch for any modification duration."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What modification time is most likely used for industrial applications when etching AlNx?",
+                "answer_type": "Paragraph",
+                "answer": "b\t5 s of modification duration is most likely used as this would have similar etch results as longer times, but reduces the processing time."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is there only etching upon a modification step, and how can you tell?",
+                "answer_type": "Paragraph",
+                "answer": "b\tNo there is continuous etching. For all three materials the etch rate is non-zero at 0 s modification duration."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does increasing the modification step duration influence the etch rate during the ALE process for oxide and nitride materials?",
+                "answer_type": "Paragraph",
+                "answer": "At short modification durations, the surface is only partially covered by the fluorocarbon film, resulting in very low etch rates due to insufficient surface activation. As the modification time increases, a more complete reactive layer forms, enabling efficient ion-assisted reactions during the activation step and causing the etch rate to rise. Beyond an optimal duration, the etch rate saturates, reflecting self-limiting behavior, and may slightly decrease at longer times due to excessive film thickness hindering ion penetration and surface reaction efficiency."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Is the maximum etch rate for AINx higher than that of Al203",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which materials have an etch rate peak in the mid duration range?",
+                "answer_type": "List",
+                "answer": "Al2O3, HfO2, AINx"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which ALE window is observed for AlNx?",
+                "answer_type": "Factoid",
+                "answer": "At modification step duration of 5\u201312 seconds."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the etch rate of TiN  change with modification step duration?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "When does the etch rate of the material go out of saturation ?",
+                "answer_type": "Paragraph",
+                "answer": "The etch rate of Al2O3, AlNx and HfO2 with rise of modification step to 12s lead to the decrease of the etch rate going out of saturation"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do etch-rate trends compare for Al\u2082O\u2083, AlN, and HfO\u2082 over 0\u201316 s modification step duration times?",
+                "answer_type": "List",
+                "answer": "- AlNx: shows the highest etch-rate increase with duration.\n- Al\u2082O\u2083: displays a moderate increase with duration.\n- HfO\u2082: increases more slowly and remains the lowest of the three across the range."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Would Al\u2082O\u2083 be suitable for a manufacturing process that requires precise etch-depth control independent of the modification-step duration ?",
+                "answer_type": "Yes/No",
+                "answer": "No. \n Al\u2082O\u2083 is not suitable for a process that must be highly precise and insensitive to modification-step duration."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the etch rate behavior differ between Al2O3, AlNx, and HfO2 as the modification step duration increases, and what does this reveal about the ALE process window?",
+                "answer_type": "Paragraph",
+                "answer": "All three materials show similar behavior with initial etch rate increase, followed by a plateau at 5-12 seconds representing the ALE window. After 12 seconds, the etch rate decreases. This self-limiting plateau demonstrates atomic layer etching behavior."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How do the optimal modification times differ among AlN\u2093, Al\u2082O\u2083, and HfO\u2082?",
+                "answer_type": "Paragraph",
+                "answer": "AlN\u2093 reaches its maximum etch rate earliest, around 6\u20138 s, followed by Al\u2082O\u2083 at roughly 8\u201310 s, while HfO\u2082 peaks later at about 10\u201312 s. This ordering suggests different kinetics for forming the modified surface state that enables removal, with HfO\u2082 requiring longer modification to reach maximum effectiveness."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which material shows nearly zero etch rate across all modification step durations?",
+                "answer_type": "Factoid",
+                "answer": "TiN"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What material-dependent behaviors distinguish ALE-active materials from non-ALE materials in the figure?",
+                "answer_type": "List",
+                "answer": "Presence of an etch-rate saturation plateau with increasing modification time, Formation of a clear ALE window at intermediate modification durations, Reduced sensitivity to argon sputtering effects, Ability to form a self-limiting modified surface layer"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+        }
+    }
+}

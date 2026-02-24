@@ -8,11 +8,12 @@ The following summarizes the distribution of **papers** and **figures** by each 
 
 | Sub-category | PDF files | JPG files |
 |-------------|-----------|-----------|
-| experimental-usecase | 3 | 27 |
+| experimental-usecase | 7 | 62 |
+| simulation-usecase | 2 | 20 |
 
 ## atomic-layer-etching
 
 | Sub-category | PDF files | JPG files |
 |-------------|-----------|-----------|
-| experimental-usecase | 2 | 26 |
+| experimental-usecase | 5 | 55 |
 | simulation-usecase | 3 | 61 |
