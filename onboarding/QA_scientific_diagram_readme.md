@@ -19,7 +19,7 @@ This guide defines eight question families for annotating MatSci diagrams and ma
 ## Examples
 
 ### Figure 2 — ALD vs ALD/MLD cycle  
-Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_2.jpg
+Link: example_data/1/images/figures/figure_2.jpg
 
 - **Process sequencing & control — Q:** List the correct step order for the ALD sub-cycle (oxidant = O₃).  
   **A (ordered list):** 1) Metal precursor pulse → 2) Purge → 3) O₃ pulse → 4) Purge.
@@ -49,7 +49,7 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
 ---
 
 ### Figure 4 — Precursor families & element coverage  
-Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_4.jpg
+Link: example_data/1/images/figures/figure_4.jpg
 
 - **Taxonomy & coverage — Q:** Name two N-donor ligand families shown and two O-donor families.  
   **A (list):** N-donors: *silylamides, acetamidinates, formamidinates, guanidinates* (any two). O-donors: *diketonates, alkoxides*.
@@ -68,7 +68,7 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
 ---
 
 ### Figure 7 — Supercycle doping  
-Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_7.jpg
+Link: example_data/1/images/figures/figure_7.jpg
 
 **Applicable families:** process sequencing & control; structure–composition–property (SCP) mapping; design/synthesis planning; parameter sensitivity/what-if.
 
@@ -87,7 +87,7 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
 ---
 
 ### Figure 8 — Doping vs homogeneous mixing vs nanolaminates  
-Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_8.jpg
+Link: example_data/1/images/figures/figure_8.jpg
 
 - **Comparative route / trade-off — Q:** What distinguishes doping, homogeneous mixing, and nanolaminates in terms of stacking and interfaces?  
   **A (paragraph):** **Doping** inserts a small number of dopant exposures within a host growth, producing a mostly single-phase film with **few interfaces** and dilute composition. **Homogeneous mixing** interleaves A/B exposures at short periods so that reactions intermix during growth, yielding a **uniform solid solution** (purple block) with **no periodic interfaces**. **Nanolaminates** alternate thicker A and B sublayers, intentionally creating a **high density of sharp interfaces** (red/blue stack) and preserving layer identity over the period.
@@ -111,7 +111,7 @@ Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/im
 ---
 
 ### Figure 15 — Eu(thd)₃–HQA emission & FRET  
-Link: https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/example_data/1/images/figures/figure_15.jpg
+Link: example_data/1/images/figures/figure_15.jpg
 
 **Applicable families:** mechanistic/causal interaction; structure–composition–property (SCP) mapping; comparative route / trade-off analysis; application/performance inference; design / synthesis planning.
 
