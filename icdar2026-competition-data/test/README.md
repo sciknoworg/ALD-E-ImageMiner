@@ -6,9 +6,6 @@ Each release will be announced via the Sci-ImageMiner [Google Group](https://gro
 
 For task definitions and evaluation details, please refer to the [Task Description](https://sites.google.com/view/sci-imageminer/task-description) and [Task Evaluation Metrics](https://sites.google.com/view/sci-imageminer/task-evaluation-metrics) pages.
 
-### 🗂️ Dataset Release Batches
-
-- [Test dataset batch 1](test-batch1-release/)
 
 ### 🗂️ Directory Structure
 
