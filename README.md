@@ -61,13 +61,15 @@ data
 
 #### Overall
 
-| Category | Sub-category | PDFs | Figures | Formulas | Tables |
-| --- | --- | --- | --- | --- | --- |
-| atomic-layer-deposition | experimental-usecase | 66 | 552 | 102 | 76 |
-| atomic-layer-deposition | simulation-usecase | 58 | 579 | 413 | 131 |
-| atomic-layer-etching | experimental-usecase | 46 | 461 | 116 | 28 |
-| atomic-layer-etching | simulation-usecase | 35 | 400 | 226 | 60 |
-| **Total** | - | **205** | **1,992** | **857** | **295** |
+| **Split Name** | **atomic-layer-deposition** | ****    | ****               | ****    | **atomic-layer-etching** | ****    | ****               | ****    | **Total** | ****    |
+|----------------|-----------------------------|---------|--------------------|---------|--------------------------|---------|--------------------|---------|-----------|---------|
+|                | **experimental-usecase**        |         | **simulation-usecase** |         | **experimental-usecase**     |         | **simulation-usecase** |         |           |         |
+|                | **Papers**                      | **Figures** | **Papers**             | **Figures** | **Papers**                   | **Figures** | **Papers**             | **Figures** | **Papers**    | **Figures** |
+| **Train**          | 42                          | 330     | 36                 | 350     | 28                       | 257     | 22                 | 243     | 128       | 1180    |
+| **Dev**            | 6                           | 50      | 6                  | 59      | 5                        | 55      | 3                  | 37      | 20        | 201     |
+| **Test**           | 18                          | 172     | 16                 | 148     | 13                       | 129     | 10                 | 121     | 57        | 570     |
+|                | 66                          | 552     | 58                 | 557     | 46                       | 441     | 35                 | 401     | **205**       | **1951**    |
+
 
 
 #### Figure type classification
@@ -76,41 +78,46 @@ We have defined a taxonomy of 48 figure types including "unknown". The full taxo
 
 Individual statistics for each annotation task dataset distribution are also available i.e. [pilot-annotation-task](data/pilot-annotation-task/README.md) and [full-annotation-task](data/full-annotation-task/README.md).
 
-| Figure Type | Auto Labels | Human Labels |
-| --- | --- | --- |
-| 3d bar chart | 5 | 0 |
-| 3d scatter plot | 23 | 0 |
-| apparatus diagram | 98 | 0 |
-| area chart | 6 | 0 |
-| band diagram | 12 | 0 |
-| bar chart | 46 | 0 |
-| box plot | 4 | 0 |
-| bubble chart | 1 | 0 |
-| conceptual diagram | 127 | 0 |
-| formula | 3 | 0 |
-| grouped bar chart | 26 | 0 |
-| heatmap | 89 | 0 |
-| histogram | 2 | 0 |
-| image panel | 526 | 0 |
-| line chart | 1066 | 0 |
-| line plot | 2 | 0 |
-| map/geo chart | 4 | 0 |
-| molecular structure diagram | 807 | 0 |
-| multi-axis chart | 114 | 0 |
-| multiple line chart | 44 | 0 |
-| network diagram | 1 | 0 |
-| periodic table map | 3 | 0 |
-| pie chart | 8 | 0 |
-| polar chart | 14 | 0 |
-| process flow diagram | 28 | 0 |
-| reaction scheme | 443 | 0 |
-| scatter plot | 201 | 0 |
-| spectra chart | 419 | 0 |
-| stacked bar chart | 4 | 0 |
-| table | 6 | 0 |
-| timeline chart | 6 | 0 |
-| unknown | 12 | 0 |
-| **Total** | **4150** | **0** |
+| **Figure type**                       | **Count** |
+|---------------------------------|-----------|
+| molecular structure diagram     | 734       |
+| multiple line chart             | 443       |
+| image panel                     | 354       |
+| multiple scatter plot           | 265       |
+| multi spectra chart             | 257       |
+| conceptual diagram              | 226       |
+| scatter plot                    | 212       |
+| reaction scheme                 | 205       |
+| line chart                      | 194       |
+| stacked spectra chart           | 158       |
+| multi-axis chart                | 134       |
+| spectra chart                   | 118       |
+| heatmap                         | 103       |
+| reaction energy profile diagram | 85        |
+| apparatus diagram               | 80        |
+| process flow diagram            | 54        |
+| bar chart                       | 50        |
+| unknown                         | 47        |
+| contour heatmap                 | 46        |
+| process timing diagram          | 39        |
+| device structure diagram        | 16        |
+| 3d scatter plot                 | 14        |
+| band diagram                    | 13        |
+| grouped bar chart               | 12        |
+| box plot                        | 10        |
+| stacked bar chart               | 7         |
+| phase diagram                   | 7         |
+| workflow diagram                | 7         |
+| pie chart                       | 4         |
+| timeline chart                  | 3         |
+| periodic table map              | 3         |
+| table                           | 3         |
+| network diagram                 | 2         |
+| polar chart (rose chart)        | 2         |
+| formula                         | 2         |
+| chromaticity diagram            | 1         |
+| area chart                      | 1         |
+| **Total**                           | **3911**      |
 
 ## 📖 Citation  
 
