@@ -28,6 +28,26 @@ icdar2026-competition-data
 │   │   │   └── ...
 ```
 
+## Dataset Distribution Statistics
+
+The following summarizes the distribution of **papers** and **figures** by each main and sub-categories in the dataset.
+
+## atomic-layer-deposition
+
+| Sub-category | PDF files | JPG files |
+|-------------|-----------|-----------|
+| experimental-usecase | 18 | 172 |
+| simulation-usecase   | 17 | 149 |
+|        Total         | 35 | 321 |
+
+## atomic-layer-etching
+
+| Sub-category | PDF files | JPG files |
+|-------------|-----------|-----------|
+| experimental-usecase | 14 | 138 |
+| simulation-usecase   | 10 | 121 |
+|        Total         | 24 | 259 |
+
 ### 📝 Annotations
 
 #### Schema

@@ -35,14 +35,16 @@ The following summarizes the distribution of **papers** and **figures** by each 
 | Sub-category | PDF files | JPG files |
 |-------------|-----------|-----------|
 | experimental-usecase | 6 | 50 |
-| simulation-usecase | 6 | 59 |
+| simulation-usecase   | 6 | 59 |
+|        Total         | 12 | 109 |
 
 ## atomic-layer-etching
 
 | Sub-category | PDF files | JPG files |
 |-------------|-----------|-----------|
 | experimental-usecase | 5 | 55 |
-| simulation-usecase | 3 | 37 |
+| simulation-usecase   | 3 | 37 |
+|        Total         | 8 | 92 |
 
 ### 📝 Annotations
 

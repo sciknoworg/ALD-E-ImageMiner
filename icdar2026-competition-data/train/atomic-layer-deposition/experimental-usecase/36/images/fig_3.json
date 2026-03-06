@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/36/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure shows the growth rate vs plasma time and the growth rate vs TEG pulse time. The growth rate of a material increases with increasing TEG pulse time and plasma time up to a certain point and then plateaus.",
+        "b": "The figure shows the thickness as a function of the number of ALD cycles. The thickness of a material increases linearly with the number of ALD cycles."
+    },
+    "data_extraction": {
+        "a": "| TEG pulse time | Growth rate | Plasma time | Growth rate |\n| --- | --- | --- | --- |\n| 0.00 | 0.015 | 0 | 0.016 |\n| 0.05 | 0.06 | 5 | 0.06 |\n| 0.10 | 0.06 | 10 | 0.06 |\n| 0.20 | 0.06 | 20 | 0.06 |",
+        "b": "| ALD cycle (number) | Thickness (nm) |\n| --- | --- |\n| 0 | 0 |\n| 100 | 7 |\n| 200 | 13 |\n| 300 | 17 |\n| 400 | 25 |\n| 600 | 35 |\n| 700 | - |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the precursors of this process?",
+                "answer_type": "Factoid",
+                "answer": "TEG and O2 plasma."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "When does the growth rate saturate?",
+                "answer_type": "Factoid",
+                "answer": "After 5 s of plasma exposure."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the film thickness change with the number of ALD cycles?",
+                "answer_type": "Factoid",
+                "answer": "The film thickness increases with the number of ALD cycles, in accordance with the ALD process."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Is there a linear relationship between thickness and the number of ALD cycles?",
+                "answer_type": "Yes/No",
+                "answer": "Yes."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 17,
+            "y": 22,
+            "width": 642,
+            "height": 533
+        },
+        "b": {
+            "x": 669,
+            "y": 80,
+            "width": 649,
+            "height": 472
+        }
+    }
+}
