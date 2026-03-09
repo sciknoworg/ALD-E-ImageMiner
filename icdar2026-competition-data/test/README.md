@@ -12,17 +12,30 @@ For task definitions and evaluation details, please refer to the [Task Descripti
 ```text
 icdar2026-competition-data
 ├── test
-│   ├── main-category
-│   │   ├── sub-category
-│   │   │   ├── paper #
-│   │   │   │   ├── images
-│   │   │   │   │   ├── filename.jpg            # (JPEG) actual figure image
-│   │   │   │   │   ├── filename.json           # (JSON) figure annotations
+│   ├── practice-phase
+│   │   ├── main-category
+│   │   │   ├── sub-category
+│   │   │   │   ├── paper #
+│   │   │   │   │   ├── images
+│   │   │   │   │   │   ├── filename.jpg            # (JPEG) actual figure image
+│   │   │   │   │   │   ├── filename.json           # (JSON) figure annotations
+│   │   │   │   │   │   └── ...
+│   │   │   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
+│   │   │   │   │   ├── content.json                    # (JSON) structured content
 │   │   │   │   │   └── ...
-│   │   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
-│   │   │   │   ├── content.json                    # (JSON) structured content
 │   │   │   │   └── ...
-│   │   │   └── ...
+│   ├── remaining-test-data
+│   │   ├── main-category
+│   │   │   ├── sub-category
+│   │   │   │   ├── paper #
+│   │   │   │   │   ├── images
+│   │   │   │   │   │   ├── filename.jpg            # (JPEG) actual figure image
+│   │   │   │   │   │   ├── filename.json           # (JSON) figure annotations
+│   │   │   │   │   │   └── ...
+│   │   │   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
+│   │   │   │   │   ├── content.json                    # (JSON) structured content
+│   │   │   │   │   └── ...
+│   │   │   │   └── ...
 ```
 
 ## Dataset Distribution Statistics
