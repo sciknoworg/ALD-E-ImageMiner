@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/23/figure_6",
+    "classification": {
+        "a": "multiple scatter plot",
+        "b": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the growth rate of a material as a function of TMGa exposure time at two different temperatures, 250\u00b0C and 350\u00b0C.",
+        "b": "The scatter plot illustrates the growth rate of a material as a function of ozone exposure time at two different temperatures, 250\u00b0C and 350\u00b0C."
+    },
+    "data_extraction": {
+        "a": "| TMGa exposure (sec) | Growth rate (\u00c5/cycle) 250 \u00b0C | Growth rate (\u00c5/cycle) 350 \u00b0C |\n|---|---|---|\n| 0.5 | 0.4 | 0.5 |\n| 1.0 | 0.4 | 0.55 |\n| 2.0 | 0.4 | 0.55 |",
+        "b": "| Ozone exposure (sec) | Growth rate (\u00c5/cycle) 250 \u00b0C | Growth rate (\u00c5/cycle) 350 \u00b0C |\n|---|---|---|\n| 1 | 0.15 | 0.5 |\n| 3 | 0.3 | 0.5 |\n| 5 |  | 0.5 |\n| 6 | 0.4 | 0.55 |\n| 12 | 0.5 |  |\n| 18 | 0.5 |  |\n| 24 | 0.55 |  |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what minimum TMGa exposure time does the Ga\u2082O\u2083 growth rate become saturated?",
+                "answer_type": "Factoid",
+                "answer": "0.5 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the saturated Ga\u2082O\u2083 growth rate at 250 and 350 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Roughly 0.4 and 0.5 \u00c5/cycle, respectively."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does substrate temperature affect ozone saturation behavior in Ga\u2082O\u2083 ALD, and what does this reveal about the rate-limiting step of the process?",
+                "answer_type": "Paragraph",
+                "answer": "The saturation of Ga\u2082O\u2083 growth with respect to ozone exposure occurs much faster at 350 \u00b0C than at 250 \u00b0C. At 350 \u00b0C, a saturated growth rate of 0.52 \u00c5/cycle is reached with ozone exposures as short as 3 seconds, whereas at 250 \u00b0C, exposure times of at least 12 seconds are required to reach the same growth rate. This temperature dependence indicates that the reaction between ozone and the TMGa-terminated surface is the rate-limiting step in the ALD process, as higher temperatures facilitate more rapid completion of this surface reaction."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How long must the ozone exposure be at 250 \u00b0C to reach saturation?",
+                "answer_type": "Factoid",
+                "answer": "At least 12 seconds."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 2,
+            "width": 471,
+            "height": 370
+        },
+        "b": {
+            "x": 4,
+            "y": 365,
+            "width": 471,
+            "height": 363
+        }
+    }
+}

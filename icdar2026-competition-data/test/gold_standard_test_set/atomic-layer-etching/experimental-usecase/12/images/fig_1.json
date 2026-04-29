@@ -1,0 +1,275 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/12/fig_1",
+    "classification": {
+        "a": "multi spectra chart",
+        "b": "stacked spectra chart"
+    },
+    "summarization": {
+        "a": "The spectral chart shows the infrared spectra collected at 250 \u00b0C, highlighting the broad absorbance region between 800 and 1100 cm\u207b\u00b9 corresponding to Al\u2013O vibrations in the film. These spectra were recorded after each SF\u2086 plasma/TMA ALE cycle and referenced to the as-deposited Al\u2082O\u2083 spectrum taken prior to the ALE cycles. The figure displays absorbance spectra across the wavenumber range for cycles 1 through 6, showing changes in absorbance at specific wavenumbers.",
+        "b": "The spectral chart shows the Al\u2013CH\u2083 absorbance peaks at 2900 and 3500 cm\u207b\u00b9. The spectra were recorded after each SF\u2086 plasma and TMA half-cycle and are referenced to the spectrum from the previous half-cycle. The figure compares the absorbance spectra for TMA-referenced to SF\u2086 plasma(blue line) and SF\u2086-plasma-referenced to TMA(red line)  for cycles 2, 4, and 6. Sharp absorbance peaks were observed close to 2900 to 2950 cm\u207b\u00b9."
+    },
+    "data_extraction": {
+        "a": "| Wavenumber (cm\u207b\u00b9) | Cycle 1 | Cycle 2 | Cycle 3 | Cycle 4 | Cycle 5 | Cycle 6 |\n|--------------------|---------|---------|---------|---------|---------|---------|\n| 1000              | 0.002   | 0.0018  | 0.0016  | 0.0014  | 0.0012  | 0.0010  |\n| 900               | 0.0018  | 0.0016  | 0.0014  | 0.0012  | 0.0010  | 0.0008  |\n| 800               | 0.0016  | 0.0014  | 0.0012  | 0.0010  | 0.0008  | 0.0006  |",
+        "b": "| Wavenumber (cm\u207b\u00b9) | Cycle 2 (Blue) | Cycle 2 (Red) | Cycle 4 (Blue) | Cycle 4 (Red) | Cycle 6 (Blue) | Cycle 6 (Red) |\n|--------------------|-----------------|---------------|-----------------|---------------|-----------------|---------------|\n| 3000              | +0.005         | -0.005        | +0.005         | -0.005        | +0.005         | -0.005        |\n| 2800              | +0.004         | -0.004        | +0.004         | -0.004        | +0.004         | -0.004        |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which vibrational mode is studied in the subfigure?",
+                "answer_type": "Factoid",
+                "answer": "AlCH3 symmetric and asymmetric stretching modes after SF6 plasma and TMA half cycle are studied, as a funcion of the number of cycles (2,4, and 6)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which reactant enables the removal of methyl groups?",
+                "answer_type": "Factoid",
+                "answer": "SF6 plasma."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What do the absorbance peaks at 2900 and 2950 cm\u207b\u00b9 represent?",
+                "answer_type": "Factoid",
+                "answer": "These peaks correspond to the symmetric and asymmetric stretching modes of AlCH3 groups on the surface, which form after TMA dosing."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Do the reference spectra differ depending on whether TMA or SF\u2086 plasma is used as the reference?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the role of TMA during cycling? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "TMA methylates the surface of the film. It is indicated by the appearance of Al\u2013CH\u2083 bands after the TMA step. These Al\u2013CH\u2083 features are not present after the SF\u2086 plasma half-step, showing that the methyl species are not coming from the plasma exposure."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "After TMA exposure, which new species appear in the spectrum?",
+                "answer_type": "Factoid",
+                "answer": "Methyl-groups."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Are methyl-groups being accumulated on the surface upon cycling?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At which wavenumbers  are the absorbance peaks for Al-CH3 typically observed?",
+                "answer_type": "Factoid",
+                "answer": "At 2900 and 2950 cm^-1."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What do the observed difference spectra tell us about the process?",
+                "answer_type": "Paragraph",
+                "answer": "Sub-figure b shows how the absorbance has changed after SF6 exposure with a reference spectrum taken after TMA exposure (blue). The reverse is also shown in red. The baseline of these two difference spectra is marked by the dashed line. As the blue and red lines are almost perfect mirror images (relative to the dashed line), this tells us that SF6 and TMA successfully react to remove and form methyl surface groups during each half cycle respectively."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What can be said about AlCH3 absorbance peaks at 2900 and 2950 cm-1?",
+                "answer_type": "Paragraph",
+                "answer": "Following TMA dosing, AlCH3 surface species are observed as indicated by an increase in the CH3 absorbance peak. These methyl groups are thought to be\nformed after removal of the fluorinated surface layer, allowing excess TMA to adsorb on the bulk Al2O3. After SF6 plasma exposure, a negative CH3 peak is observed, indicating the removal of surface methyl groups, which is attributed to ligand exchange reactions between methyl groups and fluorine atoms."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what temperature were these spectra collected?",
+                "answer_type": "Factoid",
+                "answer": "At 250 \u00b0C."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the spectral data in figure support the conclusion that this process is suitable for manufacturing devices requiring \u00c5ngstr\u00f6m-level depth control?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. The data supports this because the absorbance peaks for Cycles 2, 4, and 6 are nearly identical in intensity and shape. This repeatability implies a constant \"Etch Per Cycle\" (EPC) without significant drift, allowing engineers to precisely control the total etch depth simply by counting the number of cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the difference spectra in subfigure (b), how does the surface chemistry change during the TMA half-cycle versus the SF\u2086 plasma half-cycle?",
+                "answer_type": "Paragraph",
+                "answer": "During the TMA half-cycle (blue lines), positive absorbance peaks appear at 2900 and 2950 cm\u207b\u00b9, corresponding to AlCH\u2083 symmetric and asymmetric stretching modes, which indicates that TMA adsorbs onto the surface and methylates it. Conversely, during the SF\u2086 plasma half-cycle (red lines), these same peaks appear as negative features. This indicates the removal of the methyl groups introduced in the previous step, likely replaced by fluorine atoms from the plasma radicals, consistent with a ligand-exchange mechanism."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What specific chemical functional group is identified by the peaks at 2900 and 2950 cm\u207b\u00b9 in subfigure (b)?",
+                "answer_type": "Factoid",
+                "answer": "These peaks correspond to the symmetric and asymmetric stretching vibrations of methyl groups (\u2013CH\u2083) bonded to aluminum (AlCH\u2083 surface species)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the negative difference spectrum observed after the SF\u2086 plasma half-cycle in subfigure (b) indicate the removal of surface methyl groups?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why do \u2013CH\u2083 stretching features appear after TMA exposure but disappear after the subsequent SF\u2086 plasma step?",
+                "answer_type": "Paragraph",
+                "answer": "TMA exposure introduces surface-bound methyl ligands through ligand-exchange reactions with fluorinated aluminum sites. These \u2013CH\u2083 groups are transient and serve as intermediates rather than permanent surface species. The following SF\u2086 plasma step removes the methyl ligands, returning the C\u2013H region to baseline and regenerating a fluorinated surface. This reversible behavior indicates clean, self-limiting surface chemistry without carbon accumulation."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the absence of residual \u2013CH\u2083 signal after SF\u2086 plasma imply for ALE process reliability?",
+                "answer_type": "Factoid",
+                "answer": "It indicates complete ligand removal each cycle, preventing carbon buildup and enabling repeatable ALE behavior."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "In the spectrum there is a tiny negative bumb around 2700 cm-1, what does this mean?",
+                "answer_type": "Paragraph",
+                "answer": "The specific wavenumber is related to -OH groups. It could indicate the adsorption of TMA on these groups."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the SF6 plasma treatment affect the AlCH3 peaks?",
+                "answer_type": "List",
+                "answer": "The SF6 plasma removes surface methyl groups resulting in a decrease of the AlCH3 peaks due to ligand exchange reactions with fluorine atoms, Formation of Al\u2013F bonds and surface fluorination further suppress Al\u2013CH\u2083 related vibrational features in the FTIR spectra."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How many cycles are needed to weaken the Al-O bond?",
+                "answer_type": "Factoid",
+                "answer": "6 cycles"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How the Al-O changes over the cycles",
+                "answer_type": "Factoid",
+                "answer": "The Al-O absorbance band decreses with increasing the number of cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is there an ALE process visible and how is this shown?",
+                "answer_type": "Paragraph",
+                "answer": "Al-O absorbance decreases for increasing cycle number indicating that there is less Al2O3, meaning there is etching."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Is the same type of Al-O removed each cycle in terms of bonding?",
+                "answer_type": "Paragraph",
+                "answer": "It seems that the wavenumber range around 850 cm-1 does not have the same fluctuation each cycle, indicating that there is a difference."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Eventhough the exact change in absorbance is not the same at 800 and 1100 cm-1, could it still be that they are both related to the same amount of etching for different species?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, this could be as not every vibrations is as likely to occur, which means that differences in absorption for different wavenumbers do not have to be the same."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What change occurs in the Al\u2013O absorbance band between 800 and 1100 cm\u207b\u00b9 as the ALE cycle number increases from 1 to 6?",
+                "answer_type": "Factoid",
+                "answer": "The Al\u2013O absorbance decreases monotonically with increasing cycle number."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the evolution of the Al\u2013O difference signal in panel (a) show evidence of etch saturation by cycle 6?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What trend is observed in the Al\u2013O absorbance band in subfigure (a) as the number of ALE cycles increases from 1 to 6, and what does this signify regarding the film thickness?",
+                "answer_type": "Paragraph",
+                "answer": "The absorbance of the Al\u2013O band, located between 800 and 1100 cm\u207b\u00b9, systematically decreases with each subsequent ALE cycle, as indicated by the arrow labeled \"Increasing Cycles.\" Since infrared absorbance in this region is proportional to the amount of Al\u2013O bonds present, this reduction signifies the layer-by-layer removal of the Al\u2082O\u2083 film, confirming that the process is indeed etching the material."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the increasing absorbance in the Al-O region (800-1100 cm\u207b\u00b9) over cycles 1-6 in Fig. a, describe the sequence of the surface's chemical state change during the ALE process.",
+                "answer_type": "List",
+                "answer": "Initial Al\u2082O\u2083 surface (reference, 0 cycles).\n\nSF\u2086 plasma converts surface Al-O to Al-F, reducing Al-O absorbance.\n\nTMA reacts with Al-F, releasing volatile products and potentially leaving some Al-CH\u2083.\n\nRepeated cycles progressively alter the near-surface oxide structure, changing the Al-O absorbance signature as seen in the growing, shifted peaks."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "The broad Al-O absorbance peak in Fig. a shifts and changes shape between cycles 1 and 6. What does this evolution imply about the structural or compositional change in the film's near-surface region?",
+                "answer_type": "Paragraph",
+                "answer": "The shifting peak indicates a change in the local bonding environment of aluminum and oxygen. The initial Al\u2082O\u2083 has a specific crystalline or amorphous structure. The cyclic fluorination and ligand exchange likely create a modified, possibly disordered or fluorine-incorporated, oxyfluoride surface layer (AlO\u2093F\u1d67), which has different vibrational energies than pure Al\u2082O\u2083. This maps directly to a change in the material's etch susceptibility."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What specific physical change in the film structure is directly correlated with the downward trend of the broad absorbance feature between 800 and 1100 cm\u207b\u00b9 in the spectra image?",
+                "answer_type": "Factoid",
+                "answer": "The decrease in absorbance in this region maps directly to the breaking of Al\u2013O bonds and the subsequent reduction in film thickness, confirming that bulk material is being removed layer-by-layer."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to the absorbance with increasing cycles?",
+                "answer_type": "Factoid",
+                "answer": "The intensity of the absorbance decreases with increasing cycles."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does a decrease in absorption corresponds to the removal of species?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the absorbance change as the number of cycle increases/",
+                "answer_type": "Factoid",
+                "answer": "The absorbance decreases with the increasing number of ALE cycles, which corresponds to the removal of material after each ALE cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the source of fluorine radicals in this ALE process?",
+                "answer_type": "Factoid",
+                "answer": "SF6."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does the change in Al-O region imply about what\u2019s happening to the Al\u2082O\u2083 film during cycling?",
+                "answer_type": "Paragraph",
+                "answer": "The Al\u2013O band shows a progressive decrease in absorbance from cycle 1 to cycle 6. This indicates a reduction in Al\u2013O\u2013containing material relative to the initial film. The monotonic decline is consistent with cumulative etching of Al\u2082O\u2083 over successive cycles."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the absorbance change with increasing cycle number ?",
+                "answer_type": "Paragraph",
+                "answer": "The absorbance increases with increasing cycle number, particularly in the Al\u2013O related region, indicating progressive accumulation or modification of surface species during repeated cycles."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What quantity is plotted on the x-axis in both panels?",
+                "answer_type": "Factoid",
+                "answer": "Wavenumber (cm\u207b\u00b9)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does a decrease in absorption in the IR spectra indicate, the removal of species from the Al2O3 surface, in Figure 1?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, A decrease in absorption corresponds to the removal of species from the Al2O3 surface, such as the Al\u2013O bonds removed during each SF6 plasma/TMA ALE cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the reference point for the spectra in figure (a) and (b)?",
+                "answer_type": "Paragraph",
+                "answer": "In Figure (a), spectra are referenced to the as-deposited Al2O3 film before ALE cycles. In figure (b), spectra are referenced to the previous half-cycle to highlight changes after each TMA or SF6 plasma exposure."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which spectral regions show notable changes in these absorbance spectra?",
+                "answer_type": "List",
+                "answer": "The Al\u2013O related band region, The C\u2013H stretching region"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 4,
+            "width": 318,
+            "height": 552
+        },
+        "b": {
+            "x": 317,
+            "y": 9,
+            "width": 283,
+            "height": 550
+        }
+    }
+}

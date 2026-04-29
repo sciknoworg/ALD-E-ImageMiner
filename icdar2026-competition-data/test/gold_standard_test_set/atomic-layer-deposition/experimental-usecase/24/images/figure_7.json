@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/24/figure_7",
+    "classification": {
+        "a": "spectra chart"
+    },
+    "summarization": {
+        "a": "This spectral chart shows the mass spectrometry (MS) fragmentation pattern of the titanium precursor Cp*Ti(OMe)\u2083. The spectrum reveals the molecule breaks apart under ionization, with the base peak at m/e = 214 corresponding to the TiCp*(OMe) fragment, indicating the Ti\u2013Cp* bond is stronger than the Ti\u2013OMe bonds."
+    },
+    "data_extraction": {
+        "a": "| m/e | Approximate intensity (a.u.) | Species            |\n|----:|------------------------------|--------------------|\n| 135 | ~10\u207b\u00b3                        | Cp*                |\n| 141 | ~10\u207b\u00b3                        | Ti(OMe)\u2083           |\n| 150 | ~10\u207b\u2074                        | MeCp*              |\n| 166 | ~10\u207b\u2074                        | (OMe)Cp*           |\n| 183 | ~10\u207b\u00b3                        | TiCp*              |\n| 199 | ~10\u207b\u00b3                        | TiCp*O             |\n| 214 | ~10\u207b\u00b2                        | TiCp*(OMe)         |\n| 231 | ~10\u207b\u2074                        | TiCp*O\u2083            |\n| 245 | ~10\u207b\u00b3                        | TiCp*(OMe)\u2082        |\n| 276 | ~10\u207b\u00b3                        | TiCp*(OMe)\u2083        |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the fragmentation pattern, identify the 'Base Peak' (highest intensity). If you were setting up a Residual Gas Analyzer (RGA) to specifically detect leaks or the presence of this precursor in the foreline, which m/e ratio  should be tracked for maximum sensitivity?",
+                "answer_type": "Paragraph",
+                "answer": "The base peak is at m/e = 214. Since this is the most abundant fragment produced in the ionizer (highest intensity), monitoring this specific mass-to-charge ratio provides the highest signal-to-noise ratio for detecting the presence of the precursor vapor in the system."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Synthesize this fragmentation data with the previous Time-Resolved MS data , where Methanol was released during the precursor pulse). If the(Ti\u2013Cp*) bond is so stable (as shown here), but the process successfully grows TiO2, what chemical agent in the ALD cycle must be responsible for finally breaking this 'stubborn' Cp* ring off the surface?",
+                "answer_type": "Paragraph",
+                "answer": "The fragmentation data shows that the Cp* ring is strongly bound and remains intact during precursor adsorption. Complete removal of this bulky ligand requires the strong oxidizing action of the O\u2083 pulse, which \u201cburns off\u201d the Cp* group, as confirmed by the large CO\u2082 release observed only during ozone exposure."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Compare the intensities of the TiCp*(OMe)\u2082 fragment (m/e 245) and the Ti(OMe)\u2083 fragment (m/e 141). What does the much lower intensity of the Cp*-free fragment (m/e 141) imply about the relative bond strengths of the titanium\u2013cyclopentadienyl (Ti\u2013Cp*) bond and the titanium\u2013methoxy (Ti\u2013OMe) bond?",
+                "answer_type": "Paragraph",
+                "answer": "The peak at m/e 245, where the Cp* ligand remains intact, is significantly stronger than the peak at m/e 141, where the Cp* ligand is lost. This indicates that the Ti\u2013Cp* bond is more stable under ionization than the Ti\u2013OMe bond, so the molecule preferentially loses methoxy ligands rather than breaking the metal\u2013ring bond. Such stability is desirable for ALD precursors, as it supports thermal robustness during transport to the substrate."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The fragmentation pattern shows the precursor breaks into distinct, ligand-free titanium-containing fragments (e.g., Ti(OMe)\u2083\u207a at m/e=141). What does this imply for its use in ALD to grow pure TiO\u2082 films?",
+                "answer_type": "Paragraph",
+                "answer": "It implies the precursor is well-suited for ALD. The clear loss of organic ligands (OMe, Cp*) as neutral fragments or volatile ions suggests these groups can be cleanly removed during the oxidant pulse (e.g., with O\u2083 or H\u2082O), minimizing carbon incorporation and facilitating the deposition of high-purity, stoichiometric TiO\u2082."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 626,
+            "height": 508
+        }
+    }
+}

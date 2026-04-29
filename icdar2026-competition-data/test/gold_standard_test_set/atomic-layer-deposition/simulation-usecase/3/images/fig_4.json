@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/3/fig_4",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart illustrates the growth per cycle at different temperatures for two experimental conditions and one numerical simulation"
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | Experimental-8s purging (\u00c5/Cycle) | Experimental-20s purging (\u00c5/Cycle) | Numerical simulation (\u00c5/Cycle) |\n|---|---|---|---|\n| 100 | 1.01 | 1.04 | 1.09 |\n| 150 | 1.06 | 1.14 | 1.19 |\n| 200 | 1.14 | 1.16 | 1.23 |\n| 250 | 1.10 | 1.07 | 1.21 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How well do the numerical simulation results agree with experimental measurements?",
+                "answer_type": "Paragraph",
+                "answer": "The numerical GPC closely follows the experimental trends, with values approximately 0.05 \u00c5/cycle higher on average. This slight overestimation is attributed to model simplifications such as assuming 100% hydroxyl coverage at the initial state and neglecting intermediate reaction products. The overall agreement validates the numerical model for studying ALD process details."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the three different colored curves represent?",
+                "answer_type": "Paragraph",
+                "answer": "Black squares: experimental data with 8 s purging; red circles: experimental data with 20 s purging; green triangles: numerical simulation results."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which temperature does the numerical simulation predict maximum GPC?",
+                "answer_type": "Factoid",
+                "answer": "200\u00b0C, with approximately 1.22 \u00c5/cycle."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why does the numerical model overestimate growth rates compared to experiments?",
+                "answer_type": "Paragraph",
+                "answer": "(1) The model assumes perfect 100% hydroxyl coverage on wafer surfaces initially, (2) complex intermediate products from DFT studies are neglected for computational feasibility, and (3) local variations in precursor concentration and surface conditions are simplified."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 0,
+            "width": 595,
+            "height": 511
+        }
+    }
+}

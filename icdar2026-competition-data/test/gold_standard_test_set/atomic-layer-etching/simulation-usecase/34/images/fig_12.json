@@ -1,0 +1,79 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/34/fig_12",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multiple line chart",
+        "d": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multiple line chart shows HF flow rate control over batch number. The EWMA and ANN predictions initially deviate slightly from the target but converge toward it as batches progress.",
+        "b": "The multiple line chart shows TMA flow rate adjustment across batches. Early deviations are reduced over time, with ANN tracking the target more closely than the EWMA curves.",
+        "c": "The multiple line chart shows substrate velocity over batch number. Initial oscillations decrease with batch number, and all methods converge toward the target velocity.",
+        "d": "The multiple line chart shows EPC over batch number. Both EWMA and ANN predictions converge toward the target EPC, with ANN exhibiting faster stabilization."
+    },
+    "data_extraction": {
+        "a": "| Batch number | Target | EWMA (\u03bb=0.7) | EWMA (\u03bb=0.3) | ANN   |\n|--------------|--------|--------------|--------------|-------|\n| 1            | ~20    | ~20.2        | ~19.8        | ~20.1 |\n| 10           | ~20    | ~20.1        | ~19.9        | ~20.0 |\n| 20           | ~20    | ~20.0        | ~20.0        | ~20.0 |",
+        "b": "| Batch number | Target | EWMA (\u03bb=0.7) | EWMA (\u03bb=0.3) | ANN   |\n|--------------|--------|--------------|--------------|-------|\n| 1            | ~45    | ~47          | ~43          | ~45   |\n| 10           | ~45    | ~46          | ~44          | ~45   |\n| 20           | ~45    | ~45          | ~45          | ~45   |",
+        "c": "| Batch number | Target | EWMA (\u03bb=0.7) | EWMA (\u03bb=0.3) | ANN   |\n|--------------|--------|--------------|--------------|-------|\n| 1            | ~70    | ~75          | ~65          | ~70   |\n| 10           | ~70    | ~72          | ~68          | ~70   |\n| 20           | ~70    | ~70          | ~70          | ~70   |",
+        "d": "| Batch number | Target | EWMA (\u03bb=0.7) | EWMA (\u03bb=0.3) | ANN   |\n|--------------|--------|--------------|--------------|-------|\n| 1            | ~0.04  | ~0.06        | ~0.03        | ~0.04 |\n| 10           | ~0.04  | ~0.05        | ~0.04        | ~0.04 |\n| 20           | ~0.04  | ~0.04        | ~0.04        | ~0.04 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the EWMA and ANN methods behave over increasing batch number?",
+                "answer_type": "Paragraph",
+                "answer": "Both methods show larger deviations from the target. At early batches methods progressively converge as batch number increases. The ANN curves generally stabilize faster and exhibit smaller oscillations compared to the EWMA curves."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which variables are controlled across the four panels?",
+                "answer_type": "List",
+                "answer": "HF flow rate, TMA flow rate, Substrate velocity, Etching per cycle (EPC"
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Do all control variables converge toward their target values by the final batches?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the x-axis represent in all four panels?",
+                "answer_type": "Factoid",
+                "answer": "Batch number."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 185,
+            "y": 0,
+            "width": 650,
+            "height": 40
+        },
+        "b": {
+            "x": 514,
+            "y": 55,
+            "width": 497,
+            "height": 380
+        },
+        "c": {
+            "x": 9,
+            "y": 457,
+            "width": 497,
+            "height": 384
+        },
+        "d": {
+            "x": 516,
+            "y": 462,
+            "width": 495,
+            "height": 379
+        }
+    }
+}

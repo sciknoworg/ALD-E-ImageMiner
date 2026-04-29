@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/25/figure_5",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Free-energy profiles for the SE1 (blue) and SL1 (orange) reactions of HfO\u2082 as functions of temperature. Below T\u2081 = 657 K, the self-limiting pathway is thermodynamically favored. Between T\u2081 and T\u2082 = 813 K, spontaneous etching becomes preferred. Above T\u2082, the self-limiting reaction is endergonic, and the system operates in a purely etching regime.",
+        "b": "Free-energy profiles for the SE1 and SL1 reactions of ZrO\u2082 showing analogous temperature-dependent behavior, with transitions at lower temperatures (T\u2081 = 534 K and T\u2082 = 770 K). Compared to HfO\u2082, ZrO\u2082 enters the preferred and purely etching regimes at lower temperatures, indicating reduced thermal stability of the self-limiting state."
+    },
+    "data_extraction": {
+        "a": "| Temperature [K] | \u0394G (SE1 - Blue) [eV] | \u0394G (SL1 - Orange) [eV] | Condition |\n|---|---|---|---|\n| 0 | ~ -0.75 | ~ -3.0 | Start |\n| 657 | ~ -0.6 | ~ -0.6 | T1 (Crossover) |\n| 813 | ~ -0.55 | 0.0 | T2 (Zero crossing) |\n| 1000 | ~ -0.45 | ~ +0.7 | End |",
+        "b": "| Temperature [K] | \u0394G (SE1 - Blue) [eV] | \u0394G (SL1 - Orange) [eV] | Condition | \n|---|---|---|---| \n| 0 | ~ -1.0 | ~ -2.8 | Start | \n| 534 | ~ -0.9 | ~ -0.9 | T1 (Crossover) | \n| 770 | ~ -0.8 | 0.0 | T2 (Zero crossing) | \n| 1000 | ~ -0.7 | ~ +0.8 | End |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "According to the plot, what happens to the self-limiting reaction for HfO\u2082 at temperatures above 813 K (T\u2082)?",
+                "answer_type": "Paragraph",
+                "answer": "Above 813 K, the free energy change (\u0394G) for the self-limiting reaction becomes positive. This means the reaction becomes endergonic and is no longer thermodynamically spontaneous, indicating that a stable self-limiting layer cannot form under these conditions."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which reaction is thermodynamically favored at T = 0 K for HfO\u2082?",
+                "answer_type": "Factoid",
+                "answer": "The self-limiting reaction (SL1)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on subfigure (a), what temperature range would be optimal for controlled ALE of HfO\u2082?",
+                "answer_type": "Paragraph",
+                "answer": "Temperatures below approximately 657 K are optimal, as the self-limiting reaction is thermodynamically favored while spontaneous etching is suppressed, allowing precise atomic layer removal."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the free energy of the spontaneous etching reaction (SE1) for ZrO\u2082 positive or negative at 1000 K?",
+                "answer_type": "Factoid",
+                "answer": "Negative."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 2,
+            "width": 438,
+            "height": 392
+        },
+        "b": {
+            "x": 0,
+            "y": 407,
+            "width": 442,
+            "height": 389
+        }
+    }
+}

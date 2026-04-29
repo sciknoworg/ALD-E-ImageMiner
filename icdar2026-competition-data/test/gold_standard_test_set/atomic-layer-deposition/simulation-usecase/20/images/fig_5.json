@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/20/fig_5",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "TMA and water concentrations at position B (water side) over time for three relative pumping pressures (0, 0.05, 0.1 torr above base pressure). Higher pumping pressure results in higher TMA intermixing, with 0.1 torr yielding approximately 2.2\u00d710\u207b\u2075 mol/m\u00b3 TMA compared to less than 1\u00d710\u207b\u2075 mol/m\u00b3 at 0 torr. Water (home precursor) shows similar steady state levels across all pressures.",
+        "b": "TMA and water concentrations at position C (TMA side) over time for three relative pumping pressures. Higher pumping pressure increases water intermixing, with steady state water concentration approximately doubling from 2\u00d710\u207b\u2074 mol/m\u00b3 at 0 torr to 5\u00d710\u207b\u2074 mol/m\u00b3 at 0.1 torr. TMA (home precursor) reaches similar levels across all pressures."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | TMA-0 torr (mol/m\u00b3) | TMA-0.05 torr (mol/m\u00b3) | TMA-0.1 torr (mol/m\u00b3) | Water-0 torr (mol/m\u00b3) | Water-0.05 torr (mol/m\u00b3) | Water-0.1 torr (mol/m\u00b3) |\n|---|---|---|---|---|---|---|\n| 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 0.005 | 0.00 | 0.00 | 0.00 | 2.5E-3 | 3.2E-3 | 4.0E-3 |\n| 0.010 | 0.10E-5 | 0.20E-5 | 0.20E-5 | 4.8E-3 | 5.5E-3 | 6.2E-3 |\n| 0.020 | 0.50E-5 | 0.80E-5 | 0.85E-5 | 6.1E-3 | 6.4E-3 | 6.7E-3 |\n| 0.030 | 0.80E-5 | 1.40E-5 | 1.60E-5 | 6.3E-3 | 6.5E-3 | 6.8E-3 |\n| 0.040 | 0.95E-5 | 1.70E-5 | 2.20E-5 | 6.3E-3 | 6.5E-3 | 6.9E-3 |",
+        "b": "| Time (s) | TMA-0 torr (mol/m\u00b3) | TMA-0.05 torr (mol/m\u00b3) | TMA-0.1 torr (mol/m\u00b3) | Water-0 torr (mol/m\u00b3) | Water-0.05 torr (mol/m\u00b3) | Water-0.1 torr (mol/m\u00b3) |\n|---|---|---|---|---|---|---|\n| 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 0.010 | 0.80E-3 | 1.00E-3 | 1.20E-3 | 0.50E-4 | 0.80E-4 | 1.20E-4 |\n| 0.020 | 2.40E-3 | 2.70E-3 | 2.90E-3 | 1.90E-4 | 2.60E-4 | 3.50E-4 |\n| 0.030 | 3.20E-3 | 3.60E-3 | 3.70E-3 | 2.00E-4 | 3.00E-4 | 4.90E-4 |\n| 0.040 | 3.60E-3 | 4.10E-3 | 4.30E-3 | 2.10E-4 | 3.10E-4 | 5.30E-4 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does \"0 torr\" relative pumping pressure mean in this context?",
+                "answer_type": "Factoid",
+                "answer": "It means the pumping pressure equals the base vacuum pressure of 0.22 torr, representing the ideal pumping condition with maximum pressure difference driving convective flow."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which pumping condition minimizes precursor intermixing?",
+                "answer_type": "Paragraph",
+                "answer": "The 0 torr relative pumping pressure (equal to the base pressure of 0.22 torr) minimizes intermixing, as it maintains the maximum pressure gradient for effective convective gas removal."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why does the home precursor concentration remain relatively unchanged across different pumping pressures while the foreign precursor concentration varies significantly?",
+                "answer_type": "Factoid",
+                "answer": "The home precursor is continuously supplied directly above each monitoring position, maintaining its concentration regardless of pumping efficiency, while foreign precursor levels depend on how effectively the exhaust system prevents cross-contamination through convective purging."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does increasing relative pumping pressure affect precursor intermixing?",
+                "answer_type": "Paragraph",
+                "answer": "Higher relative pumping pressure increases precursor intermixing at both monitoring positions. At the water side (a), TMA concentration roughly doubles from 0 torr to 0.1 torr. At the TMA side (b), water concentration increases from approximately 2\u00d710\u207b\u2074 to 5\u00d710\u207b\u2074 mol/m\u00b3. This occurs because higher pumping pressure reduces the pressure difference between inlets and outlets, weakening convective mass transport and allowing more diffusive mixing of precursors."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 5,
+            "width": 659,
+            "height": 463
+        },
+        "b": {
+            "x": 0,
+            "y": 472,
+            "width": 665,
+            "height": 452
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/28/fig12",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Thermodynamic profile comparing the Gibbs free energy (\u0394G) of three etching mechanisms (CVE1, CVE2, SL) versus temperature. CVE1 and CVE2 remain exergonic (\u0394G < 0) across the entire temperature range. The SL reaction transitions from exergonic to endergonic at 110 K, becoming thermodynamically unfavorable at higher temperatures."
+    },
+    "data_extraction": {
+        "a": "| Temperature (K) | \u0394G (eV) - SL(Green) | \u0394G (eV) - CVE2 (Blue) | \u0394G (eV)- CVE1 (Red) |\n|-----------------|---------------------|------------------------|-------------------------|\n| 0             | -0.5           | -1.0            | -1.3            |\n| 110           | 0.0            | -1.1            | -1.5            |\n| 200           | 0.5            | -1.1            | -1.6            |\n| 400           | 1.8            | -1.1            | -1.7            |\n| 600           | 3.0            | -1.1            | -1.8            |\n| 800           | 4.2            | -1.2            | -1.9            |\n| 1000          | 5.2            | -1.2            | -2.0            |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the thermodynamic stability of the SL reaction versus the CVE1 reaction as the temperature increases above 110 K.",
+                "answer_type": "Paragraph",
+                "answer": "Above 110 K, the two mechanisms diverge significantly. The SL reaction becomes endergonic (\u0394G > 0), meaning it is thermodynamically unfavorable and unlikely to proceed spontaneously. In contrast, the CVE1 reaction remains strongly exergonic (\u0394G becoming more negative), indicating it is the thermodynamically preferred and dominant etching pathway at higher temperatures."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what specific threshold temperature does the Sublimation-Like (SL) reaction transition from being exergonic (favorable) to endergonic (unfavorable)?",
+                "answer_type": "Factoid",
+                "answer": "110 K"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "List the three specific reaction mechanisms whose Gibbs free energy profiles are compared in this figure.",
+                "answer_type": "List",
+                "answer": "CVE1, CVE2, SL"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the CVE2 reaction ever become endergonic (\u0394G > 0) within the plotted temperature range of 0 to 1000 K?",
+                "answer_type": "Paragraph",
+                "answer": "No, it remains exergonic (\u0394G < 0) throughout the entire range."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 662,
+            "height": 606
+        }
+    }
+}

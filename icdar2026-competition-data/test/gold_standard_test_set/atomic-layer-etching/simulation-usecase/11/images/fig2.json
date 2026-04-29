@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/11/fig2",
+    "classification": {
+        "a": "network diagram"
+    },
+    "summarization": {
+        "a": "A neural network architecture with input nodes, hidden layers, and an output node."
+    },
+    "data_extraction": {
+        "a": ""
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the input nodes x\u2081 and x\u2082 represent in this FNN model?",
+                "answer_type": "Factoid",
+                "answer": "x\u2081 represents temperature (K) and x\u2082 represents pressure (Pa) of the ALE process operating conditions."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How are separate FNN models used for Steps A and B?",
+                "answer_type": "Paragraph",
+                "answer": "Two identical FNN architectures are trained separately for Step A (HF fluorination) and Step B (TMA etching). Each model takes temperature and pressure as inputs and predicts the corresponding half-cycle time. The models are trained on 80% of kMC simulation data and validated on the remaining 20%. Both use 50 neurons in each hidden layer and the exponential linear unit (ELU) activation function."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What activation function is used in this FNN and why?",
+                "answer_type": "Factoid",
+                "answer": "The exponential linear unit (ELU) activation function is used for effective gradient propagation and smoother prediction compared to other activation functions."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the key computational advantage of the trained FNN over direct kMC simulation?",
+                "answer_type": "Factoid",
+                "answer": "The FNN predicts half-cycle times in less than one second, compared to approximately 20 minutes per kMC simulation, enabling real-time process control applications."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 5,
+            "width": 604,
+            "height": 427
+        }
+    }
+}

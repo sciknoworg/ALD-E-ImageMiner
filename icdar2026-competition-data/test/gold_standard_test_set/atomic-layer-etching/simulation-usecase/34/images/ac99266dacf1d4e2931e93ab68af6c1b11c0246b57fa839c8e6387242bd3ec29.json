@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/34/ac99266dacf1d4e2931e93ab68af6c1b11c0246b57fa839c8e6387242bd3ec29",
+    "classification": {
+        "a": "heatmap"
+    },
+    "summarization": {
+        "a": "The heatmap shows how the mapped value varies with TMA flow rate and substrate velocity. The color distribution forms horizontal bands, indicating a strong dependence on substrate velocity. A higher-value band appears at intermediate velocities, while both low and high velocities show lower values, with relatively little variation across TMA flow rate."
+    },
+    "data_extraction": {
+        "a": "| TMA flow rate (sccm)| Substrate velocity (mm/s)| Relative value |\n|---------------------|--------------------------|----------------|\n| 20                  | 90                       | Low            |\n| 60                  | 90                       | Low            |\n| 100                 | 90                       | Low            |\n| 20                  | 60                       | High           |\n| 60                  | 60                       | High           |\n| 100                 | 60                       | High           |\n| 20                  | 30                       | Low            |\n| 60                  | 30                       | Low            |\n| 100                 | 30                       | Low            |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which two process parameters are varied in the heatmap?",
+                "answer_type": "Factoid",
+                "answer": "TMA flow rate and substrate velocity."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mapped value change with substrate velocity across the heatmap?",
+                "answer_type": "Paragraph",
+                "answer": "The heatmap shows a clear banded pattern along the substrate velocity axis. Values are highest at intermediate velocities, while both lower and higher velocities correspond to lower values. This indicates that substrate velocity has a stronger influence on the mapped quantity than TMA flow rate."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the heatmap show a strong dependence on TMA flow rate?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which substrate velocity range do the highest values appear?",
+                "answer_type": "Factoid",
+                "answer": "Around the mid-range velocities, approximately 50\u201370 mm/s."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 486,
+            "height": 431
+        }
+    }
+}

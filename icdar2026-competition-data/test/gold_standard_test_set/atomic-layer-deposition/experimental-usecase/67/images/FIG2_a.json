@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/67/FIG2_a",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "This line chart presents the variation of Growth Per Cycle (GPC) with increasing plasma pulse time for two magnetic field strengths (850 mT and 1600 mT) under in-situ and ex-situ measurement conditions. GPC initially decreases rapidly with increasing pulse duration and plateaus near 0.05 nm/cy after about 50 seconds. Higher magnetic field strength (1600 mT) consistently results in slightly higher GPC than 850 mT across all time points, regardless of the measurement method."
+    },
+    "data_extraction": {
+        "a": "| Plasma Pulse (s) | GPC (nm/cy) |\n|---|---|\n| 0 | 0.11 |\n| 10 | 0.105 |\n| 20 | 0.07 |\n| 30 | 0.06 |\n| 40 | 0.055 |\n| 50 | 0.05 |\n| 60 | 0.05 |\n| 80 | 0.05 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does GPC decrease with longer plasma pulse times?",
+                "answer_type": "Paragraph",
+                "answer": "As plasma pulse time increases, surface reactions proceed more fully, leading to more complete removal or modification of surface species per cycle. This enhanced efficiency saturates after a certain exposure duration, leading to a plateau in GPC. Longer pulses also reduce the chance of unreacted precursors or incomplete surface activation, which initially contributed to higher GPC in shorter pulses."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which field strength leads to higher GPC at 20 seconds of plasma pulse?",
+                "answer_type": "Factoid",
+                "answer": "1600 mT"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How do in-situ and ex-situ measurements compare for tje same field strength?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What implication does GPC stabilisation after 50 s have for process design?",
+                "answer_type": "List",
+                "answer": "Marks etch saturation point, No GPC gain beyond 50 s, Optimizes cycle time for throughput and precision"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 670,
+            "height": 545
+        }
+    }
+}

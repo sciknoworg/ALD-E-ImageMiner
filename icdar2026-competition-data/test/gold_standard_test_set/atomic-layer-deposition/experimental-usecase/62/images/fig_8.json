@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/62/fig_8",
+    "classification": {
+        "a": "line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "A line chart displaying intensity over time, showing a decreasing trend.",
+        "b": "A line chart showing the integrated 656 nm signal per cycle across different conditions."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Intensity (a.u.) |\n|---|---|\n| 0 | 0 |\n| 50 | 0 |\n| 100 | 4x10^4 |\n| 150 | 4x10^4 |\n| 200 | 4x10^4 |\n| 250 | 6x10^4 |\n| 300 | 0 |",
+        "b": "| Cycle number | Integrated 656 nm signal per cycle No cond.|Integrated 656 nm signal per cycle H2-N2 plasma|Integrated 656 nm signal per cycle H2 plasma|Integrated 656 nm signal per cycle TiCl4|\n|---|---|---|---|---|\n| 0 | 9x10^5 |5x10^5 |7x10^5 |6x10^5 |\n| 20 | 8x10^5 |5x10^5 |5x10^5 |5x10^5 |\n| 40 | 6x10^5 |5x10^5 |5x10^5 |4.5x10^5 |\n| 60 | 6x10^5 |5x10^5 |5x10^5 |4.5x10^5 |\n| 80 | 6x10^5 |5x10^5 |5x10^5 |4.5x10^5 |\n| 100 | 5x10^5 |5x10^5 |5x10^5 |4.5x10^5 |\n| 120 | 5x10^5 |5x10^5 |5x10^5 |4.5x10^5 |\n| 140 | 5x10^5 |5x10^5 |5x10^5 |4.5x10^5 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is there a starting effect for this ALD process?",
+                "answer_type": "Paragraph",
+                "answer": "There does seem to be a startinf effect. The initial plasma pulses show higher intensities than the last pulses."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How would the best process be described with the depicted data?",
+                "answer_type": "Paragraph",
+                "answer": "The best process is the one where the effect is only present in very little number of cycles. This would be the orange line."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How many cycles are not precisely controlled ALD cycles if no conditioning is performed?",
+                "answer_type": "Paragraph",
+                "answer": "After 140 cycles the decrease seems to saturate. This indicates that there are species in the plasma present that are not related to the ALD chemistry of the process."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the saturation integrated intensity level for a pretreatment of H2 plasma?",
+                "answer_type": "Factoid",
+                "answer": "The saturation level is 500000."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 631,
+            "height": 505
+        },
+        "b": {
+            "x": 1,
+            "y": 512,
+            "width": 629,
+            "height": 503
+        }
+    }
+}

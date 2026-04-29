@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/3/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Al\u2082O\u2083 growth per cycle (GPC) versus temperature for five wafer positions with 8 s purging time. GPC increases from 100\u00b0C to 200\u00b0C then decreases at 250\u00b0C, demonstrating the ALD temperature window. Sample A (inlet) shows highest GPC (~1.18 \u00c5/cycle at 200\u00b0C) while sample C (outlet) shows lowest values throughout.",
+        "b": "Same measurement with 20 s purging time. The longer purge slightly increases peak GPC for most samples. Notably, the turning temperature shifts from 200\u00b0C to 150\u00b0C for samples D and E, indicating earlier surface saturation due to extended precursor contact time."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | A | B | C | D | E |\n|---|---|---|---|---|---|\n| 100 | 1.05 | 1.02 | 0.98 | 1.00 | 1.00 |\n| 150 | 1.10 | 1.07 | 1.00 | 1.05 | 1.05 |\n| 200 | 1.15 | 1.12 | 1.10 | 1.15 | 1.15 |\n| 250 | 1.10 | 1.08 | 0.95 | 1.10 | 1.05 |",
+        "b": "| Temperature (\u00b0C) | A | B | C | D | E |\n|---|---|---|---|---|---|\n| 100 | 1.10 | 1.05 | 0.98 | 1.00 | 1.00 |\n| 150 | 1.15 | 1.10 | 1.00 | 1.05 | 1.05 |\n| 200 | 1.20 | 1.15 | 1.10 | 1.15 | 1.15 |\n| 250 | 1.10 | 1.08 | 0.95 | 1.10 | 1.05 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which sample position shows the highest growth rate, and why?",
+                "answer_type": "Paragraph",
+                "answer": "Sample A (inlet position) consistently shows the highest GPC across all temperatures. This occurs because precursor concentration remains higher for longer at the inlet, increasing collision probability with reactive surface sites. At the outlet (sample C), precursors are diluted by byproduct CH\u2084 and partially consumed by reactions upstream."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do labels A through E represent in the inset diagram?",
+                "answer_type": "Factoid",
+                "answer": "The five wafer sample positions inside the chamber: A at inlet, C at outlet, B and D at upper and lower positions, and E at center."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does growth rate decrease above 200\u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "Enhanced desorption of formed surface species at higher temperatures reduces net film deposition."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does increasing purging time from 8 s to 20 s affect the growth behavior?",
+                "answer_type": "Paragraph",
+                "answer": "(1) Peak GPC slightly increases for most samples due to longer precursor contact time, (2) the turning temperature shifts to 150\u00b0C for samples D and E as surface saturation is reached earlier, and (3) outlet sample C remains at similar GPC since it was already saturated in 8 s purging."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 601,
+            "height": 505
+        },
+        "b": {
+            "x": 0,
+            "y": 507,
+            "width": 601,
+            "height": 502
+        }
+    }
+}

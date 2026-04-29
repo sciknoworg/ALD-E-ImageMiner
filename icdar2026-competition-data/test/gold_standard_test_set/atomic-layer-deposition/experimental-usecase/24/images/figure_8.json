@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/24/figure_8",
+    "classification": {
+        "a": "spectra chart"
+    },
+    "summarization": {
+        "a": "The figure shows time-resolved mass spectrometry of CO\u2082 (m/e = 44) during an ALD process using a metal precursor and ozone. No CO\u2082 is detected during precursor-only pulses, confirming precursor thermal stability, while sharp CO\u2082 spikes appear only during ozone pulses in the ALD cycles, indicating ligand removal by oxidation. When ozone is pulsed alone, the CO\u2082 signal drops to a low background level, attributed to minor chamber wall reactions."
+    },
+    "data_extraction": {
+        "a": "| Time (min) | Intensity (a.u.) | Process condition |\n|-----------:|----------------:|-------------------|\n| 55         | ~1              | Precursor only (P) |\n| 58         | ~1              | Precursor only (P) |\n| 61         | ~1              | Precursor only (P) |\n| 64         | ~28             | O\u2083 pulse          |\n| 67         | ~1              | Precursor (P)     |\n| 70         | ~20             | O\u2083 pulse          |\n| 73         | ~1              | Precursor (P)     |\n| 76         | ~19             | O\u2083 pulse          |\n| 79         | ~1              | Precursor (P)     |\n| 82         | ~18             | O\u2083 pulse          |\n| 85         | ~1              | Precursor (P)     |\n| 88         | ~17             | O\u2083 pulse          |\n| 90         | ~10             | Ozone only        |\n| 92         | ~8              | Ozone only        |\n| 94         | ~7              | Ozone only        |\n| 96         | ~6              | Ozone only        |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the graph, identify the specific process step where carbon ligands are removed from the surface. If you were programming a 'Real-Time Endpoint' monitor, which pulse (P or O3) would you track to confirm the reaction completion",
+                "answer_type": "Paragraph",
+                "answer": "Ligand removal occurs during the ozone (O\u2083) pulse. The CO\u2082 signal shows sharp spikes only during the O\u2083 exposure, confirming that this half-cycle is responsible for oxidizing the organic ligands into volatile CO\u2082. Monitoring the rise and decay of the CO\u2082 peak back to baseline can be used to verify completion of the reaction and effective byproduct removal."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the signal intensity during 'Process Cycles' (O3 peaks ~ 25 a.u.) versus 'Ozone Only' cycles (O3 peaks ~  8 a.u.). What does this contrast confirm about the source of the carbon being removed?",
+                "answer_type": "Paragraph",
+                "answer": "This confirms that the vast majority of the CO2 originates from the adsorbed monolayer of the metal precursor, not just background contamination. The high contrast validates the efficiency of the ALD reaction; if the peaks were similar in height, it would imply the process was dominated by background noise or parasitic cleaning rather than film growth."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Physically, why is there no CO\u2082 detected during the 'Precursor Only' pulses (P), even though the precursor molecule contains carbon? What does this imply about the precursor's stability?",
+                "answer_type": "Paragraph",
+                "answer": "The flat baseline during the \"P\" pulses indicates that the precursor adsorbs intact onto the surface without undergoing thermal decomposition (pyrolysis). If it were unstable, random CO\u2082 or hydrocarbon fragments would release spontaneously. This stability is crucial for ensuring self-limited ALD growth rather than uncontrolled CVD."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If the CO2 peaks during the 'Process Cycles' failed to return to the baseline before the next 'P' pulse (i.e., peak tailing), what specific defect would likely appear in the deposited film?",
+                "answer_type": "Paragraph",
+                "answer": "Tailing peaks indicate incomplete purging of reaction byproducts. If residual CO\u2082 or unreacted ligands remain in the chamber or on the surface when the next metal precursor pulse arrives, they can become incorporated into the growing film. This results in higher carbon impurity levels, which reduce film density and degrade electrical performance, such as increased leakage current."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 2,
+            "width": 624,
+            "height": 460
+        }
+    }
+}

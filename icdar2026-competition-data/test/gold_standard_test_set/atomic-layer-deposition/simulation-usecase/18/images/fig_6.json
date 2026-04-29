@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/18/fig_6",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "This plot represents the reactor-scale model by comparing predicted GaN growth rates with experimental data from Chen et al. over 700\u20131300 K. The model correctly reproduces the shift from kinetic control at low temperatures to a diffusion-limited plateau near 900 K and the decline at very high temperatures. The close agreement demonstrates that the mechanism reliably captures GaN growth behavior across key temperature regimes. Graph has inverse temperature (1000/T)."
+    },
+    "data_extraction": {
+        "a": "| 1000/T (1/K) | Growth Rate (\u00b5m/hr) | Work               |\n|-------------|---------------------|--------------------|\n| 0.73         | 1.45                | This work          |\n| 0.75         | 1.80                | Experimental study |\n| 0.77         | 1.90                | Experimental study |\n| 0.80         | 2.00                | Experimental study |\n| 0.83         | 2.10                | This work          |\n| 0.87         | 2.05                | This work          |\n| 0.92         | 2.00                | This work          |\n| 0.97         | 1.95                | This work          |\n| 1.02         | 1.90                | Experimental study |\n| 1.10         | 1.70                | Experimental study |\n| 1.27         | 0.50                | Experimental study |\n| 1.30         | 0.25                | This work          |\n| 1.32         | 0.05                | Experimental study |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Sequence the dominant physical control mechanisms as the reactor cools from 1300 K (1000/T \u2248 0.77) to 700 K (1000/T \u2248 1.4). Explain the transition observed at 1000/T \u2248 1.1.",
+                "answer_type": "List",
+                "answer": "1. Desorption/Thermodynamic limitation (High T).\n\n, 2. Mass Transport (Diffusion) limitation (Mid T).\n\n, 3. Surface Kinetic limitation (Low T)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Contrast using this comprehensive multi-regime model with using a simple Arrhenius model (only considering the low-T kinetic region) for optimizing a commercial MOCVD process. Under a constraint of minimizing computational cost for real-time process control, which model is impractical, and what is the risk of using the simpler one?",
+                "answer_type": "Paragraph",
+                "answer": "The comprehensive multi-regime model is computationally expensive and impractical for real-time control. The risk of using the simple Arrhenius model is severe error if the process operates outside its fitted kinetic zone. It would fail to predict the growth rate plateau (leading to overestimation) and the high-T decline (leading to unsafe temperature choices), potentially causing poor film quality and reactor problems."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Describe the three distinct growth rate regimes shown in the figure and link each to its dominant physical/chemical rate-limiting process.",
+                "answer_type": "Paragraph",
+                "answer": "Low-T (High 1000/T): Kinetic control \u2013 Growth rate increases sharply with temperature; limited by the thermal activation of surface chemical reactions.\n\nMid-T (Plateau): Diffusion control \u2013 Rate is constant; limited by the transport of reactants through the boundary layer to the surface.\n\nHigh-T (Low 1000/T): Declining regime \u2013 Rate decreases; limited by premature gas-phase reactions or depletion of reactants before they reach the surface, or thermodynamic reversal."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The model accurately reproduces experimental data across all three regimes. Is this validated model suitable for determining the optimal temperature window (e.g., 900-1100 K) to achieve both high growth rate and good thickness uniformity in a production reactor?",
+                "answer_type": "Paragraph",
+                "answer": "Yes.The model's proven accuracy across regimes allows it to identify the diffusion-limited plateau (near 900 K) as the optimal window. In this regime, the growth rate is high and, most importantly, insensitive to minor temperature fluctuations, which is the key to achieving excellent thickness uniformity across a production wafer. The model reliably defines this window, avoiding the inefficient kinetic and problematic high-T regimes."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 3,
+            "width": 588,
+            "height": 417
+        }
+    }
+}

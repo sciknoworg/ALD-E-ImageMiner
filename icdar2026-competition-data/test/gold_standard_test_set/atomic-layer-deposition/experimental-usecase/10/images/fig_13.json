@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/10/fig_13",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Thickness profiles across a trench reveal how different growth regimes\u2014reaction-limited, diffusion-limited, and recombination-limited\u2014affect uniformity, with     recombination-limited cases showing more variation along the depth.",
+        "b": "The dose necessary for saturation increases with higher surface recombination probability, and this effect becomes more pronounced at higher aspect ratios (AR = 30)."
+    },
+    "data_extraction": {
+        "a": "| Distance into Trench (%) | Reaction-limited (s = 0.01; r = 0) | Diffusion-limited (s = 1; r = 0) | Recombination-limited (s = 0.01; r = 0.9) | Recombination-limited (s = 1; r = 0.9) |\n|--------------------------|------------------------------------|----------------------------------|-------------------------------------------|----------------------------------------|\n| 0                        | 100                                | 100                              | 100                                       | 100                                    | \n| 20                       | 98                                 | 100                              | 95                                        | 97                                     |\n| 40                       | 95                                 | 99                               | 90                                        | 93                                     |\n| 60                       | 92                                 | 98                               | 88                                        | 91                                     |\n| 80                       | 90                                 | 98                               | 86                                        | 90                                     |\n| 100                      | 92                                 | 99                               | 88                                        | 92                                     |",
+        "b": "| Surface Recombination Probability (r) | Dose Necessary for Saturation (Aspect Ratio = 10) | Dose Necessary for Saturation (Aspect Ratio = 30) |\n|---------------------------------------|---------------------------------------------------|---------------------------------------------------|\n| 0.00                                  | 1                                                 | 1                                                 |\n| 0.05                                  | 3                                                 | 10                                                |\n| 0.10                                  | 6                                                 | 25                                                |\n| 0.15                                  | 10                                                | 50                                                |\n| 0.20                                  | 20                                                | 70                                                |\n| 0.25                                  | 40                                                | 85                                                | \n| 0.30                                  | 60                                                | 100                                               |"
+    },
+    "vqa": {
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "What process parameters influence the dose necessary for saturation ?",
+                "answer_type": "List",
+                "answer": "Surface recombination probability (r), Aspect ratio of the structure"
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does thickness vary along the trench under different process limitations?",
+                "answer_type": "Paragraph",
+                "answer": "Thickness remains nearly uniform for diffusion-limited and reaction-limited processes but decreases notably deeper into the trench for recombination-limited conditions, indicating non-uniform film growth."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What property is being compared in panel (a)?.",
+                "answer_type": "Factoid",
+                "answer": "Film thickness (%) as a function of trench depth."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does a higher aspect ratio require a higher dose to achieve saturation?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 17,
+            "y": 14,
+            "width": 670,
+            "height": 508
+        },
+        "b": {
+            "x": 5,
+            "y": 556,
+            "width": 682,
+            "height": 472
+        }
+    }
+}

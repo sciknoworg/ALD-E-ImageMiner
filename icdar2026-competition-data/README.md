@@ -59,6 +59,10 @@ The information for the ICDAR 2026 competition for each dataset split is followi
 
 4. [Test Dataset](test/)
 
+## ⚙️ Evaluation Scripts
+
+The [evaluation scripts](evaluation_scripts/) are released which have been used for the Sci-ImageMiner ICDAR 2026 competition.
+
 ## 📧 Contact & Support
 
 **Email:** sciknoworg [at] gmail.com

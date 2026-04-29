@@ -1,0 +1,68 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/37/fig_2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the trend of \u0394 values over cycles for four different wavelengths (465 nm, 525 nm, 580 nm, and 635 nm). The \u0394 values decrease with increasing cycles until around cycle 240, after which they start to increase again.",
+        "b": "The line chart displays the constant values of \u03a8 for four different wavelengths (465 nm, 525 nm, 580 nm, and 635 nm) over cycles. The values remain stable throughout the cycles.",
+        "c": "The line chart illustrates the thickness of a material over cycles. The thickness increases steadily until cycle 240, after which it decreases slightly."
+    },
+    "data_extraction": {
+        "a": "| Cycles | 465 nm | 525 nm | 580 nm | 635 nm |\n|---|---|---|---|---|\n| 210 | 164 | 166 | 168 | 168 |\n| 215 | 163 | 165 | 167 | 167 |\n| 220 | 162 | 164 | 166 | 166 |\n| 225 | 161 | 163 | 165 | 165 |\n| 230 | 160 | 162 | 164 | 164 |\n| 235 | 159 | 161 | 163 | 163 |\n| 240 | 158 | 160 | 162 | 162 |\n| 245 | 161 | 163 | 165 | 166 |",
+        "b": "| Cycles | 465 nm | 525 nm | 580 nm | 635 nm |\n|---|---|---|---|---|\n| 210 | 21 | 19 | 17 | 17 |\n| 215 | 21 | 19 | 17 | 17 |\n| 220 | 21 | 19 | 17 | 17 |\n| 225 | 21 | 19 | 17 | 17 |\n| 230 | 21 | 19 | 17 | 17 |\n| 235 | 21 | 19 | 17 | 17 |\n| 240 | 21 | 19 | 17 | 17 |\n| 245 | 21 | 19 | 17 | 17 |",
+        "c": "| Cycles | Thickness (nm) |\n|---|---|\n| 210 | 4.8 |\n| 215 | 5.0 |\n| 220 | 5.2 |\n| 225 | 5.4 |\n| 230 | 5.6 |\n| 235 | 5.8 |\n| 240 | 6.0 |\n| 245 | 5.8 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does \u0394 change during the process?",
+                "answer_type": "Factoid",
+                "answer": "\u0394 decreases linearly during deposition and increases linearly during etching."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what temperature were the ALD and ALE processes performed?",
+                "answer_type": "Factoid",
+                "answer": "At 170 \u00b0C."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does this figure demonstrate about the use of in situ spectroscopic ellipsometry for monitoring TiO\u2082 growth and etching?",
+                "answer_type": "Paragraph",
+                "answer": "In figure 2, the raw ellipsometry parameters \u03a8 and \u0394, measured at four wavelengths, are shown alongside the thickness extracted using a temperature-dependent Cauchy model. While \u03a8 remains essentially constant over the small thickness range involved, \u0394 exhibits a clear correlation with the TiO\u2082 film thickness. This demonstrates that \u0394 is the primary ellipsometric parameter for detecting incremental growth and removal during ALD and ALE."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does \u03a8 change during the process?",
+                "answer_type": "Factoid",
+                "answer": "\u03a8 does not change significantly during both deposition and etching."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 8,
+            "width": 611,
+            "height": 498
+        },
+        "b": {
+            "x": 5,
+            "y": 496,
+            "width": 611,
+            "height": 508
+        },
+        "c": {
+            "x": 0,
+            "y": 1002,
+            "width": 616,
+            "height": 521
+        }
+    }
+}

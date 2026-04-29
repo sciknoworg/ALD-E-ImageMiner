@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/18/fig_8",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The figure shows the radial GaN growth rate profile in a stagnation-flow reactor under Case I conditions with high H\u2082 flow. The simulated curve (diamonds with line) follows the experimental data (circles), with only minor deviation near the wafer center. This demonstrates that the model can reasonably capture spatial non-uniformity in convection-dominated growth conditions."
+    },
+    "data_extraction": {
+        "a": "| Radius (cm) | Growth Rate (mm/hr) | study type |\n|---|---| --- |\n| 0 | 17.9 | Experiment |\n| 0.5 | 6.7 | Numerical (present study) |\n| 0.5 | 17.9 | Experiment |\n| 1.0 | 4.2 | Numerical (present study) |\n| 1.0 | 3.1 | Experiment |\n| 1.5 | 2.7 | Numerical (present study) |\n| 1.5 |  4 | Experiment |\n| 2.0 | 1.9 | Numerical (present study) |\n| 2.0 | 2.6 | Experiment |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the key steps, in order, to generate the simulated radial growth rate profile (diamonds with line) from the reactor model.",
+                "answer_type": "Paragraph",
+                "answer": "1. Defining the reactor geometry and set the condition: high H\u2082 carrier gas flow.\n\n2. Solving the coupled equations for fluid flow, heat transfer, and chemical reactions across the 2D/3D domain.\n\n3. Extract the calculated growth rate at multiple points along the wafer radius.\n\n4. Plotting these values to create the spatial profile."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the simulation's accuracy at the center (r < 0.5 cm) versus the edge (r > 1.5 cm). If the goal is to optimize edge yield, is this model reliable?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, for edge yield optimization, the model is reliable as it tracks the depletion profile accurately. However, it is totally inadequate for predicting center-wafer behavior."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the trend in growth rate from the wafer center to the edge? Link this spatial variation to the dominant transport process under high H\u2082 flow.",
+                "answer_type": "Paragraph",
+                "answer": "The growth rate decreases from the center to the edge. This is caused by boundary layer development and precursor depletion. Under high convection, fresh precursor is delivered primarily to the center (stagnation point), then flows radially outward, becoming progressively depleted as it deposits material, leading to lower growth rates at larger radii."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Given the shown radial non-uniformity (~15-20% variation from center to edge), is this reactor condition suitable for fabricating large-area, high-performance GaN-based power transistors that require strict threshold voltage uniformity across the wafer?",
+                "answer_type": "Paragraph",
+                "answer": "No, a 15-20% thickness variation would translate directly into an unacceptable variation in device electrical properties, such as threshold voltage and on-resistance, across the wafer. For power transistors, such non-uniformity would drastically reduce manufacturing yield, as devices from different radial positions would not meet the same specification."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 6,
+            "width": 584,
+            "height": 443
+        }
+    }
+}

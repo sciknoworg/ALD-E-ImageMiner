@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/11/fig_3",
+    "classification": {
+        "a": "heatmap",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "Lattice colormap at t=0.111 s during Step A kMC simulation, showing the early stage of fluorination. Blue pixels represent unreacted Al2O3 surface sites, yellow pixels represent fluorinated (AlF3) sites. The random mixture of colors indicates approximately 50% progression with spatially uniform reaction across the surface.",
+        "b": "Lattice colormap at t=1.305 s showing near-complete fluorination. The lattice is almost entirely yellow with only sparse blue dots remaining, indicating that Step A is approaching completion (close to the 1.38 s full fluorination time)."
+    },
+    "data_extraction": {
+        "a": "| x | y |\n|---|---|\n| 0 | 0 |\n| 50 | 50 |\n| 100 | 100 |\n| 150 | 150 |\n| 200 | 200 |\n| 250 | 250 |",
+        "b": "| x | y |\n|---|---|\n| 0 | 0 |\n| 50 | 50 |\n| 100 | 100 |\n| 150 | 150 |\n| 200 | 200 |\n| 250 | 250 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the blue and yellow colors represent in these lattice maps?",
+                "answer_type": "Factoid",
+                "answer": "Blue represents unreacted Al2O3 surface sites, while yellow represents sites that have been fluorinated to form AlF3."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What lattice size was used for these kMC simulations?",
+                "answer_type": "Factoid",
+                "answer": "A 300\u00d7300 lattice was used, as shown by the axis scales ranging from 0 to approximately 300 in both x and y directions."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why does the fluorination appear spatially random rather than showing growth from nucleation centers?",
+                "answer_type": "Factoid",
+                "answer": "The random spatial distribution reflects the self-limiting nature of ALE, where HF can adsorb at any available surface site with equal probability, leading to uniform coverage rather than island growth."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the surface appearance change between 0.111 s and 1.305 s?",
+                "answer_type": "Paragraph",
+                "answer": "At 0.111 s, the surface shows a random mixture of blue and yellow pixels, indicating partial fluorination with roughly half the sites reacted. By 1.305 s, the surface is almost completely yellow with only isolated blue pixels remaining, demonstrating that fluorination is nearly complete. The uniform spatial distribution of the reaction confirms that Step A proceeds homogeneously across the surface without preferential nucleation sites."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 14,
+            "y": 2,
+            "width": 464,
+            "height": 474
+        },
+        "b": {
+            "x": 541,
+            "y": 3,
+            "width": 463,
+            "height": 470
+        }
+    }
+}

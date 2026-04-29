@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/41/fig_3",
+    "classification": {
+        "a": "multi spectra chart",
+        "b": "multi spectra chart",
+        "c": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "Ti 2p XPS spectrum measured after the fluorination step, showing deconvoluted components attributed to TiN, TiOxNy, TiO\u2082, and fluorinated TiO\u2082\u2212xFx species, indicating chemical modification of the surface during CF\u2084 plasma exposure.",
+        "b": "F 1s XPS spectra acquired at increasing fluorination times at 100 \u00b0C and 15 W, with a dominant peak near 685.0 eV whose intensity grows with time, reflecting progressive incorporation of fluorine into the surface layer.",
+        "c": "Fluorine atomic percentage plotted as a function of CF\u2084 plasma exposure time for RF powers of 10, 15, and 25 W, showing higher fluorine content and faster saturation at increased RF power."
+    },
+    "data_extraction": {
+        "a": "| Binding energy (eV) | Assignment      |\n|--------------------|-----------------|\n| ~455\u2013456           | TiN             |\n| ~456\u2013457           | TiOxNy          |\n| ~458\u2013459           | TiO2            |\n| ~459\u2013460           | TiO2\u2212xFx        |\n| ~462                     | TiN             |\n| ~464\u2013465           | TiO2            |",
+        "b": "| Binding Energy (eV) | Peak Assignment | Observation |\n|---------------------|----------------|-------------|\n| ~685.0              | TiO2\u2212xFx        | Peak intensity increases with exposure time |",
+        "c": "| Time (s) | 10 W (%) | 15 W (%) | 25 W (%) |\n|----------|----------|----------|----------|\n| 10       | ~4\u20135     | ~5       | ~10      |\n| 15       | ~9       | ~10      | ~15      |\n| 20       | ~10      | ~10\u201311   | ~15\u201316   |\n| 30       | ~11      | ~11\u201312   | ~17      |\n| 45       | ~12      | ~12      | ~21      |\n| 60       | ~12      | ~12      | ~24      |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the fluorination step modify the Ti surface chemistry according to the Ti 2p spectrum?",
+                "answer_type": "Paragraph",
+                "answer": "The Ti 2p spectrum shows the emergence of TiO\u2082\u2212xFx components alongside TiO\u2082 and TiN peaks, indicating that CF\u2084 plasma exposure leads to partial fluorination of the oxide layer rather than complete removal or bulk conversion."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does RF power influence fluorine incorporation at a given fluorination time?",
+                "answer_type": "Factoid",
+                "answer": "Higher RF power results in higher fluorine atomic percentage at all exposure times."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does extending CF\u2084 plasma exposure time always increase the measured fluorine content?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What chemical species is associated with the dominant F 1s peak near 685 eV?",
+                "answer_type": "Factoid",
+                "answer": "TiO2\u2212xFx."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 96,
+            "y": 32,
+            "width": 550,
+            "height": 473
+        },
+        "b": {
+            "x": 803,
+            "y": 27,
+            "width": 531,
+            "height": 470
+        },
+        "c": {
+            "x": 468,
+            "y": 584,
+            "width": 557,
+            "height": 469
+        }
+    }
+}

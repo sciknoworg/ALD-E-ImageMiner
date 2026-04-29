@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/21/figure_6",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The plot compares silicon thickness across the wafer before and after ALE. Thickness decreases uniformly from 87 nm to 40 nm, while the 3\u03c3 variation remains \u00b11.5 nm in both cases. The preservation of the same statistical spread indicates that material removal occurs evenly across the wafer. This demonstrates that ALE maintains wafer-scale uniformity despite substantial thickness reduction"
+    },
+    "data_extraction": {
+        "a": "| Condition   | Si thickness (nm) | Variation (3\u03c3, nm) |\n|-------------|------------------|--------------------|\n| Before etch | 87               | \u00b11.5               |\n| After ALE   | 40               | \u00b11.5               |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the ALE cycle sequence maintain silicon thickness uniformity across the wafer despite significant material removal?",
+                "answer_type": "Paragraph",
+                "answer": "Uniformity is preserved because each ALE cycle consists of a self-limiting surface modification step followed by controlled, ion-activated removal. The saturation of the modification reaction ensures that all wafer regions experience the same chemically altered layer thickness, independent of local exposure history. Subsequent ion activation removes only this modified layer uniformly, suppressing spatial variations that typically arise in continuous plasma etching."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the overall silicon thickness change between the pre-etch and post-ALE measurements?",
+                "answer_type": "Factoid",
+                "answer": "The thickness decreases from 87 nm before etching to 40 nm after ALE."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the low and unchanged 3\u03c3 variation before and after ALE indicate about the relationship between wafer topography and etch response?",
+                "answer_type": "Paragraph",
+                "answer": "-Etch response is largely insensitive to local thickness variations.\n-Each region undergoes nearly identical cycle-by-cycle material removal.\n-Topography-dependent microloading effects are minimized by self-limiting surface chemistry."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How does wafer-scale thickness uniformity after ALE impact multi-layer device integration?",
+                "answer_type": "Paragraph",
+                "answer": "Uniform thickness ensures predictable alignment and interaction between stacked layers in complex device architectures. Variations in underlying film thickness can propagate into overlay errors or interface defects. ALE\u2019s ability to preserve uniformity supports reliable multi-layer integration with tight dimensional control."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 4,
+            "width": 545,
+            "height": 385
+        }
+    }
+}

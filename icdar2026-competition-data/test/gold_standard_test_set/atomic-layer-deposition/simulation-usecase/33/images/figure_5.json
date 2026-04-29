@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/33/figure_5",
+    "classification": {
+        "a": "grouped bar chart"
+    },
+    "summarization": {
+        "a": "Grouped bar chart of Hall mobility for graphene samples after transfer, after plasma treatment, after 100 cycles Al2O3 ALD, and after a 400 C anneal, comparing pristine graphene to 30 s O2 plasma and 35 s H2 plasma conditions. Plasma treatment strongly reduces mobility (about 195 cm2/(V s) for O2 and 467 cm2/(V s) for H2), while Al2O3 ALD and subsequent anneal recover mobility, with the H2 plasma sample reaching about 2190 cm2/(V s) after the 400 C anneal."
+    },
+    "data_extraction": {
+        "a": "| Sample | Pristine (cm\u00b2/(V\u00b7s)) | Plasma Treatment (cm\u00b2/(V\u00b7s)) | Al\u2082O\u2083 ALD (cm\u00b2/(V\u00b7s)) | 400\u00b0C Anneal (cm\u00b2/(V\u00b7s)) |\n|---|---|---|---|---|\n| Pristine | 1300 | X | 1500 | 1850 |\n| O\u2082 Plasma 30s | 1800 | 180 | 1400 | 1620 |\n| H\u2082 Plasma 35s | 1450 | 450 | 1480 | 2200 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In this plot, what do the black bars labeled Pristine represent?",
+                "answer_type": "Factoid",
+                "answer": "They represent the Hall mobility measured after graphene transfer, before any plasma treatment, for each sample set."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do O2 plasma and H2 plasma differ in their impact on mobility, and how much recovery is achieved after Al2O3 ALD and after the 400 C anneal?",
+                "answer_type": "Paragraph",
+                "answer": "Both plasmas reduce mobility, but O2 plasma causes a larger drop, to about 195 cm2/(V s), while H2 plasma reduces it to about 467 cm2/(V s). After 100 Al2O3 ALD cycles, the O2 treated sample partially recovers to about 1390 cm2/(V s), while the H2 treated sample recovers to about 1470 cm2/(V s), roughly returning to its initial value. After the 400 C anneal, the O2 treated sample reaches about 1630 cm2/(V s), whereas the H2 treated sample improves further to about 2190 cm2/(V s)."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What mechanism does the paper give for why plasma functionalization lowers graphene mobility in Figure 5?",
+                "answer_type": "Paragraph",
+                "answer": "The paper attributes the mobility drop to plasma induced conversion of sp2 carbon toward sp3 bonding and the formation of out of plane bonds. These added bonds and associated functional groups act as scattering centers for charge carriers, which reduces mobility. This interpretation is consistent with the XPS and Raman evidence of increased sp3 character after plasma exposure."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on Figure 5, which process flow best preserves or improves mobility while still enabling Al2O3 ALD on graphene, and what is the evidence?",
+                "answer_type": "Paragraph",
+                "answer": "H2 plasma functionalization plus Al2O3 ALD plus 400 C anneal: mobility recovers to the initial value after ALD and then increases to about 152% of the original value after anneal (about 2190 cm2/(V s)).\n\nO2 plasma functionalization plus Al2O3 ALD plus 400 C anneal: mobility improves strongly after ALD and anneal but remains below the initial value (about 91% recovery, around 1630 cm2/(V s)), indicating incomplete reversibility."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 642,
+            "height": 347
+        }
+    }
+}

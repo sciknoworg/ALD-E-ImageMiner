@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/62/fig_5",
+    "classification": {
+        "a": "multi spectra chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows a spectral intensity plot with two curves representing H2 plasma and an H2 plasma in an ALD cycle.",
+        "b": "The figure displays a line chart comparing the intensity at 388 nm of an H2 plasma and an H2 plasma in an ALD cycle over time."
+    },
+    "data_extraction": {
+        "a": "| Wavelength (nm) | Intensity (a.u.) H2 plasma|Intensity (a.u.) H2 plasma after ALD cycle|\n|---|---|---|\n| 388 | peak | peak |\n| 500 | peaks |peaks |\n| 600 | peaks |peaks |\n| 660 | H peak | H peak |",
+        "b": "| Time (s) | Intensity (a.u.) H2 plasma|Intensity (a.u.) H2 plasma after ALD cycle|\n|---|---|---|\n| 0 | 0 |0|\n|0.5|112|87|\n| 1 | 100 |87|\n| 2 | 94 |87|\n| 3 | 90 |87|\n| 4 | 87|87|\n| 5 |87|87|\n| 6 |87|87|\n| 7 | 87|87|\n| 8 | 87|87|\n| 9 | 87|87|\n| 10 | 87|87|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Are a lot of the ligand species incorporated in the hydrogen plasma?",
+                "answer_type": "Paragraph",
+                "answer": "It seems that there is major overlap between all the species present between the two plasmas, so not a lot of different species are incorporated."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what wavelength is the highest intensity measured?",
+                "answer_type": "Factoid",
+                "answer": "The highest intensity is measured at 660 nm."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the saturation time for the H2 plasma in the deposition process of TiN?",
+                "answer_type": "Factoid",
+                "answer": "The saturation time is 4 s."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Will the intensity of the peak go to zero for the ALD cycle data, and if not, why not?",
+                "answer_type": "Paragraph",
+                "answer": "No the intensity will not go to zero if the plasma is running  there will always be the background of the peak in the H2 plasma itself."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 4,
+            "width": 616,
+            "height": 526
+        },
+        "b": {
+            "x": 0,
+            "y": 544,
+            "width": 624,
+            "height": 504
+        }
+    }
+}

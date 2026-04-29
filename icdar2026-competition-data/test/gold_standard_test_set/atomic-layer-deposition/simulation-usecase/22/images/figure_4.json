@@ -1,0 +1,99 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/22/figure_4",
+    "classification": {
+        "a": "image panel",
+        "b": "line chart",
+        "c": "bar chart",
+        "d": "image panel",
+        "e": "line chart",
+        "f": "bar chart"
+    },
+    "summarization": {
+        "a": "shows a visual RSA simulation snapshot of aniline molecules adsorbed on Ru(0001). Horizontal and vertical configurations populate the surface, illustrating steric blocking and coverage patterns as packing approaches saturation.",
+        "b": "plots horizontal, vertical, and total aniline configuration densities as a function of attempted total density. Ru shows high achievable coverage, with a saturation point near ~1.8 nm\u207b\u00b2. Horizontal adsorption becomes dominant at high densities.",
+        "c": "displays a histogram of effective gap sizes remaining after aniline adsorption. Ru leaves only very small gaps (<0.25 nm), far below the required TDMAT precursor radius (0.49 nm), indicating strong inhibition capability. The inset illustrates how gap sizes are measured.",
+        "d": "shows RSA adsorption on Co(0001). The packing is visibly less dense than Ru, with more irregular spacing and larger void areas.",
+        "e": "indicates lower total achievable density than Ru. Horizontal coverage rises but saturates earlier, suggesting less efficient packing and weaker inhibitor blocking.",
+        "f": "shows much larger residual gaps on Co compared to Ru. Some gaps approach or exceed the TDMAT radius, meaning TDMAT could still adsorb through voids\u2014indicating poorer blocking performance."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": "| Total density (nm\u00b2) | Configuration density (nm\u00b2) |\n|---|---|\n| 0.0 | 0.0 |\n| 0.2 | 0.2 |\n| 0.4 | 0.4 |\n| 0.6 | 0.6 |\n| 0.8 | 0.8 |\n| 1.0 | 1.0 |\n| 1.2 | 1.2 |\n| 1.4 | 1.4 |\n| 1.6 | 1.6 |\n| 1.8 | 1.8 |\n| 2.0 | 2.0 |",
+        "c": "| Effective gap size (nm) | Surface density (nm\u207b\u00b2) |\n|---|---|\n| 0.20 | 0.07 |\n| 0.25 | 0.03 |\n| 0.30 | 0.01 |\n| 0.35 | 0.00 |\n| 0.40 | 0.00 |\n| 0.45 | 0.00 |\n| 0.50 | 0.00 |",
+        "d": "",
+        "e": "| Total density (nm\u00b2) | Configuration density (nm\u00b2) |\n|---|---|\n| 0.0 | 0.0 |\n| 0.2 | 0.2 |\n| 0.4 | 0.4 |\n| 0.6 | 0.6 |\n| 0.8 | 0.8 |\n| 1.0 | 1.0 |\n| 1.2 | 1.2 |\n| 1.4 | 1.4 |\n| 1.6 | 1.6 |\n| 1.8 | 1.8 |\n| 2.0 | 2.0 |",
+        "f": "| Effective gap size (nm) | Surface density (nm\u207b\u00b2) |\n|---|---|\n| 0.20 | 0.09 |\n| 0.25 | 0.01 |\n| 0.30 | 0.00 |\n| 0.35 | 0.00 |\n| 0.40 | 0.00 |\n| 0.45 | 0.00 |\n| 0.50 | 0.00 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the gap-size distribution important for predicting whether the TDMAT precursor can penetrate inhibitor-covered Ru and Co surfaces?",
+                "answer_type": "Paragraph",
+                "answer": "The gap-size distribution quantifies the openings left between adsorbed inhibitor molecules. If these gaps are smaller than the critical precursor radius, the precursor cannot reach the metal surface and adsorption is blocked. Ru shows mostly sub-0.25 nm gaps, far below the TDMAT effective radius, indicating strong growth inhibition. Co exhibits larger gaps, meaning the precursor may still access the surface, reducing selectivity. Thus, gap statistics directly determine how effectively an inhibitor layer prevents undesired precursor adsorption."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which surface, Ru or Co, achieves a higher final inhibitor packing density in the RSA simulations?",
+                "answer_type": "Factoid",
+                "answer": "Ru achieves the higher packing density."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the RSA procedure used in panels (a\u2013f) determine surface saturation by sequentially placing inhibitor molecules until no more placements are possible?",
+                "answer_type": "Paragraph",
+                "answer": "Yes \u2014 RSA places molecules one by one and stops once further insertions are sterically blocked."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What structural or configurational factors influence the effective gap sizes remaining after aniline adsorption?",
+                "answer_type": "List",
+                "answer": "Molecular orientation (horizontal vs. vertical), Packing efficiency of adsorbed molecules, Surface-dependent steric constraints, Local arrangement of nearest-neighbor molecules, Minimum distance rules used in RSA gap-size calculations"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 11,
+            "y": 10,
+            "width": 380,
+            "height": 304
+        },
+        "b": {
+            "x": 412,
+            "y": 0,
+            "width": 360,
+            "height": 354
+        },
+        "c": {
+            "x": 800,
+            "y": 0,
+            "width": 367,
+            "height": 353
+        },
+        "d": {
+            "x": 11,
+            "y": 380,
+            "width": 378,
+            "height": 312
+        },
+        "e": {
+            "x": 412,
+            "y": 385,
+            "width": 362,
+            "height": 342
+        },
+        "f": {
+            "x": 801,
+            "y": 384,
+            "width": 366,
+            "height": 343
+        }
+    }
+}

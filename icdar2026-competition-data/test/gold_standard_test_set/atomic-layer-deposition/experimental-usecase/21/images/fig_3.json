@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/21/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The chart plots the thickness of a material as a function of the number of cycles for different thermal and plasma treatments at various temperatures.",
+        "b": "The chart plots the GPC SE and GPC EBS values against temperature for both thermal and plasma treatments."
+    },
+    "data_extraction": {
+        "a": "| Number of Cycles | Thermal 150 \u00b0C | Plasma 50 \u00b0C | Plasma 200 \u00b0C | Plasma 275 \u00b0C | Plasma 300 \u00b0C |\n|-------------------|-----------------|--------------|---------------|---------------|---------------|\n| 0                | 0               | 0            | 0             | 0             | 0             |\n| 100              | 8               | 10           | 15            | 18            | 20            |\n| 200              | 15              | 18           | 25            | 28            | 30            |\n| 300              | 22              | 25           | 32            | 36            | 38            |\n| 400              | 28              | 32           | 38            | 42            | 45            |\n| 500              | 35              | 38           | 44            | 48            | 50            |\n| 600              | 42              | 45           | 50            | 54            | 58            |",
+        "b": "| Temperature (\u00b0C) | GPC SE Thermal (\u00c5) | GPC SE Plasma (\u00c5) | GPC EBS Thermal (Li.at.nm\u207b\u00b2) | GPC EBS Plasma (Li.at.nm\u207b\u00b2) |\n|-------------------|----------------------|---------------------|--------------------------------|--------------------------------|\n| 50               | 0.3                  | 0.8                 | -                            | -                            |\n| 100              | 0.6                  | 0.8                 | -                              | -                              |\n| 150              | 0.5                  | 0.8                 | 3                              | 4                              |\n| 200              | 0.5                  | 0.8                 | 3                              | 4                              |\n| 275              | 0.5                  | 0.8                 | 3                              | 4                              |\n| 300              | 0.5                  | 1.6                 | 3                              | 7                              |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does temperature of the substrate influence the plasma ALD process?",
+                "answer_type": "Paragraph",
+                "answer": "For plasma-assisted ALD and Tsub </=200 \u00b0C, the thickness of the films develops linearly with the number of cycles. For temperatures higher than 250 \u00b0C, the film thickness develops according to two slopes, which correlates with a transition in film chemical composition"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Do both plasma and thermal ALD films exhibit linearity?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the lower limit of the ALD temperature window for thermal and plasma ALD processes?",
+                "answer_type": "Paragraph",
+                "answer": "It can be noticed that the growth per cycle of the thermal ALD process strongly decreases at 50 \u00b0C, indicating the lower limit of the temperature window. The ALD process window for the plasma-assisted process is extended towards lower temperatures, as it has a similar growth per cycle at 50 \u00b0C as at higher temperatures"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the GPC for plasma process compare with the thermal process?",
+                "answer_type": "Paragraph",
+                "answer": "The overall growth per cycle is higher for the plasma-assisted process as compared to the thermal process. This is more ofen observed for plasma processes due to the relatively high reactivity of the plasma species which could create a higher density of reactive surface sites"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 11,
+            "y": 5,
+            "width": 582,
+            "height": 453
+        },
+        "b": {
+            "x": 9,
+            "y": 461,
+            "width": 594,
+            "height": 455
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/20/fig_3",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "TMA and water concentrations at position B (water side) over time for three gap sizes. The left axis shows TMA (the foreign precursor at this location) reaching steady state concentrations of approximately 3\u00d710\u207b\u2075 mol/m\u00b3 for 1 mm gap versus less than 1\u00d710\u207b\u2075 mol/m\u00b3 for larger gaps. The right axis shows water (home precursor) concentration, which reaches steady state faster for larger gaps.",
+        "b": "TMA and water concentrations at position C (TMA side) over time for three gap sizes. TMA (home precursor, left axis) reaches approximately 4\u00d710\u207b\u00b3 mol/m\u00b3 at steady state for all gaps, while water (foreign precursor, right axis) shows higher intermixing levels, particularly for 1 mm gap where water concentration reaches approximately 5\u00d710\u207b\u2074 mol/m\u00b3."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | TMA-1mm (mol/m\u00b3) | TMA-1.5mm (mol/m\u00b3) | TMA-2mm (mol/m\u00b3) | Water-1mm (mol/m\u00b3) | Water-1.5mm (mol/m\u00b3) | Water-2mm (mol/m\u00b3) |\n|---|---|---|---|---|---|---|\n| 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 0.01 | 0.00 | 0.10E-5 | 0.10E-5 | 0.10E-3 | 3.8E-3 | 5.5E-3 |\n| 0.02 | 0.05E-5 | 0.50E-5 | 0.30E-5 | 0.20E-3 | 5.8E-3 | 6.5E-3 |\n| 0.03 | 0.10E-5 | 0.80E-5 | 0.30E-5 | 1.0E-3 | 6.2E-3 | 6.6E-3 |\n| 0.04 | 0.40E-5 | 0.90E-5 | 0.30E-5 | 3.5E-3 | 6.3E-3 | 6.6E-3 |\n| 0.06 | 1.40E-5 | 0.90E-5 | 0.30E-5 | 4.9E-3 | 6.3E-3 | 6.6E-3 |\n| 0.08 | 2.30E-5 | 0.90E-5 | 0.30E-5 | 5.4E-3 | 6.3E-3 | 6.6E-3 |\n| 0.10 | 3.10E-5 | 0.90E-5 | 0.30E-5 | 5.8E-3 | 6.3E-3 | 6.6E-3 |",
+        "b": "| Time (s) | TMA-1mm (mol/m\u00b3) | TMA-1.5mm (mol/m\u00b3) | TMA-2mm (mol/m\u00b3) | Water-1mm (mol/m\u00b3) | Water-1.5mm (mol/m\u00b3) | Water-2mm (mol/m\u00b3) |\n|---|---|---|---|---|---|---|\n| 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 0.01 | 0.10E-3 | 0.80E-3 | 2.0E-3 | 0.00 | 0.50E-4 | 1.0E-4 |\n| 0.02 | 0.20E-3 | 2.20E-3 | 3.8E-3 | 0.10E-4 | 1.20E-4 | 1.5E-4 |\n| 0.03 | 0.30E-3 | 3.20E-3 | 3.9E-3 | 0.30E-4 | 1.80E-4 | 1.5E-4 |\n| 0.04 | 0.50E-3 | 3.60E-3 | 4.0E-3 | 0.80E-4 | 2.00E-4 | 1.5E-4 |\n| 0.06 | 1.00E-3 | 3.60E-3 | 4.0E-3 | 2.20E-4 | 2.00E-4 | 1.5E-4 |\n| 0.08 | 1.60E-3 | 3.60E-3 | 4.0E-3 | 3.60E-4 | 2.00E-4 | 1.5E-4 |\n| 0.10 | 2.10E-3 | 3.60E-3 | 4.0E-3 | 4.60E-4 | 2.00E-4 | 1.5E-4 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which gap size results in the highest level of precursor intermixing, and why?",
+                "answer_type": "Paragraph",
+                "answer": "The 1 mm gap produces the highest intermixing levels at both monitoring positions. This occurs because the narrow gap restricts convective gas flow, making mass transport dominated by diffusion. In the high vacuum system (0.22 torr), diffused precursor molecules accumulate in the exhaust regions due to insufficient convective forces to purge them, resulting in higher foreign precursor concentrations compared to larger gaps where convection is more effective."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why is the water concentration scale (right axis) in subfigure (b) much smaller than in subfigure (a)?",
+                "answer_type": "Factoid",
+                "answer": "In (a), water is the home precursor at position B so its concentration is high (10\u207b\u00b3 to 10\u207b\u00b2 mol/m\u00b3). In (b), water is the foreign precursor at position C, so only small amounts from intermixing are detected (10\u207b\u2074 mol/m\u00b3 scale)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do positions B and C represent in this experiment?",
+                "answer_type": "Factoid",
+                "answer": "Position B is located at the water side (under the exhaust between water and nitrogen zones) and position C is at the TMA side (under the exhaust between nitrogen and TMA zones), used to monitor precursor concentrations and intermixing."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on this figure, is intermixing more severe at the water side or the TMA side for the 1 mm gap?",
+                "answer_type": "Factoid",
+                "answer": "Intermixing is more severe at the TMA side, with a relative intermixing ratio of approximately 1:4 (water to TMA), compared to weaker intermixing at the water side, due to water's higher inlet vapor pressure driving stronger diffusion."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 1,
+            "width": 664,
+            "height": 457
+        },
+        "b": {
+            "x": 4,
+            "y": 463,
+            "width": 669,
+            "height": 453
+        }
+    }
+}

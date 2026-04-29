@@ -1,0 +1,72 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/31/fig_2",
+    "classification": {
+        "a": "multiple scatter plot",
+        "b": "multiple scatter plot",
+        "c": "multiple scatter plot",
+        "d": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "This multi-panel figure evaluates etch per cycle (EPC) for HfO\u2082, ZrO\u2082, and Al\u2082O\u2083 across four experimental variables relevant to ALE optimisation. Panel (a) shows that EPC increases with substrate temperature, particularly for HfO\u2082, which reaches >3 \u00c5/cycle by 400\u202f\u00b0C, while Al\u2082O\u2083 remains inert across the temperature range. Panel (b) reveals an \"ALE window\" for HfO\u2082 etching as RF bias power increases, with ZrO\u2082 showing moderate reactivity and Al\u2082O\u2083 remaining largely unaffected. Panels (c) and (d) display saturation-like behavior for Hhfac exposure and O radical exposure, respectively, again showing clear selectivity of the process for HfO\u2082 and ZrO\u2082 over Al\u2082O\u2083. These trends confirm process controllability and material selectivity critical for high-precision ALE."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | HfO\u2082 (\u00c5/cycle) | ZrO\u2082 (\u00c5/cycle) | Al\u2082O\u2083 (\u00c5/cycle) |\n|------------------|----------------|----------------|-----------------|\n| 100              | 0.5            | 0.2            | 0.0             |\n| 150              | 1.0            | 0.3            | 0.0             |\n| 200              | 1.5            | 0.5            | 0.0             |\n| 250              | 2.0            | 0.7            | 0.0             |\n| 300              | 2.5            | 0.8            | 0.0             |\n| 350              | 3.0            | 0.9            | 0.0             |\n| 400              | 3.2            | 1.0            | 0.0             |",
+        "b": "| RF Bias Power (W) | HfO\u2082 (\u00c5/cycle) | ZrO\u2082 (\u00c5/cycle) | Al\u2082O\u2083 (\u00c5/cycle) |\n|-------------------|----------------|----------------|-----------------|\n| 0                 | 0.5            | 0.2            | 0.0             |\n| 50                | 1.0            | 0.5            | 0.0             |\n| 100               | 2.0            | 0.8            | 0.0             |\n| 150               | 3.0            | 1.0            | 0.0             |\n| 200               | 3.5            | 1.2            | 0.0             |\n| 250               | 4.0            | 1.5            | 0.0             |",
+        "c": "| Hhfac Exposure (sec) | HfO\u2082 (\u00c5/cycle) | ZrO\u2082 (\u00c5/cycle) | Al\u2082O\u2083 (\u00c5/cycle) |\n|----------------------|----------------|----------------|-----------------|\n| 0                    | 0.0            | 0.0            | 0.0             |\n| 2                    | 1.0            | 0.5            | 0.0             |\n| 4                    | 2.0            | 0.8            | 0.0             |\n| 6                    | 2.8            | 1.0            | 0.0             |\n| 8                    | 3.0            | 1.2            | 0.0             |\n| 10                   | 3.1            | 1.3            | 0.0             |",
+        "d": "| O Radical Exposure (sec) | HfO\u2082 (\u00c5/cycle) | ZrO\u2082 (\u00c5/cycle) | Al\u2082O\u2083 (\u00c5/cycle) |\n|--------------------------|----------------|----------------|-----------------|\n| 0                        | 0.0            | 0.0            | 0.0             |\n| 5                        | 1.5            | 0.7            | 0.0             |\n| 10                       | 2.5            | 1.0            | 0.1             |\n| 15                       | 3.0            | 1.2            | 0.1             |\n| 20                       | 3.2            | 1.3            | 0.1             |\n| 25                       | 3.3            | 1.4            | 0.1             |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does etch per cycle (EPC) vary across HfO\u2082, ZrO\u2082, and Al\u2082O\u2083 under different process conditions, and what does this suggest about material selectivity?",
+                "answer_type": "Paragraph",
+                "answer": "EPC increases significantly for HfO\u2082 and to a lesser extent for ZrO\u2082 as temperature, RF power, Hhfac exposure, and O radical exposure increase, indicating that both materials are etched efficiently. In contrast, Al\u2082O\u2083 remains nearly unaffected under all conditions, suggesting excellent selectivity. The trends indicate that the ALE process can be tuned to target high-k materials like HfO\u2082 and ZrO\u2082 while preserving low-k or etch-resistant materials like Al\u2082O\u2083, which is valuable for precise pattern transfer in multilayer device architectures"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which material shows the highest etch per cycle at 300\u202f\u00b0C and 200 W RF power?",
+                "answer_type": "Factoid",
+                "answer": "HfO\u2082."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the four parameters varied to optimize the ALE process in this figure?",
+                "answer_type": "List",
+                "answer": "Temperature, RF bias power, Hhfac exposure time, O radical exposure time."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on the figure, is the ALE process selective enough to etch HfO\u2082 without significantly removing Al\u2082O\u2083?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 41,
+            "y": 20,
+            "width": 449,
+            "height": 585
+        },
+        "b": {
+            "x": 560,
+            "y": 20,
+            "width": 453,
+            "height": 578
+        },
+        "c": {
+            "x": 41,
+            "y": 666,
+            "width": 449,
+            "height": 570
+        },
+        "d": {
+            "x": 562,
+            "y": 666,
+            "width": 451,
+            "height": 568
+        }
+    }
+}

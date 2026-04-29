@@ -1,0 +1,90 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/41/fig_2",
+    "classification": {
+        "a": "multi spectra chart",
+        "b": "multi spectra chart",
+        "c": "multi spectra chart",
+        "d": "multiple scatter plot",
+        "e": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "Ti 2p XPS spectra of the TiN reference film show deconvoluted components assigned to TiN, TiO\u2093N\u1d67, and TiO\u2082 across 450\u2013470 eV. The relative contributions establish the initial surface chemistry prior to oxidation.",
+        "b": "After oxidation, the Ti 2p spectrum is dominated by the TiO\u2082 component, while TiN-related features are reduced. This shift indicates effective surface oxidation induced by the O\u2082 plasma step.",
+        "c": "O 1s spectra collected at 100 \u00b0C and 15 W evolve with oxidation time from 30 to 600 s. The TiO\u2082-related component near ~530 eV increases with time, consistent with progressive oxide growth.",
+        "d": "Estimated TiO\u2082 thickness increases with oxidation time for all temperatures at fixed RF power. Higher temperatures yield thicker oxides and reach saturation more rapidly.",
+        "e": "At 100 \u00b0C, increasing RF power produces thicker TiO\u2082 layers over time. The highest power (50 W) shows the largest thickness and fastest approach to saturation."
+    },
+    "data_extraction": {
+        "a": "| Binding Energy (eV) | Peak Assignment |\n|---------------------|------------------|\n| ~456                | TiN              |\n| ~457                | TiOxNy           |\n| 458\u2013459             | TiO2             |\n| ~462                | TiN              |\n| ~464                | TiO2             |",
+        "b": "| Binding Energy (eV) | Peak Assignment |\n|---------------------|------------------|\n| ~455                | TiN              |\n| ~457                | TiOxNy           |\n| 458\u2013459             | TiO2             |\n| 461\u2013462             | TiN              |\n| ~464                | TiO2             |",
+        "c": "| Binding Energy (eV) | Sample Condition |\n|---------------------|------------------|\n| 529-531             | TiO2 (ref, 30s, 60a, 180s, 300s, 600s) |\n| 531\u2013532             | TiOxNy (ref, 30s, 60a, 180s, 300s, 600s) |",
+        "d": "| Time (sec)|Thickness at 50\u00b0C (nm)     | 100\u00b0C (nm) | 150\u00b0C (nm) | 200\u00b0C (nm) |\n|-----------|---------------------------|------------|---------|----------|\n| 70        | ~0.15                     | ~0.25      | ~0.40   | ~0.70    |\n| 150       | ~0.25                     | ~0.40      | ~0.70   | ~1.00    |\n| 300       | ~0.30                     | ~0.50      | ~0.85   | ~1.25    |\n| 450       | ~0.30                     | ~0.50      | ~0.85   | ~1.25    |\n| 600       | ~0.30                     | ~0.50      | ~0.85   | ~1.25    |\n| 900       | ~0.30                     | ~0.50      | ~0.85   | ~1.25    |",
+        "e": "| Time (sec) | TiO2 Thickness at 10W (nm) | TiO2 Thickness at 15W (nm) | TiO2 Thickness at 25W (nm) | TiO2 Thickness at 50W (nm) |\n|-----------|------------------------------|---------|---------|---------|\n| 70        | 0.20                         | 0.30    | 0.50    | 0.60     |\n| 150       | 0.25                         | 0.40    | 0.75    | 1.50     |\n| 300       | 0.25                         | 0.50    | 1.00    | 2.00     |\n| 600       | 0.25                         | 0.50    | 1.00    | 2.50     |\n| 900       | 0.25                         | 0.50    | 1.00    | 2.90     |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At which substrate temperature does the TiO\u2082 thickness reach saturation the fastest in subfigure (d)?",
+                "answer_type": "Factoid",
+                "answer": "200 \u00b0C."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Describe the relationship you observe between the O 1s spectral components and oxidation time in subfigure (c)?",
+                "answer_type": "Paragraph",
+                "answer": "The TiO\u2082-related O 1s feature near ~530 eV increases strongly as oxidation time increases (30 s \u2192 600 s), and the growth becomes less pronounced at longer times, suggesting an approach toward saturation. A higher-binding-energy shoulder near ~531\u2013532 eV remains present; the figure suggests the TiO\u2082 contribution becomes increasingly dominant with time."
+            }
+        ],
+        "e": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Does increasing RF power lead to a higher final TiO\u2082 thickness according to subfigure (e)?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. The curves show a clear ordering (50 W > 25 W > 15 W > 10 W) at long times, indicating thicker oxide growth at higher RF power under otherwise fixed conditions."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What chemical state becomes more dominant in the Ti 2p spectrum after the oxidation step in subfigure (b)?",
+                "answer_type": "Factoid",
+                "answer": "TiO\u2082 becomes the dominant contribution (relative to TiN/TiO_xN_y)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 102,
+            "y": 46,
+            "width": 540,
+            "height": 468
+        },
+        "b": {
+            "x": 802,
+            "y": 46,
+            "width": 541,
+            "height": 466
+        },
+        "c": {
+            "x": 100,
+            "y": 561,
+            "width": 530,
+            "height": 469
+        },
+        "d": {
+            "x": 723,
+            "y": 545,
+            "width": 605,
+            "height": 482
+        },
+        "e": {
+            "x": 414,
+            "y": 1075,
+            "width": 606,
+            "height": 477
+        }
+    }
+}

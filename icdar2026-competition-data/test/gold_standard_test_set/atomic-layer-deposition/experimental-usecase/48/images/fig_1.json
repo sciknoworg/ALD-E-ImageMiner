@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/48/fig_1",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "scatter plot",
+        "d": "scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the relationship between HfCp(NMe\u2082)\u2083 dose and GPC (nanometers). GPC increases sharply at short doses  and then levels off near ~0.11 nm/cycle.",
+        "b": "The scatter plot shows the relationship between HfCp(NMe\u2082)\u2083 purge time and GPC (nanometers). The data points are relatively constant around 0.11 nm with no significant changes observed.",
+        "c": "The scatter plot shows the relationship between O\u2082 plasma exposure time and GPC (nanometers). The data points increase slightly with increasing exposure time up to 0.11 nm.",
+        "d": "The scatter plot shows the relationship between O\u2082 plasma purge time and GPC (nanometers). The data points decrease slightly with increasing exposure time."
+    },
+    "data_extraction": {
+        "a": "| HfCp(NMe\u2082)\u2083 dose (s) | GPC (nm) |\n|---|---|\n| 0.5 | 0.04 \u00b1 0.008 |\n| 1 | 0.09 \u00b1 0.008 |\n| 3 | 0.10 \u00b1 0.008 |\n| 5 | 0.11 \u00b1 0.008 |\n| 8 | 0.11 \u00b1 0.008 |",
+        "b": "| HfCp(NMe\u2082)\u2083 purge (s) | GPC (nm) |\n|---|---|\n| 0 | 0.11 \u00b1 0.008|\n| 1 | 0.107 \u00b1 0.008 |\n| 3 | 0.106 \u00b1 0.008 |\n| 5 | 0.106 \u00b1 0.008 |\n| 10 | 0.108 \u00b1 0.008 |",
+        "c": "| O\u2082 plasma exposure time (s) | GPC (nm) |\n|---|---|\n| 1 | 0.07 \u00b1 0.008 |\n| 3 | 0.09 \u00b1 0.008 |\n| 5 | 0.10 \u00b1 0.008 |\n| 8 | 0.11 \u00b10.008 |",
+        "d": "| O\u2082 plasma purge (s) | GPC (nm) |\n|---|---|\n| 0 | 0.12 \u00b1 0.008 |\n| 1 | 0.118 \u00b1 0.008 |\n| 2 | 0.111 \u00b1 0.008 |\n| 3 | 0.110 \u00b1 0.008 |\n| 4 | 0.108 \u00b1 0.008 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "When does GPC reaches saturation?",
+                "answer_type": "Factoid",
+                "answer": "After approx. 3 s  of HfCp(NMe\u2082)\u2083 dose (~0.11 nm/cycle)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does short purging after HfCp(NMe\u2082)\u2083  step adequately prevent non-self-limiting growth? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, short purging after the HfCp(NMe\u2082)\u2083 step appears to adequately prevent additional (non-self-limiting) growth. The GPC at very short purge times is essentially the same as at longer purge times and remains near \u22480.11 nm/cycle within the error bars. Because increasing the purge duration does not lower the GPC relative to the short-/no-purge case, there is no evidence of extra growth from residual precursor."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why is the GPC slightly higher at very short O\u2082 plasma purge times compared with longer purge times?",
+                "answer_type": "Factoid",
+                "answer": "Very short purges can leave behind reactive byproducts, that inflate GPC."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "When does GPC reach saturation after the plasma step?",
+                "answer_type": "Factoid",
+                "answer": "After approx. 5 s. of plasma exposure (beyond this point, the change in growth  is within the error bars)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 4,
+            "width": 501,
+            "height": 362
+        },
+        "b": {
+            "x": 509,
+            "y": 5,
+            "width": 486,
+            "height": 362
+        },
+        "c": {
+            "x": 1,
+            "y": 368,
+            "width": 501,
+            "height": 345
+        },
+        "d": {
+            "x": 505,
+            "y": 366,
+            "width": 487,
+            "height": 345
+        }
+    }
+}

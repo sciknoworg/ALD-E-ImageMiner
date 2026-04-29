@@ -1,0 +1,77 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/34/fig_15",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multiple line chart",
+        "d": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multiple line chart shows HF flow rate control over batch number. Without control, the flow rate drifts upward, while EWMA partially corrects the drift and ANN maintains the flow rate close to the target.",
+        "b": "The multiple line chart shows TMA flow rate over batch number. The no-control case increases steadily, whereas the ANN tracks the target closely and EWMA reduces but does not eliminate the drift.",
+        "c": "The multiple line chart shows substrate velocity over batch number. Velocity decreases significantly without control, while EWMA mitigates the drop and ANN maintains values near the target.",
+        "d": "The multiple line chart shows EPC over batch number. EPC declines strongly in the no-control case, while both EWMA and ANN stabilize EPC near the target, with ANN showing the smallest deviation."
+    },
+    "data_extraction": {
+        "a": "| Batch number | Target | EWMA | ANN  | No control |\n|--------------|--------|------|------|------------|\n| 1            | ~20    | ~21  | ~20  | ~22        |\n| 10           | ~20    | ~22  | ~20  | ~24        |\n| 20           | ~20    | ~23  | ~20  | ~25        |",
+        "b": "| Batch number | Target | EWMA | ANN  | No control |\n|--------------|--------|------|------|------------|\n| 1            | ~45    | ~46  | ~45  | ~48        |\n| 10           | ~45    | ~47  | ~45  | ~50        |\n| 20           | ~45    | ~48  | ~45  | ~52        |",
+        "c": "| Batch number | Target | EWMA | ANN  | No control |\n|--------------|--------|------|------|------------|\n| 1            | ~70    | ~72  | ~70  | ~75        |\n| 10           | ~70    | ~68  | ~70  | ~65        |\n| 20           | ~70    | ~65  | ~70  | ~55        |",
+        "d": "| Batch number | Target | EWMA | ANN  | No control |\n|--------------|--------|------|------|------------|\n| 1            | ~0.35  | ~0.36| ~0.35| ~0.34      |\n| 10           | ~0.35  | ~0.33| ~0.35| ~0.28      |\n| 20           | ~0.35  | ~0.32| ~0.35| ~0.20      |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the control strategies compare to the no-control case across the panels?",
+                "answer_type": "Paragraph",
+                "answer": "In all panels, the no-control case shows significant drift away from the target over batch number. EWMA reduces the drift but still deviates over time. The ANN consistently maintains the variables closest to their target values."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the common x-axis used in all four panels?",
+                "answer_type": "Factoid",
+                "answer": "Batch number."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Which process variables are shown across the four panels?",
+                "answer_type": "List",
+                "answer": "HF flow rate, TMA flow rate, Substrate velocity, Etching per cycle (EPC)"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the ANN method keep the process variables closer to the target than EWMA?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 88,
+            "y": 0,
+            "width": 847,
+            "height": 39
+        },
+        "b": {
+            "x": 516,
+            "y": 54,
+            "width": 495,
+            "height": 379
+        },
+        "c": {
+            "x": 9,
+            "y": 456,
+            "width": 498,
+            "height": 383
+        },
+        "d": {
+            "x": 516,
+            "y": 460,
+            "width": 495,
+            "height": 379
+        }
+    }
+}

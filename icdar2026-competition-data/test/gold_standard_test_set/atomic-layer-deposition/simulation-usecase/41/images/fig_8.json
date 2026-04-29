@@ -1,0 +1,95 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/41/fig_8",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart",
+        "c": "multiple line chart",
+        "d": "multiple line chart",
+        "e": "multiple line chart",
+        "f": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Gas phase product evolution versus time for the surface reaction between Cu(acac)2 and atomic H.",
+        "b": "Surface elemental inventory (C, H, O) versus time during the surface reaction between Cu(acac)2 and atomic H.",
+        "c": "Gas phase product evolution versus time for the surface reaction between Cu(acac)2 and H2O.",
+        "d": "Surface elemental inventory (C, H, O) versus time during the surface reaction between Cu(acac)2 and H2O.",
+        "e": "Gas phase product evolution versus time for the surface reaction between Cu(acac)2 and ozone, showing COx and HxOy as major byproducts.",
+        "f": "Surface elemental inventory (C, H, O) versus time during the surface reaction between Cu(acac)2 and ozone, showing strong surface oxidation and carbon loss."
+    },
+    "data_extraction": {
+        "a": "| Time (ps) | H (\u00d70.05) | CxHy | H\u2082O | H\u2082 (\u00d70.05) | Others |\n|---|---|---|---|---|---|\n| 0 | 100 | 0 | 0 | 0 | 0 |\n| 20 | 80 | 10 | 35 | 10 | 15 |\n| 40 | 45 | 40 | 60 | 22 | 10 |\n| 60 | 20 | 65 | 68 | 32 | 5 |\n| 80 | 5 | 85 | 68 | 37 | 2 |\n| 100 | 0 | 90 | 65 | 39 | 1 |\n| 150 | 0 | 91 | 55 | 39 | 0 |\n| 200 | 0 | 93 | 50 | 39 | 0 |",
+        "b": "| Time (ps) | C (Number) | H (Number) | O (Number) |\n|---|---|---|---|\n| 0 | 240 | 350 | 100 |\n| 25 | 180 | 300 | 60 |\n| 50 | 40 | 100 | 30 |\n| 75 | 10 | 50 | 20 |\n| 100 | 10 | 50 | 35 |\n| 150 | 10 | 70 | 40 |\n| 200 | 10 | 70 | 45 |",
+        "c": "| Time (ps) | H\u2082O (\u00d70.01) | H(acac) | acac (approx) | H\u2082(acac) |\n|---|---|---|---|---|\n| 0 | 20.0 | 0 | 0 | 0 |\n| 100 | 19.8 | 6 | 1 | 0 |\n| 200 | 19.5 | 8 | 1 | 0 |\n| 400 | 19.0 | 14 | 2 | 0 |\n| 600 | 18.8 | 14 | 2 | 2 |\n| 800 | 18.5 | 15 | 2 | 2 |",
+        "d": "| Time (ps) | H (Number) | O (Number) | C (Number) |\n|---|---|---|---|\n| 0 | 350 | 150 | 240 |\n| 100 | 500 | 190 | 210 |\n| 200 | 530 | 210 | 200 |\n| 400 | 530 | 230 | 170 |\n| 600 | 530 | 240 | 150 |\n| 800 | 540 | 240 | 150 |",
+        "e": "| Time (ps) | O\u2083 (\u00d70.1) | O | O\u2082 (\u00d70.1) | CO+CO\u2082 | OH+H\u2082O+HO\u2082 | Others |\n|---|---|---|---|---|---|---|\n| 0 | 100 | 0 | 0 | 0 | 0 | 0 |\n| 50 | 60 | 60 | 50 | 10 | 60 | 25 |\n| 100 | 20 | 120 | 85 | 40 | 90 | 30 |\n| 150 | 5 | 130 | 98 | 55 | 90 | 30 |\n| 200 | 0 | 100 | 102 | 70 | 80 | 25 |\n| 300 | 0 | 50 | 108 | 90 | 55 | 22 |\n| 450 | 0 | 15 | 110 | 100 | 35 | 22 |\n| 600 | 0 | 0 | 110 | 110 | 20 | 22 |",
+        "f": "| Time (ps) | O (Number) | H (Number) | C (Number) |\n|---|---|---|---|\n| 0 | 100 | 330 | 240 |\n| 50 | 300 | 220 | 180 |\n| 150 | 480 | 200 | 130 |\n| 300 | 550 | 240 | 100 |\n| 450 | 580 | 270 | 80 |\n| 600 | 600 | 290 | 70 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "According to the paper, what is the relative reactivity of the three co reactants toward Cu(acac)2, and how is that reflected in the product evolution plots?",
+                "answer_type": "Paragraph",
+                "answer": "Reactivity order is atomic H, then ozone, then H2O. \n\nAtomic H shows rapid formation of hydrogen containing products and fast changes in surface composition in (a,b).\n\nOzone shows substantial formation of HxOy and COx products in (e) and strong surface oxygen buildup in (f). \n\nWater shows slower product formation and more gradual surface evolution in (c,d)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "For the ozone case, what does the paper report about the timing of HxOy versus COx formation, and what does that imply about the first reaction step?",
+                "answer_type": "Paragraph",
+                "answer": "The paper reports that HxOy evolution starts about 10 ps earlier than COx evolution.  This implies that ozone reacts first with hydrogen in the Cu(acac)2 derived ligands before extensive carbon oxidation occurs. That sequencing is consistent with an initial hydrogen abstraction step followed by deeper oxidation to CO and CO2."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What ALD relevant implication do the authors draw from the statement that most gaseous HxOy are re adsorbed on the surface after ozone exposure?",
+                "answer_type": "Paragraph",
+                "answer": "They argue that if HxOy re adsorb, then protons become available on the surface.  Those protons can participate in ligand exchange during the next Cu(acac)2 pulse, similar to the water based ligand exchange mechanism. In practice, this links ozone exposure to creation of reactive, protonated surface species that can help sustain self limiting cycling."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the titles \u201cGas phase\u201d and \u201cSurface\u201d indicate in this multi panel figure?",
+                "answer_type": "Factoid",
+                "answer": "\u201cGas phase\u201d panels plot counts of gaseous products, while \u201cSurface\u201d panels plot how many C, H, and O atoms remain associated with the surface region during the simulation."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 0,
+            "width": 442,
+            "height": 369
+        },
+        "b": {
+            "x": 443,
+            "y": 1,
+            "width": 428,
+            "height": 365
+        },
+        "c": {
+            "x": 0,
+            "y": 367,
+            "width": 450,
+            "height": 323
+        },
+        "d": {
+            "x": 441,
+            "y": 360,
+            "width": 431,
+            "height": 330
+        },
+        "e": {
+            "x": 1,
+            "y": 690,
+            "width": 438,
+            "height": 320
+        },
+        "f": {
+            "x": 445,
+            "y": 688,
+            "width": 431,
+            "height": 321
+        }
+    }
+}

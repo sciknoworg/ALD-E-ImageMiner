@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/3/3867828aabdcebeb2d14ad2a2fb95a1a072eb6ee61ceaf985a0a438c2fdc01d5",
+    "classification": {
+        "a": "reaction scheme",
+        "b": "stacked spectra chart",
+        "c": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "The figure illustrates the step-by-step transformation of a pristine bilayer structure through the adsorption of chlorine atoms and subsequent exposure to argon gas, leading to a monolayer structure.",
+        "b": "The figure shows the intensity of spectral peaks at various wavenumbers for different states of the material, including pristine bilayer, Cl adsorption, and monolayer structures. Where the intensities decrease upon plasma exposure.",
+        "c": "The figure shows the intensity of spectral peaks at various wavenumbers for different states of the material, including pristine bilayer, Cl adsorption, and monolayer structures. Where the intensities increase upon plasma exposure."
+    },
+    "data_extraction": {
+        "a": "| Reaction Step | Description |\n|---|---|\n| Pristine (bilayer) | Initial state with bilayer structure |\n| Cl adsorption | Chlorine atoms adsorb onto the surface |\n| Ar 30 s | Argon gas exposure for 30 seconds |\n| Ar 60 s | Argon gas exposure for 60 seconds |\n| Ar 120 s | Argon gas exposure for 120 seconds |\n| Pristine (monolayer) | Final state with monolayer structure |",
+        "b": "| Wavenumber (cm\u207b\u00b9) | Intensity (a.u.) Pristine Bi|Intensity (a.u.) Cl ads|Intensity (a.u.) 30s Ar|Intensity (a.u.) 60s Ar|Intensity (a.u.) 120s Ar|Intensity (a.u.) Pristine Mono|\n|---|---|---|---|---|---|---|\n| 370 | - |- |- |- |- |- |\n| 383 | Peak 1*I |Peak 1*I |Peak 0.9*I |Peak 0.6*I |Peak 0.5*I |Peak 0.4*I |\n| 390 | - |- |- |- |- |- |\n| 405 | Peak 1*I |Peak 1*I |Peak 0.9*I |Peak 0.6*I |Peak 0.5*I |Peak 0.4*I |\n| 420 | - |- |- |- |- |- |",
+        "c": "| Wavenumber (cm\u207b\u00b9) | Intensity (a.u.) Pristine Bi|Intensity (a.u.) Cl ads|Intensity (a.u.) 30s Ar|Intensity (a.u.) 60s Ar|Intensity (a.u.) 120s Ar|Intensity (a.u.) Pristine Mono|\n|---|---|---|---|---|---|---|\n| 580 | - |- |- |- |- |- |\n| 620 | Peak 0.6*I |Peak 0.6*I |Peak 0.8*I |Peak 0.9*I |Peak 1*I |Peak 1*I |\n| 665 | Peak 0.6*I |Peak 0.6*I |Peak 0.8*I |Peak 0.9*I |Peak 1*I |Peak 1*I |\n| 720 | - |- |- |- |- |- |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What processing step takes the longest in this process and why?",
+                "answer_type": "Paragraph",
+                "answer": "The plasma exposure takes the longest. This is likely as the plasma is at a high pressure. Also modification usually does not take more than a few seconds."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What effect of the plasma must be taken into account for low pressures?",
+                "answer_type": "Paragraph",
+                "answer": "At low pressures, ions are more accelerated towards the substrate table and can also damage the underlaying monolayer for to long exposures."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Are the peak ratios for all measurements equal?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is there a thickness dependence in the intensity and how does this relation look?",
+                "answer_type": "Paragraph",
+                "answer": "Yes there is a dependence. With the removal of half of the material, the intensity is also dropping. This indicates a proportional relation."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 16,
+            "y": 9,
+            "width": 372,
+            "height": 200
+        },
+        "b": {
+            "x": 16,
+            "y": 235,
+            "width": 190,
+            "height": 135
+        },
+        "c": {
+            "x": 209,
+            "y": 235,
+            "width": 186,
+            "height": 135
+        }
+    }
+}

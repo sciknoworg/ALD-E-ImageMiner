@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/20/fig_4",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart shows the relationship between gap size and relative intermixing ratio at two positions, B and C"
+    },
+    "data_extraction": {
+        "a": "| Gap size (mm) | Position B (Ratio) | Position C (Ratio) |\n|---|---|---|\n| 1.0 | 0.005 | 0.250 |\n| 1.5 | 0.001 | 0.060 |\n| 2.0 | 0.000 | 0.030 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why is the relative intermixing ratio much higher at position C than at position B?",
+                "answer_type": "Paragraph",
+                "answer": "Position C (TMA side) experiences higher intermixing because water has a higher inlet vapor pressure than TMA, resulting in stronger diffusive transport of water molecules toward the TMA zone. At 1 mm gap, the relative intermixing ratio at position C is approximately 0.25 (1:4 water to TMA), while position B shows only about 0.01. This asymmetry reflects the different volatilities of the two precursors."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How is the relative intermixing ratio defined in this figure?",
+                "answer_type": "Factoid",
+                "answer": "It is defined as the concentration ratio of the foreign gas to the home gas at each monitoring position."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to intermixing at position C when gap size increases from 1 mm to 2 mm?",
+                "answer_type": "Factoid",
+                "answer": "The relative intermixing ratio decreases dramatically from approximately 0.25 to 0.03, representing roughly an 8-fold reduction."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on this figure, is precursor intermixing a significant concern for a 2 mm gap spatial ALD reactor?",
+                "answer_type": "Paragraph",
+                "answer": "No. At 2 mm gap size, both positions show low intermixing ratios (below 0.03), indicating effective precursor separation with minimal risk of unwanted CVD-type reactions."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 2,
+            "width": 679,
+            "height": 577
+        }
+    }
+}

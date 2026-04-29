@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/18/fig_9",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "This graph shows the growth rate profile for the same reactor as similar figure in this work but under Case II conditions with lower flow, where diffusion dominates transport. The simulation matches very closely with the experimental data across the full wafer radius. This agreement demonstrates the model\u2019s strong accuracy in diffusion-controlled regimes."
+    },
+    "data_extraction": {
+        "a": "| Radius (cm) | Growth Rate (cm/hr) | Study Type |\n|---|---|---|\n| 0.0 | -- | Numerical (present study) |\n| 0.0 | 2.3 | Experimental |\n| 0.5 | 1.7 | Numerical (present study) |\n| 0.5 | 2.2 | Experimental |\n| 1.0 | 1.76 | Numerical (present study) |\n| 1.0 | 1.78 | Experimental |\n| 1.5 | 1.69 | Numerical (present study) |\n| 1.5 | 1.8 | Experimental |\n| 2.0 | 1.58 | Numerical (present study) |\n| 2.0 | 1.8 | Experimental |\n| 2.5 | 1.47 | Numerical (present study) |\n| 2.5 | 1.9 | Experimental |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What specific change to the reactor's operating parameters would directly transform the growth rate profile from the steep, center-high shape of Case I into the flat, uniform profile of Case II shown here?",
+                "answer_type": "Paragraph",
+                "answer": "The key change is a large reduction in the carrier gas (H\u2082) flow rate. Lower flow decreases convective velocity, reducing the Reynolds number and shifting dominance from convection to diffusion. This allows precursors more time to diffuse radially across the wafer, smoothing out concentration gradients and producing a uniform growth rate profile, as shown in Case II."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the process outcomes of operating in this diffusion-dominated regime (Case II) versus the convection-dominated regime (Case I).",
+                "answer_type": "Paragraph",
+                "answer": "The diffusion-dominated regime (Case II) is preferable for superior uniformity. The flatter intrinsic profile minimizes center-to-edge variation. The primary trade-off is a lower overall growth rate and potentially poorer precursor vapor-phase mixing, which could lead to compositional non-uniformities in ternary alloys and reduced reactor throughput due to the slower deposition."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the key difference in the radial growth rate profile between this diffusion-dominated case (Case II) and the convection-dominated case (Case I)? Can the flatter profile be related here directly to Fick's Law of Diffusion.",
+                "answer_type": "Paragraph",
+                "answer": "The profile here is significantly flatter and more uniform than the center-high, edge-low profile of Case I. Under diffusion-dominated transport, precursor redistribution is governed by Fick's Law, which drives species from high-concentration regions (above the center) toward low-concentration regions (above the edges). This natural smoothing effect reduces radial gradients, leading to the nearly uniform growth rate observed across the wafer radius."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Given the exceptionally close match between model and experiment in this diffusion-controlled regime, is this validated model a reliable tool for designing a new reactor that must prioritize thickness uniformity over maximum growth speed? Justify your answer.",
+                "answer_type": "Paragraph",
+                "answer": "Yes, the model's proven accuracy under diffusion-limited conditions means it can reliably predict how changes in reactor geometry, pressure, or flow will affect the uniformity-critical transport pathways. Engineers can use it to optimize a new reactor's design specifically for uniform precursor diffusion, confidently trading off some convective speed to achieve the target thickness uniformity."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 4,
+            "width": 582,
+            "height": 454
+        }
+    }
+}

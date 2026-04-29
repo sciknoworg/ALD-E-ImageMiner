@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/24/figure_6",
+    "classification": {
+        "a": "stacked spectra chart"
+    },
+    "summarization": {
+        "a": "The GI-XRD patterns show that the crystal structure of TiO\u2082 thin films strongly depends on the substrate and temperature. Films grown on TiN crystallize directly into the anatase phase (2\u03b8 \u2248 25.3\u00b0) even at low temperatures and remain stable up to 600 \u00b0C, while films on Ru are amorphous at low temperature and transform into the rutile phase (2\u03b8 \u2248 27.5\u00b0) only after high-temperature annealing. This demonstrates that substrate-induced effects control TiO\u2082 polymorph formation and thermal crystallization behavior."
+    },
+    "data_extraction": {
+        "a": "| Substrate        | Anneal temperature (\u00b0C) | 2\u03b8 (\u00b0) | Phase / peak assignment    |\n|------------------|-------------------------:|-------:|----------------------------|\n| TiN              | 100                      | 24     | TiO\u2082 anatase               |\n| TiN              | 100                      | 27     | TiO\u2082 rutile                |\n| TiN              | 600                      | 24     | TiO\u2082 anatase               |\n| TiN              | 600                      | 27     | TiO\u2082 rutile                |\n| Ru (ruthenium)   | 100\u2013900                  | 38\u201344  | Ru substrate peaks (set)   |\n| TiO\u2082 on Ru       | 100\u2013900                  | 24\u201327  | Mixed anatase / rutile TiO\u2082|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the XRD data, which substrate (Ru or TiN) acts as the correct template to enforce this specific crystal structure for eg - anatase in this case?",
+                "answer_type": "Paragraph",
+                "answer": "The top set of curves explicitly shows the \"TiO\u2082 Anatase\" peak at  ~25degrees for films grown on TiN. In contrast, the Ruthenium substrate promotes the Rutile phase or amorphous growth, making TiN the mandatory choice for achieving the Anatase polymorph."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Rutile TiO\u2082 has a higher dielectric constant (k \u2248 80) than anatase (k \u2248 40), making it more suitable for capacitor applications. If a ruthenium substrate is used to obtain the rutile phase, what is the required thermal cost or processing trade-off needed to fully crystallize the film?",
+                "answer_type": "Paragraph",
+                "answer": "To achieve the high-k Rutile phase on Ruthenium, the data shows the process requires high temperatures (approaching 900\u00b0C) to produce strong, sharp diffraction peaks. This high thermal budget might damage other sensitive components on the chip (e.g., melting interconnects or degrading dopant profiles), representing a significant manufacturing constraint compared to the lower-temperature Anatase process on TiN."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Analyze the Ruthenium substrate data (bottom curves). Compare the spectra at 100 \u00b0C and 900 \u00b0C. What specific structural transformation is indicated by the emergence of the peak at 27.5\u00b0?",
+                "answer_type": "Factoid",
+                "answer": "Transition from Amorphous to Crystalline (Rutile)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The Ruthenium substrate peaks (at 38\u00b0 and 43\u00b0) remain sharp and distinct even at 900\u00b0C. What does this suggest about the chemical stability of the Ruthenium interface relative to the TiO_2 film at these extreme temperatures?",
+                "answer_type": "Paragraph",
+                "answer": "The persistence of the sharp metallic Ruthenium peaks suggests good interfacial stability. It implies that the Ruthenium substrate does not completely oxidize (turning into volatile RuO4 or diffuse massively into the TiO\u2082 to destroy the interface, even at 900\u00b0C. If the interface failed or reacted significantly, these substrate peaks would diminish, broaden, or shift, none of which is observed here."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 2,
+            "width": 626,
+            "height": 495
+        }
+    }
+}

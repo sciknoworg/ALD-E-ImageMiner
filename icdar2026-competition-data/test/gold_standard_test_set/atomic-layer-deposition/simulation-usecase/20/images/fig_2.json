@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/20/fig_2",
+    "classification": {
+        "a": "apparatus diagram",
+        "b": "apparatus diagram"
+    },
+    "summarization": {
+        "a": "3D computational domain of the in-line spatial ALD reactor showing the meshed fluid volume, including water and TMA precursor dosing cylinders, nitrogen separating gas cylinder, two exhaust cylinders, and the gap region between the gas delivery head and wafer surface. Scale bar indicates dimensions in meters.",
+        "b": "Center slice (2D cross-section) of the 3D computational domain showing the wafer top surface (yellow) and four probing points (A, B, C, D) used to monitor precursor concentrations and surface deposition rates during simulations."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": ""
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What type of mesh is used in the 3D computational domain shown in (a)?",
+                "answer_type": "Factoid",
+                "answer": "A non-structural tetrahedral mesh, as stated in the paper for finite volume method (FVM) calculations."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the sequence of gas zones from left to right in this in-line spatial ALD reactor configuration?",
+                "answer_type": "List",
+                "answer": "Water precursor, exhaust, nitrogen (separating gas), exhaust, TMA precursor."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does a complete ALD cycle require two precursor dosing cylinders in this computational domain?",
+                "answer_type": "Factoid",
+                "answer": "Because each half-reaction occurs under a separate precursor cylinder, and a wafer position must pass through both zones (water and TMA) to complete one full ALD deposition cycle."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the purpose of points A, B, C, and D marked on the wafer surface in subfigure (b)?",
+                "answer_type": "Paragraph",
+                "answer": "Points A and D are located under the water and TMA dosing cylinders respectively, and are used to probe surface deposition rates during simulations. Points B and C are positioned in the exhaust regions between precursor zones and are used to monitor precursor concentrations for studying intermixing. This arrangement allows tracking of both chemical deposition kinetics and gas transport behavior."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 3,
+            "width": 657,
+            "height": 471
+        },
+        "b": {
+            "x": 9,
+            "y": 474,
+            "width": 641,
+            "height": 482
+        }
+    }
+}

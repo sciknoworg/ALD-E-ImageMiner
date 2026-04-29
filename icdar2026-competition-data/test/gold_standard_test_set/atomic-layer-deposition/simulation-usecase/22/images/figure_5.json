@@ -1,0 +1,71 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/22/figure_5",
+    "classification": {
+        "a": "molecular structure diagram",
+        "b": "bar chart",
+        "c": "bar chart"
+    },
+    "summarization": {
+        "a": "shows the hydrogenolysis reaction of adsorbed aniline on Ru(0001) and Co(0001) surfaces. Upon exposure to H\u2082, the surface-bound aniline decomposes into surface-adsorbed C\u2086H\u2086 fragments and NH\u2083. The adsorption energies (\u22120.89 eV for Ru and \u22120.94 eV for Co) indicate the stability of the post-reaction species.",
+        "b": "presents a histogram of the remaining effective gap sizes on Ru(0001) after hydrogenolysis. Most gaps remain below 0.25 nm, far smaller than the 0.49 nm radius required for TDMAT access. The inset shows a dense RSA configuration, indicating Ru retains strong blocking capability even after inhibitor decomposition.",
+        "c": "provides the same analysis for Co(0001). Co exhibits a broader distribution with more mid-range gaps (0.25\u20130.35 nm), reflecting reduced packing efficiency after hydrogenolysis. The RSA inset reveals more open regions than Ru, implying weaker precursor blocking and lower selectivity."
+    },
+    "data_extraction": {
+        "b": "| Effective gap size (nm) | Surface density (nm^-2) |\n|---|---|\n| 0.20 | 0.11 |\n| 0.25 | 0.05 |\n| 0.30 | 0.00 |\n| 0.35 | 0.00 |\n| 0.40 | 0.00 |\n| 0.45 | 0.00 |\n| 0.50 | 0.00 |",
+        "c": "| Effective gap size (nm) | Surface density (nm^-2) |\n|---|---|\n| 0.20 | 0.06 |\n| 0.25 | 0.00 |\n| 0.30 | 0.00 |\n| 0.35 | 0.00 |\n| 0.40 | 0.00 |\n| 0.45 | 0.00 |\n| 0.50 | 0.00 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is gap-size analysis important for predicting whether TDMAT can penetrate inhibitor-covered surfaces after hydrogenolysis?",
+                "answer_type": "Paragraph",
+                "answer": "Gap-size analysis determines whether the remaining openings between surface fragments are large enough to allow the TDMAT precursor to adsorb. Since TDMAT requires at least ~0.49 nm of accessible space, surfaces that retain only sub-threshold gaps will continue to block precursor adsorption effectively. Ru maintains gaps far below this threshold, preserving inhibitor effectiveness, while Co develops larger openings that may permit TDMAT infiltration, reducing selectivity. This analysis directly links post-reaction surface morphology with ALD blocking performance."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which surface retains smaller gaps after hydrogenolysis\u2014Ru(0001) or Co(0001)?",
+                "answer_type": "Factoid",
+                "answer": "Ru(0001) retains smaller gaps."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is the effective-gap analysis performed after hydrogenolysis based on measuring the minimum distance between an unoccupied site and its nearest neighboring inhibitor fragments?",
+                "answer_type": "Paragraph",
+                "answer": "Yes each effective gap is determined by the minimum distance from an empty site to adjacent inhibitor residues after hydrogenolysis."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What structural changes in aniline fragments after hydrogenolysis influence the gap-size distribution?",
+                "answer_type": "List",
+                "answer": "Loss of the NH\u2082 group, Conversion to a smaller benzene fragment, Reduced lateral footprint on the surface, Surface-dependent packing rearrangements, Residual binding strength differences on Ru vs Co"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 41,
+            "y": 26,
+            "width": 246,
+            "height": 363
+        },
+        "b": {
+            "x": 330,
+            "y": 13,
+            "width": 397,
+            "height": 376
+        },
+        "c": {
+            "x": 750,
+            "y": 15,
+            "width": 400,
+            "height": 374
+        }
+    }
+}

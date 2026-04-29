@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/12/figure_8",
+    "classification": {
+        "a": "multiple scatter plot",
+        "b": "multiple scatter plot",
+        "c": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The subfigure compares total HF coverage with Al\u2013F coverage across the adsorption minima from Figure 7. Most data points lie below the dashed diagonal, indicating that increasing HF adsorption does not translate one-to-one into Al\u2013F bond formation, especially at higher coverages.",
+        "b": "The subfigure shows that the total binding energy per unit area becomes progressively more negative with increasing HF coverage, reflecting stronger overall adsorption as surface loading increases.",
+        "c": "The subfigure shows a similar trend with Al\u2013F coverage: higher densities of Al\u2013F bonds correlate with more negative binding energies, with the strongest stabilization occurring at high Al\u2013F coverages."
+    },
+    "data_extraction": {
+        "a": "| Coverage HF (nm\u207b\u00b2) | Coverage Al\u2013F (nm\u207b\u00b2) |\n|-------------------|----------------------|\n| ~1 | ~1 |\n| ~3 | ~1 |\n| ~5 | ~3 |\n| ~7 | ~4 |\n| ~9 | ~5 |\n| ~10 | ~5 |\n| ~14 | ~9 |\n| ~15 | ~7 |",
+        "b": "| Coverage HF (nm\u207b\u00b2) | E_bind (eV/nm\u00b2) |\n|-------------------|----------------|\n| ~1 | ~ -2 |\n| ~3 | ~ -3 |\n| ~5 | ~ -8 |\n| ~7 | ~ -11 |\n| ~9 | ~ -12 |\n| ~10 | ~ -14 |\n| ~13 | ~ -15 |\n| ~13 | ~ -14 |\n| ~15 | ~ -16 |",
+        "c": "| Coverage Al\u2013F (nm\u207b\u00b2) | E_bind (eV/nm\u00b2) |\n|---------------------|----------------|\n| ~1 | ~ -3 |\n| ~3 | ~ -7 |\n| ~3 | ~ -10 |\n| ~5 | ~ -12--16 |\n| ~7 | ~ -16 |\n| ~10 | ~ -15 |\n| ~14 | ~ -16 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does Al\u2013F coverage compare to HF coverage in the configurations shown?",
+                "answer_type": "Paragraph",
+                "answer": "Al\u2013F coverage increases with HF coverage but remains consistently lower for most configurations. This indicates that a significant fraction of adsorbed HF remains molecular or participates in hydrogen-bonded networks rather than forming Al\u2013F bonds."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does equal HF and Al\u2013F coverage occur for most of the adsorption configurations shown?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "At approximately what Al\u2013F coverage does the binding energy reach its most negative values?",
+                "answer_type": "Factoid",
+                "answer": "Around 14\u201315 nm\u207b\u00b2."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to the binding energy as HF coverage increases?",
+                "answer_type": "Factoid",
+                "answer": "The binding energy becomes more negative."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 15,
+            "y": 26,
+            "width": 418,
+            "height": 388
+        },
+        "b": {
+            "x": 439,
+            "y": 36,
+            "width": 400,
+            "height": 378
+        },
+        "c": {
+            "x": 841,
+            "y": 26,
+            "width": 566,
+            "height": 385
+        }
+    }
+}

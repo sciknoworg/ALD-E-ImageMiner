@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/28/fig11",
+    "classification": {
+        "a": "multi spectra chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "Mass spectrometry traces showing the evolution of fluorinated boron species during five HF pulses. The BF2+ signal increases progressively with successive cycles, while the BFOH+ signal decreases, indicating a shift from hydroxyl-containing to more fully fluorinated surface species.",
+        "b": "Mass spectrometry trace tracking H2O+ evolution during repeated HF exposure. The signal increases over the first few cycles and then levels off, indicating saturation in water release behavior."
+    },
+    "data_extraction": {
+        "a": "|HF Cycle |\tTime (min)\t|BF\u2082\u207a (m/z 49amu) mV\t|BFOH\u207a (m/z 47amu) mV|\n|---|---|---|---|\n|1st\t|~2.5-5.00\t|~60 mV\t    |~45 mV|\n|2nd\t|~7.5-10.00\t|~95 mV\t    |~40 mV|\n|3rd\t|~12.5-15.00 |~110 mV\t|~30 mV|\n|4th\t|~17.5-20.00 |~110 mV\t|~20 mV|\n|5th\t|~22.5-25.00 |~100 mV\t|~20 mV|",
+        "b": "|HF Cycle\t|Time (min)\t|H\u2082O\u207a (m/z 18amu) mV|\n|---|---|---|\n|1st\t|~2.5-5.00\t|~300 mV|\n|2nd\t|~7.5-10.00\t|~450 mV|\n|3rd\t|~12.5-15.00 |~480 mV|\n|4th\t|~17.5-20.00 |~460 mV|\n|5th\t|~22.5-25.00 |~430 mV|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Analyze the contrasting trends of the BF2+  and BFOH+ species shown in sub-figure (a) over the five HF cycles.",
+                "answer_type": "Paragraph",
+                "answer": "The data reveals an inverse relationship between the two fluorinated species as the process proceeds. The BF2+ signal (indicating pure fluorination) roughly doubles from ~60 mV to a peak of ~110 mV, suggesting the surface is becoming more effectively fluorinated. Conversely, the BFOH+ signal (indicating partial hydroxy-fluorination) decreases by more than half (45 mV to 20 mV), suggesting a reduction in surface hydroxyl groups available for this specific reaction pathway."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "List the mass-to-charge (m/z) ratios used to identify the Boron Difluoride cation and the Boron Fluoro-Hydroxide cation in this experiment.",
+                "answer_type": "List",
+                "answer": "m/z = 49 for BF2+ \n, m/z = 47 for BFOH+"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the release of volatile byproducts occur continuously throughout the 25-minute experiment?",
+                "answer_type": "Paragraph",
+                "answer": "No, the release is pulsed, occurring only during the discrete HF exposure times (approx. every 5 minutes)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "According to the data in sub-figure (b), at which HF cycle does the water H2O+ signal reach its maximum intensity, and what is that value?",
+                "answer_type": "Factoid",
+                "answer": "It reaches a maximum of approximately 480 mV at the 3rd HF cycle."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 3,
+            "width": 667,
+            "height": 222
+        },
+        "b": {
+            "x": 4,
+            "y": 231,
+            "width": 663,
+            "height": 236
+        }
+    }
+}

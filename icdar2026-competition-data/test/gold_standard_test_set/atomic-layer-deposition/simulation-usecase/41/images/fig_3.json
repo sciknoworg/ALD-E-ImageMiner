@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/41/fig_3",
+    "classification": {
+        "a": "reaction energy profile diagram"
+    },
+    "summarization": {
+        "a": "The chart shows the energy changes at various points in a reaction pathway using two different computational methods: GGA-PBE and vdW-DF."
+    },
+    "data_extraction": {
+        "a": "| Reaction Step | GGA-PBE Energy (eV) | vdW-DF Energy (eV) |\n|---|---|---|\n| Cu(acac)\u2082(g) | 0.00 | 0.00 |\n| Cu(acac)\u2082@T | -0.48 | -1.42 |\n| Cu(acac)\u2082@H | -1.51 | -2.16 |\n| TS1 | -0.92 | -1.68 |\n| Cu(acac)* + acac* | -1.88 | -2.29 |\n| TS2 | -1.32 | -1.79 |\n| Cu* + 2acac* | -2.10 | -2.61 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "In this plot, which color corresponds to the vdW DF results?",
+                "answer_type": "Factoid",
+                "answer": "Red corresponds to vdW DF."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What step does TS1 represent, and what barrier is reported for PBE and vdW DF?",
+                "answer_type": "Paragraph",
+                "answer": "TS1 is the transition state for dissociation of one acac ligand from adsorbed Cu(acac)2.\n\nThe barrier is 0.59 eV for PBE and 0.48 eV for vdW DF."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the overall reaction energy from Cu(acac)2(g) to Cu plus 2acac on the surface for the two methods?",
+                "answer_type": "Paragraph",
+                "answer": "PBE gives 2.10 eV exothermicity for the full process.\n\nvdW DF gives 2.61 eV exothermicity for the full process"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is it important to include a vdW inclusive functional when evaluating Cu(acac)2 adsorption and early dissociation on Cu(110)?",
+                "answer_type": "Paragraph",
+                "answer": "The paper notes that GGA PBE does not capture van der Waals forces, which can lead to underestimated binding for weakly bound adsorption states. Using vdW DF increases the adsorption energies and can shift how strongly the ligands interact with the surface. For ALD interpretation, this affects predicted sticking, surface diffusion into the most stable site, and the thermodynamic driving force for the first ligand loss step."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 0,
+            "width": 655,
+            "height": 342
+        }
+    }
+}

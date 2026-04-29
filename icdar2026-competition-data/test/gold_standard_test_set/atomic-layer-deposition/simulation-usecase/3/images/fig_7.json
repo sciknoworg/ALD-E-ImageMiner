@@ -1,0 +1,77 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/3/fig_7",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart",
+        "c": "multi-axis chart",
+        "d": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "Water pulse at 100\u00b0C: Shows surface deposition rate of Al\u27e8s\u27e9 (red), H\u2082O mole fraction (black), and *OH surface coverage (purple). Deposition rate peaks then declines as *OH coverage saturates to ~100%.",
+        "b": "Water pulse at 150\u00b0C: Faster *OH saturation than 100\u00b0C. Peak deposition rate is slightly higher and reached earlier.",
+        "c": "Water pulse at 200\u00b0C: Surface saturates around t=0.003s. Deposition becomes hindered once *OH fully covers the surface.",
+        "d": "Water pulse at 250\u00b0C: Fastest saturation with highest peak deposition rate. However, after ~0.003s, deposition rate at 250\u00b0C falls below that at 200\u00b0C because reactive *Al(CH\u2083)\u2082 and *AlCH\u2083 sites are consumed more quickly."
+    },
+    "data_extraction": {
+        "a": "| Flow time (ms) | Surface Deposition Rate ( kg/m2-s ) | *OH Surface Coverage | H2O Mole Fraction |\n|---|---|---|---|\n| 1 | 0.55e-04 | 0.15 | 0.02 |\n| 2 | 1.05e-04 | 0.70 | 0.05 |\n| 3 | 0.45e-04 | 0.92 | 0.20 |\n| 4 | 0.15e-04 | 0.98 | 0.55 |\n| 5 | 0.02e-04 | 1.00 | 0.85 |\n| 6 | 0.00 | 1.00 | 0.95 |\n| 7 | 0.00 | 1.00 | 1.00 |",
+        "b": "| Flow time (ms) | Surface Deposition Rate ( kg/m2-s ) | *OH Surface Coverage | H2O Mole Fraction |\n|---|---|---|---|\n| 1 | 0.70e-04 | 0.35 | 0.02 |\n| 2 | 1.15e-04 | 0.90 | 0.10 |\n| 3 | 0.35e-04 | 0.99 | 0.38 |\n| 4 | 0.05e-04 | 1.00 | 0.78 |\n| 5 | 0.00 | 1.00 | 0.95 |\n| 6 | 0.00 | 1.00 | 1.00 |",
+        "c": "| Flow time (ms) | Surface Deposition Rate ( kg/m2-s ) | *OH Surface Coverage | H2O Mole Fraction |\n|---|---|---|---|\n| 1 | 0.85e-04 | 0.55 | 0.02 |\n| 2 | 1.20e-04 | 0.95 | 0.20 |\n| 3 | 0.25e-04 | 1.00 | 0.60 |\n| 4 | 0.02e-04 | 1.00 | 0.90 |\n| 5 | 0.00 | 1.00 | 0.98 |\n| 6 | 0.00 | 1.00 | 1.00 |",
+        "d": "| Flow time (ms) | Surface Deposition Rate ( kg/m2-s ) | *OH Surface Coverage | H2O Mole Fraction |\n|---|---|---|---|\n| 1 | 1.30e-04 | 0.50 | 0.05 |\n| 2 | 0.40e-04 | 0.95 | 0.30 |\n| 3 | 0.05e-04 | 1.00 | 0.80 |\n| 4 | 0.00 | 1.00 | 0.98 |\n| 5 | 0.00 | 1.00 | 1.00 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the temperature effect on water pulse differ from the TMA pulse?",
+                "answer_type": "Paragraph",
+                "answer": "The water pulse shows more complex temperature behavior. While higher temperature initially increases deposition rate (similar to TMA), after about 0.003s the deposition at higher temperatures becomes hindered. At 250\u00b0C, *OH saturates so quickly that the deposition rate drops below that at 200\u00b0C. This contrasts with TMA pulse where peak rates were temperature-independent."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does higher temperature always result in higher deposition rate during the water pulse?",
+                "answer_type": "Paragraph",
+                "answer": "No. Higher temperature increases the peak rate and accelerates saturation, but after ~0.003s the deposition rate at 250\u00b0C falls below that at 200\u00b0C due to faster consumption of reactive surface sites."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What surface species is regenerated during the water pulse step?",
+                "answer_type": "Factoid",
+                "answer": "*OH (hydroxyl groups), which serve as reactive sites for the subsequent TMA pulse."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the deposition rate decline after *OH coverage saturates?",
+                "answer_type": "Factoid",
+                "answer": "Once *OH fully covers the surface, all reactive *Al(CH\u2083)\u2082 and *AlCH\u2083 sites from the TMA pulse have been consumed, so no further reaction can occur."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 3,
+            "width": 312,
+            "height": 485
+        },
+        "b": {
+            "x": 297,
+            "y": 7,
+            "width": 215,
+            "height": 486
+        },
+        "c": {
+            "x": 496,
+            "y": 2,
+            "width": 204,
+            "height": 476
+        },
+        "d": {
+            "x": 699,
+            "y": 0,
+            "width": 246,
+            "height": 493
+        }
+    }
+}

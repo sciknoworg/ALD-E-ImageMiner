@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/27/fig_2",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The chart shows the relationship between gas flow rate and etch rate and surface roughness. As the gas flow rate increases, the etch rate increases while the surface roughness decreases."
+    },
+    "data_extraction": {
+        "a": "| Gas Flow Rate (sccm) | Etch Rate (\u00c5 / cycle) | Surface Roughness (\u00c5) |\n|---|---|---|\n| 0 | 0.10 | 5.0 |\n| 25 | 0.80 | 7.0 |\n| 50 | 0.85 | 5.0 |\n| 75 | 1.00 |  |\n| 100 | 1.00 | 4 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the operating 1st grid voltage?",
+                "answer_type": "Factoid",
+                "answer": "100 V."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate at 100 sccm?",
+                "answer_type": "Factoid",
+                "answer": "1.0 \u00c5/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the roughness at 25 sccm?",
+                "answer_type": "Factoid",
+                "answer": "Roughly 7.0 \u00c5."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How is the surface roughness related to the etch rate?",
+                "answer_type": "Paragraph",
+                "answer": "As the sccm increases, so too does the etch rate, until it reaches a value of 1.0 \u00c5/cycle at 75 sccm. In this range, the surface roughness first increases until 25 sccm, after which it decreases. Below 75 sccm, the surface is only partially covered, which leads to partial etching. This partial etching is the cause of the increased roughness. At full surface coverage, one monolayer is etched per cycle, which leads to values of roughness comparable to the reference."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 1,
+            "width": 672,
+            "height": 432
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/24/figure_2",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The figure shows the saturation behavior of a Ti-based ALD process on a 300 mm wafer at 280 \u00b0C. The mean film thickness remains nearly constant at ~4.8\u20135.0 nm across pulse times, confirming self-limiting growth, while large error bars at short pulses indicate poor wafer-scale coverage. Uniformity improves from ~9% at 100 ms to below 1% at ~1000 ms, demonstrating that sufficient pulse time is required to achieve uniform deposition over large areas."
+    },
+    "data_extraction": {
+        "a": "| Ti Precursor Pulse Time (ms) | Value | Parameter |\n|-----------------------------|-------|-----------|\n| 0                           |       | Mean film thickness (nm) |\n| 0                           |       | Uniformity (%) |\n| 100                         | 5.17  | Mean film thickness (nm) |\n| 100                         | 8.7   | Uniformity (%) |\n| 200                         | 4.95  | Mean film thickness (nm) |\n| 200                         | 4.91  | Uniformity (%) |\n| 300                         | 4.96  | Mean film thickness (nm) |\n| 300                         | 5.63  | Uniformity (%) |\n| 400                         | 4.89  | Mean film thickness (nm) |\n| 400                         | 7.4   | Uniformity (%) |\n| 500                         | 4.71  | Mean film thickness (nm) |\n| 500                         | 5.36  | Uniformity (%) |\n| 600                         | 4.86  | Mean film thickness (nm) |\n| 600                         | 4.3   | Uniformity (%) |\n| 700                         | 4.78  | Mean film thickness (nm) |\n| 700                         | 2.09  | Uniformity (%) |\n| 800                         | 4.88  | Mean film thickness (nm) |\n| 800                         | 2.32  | Uniformity (%) |\n| 900                         | 4.86  | Mean film thickness (nm) |\n| 900                         | 1.4   | Uniformity (%) |\n| 1000                        |       | Mean film thickness (nm) |\n| 1000                        | 0.864 | Uniformity (%) |\n| 1100                        |       | Mean film thickness (nm) |\n| 1100                        | 0.66  | Uniformity (%) |\n| 1200                        |       | Mean film thickness (nm) |\n| 1200                        | 0.79  | Uniformity (%) |\n| 1300                        |       | Mean film thickness (nm) |\n| 1300                        |       | Uniformity (%) |\n| 1400                        |       | Mean film thickness (nm) |\n| 1400                        |       | Uniformity (%) |\n| 1500                        | 4.96  | Mean film thickness (nm) |\n| 1500                        | 1.17  | Uniformity (%) |\n| 1600                        |       | Mean film thickness (nm) |\n| 1600                        |       | Uniformity (%) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In this ALD process, what two sequential steps are repeated for each cycle, and why does increasing the precursor pulse time initially increase the mean thickness?",
+                "answer_type": "Paragraph",
+                "answer": "The repeated sequence is: 1) Ti precursor pulse, 2) Purge, 3) Reactant pulse (e.g., H\u2082O), 4) Purge. A longer precursor pulse allows more time for the precursor to diffuse and fully saturate all reactive sites on the wafer surface, increasing the adsorbed amount per cycle and thus the growth per cycle (GPC) until saturation."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the data at 1000 ms vs. 1500 ms. The thickness and uniformity are virtually identical. Why is operating at 1500 ms considered 'safe but wasteful,' and what is the specific cost driver?",
+                "answer_type": "Paragraph",
+                "answer": "Both 1000 ms and 1500 ms yield <1% uniformity and ~5 nm thickness. The process result is identical.  Trade-off: Operating at 1500 ms is wasteful. The specific cost driver is Precursor consumption and throughput. The extra 500 ms per cycle adds up significantly over thousands of cycles (e.g., adding minutes to the process time) and wastes expensive Titanium precursor that is simply pumped out of the exhaust without reacting, increasing the cost."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does the precursor pulse time affect the film's thickness uniformity across the 300 mm wafer, and what transport phenomenon causes the uniformity to peak at an intermediate pulse time?",
+                "answer_type": "Paragraph",
+                "answer": "Uniformity improves then slightly degrades. At short pulses, precursor depletion across the wafer causes center-to-edge non-uniformity. An intermediate pulse allows full, even saturation (best uniformity). Very long pulses may lead to parasitic CVD or desorption, reintroducing non-uniformity."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on the trends, what is the optimal precursor pulse time range for this process, and why is this critical for semiconductor device fabrication?",
+                "answer_type": "Paragraph",
+                "answer": "The optimal range is just beyond the knee where thickness saturates and uniformity is near its peak (~150-200 ms). This ensures reproducible thickness (controlled GPC) and excellent wafer-scale uniformity, both of which are critical for device performance and yield in integrated circuit manufacturing."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 633,
+            "height": 448
+        }
+    }
+}

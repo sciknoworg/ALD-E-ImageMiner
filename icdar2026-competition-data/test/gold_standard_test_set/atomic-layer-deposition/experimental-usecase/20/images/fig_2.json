@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/20/fig_2",
+    "classification": {
+        "a": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "The chart displays X-ray Reflectivity (XRR) measurements plotted as the logarithm of intensity (in arbitrary units) versus the incident angle (in degrees). It compares the experimental reflectivity profiles against theoretical simulations for two lanthanum titanate films deposited with 33% and 25% TiO2 sub-cycles."
+    },
+    "data_extraction": {
+        "a": "| Angle (\u00b0) | Log(intensity) (a.u.): 33% TiO2 sub-cycles | Log(intensity) (a.u.): Simulation for 33% TiO2 sub-cycles | Log(intensity) (a.u.):25 % TiO2 sub-cycles |Log(intensity) (a.u.): Simulation for 25% TiO2 sub-cycles | \n|---|---|---|---|---|\n| 0.0 | 16096 | 100000 | 1517 | 8284 |\n| 0.5 | 36248 | 69142 | 3233 | 5419 |\n| 1.0 | 974 | 974 | 110 | 110 |\n| 1.5 | 154 | 154 | 41 | 41 | \n| 2.0 | 34 | 34 | 3 | 3 |\n| 2.5 | 42 | 42 | 1 | 1 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Are both films rather rough or rather smooth, based on the experimental results?",
+                "answer_type": "Factoid",
+                "answer": "The films are rather smooth (the presence of Kiessig fringes reveals small roughness)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which film is thicker, based on experimental data?",
+                "answer_type": "Factoid",
+                "answer": "The film deposited with 33% TiO2 sub-cycles is thicker (as indicated by more frequent Kiessig fringes)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "In terms of the X-ray beam's orientation relative to the surface normal, in which region do the theoretical simulations deviate most significantly from the experimental data? What supports this conclusion?",
+                "answer_type": "Paragraph",
+                "answer": "The simulation deviates most when the beam is oriented closest to 90 degrees relative to the surface normal. This corresponds to 0.0 - 0.5 degrees on the X-axis. In this region, the simulations overestimate the results.  For angles higher than 0.5, the predicted values nearly perfectly align with the experimental ones."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the critical angle of the 33% film less than 1.0 or more than 1.0 degree?",
+                "answer_type": "Factoid",
+                "answer": "Less than 1.0 (approx. 0.5)."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 483,
+            "height": 383
+        }
+    }
+}

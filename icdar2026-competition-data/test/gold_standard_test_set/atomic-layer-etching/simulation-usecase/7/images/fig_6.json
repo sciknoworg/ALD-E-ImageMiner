@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/7/fig_6",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "contour heatmap"
+    },
+    "summarization": {
+        "a": "Figure (a) presents a multi-line chart showing the Gibbs free energy (\u0394G) as a function of temperature for different surface reaction steps involved in propene chemistry on cobalt. These steps include propene adsorption, its dissociation, and byproduct formation such as H\u2082 and CO\u2082. The slope and relative positioning of the lines indicate which reactions become more or less thermodynamically favorable with increasing temperature.",
+        "b": "Figure (b) is a heatmap that maps the equilibrium constant (lnQ) over a temperature-pressure space. The diagram includes a shaded process window indicating practical temperature and pressure ranges where the targeted surface reactions may be viable, providing a framework for selecting operating conditions."
+    },
+    "data_extraction": {
+        "a": "| Temperature [K] | \u0394G [eV / Co] |\n|---|---|\n| 0 | -6 |\n| 200 | -5 |\n| 400 | -4 |\n| 600 | -3 |\n| 800 | -2 |\n| 1000 | -1 |",
+        "b": "| Temperature [K] | Equilibrium constant: lnQ |\n|---|---|\n| 0 | -75 |\n| 200 | -50 |\n| 400 | -25 |\n| 600 | 0 |\n| 800 | 25 |\n| 1000 | 50 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How can the combined information from the \u0394G trends  and the lnQ heatmap in figure (b) be used to identify optimal conditions for selective surface reactions?",
+                "answer_type": "Paragraph",
+                "answer": "The \u0394G trends in figure (a) show which reaction steps become more or less favorable as temperature increases. For instance, propene adsorption has a negative \u0394G at low temperatures, indicating thermodynamic favourability, while certain desorption reactions (e.g., CO\u2082 release) become favorable only at higher temperatures. Figure (b) complements this by showing the process window where lnQ indicates strong driving forces for reactions (lnQ \u226a 0) or equilibrium conditions (lnQ \u2248 0). By aligning these trends, one can identify temperature-pressure zones where specific reaction pathways are both thermodynamically favorable and kinetically accessible. This approach enables the rational design of conditions that favor desired surface terminations or product release while suppressing unwanted side reactions"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does propene adsorption remain favorable (\u0394G < 0) across the entire temperature range?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At approximately what temperature does the \u0394G for CO\u2082 desorption cross zero?",
+                "answer_type": "Factoid",
+                "answer": "Around 750 K."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which surface reactions shown become less favourable with increasing temperature?",
+                "answer_type": "List",
+                "answer": "Propene adsorption, dissociative H\u2082 adsorption, CO\u2082 adsorption, surface reaction of volatiles."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 36,
+            "width": 602,
+            "height": 580
+        },
+        "b": {
+            "x": 640,
+            "y": 17,
+            "width": 602,
+            "height": 582
+        }
+    }
+}

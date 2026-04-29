@@ -1,0 +1,285 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/12/fig2",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot",
+        "c": "scatter plot",
+        "d": "scatter plot"
+    },
+    "summarization": {
+        "a": "EPC increases rapidly with SF\u2086 plasma exposure time and saturates at \u22483.4 \u00c5 after ~5s for a 0.5s TMA dose at 260 \u00b0C. The auto summary did not identify the saturation threshold or the self-limiting nature of the plasma step. The manual summary clarifies the time required to reach full fluorination.",
+        "b": "EPC remains constant at \u22483.1\u20133.3 \u00c5 across the full plasma pump-time range following SF\u2086 exposure. The auto summary described only a generic dependence, whereas the manual version highlights that pump time does not influence EPC once saturation is reached.",
+        "c": "EPC shows a sharp onset between 0.2 and 0.4 s TMA dosing and saturates near \u22483.3 \u00c5 for a fixed 5s SF\u2086 plasma exposure. The auto summary missed this threshold behavior and the implication of a self-limiting ligand-exchange step. The manual summary explicitly identifies the dosing time required for saturation.",
+        "d": "EPC is insensitive to TMA pump time and remains at \u22483.2\u20133.3 \u00c5 across all values shown. The auto summary implied a dependence without interpretation. The manual summary clarifies that the reaction completes during dosing and does not require extended pumping."
+    },
+    "data_extraction": {
+        "a": "| SF plasma time (s) | EPC (\u00c5) |\n|---|---|\n| 0 | 0 |\n| 5 | 2 |\n| 10 | 3 |\n| 15 | 3 |\n| 20 | 3 |\n| 25 | 3 |\n| 30 | 3 |",
+        "b": "| Plasma pump time (s) | EPC (\u00c5) |\n|---|---|\n| 10 | 2.9 |\n| 20 | 3 |\n| 30 | 3 |",
+        "c": "| TMA dosing time (s) | EPC (\u00c5) |\n|---|---|\n| 0 | 0 |\n| 0.1 | -0.1 |\n| 0.2 | 0 |\n| 0.4 | 2 |\n| 0.6 | 3 |\n| 0.8 | 3 |",
+        "d": "| TMA pump time (s) | EPC (\u00c5) |\n|---|---|\n| 5 | 3.25 |\n| 10 | 3 |\n| 30 | 3 |"
+    },
+    "vqa": {
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How long the deposition process takes to reach saturation after TMA exposure?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 0.3 s."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens at a dose time of 0.1 s of TMA?",
+                "answer_type": "Paragraph",
+                "answer": "At this dose time there is a negative EPC indicating that there is deposition of aluminum."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How long must the TMA dose be to achieve full saturation of the ligand-exchange step (5 s SF\u2086 exposure)?",
+                "answer_type": "Factoid",
+                "answer": "\u22650.4 s"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "The TMA dosing curve shows no etch below 0.2s  in label c, then a sharp rise to saturation. What does this threshold reveal about the surface structure required for the ligand-exchange reaction to begin?",
+                "answer_type": "Factoid",
+                "answer": "It reveals that a minimum coverage of surface fluorine species (from SF\u2086 plasma) must be present before TMA can effectively react and release volatile etch products."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens during shorter TMA doses?",
+                "answer_type": "Paragraph",
+                "answer": "The TMA dose saturates quickly for doses longer than 0.3 s. Doses shorter than 0.2 s were found to cause a negligible thickness change, which is likely related to the consumption of TMA by AlF3 deposition on the reactor walls (100 \u00b0C) that are at a lower temperature than the substrate holder (300 \u0002C). Previous work has shown that AlF3 ALD using SF6 plasma and TMA readily occurs at low temperatures. It is, therefore, likely that a significant amount of dosed TMA is adsorbed on the reactor walls before it can reach the substrate"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What was the obtained etch per cycle value as a function of TMA dosing time?",
+                "answer_type": "Factoid",
+                "answer": "3.1 \u00c5."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what TMA dosing time does the process transition from net deposition to net etching?",
+                "answer_type": "Factoid",
+                "answer": "Around 0.2 s (based on the EPC crossing from negative to positive)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "For which TMA dosing times does the half-process show self-limiting behavior?",
+                "answer_type": "Factoid",
+                "answer": "At about ~0.3 s TMA dose. It is clearly saturated by ~0.4\u20130.5 s"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does EPC depend strongly on pump times?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Can the standard ALE cycle defined in Figure 2 (5 s SF6 plasma, 0.5 s TMA dose, 10 s pump) achieve controlled etching without parasitic reactions?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "How much time is needed to avoid parasitic etching?",
+                "answer_type": "Factoid",
+                "answer": "10 s."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the shown times, what would be the best ALE process in terms of duration and self-limiting behaviour?",
+                "answer_type": "Paragraph",
+                "answer": "The process would be 5-5-0.5-5."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Is a long pump step after the TMA dose necessary to maintain consistent etch per cycle?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Based on the data presented in subfigures (b) and (d), is the etched surface prone to desorption or parasitic chemical vapor etching during the purge steps?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "For manufacturing, the TMA pump time curve label d shows EPC slightly decreases with longer pump times before saturating. What does this imply about the optimal pump time for maximizing both etch rate and precursor efficiency?",
+                "answer_type": "Paragraph",
+                "answer": "The initial decrease suggests that some active TMA molecules are pumped away before reacting if the purge is too short. Therefore, the optimal pump time is just beyond the dip (~10-15s), where EPC stabilizes. This maximizes precursor utilization by allowing sufficient reaction time while minimizing waste and cycle time, which is critical for cost-effective high-volume production."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the etch per cycle (EPC) compare to literature?",
+                "answer_type": "Factoid",
+                "answer": "The measured EPC is higher than the literature results reported for thermal ALE of Al2O3 with HF/TMA at a comparable temperature."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the saturation of EPC in Figure 2 indicate self-limiting surface reactions characteristic of ALE?",
+                "answer_type": "Factoid",
+                "answer": "Yes, the saturation of EPC in Figure 2 indicate self-limiting surface reactions characteristic of ALE."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does EPC depend on the exposure and dosing times shown in the figure?",
+                "answer_type": "Paragraph",
+                "answer": "EPC increases with both SF\u2086 plasma exposure time and TMA dosing time until a saturation level is reached, indicating self-limiting surface reactions. In contrast, EPC shows little dependence on plasma pump time or TMA pump time."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which feature is illustrated in the figure?",
+                "answer_type": "Factoid",
+                "answer": "The figure shows the etching per cycle as a function of plasma and precursor dose time."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which plasma is used for the etching process?",
+                "answer_type": "Factoid",
+                "answer": "SF6."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the saturated dose time of the plasma step?",
+                "answer_type": "Paragraph",
+                "answer": "The saturated time is already around 5s, however the process soft-saturates."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the minimum SF\u2086 plasma exposure time needed to reach >95 % of the saturated EPC at 260 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "5 s"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "According to the saturation plateaus shown in this figure, what is the experimentally determined Etch Per Cycle (EPC) for Al\u2082O\u2083 at 260 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "The experimentally determined Etch Per Cycle (EPC) is approximately 3.1 \u00c5/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on the saturation curve in label  a, what is the minimum SF\u2086 plasma exposure time required to achieve a self-limiting, saturated etch rate in this ALE process?",
+                "answer_type": "Factoid",
+                "answer": "~2 seconds (the EPC saturates after the initial sharp rise between 0-2s)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does the SF6 plasma saturation curve show quasisaturation behavior ?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, similar to the modification steps observed for many other ALE processes."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the process temperature?",
+                "answer_type": "Factoid",
+                "answer": "260 \u00b0C."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How do the authors explain the quasi-saturated behaviour that is observed during SF6 exposure?",
+                "answer_type": "Paragraph",
+                "answer": "As the film is exposed to SF6 plasma, the formed fluorine radicals react quickly with surface Al2O3 molecules to form AlF3. This AlF3 then acts as a protective layer, which inhibits the remaining fluorine radicals from reacting with Al2O3 below the AlF3 film. However, this AlF3 does not completely prevent the fluorine radicals from reaching the lower layers of Al2O3, so more AlF3 gets formed as the exposure time of SF6 increases. After about 3 seconds, this reaction does become diffusion-limited, which explains the observed change."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the EPC rise rapidly during the first ~5 s of SF\u2086 plasma exposure, but increase much more slowly at longer exposure times?",
+                "answer_type": "Paragraph",
+                "answer": "The initial fast increase comes from rapid fluorination of the surface. As the fluorinated layer thickens, additional fluorination becomes harder because reactants must penetrate through this layer. The fluorinated layer therefore acts as a diffusion barrier, leading to a slower EPC increase."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Approximately at what time does EPC begin to saturate?",
+                "answer_type": "Factoid",
+                "answer": "Around ~5 s."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does the SF6 plasma and TMA dosing affect the growth per cycle (EPC) in the atomic layer etching (ALE) process as shown in Figure?",
+                "answer_type": "Paragraph",
+                "answer": "Figure demonstrates that both SF6 plasma exposure and TMA dosing exhibit self-limiting behavior, typical of ALE processes. For SF6 plasma, the EPC rapidly increases for short exposure times and saturates around 5 s, indicating full surface fluorination. For TMA, EPC saturates after ~0.3\u20130.5 s, reflecting complete adsorption on the fluorinated surface. Pump steps of 10 s between half-cycles are sufficient to prevent parasitic reactions, ensuring that etching occurs only when alternating plasma and TMA doses are applied. Overall, the curves confirm the controlled, self-limiting nature of the plasma ALE process."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which two steps show saturation behavior in EPC?",
+                "answer_type": "Factoid",
+                "answer": "SF\u2086 plasma exposure and TMA dosing."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Are pump times of 5 s sufficient for all the purging during the ALE cycle?",
+                "answer_type": "Paragraph",
+                "answer": "Both subfigure b and d show that 5 s is sufficient purge time."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does extending the pump time after SF\u2086 plasma exposure increase or decrease the etch per cycle?",
+                "answer_type": "Factoid",
+                "answer": "Neither; EPC remains constant at \u22483.3 \u00c5."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the impact of plasma exposure time label a  and plasma pump time label b on the etch-per-cycle (EPC). What does this comparison reveal about the trade-off between process step duration and etch mechanism?",
+                "answer_type": "Paragraph",
+                "answer": "Plasma exposure time is critical; EPC rises sharply until saturation at ~2s, indicating the time needed for surface fluorination. In contrast, plasma pump time has minimal effect after ~10s, suggesting that reactant removal is not rate-limiting. The trade-off is that precise control of the active plasma step is essential for consistent etching, while the purge step offers a wider, more forgiving time window, allowing for throughput optimization without sacrificing etch rate."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What can be said about plasma pump time?",
+                "answer_type": "Factoid",
+                "answer": "A minimum plasma pump steps of 10 s are sufficient to avoid a parasitic etching component"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the final, selected pump/purge time?",
+                "answer_type": "Factoid",
+                "answer": "10 s."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which process parameters control the etching per cycle?",
+                "answer_type": "List",
+                "answer": "SF\u2086 plasma exposure time, TMA dosing time."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What trends are observed in the EPC when varying the plasma exposure time and TMA dosing time in Figure 2",
+                "answer_type": "List",
+                "answer": "EPC increases rapidly at short SF6 plasma exposure times and then saturates at ~3 \u00c5/cycle, TMA dosing exhibits quick saturation above ~0.3 s, with little additional growth for longer doses, Pump steps (both after plasma and TMA) show no significant change in EPC after 10 s, confirming removal of excess reactants, The self-limiting behavior is consistent for both plasma and TMA, ensuring precise etching per cycle"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 8,
+            "y": 0,
+            "width": 322,
+            "height": 371
+        },
+        "b": {
+            "x": 358,
+            "y": 0,
+            "width": 324,
+            "height": 369
+        },
+        "c": {
+            "x": 9,
+            "y": 384,
+            "width": 321,
+            "height": 361
+        },
+        "d": {
+            "x": 363,
+            "y": 384,
+            "width": 319,
+            "height": 359
+        }
+    }
+}

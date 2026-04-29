@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/27/fig_4",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "bar chart"
+    },
+    "summarization": {
+        "a": "The line chart illustrates the atomic percentages of Al and O of the three samples.",
+        "b": "The bar chart compares the Al/O ratio across three samples: Ref., Partial Layer Etching, and ALET."
+    },
+    "data_extraction": {
+        "a": "| Sample | Atomic Percentage Al | Atomic Percentage O |\n|---|---|---|\n| Ref. | 35 | 65 |\n| Partial Layer Etching | 30 | 70 |\n| ALET | 35 | 65 |",
+        "b": "| Sample | Al/O Ratio |\n|---|---|\n| Ref. | 0.55 |\n| Partial Layer Etching | 0.4 |\n| ALET | 0.55 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What was the estimated sampling depth when the XPS measurements in Figure 4 were performed?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 1 nm."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the Al/O ratio of the as-deposited ALD Al2O3 reference compare to the stoichiometric value of sapphire?",
+                "answer_type": "Factoid",
+                "answer": "The ALD Al2O3 reference has an Al/O ratio lower than 0.67, whilst sapphire is exactly 0.67."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the Al/O ratio behave under partial layer etching (HAl-Cl/BCl-O < 1)?",
+                "answer_type": "Factoid",
+                "answer": "Under partial layer etching, the Al/O ratio decreases below the reference value, indicating non-stoichiometric surface modification."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does Figure 4 reveal about how partial layer etching and ALET influence the surface stoichiometry of Al2O3, and why do these differences occur?",
+                "answer_type": "Paragraph",
+                "answer": "Figure 4 shows that the surface stoichiometry of Al2O3 responds very differently to partial layer etching compared to ALET. Under partial layer etching conditions, the atomic percentages shift and the Al/O ratio becomes lower than that of the ALD reference film. This suggests that the process removes oxygen and aluminum unevenly, likely due to preferential etching of surface-exposed sites. In contrast, when ALET is performed at a reactant ratio of unity, the surface stoichiometry remains unchanged. Both the elemental percentages and the Al/O ratio match the reference, showing that a complete monolayer is removed in each cycle without perturbing the underlying material."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 6,
+            "width": 629,
+            "height": 213
+        },
+        "b": {
+            "x": 5,
+            "y": 228,
+            "width": 629,
+            "height": 223
+        }
+    }
+}

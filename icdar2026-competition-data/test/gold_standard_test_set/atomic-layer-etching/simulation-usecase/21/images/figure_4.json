@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/21/figure_4",
+    "classification": {
+        "a": "line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Ta chemical etching in Cl\u2082 plasma (Step A only) is suppressed at 0 \u00b0C and increases with wafer temperature, reaching ~2 nm/s at 60 \u00b0C. This indicates strong thermal activation of the Step-A chemistry.",
+        "b": "At 0 \u00b0C, Ta ALE shows an ALE window with EPC near ~0.35\u20130.45 nm/cycle across roughly 20\u201390 eV, followed by a rise at higher energy. Ar-only sputtering increases steadily with ion energy and lacks a plateau, consistent with non-self-limiting removal."
+    },
+    "data_extraction": {
+        "a": "| Wafer temperature (\u00b0C) | Etch rate (nm/s) |\n|---|---|\n| 0  | ~0.00 |\n| 10 | ~0.10 |\n| 30 | ~0.50 |\n| 60 | ~2.00 |",
+        "b": "| Ion energy (eV) | EPC in ALE mode (nm/cycle) | EPC in Ar-only mode (nm/cycle) |\n|---|---|---|\n| 0   | ~0.00 | ~0.00 |\n| 20  | ~0.42 | ~0.00 |\n| 40  | ~0.36 | ~0.02 |\n| 60  | ~0.44 | ~0.06 |\n| 90  | ~0.43 | ~0.25 |\n| 115 | ~0.65 | ~0.40 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What surface condition likely explains why Step-A chemical etching is suppressed at 0 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "At 0 \u00b0C the surface reaction pathway for chlorination/volatile product formation is kinetically inhibited, so net chemical etching is negligible."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What temperature marks the onset of measurable chemical etching in Ta Step A?",
+                "answer_type": "Factoid",
+                "answer": "Around 10 \u00b0C."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which features of the EPC\u2013ion-energy curve define the ALE window?",
+                "answer_type": "Paragraph",
+                "answer": "-EPC remains approximately constant (~0.35 nm/cycle) between ~20\u201380 eV.\n-Increasing ion energy within this range does not increase removal.\n-The Ar-only curve lacks a plateau, underscoring the chemical selectivity of ALE."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What does the divergence between the ALE and Ar-only EPC curves imply about the removal mechanisms?",
+                "answer_type": "Paragraph",
+                "answer": "The stable EPC plateau in the ALE curve indicates self-limiting removal once the surface has been chemically modified, with ion energy serving only to trigger detachment. The monotonic increase in the Ar-only curve reflects purely physical sputtering, where removal scales continuously with energy. This contrast shows that ALE achieves controlled, low-damage removal by separating chemical preparation from physical activation."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 50,
+            "y": 7,
+            "width": 486,
+            "height": 308
+        },
+        "b": {
+            "x": 47,
+            "y": 351,
+            "width": 492,
+            "height": 293
+        }
+    }
+}

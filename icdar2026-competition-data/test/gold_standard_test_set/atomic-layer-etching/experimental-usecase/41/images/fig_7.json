@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/41/fig_7",
+    "classification": {
+        "a": "grouped bar chart"
+    },
+    "summarization": {
+        "a": "XPS-derived atomic composition of a TiN surface tracked through a full thermal ALE cycle. Oxidation strongly increases surface oxygen (~40 at.%), indicating formation of an oxide layer. Fluorination introduces fluorine (~13 at.%) while reducing oxygen, consistent with formation of a fluorinated surface layer. The final thermal removal step nearly eliminates fluorine (~1 at.%) and restores a TiN-like surface composition with recovered Ti and N fractions."
+    },
+    "data_extraction": {
+        "a": "| Process step        | Ti (%) | N (%) | O (%) | F (%) | C (%) |\n|---------------------|--------|-------|-------|-------|-------|\n| Reference (TiN)     | ~33    | ~32   | ~19   | ~0    | ~17   |\n| Oxidation           | ~27    | ~18   | ~40   | ~0    | ~15   |\n| Fluorination        | ~27    | ~19   | ~20   | ~13   | ~20   |\n| Removal             | ~34    | ~34   | ~19   | ~1    | ~12   |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to the fluorine concentration on the TiN surface during the final removal step at 150 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "The auto summary correctly listed the elements and processing stages but did not interpret the chemical evolution of the surface. I replaced it with a concise, mechanism-aware description that links composition changes to oxidation, fluorination, and fluorine removal."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the nitrogen atomic fraction after the complete ALE cycle compare with the reference TiN surface?",
+                "answer_type": "Paragraph",
+                "answer": "After the removal step, the nitrogen fraction (~34 at.%) slightly exceeds that of the reference surface (~32 at.%). This indicates effective restoration of a TiN-like surface after elimination of the modified fluorinated layer."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What property of the fluorinated surface layer enables its removal at only 150 \u00b0C without plasma?",
+                "answer_type": "Paragraph",
+                "answer": "The fluorinated surface species formed during CF\u2084 exposure are thermally less stable than bulk TiN. Mild heating under inert Ar promotes desorption or decomposition of these fluorine-containing species, as evidenced by the sharp reduction in F atomic fraction, while leaving the underlying TiN largely intact."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Does this three-step ALE sequence successfully restore a TiN-like surface composition after one cycle?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 2,
+            "width": 530,
+            "height": 406
+        }
+    }
+}

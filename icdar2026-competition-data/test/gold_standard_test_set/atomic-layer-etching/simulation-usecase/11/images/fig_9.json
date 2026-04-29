@@ -1,0 +1,81 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/11/fig_9",
+    "classification": {
+        "a": "contour heatmap",
+        "b": "heatmap",
+        "c": "contour heatmap",
+        "d": "heatmap"
+    },
+    "summarization": {
+        "a": "Contour plot of FNN-predicted half-cycle times for Step A across the operating window (533-598 K, 0-100 Pa). The horizontal color bands confirm that Step A is essentially pressure-independent, with times ranging from approximately 21 s at low temperatures to under 3 s at high temperatures.",
+        "b": "Operational feasibility map for Step A using a 1.5 s threshold. The blue region (operable) requires temperatures above approximately 570 K, while the red region (inoperable) indicates conditions where half-cycle times exceed industrial requirements. The boundary is horizontal, confirming pressure independence.",
+        "c": "Contour plot for Step B showing strong dependence on both temperature and pressure. Half-cycle times range from over 35 s at low temperature/pressure to under 5 s at high temperature and pressure, with curved contour lines indicating coupled effects.",
+        "d": "Operational feasibility map for Step B using a 2.5 s threshold. The curved boundary shows that achieving operable conditions requires both high temperature (above ~573 K) and sufficient pressure (above ~40-60 Pa depending on temperature)."
+    },
+    "data_extraction": {
+        "a": "| Temperature (K) | Time (s) [Approximate, Independent of Pressure] |\n|---|---|\n| 525 | 20 |\n| 530 | 15 |\n| 540 | 9 |\n| 550 | 6 |\n| 560 | 3 |\n| 570 | 1.5 |\n| > 575 | < 1 |",
+        "b": "| Pressure (Pa) | Boundary Temperature (K) | Status Below Boundary | Status Above Boundary |\n|---|---|---|---|\n| 0 - 100 | 570 | Inoperable | Operable |",
+        "c": "| Temperature (K) | Time at P=10 Pa (s) | Time at P=50 Pa (s) | Time at P=90 Pa (s) |\n|---|---|---|---|\n| 525 | 38 | 36 | 35 |\n| 530 | 32 | 30 | 28 |\n| 540 | 22 | 18 | 16 |\n| 550 | 15 | 10 | 8 |\n| 560 | 10 | 6 | 5 |\n| 570 | 5 | 3 | 2.5 |\n| 580 | 3 | 1 | < 1 |",
+        "d": "| Pressure (Pa) | Transition Temperature (K) [Boundary between Inoperable/Operable] |\n|---|---|\n| 20 | ~595 |\n| 25 | 590 |\n| 30 | 582 |\n| 40 | 576 |\n| 50 | 574 |\n| 60 | 573 |\n| 80 | 572 |\n| 100 | 572 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Why were 1.5 s and 2.5 s chosen as the feasibility thresholds?",
+                "answer_type": "Paragraph",
+                "answer": "These thresholds ensure that the microscopic half-cycle times, when combined with macroscopic gas transport times of 2-3 s, yield total process times under the industrial target of approximately 5 s per half-cycle. The thresholds are based on experimental observations showing self-limiting behavior is achieved within these times at the validation temperature of 573 K."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the key difference in operating parameter dependence between Steps A and B?",
+                "answer_type": "Paragraph",
+                "answer": "Step A shows virtually no pressure dependence, as evidenced by the horizontal contour lines in (a) and the horizontal feasibility boundary in (b). Only temperature affects the Step A half-cycle time. In contrast, Step B depends on both temperature and pressure, shown by the curved contours in (c) and the curved feasibility boundary in (d). This means Step B optimization requires careful selection of both parameters, while Step A can be optimized by temperature alone."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What minimum temperature is required for Step A to be operable?",
+                "answer_type": "Factoid",
+                "answer": "Step A requires temperatures above approximately 570 K to achieve half-cycle times below the 1.5 s feasibility threshold."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the blue and red colors represent in the feasibility plots?",
+                "answer_type": "Factoid",
+                "answer": "Blue indicates operable conditions where half-cycle times meet industrial requirements, while red indicates inoperable conditions where times are too long for practical use."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 4,
+            "width": 465,
+            "height": 384
+        },
+        "b": {
+            "x": 538,
+            "y": 8,
+            "width": 475,
+            "height": 392
+        },
+        "c": {
+            "x": 13,
+            "y": 422,
+            "width": 450,
+            "height": 374
+        },
+        "d": {
+            "x": 536,
+            "y": 422,
+            "width": 472,
+            "height": 377
+        }
+    }
+}

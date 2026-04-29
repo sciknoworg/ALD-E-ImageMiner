@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/48/fig_2",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The figure shows the thickness of a material as a function of ALD cycles at various temperatures (150\u2013400 \u00b0C). For all temperatures, the thickness increases linearly with cycle count.",
+        "b": "The figure compares the growth per cycle (GPC) and the number of Hf atoms per cycle at different temperatures (150\u2013400 \u00b0C). The Hf atoms per cycle show a small increase at higher temperatures; GPC stays relatively constant."
+    },
+    "data_extraction": {
+        "a": "| ALD cycles | 150\u00b0C : Thinkness (nm)| 200\u00b0C: Thinkness (nm) | 250\u00b0C: Thinkness (nm) | 300\u00b0C: Thinkness (nm) | 350\u00b0C: Thinkness (nm) | 400\u00b0C: Thinkness (nm) |\n|---|---|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 100 | 11 | 10| 10 | 9.9 | 9.76 | 9.3 |\n| 200 | 22 | 22 | 21 | 20.9 | 20.5 | 20.4 |\n| 300 | 34 | 33 | 32 | 31.8 | 32 | 31.8 |",
+        "b": "| Table temperature (\u00b0C) | GPC (nm) | Hf atoms per cycle (nm\u00b2) |\n|---|---|---|\n| 150 | 0.113 \u00b1 0.008 | - |\n| 200 | 0.111 \u00b1 0.008 | 2.71 \u00b1 0.01 |\n| 250 | 0.108 \u00b1 0.008 | - |\n| 300 | 0.106 \u00b1 0.008 | 2.77 \u00b1 0.01 |\n| 350 | 0.107 \u00b1 0.008 | - |\n| 400 | 0.109 \u00b1 0.008 | 2.91 \u00b1 0.01 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is ALD process faster at low or high temperatures?",
+                "answer_type": "Factoid",
+                "answer": "At lower temeperatures."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What evidence supports the conclusion that at lower temperatures more impurities get incorporated into the film?",
+                "answer_type": "Paragraph",
+                "answer": "The GPC stays nearly constant (~0.11 nm/cycle) across temperature, but the Hf atoms incorporated per cycle are lower at the lower temperatures and rise as temperature increases. If the film grows by about the same thickness per cycle but contains fewer Hf atoms per cycle, the added volume must include a larger fraction of non-Hf species. This mismatch supports the inference of greater impurity incorporation (or reduced film density) at lower temperatures."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Do the values of Hf atoms per cycle correlate positively or negatively with increasing temperatures?",
+                "answer_type": "Factoid",
+                "answer": "They correlate positively."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the temperature-insensitive ALD window for thickness growth?",
+                "answer_type": "Factoid",
+                "answer": "From about 150 to 400 \u00b0C."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 7,
+            "width": 496,
+            "height": 348
+        },
+        "b": {
+            "x": 491,
+            "y": 4,
+            "width": 510,
+            "height": 350
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/20/fig_10",
+    "classification": {
+        "a": "contour heatmap",
+        "b": "contour heatmap",
+        "c": "contour heatmap",
+        "d": "contour heatmap"
+    },
+    "summarization": {
+        "a": "Simulation snapshot at 0.005 s showing early stage of precursor dosing, with water and TMA beginning to fill their respective cylinders, minimal methane generation, and initial consumption of surface *OH sites under the water cylinder.",
+        "b": "Simulation snapshot at 0.015 s (critical dosing time) showing fully developed precursor distributions in the dosing cylinders, significant methane byproduct generation on the wafer surface, and near-complete consumption of reactive surface sites under both precursor zones.",
+        "c": "Simulation snapshot at 0.025 s showing steady-state precursor concentration profiles, saturated methane distribution, and fully reacted surface sites (*AlMe/*Al(Me)2 under TMA, *OH under water).",
+        "d": "Simulation snapshot at 0.035 s confirming steady-state conditions with no significant changes from (c), demonstrating the self-limiting nature of the ALD surface reactions beyond the critical dosing time."
+    },
+    "data_extraction": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the methane concentration distribution change from 0.005 s to 0.035 s, and what does this indicate?",
+                "answer_type": "Paragraph",
+                "answer": "At 0.005 s, methane concentration is minimal since surface reactions have just begun. By 0.015 s, significant methane appears on the wafer surface beneath both precursor zones, indicating active half-reactions. From 0.025 s to 0.035 s, methane distribution reaches steady state with high concentrations near the surface. This evolution reflects the progression of ALD surface chemistry, where methane is released as a byproduct when TMA reacts with *OH groups and water reacts with methyl-terminated sites."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on subfigures (c) and (d), has the deposition process reached saturation by 0.025 s?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. The nearly identical concentration profiles and surface coverage distributions between 0.025 s and 0.035 s confirm that saturation is achieved, consistent with the paper's finding that critical dosing time is approximately 0.015 s."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What do the *OH and *AlMe/*Al(Me)2 surface coverage contours on the wafer surface represent?",
+                "answer_type": "Factoid",
+                "answer": "They represent the fraction of reactive surface sites: *OH indicates hydroxyl-terminated sites available for TMA reaction, while *AlMe/*Al(Me)2 indicates methyl-terminated sites (from TMA chemisorption) available for water reaction."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What are the three middle vertical structures (shown in blue/green) between the water and TMA dosing cylinders?",
+                "answer_type": "Factoid",
+                "answer": "They are the separating gas (nitrogen) injection cylinder in the center and two exhaust/pumping cylinders that remove reaction byproducts and prevent precursor intermixing."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 10,
+            "y": 7,
+            "width": 619,
+            "height": 608
+        },
+        "b": {
+            "x": 638,
+            "y": 4,
+            "width": 619,
+            "height": 608
+        },
+        "c": {
+            "x": 1,
+            "y": 589,
+            "width": 625,
+            "height": 634
+        },
+        "d": {
+            "x": 635,
+            "y": 612,
+            "width": 622,
+            "height": 602
+        }
+    }
+}

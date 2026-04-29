@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/65/fig_3",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The chart shows the growth per cycle (\u00c5) over plasma exposure time (s) for different plasma gas residence times. The growth rate initially increases rapidly, reaches a peak and then gradually decreases for all conditions.",
+        "b": "The chart displays the relationship between plasma gas residence time (s) and time constant (s). There is a linear increase in time constant B with increasing plasma gas residence time, whilst time constan A remains constant."
+    },
+    "data_extraction": {
+        "a": "| Plasma exposure time (s) | Growth per cycle (\u00c5) 0.44 s|Growth per cycle (\u00c5) 0.15 s|Growth per cycle (\u00c5) 0.09 s|\n|---|---|---|---|\n| 0 | 0.0 |0.0|0.0|\n| 2 | 0.46 |0.31|0.27|\n| 4 | 0.44 |0.29|0.26|\n| 6 | 0.4 |0.26|0.25|\n| 8 | 0.35 |0.25|0.25|\n| 12 | 0.3 |0.24|0.24|\n| 16 | 0.27 |0.24|0.24|",
+        "b": "| Plasma gas residence time (s) | Time constant tB (s) | Time constant tA (s) |\n|---|---|---|\n| 0.0 | 0.0 |0.8|\n| 0.1 | 2 \u00b1 0.7 |0.8|\n| 0.15 | 2.5 \u00b1 0.3 |0.8|\n| 0.45 | 8 \u00b1 2 |0.8|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "With what formula is a normal saturation curve fitted?",
+                "answer_type": "Paragraph",
+                "answer": "Usually a saturation curve is fitted with a single exponential like: GPC = A(1-e^(-t/tA))."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "To what phenomena is the peak assigned for low plasma exposure times?",
+                "answer_type": "Paragraph",
+                "answer": "The height of the peak is related to the amount of redeposition of ligand species that come in to the plasma."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens for long plasma exposure times with redeposited species?",
+                "answer_type": "Paragraph",
+                "answer": "Longer plasma exposure times give lower GPC values indicating that the species resulting of redeposition are removed from the surface."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which of the two time constant is dependent on the plasma gas residence time?",
+                "answer_type": "Factoid",
+                "answer": "Only time constant B."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 599,
+            "height": 476
+        },
+        "b": {
+            "x": 0,
+            "y": 483,
+            "width": 601,
+            "height": 491
+        }
+    }
+}

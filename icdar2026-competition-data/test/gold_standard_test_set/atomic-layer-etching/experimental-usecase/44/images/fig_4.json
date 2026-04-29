@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/44/fig_4",
+    "classification": {
+        "a": "scatter plot"
+    },
+    "summarization": {
+        "a": "The line chart shows the thickness of an aluminum nitride (AlN) film as a function of the number of Atomic Layer Etching (ALE) reaction cycles at 275\u202f\u00b0C, specifically in the pure AlN region of the film. From the linear change in thickness with cycle count, an average etch rate of 0.38\u202f\u00c5/cycle is determined.  The number of cycles were taken from 472 to 492."
+    },
+    "data_extraction": {
+        "a": "| Cycle Number | Thickness (\u00c5) |\n|---|---|\n| 472 | 412 |\n| 474 | 411 |\n| 476 | 410 |\n| 478 | 409 |\n| 480 | 408 |\n| 482 | 407 |\n| 484 | 407 |\n| 486 | 406 |\n| 488 | 405 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the two reactant exposure steps that constitute one complete ALE cycle for etching AlN, according to the proposed mechanism.",
+                "answer_type": "Paragraph",
+                "answer": "HF exposure: Fluorinates the surface to form an AlF\u2083 layer.\n\nSn(acac)\u2082 exposure: Performs a ligand-exchange reaction to volatilize the fluorinated layer."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "The average etch rate in the pure AlN region is ~0.38 \u00c5/cycle, but the initial AlO\u2093N\u1d67 surface layer etches at only ~0.07 \u00c5/cycle. What key trade-off does this impose when etching a real AlN film with a native surface oxide?",
+                "answer_type": "Paragraph",
+                "answer": "The trade-off is between process efficiency and surface preparation. The pure AlN etches efficiently, but the unavoidable native oxide acts as a \"slow-etch barrier.\" This forces a choice: accept a long, non-productive overetch to clear the oxide, or add a separate pre-cleaning step to remove it, adding complexity to the process flow."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What specific property of the AlF\u2083 layer, formed during the HF step, is critical for enabling the subsequent ligand-exchange reaction with Sn(acac)\u2082?",
+                "answer_type": "Factoid",
+                "answer": "Its high thermodynamic stability (sublimation point 1291\u00b0C), which allows it to remain as a solid, well-defined surface layer for the Sn(acac)\u2082 to react with."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The proposed mechanism involves a four-center transition state where ligands bridge Sn and Al. How does this specific chemical mechanism benefit the goal of achieving atomic-scale etch precision in AlN?",
+                "answer_type": "Paragraph",
+                "answer": "The four-center transition state ensures the reaction is highly specific and occurs only at the immediate interface between the Sn(acac)\u2082 precursor and the solid AlF\u2083 surface layer. This localized, surface-limited reaction prevents spontaneous gas-phase decomposition or bulk etching. Consequently, the etch process is intrinsically self-limiting, removing exactly one reacted layer per cycle and enabling atomic-scale depth control critical for nanofabrication."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 598,
+            "height": 475
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/20/9175e11f30b3092758947bdf3aa32cd77f985f28f01e6a235760a45ca776fe97",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "TMA and water concentrations at position B (water side) over time for three wafer temperatures (150\u00b0C, 200\u00b0C, 250\u00b0C). Higher temperature increases TMA (foreign precursor) concentration, with 250\u00b0C reaching approximately 1.5\u00d710\u207b\u2075 mol/m\u00b3 compared to 0.8\u00d710\u207b\u2075 mol/m\u00b3 at 150\u00b0C. Water (home precursor) reaches steady state faster at higher temperatures but achieves lower final concentration.",
+        "b": "TMA and water concentrations at position C (TMA side) over time for three wafer temperatures. Higher temperature increases water intermixing, with 250\u00b0C yielding approximately 2\u00d710\u207b\u2074 mol/m\u00b3 water compared to 1.7\u00d710\u207b\u2074 mol/m\u00b3 at 150\u00b0C. TMA (home precursor) shows slightly lower steady-state values at higher temperatures."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | TMA 150\u00b0C (mol/m\u00b3) | TMA 200\u00b0C (mol/m\u00b3) | TMA 250\u00b0C (mol/m\u00b3) | Water 150\u00b0C (mol/m\u00b3) | Water 200\u00b0C (mol/m\u00b3) | Water 250\u00b0C (mol/m\u00b3) |\n|---|---|---|---|---|---|---|\n| 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 0.005 | 0.01E-5 | 0.01E-5 | 0.01E-5 | 1.9E-3 | 1.5E-3 | 1.0E-3 |\n| 0.010 | 0.05E-5 | 0.05E-5 | 0.08E-5 | 5.8E-3 | 4.8E-3 | 3.5E-3 |\n| 0.015 | 0.20E-5 | 0.25E-5 | 0.35E-5 | 6.7E-3 | 5.8E-3 | 5.1E-3 |\n| 0.020 | 0.45E-5 | 0.50E-5 | 0.65E-5 | 6.9E-3 | 6.1E-3 | 5.5E-3 |\n| 0.025 | 0.70E-5 | 0.75E-5 | 0.90E-5 | 6.9E-3 | 6.1E-3 | 5.6E-3 |\n| 0.030 | 0.82E-5 | 0.88E-5 | 1.05E-5 | 6.9E-3 | 6.2E-3 | 5.6E-3 |\n| 0.040 | 0.85E-5 | 0.92E-5 | 1.10E-5 | 6.9E-3 | 6.2E-3 | 5.6E-3 |",
+        "b": "| Time (s) | TMA 150\u00b0C (mol/m\u00b3) | TMA 200\u00b0C (mol/m\u00b3) | TMA 250\u00b0C (mol/m\u00b3) | Water 150\u00b0C (mol/m\u00b3) | Water 200\u00b0C (mol/m\u00b3) | Water 250\u00b0C (mol/m\u00b3) |\n|---|---|---|---|---|---|---|\n| 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 0.005 | 0.25E-3 | 0.15E-3 | 0.10E-3 | 0.00 | 0.00 | 0.00 |\n| 0.010 | 1.20E-3 | 0.80E-3 | 0.60E-3 | 0.15E-4 | 0.20E-4 | 0.10E-4 |\n| 0.015 | 2.50E-3 | 1.90E-3 | 1.40E-3 | 0.90E-4 | 1.00E-4 | 1.10E-4 |\n| 0.020 | 3.60E-3 | 2.80E-3 | 2.20E-3 | 1.40E-4 | 1.60E-4 | 1.80E-4 |\n| 0.025 | 4.10E-3 | 3.50E-3 | 2.80E-3 | 1.70E-4 | 1.90E-4 | 2.20E-4 |\n| 0.030 | 4.30E-3 | 3.80E-3 | 3.10E-3 | 1.80E-4 | 2.10E-4 | 2.40E-4 |\n| 0.040 | 4.40E-3 | 4.00E-3 | 3.30E-3 | 1.90E-4 | 2.20E-4 | 2.60E-4 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does wafer temperature affect precursor intermixing compared to the effects of gap size and pumping pressure?",
+                "answer_type": "Paragraph",
+                "answer": "Temperature has a moderate effect on intermixing, increasing foreign precursor concentrations at both monitoring positions as temperature rises from 150\u00b0C to 250\u00b0C. However, gap size has the strongest influence on intermixing (Figure 4 shows an 8-fold difference between 1 mm and 2 mm gaps), while pumping pressure has an intermediate effect. Temperature uniquely affects both intermixing and deposition kinetics, creating a trade-off since higher temperatures improve film growth rate but worsen precursor separation."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "In subfigure (a), why does the home precursor (water) reach lower steady-state concentrations at higher temperatures?",
+                "answer_type": "Factoid",
+                "answer": "At higher temperatures, the gas expands and has lower density, and enhanced diffusion distributes water molecules more broadly, resulting in slightly lower local concentrations at the monitoring position."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Considering both intermixing (this figure) and deposition rate (Figure 7), what temperature offers the best balance for in-line spatial ALD of Al\u2082O\u2083?",
+                "answer_type": "Factoid",
+                "answer": "200\u00b0C offers a reasonable compromise, providing good deposition rate (approximately 1.2 \u00c5/cycle) while maintaining moderate intermixing levels, compared to 250\u00b0C which has higher intermixing or 150\u00b0C which has slower deposition kinetics."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does higher wafer temperature increase precursor intermixing?",
+                "answer_type": "Factoid",
+                "answer": "Higher temperature accelerates diffusive mass transport by increasing molecular kinetic energy, which enhances the movement of precursor molecules across the separating gas barriers into neighboring zones."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 8,
+            "y": 4,
+            "width": 630,
+            "height": 451
+        },
+        "b": {
+            "x": 8,
+            "y": 458,
+            "width": 634,
+            "height": 434
+        }
+    }
+}

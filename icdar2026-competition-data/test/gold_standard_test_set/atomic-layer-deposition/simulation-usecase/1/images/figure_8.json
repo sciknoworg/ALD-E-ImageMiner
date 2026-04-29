@@ -1,0 +1,54 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/1/figure_8",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Figure 8 presents an Arrhenius plot of the rate constants for the (SiH\u2083O)\u2083Si\u2212O\u2212TiI\u2083* + H\u2082O reaction, calculated under different treatments of the rotational motion of the adsorbed H\u2082O molecule. Multiple curves compare how ignoring rotation, treating rotation as restricted, or allowing free rotation affects the temperature dependence of the rate constant. The plot highlights that including rotational degrees of freedom lowers the rate constants and slightly modifies the Arrhenius activation energy, reflecting the impact of rotational entropy on the reaction kinetics."
+    },
+    "data_extraction": {
+        "a": "|T (K)|k_TST (s\u207b\u00b9)|k_SC-TST (s\u207b\u00b9)|\n|-----:|-----------:|--------------:|\n|423.15|1.43 \u00d7 10\u2070|1.45 \u00d7 10\u2070|\n|473.15|1.56 \u00d7 10\u00b9|1.57 \u00d7 10\u00b9|\n|523.15|1.08 \u00d7 10\u00b2|1.08 \u00d7 10\u00b2|\n|573.15|5.82 \u00d7 10\u00b2|5.84 \u00d7 10\u00b2|\n|623.15|2.04 \u00d7 10\u00b3|2.04 \u00d7 10\u00b3|\n|673.15|6.92 \u00d7 10\u00b3|6.94 \u00d7 10\u00b3|\n|723.15|1.72 \u00d7 10\u2074|1.73 \u00d7 10\u2074|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does including rotational motion of H\u2082O in the calculation affect the rate constant of the reaction?",
+                "answer_type": "Paragraph",
+                "answer": "Yes, including rotational motion decreases the rate constant compared to ignoring rotation."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which rotational treatment results in the lowest Arrhenius activation energy for the (SiH\u2083O)\u2083Si\u2212O\u2212TiI\u2083* + H\u2082O reaction?",
+                "answer_type": "Factoid",
+                "answer": "The restricted rotation model produces a slightly lower activation energy (4.8 kcal/mol) compared to ignoring rotation (5.1 kcal/mol)."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "How does the treatment of H\u2082O rotation influence the calculated rate constants and what does this imply for modeling ALD reactions?",
+                "answer_type": "Paragraph",
+                "answer": "The treatment of H\u2082O rotation directly affects the free energy of the adsorbed complex, which in turn changes the activation barrier and the magnitude of the rate constant. Ignoring rotation overestimates the rate constant by underestimating the free energy barrier, while including full rotational freedom can underestimate it due to overestimation of rotational entropy. This highlights the importance of accurately modeling molecular rotations when predicting surface reaction kinetics in ALD processes, as small differences can significantly impact predicted reaction rates and process design."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "List the three rotational treatments of adsorbed H\u2082O considered in the Arrhenius plot.",
+                "answer_type": "List",
+                "answer": "No rotation (rotation ignored, qrot = 1), Restricted rotation (partial rotational freedom), Free rotation (V\u2080 = 0, \u03c3 = 1)"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 659,
+            "height": 606
+        }
+    }
+}

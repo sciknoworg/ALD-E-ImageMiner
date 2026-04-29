@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/44/fig_3",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The image represents the etch rate (\u00c5/cycle) against the exposure (mTorr.s)  Etch rate vs HF exposure with Sn(acac)\u2082 exposure fixed at 900 mTorr. s",
+        "b": "This image shows Atomic Layer Etching (ALE) saturation curves for a sequential, two-step Sn(acac)\u2082\u202f/\u202fHF thermal etching process of a metal oxide (likely SnO\u2082). It demonstrates the self-limiting nature of ALE: each reactant exposure saturates, leading to a constant etch rate per cycle once a sufficient exposure dose is reached. Etch rate vs Sn(acac)\u2082 exposure with HF exposure fixed at 1270 mTorr. s."
+    },
+    "data_extraction": {
+        "a": "| Exposure (mTorr\u00b7s) | Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0 | 0.0 |\n| 300 | 0.1 |\n| 600 | 0.2 |\n| 900 | 0.3 |\n| 1200 | 0.35 |\n| 1500 | 0.35 |\n| 1800 | 0.4 |",
+        "b": "| Exposure (mTorr\u00b7s) | Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0 | 0.0 |\n| 200 | 0.14 |\n| 400 | 0.23 |\n| 600 | 0.26 |\n| 800 | 0.32 |\n| 1000 | 0.35 |\n| 1200 | 0.35 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List the sequence of steps in one complete, self-limiting AlN ALE cycle based on the saturation behavior shown",
+                "answer_type": "Paragraph",
+                "answer": "HF Pulse: Exposure \u2265 ~966 mTorr\u00b7s to form a saturated AlF\u2083 layer.\n\nPurge: 130 s with N\u2082 to remove HF and by-products.\n\nSn(acac)\u2082 Pulse: Exposure \u2265 ~900 mTorr\u00b7s for complete ligand exchange.\n\nPurge: 130 s with N\u2082 to remove Sn(acac)\u2082 and volatile etch products."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the shapes of the saturation curves for HF [Fig (a)] and Sn(acac)\u2082 [Fig(b)]. What does the sharper saturation of HF imply about the trade-off between process window and reactant handling?",
+                "answer_type": "Paragraph",
+                "answer": "HF saturates more sharply and shows a risk of Chemical Vapor Etching  at high exposure, while Sn(acac)\u2082 saturates more gradually. This implies HF has a narrower safe process window; precise dose control is critical to avoid runaway etching. The trade-off is that HF's high reactivity enables fast surface fluorination, but demands stricter process control compared to the more forgiving Sn(acac)\u2082."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "aWhat specific surface structure must be formed during the HF pulse to achieve the self-limiting etch rate of 0.36 \u00c5/cycle?",
+                "answer_type": "Factoid",
+                "answer": "A saturated, monolayer-thick AlF\u2083 surface layer."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "For manufacturing, why is the existence of a clear saturation plateau for both reactants, as shown in this graph, more important than simply achieving a high etch rate?",
+                "answer_type": "Paragraph",
+                "answer": "The saturation plateau represents a stable process window in which the etch rate remains constant and is unaffected by small changes in reactant dose or pressure. This natural self-limiting behavior enables uniform etching across the wafer and ensures excellent run-to-run repeatability, which is far more important for achieving high yield than a faster but poorly controlled etch process."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 0,
+            "width": 631,
+            "height": 357
+        },
+        "b": {
+            "x": 0,
+            "y": 367,
+            "width": 626,
+            "height": 387
+        }
+    }
+}

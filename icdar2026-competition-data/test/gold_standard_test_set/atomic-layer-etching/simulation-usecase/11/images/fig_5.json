@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/11/fig_5",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The thickness decreases linearly with increasing number of cycles."
+    },
+    "data_extraction": {
+        "a": "| Number of cycle | Thickness (angstrom) |\n|----------------|---------------------|\n| 0              | 100                 |\n| 25             | 90                  |\n| 50             | 80                  |\n| 75             | 70                  |\n| 100            | 60                  |\n| 125            | 50                  |\n| 150            | 40                  |\n| 175            | 30                  |\n| 200            | 20                  |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the y-axis represent and in what units?",
+                "answer_type": "Factoid",
+                "answer": "The y-axis represents the Al2O3 film thickness measured in angstroms (\u00c5)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why is the relationship between thickness and cycle number perfectly linear?",
+                "answer_type": "Paragraph",
+                "answer": "The linear relationship reflects the self-limiting nature of the ALE process. Each cycle removes a consistent amount of material (0.46 \u00c5) regardless of how many cycles have been performed, because the surface reactions saturate after complete monolayer conversion. This contrasts with continuous etching processes where the etch rate may vary with film thickness or process time. The linearity is a defining characteristic of ALE and enables precise, predictable thickness control."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How many ALE cycles would be needed to completely etch the 100 \u00c5 film?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 217 cycles would be needed to completely etch the 100 \u00c5 film (100 \u00c5 \u00f7 0.46 \u00c5/cycle \u2248 217 cycles)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Where does the 0.46 \u00c5/cycle etch rate value come from?",
+                "answer_type": "Factoid",
+                "answer": "The etch per cycle (EPC) value of 0.46 \u00c5/cycle is taken from experimental measurements reported in the literature, as the kMC model itself does not directly compute EPC."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 6,
+            "width": 606,
+            "height": 440
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/25/figure_11",
+    "classification": {
+        "a": "multiple scatter plot",
+        "b": "scatter plot",
+        "c": "scatter plot"
+    },
+    "summarization": {
+        "a": "Scatter plot comparing dissociated Hf\u2013F coverage with total HF coverage. Square points lie on the dashed 1:1 line, indicating configurations where HF fully dissociates. Circular points fall below this line, showing partial dissociation at higher coverages and the onset of saturation behavior.",
+        "b": "Scatter plot showing that Ebind per unit area becomes increasingly negative as total HF coverage increases. The trend suggests stronger net binding with higher surface coverage, with some spread reflecting different adsorption configurations.",
+        "c": "Scatter plot showing that Ebind per unit area also decreases with increasing Hf\u2013F coverage. Compared to (b), this representation highlights how the degree of dissociation directly correlates with surface stabilization."
+    },
+    "data_extraction": {
+        "a": "| Data Series | Total Coverage [HF/nm\u00b2] | Hf-F Coverage [Hf-F/nm\u00b2] |\n|----------------|----------------------------------|-----------------------------------|\n| Squares (on line) | 1.0 | 1.0 |\n| Squares (on line) | 2.5 | 2.5 |\n| Circles (deviation) | 2.0 | 1.5 |\n| Circles (deviation) | 4.0 | 3.0 |\n| Circles (deviation) | 6.0 | 5.0 |\n| Circles (deviation) | 8.0 | 6.5 |\n| Circles (saturation) | 15.0 | 6.0 |\n| Circles (saturation) | 17.0 | 7.0 |",
+        "b": "| Coverage [HF/nm\u00b2] | Ebind [eV/nm\u00b2] | \n|---|---| \n| 1.0 | ~ -1.0 | \n| 2.0 | ~ -3.0 | \n| 4.0 | ~ -4.5 | \n| 8.0 | ~ -8.0 | \n| 8.0 | ~ -9.5 | \n| 15.0 | ~ -12.0 | \n| 17.0 | ~ -13.0 |",
+        "c": "| Coverage [Hf-F/nm\u00b2] | Ebind [eV/nm\u00b2] |\n|---|---|\n| 0.5 | ~ -1.0 |\n| 2.0 | ~ -3.0 |\n| 3.0 | ~ -4.5 |\n| 5.8 | ~ -8.0 |\n| 6.0 | ~ -12.0 |\n| 7.0 | ~ -13.0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "In subfigure (a), do the square data points represent configurations where the dissociated Hf\u2013F coverage equals the total HF coverage?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. The square points fall on the dashed 1:1 line, indicating complete HF dissociation."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the deviation of the circular data points from the dashed line in subfigure (a) reveal about HF dissociation behavior at higher coverages?",
+                "answer_type": "Paragraph",
+                "answer": "The square points follow the 1:1 line, indicating configurations where all adsorbed HF dissociates to form Hf\u2013F. In contrast, the circular points deviate below this line, especially at higher total HF coverages. This suggests that as coverage increases, not all HF molecules dissociate, likely due to site saturation or geometric constraints on the surface. The coexistence of fully and partially dissociated configurations indicates coverage-dependent limits on dissociation."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What specific surface species coverage is plotted on the x-axis of this panel?",
+                "answer_type": "Factoid",
+                "answer": "Hf\u2013F coverage (per nm\u00b2)."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does Ebind per unit area change as total HF surface coverage increases?",
+                "answer_type": "Factoid",
+                "answer": "Ebind decreases (becomes more negative) with increasing coverage."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 38,
+            "width": 274,
+            "height": 315
+        },
+        "b": {
+            "x": 290,
+            "y": 37,
+            "width": 274,
+            "height": 316
+        },
+        "c": {
+            "x": 579,
+            "y": 31,
+            "width": 265,
+            "height": 322
+        }
+    }
+}

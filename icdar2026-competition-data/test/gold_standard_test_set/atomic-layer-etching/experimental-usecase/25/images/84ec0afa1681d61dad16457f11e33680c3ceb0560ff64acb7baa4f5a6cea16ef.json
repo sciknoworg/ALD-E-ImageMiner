@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/25/84ec0afa1681d61dad16457f11e33680c3ceb0560ff64acb7baa4f5a6cea16ef",
+    "classification": {
+        "a": "line chart",
+        "b": "line chart"
+    },
+    "summarization": {
+        "a": "The etch rate of WO\u2083 increases with increasing BCl\u2083 exposure at a constant temperature and HF exposure, and saturates at 4 angstrom per cycle.",
+        "b": "The etch rate of WO\u2083 increases with increasing HF exposure at a constant temperature and BCl\u2083 exposure, and soft-saturates at 4.2 angstrom per cycle."
+    },
+    "data_extraction": {
+        "a": "| BCl\u2083 Exposure (mTorr s) | WO\u2083 Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0 | 0 |\n| 200 | 3.7 |\n| 300 | 4.2 |\n| 500 | 4.1 |",
+        "b": "| HF Exposure (mTorr s) | WO\u2083 Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0 | 0 |\n| 100 | 2.7 |\n| 150 | 3.8 |\n| 200 | 4.2 |\n| 300 | 4.3 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "If an exposure of 600 mTorr s would have been chosen, what would likely be the etch rate and why?",
+                "answer_type": "Paragraph",
+                "answer": "The etch rate would also 4 angstrom per cycle. This is the saturated value so further increasing the exposure would not result in a higher etch rate."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What type of function can be used to fit the given datapoints?",
+                "answer_type": "Paragraph",
+                "answer": "Usually an exponential function is used to fit the datapoints, where fit parameter in the exponent are related to dosing constants."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is full saturation observed within the given range of exposures?",
+                "answer_type": "Paragraph",
+                "answer": "No, there is no full saturation observed. The curve has not flattened fully."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "At what temperature have the experiments be performed?",
+                "answer_type": "Factoid",
+                "answer": "207 degrees celcius"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 8,
+            "width": 650,
+            "height": 543
+        },
+        "b": {
+            "x": 4,
+            "y": 560,
+            "width": 652,
+            "height": 549
+        }
+    }
+}

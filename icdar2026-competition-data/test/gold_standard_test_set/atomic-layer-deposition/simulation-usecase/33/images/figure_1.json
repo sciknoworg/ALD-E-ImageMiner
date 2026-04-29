@@ -1,0 +1,70 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/33/figure_1",
+    "classification": {
+        "a": "multi spectra chart",
+        "b": "multi spectra chart",
+        "c": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "The figure shows the binding energy spectrum of pristine graphene, with contributions from sp\u00b2, C-O, plasmon 1, and plasmon 2.",
+        "b": "The figure shows the binding energy spectrum of material treated with 30 seconds of O\u2082 plasma, with contributions from sp\u00b2, sp\u00b3, C-O, and C=O.",
+        "c": "The figure shows the binding energy spectrum of material treated with 35 seconds of H\u2082 plasma, with contributions from sp\u00b2, sp\u00b3, C-O, and C=O."
+    },
+    "data_extraction": {
+        "a": "| Binding Energy, eV | Component | Peak Intensity (normalized) |\n|---|---|---|\n| 284.4 | sp\u00b2 | 0.88 |\n| 285.5 | C-O | 0.05 |\n| 286.5 | Plasmon 1 | 0.08 |\n| 290.5 | Plasmon 2 | 0.02 |",
+        "b": "| Binding Energy, eV | Component | Peak Intensity (normalized) |\n|---|---|---|\n| 284.4 | sp\u00b2 | 0.55 |\n| 285.0 | sp\u00b3 | 0.55 |\n| 286.2 | C-O | 0.35 |\n| 287.5 | C=O | 0.22 |",
+        "c": "| Binding Energy, eV | Component | Peak Intensity (normalized) |\n|---|---|---|\n| 284.4 | sp\u00b2 | 0.60 |\n| 285.0 | sp\u00b3 | 0.58 |\n| 286.2 | C-O | 0.38 |\n| 287.5 | C=O | 0.08 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "In each panel, what does the red curve represent?",
+                "answer_type": "Factoid",
+                "answer": "The red curve is the fitted model of the measured XPS C 1s spectrum, constructed from the colored component peaks plus background."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compared with pristine graphene, what are the main spectral changes after O2 plasma and after H2 plasma?",
+                "answer_type": "Paragraph",
+                "answer": "After O2 plasma, the C O contribution increases, an sp3 component appears near 284.6 eV, and a C=O component appears near 289.0 eV, while the plasmon loss features seen in pristine graphene are no longer observed. After H2 plasma, the dominant change is a strong increase in sp3 bonding with a corresponding decrease in sp2 bonding, and there is also an increase in C O signal."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Based on these spectra, which plasma treatment is more consistent with a reversible functionalization approach for enabling ALD, and why?",
+                "answer_type": "Paragraph",
+                "answer": "H2 plasma: the spectrum shows strong sp3 formation attributed to hydrogenation, which the paper links to reversibility upon subsequent processing and annealing. \n\nO2 plasma: the spectrum shows added oxygen containing bonding, including C=O, consistent with more permanent chemical modification and loss of plasmon features, which the paper associates with less reversible changes."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the emergence of an sp3 contribution imply about the graphene bonding structure in panels b and c?",
+                "answer_type": "Paragraph",
+                "answer": "The increased sp3 contribution indicates that part of the graphene basal plane has been converted from sp2 bonding to sp3 like bonding due to plasma functionalization. For O2 plasma this coincides with oxygen containing groups such as C O and C=O, consistent with chemical modification and disruption of the pristine sp2 network. For H2 plasma, the paper attributes the sp3 increase primarily to hydrogenation, which is not directly visible as C H in XPS but is consistent with the observed sp2 to sp3 shift."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 7,
+            "width": 626,
+            "height": 436
+        },
+        "b": {
+            "x": 9,
+            "y": 444,
+            "width": 613,
+            "height": 426
+        },
+        "c": {
+            "x": 9,
+            "y": 864,
+            "width": 606,
+            "height": 426
+        }
+    }
+}

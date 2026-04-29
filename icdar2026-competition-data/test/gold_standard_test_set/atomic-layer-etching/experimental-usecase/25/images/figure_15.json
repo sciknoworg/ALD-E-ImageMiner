@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/25/figure_15",
+    "classification": {
+        "a": "scatter plot",
+        "b": "scatter plot"
+    },
+    "summarization": {
+        "a": "The etch rate of W increases with increasing BCl\u2083 exposure at a constant temperature of 207\u00b0C, and constant HF and O2/O3 exposures.",
+        "b": "The etch rate of W increases with increasing HF exposure at a constant temperature of 207\u00b0C, and constant BCl3 and O2/O3 exposures."
+    },
+    "data_extraction": {
+        "a": "| BCl\u2083 Exposure (mTorr s) | W Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0 | 0.0 |\n| 200 | 2.2 |\n| 300 | 2.4 |\n| 500 | 2.4 |",
+        "b": "| HF Exposure (mTorr s) | W Etch Rate (\u00c5/cycle) |\n|---|---|\n| 0 | 0.0 |\n| 1000 | 1.8 |\n| 2000 | 2.4 |\n| 3000 | 2.5 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is it important that the HF and O2/O3 exposures are fully saturated?",
+                "answer_type": "Paragraph",
+                "answer": "If this is not the case the, the outcome of the BCl3 exposure sweep will not represent the highest achievable etch rate. In addition, it will not represent ALE, as the reactions have not been performed till saturation is achieved."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What would be the etch rate of tungsten for a BCl3 exposure of 100 mTorr s?",
+                "answer_type": "Factoid",
+                "answer": "1.5 angstrom per cycle"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the saturated etch rate when increasing the HF exposure, and does this correspond to the other achieved EPCs?",
+                "answer_type": "Paragraph",
+                "answer": "2.5 angstrom per cycle, and this does correspond to the other achieved EPCs."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why is it important that the temperature is kept constant for all the measurements?",
+                "answer_type": "Paragraph",
+                "answer": "It could be that temperature has an influence on the etch per cycle which might interfere with the results achieved by changing the HF exposure."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 636,
+            "height": 532
+        },
+        "b": {
+            "x": 1,
+            "y": 533,
+            "width": 643,
+            "height": 536
+        }
+    }
+}

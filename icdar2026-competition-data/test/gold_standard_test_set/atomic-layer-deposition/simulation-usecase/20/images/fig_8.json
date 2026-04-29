@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/20/fig_8",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Growth per cycle (GPC) of Al\u2082O\u2083 thin films as a function of dosing time for three gap sizes (1, 1.5, and 2 mm) at 200\u00b0C and 0.22 torr pumping pressure. Larger gaps reach saturation faster (2 mm saturates at approximately 0.01 s) while smaller gaps require longer dosing times (1 mm saturates at approximately 0.025 s). The 1 mm and 1.5 mm gaps achieve slightly higher saturated GPC than 2 mm."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Al\u2082O\u2083-1mm (\u00c5/cycle) | Al\u2082O\u2083-1.5mm (\u00c5/cycle) | Al\u2082O\u2083-2mm (\u00c5/cycle) |\n|---|---|---|---|\n| 0.000 | 0.00 | 0.00 | 0.00 |\n| 0.002 | 0.02 | 0.15 | 0.35 |\n| 0.004 | 0.18 | 0.50 | 0.75 |\n| 0.006 | 0.38 | 0.82 | 1.00 |\n| 0.008 | 0.60 | 1.02 | 1.12 |\n| 0.010 | 0.78 | 1.15 | 1.17 |\n| 0.012 | 0.92 | 1.19 | 1.19 |\n| 0.015 | 1.08 | 1.22 | 1.20 |\n| 0.020 | 1.19 | 1.23 | 1.20 |\n| 0.025 | 1.22 | 1.23 | 1.20 |\n| 0.030 | 1.23 | 1.23 | 1.20 |\n| 0.040 | 1.23 | 1.23 | 1.20 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does gap size affect the critical dosing time required to reach saturation?",
+                "answer_type": "Paragraph",
+                "answer": "Smaller gap sizes significantly increase the critical dosing time. The 1 mm gap requires approximately 0.025 s to reach saturation, while 1.5 mm needs about 0.012 s and 2 mm only 0.01 s. This occurs because smaller gaps hinder gas flow and reduce convective mass transport, making diffusion the dominant transport mechanism. Since diffusion is slower than convection, precursor delivery to the surface takes longer with narrower gaps."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the 1 mm gap curve show the slowest initial growth rate?",
+                "answer_type": "Factoid",
+                "answer": "The narrow 1 mm gap restricts gas flow, causing mass transport to be dominated by slower diffusive processes rather than faster convective transport, which delays precursor delivery to the wafer surface."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which gap size achieves the highest saturated GPC value?",
+                "answer_type": "Factoid",
+                "answer": "The 1 mm gap achieves the highest saturated GPC (approximately 1.23 \u00c5/cycle), slightly higher than 1.5 mm and 2 mm gaps."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Considering both saturation time and GPC, which gap size offers the best trade-off for in-line spatial ALD?",
+                "answer_type": "Factoid",
+                "answer": "The 1.5 mm gap offers the best compromise, achieving a saturated GPC comparable to 1 mm while requiring a much shorter critical dosing time (0.012 s versus 0.025 s), and also showing less precursor intermixing than 1 mm."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 6,
+            "width": 635,
+            "height": 537
+        }
+    }
+}

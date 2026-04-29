@@ -1,0 +1,57 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/3/figure_2",
+    "classification": {
+        "a": "spectra chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "The spectra chart shows RBS spectrum with backscattered-ion counts versus energy for a zirconium-containing film on a carbon substrate, with features attributed to C (substrate), O, and Zr.",
+        "b": "The spectra chart shows RBS spectrum with backscattered-ion counts versus energy for a hafnium-containing film on a carbon substrate, with features attributed to C (substrate), O, and Hf."
+    },
+    "data_extraction": {
+        "a": "| Energy (MeV) | Counts | Assignment |\n|---|---|---|\n| 0 | 0 | - |\n| 0.098 | 1273 | Carbon Substrate |\n| 0.46 | 443 | Carbon Substrate |\n| 0.7 | 318 | Oxygen |\n| 1.65 | 3987 | Zirconium |\n| 2 | 0 | - |",
+        "b": "| Energy (MeV) | Counts | Assignment |\n|---|---|---|\n| 0 | 0 | - |\n| 0.098 | 2096 | Carbon Substrate |\n| 0.46 | 578 | Carbon Substrate |\n| 0.7 | 253 | Oxygen |\n| 1.65 | 11240 | Hafnium |\n| 2 | 0 | - |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the shape of carbon substrate signal differ from the shape of the metal signals?",
+                "answer_type": "Factoid",
+                "answer": "The carbon substrate signal appears as a broad, continuous signal, while the metal signals appear as sharp, narrow peaks."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What evidence from the spectra supports the conclusion that the surface contains metal, and the bulk contains carbon?",
+                "answer_type": "Paragraph",
+                "answer": "Atoms deeper in the sample produce lower-energy backscattered ions and appear as broad peaks at low energies. Atoms near the surface produce higher-energy signals and appear as sharp peaks. The metal signals appear as sharp, narrow peaks at high energies, confirming that the metal exists as a thin film located strictly at the surface. Conversely, the carbon signal appears as a broad, continuous peak at lower energies, which is characteristic of a bulk material."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is there evidence for impurities in the sample, based on this spectrum?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the hafnium peak have different intensity  than the zirconium peak?",
+                "answer_type": "Paragraph",
+                "answer": "The hafnium peak is much taller than the zirconium peak due to the scattering cross-section. The probability of an alpha particle scattering off a nucleus increases with the square of the atomic number Z. Hafnium (Z = 72) has  a higher atomic number than zirconium (Z = 40), so it scatters the ions more strongly and produces a more intense signal."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 2,
+            "width": 601,
+            "height": 425
+        },
+        "b": {
+            "x": 4,
+            "y": 424,
+            "width": 603,
+            "height": 413
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/28/fig8",
+    "classification": {
+        "a": "spectra chart",
+        "b": "spectra chart"
+    },
+    "summarization": {
+        "a": "Quadrupole mass spectra (m/z 40\u201375) of gaseous products evolved during spontaneous thermal etching of B\u2082O\u2083 by HF at 150 \u00b0C. Panel (a) shows the 1st HF exposure with broad, intense peaks assigned to fragments of BF\u2083 (BF\u2083\u207a at m/z 65\u201368, BF\u2082\u207a at m/z 48\u201349) and BF(OH)\u2082 (BF(OH)\u207a, BF\u2082(OH)\u207a).",
+        "b": "Panel (b) shows the 5th HF exposure, displaying significantly sharper and more intense peaks with the same fragment pattern, indicating that steady-state etching has been reached with cleaner, more reproducible release of BF\u2083 and BF(OH)\u2082 as the primary volatile boron-containing products."
+    },
+    "data_extraction": {
+        "a": "| Ion Species | Approximate m/z | 1st Exposure (mV) |\n|-------------|-----------------|-------------------|\n| BF(OH)+     | 47              |  ~140             |\n| BF2 +       | 49              |  ~190             |\n| BF2(OH)+    | 66              |  ~45              |\n| BF2 +       | 68              |  ~10              |",
+        "b": "| Ion Species | Approximate m/z | 5th Exposure (mV) |\n|-------------|-----------------|-------------------|\n| BF(OH)+     | 47              |  ~90             |\n| BF2 +       | 49              |  ~390             |\n| BF2(OH)+    | 66              |  ~20              |\n| BF2 +       | 68              |  ~15              |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What causes the dramatic change in peak shape and intensity of the boron-containing fragments between the 1st and 5th HF exposure during thermal etching of B\u2082O\u2083 at 150 \u00b0C?",
+                "answer_type": "Paragraph",
+                "answer": "During the first HF exposure, the native B\u2082O\u2083 surface contains adsorbed water, hydroxyl groups, and possibly structural defects, leading to simultaneous removal of native oxide and partial fluorination, which produces a broad distribution of fragment ions and lower overall signal-to-noise. By the fifth exposure, residual water and surface impurities have been largely purged, and the surface has reached a steady-state fluorinated layer; subsequent HF doses therefore react with a clean, well-defined surface, resulting in highly reproducible, sharp, and intense peaks of BF\u2083- and BF(OH)\u2082-derived fragments. This evolution is consistent with surface conditioning toward a steady fluorinated state, as reflected by cleaner and more reproducible volatile product release in later HF exposures."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which volatile boron-containing etch products are observed in both the 1st and 5th HF exposures, and how does their relative peak sharpness differ between the two cycles?",
+                "answer_type": "Paragraph",
+                "answer": "1. BF\u2083 (fragments: BF\u2083\u207a m/z 65\u201368, BF\u2082\u207a m/z 48\u201349) 2. BF(OH)\u2082 (fragments: BF\u2082(OH)\u207a m/z ~62-63, BF(OH)\u207a m/z ~47). Peak sharpness: Broad and noisy in 1st exposure \u2192 sharp and well-resolved in 5th exposure."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Why are multiple mass fragments observed for BF\u2083 in the spectrum (e.g., at m/z 48 and 65) despite it being a single molecular product?",
+                "answer_type": "Factoid",
+                "answer": "BF\u2083 undergoes electron-impact fragmentation in the QMS ionizer, producing characteristic ions BF\u2083\u207a (parent), BF\u2082\u207a (base peak), BF\u207a, and F\u207a with natural boron (\u00b9\u2070B/\u00b9\u00b9B) and fluorine isotopes creating the observed multiplets."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Does this figure confirm that BF\u2083 and BF(OH)\u2082 are the dominant volatile products during steady-state thermal ALE of B\u2082O\u2083 using only HF at 150 \u00b0C?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 673,
+            "height": 231
+        },
+        "b": {
+            "x": 3,
+            "y": 226,
+            "width": 672,
+            "height": 251
+        }
+    }
+}

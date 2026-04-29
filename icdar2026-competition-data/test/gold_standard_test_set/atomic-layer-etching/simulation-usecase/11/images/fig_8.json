@@ -1,0 +1,79 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/11/fig_8",
+    "classification": {
+        "a": "3d scatter plot",
+        "b": "scatter plot",
+        "c": "3d scatter plot",
+        "d": "scatter plot"
+    },
+    "summarization": {
+        "a": "Scatter plot comparing kMC simulation data (red) with FNN-predicted data (blue) for Step A (HF fluorination) across different operating conditions. The close overlap of red and blue points demonstrates excellent model agreement.",
+        "b": "Parity plot for Step A showing FNN-predicted half-cycle time versus kMC simulation time. Points cluster tightly along the diagonal y=x line, indicating a mean squared error of only 0.0856% on the 20% test dataset.",
+        "c": "Scatter plot comparing kMC simulation data (red) with FNN-predicted data (blue) for Step B (TMA etching). The agreement is similarly strong, though with slightly more scatter at higher normalized times.",
+        "d": "Parity plot for Step B showing FNN-predicted versus simulated half-cycle times. The data closely follows the diagonal reference line with a mean squared error of 0.175%, slightly higher than Step A but still excellent."
+    },
+    "data_extraction": {
+        "a": "| Iteration Index | Top Band (Normalized Time, s) | Bottom Band (Normalized Time, s) |\n|---|---|---|\n| 0 | 2.40 | 0.60 |\n| 25 | 2.40 | -0.80 |\n| 50 | 2.42 | -0.90 |\n| 75 | 2.45 | -0.90 |\n| 100 | 2.50 | -0.90 |\n| 150 | 2.60 | -0.90 |\n| 200 | 2.70 | -0.90 |\n| 250 | 2.80 | -0.90 |",
+        "b": "| Simulation Time (s) | Predicted Time (s) |\n|---|---|\n| -0.9 | -0.9 |\n| 0.0 | 0.0 |\n| 1.0 | 1.0 |\n| 2.0 | 2.0 |\n| 2.7 | 2.7 |",
+        "c": "| Iteration Index | Top Band (Normalized Time, s) | Bottom Band (Normalized Time, s) |\n|---|---|---|\n| 0 | 3.10 | 0.80 |\n| 25 | 3.00 | -0.30 |\n| 50 | 2.90 | -0.70 |\n| 75 | 2.80 | -0.85 |\n| 100 | 2.65 | -0.95 |\n| 150 | 2.40 | -1.00 |\n| 200 | 2.10 | -1.00 |\n| 250 | 1.80 | -1.00 |",
+        "d": "| Simulation Time (s) | Predicted Time (s) |\n|---|---|\n| -1.0 | -1.0 |\n| 0.0 | 0.0 |\n| 1.0 | 1.0 |\n| 2.0 | 2.0 |\n| 3.0 | 3.0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is the FNN model valuable compared to direct kMC simulation for process optimization?",
+                "answer_type": "Paragraph",
+                "answer": "The FNN model dramatically reduces computation time while maintaining high accuracy. While kMC simulations require approximately 20 minutes per data point on average, the trained FNN predicts half-cycle times in less than one second. This speed enables real-time operational parameter calculations, which is essential for semiconductor manufacturing where batch half-cycles typically complete in under 5 seconds. The FNN also allows rapid screening of operating conditions without costly experiments."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What fraction of the kMC data was used for model testing versus training?",
+                "answer_type": "Factoid",
+                "answer": "20% of the kMC data points were used for testing and validation, while the remaining 80% were used for training the FNN models."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the FNN prediction accuracy compare between Step A and Step B?",
+                "answer_type": "Paragraph",
+                "answer": "The FNN model achieves slightly better accuracy for Step A than Step B. Step A (HF fluorination) shows a mean squared error of 0.0856%, while Step B (TMA etching) has a MSE of 0.175%. This difference likely reflects the greater complexity of Step B's reaction mechanism, which involves more reaction pathways including ligand exchange and DMAF desorption. Nevertheless, both models demonstrate excellent predictive capability with sub-1% errors."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What does a point lying exactly on the diagonal line in subfigures (b) and (d) indicate?",
+                "answer_type": "Factoid",
+                "answer": "A point on the diagonal indicates perfect agreement between the FNN-predicted half-cycle time and the kMC-simulated time."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 12,
+            "y": 0,
+            "width": 458,
+            "height": 384
+        },
+        "b": {
+            "x": 548,
+            "y": 0,
+            "width": 468,
+            "height": 387
+        },
+        "c": {
+            "x": 12,
+            "y": 426,
+            "width": 460,
+            "height": 380
+        },
+        "d": {
+            "x": 536,
+            "y": 433,
+            "width": 480,
+            "height": 373
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/3/fig_6",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart",
+        "c": "multi-axis chart",
+        "d": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "TMA pulse at 100\u00b0C: Correlates surface deposition rate of O\u27e8s\u27e9 (red), TMA mole fraction (black), and *Al(CH\u2083)\u2082 surface coverage (blue). Deposition rate peaks around 5 ms then drops as surface coverage saturates to 50%, despite continued TMA concentration increase.",
+        "b": "TMA pulse at 150\u00b0C: Faster surface saturation than 100\u00b0C, with peak deposition occurring earlier. The dotted line at t=0.004s shows temperature comparison across panels.",
+        "c": "TMA pulse at 200\u00b0C: Surface saturation occurs even earlier. Peak deposition rate remains similar but is reached more quickly.",
+        "d": "TMA pulse at 250\u00b0C: Fastest saturation; surface coverage reaches 50% before 0.004s. At this point, deposition rate at 250\u00b0C is slightly lower than 200\u00b0C because surface is already saturated."
+    },
+    "data_extraction": {
+        "a": "| Flow time (ms) | Surface Deposition Rate of O ( kg/m2-s ) | *Al(Me)2 Surface Coverage | TMA Mole Fraction |\n|---|---|---|---|\n| 2 | 0.15e-04 | 0.10 | 0.00 |\n| 3 | 0.60e-04 | 0.30 | 0.01 |\n| 4 | 1.65e-04 | 0.50 | 0.05 |\n| 5 | 0.10e-04 | 0.50 | 0.18 |\n| 6 | 0.01e-04 | 0.50 | 0.30 |\n| 8 | 0.00 | 0.50 | 0.50 |\n| 10 | 0.00 | 0.50 | 0.65 |\n| 12 | 0.00 | 0.50 | 0.75 |\n| 14 | 0.00 | 0.50 | 0.80 |\n| 20 | 0.00 | 0.50 | 0.90 |",
+        "b": "| Flow time (ms) | Surface Deposition Rate of O ( kg/m2-s ) | *Al(Me)2 Surface Coverage | TMA Mole Fraction |\n|---|---|---|---|\n| 2 | 0.05e-04 | 0.00 | 0.00 |\n| 3 | 0.35e-04 | 0.10 | 0.02 |\n| 4 | 1.05e-04 | 0.35 | 0.05 |\n| 5 | 1.65e-04 | 0.50 | 0.15 |\n| 6 | 0.10e-04 | 0.50 | 0.30 |\n| 8 | 0.00 | 0.50 | 0.55 |\n| 10 | 0.00 | 0.50 | 0.70 |\n| 12 | 0.00 | 0.50 | 0.80 |\n| 20 | 0.00 | 0.50 | 0.95 |",
+        "c": "| Flow time (ms) | Surface Deposition Rate of O ( kg/m2-s ) | *Al(Me)2 Surface Coverage | TMA Mole Fraction |\n|---|---|---|---|\n| 2 | 0.05e-04 | 0.00 | 0.00 |\n| 3 | 0.55e-04 | 0.15 | 0.02 |\n| 4 | 1.70e-04 | 0.50 | 0.10 |\n| 5 | 0.15e-04 | 0.50 | 0.25 |\n| 6 | 0.00 | 0.50 | 0.45 |\n| 8 | 0.00 | 0.50 | 0.70 |\n| 10 | 0.00 | 0.50 | 0.82 |\n| 12 | 0.00 | 0.50 | 0.90 |\n| 20 | 0.00 | 0.50 | 0.98 |",
+        "d": "| Flow time (ms) | Surface Deposition Rate of O ( kg/m2-s ) | *Al(Me)2 Surface Coverage | TMA Mole Fraction |\n|---|---|---|---|\n| 2 | 0.05e-04 | 0.00 | 0.00 |\n| 3 | 0.75e-04 | 0.20 | 0.05 |\n| 4 | 1.55e-04 | 0.50 | 0.25 |\n| 5 | 0.10e-04 | 0.50 | 0.45 |\n| 6 | 0.00 | 0.50 | 0.60 |\n| 8 | 0.00 | 0.50 | 0.82 |\n| 10 | 0.00 | 0.50 | 0.90 |\n| 12 | 0.00 | 0.50 | 0.95 |\n| 20 | 0.00 | 0.50 | 0.98 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What happens to the deposition rate once *Al(CH\u2083)\u2082 surface coverage reaches 50%?",
+                "answer_type": "Paragraph",
+                "answer": "The deposition rate drops drastically once surface coverage saturates at 50% (the other half is occupied by *AlCH\u2083). Even though TMA concentration continues to increase, no further deposition occurs because all reactive *OH surface sites have been consumed. This demonstrates the self-limiting nature of ALD."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What do the three plotted variables represent?",
+                "answer_type": "Paragraph",
+                "answer": "Red circles (left axis): mass deposition rate of bulk oxygen species O\u27e8s\u27e9; black squares (right axis): TMA gas-phase mole fraction; blue diamonds (right axis): *Al(CH\u2083)\u2082 surface species coverage."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Is the peak deposition rate dependent on process temperature?",
+                "answer_type": "Paragraph",
+                "answer": "No. The peak deposition rate values are nearly identical (~1.6\u00d710\u207b\u2074 kg/m\u00b2\u00b7s) across all four temperatures; only the time to reach the peak changes."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does temperature affect the time to reach surface saturation?",
+                "answer_type": "Factoid",
+                "answer": "Higher temperature accelerates saturation. The dotted lines show saturation is reached at approximately t=0.004s for 100\u00b0C but progressively earlier at higher temperatures, with 250\u00b0C saturating fastest."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 1,
+            "width": 327,
+            "height": 508
+        },
+        "b": {
+            "x": 323,
+            "y": 1,
+            "width": 218,
+            "height": 512
+        },
+        "c": {
+            "x": 524,
+            "y": 1,
+            "width": 211,
+            "height": 497
+        },
+        "d": {
+            "x": 721,
+            "y": 1,
+            "width": 264,
+            "height": 505
+        }
+    }
+}

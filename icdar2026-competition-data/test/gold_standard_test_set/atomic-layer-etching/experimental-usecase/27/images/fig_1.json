@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/27/fig_1",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The line chart illustrates the etch rate (in A/cycle) at various first grid voltages (in V) for both conditions: without BCl<sub>3</sub> adsorption and with BCl<sub>3</sub> adsorption."
+    },
+    "data_extraction": {
+        "a": "| 1<sup>st</sup> Grid Voltage (V) | Etch Rate (A / cycle) without BCl<sub>3</sub> adsorption | Etch Rate (A / cycle) with BCl<sub>3</sub> adsorption |\n|---|---|---|\n| 50 | 0.0 | 0.0 |\n| 75 | 0.0 | 0.25 |\n| 100 | 0.0 | 1.0 |\n| 125 | 0.5 | 1.25 |\n| 150 | 1.0 | 1.75 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate at 150 V without BCl3 adsorption?",
+                "answer_type": "Factoid",
+                "answer": "1.0 \u00c5/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate at 105 V without BCl3 adsorption?",
+                "answer_type": "Factoid",
+                "answer": "0 \u00c5/cycle."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the etch rate at 105 V with BCl3 adsorption?",
+                "answer_type": "Factoid",
+                "answer": "1.0 \u00c5/cycle."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the 1st grid voltage affect the etch rate with or without BCl3 adsorption, and how does that lead to the selected grid voltage for future experiments?",
+                "answer_type": "Paragraph",
+                "answer": "Without BCl3 adsorption, material is only being etched at grid voltages higher than 105 V, which corresponds to the Al2O3 substrate itself being etched. With BCl3 adsorption, an increase in etch rate is observed from 0 to 95 V. This means that etch rate is constant between 95 and 105 V. In this small region, only the chemisorbed layer (which is created during BCl3 exposure) is etched, meaning that the process meets the self-limiting reaction requirement between 95 and 105 V, so future experiments will be operated in this range."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 4,
+            "width": 589,
+            "height": 444
+        }
+    }
+}

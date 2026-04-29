@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/19/fig1",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The multiple line chart shows the deposition rate (\u00c5/cycle) of  Zirconia (ZrO\u2082 ) thin films from two different zirconium precursors\u2014(CpMe)\u2082Zr(OMe)Me and (CpMe)\u2082ZrMe\u2082\u2014using O\u2083 as the oxidant, plotted against deposition temperature (250\u2013500 \u00b0C).  The growth rate seems to increase with increase in temperature and the behaviours are slightly different for the two precursors."
+    },
+    "data_extraction": {
+        "a": "| Deposition Temperature (\u00b0C) | Growth Rate (\u00c5/cycle) | Process   |\n|-----------------------------|------------------------|-----------------------------|\n| 250                         | 0.24                   | (CpMe)\u2082Zr(OMe)Me / O\u2083       |\n| 250                         | 0.21                   | (CpMe)\u2082ZrMe\u2082 / O\u2083           |\n| 300                         | 0.56                   | (CpMe)\u2082Zr(OMe)Me / O\u2083       |\n| 300                         | 0.52                   | (CpMe)\u2082ZrMe\u2082 / O\u2083           |\n| 350                         | 0.64                   | (CpMe)\u2082Zr(OMe)Me / O\u2083       |\n| 350                         | 0.56                   | (CpMe)\u2082ZrMe\u2082 / O\u2083           |\n| 400                         | 0.75                   | (CpMe)\u2082Zr(OMe)Me / O\u2083       |\n| 400                         | 0.58                   | (CpMe)\u2082ZrMe\u2082 / O\u2083           |\n| 450                         | 0.88                   | (CpMe)\u2082Zr(OMe)Me / O\u2083       |\n| 450                         | 0.71                   | (CpMe)\u2082ZrMe\u2082 / O\u2083           |\n| 500                         | 1.10                   | (CpMe)\u2082Zr(OMe)Me / O\u2083       |\n| 500                         | \u2014                      | (CpMe)\u2082ZrMe\u2082 / O\u2083           |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "List out the two precursors used for the deposition in this study and what where the experimental conditions for the deposition cycle?",
+                "answer_type": "Paragraph",
+                "answer": "1. Precursors Used:\n\n(CpMe)\u2082Zr(OMe)Me\n\n(CpMe)\u2082ZrMe\u2082\n\n2. Experimental Conditions for One ALD Cycle:\n\nZr Precursor Pulse Time: 1.0 s\n\nO\u2083 (Oxidant) Pulse Time: 2.0 s\n\nDeposition Temperature Range: 250\u2013500 \u00b0C\n\nOxidant: O\u2083 (Ozone)"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the thermal ALD windows of the two precursors. What is the main requiste in choosing (CpMe)\u2082Zr(OMe)Me over (CpMe)\u2082ZrMe\u2082 for low-temperature processing?",
+                "answer_type": "Paragraph",
+                "answer": "(CpMe)\u2082Zr(OMe)Me provides a stable, low deposition rate (~0.5 \u00c5/cycle) from 250\u2013400 \u00b0C, while (CpMe)\u2082ZrMe\u2082 only achieves a stable rate above 350 \u00b0C. The balance is between low-temperature capability and growth rate. Choosing the (OMe)Me precursor enables processing below 350 \u00b0C, but at the cost of a roughly 2x slower growth rate compared to the Me\u2082 precursor at its optimal temperature."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does changing the ligand from -Me to -OMe in the precursor structure affect the deposition rate at 300 \u00b0C?",
+                "answer_type": "Factoid",
+                "answer": "It reduces the deposition rate by approximately half (from ~1.0 \u00c5/cycle to ~0.5 \u00c5/cycle)."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "If a ZrO\u2082 film is needed for a back-end-of-line (BEOL) capacitor where thermal input is limited to 300 \u00b0C, which precursor must be used and what is a likely consequence for manufacturing?",
+                "answer_type": "Paragraph",
+                "answer": "The (CpMe)\u2082Zr(OMe)Me precursor must be used, as it shows a stable rate at 300 \u00b0C. The consequence is a slower growth rate, which will increase the total deposition time per wafer to achieve the target film thickness. This reduces tool throughput and increases the cost of the manufacturing step."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 2,
+            "width": 419,
+            "height": 346
+        }
+    }
+}

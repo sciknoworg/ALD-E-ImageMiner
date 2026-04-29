@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/37/fig_5",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The line chart shows the thickness of the deposited TiO2 layer as a function of super-cycles (combined ALD/ALE cycles). Three data series are plotted with varying TiCl4 and H2O exposure times (0.09, 0.18 and 0.27 for both, respectively)."
+    },
+    "data_extraction": {
+        "a": "| Super-cycles | Thickness (nm) 0.09 / 45 / 0.09 / 45 s | Thickness (nm) 0.18 / 45 / 0.18 / 45 s | Thickness (nm) 0.27 / 45 / 0.27 / 45 s |\n|---|---|---|---|\n| 0 | 0 | 1 | 2 |\n| 5 | 0.25 | 1.5 | 2.5 |\n| 10 | 0.25 | 1.5 | 5.5 |\n| 15 | 0.5 | 1.5 |  |\n| 20 | 0.5 | 1.5 |  |\n| 25 | 0.5 |  |  |\n| 30 | 0.75 |  |  |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the thickness of the 0.09 s precursor exposure experiment after 10 super-cycles?",
+                "answer_type": "Factoid",
+                "answer": "About 0.25 nm."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the thickness of the 0.18 s precursor exposure experiment after 10 super-cycles?",
+                "answer_type": "Paragraph",
+                "answer": "About 1.5 nm (0.5 nm when taking into account the offset)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the thickness of the 0.27 s precursor exposure experiment after 10 super-cycles?",
+                "answer_type": "Factoid",
+                "answer": "Roughly 5.5 nm (3.5 nm when taking into account the offset)."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What does this figure show about the effect of ALD dosing time on unwanted nucleation and etching behaviour during repeated ALD/ALE super-cycles on Si-H surfaces?",
+                "answer_type": "Paragraph",
+                "answer": "During the initial three to five super-cycles, all dosing conditions exhibit similar alternating deposition and etching behaviour, indicating comparable early-stage nucleation resistance on the non-growth surface. Beyond approximately five super-cycles, however, the longest dosing condition (270 ms for both TiCl\u2084 and H\u2082O) shows a marked increase in net film accumulation after the ALE steps, signifying more rapid unwanted nucleation when longer ALD doses are combined with ALE. This contrasts with pure ALD behaviour, where increased dose times did not significantly affect nucleation on Si\u2013H, and is attributed to ALE-induced removal of passivating Si\u2013H bonds that promotes formation of Si\u2013O sites favourable for TiO\u2082 growth. In addition, the figure indicates that the amount of material removed per ALE cycle decreases over successive super-cycles for all dosing conditions, leaving a thin residual layer after etching; this residual thickness, on the order of ~0.2 nm after extended cycling, is interpreted as arising from surface oxidation and formation of non-etchable species rather than incomplete removal of TiO\u2082."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 669,
+            "height": 492
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/11/fig_4",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Kinetic Monte Carlo simulation results showing the progression of half-cycle completion (%) versus time for both ALE steps at 573 K. Step A (HF fluorination, blue) reaches 100% surface coverage at 1.38 s, while Step B (TMA etching, orange) completes at 2.38 s. Both curves show rapid initial progress followed by a gradual approach to saturation, characteristic of self-limiting ALE surface reactions."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Step A (%) | Step B (%) |\n|---|---|---|\n| 0.00 | 0 | 0 |\n| 0.05 | 16 | 0 |\n| 0.10 | 41 | 10 |\n| 0.15 | 50 | 25 |\n| 0.20 | 64 | 38 |\n| 0.25 | 72 | 48 |\n| 0.30 | 77 | 56 |\n| 0.40 | 84 | 68 |\n| 0.50 | 91 | 78 |\n| 0.60 | 94 | 82 |\n| 0.80 | 98 | 91 |\n| 1.00 | 99 | 95 |\n| 1.25 | 99.5 | 96 |\n| 1.50 | 100 | 98 |\n| 2.00 | 100 | 99.5 |\n| 2.50 | 100 | 100 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does Step B take longer to complete than Step A?",
+                "answer_type": "Paragraph",
+                "answer": "Step B (TMA etching) involves a more complex reaction mechanism with multiple sequential steps including TMA adsorption, ligand exchange, and DMAF desorption at two different reaction sites (l-AlF2 and r-AlF3). Additionally, TMA has a lower sticking coefficient (0.02) compared to HF (0.15), which slows the adsorption kinetics. The requirement for multiple TMA molecules to complete the etching at each unit cell further extends the process time."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What does the stepwise appearance of the Step A curve indicate?",
+                "answer_type": "Factoid",
+                "answer": "The stepwise jumps reflect the discrete nature of the kMC simulation, where individual reaction events occur stochastically at specific time intervals rather than continuously."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does 100% progression represent physically for each step?",
+                "answer_type": "Factoid",
+                "answer": "For Step A, 100% means complete fluorination of the Al2O3 surface as AlF3; for Step B, 100% means complete removal of the fluorinated layer through DMAF volatilization."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "How do these simulated half-cycle times compare to experimental observations?",
+                "answer_type": "Paragraph",
+                "answer": "The simulated times agree well with experiments. For Step A, experiments showed self-limiting behavior after 1.0 s of HF exposure with no significant change after 1.5 s, consistent with the simulated 1.38 s. For Step B, experiments indicated completion after approximately 2.25 s of TMA exposure, closely matching the simulated 2.38 s. This agreement validates the kMC model."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 4,
+            "width": 607,
+            "height": 445
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/24/figure_9",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "The figure shows time-resolved mass spectrometry of methanol (MeOH, m/e = 31) during an ALD process using a metal precursor and ozone. Methanol is released during both half-cycles: small peaks during the precursor pulse indicate chemisorption via reactions with surface \u2013OH groups, while larger peaks during the ozone pulse reflect oxidation and removal of remaining methoxy ligands. This dual release confirms that ligand elimination occurs in both steps, with ozone being the dominant cleanup mechanism."
+    },
+    "data_extraction": {
+        "a": "| Time (min) | Intensity (a.u.) | Condition / Action        |\n|-----------:|----------------:|---------------------------|\n| 5          | 3.5             | Precursor Pulse (P)       |\n| 20         | 2.5             | Precursor Pulse (P)       |\n| 35         | 2.1             | Precursor Pulse (P)       |\n| 50         | 1.9             | Precursor Pulse (P)       |\n| 65         | 1.8             | Precursor Pulse (P)       |\n| 85         | 8.8             | Ozone Pulse (O\u2083)          |\n| 100        | 2.5             | Precursor Pulse (P)       |\n| 115        | 9.4             | Ozone Pulse (O\u2083)          |\n| 130        | 2.7             | Precursor Pulse (P)       |\n| 145        | 9.7             | Ozone Pulse (O\u2083)          |\n| 160        | 2.8             | Precursor Pulse (P)       |\n| 175        | 9.6             | Ozone Pulse (O\u2083)          |\n| 190        | 2.7             | Precursor Pulse (P)       |\n| 205        | 9.5             | Ozone Pulse (O\u2083)          |\n| 220        | 2.6             | Precursor Pulse (P)       |\n| 235        | 8.0             | Ozone Pulse (O\u2083)          |\n| 250        | 7.3             | Ozone Pulse (O\u2083)          |\n| 265        | 6.8             | Ozone Pulse (O\u2083)          |\n| 280        | 6.4             | Ozone Pulse (O\u2083)          |\n| 295        | 6.0             | Ozone Pulse (O\u2083)          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Identify the two distinct chemical reactions occurring in the cycle based on the timing of the methanol release. Why does the Precursor Pulse (P) generate a signal even without an oxidant present?",
+                "answer_type": "Paragraph",
+                "answer": "The precursor pulse produces a methanol signal because the metal precursor reacts with surface hydroxyl groups (\u2013OH) remaining from the previous step. This ligand-exchange reaction (for example, M\u2013OMe + surface\u2013OH \u2192 surface\u2013O\u2013M + MeOH) releases methanol immediately upon chemisorption, without requiring the subsequent oxidant pulse."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "If the graph showed no methanol peak during the Ozone pulse, but a massive peak during the Precursor pulse, what would that imply about the growth mechanism? Would this be ideal for 'Low-Temperature' ALD?",
+                "answer_type": "Paragraph",
+                "answer": "If all methanol were released during the precursor pulse, it would imply the precursor reacted completely with the surface (consuming all ligands) without needing a second step. This would effectively be a self-limiting adsorption but might lack the mechanism to regenerate -OH groups for the next cycle."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Compare the peak intensity during the Ozone pulse (~10 a.u.) vs. the Precursor pulse (~2 a.u.). Physically, what does this 5:1 ratio suggest about the number of ligands remaining on the metal atom after it adsorbs?",
+                "answer_type": "Paragraph",
+                "answer": "The relatively small peak during the precursor step suggests that only a fraction of the ligands (e.g., 1 out of 4) are lost during the initial anchoring to the surface. The much larger peak during the ozone step confirms that the majority of the ligands are still attached to the metal center and are essentially \"burned off\" or displaced only when the strong oxidant is introduced."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Methanol is a polar, strongly adsorbing molecule, so a slow decay (\u201ctail\u201d) in its mass-spectrometry signal indicates that it remains in the chamber or on the surface. If the purge time is too short and the signal does not return to baseline, residual methanol can carry over into the next precursor pulse. This leads to unintended reactions, carbon incorporation in the film, reduced film density, and degraded electrical performance such as increased leakage or variability.",
+                "answer_type": "Paragraph",
+                "answer": "The peaks show a noticeable decay tail. If the purge time is too short, residual methanol will remain in the chamber. Since methanol can re-adsorb or react with the precursors in the gas phase (CVD-like reaction), this would lead to Particle Formation (dust) or non-uniform film thickness across the wafer. It necessitates extended purge times, which reduces manufacturing throughput ."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 1,
+            "y": 1,
+            "width": 626,
+            "height": 479
+        }
+    }
+}

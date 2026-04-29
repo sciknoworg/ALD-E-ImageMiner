@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/21/fig_10",
+    "classification": {
+        "a": "multiple scatter plot",
+        "b": "apparatus diagram"
+    },
+    "summarization": {
+        "a": "The figure shows a impedance spectroscopy of 50 nm Li2CO3 films prepared by thermal and plasma-assisted ALD.",
+        "b": "The figure depicts a equivalent circuits used to fit data with resistors (R_s, R_1) and capacitors (CPE_1, CPE_war)."
+    },
+    "data_extraction": {
+        "a": "| Condition | Z_Re (k\u03a9) Range | Z_Im (k\u03a9) Peak |\n|-----------|------------------|---------------|\n| Plasma    | 0 \u2013 15          | ~5            |\n| Thermal   | 0 \u2013 30          | ~15           |",
+        "b": "| Model | Description                                      |\n|-------|--------------------------------------------------|\n| I     | Rs \u2013 (R1 II CPE1) \u2013 CPEwar                      |\n| II    | Rs \u2013 (R1 II CPE1) \u2013 (R2 II CPE2) \u2013 CPEwar       |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How is the Li-ion conductivity of plasma and thermal ALD Li2CO3 layers investigated?",
+                "answer_type": "Paragraph",
+                "answer": "The Li-ion conductivity of plasma and thermal ALD Li2CO3 layers was investigated using impedance spectroscopy. The measurements were performed at open circuit potential (OCP) on 50 nm Li2CO3 flms deposited at 150 \u00b0C on a TiN current collector."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Do the Li2CO3 films show characteristics of an electrolyte?",
+                "answer_type": "Paragraph",
+                "answer": "Both the measured  thermal and plasma ALD layers show a behavior characteristic of a solid electrolyte: an intercept with the x-axis at high frequency,\na semi-circle at medium frequency and a 45\u00b0 inclined response at low frequency. Such behavior is typically associated with the ionic conductivity through a solid material. The high frequency intercept with the x-axis is generally attributed to the resistance of the cables, contacts and liquid electrolyte, the\nsemi-circle originates from the ionic conductivity through the solid material and its capacitive response."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the equivalent circuit consist of two models?",
+                "answer_type": "Paragraph",
+                "answer": "When equivalent circuit model I was tried to fit the response of the plasma deposited Li2CO3 layer, no adequate fit could be obtained. For this reason, model II was used. Thus thermal ALD process uses model I and plasma ALD process uses model II to fit the data."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How is the quality of the fit for both the models?",
+                "answer_type": "Paragraph",
+                "answer": "1. For model I used to fit thermal ALD, a low chi2 value of 5 *10-4 is obtained.\n2. For model II fitting plasma ALD, a low chi2 value of 2 *10-4 is obtained."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 5,
+            "width": 483,
+            "height": 518
+        },
+        "b": {
+            "x": 6,
+            "y": 532,
+            "width": 476,
+            "height": 387
+        }
+    }
+}

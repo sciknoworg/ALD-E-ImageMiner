@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/3/figure_2",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The chart shows the relative atomic percentage of chlorine (Cl at %) and the ratio of sulfur to molybdenum (S/Mo) against exposure time in seconds. The data points are labeled with 'Sulfur removed' and 'Molybdenum removed' indicating specific conditions, to explain the trends in the ratio of S/Mo.",
+        "b": "The chart shows the relative atomic percentage of chlorine (Cl at %) and the ratio of sulfur to molybdenum (S/Mo) against exposure time in seconds. A red arrow indicates 'Annealing (250\u00b0C, 45min)' s."
+    },
+    "data_extraction": {
+        "a": "| Exposure time (sec) | P | Cl | 15 | 30 | 45 | 60 | 90 | 120 | 200 |\n|---|---|---|---|---|---|---|---|---|---|\n| Relative atomic percentage (%) | 0 | 60 | 45 | 30 | 20 | 10 | 5 | 0 | 0 |\n| Ratio of S/Mo | 2.0 | 2.0 | 1.8 | 1.65 | 1.9 | 2.3 | 2.2 | 2.0 | 2.0 |",
+        "b": "| Exposure time (sec) | P | Cl | 15 | 30 | TA | 60 | 90 | 120 | 200 |\n|---|---|---|---|---|---|---|---|---|---|\n| Relative atomic percentage (%) | 0 | 60 | 45 | 30 | 0 | 0 | 0 | 0 | 0 |\n| Ratio of S/Mo | 2.0 | 2.0 | 1.8 | 1.7 | 1.7 | 1.7 | 1.7 | 1.7 | 1.7 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the ideal S/Mo ratio and how can this be explaned based on the oxidation state of molybdenum?",
+                "answer_type": "Paragraph",
+                "answer": "The ideal ratio is 2.0, as the oxidation state of Mo is +4 and that of sulfer is -2."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the saturated plasma exposure time?",
+                "answer_type": "Factoid",
+                "answer": "120 s."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Will annealing lead to high quality MoS?",
+                "answer_type": "Paragraph",
+                "answer": "No, this will not happen as the annealing fixes the S/Mo ratio 1.7, which should be 2.0 for high quality MoS2."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Why does the Cl atomic percentige drop?",
+                "answer_type": "Paragraph",
+                "answer": "Argon ions bombard the surface and remove Cl from the surface together with sulfur."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 2,
+            "y": 5,
+            "width": 668,
+            "height": 479
+        },
+        "b": {
+            "x": 2,
+            "y": 493,
+            "width": 667,
+            "height": 475
+        }
+    }
+}

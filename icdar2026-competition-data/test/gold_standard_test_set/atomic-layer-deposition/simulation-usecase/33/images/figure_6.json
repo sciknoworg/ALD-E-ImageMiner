@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/33/figure_6",
+    "classification": {
+        "a": "stacked spectra chart",
+        "b": "bar chart"
+    },
+    "summarization": {
+        "a": "Raman spectra for pristine graphene, after 35 s H2 plasma, and after anneals at 200 C and 400 C. The H2 plasma introduces a clear D band near 1350 cm1, and the 400 C anneal removes it, consistent with reversible hydrogenation.",
+        "b": "Hall mobility after the same steps, with the pristine reference annealed at 400 C before the Hall measurement. Mobility drops after H2 plasma, then recovers after 200 C and rises further after 400 C to above the initial value."
+    },
+    "data_extraction": {
+        "a": "| Raman Shift, cm\u207b\u00b9 | Peak | Pristine | H\u2082 Plasma | 200\u00b0C Anneal | 400\u00b0C Anneal |\n|---|---|---|---|---|---|\n| 1350 | D | 0.05 | 0.15 | 0.12 | 0.08 |\n| 1580 | G | 0.55 | 0.70 | 0.75 | 0.80 |\n| 2450 | D+D' | 0.05 | 0.08 | 0.06 | 0.05 |\n| 2700 | 2D | 1.00 | 0.45 | 0.50 | 0.55 |",
+        "b": "| Treatment Stage | Mobility (cm\u00b2/(V\u00b7s)) |\n|---|---|\n| Pristine | 1250 |\n| H\u2082 Plasma | 400 |\n| 200\u00b0C Anneal | 900 |\n| 400\u00b0C Anneal | 1700 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the Raman D band and the mobility change from pristine to H2 plasma to 200 C anneal to 400 C anneal?",
+                "answer_type": "Paragraph",
+                "answer": "After H2 plasma, the D band appears and mobility drops strongly.\n\nAfter 200 C anneal, the D band decreases and mobility partially recovers. \n\nAfter 400 C anneal, the D band disappears and mobility increases to above the initial value."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What does the disappearance of the Raman D band after the 400 C anneal imply about the defects created by the H2 plasma?",
+                "answer_type": "Paragraph",
+                "answer": "The D band after H2 plasma is consistent with covalent functionalization that introduces sp3 character, rather than permanent lattice damage. After annealing at 400 C, hydrogen desorbs and the sp2 network is restored, so the D band disappears. This supports the claim that the H2 plasma effect is reversible under these conditions."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why was the pristine graphene sample annealed at 400 C before the Hall mobility measurement in this figure?",
+                "answer_type": "Factoid",
+                "answer": "To exclude mobility changes that come only from annealing, so the comparison isolates the effects of H2 plasma and the later anneals."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What practical benefit for ALD on graphene does this figure support, beyond simply recovering the original mobility?",
+                "answer_type": "Paragraph",
+                "answer": "After the 400 C anneal, mobility exceeds the starting value in this reversibility test, showing that the process can yield net improvement rather than only recovery. The paper suggests this can arise from residue removal by the H2 plasma and from beneficial effects of the Al2O3 overlayer after annealing, such as screening of charged impurities. This supports an ALD integration route that enables nucleation while avoiding a lasting mobility penalty."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 10,
+            "y": 11,
+            "width": 625,
+            "height": 411
+        },
+        "b": {
+            "x": 653,
+            "y": 5,
+            "width": 621,
+            "height": 417
+        }
+    }
+}

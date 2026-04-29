@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/34/c96a5d146b2cea20f9cb7e1ccc44d625f87d3773c5b838f7e98fbe8484a40041",
+    "classification": {
+        "a": "heatmap"
+    },
+    "summarization": {
+        "a": "The heatmap shows how the mapped value varies with HF flow rate and substrate velocity. Values are highest at low substrate velocities and decrease steadily as substrate velocity increases. In contrast, changes across HF flow rate are relatively small, indicating that substrate velocity is the dominant parameter influencing the pattern."
+    },
+    "data_extraction": {
+        "a": "| HF flow rate (sccm) | Substrate velocity (mm/s) | Relative value |\n|--------------------|--------------------------|----------------|\n| 20                 | 30                       | High           |\n| 60                 | 30                       | High           |\n| 100                | 30                       | High           |\n| 20                 | 60                       | Medium         |\n| 60                 | 60                       | Medium         |\n| 100                | 60                       | Medium         |\n| 20                 | 90                       | Low            |\n| 60                 | 90                       | Low            |\n| 100                | 90                       | Low            |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mapped value change with substrate velocity in this heatmap?",
+                "answer_type": "Paragraph",
+                "answer": "The mapped value decreases as substrate velocity increases. Low velocities correspond to high values, while higher velocities show progressively lower values. Producing a strong vertical gradient across the plot."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which two process parameters are shown on the axes?",
+                "answer_type": "Factoid",
+                "answer": "HF flow rate and substrate velocity."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Does the heatmap show a strong dependence on HF flow rate?",
+                "answer_type": "Yes/No",
+                "answer": "No"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "At which substrate velocity range are the highest values observed?",
+                "answer_type": "List",
+                "answer": "At low substrate velocities, roughly 20\u201340 mm/s."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 486,
+            "height": 433
+        }
+    }
+}

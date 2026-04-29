@@ -1,0 +1,63 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/37/fig_5",
+    "classification": {
+        "a": "reaction scheme",
+        "b": "reaction scheme"
+    },
+    "summarization": {
+        "a": "CH\u2083 coverage set at half of the optimum level, resulting in a lower growth rate of 0.8 \u00c5/cycle, while OH coverage remains unchanged, illustrating the effect of reduced CH\u2083 coverage on ALD growth.",
+        "b": "H (or OH) coverage at half the optimum level, leading to a non-linear reduction in growth rate to 1.1 \u00c5/cycle and a surface saturated with a mixture of Al(CH\u2083) and Al(CH\u2083)\u2082, illustrating the effect of reduced H/OH coverage on ALD kinetics."
+    },
+    "data_extraction": {
+        "a": "| Species | Coverage | Growth Rate (\u00c5/cycle) | Notes |\n|---|---|---|---|\n| [CH\u2083] | 0.5 \u00d7 optimum | 0.8 | Reduced TMA adsorption lowers growth rate |\n| OH | optimum | \u2013 | Hydroxyl coverage unchanged |",
+        "b": "| Species | Coverage | Growth Rate (\u00c5/cycle) | Notes |\n|---|---|---|---|\n| H | 0.5 \u00d7 optimum | 1.1 | Partial dehydroxylation affects growth rate non-linearly |\n| Al(CH\u2083)/Al(CH\u2083)\u2082 | mixed | \u2013 | Surface saturated mixture at end of TMA pulse |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does reducing CH\u2083 coverage to half of the optimum level affect the growth rate of alumina during ALD?",
+                "answer_type": "Yes/No",
+                "answer": "yes"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the growth rate change when H (or OH) coverage is reduced to half of the optimum compared to the reduction in CH\u2083 coverage?",
+                "answer_type": "Factoid",
+                "answer": "With H (or OH) coverage at half the optimum, the growth rate decreases to 1.1 \u00c5/cycle, which is less than the drop observed with half CH\u2083 coverage (0.8 \u00c5/cycle)."
+            }
+        ],
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Explain how deviations from optimum surface coverage influence ALD kinetics and film",
+                "answer_type": "Paragraph",
+                "answer": "Deviations from optimum surface coverage significantly affect ALD kinetics. Lower CH\u2083 coverage limits the number of TMA molecules that can adsorb, directly reducing the growth rate. Reduced H or OH coverage alters the surface termination non-linearly, partially limiting reactions during the H\u2082O pulse and producing a mixed surface of Al(CH\u2083) and Al(CH\u2083)\u2082. These effects result in slower growth and highlight the importance of maintaining sufficient surface coverage for efficient and predictable ALD film deposition."
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "List the surface species shown in the reaction portraits of Figure 5 and their coverage effects.",
+                "answer_type": "List",
+                "answer": "[CH\u2083] \u2013 half optimum in 5a, reduces growth rate, OH \u2013 unchanged in 5a, H \u2013 half optimum in 5b, affects growth rate non-linearly, Al(CH\u2083)/Al(CH\u2083)\u2082 \u2013 surface mixture in 5b"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 4,
+            "y": 5,
+            "width": 438,
+            "height": 397
+        },
+        "b": {
+            "x": 456,
+            "y": 6,
+            "width": 424,
+            "height": 397
+        }
+    }
+}

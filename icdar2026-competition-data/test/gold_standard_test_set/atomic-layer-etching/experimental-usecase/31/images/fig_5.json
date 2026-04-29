@@ -1,0 +1,74 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/31/fig_5",
+    "classification": {
+        "a": "spectra chart",
+        "b": "spectra chart",
+        "c": "spectra chart",
+        "d": "line chart"
+    },
+    "summarization": {
+        "a": "This figure set presents the evolution of volatile byproducts during surface treatment, monitored using mass spectrometry. Panels (a) through (c) show mass spectra recorded under different temperatures and pulse conditions. In panel (a), increased temperatures from 100\u202f\u00b0C to 300\u202f\u00b0C result in stronger signals for characteristic m/z peaks such as CO (m/z 28), CO\u2082 (m/z 44), HF (m/z 20), and fluorinated fragments like CF\u2083 (m/z 69), indicating more extensive ligand decomposition or desorption. Panel (b) confirms that radical pulses alone do not contribute significant gaseous species, while panel (c) compares product profiles with and without O\u2082 or radical exposure on HfO\u2082 surfaces, revealing enhanced release of volatile fragments when radicals are used. Panel (d) traces the temporal evolution of specific product signals during the radical pulse, where species like CO and CO\u2082 exhibit sharp rises followed by gradual decline. Collectively, the data support the conclusion that elevated temperatures and radical co-reactants increase etch byproducts, validating the role of thermal and chemical activation in ALE."
+    },
+    "data_extraction": {
+        "a": "| m/z | Species     | 100\u00b0C (\u00d710\u207b\u2078 torr) | 200\u00b0C (\u00d710\u207b\u2078 torr) | 300\u00b0C (\u00d710\u207b\u2078 torr) |\n|-----|-------------|--------------------|--------------------|--------------------|\n| 14  | CH\u2082         | 1.0                | 1.0                | 1.2                |\n| 16  | CH\u2084         | 1.1                | 1.2                | 1.4                |\n| 18  | H\u2082O         | 1.2                | 1.3                | 1.5                |\n| 20  | HF          | 1.3                | 1.5                | 1.7                |\n| 28  | CO          | 1.6                | 2.0                | 2.4                |\n| 31  | CFH         | 1.3                | 1.6                | 1.9                |\n| 44  | CO\u2082         | 1.5                | 2.2                | 2.7                |\n| 50  | CF\u2082         | 1.4                | 2.0                | 2.5                |\n| 69  | CF\u2083         | 1.6                | 2.5                | 3.2                |\n| 85  | C\u2083F\u2085        | 1.3                | 2.0                | 2.8                |",
+        "b": "| m/z | Species     | 100\u00b0C (\u00d710\u207b\u2078 torr) | 200\u00b0C (\u00d710\u207b\u2078 torr) | 300\u00b0C (\u00d710\u207b\u2078 torr) |\n|-----|-------------|--------------------|--------------------|--------------------|\n| 28  | CO          | ~0.0               | ~0.0               | ~0.0               |\n| 44  | CO\u2082         | ~0.0               | ~0.0               | ~0.0               |\n| 69  | CF\u2083         | ~0.0               | ~0.0               | ~0.0               |\n| 85  | C\u2083F\u2085        | ~0.0               | ~0.0               | ~0.0               |",
+        "c": "| m/z | Species     | Radical pulse only (\u00d710\u207b\u2078 torr) | O\u2082 pre-treatment + radical (\u00d710\u207b\u2078 torr) |\n|-----|-------------|----------------------------------|-----------------------------------------|\n| 18  | H\u2082O         | 0.5                              | 1.2                                     |\n| 28  | CO          | 0.7                              | 1.8                                     |\n| 44  | CO\u2082         | 0.8                              | 2.0                                     |\n| 50  | CF\u2082         | 0.9                              | 2.4                                     |\n| 69  | CF\u2083         | 1.0                              | 2.7                                     |\n| 85  | C\u2083F\u2085        | 0.9                              | 2.6                                     |",
+        "d": "| Time (s) | CO (\u00d710\u207b\u2078 torr) | CO\u2082 (\u00d710\u207b\u2078 torr) | CF\u2082 (\u00d710\u207b\u2078 torr) | CF\u2083 (\u00d710\u207b\u2078 torr) | C\u2083F\u2085 (\u00d710\u207b\u2078 torr) |\n|----------|------------------|------------------|-------------------|-------------------|--------------------|\n| 0        | 0.0              | 0.0              | 0.0               | 0.0               | 0.0                |\n| 10       | 0.3              | 0.4              | 0.5               | 0.6               | 0.5                |\n| 20       | 0.7              | 1.0              | 1.2               | 1.3               | 1.2                |\n| 30       | 1.0              | 1.5              | 1.7               | 2.0               | 1.8                |\n| 40       | 0.9              | 1.3              | 1.5               | 1.6               | 1.4                |\n| 50       | 0.7              | 1.0              | 1.1               | 1.2               | 1.0                |\n| 60       | 0.5              | 0.8              | 0.9               | 1.0               | 0.8                |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the mass spectrum change with increasing temperature during Hhfac exposure?",
+                "answer_type": "Paragraph",
+                "answer": "As the temperature increases from 100\u202f\u00b0C to 300\u202f\u00b0C, the mass spectra show a marked increase in the intensity of gaseous byproducts such as CO (m/z 28), CO\u2082 (m/z 44), HF (m/z 20), and CF\u2083 (m/z 69). These elevated signals suggest that higher temperatures promote thermal decomposition of surface-bound ligands or enhance desorption of volatile fragments. The emergence of these peaks at higher temperatures indicates greater reactivity and more extensive breakdown of the Hhfac precursor, consistent with a thermally activated etching process."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Which mass-to-charge (m/z) ratio corresponds to the CF\u2083 fragment in the mass spectra?",
+                "answer_type": "Factoid",
+                "answer": "69"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which mass-to-charge (m/z) ratio corresponds to the CF\u2083 fragment in the mass spectra?",
+                "answer_type": "List",
+                "answer": "Hhfac pulse 100\u202f\u00b0C, Hhfac pulse 200\u202f\u00b0C, Hhfac pulse 300\u202f\u00b0C, Radical pulse only, Radical pulse after O\u2082 treatment"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Does the use of radicals increase the partial pressure of volatile byproducts durig ALE processes?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 30,
+            "y": 10,
+            "width": 485,
+            "height": 490
+        },
+        "b": {
+            "x": 586,
+            "y": 10,
+            "width": 491,
+            "height": 484
+        },
+        "c": {
+            "x": 25,
+            "y": 548,
+            "width": 480,
+            "height": 481
+        },
+        "d": {
+            "x": 589,
+            "y": 510,
+            "width": 488,
+            "height": 518
+        }
+    }
+}

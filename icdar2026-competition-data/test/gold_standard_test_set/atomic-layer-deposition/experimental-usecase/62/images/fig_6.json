@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/62/fig_6",
+    "classification": {
+        "a": "scatter plot",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The chart shows the integrated intensity of a CN peak after a certain Ta[N(CH\u2083)\u2082\u2085] exposure time.",
+        "b": "The chart displays the integrated intensity of different plasma species against the number of Al(CH\u2083) doses."
+    },
+    "data_extraction": {
+        "a": "| Ta[N(CH\u2083)\u2082\u2085] exposure time (s) | Integrated intensity (a.u.) |\n|---|---|\n|0| 750 | \n|1| 840 | \n|2| 870 | \n|3| 880 | \n|4| 880 | \n|5| 880 |\n|6| 880 | \n|7| 880 |",
+        "b": "| Number of Al(CH\u2083) doses| Integrated intensity (a.u.) O | Integrated intensity (a.u.) H | Integrated intensity (a.u.) CO | \n|---|---|---|---|\n| 0 |60|0|0|\n| 1 |52|23|38|\n| 2 |50|42|60|\n| 3 |42|50|68|\n| 4 |40|58|72|\n| 5 |40|62|80|\n| 6 |40|62|80|\n| 8 |40|62|80|\n| 12 |40|62|80|\n| 16 |40|62|80|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How long is the required tantalum precursor exposure time for saturation?",
+                "answer_type": "Factoid",
+                "answer": "The required exposure time is 4 seconds."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Why does the integrated intensity not go through the point (0,0)?",
+                "answer_type": "Paragraph",
+                "answer": "In the pure hydrogen plasma, there are also species with intensity at this wavelength. This is used as the reference for the intensity after precursor dose."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "How many TMA doses does it take to reach saturation?",
+                "answer_type": "Factoid",
+                "answer": "It takes 6 doses."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "If the plasma chemistry would not have been known before hand, what would be the plasma chemistry based on these results?",
+                "answer_type": "Paragraph",
+                "answer": "In the data, peaks related to oxygen species are visible. This is a clear indication that the plasma is an oxygen plasma."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 2,
+            "width": 617,
+            "height": 539
+        },
+        "b": {
+            "x": 3,
+            "y": 540,
+            "width": 625,
+            "height": 518
+        }
+    }
+}

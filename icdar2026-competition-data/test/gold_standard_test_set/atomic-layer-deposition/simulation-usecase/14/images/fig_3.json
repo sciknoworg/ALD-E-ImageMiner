@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/14/fig_3",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart illustrates the surface coverage % over number of ALD cycles,  comparing experiment  with two KMC simulations (with and without densification). Coverage increases steadily with more cycles for all cases, 'With Densification' achievies the coverage closest to experiment."
+    },
+    "data_extraction": {
+        "a": "| ALD Cycle | Experimental | Without Densification | With Densification |\n|------------|--------------|----------------------|--------------------|\n| 0          | 0            | 0                  | 0                |\n| 1          | 39           | 39                 | 39                 |\n| 2          | 44           | 40                   | 49                 |\n| 3          | 53           | 41                   | 62                 |\n| 4          | 63           | 42                   | 69                 |\n| 5          | 71           | 43                   | 77                 |\n| 6          | 74           | 43                   | 81                 |\n| 7          | 78           | 44                   | 86                 |\n| 8          | 84           | 45                   | 89                 |\n| 9          | 94           | 47                   | 92                 |\n| 10         | 100          | 47                   | 94                |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At ALD cycle 9, how do the three cases rank by coverage from highest to lowest?",
+                "answer_type": "List",
+                "answer": "Experimental, With densification, Without densification"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "What is the role of densification mechanism, based on the plot?",
+                "answer_type": "Paragraph",
+                "answer": "The plot shows that including densification prevents early stalling and allows coverage to keep increasing with cycle number. Without densification, the simulated coverage quickly plateaus around ~40\u201350%. The \u201cwith densification\u201d curve continues rising and closely follows the experimental trend toward near-complete coverage by 10 cycles. This indicates densification is necessary in the model to reproduce the experiment more closely."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the simulation without a densification mechanism overestimate or underestimate the coverage?",
+                "answer_type": "Factoid",
+                "answer": "It generally underestimates the coverage compared to the experimental data."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the approximate coverage gap between \"with densification\" and \"without densification\" at the last cycle?",
+                "answer_type": "Factoid",
+                "answer": "47 %"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 514,
+            "height": 370
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/39/fig_9",
+    "classification": {
+        "a": "multiple line chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The line chart displays the intensity of OES (Optical Emission Spectroscopy) during O2 plasma exposure with preceding Al(CH3)3 dosing.",
+        "b": "The line chart shows the intensity of OES during O2 plasma exposure during an ALD cycle step."
+    },
+    "data_extraction": {
+        "a": "| Time (s) | Intensity (a.u.) 777 nm - O* | Intensity (a.u.) 656 nm - H* | Intensity (a.u.) 519 nm - CO* |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 1 | 60 | 0 | 0 |\n| 2 | 60 | 0 | 0 |",
+        "b": "| Time (s) | Intensity (a.u.) 777 nm - O* | Intensity (a.u.) 656 nm - H* | Intensity (a.u.) 519 nm - CO* |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 0.5 | 40 | 80 | 140 |\n| 1 | 60 | 10 | 20 |\n| 1.5 | 60 | 0 | 10 |\n| 2 | 60 | 0 | 10 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Which optical emission wavelengths are monitored and to which species do they correspond?",
+                "answer_type": "List",
+                "answer": "519 nm (CO*), 656 nm (H*), 777 nm (O*)"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What differences are observed between a pure O\u2082 plasma strike and an ALD-cycle plasma strike?",
+                "answer_type": "Factoid",
+                "answer": "In a pure O\u2082 plasma strike, a stable O* emission at 777 nm appears immediately, while no significant emission is observed at 519 or 656 nm. During an ALD-cycle plasma strike, strong initial emissions at 519 and 656 nm are observed, reflecting the formation of reaction products such as CO, CO\u2082, and H\u2082O."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the estimated timescale for completion of surface reactions during the plasma step?",
+                "answer_type": "Factoid",
+                "answer": "The surface reactions occur on the time scale of 1 second."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How is this figure used to elucidate both the reaction mechanism and saturation behaviour during the plasma step of the ALD cycle?",
+                "answer_type": "Paragraph",
+                "answer": "When the plasma is ignited after an aluminium precursor dose, transient increases in CO* and H* emission are observed, indicating the formation of gas-phase reaction products such as CO, CO\u2082, and H\u2082O. Simultaneously, the O* emission is initially suppressed, reflecting the consumption of oxygen radicals in surface oxidation and by-product formation. As the surface reactions approach saturation, the emissions associated with reaction products decay due to pumping and reduced reactant availability, while the O* emission recovers to the level seen in a pure O\u2082 plasma. The short decay time of these signals shows that reaction completion occurs well within one second, consistent with independent spectroscopic ellipsometry results demonstrating saturated growth for plasma exposure times of half a second or longer."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 6,
+            "width": 377,
+            "height": 487
+        },
+        "b": {
+            "x": 364,
+            "y": 4,
+            "width": 309,
+            "height": 489
+        }
+    }
+}

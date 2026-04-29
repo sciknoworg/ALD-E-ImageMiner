@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/41/fig_5",
+    "classification": {
+        "a": "multi-axis chart",
+        "b": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "The subfigure plots estimated TiO\u2082 thickness and etch per cycle (EPC) of TiN versus oxidation temperature at 15 W RF power. Both quantities increase with temperature, showing that stronger oxidation produces thicker TiO\u2082 and higher EPC.",
+        "b": "The subfigure plots estimated TiO\u2082 thickness and EPC versus RF power at 100 \u00b0C. Increasing RF power leads to larger TiO\u2082 thickness and EPC, indicating a close correlation between oxide growth and etch-per-cycle performance."
+    },
+    "data_extraction": {
+        "a": "| Temperature (\u00b0C) | Estimated TiO\u2082 thickness (nm) | TiN Etch per cycle (nm/cycle) |\n|------------------|-------------------------------|---------------------------|\n| 50               | 0.30                          | 0.25                      |\n| 100              | 0.50                          | 0.45                      |\n| 150              | 0.80                          | 0.75                      |\n| 200              | 1.20                          | 1.10                      |",
+        "b": "| RF power (W) | Estimated TiO\u2082 thickness (nm) | TiN Etch per cycle (nm/cycle) |\n|--------------|-------------------------------|---------------------------|\n| 10           | 0.25                          | 0.25                      |\n| 15           | 0.50                          | 0.50                      |\n| 25           | 0.90                          | 0.85                      |\n| 50           | 1.95                          | 1.75                      |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How do the estimated TiO\u2082 thickness and TiN EPC change as oxidation temperature increases?",
+                "answer_type": "Paragraph",
+                "answer": "In (a), both quantities rise with temperature: TiO\u2082 thickness increases from ~0.30 nm (50 \u00b0C) to ~1.2\u20131.25 nm (200 \u00b0C), and EPC increases from ~0.25 to ~1.1 nm/cycle. The two curves follow similar upward trends, indicating a strong positive association between oxide growth and EPC under the tested oxidation conditions"
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At which oxidation temperature are both TiO\u2082 thickness and EPC highest?",
+                "answer_type": "Factoid",
+                "answer": "At 200 \u00b0C."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does RF power affect EPC in the oxidation step?",
+                "answer_type": "Factoid",
+                "answer": "The EPC of TiN increases steadily with RF power(approximately ~0.2\u20130.25 at 10 W up to ~1.7\u20131.8 nm/cycle at 50 W)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "Is EPC lower than (or at most comparable to) the estimated TiO\u2082 thickness at the same RF power?",
+                "answer_type": "Paragraph",
+                "answer": "Yes. EPC is consistently slightly below (or very close to) the TiO\u2082 thickness at each power setting."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 53,
+            "y": 10,
+            "width": 570,
+            "height": 420
+        },
+        "b": {
+            "x": 693,
+            "y": 10,
+            "width": 558,
+            "height": 420
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/1/figure_5",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot shows the relationship between purge time (in seconds) and mass gain per cycle (in ng/cm\u00b2) at 58\u00b0C. The data points represent measurements for water (1,30,1,x) and TMA (1,y,1,30)."
+    },
+    "data_extraction": {
+        "a": "| Purge Time (s) | Mass Gain per Cycle (ng/cm\u00b2) | Reagent (cycle conditions) |\n|---|---|---|\n| 2,02 | 31,20 | Water (1,30,1,x) |\n| 4,78 | 28,65 | Water (1,30,1,x) |\n| 9,90 | 27,82 | Water (1,30,1,x) |\n| 19,93 | 27,35 | Water (1,30,1,x) |\n| 29,97 | 27,07 | Water (1,30,1,x) |\n| 40,07 | 27,02 | Water (1,30,1,x) |\n| 0,27 | 29,01 | TMA (1,y,1,30) |\n| 1,95 | 27,35 | TMA (1,y,1,30) |\n| 9,90 | 27,35 | TMA (1,y,1,30) |\n| 20,00 | 27,52 | TMA (1,y,1,30) |\n| 29,97 | 27,79 | TMA (1,y,1,30) |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "At which purge times does CVD groth occur on this plot?",
+                "answer_type": "Factoid",
+                "answer": "At short purge times (approx. below 10 s)."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the evidence of CVD growth on this plot?",
+                "answer_type": "Paragraph",
+                "answer": "The evidence of CVD growth is the higher mass gain per cycle observed at short purge times. In ideal ALD, mass gain should be independent of purge time once surface reactions are saturated. The decrease in mass gain with increasing purge time indicates gas-phase reactions at short purges, which are characteristic of CVD."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What is the optimal purge time for TMA?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 10 seconds."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Would 10 seconds be enough for purging after reaction with water?  Why or why not?",
+                "answer_type": "Paragraph",
+                "answer": "No, 10 seconds is likely not sufficient for purging after reaction with water. The plot shows a higher mass gain per cycle at around 10 seconds, indicating residual water remains and contributes to CVD\u2011like growth. A longer purge time is needed for the mass gain to reach a stable, ALD\u2011like plateau."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 528,
+            "height": 394
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/experimental-usecase/47/FIG6",
+    "classification": {
+        "a": "box plot"
+    },
+    "summarization": {
+        "a": "The images plots the number of ALE cycles and the thicknesses indicating a decreasing trend and etching."
+    },
+    "data_extraction": {
+        "a": "| no. cycles | Thickness left (nm) |\n|---|---|\n| 0 | 52 |\n| 200 | 41 |\n| 400 | 25 |\n| 600 | 12 |\n| 800 | 2 |\n| 1000 | 1 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What is the starting thickness of all the films?",
+                "answer_type": "Factoid",
+                "answer": "~55nm"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "How does etch rate differ with number of ALE cycles?",
+                "answer_type": "Paragraph",
+                "answer": "Etch depth as a function of the number of ALE cycles shows the etching increases in a linear fashion as the number of cycles and after 800 cycles the film has been completely etched."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Does the trend of the EPC vs ALE cycles demonstrate the linearity of ALE?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "From the graph how can the etch rate be calculated",
+                "answer_type": "Factoid",
+                "answer": "Initial thickness = 55nm,\nThickness after 200 ALE cycles = 41 nm \nThickness etched away = 55-41 =14 nm\nEtch rate = 14/200 = 0.07 nm/cycle"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 5,
+            "y": 3,
+            "width": 665,
+            "height": 572
+        }
+    }
+}

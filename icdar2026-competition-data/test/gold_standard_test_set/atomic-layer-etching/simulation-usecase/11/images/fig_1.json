@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/11/fig_1",
+    "classification": {
+        "a": "line chart"
+    },
+    "summarization": {
+        "a": "Convergence test for the k-point grid density in DFT calculations for \u03b8-Al2O3 (2\u0304 0 1). The total energy decreases from approximately -2451 Ry at k-point=1 to about -2454.7 Ry, achieving convergence at k-point=4. This parameter determines the sampling density for Brillouin zone integration in the electronic structure calculations."
+    },
+    "data_extraction": {
+        "a": "| K-point | Total energy (RY) |\n|---|---|\n| 1 | -2451.0 |\n| 2 | -2454.5 |\n| 3 | -2454.0 |\n| 4 | -2454.0 |\n| 5 | -2454.0 |\n| 6 | -2454.0 |\n| 7 | -2454.0 |\n| 8 | -2454.0 |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What role do k-points play in DFT calculations?",
+                "answer_type": "Paragraph",
+                "answer": "K-points define the sampling grid for integrating electronic properties over the Brillouin zone in reciprocal space. Periodic DFT calculations require evaluating wavefunctions at multiple k-points to accurately compute total energies and other properties. Insufficient k-point sampling leads to inaccurate results, while excessive sampling increases computational cost without improving accuracy. The convergence test identifies the minimum k-point density that yields reliable results."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does the energy change from k-point=1 to the converged value?",
+                "answer_type": "Factoid",
+                "answer": "The total energy decreases by approximately 3.7 Ry, from about -2451 Ry at k-point=1 to approximately -2454.7 Ry at convergence."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "At what k-point value does convergence occur in this study?",
+                "answer_type": "Factoid",
+                "answer": "Convergence is achieved at k-point=4, after which the total energy remains essentially constant."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is k-point convergence tested separately from the energy cutoff convergence?",
+                "answer_type": "Factoid",
+                "answer": "These parameters control different aspects of calculation accuracy: ecutwfc determines basis set completeness while k-points determine Brillouin zone sampling, so each must be independently optimized."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 6,
+            "y": 7,
+            "width": 572,
+            "height": 418
+        }
+    }
+}

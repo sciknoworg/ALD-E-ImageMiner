@@ -1,0 +1,72 @@
+{
+    "sample_id": "atomic-layer-deposition/simulation-usecase/40/fig4",
+    "classification": {
+        "a": "contour heatmap",
+        "b": "multi spectra chart",
+        "c": "multi spectra chart"
+    },
+    "summarization": {
+        "a": "This panel shows simulated spatial distributions of DEZ precursor concentration near the substrate for different substrate velocities, illustrating how increasing velocity reduces precursor residence time and alters the overlap between DEZ injection, exhaust, and N\u2082 carrier gas regions.",
+        "b": "This panel presents the DEZ concentration at the substrate surface as a function of lateral position for different substrate velocities, demonstrating that higher velocities broaden and lower the effective precursor exposure window, leading to reduced peak surface concentration and shorter saturation regions.",
+        "c": "This panel schematically defines discrete exposure zones along the substrate motion direction, showing how the total DEZ exposure can be decomposed into successive incremental contributions as the substrate passes under the injector, providing a basis for modeling growth per cycle in spatial ALD."
+    },
+    "data_extraction": {
+        "a": "| Gas injector | N\u2082 | Exhaust | DEZ | Exhaust | N\u2082 |\n|---|---|---|---|---|---|\n| 0 cm/s | | | | | |\n| 4 cm/s | | | | | |\n| 12 cm/s | | | | | |\n| 16 cm/s | | | | | |",
+        "b": "| Substrate velocity (cm/s) | [DEZ] at substrate surface (mol/m\u00b3) |\n|---|---|\n| 0 | 1.0 |\n| 4 | 0.95 |\n| 8 | 0.9 |\n| 12 | 0.85 |\n| 16 | 0.8 |",
+        "c": "| Substrate velocity (cm/s) | [DEZ] at substrate surface (mol/m\u00b3) |\n|---|---|\n| 8 | 1.0 |\n| 8 | 0.9 |\n| 8 | 0.8 |\n| 8 | 0.7 |\n| 8 | 0.6 |"
+    },
+    "vqa": {
+        "d": [
+            {
+                "question_type": "Application/Performance",
+                "question": "Why is controlling substrate velocity critical for achieving uniform spatial ALD growth?",
+                "answer_type": "Paragraph",
+                "answer": "Substrate velocity directly determines precursor residence time and surface exposure uniformity in spatial ALD. Excessively high velocities limit precursor adsorption and prevent surface saturation, while low velocities may lead to overdosing and parasitic reactions. Optimizing substrate speed ensures self-limited surface chemistry, uniform film thickness, and stable high-throughput deposition."
+            }
+        ],
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Does substrate velocity influence the DEZ precursor distribution at the substrate surface in spatial ALD?",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ],
+        "c": [
+            {
+                "question_type": "Structure-Property",
+                "question": "Which system parameters control the shape of the DEZ concentration profile at the substrate surface?",
+                "answer_type": "List",
+                "answer": "Substrate velocity, Injector\u2013substrate gap distance, Exhaust channel spacing, Precursor injection geometry"
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "What happens to the DEZ surface concentration profile as substrate velocity increases from 0 to 16 cm/s?",
+                "answer_type": "Factoid",
+                "answer": "Increasing substrate velocity narrows the DEZ exposure window and reduces peak surface concentration."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 1258,
+            "height": 269
+        },
+        "b": {
+            "x": 11,
+            "y": 312,
+            "width": 572,
+            "height": 543
+        },
+        "c": {
+            "x": 639,
+            "y": 312,
+            "width": 577,
+            "height": 505
+        }
+    }
+}

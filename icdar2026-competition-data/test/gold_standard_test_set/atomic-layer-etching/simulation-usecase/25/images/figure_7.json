@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-etching/simulation-usecase/25/figure_7",
+    "classification": {
+        "a": "multiple line chart"
+    },
+    "summarization": {
+        "a": "Line chart showing free-energy (\u0394G) profiles for continuous etching and self-limiting reactions of ZrO2 for three HF surface models (16 HF, 24 HF, and 32 HF) as functions of temperature. The figure marks three crossover temperatures\u2014T1 = 273 K, T2 = 502 K, and T3 = 534 K\u2014corresponding to the 16O/32F, 12O/24F, and 8O/16F models, respectively, where self-limiting and spontaneous etch pathways become thermodynamically equivalent."
+    },
+    "data_extraction": {
+        "a": "| Temperature [K] | Ref (Blue) [eV] | 32 HF (Yellow) [eV] | 24 HF (Gray) [eV] | 16 HF (Orange) [eV] | Note |\n|---|---|---|---|---|---|\n| 0 | ~ -1.0 | ~ -1.9 | ~ -2.7 | ~ -2.8 | Start |\n| 273 | ~ -0.95 | ~ -0.95 | ~ -1.8 | ~ -1.9 | T1 (Crossover) |\n| 502 | ~ -0.9 | 0.0 | ~ -1.0 | ~ -1.1 | T2 (Yellow Zero) |\n| 534 | ~ -0.9 | ~ +0.2 | 0.0 | 0.0 | T3 (Gray/Orange Zero) |\n| 1000 | ~ -0.7 | ~ +1.8 | ~ +0.9 | ~ +0.8 | End |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Which HF surface model loses self-limiting stability at the lowest temperature?",
+                "answer_type": "Factoid",
+                "answer": "The 32 HF surface model."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "How does increasing HF surface coverage affect the thermodynamic stability of the self-limiting reaction?",
+                "answer_type": "Paragraph",
+                "answer": "Higher HF surface coverage raises the free energy of the self-limiting pathway, causing it to intersect the continuous etching pathway at lower temperatures. This indicates that heavily fluorinated surfaces destabilize the self-limiting configuration more rapidly as temperature increases."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Rank the three HF surface models in order of increasing temperature range over which self-limiting behavior is maintained?",
+                "answer_type": "Paragraph",
+                "answer": "1)  32 HF (smallest range)\n2)  24 HF\n3)  16 HF (largest range)"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Which HF surface model would be most suitable for maintaining controlled ALE of ZrO2 at elevated temperatures?",
+                "answer_type": "Paragraph",
+                "answer": "The 16 HF surface model is most suitable, as it maintains a negative \u0394G for self-limiting reactions up to the highest temperature (T3 = 534 K), providing the widest operational window merging stability with temperature tolerance."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 3,
+            "y": 3,
+            "width": 401,
+            "height": 353
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/62/fig_3",
+    "classification": {
+        "a": "multi spectra chart",
+        "b": "multiple line chart"
+    },
+    "summarization": {
+        "a": "The figure shows OES spectra of an O2 plasma in saturation and shortly after TMA dosing in an ALD cycle.",
+        "b": "The figure displays the intensity of O, H, O2+, CO, and OH over time, where the plasma is struck after a TMA dose."
+    },
+    "data_extraction": {
+        "a": "| Wavelength (nm) | Intensity (a.u.) O2 plasma |Intensity (a.u.) O2 plasma after ALD cycle |\n|---|---|---|\n| 260-350 | - | OH range |\n| 350-720 | - | CO range |\n| 560 | O2+ peak |O2+ peak |\n| 610 | - | H peak |\n| 780 | O peak |O peak |",
+        "b": "| Time (s) | Intensity (a.u.)  O |Intensity (a.u.)  H |Intensity (a.u.)  O2+ |Intensity (a.u.)  CO |Intensity (a.u.)  OH |\n|---|---|---|---|---|---|\n| 0 | 0 |0 | 0 |0 | 0 |\n| 1 | 400 |400|750|750|400|\n| 2 | 500 |0|900|0|0|\n| 3 | 500 |0|900|0|0|\n| 4 | 500 |0|900|0|0|\n| 5 | 500 |0|900|0|0|"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How can you tell that there are mostly molecular species coming from the ligands?",
+                "answer_type": "Paragraph",
+                "answer": "The spectrum related to the plasma after the TMA dose shows a broad range of emissions. Such a range usually denoted emission from molecular species."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "At what wavelength can a hydrogen line be found?",
+                "answer_type": "Factoid",
+                "answer": "A hydrogen line can be found at 660 nm."
+            }
+        ],
+        "b": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Based on this graph, what is the saturated oxygen plasma exposure time and how can you tell?",
+                "answer_type": "Paragraph",
+                "answer": "The saturated plasma exposure time is 2 s. At this time there is no more intensity measured of ligand related species."
+            },
+            {
+                "question_type": "Process-Oriented",
+                "question": "What atoms are likely in the ligands based on the graph?",
+                "answer_type": "Paragraph",
+                "answer": "The ligands are composed of C and H atoms."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 10,
+            "y": 7,
+            "width": 624,
+            "height": 502
+        },
+        "b": {
+            "x": 6,
+            "y": 510,
+            "width": 628,
+            "height": 531
+        }
+    }
+}

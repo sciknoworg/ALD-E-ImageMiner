@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/24/figure_3",
+    "classification": {
+        "a": "multi-axis chart"
+    },
+    "summarization": {
+        "a": "This figure represents how substrate temperature affects two key properties in an ALD process: Growth Per Cycle (GPC) increases monotonically with temperature, while Film Density peaks at an optimal temperature (~325\u00b0C) before decreasing."
+    },
+    "data_extraction": {
+        "a": "| Substrate temperature (\u00b0C) | Value | Condition                     |\n|---------------------------:|------:|-------------------------------|\n| 225.0                      |       | Growth per cycle (\u00c5)          |\n| 225.0                      |       | Film density (g/cm\u00b3)          |\n| 233.5                      | 0.21  | Growth per cycle (\u00c5)          |\n| 233.5                      | 3.89  | Film density (g/cm\u00b3)          |\n| 245.31                     | 0.20  | Growth per cycle (\u00c5)          |\n| 245.31                     | 3.93  | Film density (g/cm\u00b3)          |\n| 256.5                      | 0.21  | Growth per cycle (\u00c5)          |\n| 256.5                      | 3.97  | Film density (g/cm\u00b3)          |\n| 268.0                      | 0.23  | Growth per cycle (\u00c5)          |\n| 268.0                      | 3.99  | Film density (g/cm\u00b3)          |\n| 280.0                      | 0.23  | Growth per cycle (\u00c5)          |\n| 280.0                      | 4.00  | Film density (g/cm\u00b3)          |\n| 291.8                      | 0.26  | Growth per cycle (\u00c5)          |\n| 291.8                      | 4.00  | Film density (g/cm\u00b3)          |\n| 324.0                      | 0.28  | Growth per cycle (\u00c5)          |\n| 324.0                      | 4.18  | Film density (g/cm\u00b3)          |\n| 350.0                      | 0.50  | Growth per cycle (\u00c5)          |\n| 350.0                      | 3.97  | Film density (g/cm\u00b3)          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "Identify the specific temperature at which the process transitions from a stable, self-limiting regime to an uncontrolled growth mode. What two simultaneous signal changes in the graph confirm this loss of process control?",
+                "answer_type": "Paragraph",
+                "answer": "The loss of control is signaled by the simultaneous spike in Growth Per Cycle (rising to ~0.5 \u00c5) and the sharp drop in Film Density (falling to <4.0 g/cm\u00b3). This divergence typically indicates precursor thermal decomposition (CVD component), where the reaction is no longer limited by surface sites but by the continuous supply of reactant, leading to rapid but porous growth."
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "Compare the process performance at 275\u00b0C versus 325\u00b0C. If the objective is to fabricate a hermetic barrier layer where density is the critical quality metric, which temperature is the superior choice, and is there a throughput penalty?",
+                "answer_type": "Paragraph",
+                "answer": "325\u00b0C is the superior choice. It maximizes the critical density metric for barrier performance. Furthermore, there is no throughput penalty; in fact, the growth rate is higher at 325\u00b0C, making it a \"win-win\" operating point compared to 275\u00b0C."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "Analyze the density trend (triangles) between 240\u00b0C and 325\u00b0C. How does increasing thermal energy within this window physically alter the film structure to produce the observed trend?",
+                "answer_type": "Paragraph",
+                "answer": "The increasing thermal energy enhances the surface diffusion of adsorbed species, allowing atoms to settle into thermodynamically favorable, tightly packed lattice positions. This structural ordering reduces voids and efficiently removes bulky ligands, resulting in the continuous densification observed up to the 325\u00b0C thermal stability limit."
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "The film grown at 350\u00b0C exhibits a high growth rate but low density. Why would this specific film be unsuitable for a 'Gate Dielectric' application in a transistor, despite being faster to deposit?",
+                "answer_type": "Paragraph",
+                "answer": "The sharp drop in density at 350\u00b0C indicates a porous, defect-rich microstructure likely containing trapped impurities from the decomposed precursor. For a gate dielectric, such defects act as leakage paths and charge traps. Consequently, this film would exhibit high leakage current and poor electrical reliability, failing to insulate the gate effectively despite the manufacturing speed advantage."
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 3,
+            "width": 627,
+            "height": 432
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "sample_id": "atomic-layer-deposition/experimental-usecase/67/FIG9",
+    "classification": {
+        "a": "multiple scatter plot"
+    },
+    "summarization": {
+        "a": "The scatter plot describes the relationship between plasma potential and ion flux across a range of pressures, using different symbols to represent each pressure condition. A red dashed boundary line demarcates a critical energy flux density threshold that separates regimes where crystalline versus amorphous films are likely to form. Data points above this line (higher flux and potential) are associated with crystalline film growth, while those below correspond to amorphous outcomes. The plot also labels \u201cCapacitively coupled\u201d in the lower right, indicating a trend at higher potentials and lower fluxes. This figure helps define the operational window for achieving specific film crystallinity via control of plasma conditions."
+    },
+    "data_extraction": {
+        "a": "| Pressure (mTorr) | Plasma Potential (V) | Ion Flux (cm\u207b\u00b2\u00b7s\u207b\u00b9) |\n|------------------|----------------------|----------------------|\n| 830                    | ~18                             | ~5\u00d710\u00b9\u2075              |\n| 1600                  | ~28                                | ~2\u00d710\u00b9\u2076           |\n| 2400                  | ~45                                 | ~1.5\u00d710\u00b9\u2076      |\n| 3500                  | ~70                                 | ~5\u00d710\u00b9\u2076          |\n| 4300                  | ~100                               | ~8\u00d710\u00b9\u2076          |\n| 5000 (hexagon)   | ~250                   | ~2\u00d710\u00b9\u2077              |\n| 5000 (circle)         | ~900                        | ~4\u00d710\u00b9\u2077          |"
+    },
+    "vqa": {
+        "a": [
+            {
+                "question_type": "Process-Oriented",
+                "question": "What are the possible film growth outcomes indicated on this figure and what conditon governs the transition between them?",
+                "answer_type": "List",
+                "answer": "Crystalline film, Amorphous film, Critical energy flux density separates the two regimes"
+            },
+            {
+                "question_type": "Comparative/Trend",
+                "question": "How does increasing plasma potential affect ion flux across different pressue conditions?",
+                "answer_type": "Paragraph",
+                "answer": "As plasma potential increases, the ion flux generally rises across all pressure conditions shown. This positive trend is nonlinear and captured more effectively using a log\u2013log scale. Lower pressure markers (e.g., 830 mTorr) cluster at low plasma potentials and ion fluxes, while higher pressure conditions (e.g., 5000 mTorr) span into the high-potential, high-flux region. This suggests that both plasma potential and operating pressure jointly contribute to achieving higher ion flux densities."
+            },
+            {
+                "question_type": "Structure-Property",
+                "question": "What is the approximate ion flux for a plasma potential of 100 V under 2400 mTorr pressure ?",
+                "answer_type": "Factoid",
+                "answer": "Approximately 1 x 10^16 cm^-2 s^-1"
+            },
+            {
+                "question_type": "Application/Performance",
+                "question": "Can operating at 5000 mTorr and high plasma potential reach the crystalline film regime according to the figure",
+                "answer_type": "Yes/No",
+                "answer": "Yes"
+            }
+        ]
+    },
+    "bbox": {
+        "a": {
+            "x": 0,
+            "y": 0,
+            "width": 658,
+            "height": 528
+        }
+    }
+}
