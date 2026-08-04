@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Project page for the ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching (ALD/E) Scientific Figures."
+    />
+    <title>ALD/E-ImageMiner | ICDAR 2026 Competition Paper</title>
+    <link rel="icon" href="assets/logo-github.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="ALD/E-ImageMiner home">
+          <img src="assets/logo-github.png" alt="" />
+          <span>ALD/E-ImageMiner</span>
+        </a>
+        <div class="navlinks">
+          <a href="#abstract">Abstract</a>
+          <a href="#benchmark">Benchmark</a>
+          <a href="#leaderboards">Leaderboards</a>
+          <a href="#citation">Citation</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero-content" aria-labelledby="paper-title">
+        <p class="eyebrow">ICDAR 2026 Competition Paper</p>
+        <h1 id="paper-title">
+          Information Extraction from Atomic Layer Deposition/Etching Scientific Figures
+        </h1>
+        <p class="authors">
+          Fahad Ahmed · Sören Auer · Jennifer D'Souza
+        </p>
+        <p class="affiliation">
+          TIB - Leibniz Information Centre for Science and Technology · L3S Research Center
+        </p>
+        <div class="hero-actions" aria-label="Project links">
+          <a href="https://arxiv.org/abs/2607.26848">Paper</a>
+          <a href="https://github.com/sciknoworg/ALD-E-ImageMiner">Code</a>
+          <a href="https://huggingface.co/datasets/SciKnowOrg/ALD-E-ImageMiner">Dataset</a>
+          <a href="https://sites.google.com/view/sci-imageminer/">Competition</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="stats-strip" aria-label="Benchmark highlights">
+        <div>
+          <strong>205</strong>
+          <span>ALD/E papers</span>
+        </div>
+        <div>
+          <strong>1,951</strong>
+          <span>full-figure records</span>
+        </div>
+        <div>
+          <strong>49</strong>
+          <span>figure taxonomy types</span>
+        </div>
+        <div>
+          <strong>1,263</strong>
+          <span>public/private submissions</span>
+        </div>
+      </section>
+
+      <section id="abstract" class="section narrow">
+        <h2>Abstract</h2>
+        <p>
+          Sci-ImageMiner is an expert-annotated benchmark and ICDAR 2026 competition
+          for scientific figure comprehension in atomic layer deposition and atomic
+          layer etching literature. The benchmark tests multimodal systems across
+          four complementary tasks: figure classification, structured data table
+          extraction, figure summarization, and visual question answering.
+        </p>
+        <p>
+          The competition attracted 68 active participants and 1,263 public/private
+          submissions from 9 January 2026 to 8 April 2026. Results indicate that
+          current multimodal models handle classification and summarization more
+          effectively than data extraction and scientific visual reasoning, leaving
+          open challenges for domain-aware multimodal AI.
+        </p>
+      </section>
+
+      <section id="benchmark" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Benchmark</p>
+          <h2>Four Tasks For Scientific Figure Understanding</h2>
+        </div>
+        <div class="task-grid">
+          <article class="task-card">
+            <span class="task-index">01</span>
+            <h3>Figure Classification</h3>
+            <p>
+              Classify each scientific figure into a predefined taxonomy label.
+              F1-score is the primary ranking metric.
+            </p>
+          </article>
+          <article class="task-card">
+            <span class="task-index">02</span>
+            <h3>Data Table Extraction</h3>
+            <p>
+              Reconstruct chart data as structured Markdown tables, evaluated with
+              RMS and TEDS.
+            </p>
+          </article>
+          <article class="task-card">
+            <span class="task-index">03</span>
+            <h3>Figure Summarization</h3>
+            <p>
+              Generate concise, factually grounded summaries of key scientific
+              insights using ROUGE and BERTScore-F1.
+            </p>
+          </article>
+          <article class="task-card">
+            <span class="task-index">04</span>
+            <h3>Visual Question Answering</h3>
+            <p>
+              Answer domain-specific question-answer pairs spanning factoid,
+              yes/no, list, and paragraph responses.
+            </p>
+          </article>
+        </div>
+
+        <div class="split-layout">
+          <div>
+            <h3>Released Dataset Splits</h3>
+            <p>
+              The GitHub release contains expert-reviewed figure images and JSON
+              annotations for train, dev, and gold-standard test data. Source article
+              PDFs are intentionally excluded from GitHub distribution.
+            </p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Split</th>
+                  <th>Papers</th>
+                  <th>Figures</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Train</td>
+                  <td>126</td>
+                  <td>1,170</td>
+                </tr>
+                <tr>
+                  <td>Dev</td>
+                  <td>20</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>Test</td>
+                  <td>59</td>
+                  <td>580</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>205</td>
+                  <td>1,951</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="taxonomy-band" aria-labelledby="taxonomy-title">
+        <div>
+          <p class="eyebrow">Figure Taxonomy</p>
+          <h2 id="taxonomy-title">Domain Figures Beyond Ordinary Charts</h2>
+          <p>
+            The taxonomy covers plots, spectra, reaction schemes, molecular structures,
+            apparatus diagrams, image panels, and other figure types common in ALD/E
+            publications.
+          </p>
+        </div>
+        <img src="assets/figure_taxonomy.png" alt="Visualization of the ALD/E-ImageMiner scientific figure taxonomy" />
+      </section>
+
+      <section id="leaderboards" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Codabench</p>
+          <h2>Live-Sourced Competition Leaderboards</h2>
+          <p>
+            These tables are refreshed from public Codabench phase leaderboard APIs by
+            the GitHub Pages workflow. Follow each task link for the canonical results tab.
+          </p>
+        </div>
+        <div id="leaderboard-status" class="leaderboard-status" role="status">
+          Loading Codabench leaderboard snapshot...
+        </div>
+        <div class="leaderboard-grid" id="leaderboard-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section narrow">
+        <h2>Key Takeaways</h2>
+        <p>
+          The strongest systems combined large vision-language models with explicit
+          task structure: hierarchical classifiers, context-augmented prompting,
+          synthetic chart-to-table data, retrieval-augmented context, alignment
+          training, and answer-type-specific VQA pipelines.
+        </p>
+        <p>
+          Classification and summarization were comparatively tractable, while table
+          extraction and scientific VQA remained more difficult because they require
+          numerical precision, visual grounding, and domain-aware reasoning.
+        </p>
+      </section>
+
+      <section id="citation" class="section narrow">
+        <h2>Citation</h2>
+        <pre><code>@article{ahmed2026icdar,
+  title   = {ICDAR 2026 Competition on Information Extraction from
+             Atomic Layer Deposition/Etching (ALD/E) Scientific Figures},
+  author  = {Ahmed, Fahad and Auer, S{\"o}ren and D'Souza, Jennifer},
+  journal = {arXiv preprint arXiv:2607.26848},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2607.26848}
+}</code></pre>
+      </section>
+
+      <section class="section narrow acknowledgements">
+        <h2>Acknowledgements</h2>
+        <p>
+          Sci-ImageMiner was funded by the NFDI4DataScience initiative under the
+          German Research Foundation (DFG, Grant ID: 460234259). The work was
+          conducted in the context of the AWASES initiative with collaborators across
+          Eindhoven University, Leibniz University Hannover's L3S Research Centre,
+          and the University of Warwick.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Website source is inspired by the
+        <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page template</a>.
+      </p>
+      <p>
+        ALD/E-ImageMiner is released as a mixed-rights, non-commercial benchmark resource.
+      </p>
+    </footer>
+
+    <script src="js/leaderboards.js"></script>
+  </body>
+</html>
