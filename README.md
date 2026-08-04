@@ -119,10 +119,9 @@ Individual statistics for each annotation task dataset distribution are also ava
 | area chart                      | 1         |
 | **Total**                           | **3911**      |
 
-## 📖 Citation  
+## 📖 Citation
 
-The **ALD/E-ImageMiner project vision** is described in the following working paper, pre-released on Zenodo.  
-Please cite this paper if you find this work useful:  
+The **Sci-ImageMiner project vision** is described in the following working paper, pre-released on Zenodo. Please cite this paper if you find the project useful:
 
 ```bibtex
 @misc{d_souza_2025_17130928,
@@ -137,13 +136,29 @@ Please cite this paper if you find this work useful:
 }
 ```
 
+Sci-ImageMiner was also featured as the **[ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching (ALD/E) Scientific Figures](https://sites.google.com/view/sci-imageminer/)**, organized as part of the [ICDAR 2026 competitions](https://icdar2026.org/index.php/competitions/). Please cite the competition report when referring to the benchmark, dataset, competition, or associated information-extraction tasks:
+
+```bibtex
+@article{ahmed2026icdar,
+  title   = {ICDAR 2026 Competition on Information Extraction from
+             Atomic Layer Deposition/Etching (ALD/E) Scientific Figures},
+  author  = {Ahmed, Fahad and Auer, S{\"o}ren and D'Souza, Jennifer},
+  journal = {arXiv preprint arXiv:2607.26848},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2607.26848}
+}
+```
+
+
 ## ⭐ Acknowledgements  
 
-The **ALD/E-ImageMiner** project is supported by:  
+The **ALD/E-ImageMiner** project is funded by:  
 
 - <img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="200" align="middle"/>  
 
   The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative, funded by the **German Research Foundation (DFG, Grant ID: 460234259)** under the *[Speedboat Annotation Project](https://www.nfdi4datascience.de/community/speed-boat-projects/)* funding scheme.  
+
+This research endeavor in conducted in the context of the following project:
 
 - The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover’s L3S Research Centre**, and **University of Warwick**. AWASES hosts three fully funded PhD positions and supports advances in **generative AI, multimodal models, and FAIR scientific knowledge graph construction**.  
 
