@@ -152,7 +152,7 @@ Sci-ImageMiner was also featured as the **[ICDAR 2026 Competition on Information
 
 ## ⭐ Acknowledgements  
 
-The **ALD/E-ImageMiner** project is funded by:  
+The development of the **expert-annotated ALD/E-ImageMiner benchmark resource** was funded by:
 
 - <img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="200" align="middle"/>  
 
