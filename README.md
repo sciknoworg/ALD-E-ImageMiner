@@ -132,9 +132,11 @@ Classification counts are panel-level annotation entries. A single full-figure i
 
 ## ⚖️ License And Reuse
 
-This repository is a **mixed-rights** benchmark resource. It contains annotations, generated metadata, and extracted scientific figure images derived from many source articles. There is no blanket open license for all images or source-paper content.
+This repository is a **mixed-rights, non-commercial benchmark resource**. It contains CC BY 4.0 annotations and generated metadata, plus extracted scientific figure images derived from many source articles. There is no blanket open license for all images or source-paper content.
 
-Source article PDFs are intentionally excluded from GitHub distribution. Before reusing, redistributing, or commercially using any image, users must check the corresponding source article and rights holder terms. Where individual files or subdirectories include their own license notices, those notices apply to those files.
+Source article PDFs are intentionally excluded from GitHub distribution. This release is intended for non-commercial research, benchmarking, and evaluation use. Before reusing, redistributing, or commercially using any image, users must check the corresponding source article and rights holder terms. Where individual files or subdirectories include their own license notices, those notices apply to those files.
+
+The granularity is record/image-level rather than corpus-level: annotations and generated metadata are released as `CC BY 4.0`; each extracted figure image and source-derived paper field follows the rights and reuse terms of its corresponding source article. This is consistent with the Hugging Face package, which is marked as `license: other` / `license_name: mixed-rights-non-commercial` and exposes per-record fields such as `metadata_license: CC BY 4.0`, `image_license: source_publisher_rights_reserved`, and `image_reuse_status: non_commercial_research_use_only`.
 
 See [LICENSE](LICENSE) for the repository-level mixed-rights notice.
 
