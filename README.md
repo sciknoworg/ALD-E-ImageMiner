@@ -15,7 +15,7 @@ The benchmark supports four information-extraction tasks:
 
 The current GitHub release is centered on figure images and their JSON annotations. Source article PDFs are intentionally excluded from GitHub distribution.
 
-### Directory Structure
+### 🗂️ Directory Structure
 
 ```text
 icdar2026-competition-data/
@@ -50,13 +50,13 @@ The sub-categories are:
 
 Each figure annotation JSON contains `sample_id`, `classification`, and `bbox`. Many records also include `summarization`, `data_extraction`, and `vqa`. Source paper PDFs may exist in local working copies, but they are not part of the GitHub release and are ignored by Git.
 
-## Tools Used In Data Preparation
+## 🛠️ Tools Used In Data Preparation
 
 The current public release includes image files, annotation JSON files, and structured `content.json` files. The tools relevant to these released artifacts are:
 
 - **[MinerU](https://github.com/opendatalab/MinerU)**: used during preparation to extract structured content and figure images from source PDFs.
 - **[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)**: used in the prompt workflow documented in [Prompts.md](Prompts.md) for machine-assisted figure understanding tasks such as figure type, data extraction, summarization, and figure labels.
-- **Expert annotation workflow**: used to produce and review the released benchmark annotations.
+- **[ORKG Image Annotation](https://orkg.org/image-annotation/)**: expert annotation workflow used to produce and review the released benchmark annotations. Please contact the project team for access.
 
 Older README references to GROBID/TEI XML artifacts have been removed from this release description because no `content.tei.xml` files are included in the current repository snapshot.
 
@@ -66,7 +66,7 @@ Older README references to GROBID/TEI XML artifacts have been removed from this 
 
 The taxonomy file [figure_taxonomy.tsv](figure_taxonomy.tsv) currently lists **49** figure types, including `unknown`. The train/dev/gold-standard-test annotations contain **37 observed** figure-type labels. The taxonomy covers quantitative plots, scientific schematics, domain-specific scientific image panels, matrix layouts, and other figure forms.
 
-## Dataset Statistics
+## 📊 Dataset Statistics
 
 The statistics below are computed from annotation JSON files in:
 
@@ -85,7 +85,7 @@ Paper counts mean paper directories that contain figure annotations. Figure coun
 
 The public gold-standard totals above exclude `test/blind_test_set` and `test/submission_guidelines`.
 
-## Figure Type Classification By Split
+### Figure Type Classification By Split
 
 Classification counts are panel-level annotation entries. A single full-figure image can contain multiple labeled panels and therefore can contribute more than one classification entry.
 
@@ -130,7 +130,7 @@ Classification counts are panel-level annotation entries. A single full-figure i
 | chromaticity diagram | 1 | 0 | 0 | 1 |
 | **Total** | **2428** | **362** | **1121** | **3911** |
 
-## License And Reuse
+## ⚖️ License And Reuse
 
 This repository is a **mixed-rights** benchmark resource. It contains annotations, generated metadata, and extracted scientific figure images derived from many source articles. There is no blanket open license for all images or source-paper content.
 
@@ -138,7 +138,7 @@ Source article PDFs are intentionally excluded from GitHub distribution. Before 
 
 See [LICENSE](LICENSE) for the repository-level mixed-rights notice.
 
-## Citation
+## 📖 Citation
 
 The vision working paper for this project is pre-released on Zenodo. Please cite this paper if you find the project useful:
 
@@ -168,7 +168,7 @@ This benchmark dataset was used as the **[ICDAR 2026 Competition on Information 
 }
 ```
 
-## Acknowledgements
+## ⭐ Acknowledgements
 
 The development of the **expert-annotated ALD/E-ImageMiner benchmark resource** was funded by:
 
