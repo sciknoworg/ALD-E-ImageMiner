@@ -2,126 +2,145 @@
   <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="400"/>
 </div>
 
-## Project Overview  
+## Project Overview
 
-**ALD/E-ImageMiner** is an annotation project on figures from **atomic layer deposition (ALD)** and **atomic layer etching (ALE)**, situated within the broader field of materials science and engineering. Within each of these categories, the data is further organized into the sub-categories **experimental-usecase** and **simulation-usecase**.  
+**ALD/E-ImageMiner** is an expert-annotated benchmark for scientific figure understanding in **atomic layer deposition (ALD)** and **atomic layer etching (ALE)** literature. The data is organized by process domain, by source-paper use case (**experimental-usecase** or **simulation-usecase**), and by competition split.
 
-It aims to host gold-standard annotations for chart classification, data extraction, summarization, and question answering—providing both pilot and full-phase data to support multimodal AI research in scientific image understanding.   
+The benchmark supports four information-extraction tasks:
 
-### 🗂️ Directory Structure  
+- **Figure type classification**
+- **Data table extraction**
+- **Figure summarization**
+- **Visual question answering**
 
-We have compiled the dataset for annotation in this repository, structured into clearly defined categories and sub-categories.  
-The layout reflects the distinction between ALD and ALE literature, as well as between experimental and simulation studies, making it easier to navigate both the pilot and full annotation phases.  
+The current GitHub release is centered on figure images and their JSON annotations. Source article PDFs are intentionally excluded from GitHub distribution.
 
+### Directory Structure
 
 ```text
-data
-├── atomic-layer-deposition
-│   ├── experimental-usecase
-│   │   ├── paper #
-│   │   │   ├── images
-│   │   │   │   ├── figures
-│   │   │   │   ├── filename 1.jpg          # (JPEG) actual figure image extracted using MinerU
-│   │   │   │   │   ├── filename.caption.txt    # (Text) figure caption extracted from the paper.
-│   │   │   │   │   ├── filename.class.txt      # (Text) chart visualization class/category extracted using Qwen 2.5 VL
-│   │   │   │   │   ├── filename.data.txt       # (Text) data extracted as a markdown table using instruction-tuned Qwen 2.5 VL
-│   │   │   │   │   └── filename.summary.txt    # (Text) summarization of chart visualization extracted using Qwen 2.5 VL
-│   │   │   │   ├── formulas
-│   │   │   │   │   ├── filename.jpg            # (JPEG) actual formula image extracted using MinerU
-│   │   │   │   └── tables
-│   │   │   │       ├── filename.jpg            # (JPEG) actual table image extracted using MinerU
-│   │   │   ├── Author et al.pdf                # (PDF) actual PDF document
-│   │   │   ├── content.json                    # (JSON) structured content extracted using MinerU
-│   │   │   ├── content.md                      # (Markdown) structured content extracted using MinerU
-│   │   │   ├── content.tei.xml                 # (TEI-XML) structured content extracted using GROBID
-│   │   │   ├── content.txt                     # (Text) unstructured content extracted using MinerU
-│   │   │   └── layout.json                     # (JSON) bounding box and segmentation data from MinerU
+icdar2026-competition-data/
+├── train/
+│   └── <main-category>/
+│       └── <sub-category>/
+│           └── <paper-id>/
+│               ├── images/
+│               │   ├── <figure-id>.jpg
+│               │   └── <figure-id>.json
+│               └── content.json
+├── dev/
+│   └── ...
+├── test/
+│   ├── gold_standard_test_set/
 │   │   └── ...
-│   └── simulation-usecase
-│       └── ...
-└── atomic-layer-etching
-    ├── experimental-usecase
-    └── simulation-usecase
+│   ├── blind_test_set/
+│   │   └── ...
+│   └── submission_guidelines/
+└── evaluation_scripts/
 ```
 
-## 🛠️ Tools Used
+The main categories are:
 
-- **[GROBID (GeneRation Of BIbliographic Data)](https://github.com/kermitt2/grobid)** → scholarly PDF parsing into TEI XML.
-- **[GROBID Python Client](https://github.com/kermitt2/grobid_client_python)** → Python interface to GROBID.
-- **[MinerU](https://github.com/opendatalab/MinerU)** → structured text, figures, formulas, and tables from PDFs. It is created by OpenDataLab as an open-source tool designed for data extraction from PDF documents, converting them into structured machine-readable formats like Markdown and JSON. MinerU can interpret the complex layout structure of research papers, including figures, tables, formulas, and text.
-- **[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)** → multimodal LLM applied for classification, extraction, and summarization. Specifically, we used [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).  
-  The [Prompts.md](Prompts.md) file documents the prompts used for information extraction (figure type, data, summary, and figure labels).  
+- `atomic-layer-deposition`
+- `atomic-layer-etching`
+
+The sub-categories are:
+
+- `experimental-usecase`
+- `simulation-usecase`
+
+Each figure annotation JSON contains `sample_id`, `classification`, and `bbox`. Many records also include `summarization`, `data_extraction`, and `vqa`. Source paper PDFs may exist in local working copies, but they are not part of the GitHub release and are ignored by Git.
+
+## Tools Used In Data Preparation
+
+The current public release includes image files, annotation JSON files, and structured `content.json` files. The tools relevant to these released artifacts are:
+
+- **[MinerU](https://github.com/opendatalab/MinerU)**: used during preparation to extract structured content and figure images from source PDFs.
+- **[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)**: used in the prompt workflow documented in [Prompts.md](Prompts.md) for machine-assisted figure understanding tasks such as figure type, data extraction, summarization, and figure labels.
+- **Expert annotation workflow**: used to produce and review the released benchmark annotations.
+
+Older README references to GROBID/TEI XML artifacts have been removed from this release description because no `content.tei.xml` files are included in the current repository snapshot.
 
 ## Figure Taxonomy
 
 ![A visualization of scientific figure taxonomy](figure_taxonomy.png)
 
+The taxonomy file [figure_taxonomy.tsv](figure_taxonomy.tsv) currently lists **49** figure types, including `unknown`. The train/dev/gold-standard-test annotations contain **37 observed** figure-type labels. The taxonomy covers quantitative plots, scientific schematics, domain-specific scientific image panels, matrix layouts, and other figure forms.
 
-### 📊 Dataset Statistics
+## Dataset Statistics
 
-#### Overall
+The statistics below are computed from annotation JSON files in:
 
-| **Split Name** | **atomic-layer-deposition** | ****    | ****               | ****    | **atomic-layer-etching** | ****    | ****               | ****    | **Total** | ****    |
-|----------------|-----------------------------|---------|--------------------|---------|--------------------------|---------|--------------------|---------|-----------|---------|
-|                | **experimental-usecase**        |         | **simulation-usecase** |         | **experimental-usecase**     |         | **simulation-usecase** |         |           |         |
-|                | **Papers**                      | **Figures** | **Papers**             | **Figures** | **Papers**                   | **Figures** | **Papers**             | **Figures** | **Papers**    | **Figures** |
-| **Train**          | 42                          | 330     | 36                 | 350     | 28                       | 257     | 22                 | 243     | 128       | 1180    |
-| **Dev**            | 6                           | 50      | 6                  | 59      | 5                        | 55      | 3                  | 37      | 20        | 201     |
-| **Test**           | 18                          | 172     | 16                 | 148     | 13                       | 129     | 10                 | 121     | 57        | 570     |
-|                | 66                          | 552     | 58                 | 557     | 46                       | 441     | 35                 | 401     | **205**       | **1951**    |
+- `icdar2026-competition-data/train`
+- `icdar2026-competition-data/dev`
+- `icdar2026-competition-data/test/gold_standard_test_set`
 
+Paper counts mean paper directories that contain figure annotations. Figure counts mean annotated full-figure image records.
 
+| Split | ALD exp. papers | ALD exp. figures | ALD sim. papers | ALD sim. figures | ALE exp. papers | ALE exp. figures | ALE sim. papers | ALE sim. figures | Total papers | Total figures |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Train | 42 | 330 | 35 | 349 | 27 | 248 | 22 | 243 | 126 | 1170 |
+| Dev | 6 | 50 | 6 | 59 | 5 | 55 | 3 | 37 | 20 | 201 |
+| Test | 18 | 172 | 17 | 149 | 14 | 138 | 10 | 121 | 59 | 580 |
+| **Total** | **66** | **552** | **58** | **557** | **46** | **441** | **35** | **401** | **205** | **1951** |
 
-#### Figure type classification
+The public gold-standard totals above exclude `test/blind_test_set` and `test/submission_guidelines`.
 
-We have defined a taxonomy of 48 figure types including "unknown". The full taxonomy with descriptions, parent taxonomy category, and aliases is here [figure_taxonomy.tsv](https://github.com/sciknoworg/ALD-E-ImageMiner/blob/main/figure_taxonomy.tsv). The ALD/E-ImageMiner project maintains a focus only on figures of parent taxonomy category `quantitative plot`.
+## Figure Type Classification By Split
 
-Individual statistics for each annotation task dataset distribution are also available i.e. [pilot-annotation-task](data/pilot-annotation-task/README.md) and [full-annotation-task](data/full-annotation-task/README.md).
+Classification counts are panel-level annotation entries. A single full-figure image can contain multiple labeled panels and therefore can contribute more than one classification entry.
 
-| **Figure type**                       | **Count** |
-|---------------------------------|-----------|
-| molecular structure diagram     | 734       |
-| multiple line chart             | 443       |
-| image panel                     | 354       |
-| multiple scatter plot           | 265       |
-| multi spectra chart             | 257       |
-| conceptual diagram              | 226       |
-| scatter plot                    | 212       |
-| reaction scheme                 | 205       |
-| line chart                      | 194       |
-| stacked spectra chart           | 158       |
-| multi-axis chart                | 134       |
-| spectra chart                   | 118       |
-| heatmap                         | 103       |
-| reaction energy profile diagram | 85        |
-| apparatus diagram               | 80        |
-| process flow diagram            | 54        |
-| bar chart                       | 50        |
-| unknown                         | 47        |
-| contour heatmap                 | 46        |
-| process timing diagram          | 39        |
-| device structure diagram        | 16        |
-| 3d scatter plot                 | 14        |
-| band diagram                    | 13        |
-| grouped bar chart               | 12        |
-| box plot                        | 10        |
-| stacked bar chart               | 7         |
-| phase diagram                   | 7         |
-| workflow diagram                | 7         |
-| pie chart                       | 4         |
-| timeline chart                  | 3         |
-| periodic table map              | 3         |
-| table                           | 3         |
-| network diagram                 | 2         |
-| polar chart (rose chart)        | 2         |
-| formula                         | 2         |
-| chromaticity diagram            | 1         |
-| area chart                      | 1         |
-| **Total**                           | **3911**      |
+| Figure type | Train | Dev | Test | Total |
+|---|---:|---:|---:|---:|
+| molecular structure diagram | 388 | 101 | 245 | 734 |
+| multiple line chart | 263 | 49 | 131 | 443 |
+| image panel | 235 | 33 | 86 | 354 |
+| multiple scatter plot | 176 | 15 | 74 | 265 |
+| multi spectra chart | 153 | 10 | 94 | 257 |
+| conceptual diagram | 146 | 35 | 45 | 226 |
+| scatter plot | 133 | 16 | 63 | 212 |
+| reaction scheme | 130 | 32 | 43 | 205 |
+| line chart | 114 | 29 | 51 | 194 |
+| stacked spectra chart | 114 | 7 | 37 | 158 |
+| multi-axis chart | 82 | 5 | 47 | 134 |
+| spectra chart | 74 | 2 | 42 | 118 |
+| heatmap | 75 | 0 | 28 | 103 |
+| reaction energy profile diagram | 61 | 0 | 24 | 85 |
+| apparatus diagram | 51 | 1 | 28 | 80 |
+| process flow diagram | 43 | 2 | 9 | 54 |
+| bar chart | 35 | 2 | 13 | 50 |
+| unknown | 29 | 7 | 11 | 47 |
+| contour heatmap | 38 | 0 | 8 | 46 |
+| process timing diagram | 16 | 12 | 11 | 39 |
+| device structure diagram | 10 | 2 | 4 | 16 |
+| 3d scatter plot | 10 | 0 | 4 | 14 |
+| band diagram | 5 | 0 | 8 | 13 |
+| grouped bar chart | 9 | 0 | 3 | 12 |
+| box plot | 6 | 0 | 4 | 10 |
+| phase diagram | 4 | 0 | 3 | 7 |
+| stacked bar chart | 7 | 0 | 0 | 7 |
+| workflow diagram | 6 | 0 | 1 | 7 |
+| pie chart | 4 | 0 | 0 | 4 |
+| periodic table map | 1 | 0 | 2 | 3 |
+| table | 3 | 0 | 0 | 3 |
+| timeline chart | 1 | 2 | 0 | 3 |
+| formula | 2 | 0 | 0 | 2 |
+| network diagram | 0 | 0 | 2 | 2 |
+| polar chart (rose chart) | 2 | 0 | 0 | 2 |
+| area chart | 1 | 0 | 0 | 1 |
+| chromaticity diagram | 1 | 0 | 0 | 1 |
+| **Total** | **2428** | **362** | **1121** | **3911** |
 
-## 📖 Citation
+## License And Reuse
 
-The **Sci-ImageMiner project vision** is described in the following working paper, pre-released on Zenodo. Please cite this paper if you find the project useful:
+This repository is a **mixed-rights** benchmark resource. It contains annotations, generated metadata, and extracted scientific figure images derived from many source articles. There is no blanket open license for all images or source-paper content.
+
+Source article PDFs are intentionally excluded from GitHub distribution. Before reusing, redistributing, or commercially using any image, users must check the corresponding source article and rights holder terms. Where individual files or subdirectories include their own license notices, those notices apply to those files.
+
+See [LICENSE](LICENSE) for the repository-level mixed-rights notice.
+
+## Citation
+
+The vision working paper for this project is pre-released on Zenodo. Please cite this paper if you find the project useful:
 
 ```bibtex
 @misc{d_souza_2025_17130928,
@@ -136,7 +155,7 @@ The **Sci-ImageMiner project vision** is described in the following working pape
 }
 ```
 
-Sci-ImageMiner was also featured as the **[ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching (ALD/E) Scientific Figures](https://sites.google.com/view/sci-imageminer/)**, organized as part of the [ICDAR 2026 competitions](https://icdar2026.org/index.php/competitions/). Please cite the competition report when referring to the benchmark, dataset, competition, or associated information-extraction tasks:
+This benchmark dataset was used as the **[ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching (ALD/E) Scientific Figures](https://sites.google.com/view/sci-imageminer/)**, organized as part of the [ICDAR 2026 competitions](https://icdar2026.org/index.php/competitions/). Please cite the competition report when referring to the ALD/E-ImageMiner benchmark, dataset, competition, or associated information-extraction tasks:
 
 ```bibtex
 @article{ahmed2026icdar,
@@ -149,20 +168,14 @@ Sci-ImageMiner was also featured as the **[ICDAR 2026 Competition on Information
 }
 ```
 
-
-## ⭐ Acknowledgements  
+## Acknowledgements
 
 The development of the **expert-annotated ALD/E-ImageMiner benchmark resource** was funded by:
 
-- <img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="200" align="middle"/>  
+- <img src="assets/nfdi4ds-logo.png" alt="NFDI4DataScience Logo" width="200" align="middle"/>
 
-  The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative, funded by the **German Research Foundation (DFG, Grant ID: 460234259)** under the *[Speedboat Annotation Project](https://www.nfdi4datascience.de/community/speed-boat-projects/)* funding scheme.  
+  The [NFDI4DataScience](https://www.nfdi4datascience.de/) initiative, funded by the **German Research Foundation (DFG, Grant ID: 460234259)** under the *[Speedboat Annotation Project](https://www.nfdi4datascience.de/community/speed-boat-projects/)* funding scheme.
 
-This research endeavor in conducted in the context of the following project:
+This research endeavor is conducted in the context of the following project:
 
-- The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover’s L3S Research Centre**, and **University of Warwick**. AWASES hosts three fully funded PhD positions and supports advances in **generative AI, multimodal models, and FAIR scientific knowledge graph construction**.  
-
-
-
-
-
+- The *AI-Aware Pathways to Sustainable Semiconductor Process and Manufacturing Technologies (AWASES)* initiative (Mackus et al., 2024), funded by **Merck and Intel**, with collaboration between **Eindhoven University**, **Leibniz University Hannover's L3S Research Centre**, and **University of Warwick**. AWASES hosts three fully funded PhD positions and supports advances in **generative AI, multimodal models, and FAIR scientific knowledge graph construction**.
