@@ -107,6 +107,81 @@ a {
   margin-right: 5px;
 }
 
+.resource-buttons {
+  gap: 10px;
+}
+
+.button-row.light .brand-button {
+  gap: 8px;
+  border-radius: 999px;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.button-row.light .brand-button:hover,
+.button-row.light .brand-button:focus-visible {
+  box-shadow: 0 10px 20px rgba(36, 36, 36, 0.08);
+  transform: translateY(-1px);
+}
+
+.button-row.light .brand-button.github {
+  border-color: rgba(36, 41, 47, 0.18);
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fa 100%);
+}
+
+.button-row.light .brand-button.github:hover,
+.button-row.light .brand-button.github:focus-visible {
+  border-color: rgba(36, 41, 47, 0.42);
+}
+
+.button-row.light .brand-button.hf {
+  border-color: rgba(255, 166, 0, 0.34);
+  background: linear-gradient(180deg, #fffdf7 0%, #fff6dc 100%);
+}
+
+.button-row.light .brand-button.hf:hover,
+.button-row.light .brand-button.hf:focus-visible {
+  border-color: rgba(255, 166, 0, 0.62);
+}
+
+.button-row.light .brand-button.google {
+  border-color: rgba(66, 133, 244, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%);
+}
+
+.button-row.light .brand-button.google:hover,
+.button-row.light .brand-button.google:focus-visible {
+  border-color: rgba(66, 133, 244, 0.58);
+}
+
+.brand-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+}
+
+.brand-icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.github-icon {
+  color: #24292f;
+}
+
+.hf-icon {
+  border-radius: 999px;
+  background: #ffcc4d;
+  color: #5f3b00;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 .paper-figure {
   max-width: 980px;
   margin: 54px auto 26px;
@@ -499,14 +574,17 @@ pre {
 @media (prefers-reduced-motion: reduce) {
   .facts div,
   .facts div::before,
-  .facts strong {
+  .facts strong,
+  .button-row.light .brand-button {
     transition: none;
   }
 
   .facts div:hover,
   .facts div:focus-within,
   .facts div:hover strong,
-  .facts div:focus-within strong {
+  .facts div:focus-within strong,
+  .button-row.light .brand-button:hover,
+  .button-row.light .brand-button:focus-visible {
     transform: none;
   }
 }
