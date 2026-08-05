@@ -8,6 +8,13 @@
       content="Project page for the ICDAR 2026 ALD/E-ImageMiner competition paper."
     />
     <title>ALD/E-ImageMiner | ICDAR 2026 Competition Paper</title>
+    <script>
+      document.write(
+        '<base href="' +
+          (location.pathname.startsWith('/ALD-E-ImageMiner') ? '/ALD-E-ImageMiner/' : './') +
+          '">'
+      );
+    </script>
     <link rel="icon" href="assets/logo-github.png" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -26,26 +33,38 @@
         </p>
 
         <nav class="button-row" aria-label="Project links">
-          <a href="https://arxiv.org/abs/2607.26848">Paper</a>
-          <a href="https://github.com/sciknoworg/ALD-E-ImageMiner">Code</a>
-          <a href="https://github.com/sciknoworg/ALD-E-ImageMiner/tree/main/icdar2026-competition-data">Data</a>
-          <a href="https://huggingface.co/datasets/SciKnowOrg/ALD-E-ImageMiner">Hugging Face</a>
-          <a href="#results">Leaderboards</a>
+          <a href="https://arxiv.org/abs/2607.26848"><span aria-hidden="true">▣</span> Paper</a>
+          <a href="https://github.com/sciknoworg/ALD-E-ImageMiner"><span aria-hidden="true">◈</span> Code</a>
+          <a href="https://github.com/sciknoworg/ALD-E-ImageMiner/tree/main/icdar2026-competition-data"><span aria-hidden="true">▤</span> Data</a>
+          <a href="https://huggingface.co/datasets/SciKnowOrg/ALD-E-ImageMiner"><span aria-hidden="true">◇</span> Hugging Face</a>
+          <a href="#results"><span aria-hidden="true">☰</span> Leaderboards</a>
         </nav>
 
-        <figure class="banner">
+        <figure class="workflow-figure">
           <img
-            src="assets/paper-page-banner.png"
-            alt="Human and robot arms reviewing scientific charts"
+            src="assets/fig_annotation-workflow-v2.png"
+            alt="ALD/E-ImageMiner annotation workflow from publications to MinerU extraction, expert annotation, and unified dataset"
           />
         </figure>
 
         <p class="lead">
-          ALD/E-ImageMiner is an expert-annotated benchmark for multimodal
-          comprehension of scientific figures in atomic layer deposition and
-          atomic layer etching literature. The competition evaluates figure
-          classification, data table extraction, summarization, and visual
-          question answering on authentic scientific images.
+          Scientific figure comprehension and reasoning using multimodal AI requires
+          integrating visual perception with domain-specific reasoning to extract
+          meaningful knowledge, often not presented in the text of a research
+          publication. The Sci-ImageMiner benchmark dataset, accompanied by a
+          community-driven competition, raises the bar over prior scientific
+          competitions by curating a comprehensive, expert-annotated dataset across
+          four end-to-end complementary tasks. The competition attracted 68 active
+          participants and 1,263 public/private submissions from 9 January 2026 to
+          8 April 2026. Our results show that state-of-the-art multimodal models
+          perform well on classification and summarization tasks but struggle with
+          data extraction and scientific reasoning, particularly in visual
+          question-answering. These findings reveal key limitations and highlight
+          challenges and opportunities for improving domain-aware multimodal AI
+          systems. Overall, the Sci-ImageMiner benchmark and competition establish
+          a rigorous platform for advancing research in scientific figure
+          comprehension and reasoning and demonstrate the potential of
+          state-of-the-art approaches for a challenging and complex research area.
         </p>
       </header>
 

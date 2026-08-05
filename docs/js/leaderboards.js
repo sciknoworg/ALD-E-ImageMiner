@@ -78,7 +78,8 @@ async function main() {
   const grid = document.querySelector("#leaderboard-grid");
 
   try {
-    const response = await fetch(`data/leaderboards.json?ts=${Date.now()}`, { cache: "no-store" });
+    const leaderboardUrl = new URL(`data/leaderboards.json?ts=${Date.now()}`, document.baseURI);
+    const response = await fetch(leaderboardUrl, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
