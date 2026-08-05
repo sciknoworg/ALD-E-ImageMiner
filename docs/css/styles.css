@@ -129,20 +129,26 @@ a {
 .facts {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  margin: 34px 0 18px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: var(--line);
-  box-shadow: 0 12px 28px rgba(36, 36, 36, 0.04);
+  gap: 0;
+  overflow: hidden;
+  margin: 36px auto 20px;
+  border: 1px solid rgba(8, 127, 131, 0.18);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(36, 36, 36, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
 .facts div {
   position: relative;
-  padding: 17px 14px;
-  background: #fff;
+  padding: 18px 14px 17px;
+  border-left: 1px solid var(--line);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
   text-align: center;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.facts div:first-child {
+  border-left: 0;
 }
 
 .facts div::before {
@@ -150,10 +156,10 @@ a {
   top: 0;
   right: 0;
   left: 0;
-  height: 3px;
+  height: 2px;
   background: var(--accent);
   content: "";
-  opacity: 0;
+  opacity: 0.38;
   transition: opacity 160ms ease;
 }
 
