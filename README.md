@@ -15,8 +15,6 @@ The benchmark supports four information-extraction tasks:
 
 The current GitHub release is centered on figure images and their JSON annotations. Source article PDFs are intentionally excluded from GitHub distribution.
 
-Project page source for the ICDAR 2026 competition paper is available in [`docs/`](docs/) and can be published with GitHub Pages at `https://sciknoworg.github.io/ALD-E-ImageMiner/`.
-
 ### 🗂️ Directory Structure
 
 ```text
