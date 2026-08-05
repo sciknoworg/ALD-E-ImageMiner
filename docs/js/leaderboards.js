@@ -27,41 +27,20 @@ function formatDate(value) {
 }
 
 function renderResultCard(task) {
-  const winner = task.submissions[0];
   const primary = task.primary_metric;
   const card = document.createElement("article");
   card.className = "result-card";
 
-  const top = document.createElement("div");
   const label = document.createElement("p");
-  label.className = "winner-label";
+  label.className = "result-label";
   label.textContent = task.name;
-
-  const team = document.createElement("p");
-  team.className = "winner-team";
-  team.textContent = winner?.team || winner?.owner || "No public submissions";
-
-  const score = document.createElement("p");
-  score.className = "winner-score";
-  score.textContent = winner ? formatScore(scoreMap(winner)[primary]) : "-";
 
   const scoreLabel = document.createElement("p");
   scoreLabel.className = "score-label";
-  scoreLabel.textContent = PRIMARY_LABELS[primary] ?? primary;
+  scoreLabel.textContent = `Ranked by ${PRIMARY_LABELS[primary] ?? primary}`;
 
-  top.append(label, team, score, scoreLabel);
-
-  const list = document.createElement("ol");
-  list.className = "top-list";
-  task.submissions.slice(1, 4).forEach((submission) => {
-    const item = document.createElement("li");
-    const name = document.createElement("span");
-    name.textContent = submission.team || submission.owner;
-    const value = document.createElement("strong");
-    value.textContent = formatScore(scoreMap(submission)[primary]);
-    item.append(name, value);
-    list.append(item);
-  });
+  const header = document.createElement("div");
+  header.append(label, scoreLabel);
 
   const link = document.createElement("a");
   link.href = task.codabench_url;
@@ -69,7 +48,54 @@ function renderResultCard(task) {
   link.rel = "noopener noreferrer";
   link.textContent = "Open Codabench task";
 
-  card.append(top, list, link);
+  if (!task.submissions.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-leaderboard";
+    empty.textContent = "No public submissions";
+    card.append(header, empty, link);
+    return card;
+  }
+
+  const table = document.createElement("table");
+  table.className = "leaderboard-mini";
+  table.setAttribute("aria-label", `${task.name} leaderboard top teams`);
+
+  const thead = document.createElement("thead");
+  const headerRow = document.createElement("tr");
+  ["Rank", "Team", PRIMARY_LABELS[primary] ?? primary].forEach((heading) => {
+    const th = document.createElement("th");
+    th.textContent = heading;
+    headerRow.append(th);
+  });
+  thead.append(headerRow);
+
+  const tbody = document.createElement("tbody");
+  task.submissions.slice(0, 5).forEach((submission, index) => {
+    const row = document.createElement("tr");
+    const rankCell = document.createElement("td");
+    const medal = document.createElement("span");
+    medal.className = `rank-medal rank-${index + 1}`;
+    medal.textContent = index + 1;
+    medal.setAttribute("aria-label", `Rank ${index + 1}`);
+    rankCell.append(medal);
+
+    const teamCell = document.createElement("td");
+    const name = document.createElement("span");
+    name.className = "team-name";
+    name.textContent = submission.team || submission.owner;
+
+    const valueCell = document.createElement("td");
+    const value = document.createElement("strong");
+    value.textContent = formatScore(scoreMap(submission)[primary]);
+    valueCell.append(value);
+
+    teamCell.append(name);
+    row.append(rankCell, teamCell, valueCell);
+    tbody.append(row);
+  });
+  table.append(thead, tbody);
+
+  card.append(header, table, link);
   return card;
 }
 

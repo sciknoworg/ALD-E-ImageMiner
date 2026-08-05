@@ -530,7 +530,7 @@ a {
   justify-content: space-between;
 }
 
-.winner-label {
+.result-label {
   margin: 0 0 6px;
   color: var(--muted);
   font-size: 0.78rem;
@@ -539,38 +539,106 @@ a {
   text-transform: uppercase;
 }
 
-.winner-team {
-  margin: 0;
-  font-size: 1.08rem;
-  font-weight: 700;
-}
-
-.winner-score {
-  margin: 8px 0 0;
-  color: var(--danger);
-  font-size: 1.45rem;
-  font-weight: 800;
-}
-
 .score-label {
+  margin: 0;
   color: var(--muted);
   font-size: 0.84rem;
 }
 
-.top-list {
-  margin: 14px 0 0;
-  padding: 0;
-  list-style: none;
-  color: var(--muted);
-  font-size: 0.9rem;
+.leaderboard-mini {
+  width: 100%;
+  margin: 16px 0 14px;
+  border-collapse: collapse;
+  color: var(--ink);
+  font-size: 0.88rem;
 }
 
-.top-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  border-top: 1px solid #edf0f4;
-  padding: 6px 0;
+.leaderboard-mini th {
+  border-bottom: 1px solid #e6ebf1;
+  padding: 0 0 7px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.leaderboard-mini td {
+  border-bottom: 1px solid #edf0f4;
+  padding: 8px 0;
+  vertical-align: middle;
+}
+
+.leaderboard-mini th:first-child,
+.leaderboard-mini td:first-child {
+  width: 38px;
+}
+
+.leaderboard-mini th:last-child,
+.leaderboard-mini td:last-child {
+  width: 70px;
+  text-align: right;
+}
+
+.leaderboard-mini tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.team-name {
+  display: block;
+  max-width: 118px;
+  overflow-wrap: anywhere;
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+.rank-medal {
+  position: relative;
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid rgba(20, 24, 32, 0.18);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f7d77a 0%, #d79a1f 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.68), 0 3px 8px rgba(20, 24, 32, 0.12);
+  color: #59400c;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.rank-medal::before {
+  position: absolute;
+  top: -5px;
+  left: 6px;
+  width: 12px;
+  height: 6px;
+  border-radius: 1px 1px 0 0;
+  background: #333333;
+  content: "";
+}
+
+.rank-2 {
+  background: linear-gradient(145deg, #d9d6cf 0%, #9b978c 100%);
+  color: #4f4b42;
+}
+
+.rank-3 {
+  background: linear-gradient(145deg, #c6914f 0%, #8a5b24 100%);
+  color: #fff6e8;
+}
+
+.rank-4,
+.rank-5 {
+  background: linear-gradient(145deg, #9b9588 0%, #5e594f 100%);
+  color: #fff7eb;
+}
+
+.empty-leaderboard {
+  margin: 18px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .dataset-section {
