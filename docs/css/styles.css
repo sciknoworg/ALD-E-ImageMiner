@@ -670,8 +670,19 @@ a {
   margin-left: 0;
 }
 
+.resource-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.46fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.resource-main p {
+  max-width: none;
+}
+
 .community-callout {
-  margin-top: 26px;
+  margin-top: 0;
   border: 1px solid rgba(8, 127, 131, 0.18);
   border-radius: 8px;
   padding: 20px;
@@ -685,7 +696,7 @@ a {
 }
 
 .community-callout p {
-  max-width: 780px;
+  max-width: none;
   margin-bottom: 0;
   color: var(--muted);
 }
@@ -762,6 +773,14 @@ pre {
   .section h2,
   .section > p {
     text-align: left;
+  }
+
+  .resource-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .community-callout {
+    margin-top: 8px;
   }
 }
 
