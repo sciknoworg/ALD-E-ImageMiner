@@ -1,40 +1,18 @@
-const TASK_COLUMNS = {
-  classification: ["accuracy", "precision", "recall", "f1_score"],
-  data_extraction: ["rms", "teds", "weighted_score"],
-  summarization: ["rouge1", "rouge2", "rougeL", "bertscore_f1", "weighted_score"],
-  vqa: [
-    "weighted_score",
-    "factoid_exact_match",
-    "yesno_f1_score",
-    "paragraph_bertscore_f1",
-    "list_set-based-f1",
-  ],
-};
-
-const COLUMN_LABELS = {
-  accuracy: "Accuracy",
-  precision: "Precision",
-  recall: "Recall",
+const PRIMARY_LABELS = {
   f1_score: "F1",
-  rms: "RMS",
-  teds: "TEDS",
-  rouge1: "R1",
-  rouge2: "R2",
-  rougeL: "RL",
-  bertscore_f1: "BERT-F1",
-  weighted_score: "Weighted",
-  factoid_exact_match: "Factoid EM",
-  yesno_f1_score: "Yes/No F1",
-  paragraph_bertscore_f1: "Paragraph BERT-F1",
-  "list_set-based-f1": "List F1",
+  weighted_score: "Weighted score",
 };
 
-function formatNumber(value) {
+function scoreMap(submission) {
+  return submission?.scores ?? {};
+}
+
+function formatScore(value) {
   const number = Number(value);
   if (!Number.isFinite(number)) {
     return value ?? "";
   }
-  return number.toFixed(number >= 10 ? 2 : 2);
+  return number >= 10 ? number.toFixed(2) : number.toFixed(2);
 }
 
 function formatDate(value) {
@@ -48,63 +26,51 @@ function formatDate(value) {
   }).format(new Date(value));
 }
 
-function cell(text, className = "") {
-  const td = document.createElement("td");
-  td.textContent = text;
-  if (className) {
-    td.className = className;
-  }
-  return td;
-}
+function renderResultCard(task) {
+  const winner = task.submissions[0];
+  const primary = task.primary_metric;
+  const card = document.createElement("article");
+  card.className = "result-card";
 
-function renderLeaderboard(task) {
-  const shownColumns = TASK_COLUMNS[task.slug] ?? task.columns.map((column) => column.key);
-  const primaryKey = task.primary_metric;
-  const article = document.createElement("article");
-  article.className = "leaderboard-card";
+  const top = document.createElement("div");
+  const label = document.createElement("p");
+  label.className = "winner-label";
+  label.textContent = task.name;
 
-  const header = document.createElement("header");
-  const title = document.createElement("h3");
-  title.textContent = task.name;
+  const team = document.createElement("p");
+  team.className = "winner-team";
+  team.textContent = winner?.team || winner?.owner || "No public submissions";
+
+  const score = document.createElement("p");
+  score.className = "winner-score";
+  score.textContent = winner ? formatScore(scoreMap(winner)[primary]) : "-";
+
+  const scoreLabel = document.createElement("p");
+  scoreLabel.className = "score-label";
+  scoreLabel.textContent = PRIMARY_LABELS[primary] ?? primary;
+
+  top.append(label, team, score, scoreLabel);
+
+  const list = document.createElement("ol");
+  list.className = "top-list";
+  task.submissions.slice(1, 4).forEach((submission) => {
+    const item = document.createElement("li");
+    const name = document.createElement("span");
+    name.textContent = submission.team || submission.owner;
+    const value = document.createElement("strong");
+    value.textContent = formatScore(scoreMap(submission)[primary]);
+    item.append(name, value);
+    list.append(item);
+  });
+
   const link = document.createElement("a");
   link.href = task.codabench_url;
-  link.textContent = "Codabench";
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  header.append(title, link);
+  link.textContent = "Open Codabench task";
 
-  const meta = document.createElement("div");
-  meta.className = "meta";
-  meta.textContent = `${task.phase_name} phase · ${task.count} submissions · primary metric: ${COLUMN_LABELS[primaryKey] ?? primaryKey}`;
-
-  const wrap = document.createElement("div");
-  wrap.className = "table-wrap";
-  const table = document.createElement("table");
-  const thead = document.createElement("thead");
-  const headRow = document.createElement("tr");
-  ["#", "Team", ...shownColumns.map((column) => COLUMN_LABELS[column] ?? column), "Date"].forEach((label) => {
-    const th = document.createElement("th");
-    th.textContent = label;
-    headRow.append(th);
-  });
-  thead.append(headRow);
-
-  const tbody = document.createElement("tbody");
-  task.submissions.slice(0, 5).forEach((submission) => {
-    const tr = document.createElement("tr");
-    tr.append(cell(String(submission.rank)));
-    tr.append(cell(submission.team || submission.owner, "team-cell"));
-    shownColumns.forEach((column) => {
-      tr.append(cell(formatNumber(submission.scores[column]), column === primaryKey ? "metric-primary" : ""));
-    });
-    tr.append(cell(formatDate(submission.created_when)));
-    tbody.append(tr);
-  });
-
-  table.append(thead, tbody);
-  wrap.append(table);
-  article.append(header, meta, wrap);
-  return article;
+  card.append(top, list, link);
+  return card;
 }
 
 async function main() {
@@ -117,11 +83,10 @@ async function main() {
       throw new Error(`HTTP ${response.status}`);
     }
     const data = await response.json();
-    grid.replaceChildren(...data.competitions.map(renderLeaderboard));
-    status.textContent = `Last synced from Codabench: ${formatDate(data.generated_at)}.`;
+    grid.replaceChildren(...data.competitions.map(renderResultCard));
+    status.textContent = `Synced from Codabench on ${formatDate(data.generated_at)}.`;
   } catch (error) {
-    status.textContent =
-      "Could not load the local leaderboard snapshot. Use the Codabench task links for live results.";
+    status.textContent = "Could not load the local Codabench snapshot. Use the task links for current results.";
     console.error(error);
   }
 }
