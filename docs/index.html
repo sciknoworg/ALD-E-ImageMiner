@@ -125,20 +125,33 @@
           </figure>
         </div>
         <h3 class="task-section-title">Benchmark Task Descriptions</h3>
+        <p class="task-section-note">
+          The four panels below summarize the official competition task
+          definitions with compact examples from the task website while
+          preserving the input/output structure.
+        </p>
         <div class="task-grid">
           <article>
             <h4>Task 1: Classification</h4>
             <p>
-              A supervised multi-class image classification task. Systems must
-              identify one of the 49 figure classes from a scientific figure.
+              A supervised <strong>multi-class image classification</strong>
+              task. Systems must identify one of the 49 figure classes from a
+              scientific figure.
             </p>
+            <figure class="task-example">
+              <img
+                src="assets/task-example-classification.jpg"
+                alt="Classification task example showing a band diagram"
+              />
+              <figcaption>Example: Band Diagram</figcaption>
+            </figure>
             <dl class="task-details">
               <dt>Inputs</dt>
-              <dd>Figure image extracted from an ALD/E research paper; optional caption metadata.</dd>
+              <dd>A scientific figure extracted from an ALD/E research paper.</dd>
+              <dt>Context</dt>
+              <dd>Optional metadata, such as figure caption text, may be provided.</dd>
               <dt>Output</dt>
               <dd>Predicted class label corresponding to one of the 49 figure types.</dd>
-              <dt>Example</dt>
-              <dd>Band Diagram</dd>
             </dl>
             <p class="task-meta">Primary metric: F1.</p>
             <a href="https://www.codabench.org/competitions/12901/#/results-tab">Submit / results</a>
@@ -150,13 +163,20 @@
               charts. Systems identify field labels, table structure, and textual
               or numerical cell values.
             </p>
+            <figure class="task-example">
+              <img
+                src="assets/task-example-data-extraction.jpg"
+                alt="Data table extraction task example showing a mass change chart"
+              />
+              <figcaption>Example: chart values reconstructed as Markdown table cells</figcaption>
+            </figure>
             <dl class="task-details">
               <dt>Input</dt>
               <dd>Scientific chart or plot image, such as a bar chart, line chart, scatter plot, spectra chart, or phase diagram.</dd>
               <dt>Output</dt>
-              <dd>Markdown-formatted table with field names and extracted textual or numeric values.</dd>
-              <dt>Example</dt>
-              <dd><code>| Time (s) | Mass Change |</code></dd>
+              <dd>Machine-readable Markdown table representation of the quantitative chart.</dd>
+              <dt>Fields</dt>
+              <dd>Field/column names of visualized entities and extracted textual or numerical cell values.</dd>
             </dl>
             <p class="task-meta">Metrics: RMS + TEDS.</p>
             <a href="https://www.codabench.org/competitions/12902/#/results-tab">Submit / results</a>
@@ -166,14 +186,22 @@
             <p>
               Generate concise, factual summaries that capture key trends,
               relationships, and scientific insights presented in the figure.
+              Systems must ground their interpretation in the visual content.
             </p>
+            <figure class="task-example">
+              <img
+                src="assets/task-example-summarization.jpg"
+                alt="Summarization task example showing a polar heatmap"
+              />
+              <figcaption>Example: polar heatmap summarized in 1-3 sentences</figcaption>
+            </figure>
             <dl class="task-details">
-              <dt>Inputs</dt>
-              <dd>Scientific chart or plot image; optional figure caption text for context.</dd>
+              <dt>Input</dt>
+              <dd>Scientific chart or plot image.</dd>
+              <dt>Context</dt>
+              <dd>Optional metadata, such as figure caption text, may be provided.</dd>
               <dt>Output</dt>
               <dd>Short textual summary of 1-3 sentences describing main trends and takeaways.</dd>
-              <dt>Example</dt>
-              <dd>Polar heatmap summary describing radial and angular etch-rate variation.</dd>
             </dl>
             <a href="https://www.codabench.org/competitions/12909/#/results-tab">Submit / results</a>
           </article>
@@ -184,13 +212,20 @@
               questions that reference axes, legends, data patterns, and
               scientific meaning.
             </p>
+            <figure class="task-example">
+              <img
+                src="assets/task-example-vqa.jpg"
+                alt="Visual question answering task example showing an etch-rate chart"
+              />
+              <figcaption>Example: question answering over plotted etch-rate trends</figcaption>
+            </figure>
             <dl class="task-details">
               <dt>Subtasks</dt>
               <dd>Process-oriented, comparative/trend, structure-property, and application/performance reasoning.</dd>
               <dt>Inputs</dt>
-              <dd>Figure image, natural-language question, and optional relevant paragraph or caption context.</dd>
+              <dd>Scientific chart or plot image, natural-language question, and optional relevant paragraph or figure-caption context.</dd>
               <dt>Outputs</dt>
-              <dd>Yes/no, factoid, list, or paragraph answer.</dd>
+              <dd><strong>Yes/No</strong>, <strong>Factoid</strong>, <strong>List</strong>, or <strong>Paragraph</strong> answer.</dd>
             </dl>
             <a href="https://www.codabench.org/competitions/12908/#/results-tab">Submit / results</a>
           </article>
