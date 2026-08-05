@@ -82,27 +82,75 @@
           The released benchmark covers ALD and ALE papers across experimental
           and simulation use cases. It provides train, dev, and gold-standard
           test splits with figure images, captions, bounding boxes, and
-          task-specific annotations.
+          task-specific annotations. Task definitions are summarized from the
+          <a href="https://sites.google.com/view/sci-imageminer/task-description">official competition task description</a>.
         </p>
+        <div class="benchmark-figures" aria-label="Benchmark figures">
+          <figure>
+            <img
+              src="assets/fig_annotation-workflow-v2.png"
+              alt="Overview of the ALD/E-ImageMiner benchmark curation workflow"
+            />
+            <figcaption>
+              Fig. 1: Overview of the ALD/E-ImageMiner benchmark end-to-end curation workflow.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/fig_dataset_organization_hierarchy_v2.png"
+              alt="ALD/E-ImageMiner dataset organization hierarchy"
+            />
+            <figcaption>
+              Fig. 2: Illustration describing the ALD/E-ImageMiner dataset organization hierarchy.
+              Research papers are numerically indexed, containing the PDF,
+              <code>content.json</code> (sections and figure captions), along with
+              figures and annotation JSON files inside the <code>images</code> directory.
+            </figcaption>
+          </figure>
+        </div>
         <div class="task-grid">
           <article>
             <h3>Classification</h3>
-            <p>Predict the scientific figure type from the taxonomy. Primary metric: F1.</p>
+            <p>
+              Supervised multi-class image classification. Systems receive a
+              scientific figure, optionally with caption context, and predict one
+              of the 49 figure types.
+            </p>
+            <p class="task-meta">Primary metric: F1.</p>
             <a href="https://www.codabench.org/competitions/12901/#/results-tab">Submit / results</a>
           </article>
           <article>
             <h3>Data extraction</h3>
-            <p>Reconstruct chart data as Markdown tables. Primary metric: RMS + TEDS.</p>
+            <p>
+              Structured reconstruction of tabular data encoded in scientific
+              charts. Systems identify field labels, table structure, and textual
+              or numeric cell values.
+            </p>
+            <p class="task-meta">Output: machine-readable Markdown table. Metrics: RMS + TEDS.</p>
             <a href="https://www.codabench.org/competitions/12902/#/results-tab">Submit / results</a>
           </article>
           <article>
             <h3>Summarization</h3>
-            <p>Generate concise figure summaries grounded in scientific content.</p>
+            <p>
+              Generate concise, factual summaries that capture key trends,
+              relationships, and scientific insights grounded in the visual
+              content, with caption context when available.
+            </p>
+            <p class="task-meta">Output: 1-3 sentence textual summary.</p>
             <a href="https://www.codabench.org/competitions/12909/#/results-tab">Submit / results</a>
           </article>
           <article>
             <h3>Visual QA</h3>
-            <p>Answer domain-grounded questions with factoid, yes/no, list, and paragraph outputs.</p>
+            <p>
+              Fine-grained reasoning over figures through natural-language
+              questions about axes, legends, data patterns, and scientific
+              meaning.
+            </p>
+            <p class="task-meta">
+              Covers process-oriented, comparative/trend, structure-property,
+              and application/performance questions; outputs yes/no, factoid,
+              list, or paragraph answers.
+            </p>
             <a href="https://www.codabench.org/competitions/12908/#/results-tab">Submit / results</a>
           </article>
         </div>

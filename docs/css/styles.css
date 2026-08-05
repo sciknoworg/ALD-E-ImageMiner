@@ -173,12 +173,52 @@ a {
   text-align: center;
 }
 
-.task-grid,
+.benchmark-figures {
+  display: grid;
+  gap: 24px;
+  margin: 28px 0 30px;
+}
+
+.benchmark-figures figure {
+  margin: 0;
+}
+
+.benchmark-figures img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.benchmark-figures figcaption {
+  max-width: 900px;
+  margin: 10px auto 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.benchmark-figures code {
+  color: var(--ink);
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px auto 0;
+  max-width: 900px;
+}
+
 .result-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-top: 22px;
+}
+
+.result-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .task-grid article,
@@ -199,6 +239,11 @@ a {
   margin: 0 0 12px;
   color: var(--muted);
   font-size: 0.93rem;
+}
+
+.task-grid .task-meta {
+  color: var(--ink);
+  font-size: 0.9rem;
 }
 
 .task-grid a,
