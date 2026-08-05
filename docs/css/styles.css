@@ -528,21 +528,39 @@ a {
   min-height: 216px;
   flex-direction: column;
   justify-content: space-between;
+  border-color: rgba(12, 32, 55, 0.12);
+  border-radius: 7px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
+  box-shadow: 0 12px 28px rgba(12, 32, 55, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.result-card:hover,
+.result-card:focus-within {
+  border-color: rgba(8, 127, 131, 0.22);
+  box-shadow: 0 16px 34px rgba(12, 32, 55, 0.12);
+  transform: translateY(-2px);
 }
 
 .result-label {
-  margin: 0 0 6px;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  display: inline-block;
+  margin: 0;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: linear-gradient(180deg, rgba(8, 127, 131, 0.1) 0%, rgba(8, 127, 131, 0.04) 100%);
+  color: #065c60;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
 }
 
 .score-label {
-  margin: 0;
+  margin: -4px 0 12px;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 0.74rem;
+  font-style: italic;
+  text-align: right;
 }
 
 .leaderboard-mini {
@@ -752,6 +770,7 @@ pre {
   .facts div::before,
   .facts strong,
   .paper-header .button-row:not(.light) a,
+  .result-card,
   .button-row.light .brand-button {
     transition: none;
   }
@@ -762,6 +781,8 @@ pre {
   .facts div:focus-within strong,
   .paper-header .button-row:not(.light) a:hover,
   .paper-header .button-row:not(.light) a:focus-visible,
+  .result-card:hover,
+  .result-card:focus-within,
   .button-row.light .brand-button:hover,
   .button-row.light .brand-button:focus-visible {
     transform: none;

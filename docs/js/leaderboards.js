@@ -37,10 +37,10 @@ function renderResultCard(task) {
 
   const scoreLabel = document.createElement("p");
   scoreLabel.className = "score-label";
-  scoreLabel.textContent = `Ranked by ${PRIMARY_LABELS[primary] ?? primary}`;
+  scoreLabel.textContent = `Ranking metric: ${PRIMARY_LABELS[primary] ?? primary}`;
 
   const header = document.createElement("div");
-  header.append(label, scoreLabel);
+  header.append(label);
 
   const link = document.createElement("a");
   link.href = task.codabench_url;
@@ -52,7 +52,7 @@ function renderResultCard(task) {
     const empty = document.createElement("p");
     empty.className = "empty-leaderboard";
     empty.textContent = "No public submissions";
-    card.append(header, empty, link);
+    card.append(header, empty, scoreLabel, link);
     return card;
   }
 
@@ -62,9 +62,12 @@ function renderResultCard(task) {
 
   const thead = document.createElement("thead");
   const headerRow = document.createElement("tr");
-  ["Rank", "Team", PRIMARY_LABELS[primary] ?? primary].forEach((heading) => {
+  ["", "Team", PRIMARY_LABELS[primary] ?? primary].forEach((heading, index) => {
     const th = document.createElement("th");
     th.textContent = heading;
+    if (index === 0) {
+      th.setAttribute("aria-label", "Rank");
+    }
     headerRow.append(th);
   });
   thead.append(headerRow);
@@ -95,7 +98,7 @@ function renderResultCard(task) {
   });
   table.append(thead, tbody);
 
-  card.append(header, table, link);
+  card.append(header, table, scoreLabel, link);
   return card;
 }
 
