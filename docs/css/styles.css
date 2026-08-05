@@ -130,17 +130,44 @@ a {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
-  overflow: hidden;
   margin: 34px 0 18px;
   border: 1px solid var(--line);
   border-radius: 4px;
   background: var(--line);
+  box-shadow: 0 12px 28px rgba(36, 36, 36, 0.04);
 }
 
 .facts div {
+  position: relative;
   padding: 17px 14px;
   background: #fff;
   text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.facts div::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  content: "";
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.facts div:hover,
+.facts div:focus-within {
+  z-index: 1;
+  background: #fbfefe;
+  box-shadow: 0 14px 28px rgba(8, 127, 131, 0.12);
+  transform: translateY(-3px) scale(1.015);
+}
+
+.facts div:hover::before,
+.facts div:focus-within::before {
+  opacity: 1;
 }
 
 .facts strong {
@@ -148,6 +175,12 @@ a {
   color: var(--accent);
   font-size: 1.6rem;
   line-height: 1.05;
+  transition: transform 160ms ease;
+}
+
+.facts div:hover strong,
+.facts div:focus-within strong {
+  transform: scale(1.06);
 }
 
 .facts span {
@@ -434,5 +467,20 @@ pre {
   .section h2,
   .section > p {
     text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .facts div,
+  .facts div::before,
+  .facts strong {
+    transition: none;
+  }
+
+  .facts div:hover,
+  .facts div:focus-within,
+  .facts div:hover strong,
+  .facts div:focus-within strong {
+    transform: none;
   }
 }
