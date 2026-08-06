@@ -2,6 +2,21 @@
   <img src="assets/logo-github.png" alt="ALD/E-ImageMiner Logo" width="400"/>
 </div>
 
+<p align="center">
+  <a href="https://huggingface.co/datasets/SciKnowOrg/ALD-E-ImageMiner">
+    <img alt="Hugging Face Dataset" src="https://img.shields.io/badge/Hugging%20Face-Dataset-FFD21E?style=for-the-badge">
+  </a>
+  <a href="https://sites.google.com/view/sci-imageminer/">
+    <img alt="Competition Website" src="https://img.shields.io/badge/Competition-Website-4285F4?style=for-the-badge">
+  </a>
+  <a href="https://sciknoworg.github.io/ALD-E-ImageMiner/">
+    <img alt="Paper Page" src="https://img.shields.io/badge/Paper-Page-087F83?style=for-the-badge">
+  </a>
+  <a href="https://arxiv.org/abs/2607.26848">
+    <img alt="arXiv 2607.26848" src="https://img.shields.io/badge/arXiv-2607.26848-B31B1B?style=for-the-badge">
+  </a>
+</p>
+
 ## Project Overview
 
 **ALD/E-ImageMiner** is an expert-annotated benchmark for scientific figure understanding in **atomic layer deposition (ALD)** and **atomic layer etching (ALE)** literature. The data is organized by process domain, by source-paper use case (**experimental-usecase** or **simulation-usecase**), and by competition split.
