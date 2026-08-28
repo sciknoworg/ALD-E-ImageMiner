@@ -12,8 +12,8 @@
   <a href="https://sciknoworg.github.io/ALD-E-ImageMiner/">
     <img alt="Paper Page" src="https://img.shields.io/badge/Paper-Page-087F83?style=for-the-badge">
   </a>
-  <a href="https://arxiv.org/abs/2607.26848">
-    <img alt="arXiv 2607.26848" src="https://img.shields.io/badge/arXiv-2607.26848-B31B1B?style=for-the-badge">
+  <a href="https://doi.org/10.1007/978-3-032-36042-7_19">
+    <img alt="Springer chapter DOI 10.1007/978-3-032-36042-7_19" src="https://img.shields.io/badge/Springer-Chapter-6D4C41?style=for-the-badge">
   </a>
 </p>
 
@@ -175,13 +175,18 @@ The vision working paper for this project is pre-released on Zenodo. Please cite
 This benchmark dataset was used as the **[ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching (ALD/E) Scientific Figures](https://sites.google.com/view/sci-imageminer/)**, organized as part of the [ICDAR 2026 competitions](https://icdar2026.org/index.php/competitions/). Please cite the competition report when referring to the ALD/E-ImageMiner benchmark, dataset, competition, or associated information-extraction tasks:
 
 ```bibtex
-@article{ahmed2026icdar,
-  title   = {ICDAR 2026 Competition on Information Extraction from
-             Atomic Layer Deposition/Etching (ALD/E) Scientific Figures},
-  author  = {Ahmed, Fahad and Auer, S{\"o}ren and D'Souza, Jennifer},
-  journal = {arXiv preprint arXiv:2607.26848},
-  year    = {2026},
-  url     = {https://arxiv.org/abs/2607.26848}
+@InProceedings{10.1007/978-3-032-36042-7_19,
+  author    = {Ahmed, Fahad and D' Souza, Jennifer and Auer, S{\"o}ren},
+  editor    = {Fink, Gernot A. and Forn{\'e}s, Alicia and Kise, Koichi and Lopresti, Daniel},
+  title     = {ICDAR 2026 Competition on Information Extraction from
+               Atomic Layer Deposition/Etching (ALD/E) Scientific Figures},
+  booktitle = {Document Analysis and Recognition -- ICDAR 2026},
+  year      = {2027},
+  publisher = {Springer Nature Switzerland},
+  address   = {Cham},
+  pages     = {319--335},
+  doi       = {10.1007/978-3-032-36042-7_19},
+  url       = {https://doi.org/10.1007/978-3-032-36042-7_19}
 }
 ```
 
